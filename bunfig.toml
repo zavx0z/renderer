@@ -1,7 +1,4 @@
 [console]
-depth = 10
+depth = 22
 [test]
-preload = [
-    "./fixture/happydom.ts",
-    "./fixture/expect.ts",
-]
+preload = ["./fixture/happydom.ts", "./fixture/expect.ts"]

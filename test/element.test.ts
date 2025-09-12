@@ -7,73 +7,56 @@ const html = String.raw
 
 describe("простой HTML элемент", () => {
   const { context, update, onUpdate } = new Context((t) => ({
-    attempt: t.number.required(0),
+    cups: t.number.required(0)({ title: "orders" }),
+    last: t.string.optional()({ title: "last ordered drink" }),
   }))
 
   const core = {
-    ice: [{ url: "https://ice.com" }, { url: "https://ice2.com" }],
+    menu: [
+      { label: "Espresso", size: "30ml" },
+      { label: "Cappuccino", size: "200ml" },
+      { label: "Latte", size: "250ml" },
+    ],
   }
 
-  type State = "online" | "offline"
-  let state: State = "online"
+  let state = "open"
 
-  const nodes = parse<typeof context, typeof core, State>(
+  const nodes = parse<typeof context, typeof core, "open" | "closed">(
     ({ html, context, update, core, state }) => html`
-      <h1>Config</h1>
-      <ul>
-        ${core.ice.map((server) => html`<li>Url: ${server.url}</li>`)}
-      </ul>
-      <h1>State</h1>
-      <p>${state}</p>
-      ${state === "offline" &&
-      html` <button onclick=${() => update({ attempt: context.attempt + 1 })}>Connect</button>`}
+      <h1>☕ Quick Coffee Order</h1>
+
+      <p>
+        Status: ${state === "open" ? "🟢 Open" : "🔴 Closed"} · Orders:
+        ${context.cups}${context.last && ` · last: ${context.last}`}
+      </p>
+
+      ${state === "open" &&
+      html`
+        <ul>
+          ${core.menu.map(
+            (product) =>
+              html`<li>
+                ${product.label} (${product.size})
+                <button onclick=${() => update({ cups: context.cups + 1, last: product.label })}>Add</button>
+              </li>`
+          )}
+        </ul>
+      `}
+      ${state === "closed" && html`<p>Come back later — we’ll brew something tasty ☺️</p>`}
     `
   )
 
   let prevState = state
-
+  console.log(nodes)
   it("парсинг", () => {
-    expect(nodes, "простой div с текстом").toEqual([
+    expect(nodes).toEqual([
       {
         tag: "h1",
         type: "el",
         child: [
           {
             type: "text",
-            value: "Config",
-          },
-        ],
-      },
-      {
-        tag: "ul",
-        type: "el",
-        child: [
-          {
-            type: "map",
-            data: "/core/ice",
-            child: [
-              {
-                tag: "li",
-                type: "el",
-                child: [
-                  {
-                    type: "text",
-                    data: "[item]/url",
-                    expr: "Url: ${[0]}",
-                  },
-                ],
-              },
-            ],
-          },
-        ],
-      },
-      {
-        tag: "h1",
-        type: "el",
-        child: [
-          {
-            type: "text",
-            value: "State",
+            value: "\\u2615 Quick Coffee Order",
           },
         ],
       },
@@ -83,31 +66,72 @@ describe("простой HTML элемент", () => {
         child: [
           {
             type: "text",
-            data: "/state",
+            data: ["/state", "/context/cups", "/context/last", "/xB7", "/last"],
+            expr: 'Status: ${[0] === "open" ? "\\uD83D\\uDFE2 Open" : "\\uD83D\\uDD34 Closed"} \\u00B7 Orders: ${[1]}${[2] && ` \\[3] [4]: ${[2]}`}',
           },
         ],
       },
       {
         type: "log",
-        data: ["/state", "/offline"],
+        data: ["/state", "/open"],
         expr: '${[0]} === "${[1]}"',
         child: [
           {
-            tag: "button",
+            tag: "ul",
+            type: "el",
+            child: [
+              {
+                type: "map",
+                data: "/core/menu",
+                child: [
+                  {
+                    tag: "li",
+                    type: "el",
+                    child: [
+                      {
+                        type: "text",
+                        data: ["[item]/label", "[item]/size"],
+                        expr: "${[0]} (${[1]})",
+                      },
+                      {
+                        tag: "button",
+                        type: "el",
+                        child: [
+                          {
+                            type: "text",
+                            value: "Add",
+                          },
+                        ],
+                        event: {
+                          onclick: {
+                            expr: "() => update({ cups: ${[0]} + 1, last: ${[1]} })",
+                            upd: ["cups", "last"],
+                            data: ["[item]/context/cups", "[item]/label"],
+                          },
+                        },
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        type: "log",
+        data: ["/state", "/closed"],
+        expr: '${[0]} === "${[1]}"',
+        child: [
+          {
+            tag: "p",
             type: "el",
             child: [
               {
                 type: "text",
-                value: "Connect",
+                value: "Come back later \\u2014 we\\u2019ll brew something tasty \\u263A\\uFE0F",
               },
             ],
-            event: {
-              onclick: {
-                expr: "() => update({ attempt: ${[0]} + 1 })",
-                upd: "attempt",
-                data: "/context/attempt",
-              },
-            },
           },
         ],
       },
@@ -115,13 +139,13 @@ describe("простой HTML элемент", () => {
   })
 
   it("рендер", () => {
-    const target = document.createElement("div")
+    const element = document.createElement("div")
 
-    const renderer = new Renderer(target, nodes, context, update, state, core)
+    const renderer = new Renderer(element, nodes, context, update, state, core)
     onUpdate((updated) => {
       renderer.update({ context: updated, ...(state !== prevState && { state }) })
       prevState = state
     })
-    expect(target.innerHTML).toBeDefined()
+    expect(element.innerHTML).toBeDefined()
   })
 })
