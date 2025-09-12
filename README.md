@@ -91,7 +91,19 @@ const nodes = parse<typeof context, typeof core, "open" | "closed">(
     ${state === "closed" && html`<p>Come back later — we’ll brew something tasty ☺️</p>`}
   `
 )
+
+let prevState = state
+
+const renderer = new Renderer(document.body, nodes, context, update, state, core)
+onUpdate((updated) => {
+  renderer.update({ context: updated, ...(state !== prevState && { state }) })
+  prevState = state
+})
 ```
+
+## Документация
+
+Полная документация с описанием и примерами доступна здесь: [https://zavx0z.github.io/renderer/](https://zavx0z.github.io/renderer/)
 
 ---
 
