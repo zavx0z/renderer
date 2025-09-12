@@ -4,7 +4,7 @@
 [![bun](https://img.shields.io/badge/bun-1.0+-black)](https://bun.sh/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.0+-blue)](https://www.typescriptlang.org/)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ESM-green)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules)
-[![License](https://img.shields.io/github/license/zavx0z/renderer)](LICENSE)
+[![MDN](https://img.shields.io/badge/MDN-HTML-red)](https://developer.mozilla.org/en-US/docs/Web/HTML)
 
 ---
 
