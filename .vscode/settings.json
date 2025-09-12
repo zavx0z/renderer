@@ -1,0 +1,39 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/CVS": true,
+        "**/*.crswap": true,
+        "**/node_modules": true,
+        "**/__pycache__": true,
+        ".venv": true,
+        ".idea": true,
+        ".cursor": true,
+        ".github": true,
+        ".vscode": true
+    },
+    "hide-files.files": [
+        ".idea",
+        ".cursor",
+        ".cursor/rules"
+    ],
+    "explorer.fileNesting.patterns": {
+        "*.html": "$(basename).{js,css,json,config.ts} ${capture}.js.map, ${capture}.min.js, ${capture}.d.ts, ${capture}.spec.ts, ${capture}.t.ts",
+        "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lock, bun.lockb, bunfig.toml, .npmrc",
+        "*.ts": "${capture}.js, ${capture}.js.gz, ${capture}.typegen.ts, ${capture}.typegen.d.ts, ${capture}.t.ts, ${capture}.spec.ts, ${capture}.build.ts, ${capture}.d.ts, ${capture}.md",
+        "typedoc.json": "markdown.typedoc.json"
+    },
+    "cSpell.ignorePaths": [
+        "docs/**",
+        "docs-markdown/**",
+        ".gitignore"
+    ],
+    "markdownlint.ignore": [
+        "docs/**",
+        "docs-markdown/**",
+        ".cursor/**/*.mdc"
+    ]
+}

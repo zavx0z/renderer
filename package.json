@@ -1,0 +1,45 @@
+{
+  "name": "@zavx0z/renderer",
+  "version": "0.0.1",
+  "description": "HTML renderer для MetaFor",
+  "author": "zavx0z",
+  "license": "MIT",
+  "keywords": [
+    "metafor"
+  ],
+  "docs": "https://zavx0z.github.io/renderer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zavx0z/renderer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zavx0z/renderer/issues"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "private": false,
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "devDependencies": {
+    "diff": "^8.0.2",
+    "@types/bun": "^1.2.21",
+    "dts-bundle-generator": "^9.5.1",
+    "typedoc": "^0.28.12",
+    "concat-md": "^0.5.1",
+    "typedoc-plugin-markdown": "^4.8.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "scripts": {
+    "build": "bun run script/build.ts --dev",
+    "docs": "typedoc",
+    "rules": "typedoc --options markdown.typedoc.json && concat-md --decrease-title-levels docs-markdown > rules.md",
+    "prepublishOnly": "bun run build",
+    "publish:npm": "bun publish --access public"
+  }
+}

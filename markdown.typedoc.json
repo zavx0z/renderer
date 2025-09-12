@@ -1,0 +1,31 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["./index.ts"],
+  "out": "docs-markdown",
+  "excludePrivate": true,
+  "excludeProtected": true,
+  "excludeExternals": true,
+  "includeVersion": true,
+  "categorizeByGroup": true,
+  "categoryOrder": ["Context", "Types", "Factories", "*"],
+  "defaultCategory": "Other",
+  "readme": "README.md",
+  "name": "@zavx0z/renderer",
+  "theme": "default",
+  "lightHighlightTheme": "github-light",
+  "darkHighlightTheme": "github-dark",
+  "searchInComments": true,
+  "validation": {
+    "invalidLink": true,
+    "notExported": true
+  },
+  "gitRevision": "main",
+  "gitRemote": "origin",
+  "cleanOutputDir": true,
+  "plugin": ["typedoc-plugin-markdown"],
+  "hideGenerator": false,
+  "sidebarLinks": {
+    "github": "https://github.com/zavx0z/renderer",
+    "npm": "https://www.npmjs.com/package/@zavx0z/renderer"
+  }
+}

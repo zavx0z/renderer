@@ -1,0 +1,12 @@
+# docs
+docs
+docs-markdown
+rules.md
+# dependencies (bun install)
+node_modules
+# output
+dist
+# IntelliJ based IDEs
+.idea
+# Finder (MacOS) folder config
+.DS_Store

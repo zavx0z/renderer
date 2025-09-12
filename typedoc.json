@@ -1,0 +1,44 @@
+{
+    "entryPoints": [
+        "index.t.ts"
+    ],
+    "out": "docs",
+    "name": "HTML renderer для MetaFor",
+    "includeVersion": true,
+    "excludePrivate": true,
+    "excludeProtected": true,
+    "excludeExternals": true,
+    "exclude": [],
+    "readme": "README.md",
+    "theme": "default",
+    "categorizeByGroup": false,
+    "categoryOrder": [
+        "API"
+    ],
+    "sort": [
+        "kind",
+        "source-order"
+    ],
+    "kindSortOrder": [
+        "Project",
+        "Module",
+        "Namespace",
+        "Function",
+        "Enum",
+        "Class",
+        "Interface",
+        "TypeAlias",
+        "Constructor",
+        "Variable",
+        "Accessor"
+    ],
+    "navigation": {
+        "includeCategories": true,
+        "includeGroups": true
+    },
+    "searchInComments": true,
+    "cleanOutputDir": true,
+    "githubPages": true,
+    "gitRevision": "main",
+    "gitRemote": "origin"
+}
