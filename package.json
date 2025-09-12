@@ -1,6 +1,6 @@
 {
   "name": "@zavx0z/renderer",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "HTML renderer для MetaFor",
   "author": "zavx0z",
   "license": "MIT",
@@ -25,21 +25,29 @@
     "README.md"
   ],
   "devDependencies": {
-    "diff": "^8.0.2",
+    "@happy-dom/global-registrator": "^18.0.1",
     "@types/bun": "^1.2.21",
-    "dts-bundle-generator": "^9.5.1",
-    "typedoc": "^0.28.12",
     "concat-md": "^0.5.1",
+    "diff": "^8.0.2",
+    "dts-bundle-generator": "^9.5.1",
+    "happy-dom": "^18.0.1",
+    "prettier": "^3.6.2",
+    "typedoc": "^0.28.12",
     "typedoc-plugin-markdown": "^4.8.1"
   },
   "peerDependencies": {
-    "typescript": "^5"
+    "typescript": "^5.9.2"
   },
   "scripts": {
+    "upd": "bun update --latest && bun i",
     "build": "bun run script/build.ts --dev",
     "docs": "typedoc",
     "rules": "typedoc --options markdown.typedoc.json && concat-md --decrease-title-levels docs-markdown > rules.md",
     "prepublishOnly": "bun run build",
     "publish:npm": "bun publish --access public"
+  },
+  "dependencies": {
+    "@zavx0z/context": "^1.0.3",
+    "@zavx0z/template": "^2.3.6"
   }
 }

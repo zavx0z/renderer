@@ -35,5 +35,6 @@
         "docs/**",
         "docs-markdown/**",
         ".cursor/**/*.mdc"
-    ]
+    ],
+    "liveServer.settings.port": 5501
 }
