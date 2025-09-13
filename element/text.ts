@@ -12,10 +12,10 @@ export const TextElement = (
   let string = ""
   if (typeof node.value === "string") string = node.value
   else if (node.expr) {
-    const vals = collect(core, context, state, node.data, itemScope)
+    const vals = collect(core, context, state, node.data!, itemScope)
     try {
       const body = node.expr.replace(/(_\[\d+\])/g, "clean($1)")
-      const clean = (x: any) => (x == null ? "" : x)
+      const clean = (x: unknown) => (x == null ? "" : x)
       const fn = new Function("_", "clean", "return (`" + body + "`)")
       string = fn(vals, clean)
     } catch (error) {

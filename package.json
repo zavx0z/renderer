@@ -1,6 +1,6 @@
 {
   "name": "@zavx0z/renderer",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "HTML renderer для MetaFor",
   "author": "zavx0z",
   "license": "MIT",
@@ -48,6 +48,6 @@
   },
   "dependencies": {
     "@zavx0z/context": "^1.0.3",
-    "@zavx0z/template": "^2.4.0"
+    "@zavx0z/template": "^2.5.0"
   }
 }

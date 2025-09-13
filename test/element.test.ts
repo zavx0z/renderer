@@ -65,8 +65,8 @@ describe("простой HTML элемент", () => {
         child: [
           {
             type: "text",
-            data: ["/state", "/context/cups", "/context/last", "/last"],
-            expr: 'Status: ${_[0] === "open" ? "Open" : "Closed"} Orders: ${_[1]}${_[2] && ` _[3]: ${_[2]}`}',
+            data: ["/context/cups", "/context/last", "/state"],
+            expr: 'Status: ${_[2] === "open" ? "Open" : "Closed"} Orders: ${_[0]}${_[1] && ` last: ${_[1]}`}',
           },
         ],
       },
