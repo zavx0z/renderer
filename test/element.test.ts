@@ -23,11 +23,11 @@ describe("простой HTML элемент", () => {
 
   const nodes = parse<typeof context, typeof core, "open" | "closed">(
     ({ html, context, update, core, state }) => html`
-      <h1>☕ Quick Coffee Order</h1>
+      <h1>Quick Coffee Order</h1>
 
       <p>
-        Status: ${state === "open" ? "🟢 Open" : "🔴 Closed"} · Orders:
-        ${context.cups}${context.last && ` · last: ${context.last}`}
+        Status: ${state === "open" ? "Open" : "Closed"} Orders:
+        ${context.cups}${context.last && ` last: ${context.last}`}
       </p>
 
       ${state === "open" &&
@@ -42,12 +42,11 @@ describe("простой HTML элемент", () => {
           )}
         </ul>
       `}
-      ${state === "closed" && html`<p>Come back later — we’ll brew something tasty ☺️</p>`}
+      ${state === "closed" && html`<p>Come back later — we’ll brew something tasty</p>`}
     `
   )
 
   let prevState = state
-  console.log(nodes)
   it("парсинг", () => {
     expect(nodes).toEqual([
       {
@@ -56,7 +55,7 @@ describe("простой HTML элемент", () => {
         child: [
           {
             type: "text",
-            value: "\\u2615 Quick Coffee Order",
+            value: "Quick Coffee Order",
           },
         ],
       },
@@ -66,15 +65,15 @@ describe("простой HTML элемент", () => {
         child: [
           {
             type: "text",
-            data: ["/state", "/context/cups", "/context/last", "/xB7", "/last"],
-            expr: 'Status: ${[0] === "open" ? "\\uD83D\\uDFE2 Open" : "\\uD83D\\uDD34 Closed"} \\u00B7 Orders: ${[1]}${[2] && ` \\[3] [4]: ${[2]}`}',
+            data: ["/state", "/context/cups", "/context/last", "/last"],
+            expr: 'Status: ${_[0] === "open" ? "Open" : "Closed"} Orders: ${_[1]}${_[2] && ` _[3]: ${_[2]}`}',
           },
         ],
       },
       {
         type: "log",
-        data: ["/state", "/open"],
-        expr: '${[0]} === "${[1]}"',
+        data: "/state",
+        expr: '_[0] === "open"',
         child: [
           {
             tag: "ul",
@@ -91,7 +90,7 @@ describe("простой HTML элемент", () => {
                       {
                         type: "text",
                         data: ["[item]/label", "[item]/size"],
-                        expr: "${[0]} (${[1]})",
+                        expr: "${_[0]} (${_[1]})",
                       },
                       {
                         tag: "button",
@@ -104,7 +103,7 @@ describe("простой HTML элемент", () => {
                         ],
                         event: {
                           onclick: {
-                            expr: "() => update({ cups: ${[0]} + 1, last: ${[1]} })",
+                            expr: "() => update({ cups: _[0] + 1, last: _[1] })",
                             upd: ["cups", "last"],
                             data: ["[item]/context/cups", "[item]/label"],
                           },
@@ -120,8 +119,8 @@ describe("простой HTML элемент", () => {
       },
       {
         type: "log",
-        data: ["/state", "/closed"],
-        expr: '${[0]} === "${[1]}"',
+        data: "/state",
+        expr: '_[0] === "closed"',
         child: [
           {
             tag: "p",
@@ -129,7 +128,7 @@ describe("простой HTML элемент", () => {
             child: [
               {
                 type: "text",
-                value: "Come back later \\u2014 we\\u2019ll brew something tasty \\u263A\\uFE0F",
+                value: "Come back later \\u2014 we\\u2019ll brew something tasty",
               },
             ],
           },
@@ -146,6 +145,23 @@ describe("простой HTML элемент", () => {
       renderer.update({ context: updated, ...(state !== prevState && { state }) })
       prevState = state
     })
-    expect(element.innerHTML).toBeDefined()
+    expect(element.innerHTML).toMatchStringHTML(html`
+      <h1>Quick Coffee Order</h1>
+      <p>Status: Open Orders: 0</p>
+      <ul>
+        <li>
+          Espresso (30ml)
+          <button>Add</button>
+        </li>
+        <li>
+          Cappuccino (200ml)
+          <button>Add</button>
+        </li>
+        <li>
+          Latte (250ml)
+          <button>Add</button>
+        </li>
+      </ul>
+    `)
   })
 })

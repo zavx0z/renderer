@@ -5,7 +5,7 @@
       "name": "render",
       "dependencies": {
         "@zavx0z/context": "^1.0.3",
-        "@zavx0z/template": "^2.3.6",
+        "@zavx0z/template": "^2.4.0",
       },
       "devDependencies": {
         "@happy-dom/global-registrator": "^18.0.1",
@@ -72,7 +72,7 @@
 
     "@zavx0z/context": ["@zavx0z/context@1.0.3", "", { "peerDependencies": { "typescript": "^5" } }, "sha512-38TlLxeYSy+uEk85XeSpww87Zlt/BauS1KwBvjrBqHPN7s1pksbKHeASXPHajoMZl7EmHVHfBb8W3pk4znh7Eg=="],
 
-    "@zavx0z/template": ["@zavx0z/template@2.3.6", "", { "peerDependencies": { "typescript": "^5" } }, "sha512-amQoZthSTY3bwUXKeR/ixa+l/UM2iSDFPMkAn5gJRhzolj06BsOZ97IhOoU9QVIEhCO3ez05gqPbI40on8OTig=="],
+    "@zavx0z/template": ["@zavx0z/template@2.4.0", "", { "peerDependencies": { "typescript": "^5" } }, "sha512-bLdOzsw4Ob7RAyl23D0oWJX97QakqvnzBUTW6FKpBw1Xe8TuHyQPYReSfTufkMoN1YFp3ION06B5xgl2YNXleA=="],
 
     "anchor-markdown-header": ["anchor-markdown-header@0.6.0", "", { "dependencies": { "emoji-regex": "~10.1.0" } }, "sha512-v7HJMtE1X7wTpNFseRhxsY/pivP4uAJbidVhPT+yhz4i/vV1+qx371IXuV9V7bN6KjFtheLJxqaSm0Y/8neJTA=="],
 
