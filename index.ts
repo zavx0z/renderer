@@ -9,10 +9,10 @@ import type {
   NodeElement,
 } from "@zavx0z/template"
 import type { Values, Update } from "@zavx0z/context"
-import { collect } from "./data"
+import { collect, resolvePath } from "./data"
 import { TextElement } from "./element/text"
 import { Element } from "./element/element"
-import { evalBool } from "./attribute"
+import { evalBool, evalCondition } from "./attribute"
 
 /**
  * Renderer — универсальная реализация по протоколу @zavx0z/template
@@ -72,7 +72,15 @@ export class Renderer {
         }
         return el
       }
-
+      case "cond": {
+        const ok = evalCondition(this.context, this.core, this.state, node.data, node.expr, itemScope)
+        const childIndex = ok ? 0 : 1
+        const targetChild = node.child?.[childIndex]
+        if (targetChild) {
+          return this.toDOM(targetChild, itemScope)
+        }
+        return null
+      }
       case "log": {
         const ok = evalBool(this.context, this.core, this.state, node, itemScope)
         if (ok) {
@@ -87,7 +95,7 @@ export class Renderer {
       }
 
       case "map": {
-        const arr = this.resolvePath(node.data, itemScope)
+        const arr = resolvePath(this.context, this.core, this.state, node.data, itemScope)
         const frag = document.createDocumentFragment()
         if (Array.isArray(arr)) {
           for (const it of arr) {
@@ -103,42 +111,5 @@ export class Renderer {
       default:
         return null
     }
-  }
-
-  private resolvePath(path: string, itemScope: NodeTemplate | undefined): any {
-    if (path.startsWith("[item]/")) {
-      const rest = path.slice(7)
-      if (rest.startsWith("context/")) return this.getBySegments(this.context, rest.slice(8).split("/"))
-      if (rest.startsWith("core/")) return this.getBySegments(this.core as any, rest.slice(5).split("/"))
-      if (rest === "state") return this.state
-      if (itemScope && typeof itemScope === "object") return (itemScope as any)[rest]
-      return undefined
-    }
-
-    if (path.startsWith("/")) {
-      const segments = path.replace(/^\//, "").split("/")
-      const head = segments.shift()
-      if (head === "context") return this.getBySegments(this.context, segments)
-      if (head === "core") return this.getBySegments(this.core as any, segments)
-      if (head === "state") return this.state
-      if (/^x[0-9A-Fa-f]+$/.test(head!)) {
-        const hex = head!.slice(1)
-        const codePoint = parseInt(hex, 16)
-        if (Number.isFinite(codePoint)) return String.fromCodePoint(codePoint)
-      }
-      return head
-    }
-
-    return undefined
-  }
-
-  private getBySegments(base: any, segments: (string | number)[]) {
-    let cur: any = base
-    for (const s of segments) {
-      if (cur == null) return undefined
-      const key: any = typeof s === "string" && /^\d+$/.test(s) ? Number(s) : s
-      cur = cur[key]
-    }
-    return cur
   }
 }

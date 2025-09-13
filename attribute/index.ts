@@ -27,6 +27,29 @@ export const applyAttributes = (
   }
 }
 
+export const evalCondition = (
+  context: Values<any>,
+  core: Core,
+  state: State,
+  data: string | string[],
+  expr: string | undefined,
+  itemScope: NodeTemplate | undefined
+) => {
+  if (!expr && typeof data === "string") {
+    return Boolean(resolvePath(context, core, state, data, itemScope))
+  } else {
+    const code = "return Boolean(" + expr + ");"
+    try {
+      const collectedData = collect(core, context, state, data, itemScope)
+      const f = new Function("_", code)
+      const result = f(collectedData)
+      return result
+    } catch {
+      return false
+    }
+  }
+}
+
 export const evalBool = (
   context: Values<any>,
   core: Core,
@@ -34,17 +57,5 @@ export const evalBool = (
   node: NodeLogical,
   itemScope: NodeTemplate | undefined
 ) => {
-  if (!node.expr && typeof node.data === "string") {
-    return Boolean(resolvePath(context, core, state, node.data, itemScope))
-  } else {
-    const code = "return Boolean(" + node.expr + ");"
-    try {
-      const data = collect(core, context, state, node.data, itemScope)
-      const f = new Function("_", code)
-      const result = f(data)
-      return result
-    } catch {
-      return false
-    }
-  }
+  return evalCondition(context, core, state, node.data, node.expr, itemScope)
 }
