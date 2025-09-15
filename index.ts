@@ -7,86 +7,64 @@ import type {
   NodeCondition,
   NodeMap,
   NodeElement,
+  Params,
 } from "@zavx0z/template"
-import type { Values, Update } from "@zavx0z/context"
+import type { Values, Update, Context, Schema } from "@zavx0z/context"
 import { collect, resolvePath } from "./data"
 import { TextElement } from "./element/text"
 import { Element } from "./element/element"
 import { evalBool, evalCondition } from "./attribute"
+import { parse } from "@zavx0z/template"
 
-/**
- * Renderer — универсальная реализация по протоколу @zavx0z/template
- */
-export class Renderer {
-  private target: HTMLElement
-  private nodes: NodeTemplate[]
-  private context: Values<any>
-  private state: State
-  private updateContext: Update<any>
-  private core: Core
+type RenderParams<C extends Schema, I extends Core = Core, S extends State = State> = {
+  el: HTMLElement
+  ctx: Context<C>
+  st: { value: S }
+  core: I
+  tpl: (params: Params<Values<C>, I, S>) => void
+}
 
-  constructor(
-    target: HTMLElement,
-    nodes: NodeTemplate[],
-    context: Values<any>,
-    update: Update<any>,
-    state: State,
-    core: Core
-  ) {
-    this.target = target
-    this.nodes = Array.isArray(nodes) ? nodes : []
-    this.context = context
-    this.updateContext = update
-    this.state = state
-    this.core = core
-    this.render()
-  }
+export const render = <C extends Schema, I extends Core = Core, S extends State = State>({
+  el,
+  ctx,
+  st,
+  core,
+  tpl,
+}: RenderParams<C, I, S>) => {
+  let prevState = st.value
+  const nodes = parse<Values<C>, I, S>(tpl)
+  const fragment = document.createDocumentFragment()
 
-  update({ context, state }: { context?: Partial<Values<any>>; state?: State }) {
-    if (context) this.context = Object.assign({}, this.context, context)
-    if (state !== undefined) this.state = state
-    this.render()
-  }
-
-  private render() {
-    const frag = document.createDocumentFragment()
-    for (const n of this.nodes) {
-      const dom = this.toDOM(n, undefined)
-      if (dom) frag.appendChild(dom)
-    }
-    this.target.replaceChildren(frag)
-  }
-
-  private toDOM(node: NodeTemplate, itemScope: NodeTemplate | undefined): Node | null {
+  const toDOM = (node: NodeTemplate, itemScope: NodeTemplate | undefined): Node | null => {
     if (!node || typeof node !== "object") return null
 
     switch (node.type) {
       case "text":
-        return TextElement(this.core, this.context, this.state, node, itemScope)
+        return TextElement(core, ctx.context, st.value, node, itemScope)
       case "el": {
         if (typeof node.tag !== "string") return null
-        const el = Element(this.context, this.updateContext, this.core, this.state, node, itemScope)
+        const el = Element(ctx.context, ctx.update, core, st.value, node, itemScope)
         for (const c of node.child ?? []) {
-          const dom = this.toDOM(c, itemScope)
+          const dom = toDOM(c, itemScope)
           if (dom) el.appendChild(dom)
         }
         return el
       }
       case "cond": {
-        const ok = evalCondition(this.context, this.core, this.state, node.data, node.expr, itemScope)
+        const ok = evalCondition(ctx.context, core, st.value, node.data, node.expr, itemScope)
         const childIndex = ok ? 0 : 1
         const targetChild = node.child?.[childIndex]
         if (targetChild) {
-          return this.toDOM(targetChild, itemScope)
+          return toDOM(targetChild, itemScope)
         }
         return null
       }
       case "log": {
-        const ok = evalBool(this.context, this.core, this.state, node, itemScope)
+        const ok = evalBool(ctx.context, core, st.value, node, itemScope)
         if (ok) {
           const frag = document.createDocumentFragment()
           for (const c of node.child ?? []) {
-            const dom = this.toDOM(c, itemScope)
+            const dom = toDOM(c, itemScope)
             if (dom) frag.appendChild(dom)
           }
           return frag
@@ -95,12 +73,12 @@ export class Renderer {
       }
 
       case "map": {
-        const arr = resolvePath(this.context, this.core, this.state, node.data, itemScope)
+        const arr = resolvePath(ctx.context, core, st.value, node.data, itemScope)
         const frag = document.createDocumentFragment()
         if (Array.isArray(arr)) {
           for (const it of arr) {
             for (const c of node.child ?? []) {
-              const dom = this.toDOM(c, it)
+              const dom = toDOM(c, it)
               if (dom) frag.appendChild(dom)
             }
           }
@@ -112,4 +90,23 @@ export class Renderer {
         return null
     }
   }
+
+  for (const n of nodes) {
+    const dom = toDOM(n, undefined)
+    if (dom) fragment.appendChild(dom)
+  }
+
+  el.replaceChildren(fragment)
+
+  ctx.onUpdate(() => {
+    console.log(st.value)
+    fragment.replaceChildren()
+    for (const n of nodes) {
+      const dom = toDOM(n, undefined)
+      if (dom) fragment.appendChild(dom)
+    }
+    el.replaceChildren(fragment)
+    prevState = st.value
+  })
+  return el
 }
