@@ -1,6 +1,6 @@
 import type { Core, State, Node as NodeTemplate, Params } from "@zavx0z/template"
 import type { Values, Context, Schema } from "@zavx0z/context"
-import { resolvePath, type Scope } from "./data"
+import { resolvePath, readByPath, type Scope } from "./data"
 import { TextElement } from "./element/text"
 import { Element } from "./element/element"
 import { evalCondition } from "./eval"
@@ -21,6 +21,12 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
   core,
   tpl,
 }: RenderParams<C, I, S>) => {
+  const data = {
+    context: ctx.context,
+    core: core,
+    state: st.state,
+  }
+
   let prevState = st.state
   const nodes = parse<Values<C>, I, S>(tpl)
   const fragment = document.createDocumentFragment()
@@ -63,14 +69,17 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
       }
 
       case "map": {
-        const arr = resolvePath(ctx.context, core, st.state, node.data, itemScope)
+        const arrPath = resolvePath(node.data, itemScope)
+        const arr = arrPath != null ? readByPath(arrPath, { context: ctx.context, core, state: st.state }) : undefined
         const frag = document.createDocumentFragment()
         if (Array.isArray(arr)) {
           arr.forEach((item, index) => {
+            const itemPath = (arrPath as string) + "/" + String(index)
             const scope = {
               item,
               index,
-              parent: itemScope && typeof itemScope === "object" ? (itemScope as any) : itemScope,
+              parent: itemScope,
+              itemPath,
             }
             for (const c of node.child ?? []) {
               const dom = toDOM(c, scope as any)

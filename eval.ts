@@ -11,7 +11,7 @@ export const evalCondition = (
   itemScope: Scope | undefined
 ) => {
   if (!expr && typeof data === "string") {
-    return Boolean(resolvePath(context, core, state, data, itemScope))
+    return Boolean(resolvePath(data, itemScope))
   } else {
     const code = "return Boolean(" + expr + ");"
     try {
