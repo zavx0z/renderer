@@ -3,7 +3,7 @@ import type { Values, Context, Schema } from "@zavx0z/context"
 import { resolvePath, type Scope } from "./data"
 import { TextElement } from "./element/text"
 import { Element } from "./element/element"
-import { evalBool, evalCondition } from "./attribute"
+import { evalCondition } from "./eval"
 import { parse } from "@zavx0z/template"
 
 type RenderParams<C extends Schema, I extends Core = Core, S extends State = State> = {
@@ -50,7 +50,7 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
         return null
       }
       case "log": {
-        const ok = evalBool(ctx.context, core, st.state, node, itemScope)
+        const ok = evalCondition(ctx.context, core, st.state, node.data, node.expr, itemScope)
         if (ok) {
           const frag = document.createDocumentFragment()
           for (const c of node.child ?? []) {

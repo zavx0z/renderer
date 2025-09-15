@@ -1,8 +1,19 @@
 import type { Core } from "@zavx0z/template"
 import type { Values } from "@zavx0z/context"
 
+/**
+ * Scope — скоуп текущей итерации map
+ *
+ * - item: текущий элемент массива
+ * - index: индекс текущего элемента
+ * - parent: скоуп родительской итерации (для путей с ../)
+ */
 export type Scope = { item: any; index: number; parent?: Scope }
 
+/**
+ * Собирает значения по путям из data
+ * Возвращает массив значений в исходном порядке
+ */
 export const collect = (
   core: Core,
   context: Values<any>,
@@ -15,6 +26,9 @@ export const collect = (
   return data.map((path) => resolvePath(context, core, state, path, itemScope))
 }
 
+/**
+ * Безопасный доступ по цепочке ключей/индексов
+ */
 export const getBySegments = (base: any, segments: (string | number)[]) => {
   let cur: any = base
   for (const s of segments) {
@@ -24,6 +38,10 @@ export const getBySegments = (base: any, segments: (string | number)[]) => {
   }
   return cur
 }
+/**
+ * Нормализует значение атрибута: если это объект вида { data },
+ * резолвит путь и возвращает конкретное значение
+ */
 export const resolveValue = (
   context: Values<any>,
   core: Core,
@@ -37,6 +55,21 @@ export const resolveValue = (
   }
   return v
 }
+
+/**
+ * Резолвит строковую ссылку на значение (path → value) с учётом скоупа map
+ * Возвращаемое: ссылка (для объектов/массивов/функций) или примитив (string/number/boolean/null)
+ *
+ * Поддержка путей:
+ * - "../"          — подъём к родительскому скоупу (много уровней допустимо)
+ * - "[item]"       — текущий элемент итерации
+ * - "[item]/..."   — путь относительно текущего элемента
+ * - "[index]"      — индекс текущего элемента
+ * - "[index]/..."  — путь относительно объекта индекса (если индекс — объект)
+ * - "/context/..." — доступ к контексту
+ * - "/core/..."    — доступ к core
+ * - "/state"       — текущее состояние
+ */
 export const resolvePath = (
   context: Values<any>,
   core: Core,
@@ -89,11 +122,6 @@ export const resolvePath = (
     if (head === "context") return getBySegments(context, segments)
     if (head === "core") return getBySegments(core, segments)
     if (head === "state") return state
-    if (/^x[0-9A-Fa-f]+$/.test(head!)) {
-      const hex = head!.slice(1)
-      const codePoint = parseInt(hex, 16)
-      if (Number.isFinite(codePoint)) return String.fromCodePoint(codePoint)
-    }
     return head
   }
 
