@@ -1,30 +1,37 @@
-import { describe, it, expect } from "bun:test"
+import { describe, it, expect, beforeAll } from "bun:test"
 import { Context } from "@zavx0z/context"
-import { parse } from "@zavx0z/template"
-import { Renderer } from "../index"
+
+import { render } from "../index"
 
 const html = String.raw
 
 describe("текстовые узлы — null не рендерится", () => {
-  const { context, update } = new Context((t) => ({
+  const ctx = new Context((t) => ({
     cups: t.number.required(0)(),
     last: t.string.optional()(), // по умолчанию null
   }))
 
+  const st = {
+    state: "open",
+    states: ["open", "closed"],
+  }
+
   const core = {}
-  type State = "open" | "closed"
-  let state: State = "open"
 
-  const nodes = parse<typeof context, typeof core, State>(
-    ({ html, context, state }) => html`
-      <p>Status: ${state === "open" ? "Open" : "Closed"} Orders: ${context.cups}${context.last}</p>
-    `
-  )
-
+  let element: HTMLElement
+  beforeAll(() => {
+    element = render({
+      el: document.createElement("div"),
+      ctx,
+      st,
+      core,
+      tpl: ({ html, context, state }) => html`
+        <p>Status: ${state === "open" ? "Open" : "Closed"} Orders: ${context.cups}${context.last}</p>
+      `,
+    })
+  })
   it("не вставляет 'null' в текст", () => {
-    const root = document.createElement("div")
-    new Renderer(root, nodes, context, update, state, core)
-    expect(root.innerHTML).toMatchStringHTML(
+    expect(element.innerHTML).toMatchStringHTML(
       html`<p>Status: Open Orders: 0</p>` // ← без 'null' в конце
     )
   })

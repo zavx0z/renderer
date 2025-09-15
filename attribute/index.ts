@@ -1,6 +1,6 @@
 import type { Values } from "@zavx0z/context"
-import type { Core, NodeLogical, Node as NodeTemplate, State } from "@zavx0z/template"
-import { collect, resolvePath, resolveValue } from "../data"
+import type { Core, NodeLogical, State } from "@zavx0z/template"
+import { collect, resolvePath, resolveValue, type Scope } from "../data"
 
 export const applyAttributes = (
   context: Values<any>,
@@ -8,7 +8,7 @@ export const applyAttributes = (
   state: State,
   el: HTMLElement,
   attrs: Record<string, any>,
-  itemScope: NodeTemplate | undefined
+  itemScope: Scope | undefined
 ) => {
   for (const [attr, v] of Object.entries(attrs)) {
     const resolved = resolveValue(context, core, state, v, itemScope)
@@ -33,7 +33,7 @@ export const evalCondition = (
   state: State,
   data: string | string[],
   expr: string | undefined,
-  itemScope: NodeTemplate | undefined
+  itemScope: Scope | undefined
 ) => {
   if (!expr && typeof data === "string") {
     return Boolean(resolvePath(context, core, state, data, itemScope))
@@ -55,7 +55,7 @@ export const evalBool = (
   core: Core,
   state: State,
   node: NodeLogical,
-  itemScope: NodeTemplate | undefined
+  itemScope: Scope | undefined
 ) => {
   return evalCondition(context, core, state, node.data, node.expr, itemScope)
 }

@@ -1,6 +1,6 @@
 import type { Update, Values } from "@zavx0z/context"
-import type { Node as NodeTemplate, Core, State } from "@zavx0z/template"
-import { collect } from "../data"
+import type { Core, State } from "@zavx0z/template"
+import { collect, type Scope } from "../data"
 
 export const applyEvents = (
   context: Values<any>,
@@ -9,7 +9,7 @@ export const applyEvents = (
   state: State,
   el: HTMLElement,
   evs: Record<string, any>,
-  itemScope: NodeTemplate | undefined
+  itemScope: Scope | undefined
 ) => {
   for (const [name, cfg] of Object.entries(evs)) {
     const handler = makeHandler(context, update, core, state, cfg, itemScope)
@@ -22,7 +22,7 @@ export const makeHandler = (
   core: Core,
   state: State,
   cfg: { expr: string; data: string | string[] },
-  itemScope: NodeTemplate | undefined
+  itemScope: Scope | undefined
 ) => {
   const vals = collect(core, context, state, cfg.data, itemScope)
   let code = cfg.expr.replace(/\$\{\s*\[(\d+)\]\s*\}/g, "(__v[$1])")

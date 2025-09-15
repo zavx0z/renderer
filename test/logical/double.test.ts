@@ -15,7 +15,7 @@ describe("&& &&", () => {
     element = render({
       el: document.createElement("div"),
       ctx,
-      state: "state",
+      st: { state: "state", states: [] },
       core: {
         user: { role: "admin" },
       },

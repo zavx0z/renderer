@@ -12,7 +12,8 @@ describe("простой HTML элемент", () => {
 
   let element: HTMLElement
   const st = {
-    value: "open",
+    state: "open",
+    states: []
   }
 
   beforeAll(() => {
@@ -73,7 +74,7 @@ describe("простой HTML элемент", () => {
   })
 
   it("update", () => {
-    st.value = "closed"
+    st.state = "closed"
     ctx.update({ cups: 1, last: "Espresso" })
     expect(element.innerHTML).toMatchStringHTML(html`
       <h1>Quick Coffee Order</h1>

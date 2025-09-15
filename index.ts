@@ -1,16 +1,6 @@
-import type {
-  Core,
-  State,
-  Node as NodeTemplate,
-  NodeText,
-  NodeLogical,
-  NodeCondition,
-  NodeMap,
-  NodeElement,
-  Params,
-} from "@zavx0z/template"
-import type { Values, Update, Context, Schema } from "@zavx0z/context"
-import { collect, resolvePath } from "./data"
+import type { Core, State, Node as NodeTemplate, Params } from "@zavx0z/template"
+import type { Values, Context, Schema } from "@zavx0z/context"
+import { resolvePath, type Scope } from "./data"
 import { TextElement } from "./element/text"
 import { Element } from "./element/element"
 import { evalBool, evalCondition } from "./attribute"
@@ -19,7 +9,7 @@ import { parse } from "@zavx0z/template"
 type RenderParams<C extends Schema, I extends Core = Core, S extends State = State> = {
   el: HTMLElement
   ctx: Context<C>
-  st: { value: S }
+  st: { state: S; states: readonly S[] }
   core: I
   tpl: (params: Params<Values<C>, I, S>) => void
 }
@@ -31,19 +21,19 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
   core,
   tpl,
 }: RenderParams<C, I, S>) => {
-  let prevState = st.value
+  let prevState = st.state
   const nodes = parse<Values<C>, I, S>(tpl)
   const fragment = document.createDocumentFragment()
 
-  const toDOM = (node: NodeTemplate, itemScope: NodeTemplate | undefined): Node | null => {
+  const toDOM = (node: NodeTemplate, itemScope: Scope | undefined): Node | null => {
     if (!node || typeof node !== "object") return null
 
     switch (node.type) {
       case "text":
-        return TextElement(core, ctx.context, st.value, node, itemScope)
+        return TextElement(core, ctx.context, st.state, node, itemScope)
       case "el": {
         if (typeof node.tag !== "string") return null
-        const el = Element(ctx.context, ctx.update, core, st.value, node, itemScope)
+        const el = Element(ctx.context, ctx.update, core, st.state, node, itemScope)
         for (const c of node.child ?? []) {
           const dom = toDOM(c, itemScope)
           if (dom) el.appendChild(dom)
@@ -51,7 +41,7 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
         return el
       }
       case "cond": {
-        const ok = evalCondition(ctx.context, core, st.value, node.data, node.expr, itemScope)
+        const ok = evalCondition(ctx.context, core, st.state, node.data, node.expr, itemScope)
         const childIndex = ok ? 0 : 1
         const targetChild = node.child?.[childIndex]
         if (targetChild) {
@@ -60,7 +50,7 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
         return null
       }
       case "log": {
-        const ok = evalBool(ctx.context, core, st.value, node, itemScope)
+        const ok = evalBool(ctx.context, core, st.state, node, itemScope)
         if (ok) {
           const frag = document.createDocumentFragment()
           for (const c of node.child ?? []) {
@@ -73,15 +63,20 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
       }
 
       case "map": {
-        const arr = resolvePath(ctx.context, core, st.value, node.data, itemScope)
+        const arr = resolvePath(ctx.context, core, st.state, node.data, itemScope)
         const frag = document.createDocumentFragment()
         if (Array.isArray(arr)) {
-          for (const it of arr) {
+          arr.forEach((item, index) => {
+            const scope = {
+              item,
+              index,
+              parent: itemScope && typeof itemScope === "object" ? (itemScope as any) : itemScope,
+            }
             for (const c of node.child ?? []) {
-              const dom = toDOM(c, it)
+              const dom = toDOM(c, scope as any)
               if (dom) frag.appendChild(dom)
             }
-          }
+          })
         }
         return frag
       }
@@ -99,14 +94,14 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
   el.replaceChildren(fragment)
 
   ctx.onUpdate(() => {
-    console.log(st.value)
+    console.log(st.state)
     fragment.replaceChildren()
     for (const n of nodes) {
       const dom = toDOM(n, undefined)
       if (dom) fragment.appendChild(dom)
     }
     el.replaceChildren(fragment)
-    prevState = st.value
+    prevState = st.state
   })
   return el
 }

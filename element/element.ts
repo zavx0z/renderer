@@ -1,5 +1,6 @@
-import type { Core, State, Node as NodeTemplate, NodeElement } from "@zavx0z/template"
+import type { Core, State, NodeElement } from "@zavx0z/template"
 import type { Update, Values } from "@zavx0z/context"
+import type { Scope } from "../data"
 import { applyAttributes } from "../attribute"
 import { applyEvents } from "../attribute/event"
 
@@ -9,7 +10,7 @@ export const Element = (
   core: Core,
   state: State,
   node: NodeElement,
-  itemScope: NodeTemplate | undefined
+  itemScope: Scope | undefined
 ): Element => {
   const el = document.createElement(node.tag)
   if (node.string) applyAttributes(context, core, state, el, node.string, itemScope)
