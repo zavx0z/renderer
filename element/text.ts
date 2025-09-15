@@ -1,6 +1,7 @@
 import type { Core, State, NodeText } from "@zavx0z/template"
 import type { Values } from "@zavx0z/context"
-import { collect, type Scope } from "../data"
+import { resolvePath, readByPath, collect, type Scope } from "../data"
+import { evalText } from "../eval"
 
 export const TextElement = (
   core: Core,
@@ -14,21 +15,15 @@ export const TextElement = (
   else if (node.expr) {
     const vals = collect(core, context, state, node.data!, itemScope)
     try {
-      const body = node.expr.replace(/(_\[\d+\])/g, "clean($1)")
-      const clean = (x: unknown) => (x == null ? "" : x)
-      const fn = new Function("_", "clean", "return (`" + body + "`)")
-      string = fn(vals, clean)
+      const fn = evalText(node.expr)
+      string = fn(vals)
     } catch (error) {
       throw new Error(`Error evaluating expression: ${node.expr}`, { cause: error })
     }
-  } else if (node.data) {
-    const vals = collect(core, context, state, node.data, itemScope)
-    if (Array.isArray(node.data)) {
-      string = vals.map((v) => (v == null ? "" : String(v))).join("")
-    } else {
-      const v = vals[0]
-      string = v == null ? "" : String(v)
-    }
+  } else if (typeof node.data === "string") {
+    const path = resolvePath(node.data, itemScope)
+    string = path ? readByPath(path, { context, core, state }) : ""
   }
-  return document.createTextNode(string)
+  const textEl = document.createTextNode(string)
+  return textEl
 }

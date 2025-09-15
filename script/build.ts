@@ -7,6 +7,7 @@ async function build(dev: boolean, distDir: string, entrypoint: string) {
     outdir: distDir,
     target: "browser",
     format: "esm",
+    external: ["@zavx0z/context", "@zavx0z/template"],
     // sourcemap: dev ? "inline" : "none",
     minify: !dev,
     naming: "[dir]/[name].[ext]",
