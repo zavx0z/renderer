@@ -1,6 +1,6 @@
 import type { Core, State, Node as NodeTemplate, Params } from "@zavx0z/template"
 import type { Values, Context, Schema } from "@zavx0z/context"
-import { resolvePath, readByPath, type Scope } from "./data"
+import { resolvePath, readByPath, type Scope, collect } from "./data"
 import { TextElement } from "./element/text"
 import { Element } from "./element/element"
 import { evalCondition } from "./eval"
@@ -47,17 +47,47 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
         return el
       }
       case "cond": {
-        const ok = evalCondition(ctx.context, core, st.state, node.data, node.expr, itemScope)
-        const childIndex = ok ? 0 : 1
-        const targetChild = node.child?.[childIndex]
+        let values: any[] = []
+        let result = false
+        if (!node.expr && typeof node.data === "string") {
+          const path = resolvePath(node.data, itemScope)
+          result = Boolean(path ? readByPath(path, { context: ctx.context, core, state: st.state }) : false)
+        } else if (node.expr) {
+          if (node.data === "[index]") {
+            const idx = itemScope?.index
+            values = idx == null ? [] : [idx]
+          } else {
+            const collectedData = collect(core, ctx.context, st.state, node.data, itemScope)
+            values = collectedData
+          }
+          const fn = evalCondition(node.expr)
+          result = fn(values)
+        }
+        const childIndex = result ? 0 : 1
+        const targetChild = node.child![childIndex]
         if (targetChild) {
           return toDOM(targetChild, itemScope)
         }
         return null
       }
       case "log": {
-        const ok = evalCondition(ctx.context, core, st.state, node.data, node.expr, itemScope)
-        if (ok) {
+        let values: any[] = []
+        let result = false
+        if (!node.expr && typeof node.data === "string") {
+          const path = resolvePath(node.data, itemScope)
+          result = Boolean(path ? readByPath(path, { context: ctx.context, core, state: st.state }) : false)
+        } else if (node.expr) {
+          if (node.data === "[index]") {
+            const idx = itemScope?.index
+            values = idx == null ? [] : [idx]
+          } else {
+            const collectedData = collect(core, ctx.context, st.state, node.data, itemScope)
+            values = collectedData
+          }
+          const fn = evalCondition(node.expr)
+          result = fn(values)
+        }
+        if (result) {
           const frag = document.createDocumentFragment()
           for (const c of node.child ?? []) {
             const dom = toDOM(c, itemScope)

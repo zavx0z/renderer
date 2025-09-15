@@ -1,6 +1,6 @@
 {
   "name": "@zavx0z/renderer",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "HTML renderer для MetaFor",
   "author": "zavx0z",
   "license": "MIT",
@@ -26,13 +26,13 @@
   ],
   "devDependencies": {
     "@happy-dom/global-registrator": "^18.0.1",
-    "@types/bun": "^1.2.21",
+    "@types/bun": "^1.2.22",
     "concat-md": "^0.5.1",
     "diff": "^8.0.2",
     "dts-bundle-generator": "^9.5.1",
     "happy-dom": "^18.0.1",
     "prettier": "^3.6.2",
-    "typedoc": "^0.28.12",
+    "typedoc": "^0.28.13",
     "typedoc-plugin-markdown": "^4.8.1"
   },
   "peerDependencies": {
@@ -48,6 +48,6 @@
   },
   "dependencies": {
     "@zavx0z/context": "^1.0.3",
-    "@zavx0z/template": "^2.5.0"
+    "@zavx0z/template": "^2.5.3"
   }
 }

@@ -1,29 +1,11 @@
-import type { Values } from "@zavx0z/context"
-import type { Core, State } from "@zavx0z/template"
-import { type Scope, resolvePath, readByPath, collect } from "./data"
+const BOOLEAN_CACHE = new Map<string, Function>()
 
-export const evalCondition = (
-  context: Values<any>,
-  core: Core,
-  state: State,
-  data: string | string[],
-  expr: string | undefined,
-  itemScope: Scope | undefined
-) => {
-  if (!expr && typeof data === "string") {
-    const path = resolvePath(data, itemScope)
-    return Boolean(path ? readByPath(path, { context, core, state }) : false)
-  } else {
-    const code = "return Boolean(" + expr + ");"
-    try {
-      const collectedData = collect(core, context, state, data, itemScope)
-      const f = new Function("_", code)
-      const result = f(collectedData)
-      return result
-    } catch {
-      return false
-    }
-  }
+export const evalCondition = (expr: string) => {
+  const cached = BOOLEAN_CACHE.get(expr)
+  if (cached) return cached
+  const compiled = new Function("_", "return Boolean(" + expr + ");")
+  BOOLEAN_CACHE.set(expr, compiled)
+  return compiled
 }
 
 type Value = string | number | boolean | null | undefined

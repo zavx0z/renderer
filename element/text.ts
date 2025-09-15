@@ -21,8 +21,14 @@ export const TextElement = (
       throw new Error(`Error evaluating expression: ${node.expr}`, { cause: error })
     }
   } else if (typeof node.data === "string") {
-    const path = resolvePath(node.data, itemScope)
-    string = path ? readByPath(path, { context, core, state }) : ""
+    if (node.data === "[index]") {
+      const idx = itemScope?.index
+      string = idx == null ? "" : String(idx)
+    } else {
+      const path = resolvePath(node.data, itemScope)
+      const v = path ? readByPath(path, { context, core, state }) : ""
+      string = v == null ? "" : String(v)
+    }
   }
   const textEl = document.createTextNode(string)
   return textEl
