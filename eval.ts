@@ -8,8 +8,7 @@ export const evalCondition = (expr: string) => {
   return compiled
 }
 
-type Value = string | number | boolean | null | undefined
-type EvalTextFn = (values: Value[]) => string
+type EvalTextFn = (values: (string | number | boolean | null | undefined)[]) => string
 
 const CACHE = new Map<string, EvalTextFn>()
 
