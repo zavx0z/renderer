@@ -211,9 +211,9 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
               value = v
             }
             if (value == null) continue
-            result += `${attr.replace(/([A-Z])/g, "-$1").toLowerCase()}:${value};`
+            result += `${attr.replace(/([A-Z])/g, "-$1").toLowerCase()}: ${value}; `
           }
-          el.setAttribute("style", result)
+          el.setAttribute("style", result.trim())
         }
         if (event) {
           for (const [name, declare] of Object.entries(event)) {
