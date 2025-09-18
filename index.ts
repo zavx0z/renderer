@@ -94,8 +94,8 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
         else if (expr && data) {
           const vals = collect(data)
           try {
-            const fn = evalText(expr)
-            result = fn(vals)
+            result = evalText(expr)(vals)
+            if (result === "false" || result === "true") result = ""
           } catch (error) {
             console.error(`Error evaluating expression: ${expr}`, { cause: error })
           }
@@ -116,14 +116,14 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
         const el = document.createElement(node.tag)
         if (string) {
           for (const [attr, declare] of Object.entries(string)) {
+            let value: string | undefined
             if (isStaticValue(declare)) {
-              el.setAttribute(attr, String(declare))
+              value = declare
             } else if (isDynamicValue(declare)) {
               const { expr, data } = declare
               const vals = collect(data)
               try {
-                const result = evalText(expr)(vals)
-                el.setAttribute(attr, String(result))
+                value = evalText(expr)(vals)
               } catch (error) {
                 console.error(`Error evaluating expression: ${expr}`, { cause: error })
               }
@@ -131,7 +131,12 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
               const { data } = declare
               const path = resolvePath(data, itemScope)
               const v = path ? readByPath(path) : ""
-              el.setAttribute(attr, String(v))
+              value = String(v)
+            }
+            if (value) {
+              if (attr === "class") {
+                if (value !== "false" && value !== "true" && value !== "") el.classList.add(value)
+              } else el.setAttribute(attr, value)
             }
           }
         }
@@ -178,11 +183,11 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
                 const v = path ? readByPath(path) : ""
                 value = v
               }
-              if (value == null || value === false || value === "" || value === undefined) continue
+              if (value == null || value === "false" || value === "" || value === undefined) continue
               result.push(value)
             }
-            if (attr === "class") el.className = result.join(" ")
-            else el.setAttribute(attr, result.join(","))
+            if (attr === "class" && result.length > 0) el.className = result.join(" ")
+            else if (result.length > 0) el.setAttribute(attr, result.join(","))
           }
         }
         if (style) {
