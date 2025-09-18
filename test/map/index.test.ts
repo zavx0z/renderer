@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeAll } from "bun:test"
-import { render } from "../../index"
+import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
 
 const html = String.raw

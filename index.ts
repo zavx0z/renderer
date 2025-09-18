@@ -50,7 +50,7 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
 }: RenderParams<C, I, S>) => {
   let prevState = st.state
   const nodes = parse<Values<C>, I, S>(tpl)
-  const fragment = document.createDocumentFragment()
+  let fragment = document.createDocumentFragment()
 
   const toDOM = (node: NodeTemplate, itemScope: Scope | undefined): Node | null => {
     if (!node || typeof node !== "object") return null
@@ -308,8 +308,7 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
   el.replaceChildren(fragment)
 
   ctx.onUpdate(() => {
-    console.log(st.state)
-    fragment.replaceChildren()
+    fragment = document.createDocumentFragment()
     for (const n of nodes) {
       const dom = toDOM(n, undefined)
       if (dom) fragment.appendChild(dom)

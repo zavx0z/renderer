@@ -1,7 +1,6 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { Context } from "@zavx0z/context"
-
-import { render } from "../../index"
+import { render } from "@zavx0z/renderer"
 
 const html = String.raw
 
