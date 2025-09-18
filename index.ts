@@ -59,6 +59,7 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
       if (!data) return []
       if (typeof data === "string") data = [data]
       return data.map((path) => {
+        if (path === "[index]") return itemScope?.index // поддержка индекса текущей итерации
         const abs = resolvePath(path, itemScope)
         return abs != null ? readByPath(abs) : undefined
       })
@@ -136,14 +137,14 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
         }
         if (boolean) {
           for (const [attr, declare] of Object.entries(boolean)) {
+            let result = false
             if (isStaticValue(declare)) {
-              el.setAttribute(attr, String(declare))
+              result = Boolean(declare)
             } else if (isDynamicValue(declare)) {
               const { expr, data } = declare
               const vals = collect(data)
               try {
-                const result = evalCondition(expr)(vals)
-                el.setAttribute(attr, String(result))
+                result = evalCondition(expr)(vals)
               } catch (error) {
                 console.error(`Error evaluating expression: ${expr}`, { cause: error })
               }
@@ -151,8 +152,9 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
               const { data } = declare
               const path = resolvePath(data, itemScope)
               const v = path ? readByPath(path) : ""
-              el.setAttribute(attr, String(v))
+              result = Boolean(v)
             }
+            el.toggleAttribute(attr, !!result)
           }
         }
         if (array) {
@@ -176,14 +178,15 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
                 const v = path ? readByPath(path) : ""
                 value = v
               }
-              if (value == null) continue
+              if (value == null || value === false || value === "" || value === undefined) continue
               result.push(value)
             }
-            el.setAttribute(attr, String(result))
+            if (attr === "class") el.className = result.join(" ")
+            else el.setAttribute(attr, result.join(","))
           }
         }
         if (style) {
-          let style: string = ""
+          let result: string = ""
           for (const [attr, declare] of Object.entries(style)) {
             let value: any
             if (isStaticValue(declare)) {
@@ -203,9 +206,9 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
               value = v
             }
             if (value == null) continue
-            style += `${attr.replace(/([A-Z])/g, "-$1").toLowerCase()}:${value};`
+            result += `${attr.replace(/([A-Z])/g, "-$1").toLowerCase()}:${value};`
           }
-          el.setAttribute("style", style)
+          el.setAttribute("style", result)
         }
         if (event) {
           for (const [name, declare] of Object.entries(event)) {
@@ -395,8 +398,9 @@ export const resolvePath = (path: string, itemScope: Scope | undefined): string 
   if (path.startsWith("/")) {
     const segments = path.replace(/^\//, "").split("/")
     const head = segments.shift()
-    if (head === "context" || head === "core") return "/" + [head, ...segments].join("/")
-    if (head === "state") return "/state"
+    if (head === "context" || head === "core" || head === "state") {
+      return "/" + [head, ...segments].join("/")
+    }
     return head ? "/" + head : undefined
   }
 
