@@ -217,17 +217,13 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
         }
         if (event) {
           for (const [name, declare] of Object.entries(event)) {
-            const { data, expr, upd } = declare as any
+            const { data, expr } = declare as any
             const vals = collect(data)
-            let code = expr.replace(/\$\{\s*\[(\d+)\]\s*\}/g, "(__v[$1])")
-            code = code.replace(/(?<!\\)\[(\d+)\]/g, "__v[$1]")
-            const fn = new Function("update", "__v", "return (" + code + ")") as (
-              update: Update<any>,
-              __v: any[]
-            ) => EventListener
+            const event = name.replace(/^on/, "")
+            const fn = new Function("update", "_", "return (" + expr + ")")
             try {
               const handler = fn(ctx.update, vals)
-              if (handler) el.addEventListener(name, handler)
+              if (handler) el.addEventListener(event, handler)
             } catch (error) {
               console.error(`Error evaluating expression: ${expr}`, { cause: error })
             }
