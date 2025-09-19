@@ -7,7 +7,7 @@ import type {
   ValueDynamic,
   ValueVariable,
 } from "@zavx0z/template"
-import type { Values, Context, Schema, Update } from "@zavx0z/context"
+import type { Values, Context, Schema } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
 /**
  * Scope — скоуп текущей итерации map
@@ -220,9 +220,8 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
             const { data, expr } = declare as any
             const vals = collect(data)
             const event = name.replace(/^on/, "")
-            const fn = new Function("update", "_", "return (" + expr + ")")
             try {
-              const handler = fn(ctx.update, vals)
+              const handler = evalEvent(expr)(ctx.update, vals)
               if (handler) el.addEventListener(event, handler)
             } catch (error) {
               console.error(`Error evaluating expression: ${expr}`, { cause: error })
@@ -319,9 +318,18 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
   })
   return el
 }
+const EVENT_CACHE = new Map<string, Function>()
+const evalEvent = (expr: string) => {
+  const cached = EVENT_CACHE.get(expr)
+  if (cached) return cached
+  const compiled = new Function("update", "_", "return (" + expr + ")")
+  EVENT_CACHE.set(expr, compiled)
+  return compiled
+}
+
 const BOOLEAN_CACHE = new Map<string, Function>()
 
-export const evalCondition = (expr: string) => {
+const evalCondition = (expr: string) => {
   const cached = BOOLEAN_CACHE.get(expr)
   if (cached) return cached
   const compiled = new Function("_", "return Boolean(" + expr + ");")
@@ -331,18 +339,18 @@ export const evalCondition = (expr: string) => {
 
 type EvalTextFn = (values: (string | number | boolean | null | undefined)[]) => string
 
-const CACHE = new Map<string, EvalTextFn>()
+const TEXT_CACHE = new Map<string, EvalTextFn>()
 
 /**
  * Компилирует expr в функцию вида (values) => string
  * Все вхождения _[i] получают nullish-fallback: ( _[i] ?? "" )
  */
-export const evalText = (expr: string): EvalTextFn => {
-  const cached = CACHE.get(expr)
+const evalText = (expr: string): EvalTextFn => {
+  const cached = TEXT_CACHE.get(expr)
   if (cached) return cached
   const body = expr.replace(/(_\[\d+\])/g, '($1 ?? "")')
   const compiled = new Function("_", `return (\`${body}\`)`) as EvalTextFn
-  CACHE.set(expr, compiled)
+  TEXT_CACHE.set(expr, compiled)
   return compiled
 }
 /**
