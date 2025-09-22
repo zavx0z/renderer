@@ -2,70 +2,36 @@ import type {
   Core,
   State,
   Node as NodeTemplate,
-  Params,
   ValueStatic,
   ValueDynamic,
   ValueVariable,
 } from "@zavx0z/template"
-import type { Values, Context, Schema } from "@zavx0z/context"
-import { parse } from "@zavx0z/template"
-/**
- * Scope — скоуп текущей итерации map
- *
- * - item: текущий элемент массива
- * - index: индекс текущего элемента
- * - parent: скоуп родительской итерации (для путей с ../)
- */
-export type Scope = { item: any; index: number; parent?: Scope; itemPath: string }
-type RenderParams<C extends Schema, I extends Core = Core, S extends State = State> = {
-  el: HTMLElement
-  ctx: Context<C>
-  st: { state: S; states: readonly S[] }
-  core: I
-  tpl: (params: Params<Values<C>, I, S>) => void
-}
-const isStaticValue = (value: ValueStatic | ValueDynamic | ValueVariable | boolean) =>
-  typeof value === "string" || typeof value === "boolean" || typeof value === "number" || typeof value === "symbol"
-const isDynamicValue = (value: ValueStatic | ValueDynamic | ValueVariable | boolean) =>
-  typeof value === "object" && "expr" in value
-const isVariableValue = (value: ValueStatic | ValueDynamic | ValueVariable | boolean) =>
-  typeof value === "object" && "data" in value && typeof value.data === "string" && !Object.hasOwn(value, "expr")
-
-const getBySegments = (base: any, segments: (string | number)[]) => {
-  let cur: any = base
-  for (const s of segments) {
-    if (cur == null) return undefined
-    const key: any = typeof s === "string" && /^\d+$/.test(s) ? Number(s) : s
-    cur = cur[key]
-  }
-  return cur
-}
+import type { Context, Schema } from "@zavx0z/context"
 
 export const render = <C extends Schema, I extends Core = Core, S extends State = State>({
   el,
   ctx,
   st,
   core,
-  tpl,
+  nodes,
 }: RenderParams<C, I, S>) => {
   let prevState = st.state
-  const nodes = parse<Values<C>, I, S>(tpl)
   let fragment = document.createDocumentFragment()
 
   const toDOM = (node: NodeTemplate, itemScope: Scope | undefined): Node | null => {
     if (!node || typeof node !== "object") return null
 
-    const collect = (data: string | string[]) => {
+    const getValues = (data: string | string[]) => {
       if (!data) return []
       if (typeof data === "string") data = [data]
       return data.map((path) => {
         if (path === "[index]") return itemScope?.index // поддержка индекса текущей итерации
         const abs = resolvePath(path, itemScope)
-        return abs != null ? readByPath(abs) : undefined
+        return abs != null ? getValue(abs) : undefined
       })
     }
 
-    const readByPath = (absPath: string): any => {
+    const getValue = (absPath: string): any => {
       if (typeof absPath !== "string" || !absPath.startsWith("/")) {
         console.error("Invalid path: " + absPath)
         return
@@ -92,7 +58,7 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
         let result = ""
         if (value) result = value
         else if (expr && data) {
-          const vals = collect(data)
+          const vals = getValues(data)
           try {
             result = evalText(expr)(vals)
             if (result === "false" || result === "true") result = ""
@@ -105,11 +71,12 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
             result = idx == null ? "" : String(idx)
           } else {
             const path = resolvePath(data, itemScope)
-            const v = path ? readByPath(path) : ""
+            const v = path ? getValue(path) : ""
             result = v == null ? "" : String(v)
           }
         }
         return document.createTextNode(result)
+      case "meta":
       case "el": {
         if (typeof node.tag !== "string") return null
         const { string, boolean, array, style, event, child } = node
@@ -121,7 +88,7 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
               value = declare
             } else if (isDynamicValue(declare)) {
               const { expr, data } = declare
-              const vals = collect(data)
+              const vals = getValues(data)
               try {
                 value = evalText(expr)(vals)
               } catch (error) {
@@ -130,7 +97,7 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
             } else if (isVariableValue(declare)) {
               const { data } = declare
               const path = resolvePath(data, itemScope)
-              const v = path ? readByPath(path) : ""
+              const v = path ? getValue(path) : ""
               value = String(v)
             }
             if (value) {
@@ -147,7 +114,7 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
               result = Boolean(declare)
             } else if (isDynamicValue(declare)) {
               const { expr, data } = declare
-              const vals = collect(data)
+              const vals = getValues(data)
               try {
                 result = evalCondition(expr)(vals)
               } catch (error) {
@@ -156,7 +123,7 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
             } else if (isVariableValue(declare)) {
               const { data } = declare
               const path = resolvePath(data, itemScope)
-              const v = path ? readByPath(path) : ""
+              const v = path ? getValue(path) : ""
               result = Boolean(v)
             }
             el.toggleAttribute(attr, !!result)
@@ -171,7 +138,7 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
                 value = declare
               } else if (isDynamicValue(declare)) {
                 const { expr, data } = declare
-                const vals = collect(data)
+                const vals = getValues(data)
                 try {
                   value = evalText(expr)(vals)
                 } catch (error) {
@@ -180,7 +147,7 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
               } else if (isVariableValue(declare)) {
                 const { data } = declare
                 const path = resolvePath(data, itemScope)
-                const v = path ? readByPath(path) : ""
+                const v = path ? getValue(path) : ""
                 value = v
               }
               if (value == null || value === "false" || value === "" || value === undefined) continue
@@ -198,7 +165,7 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
               value = declare
             } else if (isDynamicValue(declare)) {
               const { expr, data } = declare
-              const vals = collect(data)
+              const vals = getValues(data)
               try {
                 value = evalText(expr)(vals)
               } catch (error) {
@@ -207,7 +174,7 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
             } else if (isVariableValue(declare)) {
               const { data } = declare
               const path = resolvePath(data, itemScope)
-              const v = path ? readByPath(path) : ""
+              const v = path ? getValue(path) : ""
               value = v
             }
             if (value == null) continue
@@ -218,7 +185,7 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
         if (event) {
           for (const [name, declare] of Object.entries(event)) {
             const { data, expr } = declare as any
-            const vals = collect(data)
+            const vals = getValues(data)
             const event = name.replace(/^on/, "")
             try {
               const handler = evalEvent(expr)(ctx.update, vals)
@@ -243,12 +210,12 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
         let result = false
         if (!expr && typeof data === "string") {
           const path = resolvePath(data, itemScope)
-          result = Boolean(path ? readByPath(path) : false)
+          result = Boolean(path ? getValue(path) : false)
         } else if (expr && data) {
           if (data === "[index]") {
             const idx = itemScope?.index
             values = idx == null ? [] : [idx]
-          } else values = collect(data)
+          } else values = getValues(data)
           try {
             const fn = evalCondition(expr)
             result = fn(values)
@@ -276,7 +243,7 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
       case "map": {
         const { data, child } = node
         const arrPath = resolvePath(data, itemScope)
-        const arr = arrPath != null ? readByPath(arrPath) : undefined
+        const arr = arrPath != null ? getValue(arrPath) : undefined
         const frag = document.createDocumentFragment()
         if (Array.isArray(arr)) {
           arr.forEach((item, index) => {
@@ -413,4 +380,35 @@ export const resolvePath = (path: string, itemScope: Scope | undefined): string 
   }
 
   return undefined
+}
+
+/**
+ * Scope — скоуп текущей итерации map
+ *
+ * - item: текущий элемент массива
+ * - index: индекс текущего элемента
+ * - parent: скоуп родительской итерации (для путей с ../)
+ */
+export type Scope = { item: any; index: number; parent?: Scope; itemPath: string }
+type RenderParams<C extends Schema, I extends Core = Core, S extends State = State> = {
+  el: HTMLElement
+  ctx: Context<C>
+  st: { state: S; states: readonly S[] }
+  core: I
+  nodes: NodeTemplate[]
+}
+const isStaticValue = (value: ValueStatic | ValueDynamic | ValueVariable | boolean) =>
+  typeof value === "string" || typeof value === "boolean" || typeof value === "number" || typeof value === "symbol"
+const isDynamicValue = (value: ValueStatic | ValueDynamic | ValueVariable | boolean) =>
+  typeof value === "object" && "expr" in value
+const isVariableValue = (value: ValueStatic | ValueDynamic | ValueVariable | boolean) =>
+  typeof value === "object" && "data" in value && typeof value.data === "string" && !Object.hasOwn(value, "expr")
+const getBySegments = (base: any, segments: (string | number)[]) => {
+  let cur: any = base
+  for (const s of segments) {
+    if (cur == null) return undefined
+    const key: any = typeof s === "string" && /^\d+$/.test(s) ? Number(s) : s
+    cur = cur[key]
+  }
+  return cur
 }
