@@ -1,24 +1,22 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
+import { parse } from "@zavx0z/template"
 
 const html = String.raw
 describe("boolean атрибуты", () => {
   it("булевы атрибуты с переменными из разных уровней вложенности", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({}))
+    const core = {
+      companies: [
+        { id: "1", active: true, departments: [{ id: "1", active: true }] },
+        { id: "2", active: false, departments: [{ id: "2", active: true }] },
+      ],
+    }
     beforeAll(() => {
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {
-          companies: [
-            { id: "1", active: true, departments: [{ id: "1", active: true }] },
-            { id: "2", active: false, departments: [{ id: "2", active: true }] },
-          ],
-        },
-        tpl: ({ html, core }) => html`
+      const nodes = parse<any, typeof core>(
+        ({ html, core }) => html`
           <div>
             ${core.companies.map(
               (company) => html`
@@ -34,7 +32,14 @@ describe("boolean атрибуты", () => {
               `
             )}
           </div>
-        `,
+        `
+      )
+      element = render({
+        el: document.createElement("div"),
+        ctx,
+        st: { state: "state", states: [] },
+        core,
+        nodes,
       })
     })
     it("render", () => {
@@ -54,12 +59,15 @@ describe("boolean атрибуты", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({}))
     beforeAll(() => {
+      const nodes = parse(
+        ({ html, core }) => html`<img src="https://example.com" ${core.visible ? "visible" : "hidden"} />`
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
         core: { visible: true },
-        tpl: ({ html, core }) => html`<img src="https://example.com" ${core.visible ? "visible" : "hidden"} />`,
+        nodes,
       })
     })
     it("render", () => {

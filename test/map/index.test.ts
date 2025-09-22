@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
+import { parse } from "@zavx0z/template"
 
 const html = String.raw
 
@@ -23,16 +24,19 @@ describe("индекс", () => {
     }
 
     beforeAll(() => {
+      const nodes = parse<typeof ctx.context>(
+        ({ html, context }) => html`
+          <ul>
+            ${context.list.map((_, i) => html`<li>${i}</li>`)}
+          </ul>
+        `
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st,
         core,
-        tpl: ({ html, context }) => html`
-          <ul>
-            ${context.list.map((_, i) => html`<li>${i}</li>`)}
-          </ul>
-        `,
+        nodes,
       })
     })
 
@@ -65,16 +69,19 @@ describe("индекс", () => {
     }
 
     beforeAll(() => {
+      const nodes = parse<typeof ctx.context>(
+        ({ html, context }) => html`
+          <ul>
+            ${context.list.map((_, i) => html`<li>${i % 2 ? html`<em>A</em>` : html`<strong>B</strong>`}</li>`)}
+          </ul>
+        `
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st,
         core,
-        tpl: ({ html, context }) => html`
-          <ul>
-            ${context.list.map((_, i) => html`<li>${i % 2 ? html`<em>A</em>` : html`<strong>B</strong>`}</li>`)}
-          </ul>
-        `,
+        nodes,
       })
     })
 
@@ -107,16 +114,19 @@ describe("индекс", () => {
     }
 
     beforeAll(() => {
+      const nodes = parse<typeof ctx.context>(
+        ({ html, context }) => html`
+          <ul>
+            ${context.list.map((_, i) => html`<li>${i === 1 && html`<strong>1</strong>`}</li>`)}
+          </ul>
+        `
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st,
         core,
-        tpl: ({ html, context }) => html`
-          <ul>
-            ${context.list.map((_, i) => html`<li>${i === 1 && html`<strong>1</strong>`}</li>`)}
-          </ul>
-        `,
+        nodes,
       })
     })
 

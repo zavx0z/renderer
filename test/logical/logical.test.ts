@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
+import { parse } from "@zavx0z/template"
 
 const html = String.raw
 describe("логические операторы", () => {
@@ -8,14 +9,15 @@ describe("логические операторы", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({ error: t.string.required("error") }))
     beforeAll(() => {
+      const nodes = parse(
+        ({ html, context }) => html`<div>${context.error && html`<span class="error">${context.error}</span>`}</div>`
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
         core: {},
-        tpl: ({ html, context }) => html`
-          <div>${context.error && html`<span class="error">${context.error}</span>`}</div>
-        `,
+        nodes,
       })
     })
 
@@ -32,6 +34,16 @@ describe("логические операторы", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({}))
     beforeAll(() => {
+      const nodes = parse(
+        ({ html, core }) =>
+          html`<div>
+            ${core.user &&
+            html`<div class="user">
+              <img src="${core.user.avatar}" alt="${core.user.name}" />
+              <span>${core.user.name}</span>
+            </div> `}
+          </div>`
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
@@ -42,17 +54,7 @@ describe("логические операторы", () => {
             avatar: "avatar",
           },
         },
-        tpl: ({ html, core }) => html`
-          <div>
-            ${core.user &&
-            html`
-              <div class="user">
-                <img src="${core.user.avatar}" alt="${core.user.name}" />
-                <span>${core.user.name}</span>
-              </div>
-            `}
-          </div>
-        `,
+        nodes,
       })
     })
 
@@ -75,12 +77,15 @@ describe("логические операторы", () => {
       message: t.string.required("message"),
     }))
     beforeAll(() => {
+      const nodes = parse(
+        ({ html, context }) => html`<div>${context.isVisible && html`<p>${context.message}</p>`}</div>`
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
         core: {},
-        tpl: ({ html, context }) => html` <div>${context.isVisible && html`<p>${context.message}</p>`}</div> `,
+        nodes,
       })
     })
 
@@ -103,12 +108,13 @@ describe("логические операторы", () => {
       hasError: t.boolean.required(true),
     }))
     beforeAll(() => {
+      const nodes = parse(({ html, context }) => html`<div>${context.hasError && html`<br />`}</div>`)
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
         core: {},
-        tpl: ({ html, context }) => html` <div>${context.hasError && html`<br />`}</div> `,
+        nodes,
       })
     })
 

@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { Context } from "@zavx0z/context"
 import { render } from "@zavx0z/renderer"
+import { parse } from "@zavx0z/template"
 
 const html = String.raw
 
@@ -13,22 +14,18 @@ describe("простой HTML элемент", () => {
   let element: HTMLElement
   const st = {
     state: "open",
-    states: []
+    states: [],
   }
-
+  const core = {
+    menu: [
+      { label: "Espresso", size: "30ml" },
+      { label: "Cappuccino", size: "200ml" },
+      { label: "Latte", size: "250ml" },
+    ],
+  }
   beforeAll(() => {
-    element = render({
-      el: document.createElement("div"),
-      ctx,
-      st,
-      core: {
-        menu: [
-          { label: "Espresso", size: "30ml" },
-          { label: "Cappuccino", size: "200ml" },
-          { label: "Latte", size: "250ml" },
-        ],
-      },
-      tpl: ({ html, context, update, core, state }) => html`
+    const nodes = parse<typeof ctx.context, typeof core>(
+      ({ html, context, update, core, state }) => html`
         <h1>Quick Coffee Order</h1>
 
         <p>
@@ -49,7 +46,14 @@ describe("простой HTML элемент", () => {
           </ul>
         `}
         ${state === "closed" && html`<p>Come back later — we’ll brew something tasty</p>`}
-      `,
+      `
+    )
+    element = render({
+      el: document.createElement("div"),
+      ctx,
+      st,
+      core,
+      nodes,
     })
   })
   it("рендер", () => {

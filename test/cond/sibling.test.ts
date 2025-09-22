@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "../../index"
 import { Context } from "@zavx0z/context"
+import { parse } from "@zavx0z/template"
 
 const html = String.raw
 describe("условия соседствующие", () => {
@@ -11,19 +12,22 @@ describe("условия соседствующие", () => {
       flag2: t.boolean.required(false),
     }))
     beforeAll(() => {
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        tpl: ({ html, context }) => html`
+      const nodes = parse(
+        ({ html, context }) => html`
           ${context.flag1
             ? html`<div class="conditional1">Content 1</div>`
             : html`<div class="fallback1">No content 1</div>`}
           ${context.flag2
             ? html`<div class="conditional2">Content 2</div>`
             : html`<div class="fallback2">No content 2</div>`}
-        `,
+        `
+      )
+      element = render({
+        el: document.createElement("div"),
+        ctx,
+        st: { state: "state", states: [] },
+        core: {},
+        nodes,
       })
     })
     it("render - flag1=true flag2=false", () => {
@@ -59,12 +63,8 @@ describe("условия соседствующие", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({ flag1: t.boolean.required(true), flag2: t.boolean.required(false) }))
     beforeAll(() => {
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        tpl: ({ html, context }) => html`
+      const nodes = parse(
+        ({ html, context }) => html`
           <div class="container">
             ${context.flag1
               ? html`<div class="conditional1">Content 1</div>`
@@ -73,7 +73,14 @@ describe("условия соседствующие", () => {
               ? html`<div class="conditional2">Content 2</div>`
               : html`<div class="fallback2">No content 2</div>`}
           </div>
-        `,
+        `
+      )
+      element = render({
+        el: document.createElement("div"),
+        ctx,
+        st: { state: "state", states: [] },
+        core: {},
+        nodes,
       })
     })
     it("render - flag1=true flag2=false", () => {
@@ -121,12 +128,8 @@ describe("условия соседствующие", () => {
       flag3: t.boolean.required(false),
     }))
     beforeAll(() => {
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        tpl: ({ html, context }) => html`
+      const nodes = parse(
+        ({ html, context }) => html`
           <div class="level1">
             <div class="level2">
               <div class="level3">
@@ -142,7 +145,14 @@ describe("условия соседствующие", () => {
               </div>
             </div>
           </div>
-        `,
+        `
+      )
+      element = render({
+        el: document.createElement("div"),
+        ctx,
+        st: { state: "state", states: [] },
+        core: {},
+        nodes,
       })
     })
     it("render - flag1=true flag2=false flag3=false", () => {

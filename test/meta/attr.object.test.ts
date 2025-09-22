@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeAll } from "bun:test"
-import { parse, type Node } from "../../../index"
+import { parse, type Node } from "@zavx0z/template"
 
 describe("core/context в атрибутах", () => {
   describe("core с динамическими значениями", () => {

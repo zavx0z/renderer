@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
+import { parse } from "@zavx0z/template"
 
 const html = String.raw
 
@@ -21,16 +22,19 @@ describe("список", () => {
   }
   describe("с деструктурированными данными", () => {
     beforeAll(() => {
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, core }) => html`
+          <ul>
+            ${core.configs.map(({ name, value }) => html`<li>${name} ${value}</li>`)}
+          </ul>
+        `
+      )
       elementWithDestructuring = render({
         el: document.createElement("div"),
         ctx,
         st,
         core,
-        tpl: ({ html, core }) => html`
-          <ul>
-            ${core.configs.map(({ name, value }) => html`<li>${name} ${value}</li>`)}
-          </ul>
-        `,
+        nodes,
       })
     })
     it("рендер", () => {
@@ -44,16 +48,19 @@ describe("список", () => {
   })
   describe("с данными без деструктуриризации", () => {
     beforeAll(() => {
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, core }) => html`
+          <ul>
+            ${core.configs.map((config) => html`<li>${config.name} ${config.value}</li>`)}
+          </ul>
+        `
+      )
       elementWithoutDestructuring = render({
         el: document.createElement("div"),
         ctx,
         st,
         core,
-        tpl: ({ html, core }) => html`
-          <ul>
-            ${core.configs.map((config) => html`<li>${config.name} ${config.value}</li>`)}
-          </ul>
-        `,
+        nodes,
       })
     })
     it("рендер", () => {

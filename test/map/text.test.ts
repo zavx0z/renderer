@@ -1,24 +1,28 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
+import { parse } from "@zavx0z/template"
 
 const html = String.raw
 describe("text", () => {
   describe("примитивы", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({}))
-
+    const core = { list: ["Item 1", "Item 2"] }
     beforeAll(() => {
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, core }) => html`
+          <ul>
+            ${core.list.map((name) => html`<li>${name}</li>`)}
+          </ul>
+        `
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
-        core: { list: ["Item 1", "Item 2"] },
-        tpl: ({ html, core }) => html`
-          <ul>
-            ${core.list.map((name) => html`<li>${name}</li>`)}
-          </ul>
-        `,
+        core,
+        nodes,
       })
     })
 
@@ -35,17 +39,21 @@ describe("text", () => {
   describe("объекты без деструктуризации", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({}))
+    const core = { configs: [{ name: "name", value: "value" }] }
     beforeAll(() => {
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, core }) => html`
+          <ul>
+            ${core.configs.map((config) => html`<li>${config.name} ${config.value}</li>`)}
+          </ul>
+        `
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
-        core: { configs: [{ name: "name", value: "value" }] },
-        tpl: ({ html, core }) => html`
-          <ul>
-            ${core.configs.map((config) => html`<li>${config.name} ${config.value}</li>`)}
-          </ul>
-        `,
+        core,
+        nodes,
       })
     })
     it("render", () => {
@@ -59,17 +67,21 @@ describe("text", () => {
   describe("объекты с деструктуризацией", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({}))
+    const core = { configs: [{ name: "name", value: "value" }] }
     beforeAll(() => {
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, core }) => html`
+          <ul>
+            ${core.configs.map((config) => html`<li>${config.name} ${config.value}</li>`)}
+          </ul>
+        `
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
-        core: { configs: [{ name: "name", value: "value" }] },
-        tpl: ({ html, core }) => html`
-          <ul>
-            ${core.configs.map(({ name, value }) => html`<li>${name} ${value}</li>`)}
-          </ul>
-        `,
+        core,
+        nodes,
       })
     })
     it("render", () => {
@@ -84,15 +96,19 @@ describe("text", () => {
   describe("вложенные объекты", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({}))
+    const core = { posts: [{ author: { name: "name", email: "email" } }] }
     beforeAll(() => {
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, core }) => html`
+          <div>${core.posts.map((post) => html`<p>Author: ${post.author.name} (${post.author.email})</p>`)}</div>
+        `
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
-        core: { posts: [{ author: { name: "name", email: "email" } }] },
-        tpl: ({ html, core }) => html`
-          <div>${core.posts.map((post) => html`<p>Author: ${post.author.name} (${post.author.email})</p>`)}</div>
-        `,
+        core,
+        nodes,
       })
     })
     it("render", () => {
@@ -107,17 +123,21 @@ describe("text", () => {
   describe("динамический текст в map с условными выражениями", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({}))
+    const core = { items: [{ name: "name", isActive: true }] }
     beforeAll(() => {
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, core }) => html`
+          <ul>
+            ${core.items.map((item) => html`<li>${item.isActive ? item.name : "Inactive"}</li>`)}
+          </ul>
+        `
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
-        core: { items: [{ name: "name", isActive: true }] },
-        tpl: ({ html, core }) => html`
-          <ul>
-            ${core.items.map((item) => html`<li>${item.isActive ? item.name : "Inactive"}</li>`)}
-          </ul>
-        `,
+        core,
+        nodes,
       })
     })
     it("render", () => {
@@ -132,17 +152,21 @@ describe("text", () => {
   describe("динамический текст в map с вычислениями", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({}))
+    const core = { products: [{ name: "name", price: 1, quantity: 1 }] }
     beforeAll(() => {
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, core }) => html`
+          <div>
+            ${core.products.map((product) => html`<p>${product.name}: $${product.price * product.quantity}</p>`)}
+          </div>
+        `
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
-        core: { products: [{ name: "name", price: 1, quantity: 1 }] },
-        tpl: ({ html, core }) => html`
-          <div>
-            ${core.products.map((product) => html`<p>${product.name}: $${product.price * product.quantity}</p>`)}
-          </div>
-        `,
+        core,
+        nodes,
       })
     })
     it("render", () => {
@@ -157,15 +181,19 @@ describe("text", () => {
   describe("динамический текст в map с методами", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({}))
+    const core = { users: [{ name: "name", email: "email" }] }
     beforeAll(() => {
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, core }) => html`
+          <div>${core.users.map((user) => html`<p>${user.name.toUpperCase()} - ${user.email.toLowerCase()}</p>`)}</div>
+        `
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
-        core: { users: [{ name: "name", email: "email" }] },
-        tpl: ({ html, core }) => html`
-          <div>${core.users.map((user) => html`<p>${user.name.toUpperCase()} - ${user.email.toLowerCase()}</p>`)}</div>
-        `,
+        core,
+        nodes,
       })
     })
     it("render", () => {
@@ -180,18 +208,15 @@ describe("text", () => {
   describe("динамический текст в map с вложенными map", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({}))
+    const core = {
+      categories: [
+        { name: "Category 1", products: [{ name: "Product 1", price: 1 }] },
+        { name: "Category 2", products: [{ name: "Product 2", price: 2 }] },
+      ],
+    }
     beforeAll(() => {
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {
-          categories: [
-            { name: "Category 1", products: [{ name: "Product 1", price: 1 }] },
-            { name: "Category 2", products: [{ name: "Product 2", price: 2 }] },
-          ],
-        },
-        tpl: ({ html, core }) => html`
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, core }) => html`
           <div>
             ${core.categories.map(
               (category) => html`
@@ -202,7 +227,14 @@ describe("text", () => {
               `
             )}
           </div>
-        `,
+        `
+      )
+      element = render({
+        el: document.createElement("div"),
+        ctx,
+        st: { state: "state", states: [] },
+        core,
+        nodes,
       })
     })
     it("render", () => {
@@ -224,13 +256,10 @@ describe("text", () => {
   describe("динамический текст в map с условными элементами", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({}))
+    const core = { items: [{ name: "name", isVisible: true, description: "description" }] }
     beforeAll(() => {
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: { items: [{ name: "name", isVisible: true, description: "description" }] },
-        tpl: ({ html, core }) => html`
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, core }) => html`
           <div>
             ${core.items.map(
               (item) => html`
@@ -238,7 +267,14 @@ describe("text", () => {
               `
             )}
           </div>
-        `,
+        `
+      )
+      element = render({
+        el: document.createElement("div"),
+        ctx,
+        st: { state: "state", states: [] },
+        core,
+        nodes,
       })
     })
     it("data", () => {

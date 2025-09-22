@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
+import { parse } from "@zavx0z/template"
 
 const html = String.raw
 describe("условные выражения в атрибутах", () => {
@@ -8,13 +9,16 @@ describe("условные выражения в атрибутах", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({}))
     beforeAll(() => {
+      const nodes = parse(
+        ({ html, core }) =>
+          html`<div class="${10 > core.count && core.count < 3 ? "active" : "inactive"}">Content</div>`
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
         core: { count: 2 },
-        tpl: ({ html, core }) =>
-          html`<div class="${10 > core.count && core.count < 3 ? "active" : "inactive"}">Content</div>`,
+        nodes,
       })
     })
     it("render", () => {
@@ -29,16 +33,19 @@ describe("условные выражения в атрибутах", () => {
       item: t.string("item"),
     }))
     beforeAll(() => {
+      const nodes = parse(
+        ({ html, core, context }) =>
+          html`<div
+            class="${core.isActive === context.isActive ? `${context.item}-active-${context.status}` : "inactive"}">
+            Content
+          </div>`
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
         core: { isActive: true, status: "running", item: "item" },
-        tpl: ({ html, core, context }) => html`
-          <div class="${core.isActive === context.isActive ? `${context.item}-active-${context.status}` : "inactive"}">
-            Content
-          </div>
-        `,
+        nodes,
       })
     })
     it("render", () => {

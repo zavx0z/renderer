@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
+import { parse } from "@zavx0z/template"
 
 const html = String.raw
 
@@ -12,6 +13,11 @@ describe("&& &&", () => {
 
   let element: HTMLElement
   beforeAll(() => {
+    const nodes = parse(
+      ({ html, context, core }) => html`
+        <div>${core.user && context.isAdmin && html`<div class="admin">Admin Panel</div>`}</div>
+      `
+    )
     element = render({
       el: document.createElement("div"),
       ctx,
@@ -19,9 +25,7 @@ describe("&& &&", () => {
       core: {
         user: { role: "admin" },
       },
-      tpl: ({ html, context, core }) => html`
-        <div>${core.user && context.isAdmin && html`<div class="admin">Admin Panel</div>`}</div>
-      `,
+      nodes,
     })
   })
 

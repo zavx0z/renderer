@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "../../index"
 import { Context } from "@zavx0z/context"
+import { parse } from "@zavx0z/template"
 
 const html = String.raw
 
@@ -9,18 +10,21 @@ describe("вложенные условия", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({ flag1: t.boolean.required(true), flag2: t.boolean.required(false) }))
     beforeAll(() => {
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        tpl: ({ html, context }) => html`
+      const nodes = parse(
+        ({ html, context }) => html`
           ${context.flag1
             ? html`<div class="flag1"></div>`
             : context.flag2
               ? html`<div class="flag2"></div>`
               : html`<div class="flag3"></div>`}
-        `,
+        `
+      )
+      element = render({
+        el: document.createElement("div"),
+        ctx,
+        st: { state: "state", states: [] },
+        core: {},
+        nodes,
       })
     })
     it("render - flag1=true flag2=false", () => {
@@ -46,12 +50,8 @@ describe("вложенные условия", () => {
       isAdmin: t.boolean.required(false),
     }))
     beforeAll(() => {
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        tpl: ({ html, context }) => html`
+      const nodes = parse(
+        ({ html, context }) => html`
           <div>
             ${context.hasPermission
               ? context.isAdmin
@@ -67,7 +67,14 @@ describe("вложенные условия", () => {
                   `
               : html`<div class="no-access">Access Denied</div>`}
           </div>
-        `,
+        `
+      )
+      element = render({
+        el: document.createElement("div"),
+        ctx,
+        st: { state: "state", states: [] },
+        core: {},
+        nodes,
       })
     })
     it("render - hasPermission=true isAdmin=false", () =>
@@ -114,12 +121,8 @@ describe("вложенные условия", () => {
       isSuperAdmin: t.boolean.required(false),
     }))
     beforeAll(() => {
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        tpl: ({ html, context }) => html`
+      const nodes = parse(
+        ({ html, context }) => html`
           <div>
             ${context.hasPermission
               ? context.isAdmin
@@ -129,7 +132,14 @@ describe("вложенные условия", () => {
                 : html`<div class="user">User Panel</div>`
               : html`<div class="no-access">Access Denied</div>`}
           </div>
-        `,
+        `
+      )
+      element = render({
+        el: document.createElement("div"),
+        ctx,
+        st: { state: "state", states: [] },
+        core: {},
+        nodes,
       })
     })
     it("render - hasPermission=true isAdmin=false isSuperAdmin=false", () =>

@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
+import { parse } from "@zavx0z/template"
 
 const html = String.raw
 describe("map соседствующие", () => {
@@ -10,20 +11,24 @@ describe("map соседствующие", () => {
       state: "",
       states: [],
     }
+    const core = {
+      list1: [{ title: "Item 1" }, { title: "Item 2" }],
+      list2: [{ title: "Item 3" }, { title: "Item 4" }],
+    }
     let element: HTMLElement
     beforeAll(() => {
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, core }) => html`
+          ${core.list1.map(({ title }) => html` <div>${title}</div> `)}
+          ${core.list2.map(({ title }) => html` <div>${title}</div> `)}
+        `
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st,
-        core: {
-          list1: [{ title: "Item 1" }, { title: "Item 2" }],
-          list2: [{ title: "Item 3" }, { title: "Item 4" }],
-        },
-        tpl: ({ html, core }) => html`
-          ${core.list1.map(({ title }) => html` <div>${title}</div> `)}
-          ${core.list2.map(({ title }) => html` <div>${title}</div> `)}
-        `,
+        core,
+        nodes,
       })
     })
     it("render", () => {
@@ -44,19 +49,16 @@ describe("map соседствующие", () => {
       state: "",
       states: [],
     }
+    const core = {
+      items: [
+        { categoryId: 1, title: "Item 1" },
+        { categoryId: 2, title: "Item 2" },
+      ],
+    }
     let element: HTMLElement
     beforeAll(() => {
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st,
-        core: {
-          items: [
-            { categoryId: 1, title: "Item 1" },
-            { categoryId: 2, title: "Item 2" },
-          ],
-        },
-        tpl: ({ html, context, core }) => html`
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, context, core }) => html`
           <div class="dashboard">
             ${context.categories.map((cat) => html`<span class="category">${cat}</span>`)}
             ${core.items.map(
@@ -67,7 +69,14 @@ describe("map соседствующие", () => {
               `
             )}
           </div>
-        `,
+        `
+      )
+      element = render({
+        el: document.createElement("div"),
+        ctx,
+        st,
+        core,
+        nodes,
       })
     })
     it("render", () => {
@@ -89,20 +98,14 @@ describe("map соседствующие", () => {
   describe("map соседствующий с map на глубоком уровне вложенности", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({}))
+    const core = {
+      list1: [{ title: "Item 1" }, { title: "Item 2" }],
+      list2: [{ title: "Item 3" }, { title: "Item 4" }],
+      list3: [{ title: "Item 5" }, { title: "Item 6" }],
+    }
     beforeAll(() => {
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: {
-          state: "",
-          states: [],
-        },
-        core: {
-          list1: [{ title: "Item 1" }, { title: "Item 2" }],
-          list2: [{ title: "Item 3" }, { title: "Item 4" }],
-          list3: [{ title: "Item 5" }, { title: "Item 6" }],
-        },
-        tpl: ({ html, core }) => html`
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, core }) => html`
           <div class="level1">
             <div class="level2">
               <div class="level3">
@@ -112,7 +115,17 @@ describe("map соседствующие", () => {
               </div>
             </div>
           </div>
-        `,
+        `
+      )
+      element = render({
+        el: document.createElement("div"),
+        ctx,
+        st: {
+          state: "",
+          states: [],
+        },
+        core,
+        nodes,
       })
     })
     it("render", () => {

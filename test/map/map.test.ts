@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
+import { parse } from "@zavx0z/template"
 
 const html = String.raw
 describe("map", () => {
@@ -21,12 +22,8 @@ describe("map", () => {
     }
 
     beforeAll(() => {
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st,
-        core,
-        tpl: ({ html, core }) => html`
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, core }) => html`
           <ul>
             ${core.list.map(
               ({ title, nested }) => html`
@@ -37,8 +34,9 @@ describe("map", () => {
               `
             )}
           </ul>
-        `,
-      })
+        `
+      )
+      element = render({ el: document.createElement("div"), ctx, st, core, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`
@@ -60,17 +58,21 @@ describe("map", () => {
   describe("простой map", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({}))
+    const core = { list: ["Item 1", "Item 2"] }
     beforeAll(() => {
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, core }) => html`
+          <ul>
+            ${core.list.map((name) => html`<li>${name}</li>`)}
+          </ul>
+        `
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
-        core: { list: ["Item 1", "Item 2"] },
-        tpl: ({ html, core }) => html`
-          <ul>
-            ${core.list.map((name) => html`<li>${name}</li>`)}
-          </ul>
-        `,
+        core,
+        nodes,
       })
     })
     it("render", () => {
@@ -86,13 +88,10 @@ describe("map", () => {
   describe("простой map с несколькими детьми", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({}))
+    const core = { list: ["Item 1", "Item 2"] }
     beforeAll(() => {
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: { list: ["Item 1", "Item 2"] },
-        tpl: ({ html, core }) => html`
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, core }) => html`
           <ul>
             ${core.list.map(
               (name) => html`
@@ -101,7 +100,14 @@ describe("map", () => {
               `
             )}
           </ul>
-        `,
+        `
+      )
+      element = render({
+        el: document.createElement("div"),
+        ctx,
+        st: { state: "state", states: [] },
+        core,
+        nodes,
       })
     })
     it("render", () => {
@@ -117,18 +123,15 @@ describe("map", () => {
     describe("map в элементе вложенный в map", () => {
       let element: HTMLElement
       const ctx = new Context((t) => ({}))
+      const core = {
+        list: [
+          { title: "Item 1", nested: ["Item 2", "Item 3"] },
+          { title: "Item 4", nested: ["Item 5", "Item 6"] },
+        ],
+      }
       beforeAll(() => {
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: {
-            list: [
-              { title: "Item 1", nested: ["Item 2", "Item 3"] },
-              { title: "Item 4", nested: ["Item 5", "Item 6"] },
-            ],
-          },
-          tpl: ({ html, core }) => html`
+        const nodes = parse<typeof ctx.context, typeof core>(
+          ({ html, core }) => html`
             <ul>
               ${core.list.map(
                 ({ title, nested }) => html`
@@ -139,7 +142,14 @@ describe("map", () => {
                 `
               )}
             </ul>
-          `,
+          `
+        )
+        element = render({
+          el: document.createElement("div"),
+          ctx,
+          st: { state: "state", states: [] },
+          core,
+          nodes,
         })
       })
       it("render", () => {
@@ -163,16 +173,19 @@ describe("map", () => {
       let element: HTMLElement
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
+        const nodes = parse<typeof ctx.context, typeof core>(
+          ({ html, core }) => html`
+            <ul>
+              ${core.list.map((_, i) => html`<li>${i % 2 ? html`<em>A</em>` : html`<strong>B</strong>`}</li>`)}
+            </ul>
+          `
+        )
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { list: ["Item 1", "Item 2", "Item 3", "Item 4"] },
-          tpl: ({ html, core }) => html`
-            <ul>
-              ${core.list.map((_, i) => html`<li>${i % 2 ? html`<em>A</em>` : html`<strong>B</strong>`}</li>`)}
-            </ul>
-          `,
+          nodes,
         })
       })
       it("render", () => {
@@ -189,28 +202,30 @@ describe("map", () => {
     describe("map в условии", () => {
       let element: HTMLElement
       const ctx = new Context((t) => ({ flag: t.boolean.required(true) }))
+      const core = {
+        list: [
+          { title: "Item 1", nested: ["Item 2", "Item 3"] },
+          { title: "Item 4", nested: ["Item 5", "Item 6"] },
+        ],
+      }
       beforeAll(() => {
+        const nodes = parse<typeof ctx.context, typeof core>(
+          ({ html, core, context }) => html`
+            ${context.flag
+              ? html`<ul>
+                  ${core.list.map(
+                    ({ title, nested }) => html`<li>${title} ${nested.map((n) => html`<em>${n}</em>`)}</li>`
+                  )}
+                </ul>`
+              : html`<div>x</div>`}
+          `
+        )
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
-          core: {
-            list: [
-              { title: "Item 1", nested: ["Item 2", "Item 3"] },
-              { title: "Item 4", nested: ["Item 5", "Item 6"] },
-            ],
-          },
-          tpl: ({ html, core, context }) => html`
-            ${context.flag
-              ? html`
-                  <ul>
-                    ${core.list.map(
-                      ({ title, nested }) => html`<li>${title} ${nested.map((n) => html`<em>${n}</em>`)}</li>`
-                    )}
-                  </ul>
-                `
-              : html`<div>x</div>`}
-          `,
+          core,
+          nodes,
         })
       })
       it("render", () => {
@@ -226,22 +241,26 @@ describe("map", () => {
   describe("map в text вложенный в map", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({}))
+    const core = {
+      list: [
+        { title: "Item 1", nested: ["Item 2", "Item 3"] },
+        { title: "Item 4", nested: ["Item 5", "Item 6"] },
+      ],
+    }
     beforeAll(() => {
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, core }) => html`
+          <ul>
+            ${core.list.map(({ title, nested }) => html`<li>${title} ${nested.map((n) => html`<em>${n}</em>`)}</li>`)}
+          </ul>
+        `
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
-        core: {
-          list: [
-            { title: "Item 1", nested: ["Item 2", "Item 3"] },
-            { title: "Item 4", nested: ["Item 5", "Item 6"] },
-          ],
-        },
-        tpl: ({ html, core }) => html`
-          <ul>
-            ${core.list.map(({ title, nested }) => html`<li>${title} ${nested.map((n) => html`<em>${n}</em>`)}</li>`)}
-          </ul>
-        `,
+        core,
+        nodes,
       })
     })
     it("render", () => {

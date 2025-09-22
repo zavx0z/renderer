@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
+import { parse } from "@zavx0z/template"
 
 const html = String.raw
 describe("class атрибуты в data.ts", () => {
@@ -9,12 +10,13 @@ describe("class атрибуты в data.ts", () => {
       let element: HTMLElement
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
+        const nodes = parse(({ html }) => html`<div class="div-active"></div>`)
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { active: true },
-          tpl: ({ html }) => html`<div class="div-active"></div>`,
+          nodes,
         })
       })
       it("render", () => {
@@ -26,12 +28,13 @@ describe("class атрибуты в data.ts", () => {
       let element: HTMLElement
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
+        const nodes = parse(({ html }) => html`<div class="div-active"></div>`)
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { active: true },
-          tpl: ({ html }) => html`<div class="div-active"></div>`,
+          nodes,
         })
       })
       it("render", () => {
@@ -43,12 +46,13 @@ describe("class атрибуты в data.ts", () => {
       let element: HTMLElement
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
+        const nodes = parse(({ html, core }) => html`<div class="div-active div-inactive"></div>`)
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { active: true },
-          tpl: ({ html, core }) => html`<div class="div-active div-inactive"></div>`,
+          nodes,
         })
       })
       it("render", () => {
@@ -62,12 +66,13 @@ describe("class атрибуты в data.ts", () => {
       let element: HTMLElement
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
+        const nodes = parse(({ html, core }) => html`<div class="${core.active ? "active" : "inactive"}"></div>`)
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { active: true },
-          tpl: ({ html, core }) => html`<div class="${core.active ? "active" : "inactive"}"></div>`,
+          nodes,
         })
       })
 
@@ -80,12 +85,13 @@ describe("class атрибуты в data.ts", () => {
       let element: HTMLElement
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
+        const nodes = parse(({ html, core }) => html`<div class="div-active div-inactive"></div>`)
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { active: true },
-          tpl: ({ html, core }) => html`<div class="div-active div-inactive"></div>`,
+          nodes,
         })
       })
       it("render", () => {
@@ -96,12 +102,13 @@ describe("class атрибуты в data.ts", () => {
       let element: HTMLElement
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
+        const nodes = parse(({ html, core }) => html`<div class="div-active div-inactive"></div>`)
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { active: true },
-          tpl: ({ html, core }) => html`<div class="div-active div-inactive"></div>`,
+          nodes,
         })
       })
       it("render", () => {
@@ -115,12 +122,13 @@ describe("class атрибуты в data.ts", () => {
       let element: HTMLElement
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
+        const nodes = parse(({ html, core }) => html`<div class="${core.active ? "active" : "inactive"}"></div>`)
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { active: true },
-          tpl: ({ html, core }) => html`<div class="${core.active ? "active" : "inactive"}"></div>`,
+          nodes,
         })
       })
       it("render", () => {
@@ -132,12 +140,13 @@ describe("class атрибуты в data.ts", () => {
       let element: HTMLElement
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
+        const nodes = parse(({ html, core }) => html`<div class=${core.active ? "active" : "inactive"}></div>`)
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { active: true },
-          tpl: ({ html, core }) => html`<div class=${core.active ? "active" : "inactive"}></div>`,
+          nodes,
         })
       })
       it("ren der", () => {
@@ -149,12 +158,13 @@ describe("class атрибуты в data.ts", () => {
       let element: HTMLElement
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
+        const nodes = parse(({ html }) => html`<div class="div-active div-inactive"></div> `)
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { active: true },
-          tpl: ({ html }) => html`<div class="div-active div-inactive"></div> `,
+          nodes,
         })
       })
       it("render", () => {
@@ -166,14 +176,16 @@ describe("class атрибуты в data.ts", () => {
       let element: HTMLElement
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
+        const nodes = parse(
+          ({ html, core }) =>
+            html`<div class="${core.active ? "active" : "inactive"} ${core.active ? "active" : "inactive"}"></div>`
+        )
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { active: true },
-          tpl: ({ html, core }) => html`
-            <div class="${core.active ? "active" : "inactive"} ${core.active ? "active" : "inactive"}"></div>
-          `,
+          nodes,
         })
       })
       it("render", () => {
@@ -185,12 +197,13 @@ describe("class атрибуты в data.ts", () => {
       let element: HTMLElement
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
+        const nodes = parse(({ html, core }) => html`<div class="${core.count > 5 ? "large" : "small"}"></div>`)
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { count: 6 },
-          tpl: ({ html, core }) => html`<div class="${core.count > 5 ? "large" : "small"}"></div>`,
+          nodes,
         })
       })
       it("render", () => {
@@ -202,12 +215,15 @@ describe("class атрибуты в data.ts", () => {
       let element: HTMLElement
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
+        const nodes = parse(
+          ({ html, core }) => html`<div class="${core.status === "loading" ? "loading" : "ready"}"></div>`
+        )
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { status: "loading" },
-          tpl: ({ html, core }) => html`<div class="${core.status === "loading" ? "loading" : "ready"}"></div>`,
+          nodes,
         })
       })
       it("render", () => {
@@ -220,12 +236,15 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
 
       beforeAll(() => {
+        const nodes = parse(
+          ({ html, core }) => html`<div class="${core.active && core.visible ? "show" : "hide"}"></div>`
+        )
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { active: true, visible: true },
-          tpl: ({ html, core }) => html`<div class="${core.active && core.visible ? "show" : "hide"}"></div>`,
+          nodes,
         })
       })
       it("render", () => {
@@ -238,12 +257,15 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
 
       beforeAll(() => {
+        const nodes = parse(
+          ({ html, core }) => html`<div class="${core.error || core.warning ? "alert" : "normal"}"></div>`
+        )
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { error: true, warning: false },
-          tpl: ({ html, core }) => html`<div class="${core.error || core.warning ? "alert" : "normal"}"></div>`,
+          nodes,
         })
       })
       it("render", () => {
@@ -256,12 +278,13 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
 
       beforeAll(() => {
+        const nodes = parse(({ html, core }) => html`<div class="${!core.disabled ? "enabled" : "disabled"}"></div>`)
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { disabled: true },
-          tpl: ({ html, core }) => html`<div class="${!core.disabled ? "enabled" : "disabled"}"></div>`,
+          nodes,
         })
       })
       it("render", () => {
@@ -274,12 +297,13 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
 
       beforeAll(() => {
+        const nodes = parse(({ html, core }) => html`<div class="${!core.disabled ? "enabled" : "disabled"}"></div>`)
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { disabled: true },
-          tpl: ({ html, core }) => html`<div class="${!core.disabled ? "enabled" : "disabled"}"></div>`,
+          nodes,
         })
       })
       it("render", () => {
@@ -291,12 +315,13 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
 
       beforeAll(() => {
+        const nodes = parse(({ html, core }) => html`<div class="${core.active && "active"}"></div>`)
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { active: true },
-          tpl: ({ html, core }) => html`<div class="${core.active && "active"}"></div>`,
+          nodes,
         })
       })
       it("render", () => {
@@ -311,12 +336,13 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
 
       beforeAll(() => {
+        const nodes = parse(({ html, core }) => html`<div class="div-${core.active ? "active" : "inactive"}"></div>`)
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { active: true },
-          tpl: ({ html, core }) => html`<div class="div-${core.active ? "active" : "inactive"}"></div>`,
+          nodes,
         })
       })
       it("render", () => {
@@ -329,12 +355,13 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
 
       beforeAll(() => {
+        const nodes = parse(({ html, core }) => html`<div class="div-${core.active ? "active" : "inactive"}"></div>`)
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { active: true },
-          tpl: ({ html, core }) => html`<div class="div-${core.active ? "active" : "inactive"}"></div>`,
+          nodes,
         })
       })
       it("render", () => {
@@ -347,14 +374,17 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
 
       beforeAll(() => {
+        const nodes = parse(
+          ({ html, core }) => html`
+            <div class="div-${core.active ? "active" : "inactive"} div-${core.active ? "active" : "inactive"}"></div>
+          `
+        )
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { active: true },
-          tpl: ({ html, core }) =>
-            html`<div
-              class="div-${core.active ? "active" : "inactive"} div-${core.active ? "active" : "inactive"}"></div>`,
+          nodes,
         })
       })
       it("render", () => {
@@ -369,12 +399,15 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
 
       beforeAll(() => {
+        const nodes = parse(
+          ({ html, core }) => html`<div class="div-${core.active ? "active" : "inactive"} visible"></div>`
+        )
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { active: true },
-          tpl: ({ html, core }) => html`<div class="div-${core.active ? "active" : "inactive"} visible"></div>`,
+          nodes,
         })
       })
       it("render", () => {
@@ -387,12 +420,15 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
 
       beforeAll(() => {
+        const nodes = parse(
+          ({ html, core }) => html`<div class="${core.active ? "active" : "inactive"} visible"></div>`
+        )
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { active: true },
-          tpl: ({ html, core }) => html`<div class="${core.active ? "active" : "inactive"} visible"></div>`,
+          nodes,
         })
       })
       it("render", () => {
@@ -405,13 +441,16 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
 
       beforeAll(() => {
+        const nodes = parse(
+          ({ html, core }) =>
+            html`<div class="static-value ${core.active ? "active" : "inactive"} mixed-${core.type}"></div>`
+        )
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { active: true, type: "type" },
-          tpl: ({ html, core }) =>
-            html`<div class="static-value ${core.active ? "active" : "inactive"} mixed-${core.type}"></div>`,
+          nodes,
         })
       })
       it("render", () => {
@@ -424,12 +463,15 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
 
       beforeAll(() => {
+        const nodes = parse(
+          ({ html, core }) => html`<div class="btn-${core.variant} text-${core.size} bg-${core.theme}"></div>`
+        )
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { variant: "variant", size: "size", theme: "theme" },
-          tpl: ({ html, core }) => html`<div class="btn-${core.variant} text-${core.size} bg-${core.theme}"></div>`,
+          nodes,
         })
       })
       it("render", () => {
@@ -442,14 +484,17 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
 
       beforeAll(() => {
+        const nodes = parse(
+          ({ html, core }) =>
+            html`<div
+              class="base-class ${core.active ? "active" : "inactive"} ${core.disabled ? "disabled" : ""}"></div>`
+        )
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { active: true, disabled: false },
-          tpl: ({ html, core }) =>
-            html`<div
-              class="base-class ${core.active ? "active" : "inactive"} ${core.disabled ? "disabled" : ""}"></div>`,
+          nodes,
         })
       })
       it("render", () => {
@@ -462,12 +507,15 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
 
       beforeAll(() => {
+        const nodes = parse(
+          ({ html, core }) => html`<div class="container ${core.nested ? "nested" : "default"}"></div>`
+        )
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { nested: true },
-          tpl: ({ html, core }) => html`<div class="container ${core.nested ? "nested" : "default"}"></div>`,
+          nodes,
         })
       })
       it("render", () => {
@@ -480,13 +528,16 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
 
       beforeAll(() => {
+        const nodes = parse(
+          ({ html, core }) =>
+            html`<div class="visible ${core.hidden ? "" : "show"} ${core.active ? "active" : ""}"></div>`
+        )
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { hidden: true, active: true },
-          tpl: ({ html, core }) =>
-            html`<div class="visible ${core.hidden ? "" : "show"} ${core.active ? "active" : ""}"></div>`,
+          nodes,
         })
       })
       it("render", () => {
@@ -500,12 +551,15 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
 
       beforeAll(() => {
+        const nodes = parse(
+          ({ html, core }) => html`<div class="static-value-${core.active ? "active" : "inactive"}"></div>`
+        )
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { active: true },
-          tpl: ({ html, core }) => html`<div class="static-value-${core.active ? "active" : "inactive"}"></div>`,
+          nodes,
         })
       })
       it("render", () => {
@@ -518,12 +572,15 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
 
       beforeAll(() => {
+        const nodes = parse(
+          ({ html, core }) => html`<div class="user-${core.user.id}-${core.user.role}-${core.theme}"></div>`
+        )
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { user: { id: "id", role: "role" }, theme: "theme" },
-          tpl: ({ html, core }) => html`<div class="user-${core.user.id}-${core.user.role}-${core.theme}"></div>`,
+          nodes,
         })
       })
       it("render", () => {
@@ -536,16 +593,19 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
 
       beforeAll(() => {
+        const nodes = parse(
+          ({ html, core }) =>
+            html`<div
+              class="user-${core.user.id}-${core.user.role}-${core.theme}-${core.isActive
+                ? "active"
+                : "inactive"}"></div>`
+        )
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { user: { id: "id", role: "role" }, theme: "theme", isActive: true },
-          tpl: ({ html, core }) =>
-            html`<div
-              class="user-${core.user.id}-${core.user.role}-${core.theme}-${core.isActive
-                ? "active"
-                : "inactive"}"></div>`,
+          nodes,
         })
       })
       it("render", () => {
@@ -558,13 +618,15 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
 
       beforeAll(() => {
+        const nodes = parse(
+          ({ html, core }) => html`<div class="base user-${core.user.id}-${core.user.role} theme-${core.theme}"></div>`
+        )
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { user: { id: "id", role: "role" }, theme: "theme" },
-          tpl: ({ html, core }) =>
-            html`<div class="base user-${core.user.id}-${core.user.role} theme-${core.theme}"></div>`,
+          nodes,
         })
       })
       it("render", () => {
@@ -577,21 +639,19 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
 
       beforeAll(() => {
+        const nodes = parse(
+          ({ html, core }) =>
+            html`<div
+              class="base user-${core.user.id} ${core.isActive ? "active" : "inactive"} ${core.isAdmin
+                ? "admin"
+                : "user"} theme-${core.theme}"></div>`
+        )
         element = render({
           el: document.createElement("div"),
           ctx,
           st: { state: "state", states: [] },
           core: { user: { id: "id", role: "role" }, theme: "theme", isActive: true, isAdmin: true },
-          tpl: ({ html, core }) => html`
-            <div
-              class="
-              base 
-              user-${core.user.id} 
-              ${core.isActive ? "active" : "inactive"} 
-              ${core.isAdmin ? "admin" : "user"} 
-              theme-${core.theme}
-              "></div>
-          `,
+          nodes,
         })
       })
       it("render", () => {
@@ -604,12 +664,15 @@ describe("class атрибуты в data.ts", () => {
     const ctx = new Context((t) => ({}))
 
     beforeAll(() => {
+      const nodes = parse(
+        ({ html, core }) => html`<div class="${core.status ? "active" : "inactive"}-status">Status</div>`
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
         core: { status: true },
-        tpl: ({ html, core }) => html`<div class="${core.status ? "active" : "inactive"}-status">Status</div>`,
+        nodes,
       })
     })
     it("render", () => {

@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { Context } from "@zavx0z/context"
 import { render } from "@zavx0z/renderer"
+import { parse } from "@zavx0z/template"
 
 const html = String.raw
 
@@ -11,12 +12,13 @@ describe("микс статических и динамических значе
   }))
   let element: HTMLElement
   beforeAll(() => {
+    const nodes = parse(({ html, context }) => html`<p>Hello, ${context.family} ${context.name}!</p>`)
     element = render({
       el: document.createElement("div"),
       ctx,
       st: { state: "", states: [] },
       core: {},
-      tpl: ({ html, context }) => html`<p>Hello, ${context.family} ${context.name}!</p>`,
+      nodes,
     })
   })
   it("render", () => {

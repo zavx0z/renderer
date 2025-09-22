@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
+import { parse } from "@zavx0z/template"
 
 const html = String.raw
 
@@ -18,23 +19,26 @@ describe("renderer: логические операторы в map", () => {
 
     beforeAll(() => {
       const ctx = new Context((t) => ({}))
+      const nodes = parse<typeof ctx.context>(
+        ({ html, context }) => html`
+          <div>
+            ${core.users.map(
+              (user) =>
+                html`<div class="user">
+                  ${user.hasAvatar && html`<img src="/avatar/${user.name}.jpg" alt="${user.name}" />`}<span
+                    >${user.name}</span
+                  >
+                </div>`
+            )}
+          </div>
+        `
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
         core,
-        tpl: ({ html, core }) => html`
-          <div>
-            ${core.users.map(
-              (user) => html`
-                <div class="user">
-                  ${user.hasAvatar && html`<img src="/avatar/${user.name}.jpg" alt="${user.name}" />`}
-                  <span>${user.name}</span>
-                </div>
-              `
-            )}
-          </div>
-        `,
+        nodes,
       })
     })
 
@@ -67,14 +71,10 @@ describe("renderer: логические операторы в map", () => {
       ],
     }
 
+    const ctx = new Context((t) => ({}))
     beforeAll(() => {
-      const ctx = new Context((t) => ({}))
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core,
-        tpl: ({ html, core }) => html`
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, core }) => html`
           <div>
             ${core.posts.map(
               (post) => html`
@@ -91,7 +91,14 @@ describe("renderer: логические операторы в map", () => {
               `
             )}
           </div>
-        `,
+        `
+      )
+      element = render({
+        el: document.createElement("div"),
+        ctx,
+        st: { state: "state", states: [] },
+        core,
+        nodes,
       })
     })
 
@@ -126,23 +133,24 @@ describe("renderer: логические операторы в map", () => {
 
     beforeAll(() => {
       const ctx = new Context((t) => ({}))
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, core }) => html`
+          <ul>
+            ${core.items.map(
+              (item) =>
+                html`<li class="item">
+                  ${item.isNew && html`<span class="new-badge">NEW</span>`}<span>${item.name}</span>
+                </li>`
+            )}
+          </ul>
+        `
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
         core,
-        tpl: ({ html, core }) => html`
-          <ul>
-            ${core.items.map(
-              (item) => html`
-                <li class="item">
-                  ${item.isNew && html`<span class="new-badge">NEW</span>`}
-                  <span>${item.name}</span>
-                </li>
-              `
-            )}
-          </ul>
-        `,
+        nodes,
       })
     })
 
@@ -181,12 +189,8 @@ describe("renderer: логические операторы в map", () => {
       ctx = new Context((t) => ({
         showDetails: t.boolean.required(true),
       }))
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core,
-        tpl: ({ html, core, context }) => html`
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, core, context }) => html`
           <div>
             ${core.products.map(
               (product) => html`
@@ -205,7 +209,14 @@ describe("renderer: логические операторы в map", () => {
               `
             )}
           </div>
-        `,
+        `
+      )
+      element = render({
+        el: document.createElement("div"),
+        ctx,
+        st: { state: "state", states: [] },
+        core,
+        nodes,
       })
     })
 
@@ -277,12 +288,8 @@ describe("renderer: логические операторы в map", () => {
 
     beforeAll(() => {
       const ctx = new Context((t) => ({}))
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core,
-        tpl: ({ html, core }) => html`
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, core }) => html`
           <div>
             ${core.categories.map(
               (category) => html`
@@ -298,7 +305,14 @@ describe("renderer: логические операторы в map", () => {
               `
             )}
           </div>
-        `,
+        `
+      )
+      element = render({
+        el: document.createElement("div"),
+        ctx,
+        st: { state: "state", states: [] },
+        core,
+        nodes,
       })
     })
 

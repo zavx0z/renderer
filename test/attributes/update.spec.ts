@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
+import { parse } from "@zavx0z/template"
 
 const html = String.raw
 describe("update", () => {
@@ -10,12 +11,15 @@ describe("update", () => {
       name: t.string(),
     }))
     beforeAll(() => {
+      const nodes = parse(
+        ({ html, update }) => html` <button onclick=${() => update({ name: "Jane Doe" })}>OK</button> `
+      )
       element = render({
-        el: document.createElement("button"),
+        el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
         core: {},
-        tpl: ({ html, update }) => html` <button onclick=${() => update({ name: "Jane Doe" })}>OK</button> `,
+        nodes,
       })
     })
     it("render", () => {
@@ -36,14 +40,17 @@ describe("update", () => {
       active: t.boolean.required(false),
     }))
     beforeAll(() => {
+      const nodes = parse(
+        ({ html, update }) => html`
+          <button onclick=${() => update({ name: "John", age: 25, active: true })}>Update</button>
+        `
+      )
       element = render({
-        el: document.createElement("button"),
+        el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
         core: {},
-        tpl: ({ html, update }) => html`
-          <button onclick=${() => update({ name: "John", age: 25, active: true })}>Update</button>
-        `,
+        nodes,
       })
     })
     it("render", () => {
@@ -64,14 +71,15 @@ describe("update", () => {
       count: t.number.required(4),
     }))
     beforeAll(() => {
+      const nodes = parse<typeof ctx.context>(
+        ({ html, update, context }) => html` <button onclick=${() => update({ count: context.count + 1 })}>OK</button> `
+      )
       element = render({
-        el: document.createElement("button"),
+        el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
         core: {},
-        tpl: ({ html, update, context }) => html`
-          <button onclick=${() => update({ count: context.count + 1 })}>OK</button>
-        `,
+        nodes,
       })
     })
     it("render", () => {
@@ -91,16 +99,19 @@ describe("update", () => {
       iteration: t.number.required(0),
     }))
     beforeAll(() => {
-      element = render({
-        el: document.createElement("button"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: { count: 1 },
-        tpl: ({ html, update, core, context }) => html`
+      const nodes = parse<typeof ctx.context>(
+        ({ html, update, core, context }) => html`
           <button onclick=${() => update({ count: core.count + context.count, iteration: context.iteration + 1 })}>
             OK
           </button>
-        `,
+        `
+      )
+      element = render({
+        el: document.createElement("div"),
+        ctx,
+        st: { state: "state", states: [] },
+        core: { count: 1, iteration: 1 },
+        nodes,
       })
     })
 
@@ -121,16 +132,13 @@ describe("update", () => {
       count: t.number.required(0),
       iteration: t.number.required(0),
     }))
+    const core = {
+      items: [{ count: 1, iteration: 1 }],
+      count: 3,
+    }
     beforeAll(() => {
-      element = render({
-        el: document.createElement("button"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {
-          items: [{ count: 1, iteration: 1 }],
-          count: 3,
-        },
-        tpl: ({ html, update, core }) => html`
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, update, core }) => html`
           ${core.items.map(
             (item) => html`
               <button onclick=${() => update({ count: core.count + item.count, iteration: item.iteration + 1 })}>
@@ -138,7 +146,14 @@ describe("update", () => {
               </button>
             `
           )}
-        `,
+        `
+      )
+      element = render({
+        el: document.createElement("div"),
+        ctx,
+        st: { state: "state", states: [] },
+        core,
+        nodes,
       })
     })
     it("render", () => {

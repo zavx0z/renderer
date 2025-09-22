@@ -1,25 +1,23 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
+import { parse } from "@zavx0z/template"
 
 const html = String.raw
 describe("object атрибуты (стили) с переменными из разных уровней map", () => {
   describe("стили с переменными из разных уровней вложенности", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({}))
+    const core = {
+      companies: [
+        { id: "1", theme: "red", departments: [{ id: "1", color: "blue" }] },
+        { id: "2", theme: "green", departments: [{ id: "2", color: "yellow" }] },
+      ],
+    }
     beforeAll(() => {
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {
-          companies: [
-            { id: "1", theme: "red", departments: [{ id: "1", color: "blue" }] },
-            { id: "2", theme: "green", departments: [{ id: "2", color: "yellow" }] },
-          ],
-        },
-        tpl: ({ html, core }) => html`
-          <div>
+      const nodes = parse<any, typeof core>(
+        ({ html, core }) =>
+          html`<div>
             ${core.companies.map(
               (company) => html`
                 <section style="${{ backgroundColor: company.theme }}">
@@ -37,8 +35,19 @@ describe("object атрибуты (стили) с переменными из р
                 </section>
               `
             )}
-          </div>
-        `,
+          </div>`
+      )
+      element = render({
+        el: document.createElement("div"),
+        ctx,
+        st: { state: "state", states: [] },
+        core: {
+          companies: [
+            { id: "1", theme: "red", departments: [{ id: "1", color: "blue" }] },
+            { id: "2", theme: "green", departments: [{ id: "2", color: "yellow" }] },
+          ],
+        },
+        nodes,
       })
     })
     it("render", () => {
@@ -58,15 +67,12 @@ describe("object атрибуты (стили) с переменными из р
   describe("стили со смешанными статическими и динамическими значениями", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({}))
+    const core = {
+      users: [{ id: "1", theme: "red" }],
+    }
     beforeAll(() => {
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {
-          users: [{ id: "1", theme: "red" }],
-        },
-        tpl: ({ html, core }) => html`
+      const nodes = parse<any, typeof core>(
+        ({ html, core }) => html`
           <div>
             ${core.users.map(
               (user) => html`
@@ -82,7 +88,14 @@ describe("object атрибуты (стили) с переменными из р
               `
             )}
           </div>
-        `,
+        `
+      )
+      element = render({
+        el: document.createElement("div"),
+        ctx,
+        st: { state: "state", states: [] },
+        core,
+        nodes,
       })
     })
     it("render", () => {

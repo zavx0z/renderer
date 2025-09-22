@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { Context } from "@zavx0z/context"
 import { render } from "@zavx0z/renderer"
+import { parse } from "@zavx0z/template"
 
 const html = String.raw
 
@@ -19,14 +20,17 @@ describe("текстовые узлы — null не рендерится", () =>
 
   let element: HTMLElement
   beforeAll(() => {
+    const nodes = parse(
+      ({ html, context, state }) => html`
+        <p>Status: ${state === "open" ? "Open" : "Closed"} Orders: ${context.cups} ${context.last}</p>
+      `
+    )
     element = render({
       el: document.createElement("div"),
       ctx,
       st,
       core,
-      tpl: ({ html, context, state }) => html`
-        <p>Status: ${state === "open" ? "Open" : "Closed"} Orders: ${context.cups} ${context.last}</p>
-      `,
+      nodes,
     })
   })
   it("render", () => {

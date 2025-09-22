@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "../../index"
 import { Context } from "@zavx0z/context"
+import { parse } from "@zavx0z/template"
 
 const html = String.raw
 describe("логические операторы в условиях", () => {
@@ -10,17 +11,8 @@ describe("логические операторы в условиях", () => {
       showDetails: t.boolean.required(true),
     }))
     beforeAll(() => {
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {
-          user: {
-            name: "John Doe",
-            isVerified: true,
-          },
-        },
-        tpl: ({ html, context, core }) => html`
+      const nodes = parse(
+        ({ html, context, core }) => html`
           <div>
             ${core.user && context.showDetails
               ? html`
@@ -36,7 +28,19 @@ describe("логические операторы в условиях", () => {
                   </div>
                 `}
           </div>
-        `,
+        `
+      )
+      element = render({
+        el: document.createElement("div"),
+        ctx,
+        st: { state: "state", states: [] },
+        core: {
+          user: {
+            name: "John Doe",
+            isVerified: true,
+          },
+        },
+        nodes,
       })
     })
 
@@ -69,17 +73,8 @@ describe("логические операторы в условиях", () => {
       isAdmin: t.boolean.required(true),
     }))
     beforeAll(() => {
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {
-          user: {
-            role: "admin",
-            isActive: true,
-          },
-        },
-        tpl: ({ html, context, core }) => html`
+      const nodes = parse(
+        ({ html, context, core }) => html`
           <div>
             ${core.user && core.user.role === "admin" && context.isAdmin
               ? html`
@@ -101,7 +96,19 @@ describe("логические операторы в условиях", () => {
                   </div>
                 `}
           </div>
-        `,
+        `
+      )
+      element = render({
+        el: document.createElement("div"),
+        ctx,
+        st: { state: "state", states: [] },
+        core: {
+          user: {
+            role: "admin",
+            isActive: true,
+          },
+        },
+        nodes,
       })
     })
 

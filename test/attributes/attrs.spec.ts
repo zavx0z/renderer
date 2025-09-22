@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
+import { parse } from "@zavx0z/template"
 
 const html = String.raw
 describe("атрибуты", () => {
@@ -8,12 +9,13 @@ describe("атрибуты", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({}))
     beforeAll(() => {
+      const nodes = parse(({ html }) => html`<svg:use xlink:href="#id"></svg:use>`)
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
         core: {},
-        tpl: ({ html }) => html`<svg:use xlink:href="#id"></svg:use>`,
+        nodes,
       })
     })
     it("render", () => {
@@ -24,12 +26,13 @@ describe("атрибуты", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({}))
     beforeAll(() => {
+      const nodes = parse(({ html }) => html`<div class="" id="">Content</div>`)
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
         core: {},
-        tpl: ({ html }) => html`<div class="" id="">Content</div>`,
+        nodes,
       })
     })
     it("render", () => {
@@ -40,12 +43,13 @@ describe("атрибуты", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({}))
     beforeAll(() => {
+      const nodes = parse(({ html }) => html`<a href="https://e.co" target="_blank">x</a>`)
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
         core: {},
-        tpl: ({ html }) => html`<a href="https://e.co" target="_blank">x</a>`,
+        nodes,
       })
     })
     it("render", () => {
@@ -57,12 +61,13 @@ describe("атрибуты", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({}))
     beforeAll(() => {
+      const nodes = parse(({ html }) => html`<div title="a > b, c < d"></div>`)
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
         core: {},
-        tpl: ({ html }) => html`<div title="a > b, c < d"></div>`,
+        nodes,
       })
     })
     it("render", () => {
@@ -76,12 +81,13 @@ describe("атрибуты", () => {
       flag: t.boolean(true),
     }))
     beforeAll(() => {
+      const nodes = parse(({ html, context }) => html`<div title="${context.flag ? "a > b" : "c < d"}"></div>`)
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
         core: {},
-        tpl: ({ html, context }) => html`<div title="${context.flag ? "a > b" : "c < d"}"></div>`,
+        nodes,
       })
     })
     it("render", () => {
@@ -95,12 +101,13 @@ describe("атрибуты", () => {
       flag: t.boolean(true),
     }))
     beforeAll(() => {
+      const nodes = parse(({ html, context }) => html`<div title=${context.flag ? "a > b" : "c < d"}></div>`)
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
         core: {},
-        tpl: ({ html, context }) => html`<div title=${context.flag ? "a > b" : "c < d"}></div>`,
+        nodes,
       })
     })
     it("render", () => {
@@ -114,12 +121,13 @@ describe("атрибуты", () => {
       flag: t.boolean(true),
     }))
     beforeAll(() => {
+      const nodes = parse(({ html, context }) => html`<div title="${context.flag ? "a > b" : "c < d"}"></div>`)
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
         core: {},
-        tpl: ({ html, context }) => html`<div title="${context.flag ? "a > b" : "c < d"}"></div>`,
+        nodes,
       })
     })
     it("render", () => {
@@ -132,12 +140,13 @@ describe("атрибуты", () => {
       flag: t.boolean(true),
     }))
     beforeAll(() => {
+      const nodes = parse(({ html, context }) => html`<button ${context.flag && "disabled"}></button>`)
       element = render({
         el: document.createElement("button"),
         ctx,
         st: { state: "state", states: [] },
         core: {},
-        tpl: ({ html, context }) => html`<button ${context.flag && "disabled"}></button>`,
+        nodes,
       })
     })
     it("render", () => {
@@ -147,22 +156,25 @@ describe("атрибуты", () => {
   describe("класс в map", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({}))
+    const core = {
+      items: [
+        { type: "1", name: "item 1" },
+        { type: "2", name: "item 2" },
+      ],
+    }
     beforeAll(() => {
+      const nodes = parse<any, typeof core>(
+        ({ html, core }) =>
+          html`<ul>
+            ${core.items.map((item) => html`<li class="item-${item.type}" title="${item.name}">${item.name}</li>`)}
+          </ul>`
+      )
       element = render({
         el: document.createElement("ul"),
         ctx,
         st: { state: "state", states: [] },
-        core: {
-          items: [
-            { type: "1", name: "item 1" },
-            { type: "2", name: "item 2" },
-          ],
-        },
-        tpl: ({ html, core }) => html`
-          <ul>
-            ${core.items.map((item) => html`<li class="item-${item.type}" title="${item.name}">${item.name}</li>`)}
-          </ul>
-        `,
+        core,
+        nodes,
       })
     })
     it("render", () => {
@@ -179,12 +191,15 @@ describe("атрибуты", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({}))
     beforeAll(() => {
+      const nodes = parse(
+        ({ html, core }) => html`<div class="div-${core.active ? "active" : "inactive"}">Content</div>`
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
         core: { active: true },
-        tpl: ({ html, core }) => html`<div class="div-${core.active ? "active" : "inactive"}">Content</div>`,
+        nodes,
       })
     })
     it("render", () => {

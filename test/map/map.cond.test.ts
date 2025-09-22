@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
+import { parse } from "@zavx0z/template"
 
 const html = String.raw
 describe("map с условиями", () => {
@@ -9,24 +10,27 @@ describe("map с условиями", () => {
     const ctx = new Context((t) => ({
       flag: t.boolean.required(true),
     }))
-
+    const core = {
+      list1: [{ title: "Item 1" }, { title: "Item 2" }],
+      list2: [{ title: "Item 3" }, { title: "Item 4" }],
+    }
     beforeAll(() => {
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {
-          list1: [{ title: "Item 1" }, { title: "Item 2" }],
-          list2: [{ title: "Item 3" }, { title: "Item 4" }],
-        },
-        tpl: ({ html, core, context }) => html`
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, core, context }) => html`
           ${core.list1.map(({ title }) => html`<div class="item1">${title}</div>`)}
           ${context.flag
             ? html`<div class="conditional">
                 ${core.list2.map(({ title }) => html`<div class="item2">${title}</div>`)}
               </div>`
             : html`<div class="fallback">No items</div>`}
-        `,
+        `
+      )
+      element = render({
+        el: document.createElement("div"),
+        ctx,
+        st: { state: "state", states: [] },
+        core,
+        nodes,
       })
     })
     it("render", () => {
@@ -46,17 +50,13 @@ describe("map с условиями", () => {
       flag: t.boolean.required(true),
     }))
     let element: HTMLElement
-
+    const core = {
+      list1: [{ title: "Item 1" }, { title: "Item 2" }],
+      list2: [{ title: "Item 3" }, { title: "Item 4" }],
+    }
     beforeAll(() => {
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {
-          list1: [{ title: "Item 1" }, { title: "Item 2" }],
-          list2: [{ title: "Item 3" }, { title: "Item 4" }],
-        },
-        tpl: ({ html, core, context }) => html`
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, core, context }) => html`
           <div class="container">
             ${core.list1.map(({ title }) => html`<div class="item1">${title}</div>`)}
             ${context.flag
@@ -65,7 +65,14 @@ describe("map с условиями", () => {
                 </div>`
               : html`<div class="fallback">No items</div>`}
           </div>
-        `,
+        `
+      )
+      element = render({
+        el: document.createElement("div"),
+        ctx,
+        st: { state: "state", states: [] },
+        core,
+        nodes,
       })
     })
     it("render", () => {
@@ -88,18 +95,14 @@ describe("map с условиями", () => {
       deepFlag: t.boolean.required(true),
     }))
     let element: HTMLElement
-
+    const core = {
+      list1: [{ title: "Item 1" }, { title: "Item 2" }],
+      list2: [{ title: "Item 3" }, { title: "Item 4" }],
+      list3: [{ title: "Item 5" }, { title: "Item 6" }],
+    }
     beforeAll(() => {
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {
-          list1: [{ title: "Item 1" }, { title: "Item 2" }],
-          list2: [{ title: "Item 3" }, { title: "Item 4" }],
-          list3: [{ title: "Item 5" }, { title: "Item 6" }],
-        },
-        tpl: ({ html, core, context }) => html`
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, core, context }) => html`
           <div class="level1">
             <div class="level2">
               <div class="level3">
@@ -117,7 +120,14 @@ describe("map с условиями", () => {
               </div>
             </div>
           </div>
-        `,
+        `
+      )
+      element = render({
+        el: document.createElement("div"),
+        ctx,
+        st: { state: "state", states: [] },
+        core,
+        nodes,
       })
     })
     it("render", () => {
@@ -145,19 +155,23 @@ describe("map с условиями", () => {
   describe("map внутри condition", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({ show: t.boolean.required(true) }))
+    const core = { items: ["Item 1", "Item 2"] }
     beforeAll(() => {
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: { items: ["Item 1", "Item 2"] },
-        tpl: ({ html, core, context }) => html`
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, core, context }) => html`
           <div>
             ${context.show
               ? html` ${core.items.map((item) => html`<div class="true-${item}"></div>`)}`
               : html` ${core.items.map((item) => html`<div class="false-${item}"></div>`)}`}
           </div>
-        `,
+        `
+      )
+      element = render({
+        el: document.createElement("div"),
+        ctx,
+        st: { state: "state", states: [] },
+        core,
+        nodes,
       })
     })
     it("render", () => {

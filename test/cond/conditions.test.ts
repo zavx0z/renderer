@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "../../index"
 import { Context } from "@zavx0z/context"
+import { parse } from "@zavx0z/template"
 
 const html = String.raw
 
@@ -11,12 +12,15 @@ describe("conditions", () => {
       cond: t.boolean.required(true),
     }))
     beforeAll(() => {
+      const nodes = parse(
+        ({ html, context }) => html`<div>${context.cond ? html`<em>A</em>` : html`<span>b</span>`}</div>`
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
         core: {},
-        tpl: ({ html, context }) => html` <div>${context.cond ? html`<em>A</em>` : html`<span>b</span>`}</div> `,
+        nodes,
       })
     })
     it("render - cond=true", () => {
@@ -34,18 +38,20 @@ describe("conditions", () => {
       isActive: t.boolean.required(true),
     }))
     beforeAll(() => {
+      const nodes = parse(
+        ({ html, context }) =>
+          html`<div>
+            <header>Header</header>
+            ${context.isActive ? html`<span>Active</span>` : html`<span>Inactive</span>`}
+            <footer>Footer</footer>
+          </div>`
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
         core: {},
-        tpl: ({ html, context }) => html`
-          <div>
-            <header>Header</header>
-            ${context.isActive ? html`<span>Active</span>` : html`<span>Inactive</span>`}
-            <footer>Footer</footer>
-          </div>
-        `,
+        nodes,
       })
     })
 
@@ -77,13 +83,16 @@ describe("conditions", () => {
       cond2: t.boolean.required(true),
     }))
     beforeAll(() => {
+      const nodes = parse(
+        ({ html, context }) =>
+          html`<div>${context.cond && context.cond2 ? html`<em>A</em>` : html`<span>b</span>`}</div>`
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
         core: {},
-        tpl: ({ html, context }) =>
-          html`<div>${context.cond && context.cond2 ? html`<em>A</em>` : html`<span>b</span>`}</div>`,
+        nodes,
       })
     })
 
@@ -111,14 +120,16 @@ describe("conditions", () => {
       cond2: t.boolean.required(true),
     }))
     beforeAll(() => {
+      const nodes = parse(
+        ({ html, context }) =>
+          html`<div>${context.cond === context.cond2 ? html`<em>A</em>` : html`<span>b</span>`}</div>`
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
         core: {},
-        tpl: ({ html, context }) => html`
-          <div>${context.cond === context.cond2 ? html`<em>A</em>` : html`<span>b</span>`}</div>
-        `,
+        nodes,
       })
     })
     it("render - cond=true cond2=true", () => {
@@ -147,12 +158,15 @@ describe("conditions", () => {
       d: t.number.required(3),
     }))
     beforeAll(() => {
+      const nodes = parse<typeof ctx.context>(
+        ({ html, context }) => html`${context.a < context.b && context.c > context.d ? "1" : "0"}`
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
         core: {},
-        tpl: ({ html, context }) => html`${context.a < context.b && context.c > context.d ? "1" : "0"}`,
+        nodes,
       })
     })
 
@@ -171,12 +185,15 @@ describe("conditions", () => {
       flag: t.boolean.required(true),
     }))
     beforeAll(() => {
+      const nodes = parse<typeof ctx.context>(
+        ({ html, context }) => html`<div>${context.flag ? html`<br />` : html`<img src="x" />`}</div>`
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
         core: {},
-        tpl: ({ html, context }) => html`<div>${context.flag ? html`<br />` : html`<img src="x" />`}</div>`,
+        nodes,
       })
     })
 
@@ -192,21 +209,25 @@ describe("conditions", () => {
   describe("condition внутри map", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({}))
+    const core = {
+      items: [{ show: true }, { show: false }],
+    }
     beforeAll(() => {
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {
-          items: [{ show: true }, { show: false }],
-        },
-        tpl: ({ html, core }) => html`
+      const nodes = parse<typeof ctx.context, typeof core>(
+        ({ html, core }) => html`
           <div>
             ${core.items.map((item) =>
               item.show ? html`<div class="true-branch"></div>` : html`<div class="false-branch"></div>`
             )}
           </div>
-        `,
+        `
+      )
+      element = render({
+        el: document.createElement("div"),
+        ctx,
+        st: { state: "state", states: [] },
+        core,
+        nodes,
       })
     })
     it("render - show=true", () => {
@@ -234,18 +255,21 @@ describe("conditions", () => {
       list: t.array.required(["A", "B", "C", "D"]),
     }))
     beforeAll(() => {
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        tpl: ({ html, context }) => html`
+      const nodes = parse<typeof ctx.context>(
+        ({ html, context }) => html`
           <ul>
             ${context.list.map(
               (_, i) => html` <li>${(i + 1) % 2 ? html` <em>${"A"}</em> ` : html` <strong>${"B"}</strong>`}</li> `
             )}
           </ul>
-        `,
+        `
+      )
+      element = render({
+        el: document.createElement("div"),
+        ctx,
+        st: { state: "state", states: [] },
+        core: {},
+        nodes,
       })
     })
     it("render - list=[A,B,C,D]", () => {
@@ -269,12 +293,15 @@ describe("conditions", () => {
       d: t.number.required(3),
     }))
     beforeAll(() => {
+      const nodes = parse<typeof ctx.context>(
+        ({ html, context }) => html`${context.a < context.b && context.c > context.d ? "1" : "0"}`
+      )
       element = render({
         el: document.createElement("div"),
         ctx,
         st: { state: "state", states: [] },
         core: {},
-        tpl: ({ html, context }) => html`${context.a < context.b && context.c > context.d ? "1" : "0"}`,
+        nodes,
       })
     })
     it("render - a<b c>d", () => {
