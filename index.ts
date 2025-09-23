@@ -17,7 +17,8 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
     }
     el.replaceChildren(fragment)
   })
-  st.onUpdate(() => {
+  st.onUpdate((newState) => {
+    st.state = newState
     fragment = document.createDocumentFragment()
     for (const n of nodes) {
       const dom = toDOM(n, undefined)
