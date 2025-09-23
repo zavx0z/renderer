@@ -89,6 +89,20 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
         if (typeof node.tag !== "string") return null
         const { string, boolean, array, style, event, child } = node
         const el = document.createElement(node.tag)
+        if (node.type === "meta" && node.core) {
+          let obj: any
+          //@ts-ignore
+          const { expr, data } = node.core
+          const vals = getValues(data)
+          try {
+            obj = evalCore(expr)(vals)
+          } catch (error) {
+            console.error(`Error evaluating expression: ${expr}`, { cause: error })
+          }
+          if (obj)
+            //@ts-ignore
+            el.__core = obj
+        }
         if (string) {
           for (const [attr, declare] of Object.entries(string)) {
             let value: string | undefined
@@ -279,11 +293,19 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
     const dom = toDOM(n, undefined)
     if (dom) fragment.appendChild(dom)
   }
-
   el.replaceChildren(fragment)
-
   return el as HTMLElement
 }
+
+const CORE_CACHE = new Map<string, Function>()
+const evalCore = (expr: string) => {
+  const cached = CORE_CACHE.get(expr)
+  if (cached) return cached
+  const compiled = new Function("_", "return (" + expr + ")")
+  CORE_CACHE.set(expr, compiled)
+  return compiled
+}
+
 const EVENT_CACHE = new Map<string, Function>()
 const evalEvent = (expr: string) => {
   const cached = EVENT_CACHE.get(expr)
@@ -294,7 +316,6 @@ const evalEvent = (expr: string) => {
 }
 
 const BOOLEAN_CACHE = new Map<string, Function>()
-
 const evalCondition = (expr: string) => {
   const cached = BOOLEAN_CACHE.get(expr)
   if (cached) return cached
