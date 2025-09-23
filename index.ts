@@ -1,11 +1,4 @@
-import type {
-  Core,
-  State,
-  Node as NodeTemplate,
-  ValueStatic,
-  ValueDynamic,
-  ValueVariable,
-} from "@zavx0z/template"
+import type { Core, State, Node as NodeTemplate, ValueStatic, ValueDynamic, ValueVariable } from "@zavx0z/template"
 import type { Context, Schema } from "@zavx0z/context"
 
 export const render = <C extends Schema, I extends Core = Core, S extends State = State>({
@@ -391,7 +384,7 @@ export const resolvePath = (path: string, itemScope: Scope | undefined): string 
  */
 export type Scope = { item: any; index: number; parent?: Scope; itemPath: string }
 type RenderParams<C extends Schema, I extends Core = Core, S extends State = State> = {
-  el: HTMLElement
+  el: HTMLElement | ShadowRoot
   ctx: Context<C>
   st: { state: S; states: readonly S[] }
   core: I
