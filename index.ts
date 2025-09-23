@@ -7,7 +7,7 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
   st,
   core,
   nodes,
-}: RenderParams<C, I, S>) => {
+}: RenderParams<C, I, S>): HTMLElement => {
   let prevState = st.state
   let fragment = document.createDocumentFragment()
 
@@ -276,7 +276,7 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
     el.replaceChildren(fragment)
     prevState = st.state
   })
-  return el
+  return el as HTMLElement
 }
 const EVENT_CACHE = new Map<string, Function>()
 const evalEvent = (expr: string) => {
