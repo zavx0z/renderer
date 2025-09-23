@@ -2,6 +2,7 @@ import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
+import { st } from "fixture/params"
 
 const html = String.raw
 
@@ -33,13 +34,7 @@ describe("renderer: логические операторы в map", () => {
           </div>
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core,
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core, nodes })
     })
 
     it("render", () => {
@@ -93,13 +88,7 @@ describe("renderer: логические операторы в map", () => {
           </div>
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core,
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core, nodes })
     })
 
     it("render", () => {
@@ -145,13 +134,7 @@ describe("renderer: логические операторы в map", () => {
           </ul>
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core,
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core, nodes })
     })
 
     it("render", () => {
@@ -211,13 +194,7 @@ describe("renderer: логические операторы в map", () => {
           </div>
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core,
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core, nodes })
     })
 
     it("render (showDetails=true)", () => {
@@ -307,13 +284,7 @@ describe("renderer: логические операторы в map", () => {
           </div>
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core,
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core, nodes })
     })
 
     it("render", () => {

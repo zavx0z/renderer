@@ -2,15 +2,13 @@ import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
+import { st } from "fixture/params"
 
 const html = String.raw
 describe("map соседствующие", () => {
   describe("map соседствующий с map на верхнем уровне", () => {
     const ctx = new Context((t) => ({}))
-    const st = {
-      state: "",
-      states: [],
-    }
+
     const core = {
       list1: [{ title: "Item 1" }, { title: "Item 2" }],
       list2: [{ title: "Item 3" }, { title: "Item 4" }],
@@ -23,13 +21,7 @@ describe("map соседствующие", () => {
           ${core.list2.map(({ title }) => html` <div>${title}</div> `)}
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st,
-        core,
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`
@@ -45,10 +37,7 @@ describe("map соседствующие", () => {
     const ctx = new Context((t) => ({
       categories: t.array.required(["cat1", "cat2"]),
     }))
-    const st = {
-      state: "",
-      states: [],
-    }
+
     const core = {
       items: [
         { categoryId: 1, title: "Item 1" },
@@ -71,13 +60,7 @@ describe("map соседствующие", () => {
           </div>
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st,
-        core,
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`
@@ -117,16 +100,7 @@ describe("map соседствующие", () => {
           </div>
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: {
-          state: "",
-          states: [],
-        },
-        core,
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`

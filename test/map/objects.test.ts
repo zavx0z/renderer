@@ -2,6 +2,7 @@ import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
+import { st } from "fixture/params"
 
 const html = String.raw
 
@@ -10,10 +11,6 @@ describe("список", () => {
   let elementWithoutDestructuring: HTMLElement
   const ctx = new Context((t) => ({}))
 
-  const st = {
-    state: "",
-    states: [],
-  }
   const core = {
     configs: [
       { name: "one name", value: "one value" },
@@ -29,13 +26,7 @@ describe("список", () => {
           </ul>
         `
       )
-      elementWithDestructuring = render({
-        el: document.createElement("div"),
-        ctx,
-        st,
-        core,
-        nodes,
-      })
+      elementWithDestructuring = render({ el: document.createElement("div"), ctx, st, core, nodes })
     })
     it("рендер", () => {
       expect(elementWithDestructuring.innerHTML).toMatchStringHTML(html`
@@ -55,13 +46,7 @@ describe("список", () => {
           </ul>
         `
       )
-      elementWithoutDestructuring = render({
-        el: document.createElement("div"),
-        ctx,
-        st,
-        core,
-        nodes,
-      })
+      elementWithoutDestructuring = render({ el: document.createElement("div"), ctx, st, core, nodes })
     })
     it("рендер", () => {
       expect(elementWithoutDestructuring.innerHTML).toBe(elementWithDestructuring.innerHTML)

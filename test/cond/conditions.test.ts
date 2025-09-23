@@ -2,6 +2,7 @@ import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "../../index"
 import { Context } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
+import { st } from "fixture/params"
 
 const html = String.raw
 
@@ -15,13 +16,7 @@ describe("conditions", () => {
       const nodes = parse(
         ({ html, context }) => html`<div>${context.cond ? html`<em>A</em>` : html`<span>b</span>`}</div>`
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
     })
     it("render - cond=true", () => {
       expect(element.innerHTML).toMatchStringHTML(html` <div><em>A</em></div> `)
@@ -46,13 +41,7 @@ describe("conditions", () => {
             <footer>Footer</footer>
           </div>`
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
     })
 
     it("render - isActive=true", () => {
@@ -87,13 +76,7 @@ describe("conditions", () => {
         ({ html, context }) =>
           html`<div>${context.cond && context.cond2 ? html`<em>A</em>` : html`<span>b</span>`}</div>`
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
     })
 
     it("render - cond=true cond2=true", () => {
@@ -124,13 +107,7 @@ describe("conditions", () => {
         ({ html, context }) =>
           html`<div>${context.cond === context.cond2 ? html`<em>A</em>` : html`<span>b</span>`}</div>`
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
     })
     it("render - cond=true cond2=true", () => {
       expect(element.innerHTML).toMatchStringHTML(html`<div><em>A</em></div>`)
@@ -161,13 +138,7 @@ describe("conditions", () => {
       const nodes = parse<typeof ctx.context>(
         ({ html, context }) => html`${context.a < context.b && context.c > context.d ? "1" : "0"}`
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
     })
 
     it("render - a<b c>d", () => {
@@ -188,13 +159,7 @@ describe("conditions", () => {
       const nodes = parse<typeof ctx.context>(
         ({ html, context }) => html`<div>${context.flag ? html`<br />` : html`<img src="x" />`}</div>`
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
     })
 
     it("render - flag=true", () => {
@@ -222,13 +187,7 @@ describe("conditions", () => {
           </div>
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core,
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core, nodes })
     })
     it("render - show=true", () => {
       expect(element.innerHTML).toMatchStringHTML(html`
@@ -264,13 +223,7 @@ describe("conditions", () => {
           </ul>
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
     })
     it("render - list=[A,B,C,D]", () => {
       expect(element.innerHTML).toMatchStringHTML(html`
@@ -296,13 +249,7 @@ describe("conditions", () => {
       const nodes = parse<typeof ctx.context>(
         ({ html, context }) => html`${context.a < context.b && context.c > context.d ? "1" : "0"}`
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
     })
     it("render - a<b c>d", () => {
       expect(element).toMatchStringHTML(html`<div>1</div>`)

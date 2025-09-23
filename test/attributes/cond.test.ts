@@ -2,6 +2,7 @@ import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
+import { st } from "fixture/params"
 
 const html = String.raw
 describe("условные выражения в атрибутах", () => {
@@ -13,13 +14,7 @@ describe("условные выражения в атрибутах", () => {
         ({ html, core }) =>
           html`<div class="${10 > core.count && core.count < 3 ? "active" : "inactive"}">Content</div>`
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: { count: 2 },
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: { count: 2 }, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`<div class="active">Content</div>`)
@@ -32,6 +27,7 @@ describe("условные выражения в атрибутах", () => {
       status: t.string("running"),
       item: t.string("item"),
     }))
+    const core = { isActive: true, status: "running", item: "item" }
     beforeAll(() => {
       const nodes = parse(
         ({ html, core, context }) =>
@@ -40,13 +36,7 @@ describe("условные выражения в атрибутах", () => {
             Content
           </div>`
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: { isActive: true, status: "running", item: "item" },
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`<div class="item-active-running">Content</div>`)

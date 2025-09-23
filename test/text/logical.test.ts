@@ -2,6 +2,7 @@ import { describe, it, expect, beforeAll } from "bun:test"
 import { Context } from "@zavx0z/context"
 import { render } from "@zavx0z/renderer"
 import { parse } from "@zavx0z/template"
+import { st } from "fixture/params"
 
 const html = String.raw
 
@@ -11,13 +12,7 @@ describe("логические значения", () => {
   let element: HTMLElement
   beforeAll(() => {
     const nodes = parse(({ html, context }) => html` <p>${context.last && `last: ${context.last}`}</p>`)
-    element = render({
-      el: document.createElement("div"),
-      ctx,
-      st: { state: "", states: [] },
-      core: {},
-      nodes,
-    })
+    element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
   })
   it("render", () => {
     expect(element.innerHTML).toMatchStringHTML(html`<p>last: Latte</p>`)

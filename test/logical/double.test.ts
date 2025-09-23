@@ -2,6 +2,7 @@ import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
+import { st } from "fixture/params"
 
 const html = String.raw
 
@@ -18,15 +19,7 @@ describe("&& &&", () => {
         <div>${core.user && context.isAdmin && html`<div class="admin">Admin Panel</div>`}</div>
       `
     )
-    element = render({
-      el: document.createElement("div"),
-      ctx,
-      st: { state: "state", states: [] },
-      core: {
-        user: { role: "admin" },
-      },
-      nodes,
-    })
+    element = render({ el: document.createElement("div"), ctx, st, core: { user: { role: "admin" } }, nodes })
   })
 
   it("render", () => {

@@ -2,6 +2,7 @@ import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
+import { st } from "fixture/params"
 
 const html = String.raw
 
@@ -13,11 +14,6 @@ describe("map", () => {
     list: t.array.required(["one", "two"]),
   }))
 
-  const st = {
-    state: "",
-    states: [],
-  }
-
   beforeAll(() => {
     const nodes = parse<typeof ctx.context>(
       ({ html, context }) => html`
@@ -26,13 +22,7 @@ describe("map", () => {
         </ul>
       `
     )
-    element = render({
-      el: document.createElement("div"),
-      ctx,
-      st,
-      core: {},
-      nodes,
-    })
+    element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
   })
   it("рендер", () => {
     expect(element.innerHTML).toMatchStringHTML(html`

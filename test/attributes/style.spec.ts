@@ -2,6 +2,7 @@ import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
+import { st } from "fixture/params"
 
 const html = String.raw
 describe("object атрибуты (стили) с переменными из разных уровней map", () => {
@@ -37,18 +38,7 @@ describe("object атрибуты (стили) с переменными из р
             )}
           </div>`
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {
-          companies: [
-            { id: "1", theme: "red", departments: [{ id: "1", color: "blue" }] },
-            { id: "2", theme: "green", departments: [{ id: "2", color: "yellow" }] },
-          ],
-        },
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`
@@ -90,13 +80,7 @@ describe("object атрибуты (стили) с переменными из р
           </div>
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core,
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`

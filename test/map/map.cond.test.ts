@@ -2,6 +2,7 @@ import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
+import { st } from "fixture/params"
 
 const html = String.raw
 describe("map с условиями", () => {
@@ -25,13 +26,7 @@ describe("map с условиями", () => {
             : html`<div class="fallback">No items</div>`}
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core,
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`
@@ -67,13 +62,7 @@ describe("map с условиями", () => {
           </div>
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core,
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`
@@ -122,13 +111,7 @@ describe("map с условиями", () => {
           </div>
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core,
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`
@@ -166,13 +149,7 @@ describe("map с условиями", () => {
           </div>
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core,
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`

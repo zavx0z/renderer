@@ -2,6 +2,7 @@ import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
+import { st } from "fixture/params"
 
 const html = String.raw
 describe("логические операторы", () => {
@@ -12,13 +13,7 @@ describe("логические операторы", () => {
       const nodes = parse(
         ({ html, context }) => html`<div>${context.error && html`<span class="error">${context.error}</span>`}</div>`
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
     })
 
     it("render", () => {
@@ -47,13 +42,8 @@ describe("логические операторы", () => {
       element = render({
         el: document.createElement("div"),
         ctx,
-        st: { state: "state", states: [] },
-        core: {
-          user: {
-            name: "name",
-            avatar: "avatar",
-          },
-        },
+        st,
+        core: { user: { name: "name", avatar: "avatar" } },
         nodes,
       })
     })
@@ -80,13 +70,7 @@ describe("логические операторы", () => {
       const nodes = parse(
         ({ html, context }) => html`<div>${context.isVisible && html`<p>${context.message}</p>`}</div>`
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
     })
 
     it("render", () => {
@@ -109,13 +93,7 @@ describe("логические операторы", () => {
     }))
     beforeAll(() => {
       const nodes = parse(({ html, context }) => html`<div>${context.hasError && html`<br />`}</div>`)
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
     })
 
     it("render", () => {

@@ -2,6 +2,7 @@ import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "../../index"
 import { Context } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
+import { st } from "fixture/params"
 
 const html = String.raw
 describe("условия соседствующие", () => {
@@ -22,13 +23,7 @@ describe("условия соседствующие", () => {
             : html`<div class="fallback2">No content 2</div>`}
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
     })
     it("render - flag1=true flag2=false", () => {
       expect(element.innerHTML).toMatchStringHTML(html`
@@ -75,13 +70,7 @@ describe("условия соседствующие", () => {
           </div>
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
     })
     it("render - flag1=true flag2=false", () => {
       expect(element.innerHTML).toMatchStringHTML(html`
@@ -147,13 +136,7 @@ describe("условия соседствующие", () => {
           </div>
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
     })
     it("render - flag1=true flag2=false flag3=false", () => {
       expect(element.innerHTML).toMatchStringHTML(html`

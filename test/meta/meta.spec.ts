@@ -2,6 +2,7 @@ import { describe, expect, it, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
+import { st } from "fixture/params"
 
 const html = String.raw
 class MetaHash extends HTMLElement {}
@@ -14,13 +15,7 @@ describe.skip("meta", () => {
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
         const nodes = parse(({ html }) => html`<meta-hash></meta-hash>`)
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "", states: [] },
-          core: {},
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toBe("<meta-hash></meta-hash>")
@@ -32,13 +27,7 @@ describe.skip("meta", () => {
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
         const nodes = parse(({ html }) => html`<meta-hash />`)
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "", states: [] },
-          core: {},
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toBe("<meta-hash></meta-hash>")
@@ -51,13 +40,7 @@ describe.skip("meta", () => {
       beforeAll(() => {
         const nodes = parse(({ html }) => html`<meta-child />`)
         customElements.define("meta-child", class extends HTMLElement {})
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "", states: [] },
-          core: { actors: { child: "child" } },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { actors: { child: "child" } }, nodes })
       })
 
       it("render", () => {
@@ -70,13 +53,7 @@ describe.skip("meta", () => {
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
         const nodes = parse(({ html, core }) => html`<meta-${core.actors.child}></meta-${core.actors.child}>`)
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "", states: [] },
-          core: { actors: { child: "child" } },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { actors: { child: "child" } }, nodes })
       })
 
       it("render", () => {
@@ -89,13 +66,7 @@ describe.skip("meta", () => {
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
         const nodes = parse(({ html, core }) => html`<div><meta-${core.tag} /></div>`)
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "", states: [] },
-          core: { tag: "child" },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { tag: "child" }, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toBe("<div><meta-child></meta-child></div>")
@@ -107,13 +78,7 @@ describe.skip("meta", () => {
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
         const nodes = parse(({ html, core }) => html`<meta-hash><meta-${core.tag} /></meta-hash>`)
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "", states: [] },
-          core: { tag: "child" },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { tag: "child" }, nodes })
       })
 
       it("render", () => {
@@ -129,13 +94,7 @@ describe.skip("meta", () => {
         const nodes = parse<typeof ctx.context, typeof core>(
           ({ html, core }) => html`${core.items.map((item) => html`<meta-${item.tag} />`)}`
         )
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "", states: [] },
-          core,
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core, nodes })
       })
 
       it("render", () => {
@@ -153,7 +112,7 @@ describe.skip("meta", () => {
         element = render({
           el: document.createElement("div"),
           ctx,
-          st: { state: "", states: [] },
+          st,
           core: { tag: "child", items: [{ tag: "child" }] },
           nodes,
         })
@@ -171,13 +130,7 @@ describe.skip("meta", () => {
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
         const nodes = parse(({ html }) => html`<meta-hash data-type="component" class="meta-element" />`)
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "", states: [] },
-          core: {},
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
       })
 
       it("render", () => {
@@ -195,7 +148,7 @@ describe.skip("meta", () => {
         element = render({
           el: document.createElement("div"),
           ctx,
-          st: { state: "", states: [] },
+          st,
           core: { tag: "child", id: "1", type: "component" },
           nodes,
         })
@@ -214,13 +167,7 @@ describe.skip("meta", () => {
           ({ html, core }) =>
             html`<meta-${core.tag} ${core.active && "data-active"} class="${core.active ? "active" : "inactive"}" />`
         )
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "", states: [] },
-          core: { tag: "child", active: true },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { tag: "child", active: true }, nodes })
       })
 
       it("render", () => {
@@ -242,13 +189,7 @@ describe.skip("meta", () => {
               onchange=${(e: Event) => update({ value: (e.target as HTMLInputElement).value })} />
           `
         )
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "", states: [] },
-          core: { tag: "child", id: "1" },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { tag: "child", id: "1" }, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toBe("<meta-child></meta-child>")
@@ -262,13 +203,7 @@ describe.skip("meta", () => {
         const nodes = parse(
           ({ html, core, update }) => html`<meta-${core.tag} onclick=${() => update({ selected: core.id })} />`
         )
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "", states: [] },
-          core: { tag: "child", id: "1" },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { tag: "child", id: "1" }, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toBe("<meta-child></meta-child>")
@@ -293,13 +228,7 @@ describe.skip("meta", () => {
             )}
           `
         )
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "", states: [] },
-          core,
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toBe('<meta-child data-id="1" class="meta-active"></meta-child>')

@@ -2,6 +2,7 @@ import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
+import { st } from "fixture/params"
 
 const html = String.raw
 describe("boolean атрибуты", () => {
@@ -34,13 +35,7 @@ describe("boolean атрибуты", () => {
           </div>
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core,
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`
@@ -62,13 +57,7 @@ describe("boolean атрибуты", () => {
       const nodes = parse(
         ({ html, core }) => html`<img src="https://example.com" ${core.visible ? "visible" : "hidden"} />`
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: { visible: true },
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: { visible: true }, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`<img src="https://example.com" visible />`)

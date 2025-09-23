@@ -2,6 +2,7 @@ import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
+import { st } from "fixture/params"
 
 const html = String.raw
 
@@ -11,11 +12,6 @@ describe("индекс", () => {
     const ctx = new Context((t) => ({
       list: t.array.required(["one", "two", "three", "four"]),
     }))
-    const st = {
-      state: "",
-      states: [],
-    }
-
     const core = {
       list: [
         { title: "one", nested: ["one", "two"] },
@@ -31,13 +27,7 @@ describe("индекс", () => {
           </ul>
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st,
-        core,
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core, nodes })
     })
 
     it("render", () => {
@@ -56,10 +46,6 @@ describe("индекс", () => {
     const ctx = new Context((t) => ({
       list: t.array.required(["one", "two", "three", "four"]),
     }))
-    const st = {
-      state: "",
-      states: [],
-    }
 
     const core = {
       list: [
@@ -76,13 +62,7 @@ describe("индекс", () => {
           </ul>
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st,
-        core,
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core, nodes })
     })
 
     it("render", () => {
@@ -101,10 +81,6 @@ describe("индекс", () => {
     const ctx = new Context((t) => ({
       list: t.array.required(["one", "two", "three", "four"]),
     }))
-    const st = {
-      state: "",
-      states: [],
-    }
 
     const core = {
       list: [
@@ -121,13 +97,7 @@ describe("индекс", () => {
           </ul>
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st,
-        core,
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core, nodes })
     })
 
     it("render", () => {

@@ -2,6 +2,7 @@ import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
+import { st } from "fixture/params"
 
 const html = String.raw
 describe("class атрибуты в data.ts", () => {
@@ -11,13 +12,7 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
         const nodes = parse(({ html }) => html`<div class="div-active"></div>`)
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: { active: true },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { active: true }, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toMatchStringHTML(html`<div class="div-active"></div>`)
@@ -29,13 +24,7 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
         const nodes = parse(({ html }) => html`<div class="div-active"></div>`)
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: { active: true },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { active: true }, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toMatchStringHTML(html`<div class="div-active"></div>`)
@@ -47,13 +36,7 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
         const nodes = parse(({ html, core }) => html`<div class="div-active div-inactive"></div>`)
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: { active: true },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { active: true }, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toMatchStringHTML(html`<div class="div-active div-inactive"></div>`)
@@ -67,13 +50,7 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
         const nodes = parse(({ html, core }) => html`<div class="${core.active ? "active" : "inactive"}"></div>`)
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: { active: true },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { active: true }, nodes })
       })
 
       it("render", () => {
@@ -86,13 +63,7 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
         const nodes = parse(({ html, core }) => html`<div class="div-active div-inactive"></div>`)
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: { active: true },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { active: true }, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toMatchStringHTML(html`<div class="div-active div-inactive"></div>`)
@@ -103,13 +74,7 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
         const nodes = parse(({ html, core }) => html`<div class="div-active div-inactive"></div>`)
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: { active: true },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { active: true }, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toMatchStringHTML(html`<div class="div-active div-inactive"></div>`)
@@ -123,13 +88,7 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
         const nodes = parse(({ html, core }) => html`<div class="${core.active ? "active" : "inactive"}"></div>`)
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: { active: true },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { active: true }, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toMatchStringHTML(html`<div class="active"></div>`)
@@ -141,13 +100,7 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
         const nodes = parse(({ html, core }) => html`<div class=${core.active ? "active" : "inactive"}></div>`)
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: { active: true },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { active: true }, nodes })
       })
       it("ren der", () => {
         expect(element.innerHTML).toMatchStringHTML(html`<div class="active"></div>`)
@@ -159,13 +112,7 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
         const nodes = parse(({ html }) => html`<div class="div-active div-inactive"></div> `)
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: { active: true },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { active: true }, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toMatchStringHTML(html`<div class="div-active div-inactive"></div>`)
@@ -180,13 +127,7 @@ describe("class атрибуты в data.ts", () => {
           ({ html, core }) =>
             html`<div class="${core.active ? "active" : "inactive"} ${core.active ? "active" : "inactive"}"></div>`
         )
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: { active: true },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { active: true }, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toMatchStringHTML(html`<div class="active active"></div>`)
@@ -198,13 +139,7 @@ describe("class атрибуты в data.ts", () => {
       const ctx = new Context((t) => ({}))
       beforeAll(() => {
         const nodes = parse(({ html, core }) => html`<div class="${core.count > 5 ? "large" : "small"}"></div>`)
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: { count: 6 },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { count: 6 }, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toMatchStringHTML(html`<div class="large"></div>`)
@@ -218,13 +153,7 @@ describe("class атрибуты в data.ts", () => {
         const nodes = parse(
           ({ html, core }) => html`<div class="${core.status === "loading" ? "loading" : "ready"}"></div>`
         )
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: { status: "loading" },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { status: "loading" }, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toMatchStringHTML(html`<div class="loading"></div>`)
@@ -239,13 +168,7 @@ describe("class атрибуты в data.ts", () => {
         const nodes = parse(
           ({ html, core }) => html`<div class="${core.active && core.visible ? "show" : "hide"}"></div>`
         )
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: { active: true, visible: true },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { active: true, visible: true }, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toMatchStringHTML(html`<div class="show"></div>`)
@@ -260,13 +183,7 @@ describe("class атрибуты в data.ts", () => {
         const nodes = parse(
           ({ html, core }) => html`<div class="${core.error || core.warning ? "alert" : "normal"}"></div>`
         )
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: { error: true, warning: false },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { error: true, warning: false }, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toMatchStringHTML(html`<div class="alert"></div>`)
@@ -279,13 +196,7 @@ describe("class атрибуты в data.ts", () => {
 
       beforeAll(() => {
         const nodes = parse(({ html, core }) => html`<div class="${!core.disabled ? "enabled" : "disabled"}"></div>`)
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: { disabled: true },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { disabled: true }, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toMatchStringHTML(html`<div class="disabled"></div>`)
@@ -298,13 +209,7 @@ describe("class атрибуты в data.ts", () => {
 
       beforeAll(() => {
         const nodes = parse(({ html, core }) => html`<div class="${!core.disabled ? "enabled" : "disabled"}"></div>`)
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: { disabled: true },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { disabled: true }, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toMatchStringHTML(html`<div class="disabled"></div>`)
@@ -316,13 +221,7 @@ describe("class атрибуты в data.ts", () => {
 
       beforeAll(() => {
         const nodes = parse(({ html, core }) => html`<div class="${core.active && "active"}"></div>`)
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: { active: true },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { active: true }, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toMatchStringHTML(html`<div class="active"></div>`)
@@ -337,13 +236,7 @@ describe("class атрибуты в data.ts", () => {
 
       beforeAll(() => {
         const nodes = parse(({ html, core }) => html`<div class="div-${core.active ? "active" : "inactive"}"></div>`)
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: { active: true },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { active: true }, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toMatchStringHTML(html`<div class="div-active"></div>`)
@@ -356,13 +249,7 @@ describe("class атрибуты в data.ts", () => {
 
       beforeAll(() => {
         const nodes = parse(({ html, core }) => html`<div class="div-${core.active ? "active" : "inactive"}"></div>`)
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: { active: true },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { active: true }, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toMatchStringHTML(html`<div class="div-active"></div>`)
@@ -379,13 +266,7 @@ describe("class атрибуты в data.ts", () => {
             <div class="div-${core.active ? "active" : "inactive"} div-${core.active ? "active" : "inactive"}"></div>
           `
         )
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: { active: true },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { active: true }, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toMatchStringHTML(html`<div class="div-active div-active"></div>`)
@@ -402,13 +283,7 @@ describe("class атрибуты в data.ts", () => {
         const nodes = parse(
           ({ html, core }) => html`<div class="div-${core.active ? "active" : "inactive"} visible"></div>`
         )
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: { active: true },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { active: true }, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toMatchStringHTML(html`<div class="div-active visible"></div>`)
@@ -423,13 +298,7 @@ describe("class атрибуты в data.ts", () => {
         const nodes = parse(
           ({ html, core }) => html`<div class="${core.active ? "active" : "inactive"} visible"></div>`
         )
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: { active: true },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { active: true }, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toMatchStringHTML(html`<div class="active visible"></div>`)
@@ -445,13 +314,7 @@ describe("class атрибуты в data.ts", () => {
           ({ html, core }) =>
             html`<div class="static-value ${core.active ? "active" : "inactive"} mixed-${core.type}"></div>`
         )
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: { active: true, type: "type" },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { active: true, type: "type" }, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toMatchStringHTML(html`<div class="static-value active mixed-type"></div>`)
@@ -469,7 +332,7 @@ describe("class атрибуты в data.ts", () => {
         element = render({
           el: document.createElement("div"),
           ctx,
-          st: { state: "state", states: [] },
+          st,
           core: { variant: "variant", size: "size", theme: "theme" },
           nodes,
         })
@@ -489,13 +352,7 @@ describe("class атрибуты в data.ts", () => {
             html`<div
               class="base-class ${core.active ? "active" : "inactive"} ${core.disabled ? "disabled" : ""}"></div>`
         )
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: { active: true, disabled: false },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { active: true, disabled: false }, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toMatchStringHTML(html`<div class="base-class active"></div>`)
@@ -510,13 +367,7 @@ describe("class атрибуты в data.ts", () => {
         const nodes = parse(
           ({ html, core }) => html`<div class="container ${core.nested ? "nested" : "default"}"></div>`
         )
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: { nested: true },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { nested: true }, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toMatchStringHTML(html`<div class="container nested"></div>`)
@@ -532,13 +383,7 @@ describe("class атрибуты в data.ts", () => {
           ({ html, core }) =>
             html`<div class="visible ${core.hidden ? "" : "show"} ${core.active ? "active" : ""}"></div>`
         )
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: { hidden: true, active: true },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { hidden: true, active: true }, nodes })
       })
       it("render", () => {
         console.log(element.innerHTML)
@@ -554,13 +399,7 @@ describe("class атрибуты в data.ts", () => {
         const nodes = parse(
           ({ html, core }) => html`<div class="static-value-${core.active ? "active" : "inactive"}"></div>`
         )
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core: { active: true },
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core: { active: true }, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toMatchStringHTML(html`<div class="static-value-active"></div>`)
@@ -578,7 +417,7 @@ describe("class атрибуты в data.ts", () => {
         element = render({
           el: document.createElement("div"),
           ctx,
-          st: { state: "state", states: [] },
+          st,
           core: { user: { id: "id", role: "role" }, theme: "theme" },
           nodes,
         })
@@ -603,7 +442,7 @@ describe("class атрибуты в data.ts", () => {
         element = render({
           el: document.createElement("div"),
           ctx,
-          st: { state: "state", states: [] },
+          st,
           core: { user: { id: "id", role: "role" }, theme: "theme", isActive: true },
           nodes,
         })
@@ -624,7 +463,7 @@ describe("class атрибуты в data.ts", () => {
         element = render({
           el: document.createElement("div"),
           ctx,
-          st: { state: "state", states: [] },
+          st,
           core: { user: { id: "id", role: "role" }, theme: "theme" },
           nodes,
         })
@@ -649,7 +488,7 @@ describe("class атрибуты в data.ts", () => {
         element = render({
           el: document.createElement("div"),
           ctx,
-          st: { state: "state", states: [] },
+          st,
           core: { user: { id: "id", role: "role" }, theme: "theme", isActive: true, isAdmin: true },
           nodes,
         })
@@ -667,13 +506,7 @@ describe("class атрибуты в data.ts", () => {
       const nodes = parse(
         ({ html, core }) => html`<div class="${core.status ? "active" : "inactive"}-status">Status</div>`
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: { status: true },
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: { status: true }, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`<div class="active-status">Status</div>`)

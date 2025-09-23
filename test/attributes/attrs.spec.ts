@@ -2,6 +2,7 @@ import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
+import { st } from "fixture/params"
 
 const html = String.raw
 describe("атрибуты", () => {
@@ -10,13 +11,7 @@ describe("атрибуты", () => {
     const ctx = new Context((t) => ({}))
     beforeAll(() => {
       const nodes = parse(({ html }) => html`<svg:use xlink:href="#id"></svg:use>`)
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`<svg:use xlink:href="#id"></svg:use>`)
@@ -27,13 +22,7 @@ describe("атрибуты", () => {
     const ctx = new Context((t) => ({}))
     beforeAll(() => {
       const nodes = parse(({ html }) => html`<div class="" id="">Content</div>`)
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`<div>Content</div>`)
@@ -44,13 +33,7 @@ describe("атрибуты", () => {
     const ctx = new Context((t) => ({}))
     beforeAll(() => {
       const nodes = parse(({ html }) => html`<a href="https://e.co" target="_blank">x</a>`)
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`<a href="https://e.co" target="_blank">x</a>`)
@@ -62,13 +45,7 @@ describe("атрибуты", () => {
     const ctx = new Context((t) => ({}))
     beforeAll(() => {
       const nodes = parse(({ html }) => html`<div title="a > b, c < d"></div>`)
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`<div title="a > b, c < d"></div>`)
@@ -82,13 +59,7 @@ describe("атрибуты", () => {
     }))
     beforeAll(() => {
       const nodes = parse(({ html, context }) => html`<div title="${context.flag ? "a > b" : "c < d"}"></div>`)
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`<div title="a > b"></div>`)
@@ -102,13 +73,7 @@ describe("атрибуты", () => {
     }))
     beforeAll(() => {
       const nodes = parse(({ html, context }) => html`<div title=${context.flag ? "a > b" : "c < d"}></div>`)
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`<div title="a > b"></div>`)
@@ -122,13 +87,7 @@ describe("атрибуты", () => {
     }))
     beforeAll(() => {
       const nodes = parse(({ html, context }) => html`<div title="${context.flag ? "a > b" : "c < d"}"></div>`)
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`<div title="a > b"></div>`)
@@ -141,13 +100,7 @@ describe("атрибуты", () => {
     }))
     beforeAll(() => {
       const nodes = parse(({ html, context }) => html`<button ${context.flag && "disabled"}></button>`)
-      element = render({
-        el: document.createElement("button"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        nodes,
-      })
+      element = render({ el: document.createElement("button"), ctx, st, core: {}, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`<button disabled></button>`)
@@ -169,13 +122,7 @@ describe("атрибуты", () => {
             ${core.items.map((item) => html`<li class="item-${item.type}" title="${item.name}">${item.name}</li>`)}
           </ul>`
       )
-      element = render({
-        el: document.createElement("ul"),
-        ctx,
-        st: { state: "state", states: [] },
-        core,
-        nodes,
-      })
+      element = render({ el: document.createElement("ul"), ctx, st, core, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`
@@ -194,13 +141,7 @@ describe("атрибуты", () => {
       const nodes = parse(
         ({ html, core }) => html`<div class="div-${core.active ? "active" : "inactive"}">Content</div>`
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: { active: true },
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: { active: true }, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`<div class="div-active">Content</div>`)

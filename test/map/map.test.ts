@@ -2,17 +2,13 @@ import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
 import { Context } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
+import { st } from "fixture/params"
 
 const html = String.raw
 describe("map", () => {
   describe("map вложенный в map", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({}))
-
-    const st = {
-      state: "",
-      states: [],
-    }
 
     const core = {
       list: [
@@ -67,13 +63,7 @@ describe("map", () => {
           </ul>
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core,
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`
@@ -102,13 +92,7 @@ describe("map", () => {
           </ul>
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core,
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`
@@ -144,13 +128,7 @@ describe("map", () => {
             </ul>
           `
         )
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core,
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toMatchStringHTML(html`
@@ -183,7 +161,7 @@ describe("map", () => {
         element = render({
           el: document.createElement("div"),
           ctx,
-          st: { state: "state", states: [] },
+          st,
           core: { list: ["Item 1", "Item 2", "Item 3", "Item 4"] },
           nodes,
         })
@@ -220,13 +198,7 @@ describe("map", () => {
               : html`<div>x</div>`}
           `
         )
-        element = render({
-          el: document.createElement("div"),
-          ctx,
-          st: { state: "state", states: [] },
-          core,
-          nodes,
-        })
+        element = render({ el: document.createElement("div"), ctx, st, core, nodes })
       })
       it("render", () => {
         expect(element.innerHTML).toMatchStringHTML(html`
@@ -255,13 +227,7 @@ describe("map", () => {
           </ul>
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core,
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core, nodes })
     })
     it("render", () => {
       expect(element.innerHTML).toMatchStringHTML(html`

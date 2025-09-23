@@ -2,6 +2,7 @@ import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "../../index"
 import { Context } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
+import { st } from "fixture/params"
 
 const html = String.raw
 describe("логические операторы в условиях", () => {
@@ -33,13 +34,8 @@ describe("логические операторы в условиях", () => {
       element = render({
         el: document.createElement("div"),
         ctx,
-        st: { state: "state", states: [] },
-        core: {
-          user: {
-            name: "John Doe",
-            isVerified: true,
-          },
-        },
+        st,
+        core: { user: { name: "John Doe", isVerified: true } },
         nodes,
       })
     })
@@ -101,13 +97,8 @@ describe("логические операторы в условиях", () => {
       element = render({
         el: document.createElement("div"),
         ctx,
-        st: { state: "state", states: [] },
-        core: {
-          user: {
-            role: "admin",
-            isActive: true,
-          },
-        },
+        st,
+        core: { user: { role: "admin", isActive: true } },
         nodes,
       })
     })

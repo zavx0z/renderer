@@ -8,9 +8,23 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
   core,
   nodes,
 }: RenderParams<C, I, S>): HTMLElement => {
-  let prevState = st.state
   let fragment = document.createDocumentFragment()
-
+  ctx.onUpdate(() => {
+    fragment = document.createDocumentFragment()
+    for (const n of nodes) {
+      const dom = toDOM(n, undefined)
+      if (dom) fragment.appendChild(dom)
+    }
+    el.replaceChildren(fragment)
+  })
+  st.onUpdate(() => {
+    fragment = document.createDocumentFragment()
+    for (const n of nodes) {
+      const dom = toDOM(n, undefined)
+      if (dom) fragment.appendChild(dom)
+    }
+    el.replaceChildren(fragment)
+  })
   const toDOM = (node: NodeTemplate, itemScope: Scope | undefined): Node | null => {
     if (!node || typeof node !== "object") return null
 
@@ -267,15 +281,6 @@ export const render = <C extends Schema, I extends Core = Core, S extends State 
 
   el.replaceChildren(fragment)
 
-  ctx.onUpdate(() => {
-    fragment = document.createDocumentFragment()
-    for (const n of nodes) {
-      const dom = toDOM(n, undefined)
-      if (dom) fragment.appendChild(dom)
-    }
-    el.replaceChildren(fragment)
-    prevState = st.state
-  })
   return el as HTMLElement
 }
 const EVENT_CACHE = new Map<string, Function>()
@@ -386,7 +391,7 @@ export type Scope = { item: any; index: number; parent?: Scope; itemPath: string
 type RenderParams<C extends Schema, I extends Core = Core, S extends State = State> = {
   el: HTMLElement | ShadowRoot
   ctx: Context<C>
-  st: { state: S; states: readonly S[] }
+  st: { state: S; states: readonly S[]; onUpdate: (listener: (state: S) => void) => () => void }
   core: I
   nodes: NodeTemplate[]
 }

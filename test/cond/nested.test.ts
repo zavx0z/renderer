@@ -2,6 +2,7 @@ import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "../../index"
 import { Context } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
+import { st } from "fixture/params"
 
 const html = String.raw
 
@@ -19,13 +20,7 @@ describe("вложенные условия", () => {
               : html`<div class="flag3"></div>`}
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
     })
     it("render - flag1=true flag2=false", () => {
       expect(element.innerHTML).toMatchStringHTML(html`<div class="flag1"></div>`)
@@ -69,13 +64,7 @@ describe("вложенные условия", () => {
           </div>
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
     })
     it("render - hasPermission=true isAdmin=false", () =>
       expect(element.innerHTML).toMatchStringHTML(html`
@@ -134,13 +123,7 @@ describe("вложенные условия", () => {
           </div>
         `
       )
-      element = render({
-        el: document.createElement("div"),
-        ctx,
-        st: { state: "state", states: [] },
-        core: {},
-        nodes,
-      })
+      element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
     })
     it("render - hasPermission=true isAdmin=false isSuperAdmin=false", () =>
       expect(element.innerHTML).toMatchStringHTML(html`
