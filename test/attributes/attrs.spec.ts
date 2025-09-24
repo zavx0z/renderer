@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
-import { Context } from "@zavx0z/context"
+import { contextSchema, contextFromSchema } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
 import { st } from "fixture/params"
 
@@ -8,7 +8,8 @@ const html = String.raw
 describe("атрибуты", () => {
   describe("namespace", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse(({ html }) => html`<svg:use xlink:href="#id"></svg:use>`)
       element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
@@ -19,7 +20,8 @@ describe("атрибуты", () => {
   })
   describe("пустые значения", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse(({ html }) => html`<div class="" id="">Content</div>`)
       element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
@@ -30,7 +32,8 @@ describe("атрибуты", () => {
   })
   describe("двойные/одинарные кавычки", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse(({ html }) => html`<a href="https://e.co" target="_blank">x</a>`)
       element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
@@ -42,7 +45,8 @@ describe("атрибуты", () => {
 
   describe("угловые скобки внутри значения", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse(({ html }) => html`<div title="a > b, c < d"></div>`)
       element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
@@ -54,9 +58,10 @@ describe("атрибуты", () => {
 
   describe("условие в атрибуте", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       flag: t.boolean.optional(true),
     }))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse(({ html, context }) => html`<div title="${context.flag ? "a > b" : "c < d"}"></div>`)
       element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
@@ -68,9 +73,10 @@ describe("атрибуты", () => {
 
   describe("условие в аттрибуте без кавычек", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       flag: t.boolean.optional(true),
     }))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse(({ html, context }) => html`<div title=${context.flag ? "a > b" : "c < d"}></div>`)
       element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
@@ -82,9 +88,10 @@ describe("атрибуты", () => {
 
   describe("условие в аттрибуте с одинарными кавычками", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       flag: t.boolean.optional(true),
     }))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse(({ html, context }) => html`<div title="${context.flag ? "a > b" : "c < d"}"></div>`)
       element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
@@ -95,9 +102,10 @@ describe("атрибуты", () => {
   })
   describe("булевы атрибуты", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       flag: t.boolean.optional(true),
     }))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse(({ html, context }) => html`<button ${context.flag && "disabled"}></button>`)
       element = render({ el: document.createElement("button"), ctx, st, core: {}, nodes })
@@ -108,7 +116,8 @@ describe("атрибуты", () => {
   })
   describe("класс в map", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     const core = {
       items: [
         { type: "1", name: "item 1" },
@@ -136,7 +145,8 @@ describe("атрибуты", () => {
 
   describe("сложные условные атрибуты class", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse(
         ({ html, core }) => html`<div class="div-${core.active ? "active" : "inactive"}">Content</div>`

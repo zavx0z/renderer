@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
-import { Context } from "@zavx0z/context"
+import { contextSchema, contextFromSchema } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
 import { st } from "fixture/params"
 
@@ -9,9 +9,10 @@ const html = String.raw
 describe("индекс", () => {
   describe("в тексте", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       list: t.array.required(["one", "two", "three", "four"]),
     }))
+    const ctx = contextFromSchema(schema)
     const core = {
       list: [
         { title: "one", nested: ["one", "two"] },
@@ -43,9 +44,10 @@ describe("индекс", () => {
   })
   describe("в условии", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       list: t.array.required(["one", "two", "three", "four"]),
     }))
+    const ctx = contextFromSchema(schema)
 
     const core = {
       list: [
@@ -78,9 +80,10 @@ describe("индекс", () => {
   })
   describe("в логическом блоке", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       list: t.array.required(["one", "two", "three", "four"]),
     }))
+    const ctx = contextFromSchema(schema)
 
     const core = {
       list: [

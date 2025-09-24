@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "../../index"
-import { Context } from "@zavx0z/context"
+import { contextSchema, contextFromSchema } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
 import { st } from "fixture/params"
 
@@ -8,10 +8,11 @@ const html = String.raw
 describe("условия соседствующие", () => {
   describe("условие соседствующее с условием на верхнем уровне", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       flag1: t.boolean.required(true),
       flag2: t.boolean.required(false),
     }))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse(
         ({ html, context }) => html`
@@ -56,7 +57,8 @@ describe("условия соседствующие", () => {
 
   describe("условие соседствующее с условием внутри элемента", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({ flag1: t.boolean.required(true), flag2: t.boolean.required(false) }))
+    const schema = contextSchema((t) => ({ flag1: t.boolean.required(true), flag2: t.boolean.required(false) }))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse(
         ({ html, context }) => html`
@@ -111,11 +113,12 @@ describe("условия соседствующие", () => {
 
   describe("условие соседствующее с условием на глубоком уровне вложенности", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       flag1: t.boolean.required(true),
       flag2: t.boolean.required(false),
       flag3: t.boolean.required(false),
     }))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse(
         ({ html, context }) => html`

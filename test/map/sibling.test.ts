@@ -1,13 +1,14 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
-import { Context } from "@zavx0z/context"
+import { contextSchema, contextFromSchema } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
 import { st } from "fixture/params"
 
 const html = String.raw
 describe("map соседствующие", () => {
   describe("map соседствующий с map на верхнем уровне", () => {
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
 
     const core = {
       list1: [{ title: "Item 1" }, { title: "Item 2" }],
@@ -34,9 +35,10 @@ describe("map соседствующие", () => {
   })
 
   describe("map соседствующий с map внутри элемента", () => {
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       categories: t.array.required(["cat1", "cat2"]),
     }))
+    const ctx = contextFromSchema(schema)
 
     const core = {
       items: [
@@ -80,7 +82,8 @@ describe("map соседствующие", () => {
 
   describe("map соседствующий с map на глубоком уровне вложенности", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     const core = {
       list1: [{ title: "Item 1" }, { title: "Item 2" }],
       list2: [{ title: "Item 3" }, { title: "Item 4" }],

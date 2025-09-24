@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
-import { Context } from "@zavx0z/context"
+import { contextSchema, contextFromSchema } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
 import { st } from "fixture/params"
 
@@ -8,7 +8,8 @@ const html = String.raw
 describe("text", () => {
   describe("примитивы", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     const core = { list: ["Item 1", "Item 2"] }
     beforeAll(() => {
       const nodes = parse<typeof ctx.context, typeof core>(
@@ -33,7 +34,8 @@ describe("text", () => {
 
   describe("объекты без деструктуризации", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     const core = { configs: [{ name: "name", value: "value" }] }
     beforeAll(() => {
       const nodes = parse<typeof ctx.context, typeof core>(
@@ -55,7 +57,8 @@ describe("text", () => {
   })
   describe("объекты с деструктуризацией", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     const core = { configs: [{ name: "name", value: "value" }] }
     beforeAll(() => {
       const nodes = parse<typeof ctx.context, typeof core>(
@@ -78,7 +81,8 @@ describe("text", () => {
 
   describe("вложенные объекты", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     const core = { posts: [{ author: { name: "name", email: "email" } }] }
     beforeAll(() => {
       const nodes = parse<typeof ctx.context, typeof core>(
@@ -99,7 +103,8 @@ describe("text", () => {
 
   describe("динамический текст в map с условными выражениями", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     const core = { items: [{ name: "name", isActive: true }] }
     beforeAll(() => {
       const nodes = parse<typeof ctx.context, typeof core>(
@@ -122,7 +127,8 @@ describe("text", () => {
 
   describe("динамический текст в map с вычислениями", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     const core = { products: [{ name: "name", price: 1, quantity: 1 }] }
     beforeAll(() => {
       const nodes = parse<typeof ctx.context, typeof core>(
@@ -145,7 +151,8 @@ describe("text", () => {
 
   describe("динамический текст в map с методами", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     const core = { users: [{ name: "name", email: "email" }] }
     beforeAll(() => {
       const nodes = parse<typeof ctx.context, typeof core>(
@@ -166,7 +173,8 @@ describe("text", () => {
 
   describe("динамический текст в map с вложенными map", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     const core = {
       categories: [
         { name: "Category 1", products: [{ name: "Product 1", price: 1 }] },
@@ -208,7 +216,8 @@ describe("text", () => {
 
   describe("динамический текст в map с условными элементами", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     const core = { items: [{ name: "name", isVisible: true, description: "description" }] }
     beforeAll(() => {
       const nodes = parse<typeof ctx.context, typeof core>(

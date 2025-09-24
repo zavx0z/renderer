@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
-import { Context } from "@zavx0z/context"
+import { contextSchema, contextFromSchema } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
 import { st } from "fixture/params"
 
@@ -8,9 +8,10 @@ const html = String.raw
 describe("update", () => {
   describe("функция обновления контекста в функции рендера", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       name: t.string.optional(),
     }))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse(
         ({ html, update }) => html` <button onclick=${() => update({ name: "Jane Doe" })}>OK</button> `
@@ -29,11 +30,12 @@ describe("update", () => {
 
   describe("функция обновления нескольких ключей контекста", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       name: t.string.required(""),
       age: t.number.required(0),
       active: t.boolean.required(false),
     }))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse(
         ({ html, update }) => html`
@@ -56,9 +58,10 @@ describe("update", () => {
 
   describe("функция обновления контекста данными из контекста", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       count: t.number.required(4),
     }))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse<typeof ctx.context>(
         ({ html, update, context }) => html` <button onclick=${() => update({ count: context.count + 1 })}>OK</button> `
@@ -77,10 +80,11 @@ describe("update", () => {
 
   describe("функция обновления контекста данными из core и context", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       count: t.number.required(0),
       iteration: t.number.required(0),
     }))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse<typeof ctx.context>(
         ({ html, update, core, context }) => html`
@@ -105,10 +109,11 @@ describe("update", () => {
 
   describe("функция обновления контекста данными из core и context внутри массива вложенного в массив", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       count: t.number.required(0),
       iteration: t.number.required(0),
     }))
+    const ctx = contextFromSchema(schema)
     const core = {
       items: [{ count: 1, iteration: 1 }],
       count: 3,

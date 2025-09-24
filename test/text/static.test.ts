@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeAll } from "bun:test"
-import { Context } from "@zavx0z/context"
+import { contextSchema, contextFromSchema } from "@zavx0z/context"
 import { render } from "@zavx0z/renderer"
 import { parse } from "@zavx0z/template"
 import { st } from "fixture/params"
@@ -8,7 +8,8 @@ const html = String.raw
 
 describe("статические значения", () => {
   // https://zavx0z.github.io/template/interfaces/NodeText.html#статический
-  const ctx = new Context((t) => ({}))
+  const schema = contextSchema((t) => ({}))
+  const ctx = contextFromSchema(schema)
   let element: HTMLElement
   beforeAll(() => {
     const nodes = parse(({ html }) => html`Static text`)

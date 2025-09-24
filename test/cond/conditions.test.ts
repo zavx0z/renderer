@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "../../index"
-import { Context } from "@zavx0z/context"
+import { contextSchema, contextFromSchema } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
 import { st } from "fixture/params"
 
@@ -9,9 +9,10 @@ const html = String.raw
 describe("conditions", () => {
   describe("тернарник с внутренними тегами", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       cond: t.boolean.required(true),
     }))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse(
         ({ html, context }) => html`<div>${context.cond ? html`<em>A</em>` : html`<span>b</span>`}</div>`
@@ -29,9 +30,10 @@ describe("conditions", () => {
 
   describe("простой тернарный оператор с context с оберткой и соседними элементами", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       isActive: t.boolean.required(true),
     }))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse(
         ({ html, context }) =>
@@ -67,10 +69,11 @@ describe("conditions", () => {
 
   describe("сравнение нескольких переменных", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       cond: t.boolean.required(true),
       cond2: t.boolean.required(true),
     }))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse(
         ({ html, context }) =>
@@ -98,10 +101,11 @@ describe("conditions", () => {
 
   describe("сравнение переменных на равенство", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       cond: t.boolean.required(true),
       cond2: t.boolean.required(true),
     }))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse(
         ({ html, context }) =>
@@ -128,12 +132,13 @@ describe("conditions", () => {
 
   describe("логические операторы без тегов", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       a: t.number.required(1),
       b: t.number.required(2),
       c: t.number.required(4),
       d: t.number.required(3),
     }))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse<typeof ctx.context>(
         ({ html, context }) => html`${context.a < context.b && context.c > context.d ? "1" : "0"}`
@@ -152,9 +157,10 @@ describe("conditions", () => {
 
   describe("условие вокруг self/void", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       flag: t.boolean.required(true),
     }))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse<typeof ctx.context>(
         ({ html, context }) => html`<div>${context.flag ? html`<br />` : html`<img src="x" />`}</div>`
@@ -173,7 +179,8 @@ describe("conditions", () => {
 
   describe("condition внутри map", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     const core = {
       items: [{ show: true }, { show: false }],
     }
@@ -210,9 +217,10 @@ describe("conditions", () => {
 
   describe("map + условия", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       list: t.array.required(["A", "B", "C", "D"]),
     }))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse<typeof ctx.context>(
         ({ html, context }) => html`
@@ -239,12 +247,13 @@ describe("conditions", () => {
 
   describe("операторы сравнения — без тегов", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       a: t.number.required(1),
       b: t.number.required(2),
       c: t.number.required(4),
       d: t.number.required(3),
     }))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse<typeof ctx.context>(
         ({ html, context }) => html`${context.a < context.b && context.c > context.d ? "1" : "0"}`

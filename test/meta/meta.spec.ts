@@ -1,6 +1,6 @@
 import { describe, expect, it, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
-import { Context } from "@zavx0z/context"
+import { contextSchema, contextFromSchema } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
 import { st } from "fixture/params"
 
@@ -25,7 +25,8 @@ if (!customElements.get("meta-for"))
 describe("meta", () => {
   describe("актор web-component", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse(({ html }) => html`<meta-hash></meta-hash>`)
       element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
@@ -37,7 +38,8 @@ describe("meta", () => {
 
   describe("актор web-component с самозакрывающимся тегом", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse(({ html }) => html`<meta-hash />`)
       element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
@@ -49,7 +51,8 @@ describe("meta", () => {
 
   describe("статические атрибуты", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse(({ html }) => html`<meta-hash data-type="component" class="meta-element" />`)
       element = render({ el: document.createElement("div"), ctx, st, core: {}, nodes })
@@ -61,7 +64,8 @@ describe("meta", () => {
   })
   describe("core", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     const core = {
       obj: { data: "any" },
     }

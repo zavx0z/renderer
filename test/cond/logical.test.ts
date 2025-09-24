@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "../../index"
-import { Context } from "@zavx0z/context"
+import { contextSchema, contextFromSchema } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
 import { st } from "fixture/params"
 
@@ -8,9 +8,10 @@ const html = String.raw
 describe("логические операторы в условиях", () => {
   describe("логический оператор с вложенными элементами в условии", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       showDetails: t.boolean.required(true),
     }))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse(
         ({ html, context, core }) => html`
@@ -65,9 +66,10 @@ describe("логические операторы в условиях", () => {
 
   describe("сложный логический оператор в условии", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       isAdmin: t.boolean.required(true),
     }))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse(
         ({ html, context, core }) => html`

@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
-import { Context } from "@zavx0z/context"
+import { contextSchema, contextFromSchema } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
 import { st } from "fixture/params"
 
@@ -8,7 +8,8 @@ const html = String.raw
 describe("boolean атрибуты", () => {
   it("булевы атрибуты с переменными из разных уровней вложенности", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     const core = {
       companies: [
         { id: "1", active: true, departments: [{ id: "1", active: true }] },
@@ -52,7 +53,8 @@ describe("boolean атрибуты", () => {
   })
   describe("boolean атрибуты с переменными из разных уровней map", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse(
         ({ html, core }) => html`<img src="https://example.com" ${core.visible ? "visible" : "hidden"} />`

@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeAll } from "bun:test"
-import { Context } from "@zavx0z/context"
+import { contextSchema, contextFromSchema } from "@zavx0z/context"
 import { render } from "@zavx0z/renderer"
 import { parse } from "@zavx0z/template"
 import { st } from "fixture/params"
@@ -7,10 +7,11 @@ import { st } from "fixture/params"
 const html = String.raw
 
 describe("текстовые узлы — null не рендерится", () => {
-  const ctx = new Context((t) => ({
+  const schema = contextSchema((t) => ({
     cups: t.number.required(0),
     last: t.string.optional(), // по умолчанию null
   }))
+  const ctx = contextFromSchema(schema)
 
   const core = {}
 

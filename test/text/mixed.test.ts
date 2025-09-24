@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeAll } from "bun:test"
-import { Context } from "@zavx0z/context"
+import { contextSchema, contextFromSchema } from "@zavx0z/context"
 import { render } from "@zavx0z/renderer"
 import { parse } from "@zavx0z/template"
 import { st } from "fixture/params"
@@ -7,10 +7,11 @@ import { st } from "fixture/params"
 const html = String.raw
 
 describe("микс статических и динамических значений", () => {
-  const ctx = new Context((t) => ({
+  const schema = contextSchema((t) => ({
     family: t.string.optional("Filipenko"),
     name: t.string.optional("Vladimir"),
   }))
+  const ctx = contextFromSchema(schema)
   let element: HTMLElement
   beforeAll(() => {
     const nodes = parse(({ html, context }) => html`<p>Hello, ${context.family} ${context.name}!</p>`)

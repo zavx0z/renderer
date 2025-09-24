@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
-import { Context } from "@zavx0z/context"
+import { contextSchema, contextFromSchema } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
 import { st } from "fixture/params"
 
@@ -19,7 +19,8 @@ describe("renderer: логические операторы в map", () => {
     }
 
     beforeAll(() => {
-      const ctx = new Context((t) => ({}))
+      const schema = contextSchema((t) => ({}))
+      const ctx = contextFromSchema(schema)
       const nodes = parse<typeof ctx.context>(
         ({ html, context }) => html`
           <div>
@@ -66,7 +67,8 @@ describe("renderer: логические операторы в map", () => {
       ],
     }
 
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse<typeof ctx.context, typeof core>(
         ({ html, core }) => html`
@@ -121,7 +123,8 @@ describe("renderer: логические операторы в map", () => {
     }
 
     beforeAll(() => {
-      const ctx = new Context((t) => ({}))
+      const schema = contextSchema((t) => ({}))
+      const ctx = contextFromSchema(schema)
       const nodes = parse<typeof ctx.context, typeof core>(
         ({ html, core }) => html`
           <ul>
@@ -169,9 +172,10 @@ describe("renderer: логические операторы в map", () => {
     }
 
     beforeAll(() => {
-      ctx = new Context((t) => ({
+      const schema = contextSchema((t) => ({
         showDetails: t.boolean.required(true),
       }))
+      ctx = contextFromSchema(schema)
       const nodes = parse<typeof ctx.context, typeof core>(
         ({ html, core, context }) => html`
           <div>
@@ -264,7 +268,8 @@ describe("renderer: логические операторы в map", () => {
     }
 
     beforeAll(() => {
-      const ctx = new Context((t) => ({}))
+      const schema = contextSchema((t) => ({}))
+      const ctx = contextFromSchema(schema)
       const nodes = parse<typeof ctx.context, typeof core>(
         ({ html, core }) => html`
           <div>

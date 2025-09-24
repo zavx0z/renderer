@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
-import { Context } from "@zavx0z/context"
+import { contextSchema, contextFromSchema } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
 import { st } from "fixture/params"
 
@@ -8,7 +8,8 @@ const html = String.raw
 describe("object атрибуты (стили) с переменными из разных уровней map", () => {
   describe("стили с переменными из разных уровней вложенности", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     const core = {
       companies: [
         { id: "1", theme: "red", departments: [{ id: "1", color: "blue" }] },
@@ -56,7 +57,8 @@ describe("object атрибуты (стили) с переменными из р
 
   describe("стили со смешанными статическими и динамическими значениями", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     const core = {
       users: [{ id: "1", theme: "red" }],
     }

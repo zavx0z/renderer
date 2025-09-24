@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
-import { Context } from "@zavx0z/context"
+import { contextSchema, contextFromSchema } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
 import { st } from "fixture/params"
 
@@ -8,7 +8,8 @@ const html = String.raw
 describe("map", () => {
   describe("map вложенный в map", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
 
     const core = {
       list: [
@@ -53,7 +54,8 @@ describe("map", () => {
   })
   describe("простой map", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     const core = { list: ["Item 1", "Item 2"] }
     beforeAll(() => {
       const nodes = parse<typeof ctx.context, typeof core>(
@@ -77,7 +79,8 @@ describe("map", () => {
 
   describe("простой map с несколькими детьми", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     const core = { list: ["Item 1", "Item 2"] }
     beforeAll(() => {
       const nodes = parse<typeof ctx.context, typeof core>(
@@ -106,7 +109,8 @@ describe("map", () => {
     })
     describe("map в элементе вложенный в map", () => {
       let element: HTMLElement
-      const ctx = new Context((t) => ({}))
+      const schema = contextSchema((t) => ({}))
+      const ctx = contextFromSchema(schema)
       const core = {
         list: [
           { title: "Item 1", nested: ["Item 2", "Item 3"] },
@@ -149,7 +153,8 @@ describe("map", () => {
     })
     describe("map с индексом", () => {
       let element: HTMLElement
-      const ctx = new Context((t) => ({}))
+      const schema = contextSchema((t) => ({}))
+      const ctx = contextFromSchema(schema)
       beforeAll(() => {
         const nodes = parse<typeof ctx.context, typeof core>(
           ({ html, core }) => html`
@@ -179,7 +184,8 @@ describe("map", () => {
     })
     describe("map в условии", () => {
       let element: HTMLElement
-      const ctx = new Context((t) => ({ flag: t.boolean.required(true) }))
+      const schema = contextSchema((t) => ({ flag: t.boolean.required(true) }))
+      const ctx = contextFromSchema(schema)
       const core = {
         list: [
           { title: "Item 1", nested: ["Item 2", "Item 3"] },
@@ -212,7 +218,8 @@ describe("map", () => {
   })
   describe("map в text вложенный в map", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     const core = {
       list: [
         { title: "Item 1", nested: ["Item 2", "Item 3"] },

@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
-import { Context } from "@zavx0z/context"
+import { contextSchema, contextFromSchema } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
 import { st } from "fixture/params"
 
@@ -8,7 +8,8 @@ const html = String.raw
 describe("условные выражения в атрибутах", () => {
   describe("тернарный оператор с числом в качестве условия", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({}))
+    const schema = contextSchema((t) => ({}))
+    const ctx = contextFromSchema(schema)
     beforeAll(() => {
       const nodes = parse(
         ({ html, core }) =>
@@ -22,11 +23,12 @@ describe("условные выражения в атрибутах", () => {
   })
   describe("тернарный оператор сравнения через === с динамическими результатами", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       isActive: t.boolean.optional(true),
       status: t.string.optional("running"),
       item: t.string.optional("item"),
     }))
+    const ctx = contextFromSchema(schema)
     const core = { isActive: true, status: "running", item: "item" }
     beforeAll(() => {
       const nodes = parse(

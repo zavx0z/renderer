@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
-import { Context } from "@zavx0z/context"
+import { contextSchema, contextFromSchema } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
 import { st } from "fixture/params"
 
@@ -8,9 +8,10 @@ const html = String.raw
 
 describe("&& &&", () => {
   // https://zavx0z.github.io/template/interfaces/NodeLogical.html#%D1%81%D0%BB%D0%BE%D0%B6%D0%BD%D0%BE%D0%B5-%D0%BB%D0%BE%D0%B3%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5-%D1%83%D1%81%D0%BB%D0%BE%D0%B2%D0%B8%D0%B5
-  const ctx = new Context((t) => ({
+  const schema = contextSchema((t) => ({
     isAdmin: t.boolean.required(true),
   }))
+  const ctx = contextFromSchema(schema)
 
   let element: HTMLElement
   beforeAll(() => {

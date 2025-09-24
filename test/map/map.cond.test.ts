@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
-import { Context } from "@zavx0z/context"
+import { contextSchema, contextFromSchema } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
 import { st } from "fixture/params"
 
@@ -8,9 +8,10 @@ const html = String.raw
 describe("map с условиями", () => {
   describe("map соседствующий с map в условии на верхнем уровне", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       flag: t.boolean.required(true),
     }))
+    const ctx = contextFromSchema(schema)
     const core = {
       list1: [{ title: "Item 1" }, { title: "Item 2" }],
       list2: [{ title: "Item 3" }, { title: "Item 4" }],
@@ -41,9 +42,10 @@ describe("map с условиями", () => {
   })
 
   describe("map соседствующий с map в условии внутри элемента", () => {
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       flag: t.boolean.required(true),
     }))
+    const ctx = contextFromSchema(schema)
     let element: HTMLElement
     const core = {
       list1: [{ title: "Item 1" }, { title: "Item 2" }],
@@ -79,10 +81,11 @@ describe("map с условиями", () => {
   })
 
   describe("map соседствующий с map в условии на глубоком уровне вложенности", () => {
-    const ctx = new Context((t) => ({
+    const schema = contextSchema((t) => ({
       flag: t.boolean.required(true),
       deepFlag: t.boolean.required(true),
     }))
+    const ctx = contextFromSchema(schema)
     let element: HTMLElement
     const core = {
       list1: [{ title: "Item 1" }, { title: "Item 2" }],
@@ -137,7 +140,8 @@ describe("map с условиями", () => {
 
   describe("map внутри condition", () => {
     let element: HTMLElement
-    const ctx = new Context((t) => ({ show: t.boolean.required(true) }))
+    const schema = contextSchema((t) => ({ show: t.boolean.required(true) }))
+    const ctx = contextFromSchema(schema)
     const core = { items: ["Item 1", "Item 2"] }
     beforeAll(() => {
       const nodes = parse<typeof ctx.context, typeof core>(

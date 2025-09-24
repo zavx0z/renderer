@@ -1,6 +1,6 @@
 import { describe, it, expect, beforeAll } from "bun:test"
 import { render } from "@zavx0z/renderer"
-import { Context } from "@zavx0z/context"
+import { contextSchema, contextFromSchema } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
 import { st } from "fixture/params"
 
@@ -9,7 +9,8 @@ const html = String.raw
 describe("список", () => {
   let elementWithDestructuring: HTMLElement
   let elementWithoutDestructuring: HTMLElement
-  const ctx = new Context((t) => ({}))
+  const schema = contextSchema((t) => ({}))
+  const ctx = contextFromSchema(schema)
 
   const core = {
     configs: [
