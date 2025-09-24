@@ -9,7 +9,7 @@ describe("update", () => {
   describe("функция обновления контекста в функции рендера", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({
-      name: t.string(),
+      name: t.string.optional(),
     }))
     beforeAll(() => {
       const nodes = parse(

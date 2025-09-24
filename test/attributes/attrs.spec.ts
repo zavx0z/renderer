@@ -55,7 +55,7 @@ describe("атрибуты", () => {
   describe("условие в атрибуте", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({
-      flag: t.boolean(true),
+      flag: t.boolean.optional(true),
     }))
     beforeAll(() => {
       const nodes = parse(({ html, context }) => html`<div title="${context.flag ? "a > b" : "c < d"}"></div>`)
@@ -69,7 +69,7 @@ describe("атрибуты", () => {
   describe("условие в аттрибуте без кавычек", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({
-      flag: t.boolean(true),
+      flag: t.boolean.optional(true),
     }))
     beforeAll(() => {
       const nodes = parse(({ html, context }) => html`<div title=${context.flag ? "a > b" : "c < d"}></div>`)
@@ -83,7 +83,7 @@ describe("атрибуты", () => {
   describe("условие в аттрибуте с одинарными кавычками", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({
-      flag: t.boolean(true),
+      flag: t.boolean.optional(true),
     }))
     beforeAll(() => {
       const nodes = parse(({ html, context }) => html`<div title="${context.flag ? "a > b" : "c < d"}"></div>`)
@@ -96,7 +96,7 @@ describe("атрибуты", () => {
   describe("булевы атрибуты", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({
-      flag: t.boolean(true),
+      flag: t.boolean.optional(true),
     }))
     beforeAll(() => {
       const nodes = parse(({ html, context }) => html`<button ${context.flag && "disabled"}></button>`)

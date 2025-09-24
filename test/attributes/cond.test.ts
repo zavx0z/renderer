@@ -23,9 +23,9 @@ describe("условные выражения в атрибутах", () => {
   describe("тернарный оператор сравнения через === с динамическими результатами", () => {
     let element: HTMLElement
     const ctx = new Context((t) => ({
-      isActive: t.boolean(true),
-      status: t.string("running"),
-      item: t.string("item"),
+      isActive: t.boolean.optional(true),
+      status: t.string.optional("running"),
+      item: t.string.optional("item"),
     }))
     const core = { isActive: true, status: "running", item: "item" }
     beforeAll(() => {
