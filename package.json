@@ -1,7 +1,7 @@
 {
   "name": "@zavx0z/renderer",
   "version": "0.7.4",
-  "description": "HTML renderer для MetaFor",
+  "description": "Target-neutral renderer for @zavx0z/template AST with a DOM adapter",
   "author": "zavx0z",
   "license": "MIT",
   "keywords": [

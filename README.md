@@ -10,30 +10,37 @@
 
 ## 📖 Описание
 
-`@zavx0z/renderer` — рендерер для **MetaFor Framework**, работающий в связке с:
+`@zavx0z/renderer` — target-neutral рендерер AST из `@zavx0z/template`.
+Он компилирует синтаксическое дерево один раз, вычисляет неизменяемое resolved tree
+для текущих данных и передаёт его host-адаптеру. DOM является одним из таких
+адаптеров; существующая функция `render` сохраняет прежний DOM API.
+
+Пакет работает в связке с:
 
 - [`@zavx0z/template`](https://github.com/zavx0z/template) — статический парсер `html\`...\`` шаблонов
 - [`@zavx0z/context`](https://github.com/zavx0z/context) — строгий и реактивный контекст данных
 
-Рендерер принимает схему из парсера и **императивно обновляет DOM**:  
-перерисовываются только те узлы и атрибуты, которые реально зависят от изменённых данных.
+Парсинг и компиляция выполняются до циклов обновления. При изменении данных
+программа только вычисляет resolved tree, после чего host атомарно заменяет
+содержимое своего корня.
 
 ---
 
 ## ✨ Возможности
 
 - Реактивные обновления DOM при изменении `context` или `state`
+- Target-neutral API `compile` → `program.evaluate` → `commit`
+- Неизменяемая структура resolved tree без зависимости от DOM
+- Рекурсивные style-объекты с сохранением вложенных селекторов и at-rules для host
 - Поддержка:
   - интерполяций `${...}`
   - условных конструкций (`?:`, `&&`, `||`)
   - циклов `.map(...)` с правильным скоупом
   - meta-элементов акторов в рамках MetaFor
-- Полная интеграция с [`@zavx0z/template`](https://github.com/zavx0z/template)
-- Полная интеграция с [`@zavx0z/context`](https://github.com/zavx0z/context)
-- Поддержка array.map с диффингом
+- AST-контракт [`@zavx0z/template`](https://github.com/zavx0z/template)
+- DOM-адаптер для [`@zavx0z/context`](https://github.com/zavx0z/context)
 - Условный рендеринг с переключением ветвей
 - Meta-элементы акторов
-- Оптимизация списков атрибутов (class, style, aria-\*)
 
 ---
 
@@ -43,62 +50,46 @@
 bun add @zavx0z/renderer
 ```
 
----
-
-🛠 Пример
+Компилируемый API не привязан к DOM:
 
 ```ts
-import { Context } from "@zavx0z/context"
+import { commit, compile } from "@zavx0z/renderer"
+
+const program = compile(nodes)
+const tree = program.evaluate({
+  bindings: { fields, mass, state },
+  update,
+})
+
+commit(host, root, tree)
+```
+
+`compile(nodes)` вызывается один раз после парсинга. В циклах обновления остаются
+только `program.evaluate(...)` и `commit(...)`. Host получает рекурсивный
+`style` как объект и сам определяет, как применять обычные свойства, вложенные
+селекторы и at-rules.
+
+Контейнеры resolved tree заморожены. Opaque payloads, включая legacy `core` и
+объекты в значениях атрибутов, сохраняют исходную identity: рендерер не клонирует
+и не замораживает пользовательские данные.
+
+---
+
+🛠 DOM-адаптер
+
+```ts
+import { contextFromSchema, contextSchema } from "@zavx0z/context"
 import { parse } from "@zavx0z/template"
-import { Renderer } from "@zavx0z/renderer"
+import { render } from "@zavx0z/renderer"
 
-const { context, update, onUpdate } = new Context((t) => ({
-  cups: t.number.required(0)({ title: "orders" }),
-  last: t.string.optional()({ title: "last ordered drink" }),
-}))
-
-const core = {
-  menu: [
-    { label: "Espresso", size: "30ml" },
-    { label: "Cappuccino", size: "200ml" },
-    { label: "Latte", size: "250ml" },
-  ],
-}
-
-let state = "open"
-
-const nodes = parse<typeof context, typeof core, "open" | "closed">(
-  ({ html, context, update, core, state }) => html`
-    <h1>☕ Quick Coffee Order</h1>
-
-    <p>
-      Status: ${state === "open" ? "🟢 Open" : "🔴 Closed"} · Orders:
-      ${context.cups}${context.last && ` · last: ${context.last}`}
-    </p>
-
-    ${state === "open" &&
-    html`
-      <ul>
-        ${core.menu.map(
-          (product) =>
-            html`<li>
-              ${product.label} (${product.size})
-              <button onclick=${() => update({ cups: context.cups + 1, last: product.label })}>Add</button>
-            </li>`
-        )}
-      </ul>
-    `}
-    ${state === "closed" && html`<p>Come back later — we’ll brew something tasty ☺️</p>`}
-  `
+const schema = contextSchema((t) => ({ name: t.string.required("World") }))
+const ctx = contextFromSchema(schema)
+const st = { state: "ready", states: ["ready"], onUpdate: () => () => {} }
+const nodes = parse<typeof ctx.context>(
+  ({ html, context }) => html`<p>Hello, ${context.name}</p>`,
 )
 
-let prevState = state
-
-const renderer = new Renderer(document.body, nodes, context, update, state, core)
-onUpdate((updated) => {
-  renderer.update({ context: updated, ...(state !== prevState && { state }) })
-  prevState = state
-})
+render({ el: document.body, ctx, st, core: {}, nodes })
 ```
 
 ## Документация

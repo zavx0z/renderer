@@ -6,7 +6,7 @@ import { st } from "fixture/params"
 
 const html = String.raw
 describe("boolean атрибуты", () => {
-  it("булевы атрибуты с переменными из разных уровней вложенности", () => {
+  describe("булевы атрибуты с переменными из разных уровней вложенности", () => {
     let element: HTMLElement
     const schema = contextSchema((t) => ({}))
     const ctx = contextFromSchema(schema)
