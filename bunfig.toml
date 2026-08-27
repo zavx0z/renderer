@@ -1,4 +1,7 @@
 [console]
 depth = 22
+
+[loader]
+".wgsl" = "text"
+
 [test]
-preload = ["./fixture/happydom.ts", "./fixture/expect.ts"]

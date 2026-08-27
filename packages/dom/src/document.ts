@@ -1,0 +1,459 @@
+import {Comment} from "./comment.ts"
+import {DocumentFragment} from "./document-fragment.ts"
+import {Element} from "./element.ts"
+import {FocusEvent} from "./focus-event.ts"
+import {HTMLButtonElement} from "./html-button-element.ts"
+import {HTMLDivElement} from "./html-div-element.ts"
+import {HTMLFieldSetElement} from "./html-field-set-element.ts"
+import {HTMLHeadingElement} from "./html-heading-element.ts"
+import {HTMLElement} from "./html-element.ts"
+import {HTMLInputElement} from "./html-input-element.ts"
+import {HTMLImageElement} from "./html-image-element.ts"
+import {HTMLLabelElement} from "./html-label-element.ts"
+import {HTMLLIElement} from "./html-li-element.ts"
+import {HTMLLegendElement} from "./html-legend-element.ts"
+import {HTMLMeterElement} from "./html-meter-element.ts"
+import {HTMLOptionElement} from "./html-option-element.ts"
+import {HTMLParagraphElement} from "./html-paragraph-element.ts"
+import {HTMLProgressElement} from "./html-progress-element.ts"
+import {HTMLSelectElement} from "./html-select-element.ts"
+import {HTMLSpanElement} from "./html-span-element.ts"
+import {HTMLTableCellElement} from "./html-table-cell-element.ts"
+import {HTMLTableElement} from "./html-table-element.ts"
+import {HTMLTableRowElement} from "./html-table-row-element.ts"
+import {HTMLTableSectionElement} from "./html-table-section-element.ts"
+import {HTMLTextAreaElement} from "./html-text-area-element.ts"
+import {HTMLUListElement} from "./html-u-list-element.ts"
+import {
+  changeFocus,
+  clearFocusInSubtree,
+  isProgrammaticallyFocusable
+} from "./internal/focus.ts"
+import {
+  recordInputStateChange,
+  recordOptionStateChange,
+  recordPopoverStateChange,
+  recordScrollStateChange,
+  recordTextAreaStateChange
+} from "./internal/state-change.ts"
+import type {DocumentMutation, MutationBatch, MutationSubscriber} from "./mutation.ts"
+import {Node} from "./node.ts"
+import type {NodeOrString} from "./node.ts"
+import type {NodeList} from "./node-list.ts"
+import {findElementById, queryAll, queryFirst} from "./selectors.ts"
+import type {
+  DocumentStateChange,
+  InputStateChange,
+  OptionSelectedStateChange,
+  PopoverStateChange,
+  ScrollStateChange,
+  StateChangeBatch,
+  StateChangeSubscriber,
+  TextAreaStateChange
+} from "./state-change.ts"
+import {sameTextSelection} from "./internal/text-selection.ts"
+import {Text} from "./text.ts"
+
+type StateChangeState = {
+  flushing: boolean
+  pending: Map<HTMLElement, Map<string, DocumentStateChange>>
+  subscribers: Set<StateChangeSubscriber>
+  version: number
+}
+
+export interface HTMLElementTagNameMap {
+  button: HTMLButtonElement
+  div: HTMLDivElement
+  fieldset: HTMLFieldSetElement
+  h1: HTMLHeadingElement
+  h2: HTMLHeadingElement
+  h3: HTMLHeadingElement
+  h4: HTMLHeadingElement
+  h5: HTMLHeadingElement
+  h6: HTMLHeadingElement
+  input: HTMLInputElement
+  img: HTMLImageElement
+  label: HTMLLabelElement
+  li: HTMLLIElement
+  legend: HTMLLegendElement
+  meter: HTMLMeterElement
+  option: HTMLOptionElement
+  p: HTMLParagraphElement
+  progress: HTMLProgressElement
+  select: HTMLSelectElement
+  span: HTMLSpanElement
+  table: HTMLTableElement
+  tbody: HTMLTableSectionElement
+  td: HTMLTableCellElement
+  textarea: HTMLTextAreaElement
+  tfoot: HTMLTableSectionElement
+  th: HTMLTableCellElement
+  thead: HTMLTableSectionElement
+  tr: HTMLTableRowElement
+  ul: HTMLUListElement
+}
+
+export class Document extends Node {
+  private transactionDepth = 0
+  private pendingMutations: DocumentMutation[] = []
+  private readonly mutationSubscribers = new Set<MutationSubscriber>()
+  private flushingMutations = false
+  private mutationVersion = 0
+  private focusState: {activeElement: HTMLElement | null; revision: number} | null = null
+  private stateChangeState: StateChangeState | null = null
+
+  constructor() {
+    super(null, Node.DOCUMENT_NODE, "#document")
+  }
+
+  get documentElement(): Element | null {
+    return this.children[0] ?? null
+  }
+
+  get children(): readonly Element[] {
+    return this.childNodes.filter((node): node is Element => node.nodeType === Node.ELEMENT_NODE)
+  }
+
+  get version(): number {
+    return this.mutationVersion
+  }
+
+  get stateVersion(): number {
+    return this.stateChangeState?.version ?? 0
+  }
+
+  get activeElement(): Element | null {
+    const activeElement = this.focusState?.activeElement ?? null
+    if (!activeElement || activeElement.ownerDocument !== this || activeElement.getRootNode() !== this) {
+      return null
+    }
+    return activeElement
+  }
+
+  createElement<K extends keyof HTMLElementTagNameMap>(localName: K): HTMLElementTagNameMap[K]
+  createElement(localName: string): HTMLElement
+  createElement(localName: string): HTMLElement {
+    switch (String(localName).toLowerCase()) {
+      case "button": return new HTMLButtonElement(this)
+      case "div": return new HTMLDivElement(this)
+      case "fieldset": return new HTMLFieldSetElement(this)
+      case "h1": return new HTMLHeadingElement(this, "h1")
+      case "h2": return new HTMLHeadingElement(this, "h2")
+      case "h3": return new HTMLHeadingElement(this, "h3")
+      case "h4": return new HTMLHeadingElement(this, "h4")
+      case "h5": return new HTMLHeadingElement(this, "h5")
+      case "h6": return new HTMLHeadingElement(this, "h6")
+      case "input": return new HTMLInputElement(this)
+      case "img": return new HTMLImageElement(this)
+      case "label": return new HTMLLabelElement(this)
+      case "li": return new HTMLLIElement(this)
+      case "legend": return new HTMLLegendElement(this)
+      case "meter": return new HTMLMeterElement(this)
+      case "option": return new HTMLOptionElement(this)
+      case "p": return new HTMLParagraphElement(this)
+      case "progress": return new HTMLProgressElement(this)
+      case "select": return new HTMLSelectElement(this)
+      case "span": return new HTMLSpanElement(this)
+      case "table": return new HTMLTableElement(this)
+      case "tbody": return new HTMLTableSectionElement(this, "tbody")
+      case "td": return new HTMLTableCellElement(this, "td")
+      case "textarea": return new HTMLTextAreaElement(this)
+      case "tfoot": return new HTMLTableSectionElement(this, "tfoot")
+      case "th": return new HTMLTableCellElement(this, "th")
+      case "thead": return new HTMLTableSectionElement(this, "thead")
+      case "tr": return new HTMLTableRowElement(this)
+      case "ul": return new HTMLUListElement(this)
+      default: return new HTMLElement(this, localName)
+    }
+  }
+
+  createTextNode(data: string): Text {
+    return new Text(this, data)
+  }
+
+  createComment(data: string): Comment {
+    return new Comment(this, data)
+  }
+
+  createDocumentFragment(): DocumentFragment {
+    return new DocumentFragment(this)
+  }
+
+  append(...nodes: NodeOrString[]): void {
+    this.appendNodes(...nodes)
+  }
+
+  prepend(...nodes: NodeOrString[]): void {
+    this.prependNodes(...nodes)
+  }
+
+  replaceChildren(...nodes: NodeOrString[]): void {
+    this.replaceChildrenNodes(...nodes)
+  }
+
+  getElementById(elementId: string): Element | null {
+    return findElementById(this, elementId)
+  }
+
+  querySelector(selectors: string): Element | null {
+    return queryFirst(this, selectors)
+  }
+
+  querySelectorAll(selectors: string): NodeList<Element> {
+    return queryAll(this, selectors)
+  }
+
+  transaction<Result>(callback: () => Result): Result {
+    this.transactionDepth += 1
+    try {
+      return callback()
+    } finally {
+      this.transactionDepth -= 1
+      if (this.transactionDepth === 0) {
+        this.flushMutations()
+        this.flushStateChanges()
+      }
+    }
+  }
+
+  subscribeMutations(subscriber: MutationSubscriber): () => void {
+    this.mutationSubscribers.add(subscriber)
+    return () => this.mutationSubscribers.delete(subscriber)
+  }
+
+  recordMutation(mutation: DocumentMutation): void {
+    this.pendingMutations.push(mutation)
+    if (this.transactionDepth === 0) this.flushMutations()
+  }
+
+  subscribeStateChanges(subscriber: StateChangeSubscriber): () => void {
+    const state = this.ensureStateChangeState()
+    state.subscribers.add(subscriber)
+    return () => state.subscribers.delete(subscriber)
+  }
+
+  [recordScrollStateChange](change: ScrollStateChange): void {
+    const state = this.ensureStateChangeState()
+    const targetChanges = state.pending.get(change.target) ?? new Map<string, DocumentStateChange>()
+    const current = targetChanges.get("scroll") as ScrollStateChange | undefined
+    const next = Object.freeze({
+      type: "scroll" as const,
+      target: change.target,
+      oldScrollLeft: current?.oldScrollLeft ?? change.oldScrollLeft,
+      oldScrollTop: current?.oldScrollTop ?? change.oldScrollTop,
+      scrollLeft: change.scrollLeft,
+      scrollTop: change.scrollTop
+    })
+    if (next.oldScrollLeft === next.scrollLeft && next.oldScrollTop === next.scrollTop) {
+      targetChanges.delete("scroll")
+    } else {
+      targetChanges.set("scroll", next)
+    }
+    this.updatePendingTarget(state, change.target, targetChanges)
+    if (this.transactionDepth === 0) this.flushStateChanges()
+  }
+
+  [recordInputStateChange](change: InputStateChange): void {
+    const state = this.ensureStateChangeState()
+    const targetChanges = state.pending.get(change.target) ?? new Map<string, DocumentStateChange>()
+    const key = `input:${change.property}`
+    const current = targetChanges.get(key) as InputStateChange | undefined
+    const next = Object.freeze({
+      type: "input" as const,
+      target: change.target,
+      property: change.property,
+      oldValue: current?.oldValue ?? change.oldValue,
+      newValue: change.newValue
+    }) as InputStateChange
+    if (sameStateValue(next.oldValue, next.newValue)) targetChanges.delete(key)
+    else targetChanges.set(key, next)
+    this.updatePendingTarget(state, change.target, targetChanges)
+    if (this.transactionDepth === 0) this.flushStateChanges()
+  }
+
+  [recordOptionStateChange](change: OptionSelectedStateChange): void {
+    const state = this.ensureStateChangeState()
+    const targetChanges = state.pending.get(change.target) ?? new Map<string, DocumentStateChange>()
+    const key = "option:selected"
+    const current = targetChanges.get(key) as OptionSelectedStateChange | undefined
+    const next: OptionSelectedStateChange = Object.freeze({
+      type: "option",
+      target: change.target,
+      property: "selected",
+      oldValue: current?.oldValue ?? change.oldValue,
+      newValue: change.newValue
+    })
+    if (next.oldValue === next.newValue) targetChanges.delete(key)
+    else targetChanges.set(key, next)
+    this.updatePendingTarget(state, change.target, targetChanges)
+    if (this.transactionDepth === 0) this.flushStateChanges()
+  }
+
+  [recordPopoverStateChange](change: PopoverStateChange): void {
+    const state = this.ensureStateChangeState()
+    const targetChanges = state.pending.get(change.target) ?? new Map<string, DocumentStateChange>()
+    const key = "popover:open"
+    const current = targetChanges.get(key) as PopoverStateChange | undefined
+    const next: PopoverStateChange = Object.freeze({
+      type: "popover",
+      target: change.target,
+      property: "open",
+      oldValue: current?.oldValue ?? change.oldValue,
+      newValue: change.newValue
+    })
+    if (next.oldValue === next.newValue) targetChanges.delete(key)
+    else targetChanges.set(key, next)
+    this.updatePendingTarget(state, change.target, targetChanges)
+    if (this.transactionDepth === 0) this.flushStateChanges()
+  }
+
+  [recordTextAreaStateChange](change: TextAreaStateChange): void {
+    const state = this.ensureStateChangeState()
+    const targetChanges = state.pending.get(change.target) ?? new Map<string, DocumentStateChange>()
+    const key = `textarea:${change.property}`
+    const current = targetChanges.get(key) as TextAreaStateChange | undefined
+    const next = Object.freeze({
+      type: "textarea" as const,
+      target: change.target,
+      property: change.property,
+      oldValue: current?.oldValue ?? change.oldValue,
+      newValue: change.newValue
+    }) as TextAreaStateChange
+    if (sameStateValue(next.oldValue, next.newValue)) targetChanges.delete(key)
+    else targetChanges.set(key, next)
+    this.updatePendingTarget(state, change.target, targetChanges)
+    if (this.transactionDepth === 0) this.flushStateChanges()
+  }
+
+  [changeFocus](nextElement: HTMLElement | null): void {
+    if (nextElement && (nextElement.ownerDocument !== this || !nextElement[isProgrammaticallyFocusable]())) {
+      return
+    }
+
+    const previousElement = this.activeElement as HTMLElement | null
+    if (previousElement === nextElement) return
+
+    const focusState = this.focusState ??= {activeElement: null, revision: 0}
+    focusState.revision += 1
+    const revision = focusState.revision
+    focusState.activeElement = null
+
+    if (previousElement) {
+      previousElement.dispatchEvent(new FocusEvent("blur", {
+        composed: true,
+        relatedTarget: nextElement
+      }))
+      if (focusState.revision !== revision) return
+      previousElement.dispatchEvent(new FocusEvent("focusout", {
+        bubbles: true,
+        composed: true,
+        relatedTarget: nextElement
+      }))
+      if (focusState.revision !== revision) return
+    }
+
+    if (!nextElement || !nextElement[isProgrammaticallyFocusable]()) return
+    focusState.activeElement = nextElement
+    nextElement.dispatchEvent(new FocusEvent("focus", {
+      composed: true,
+      relatedTarget: previousElement
+    }))
+    if (focusState.revision !== revision || focusState.activeElement !== nextElement) return
+    nextElement.dispatchEvent(new FocusEvent("focusin", {
+      bubbles: true,
+      composed: true,
+      relatedTarget: previousElement
+    }))
+  }
+
+  [clearFocusInSubtree](subtree: Node): void {
+    const focusState = this.focusState
+    if (!focusState?.activeElement || !subtree.contains(focusState.activeElement)) return
+    focusState.activeElement = null
+    focusState.revision += 1
+  }
+
+  private flushMutations(): void {
+    if (this.flushingMutations || this.pendingMutations.length === 0) return
+    this.flushingMutations = true
+    try {
+      while (this.pendingMutations.length > 0) {
+        const records = Object.freeze(this.pendingMutations.splice(0))
+        this.mutationVersion += 1
+        const batch: MutationBatch = Object.freeze({
+          document: this,
+          version: this.mutationVersion,
+          records
+        })
+        for (const subscriber of [...this.mutationSubscribers]) subscriber(batch)
+      }
+    } finally {
+      this.flushingMutations = false
+    }
+  }
+
+  private ensureStateChangeState(): StateChangeState {
+    return this.stateChangeState ??= {
+      flushing: false,
+      pending: new Map(),
+      subscribers: new Set(),
+      version: 0
+    }
+  }
+
+  private updatePendingTarget(
+    state: StateChangeState,
+    target: HTMLElement,
+    targetChanges: Map<string, DocumentStateChange>
+  ): void {
+    if (targetChanges.size === 0) state.pending.delete(target)
+    else state.pending.set(target, targetChanges)
+  }
+
+  private flushStateChanges(): void {
+    const state = this.stateChangeState
+    if (!state || state.flushing || state.pending.size === 0) return
+    state.flushing = true
+    try {
+      while (state.pending.size > 0) {
+        const records = Object.freeze(
+          [...state.pending.values()].flatMap(targetChanges => [...targetChanges.values()])
+        )
+        state.pending.clear()
+        state.version += 1
+        const batch: StateChangeBatch = Object.freeze({
+          document: this,
+          version: state.version,
+          records
+        })
+        for (const subscriber of [...state.subscribers]) subscriber(batch)
+      }
+    } finally {
+      state.flushing = false
+    }
+  }
+}
+
+const sameStateValue = (left: unknown, right: unknown): boolean => {
+  if (Object.is(left, right)) return true
+  return isTextSelectionValue(left) &&
+    isTextSelectionValue(right) &&
+    sameTextSelection(left, right)
+}
+
+const isTextSelectionValue = (
+  value: unknown,
+): value is Readonly<{start: number; end: number; direction: "forward" | "backward" | "none"}> =>
+  typeof value === "object" &&
+  value !== null &&
+  typeof (value as {start?: unknown}).start === "number" &&
+  typeof (value as {end?: unknown}).end === "number" &&
+  (
+    (value as {direction?: unknown}).direction === "forward" ||
+    (value as {direction?: unknown}).direction === "backward" ||
+    (value as {direction?: unknown}).direction === "none"
+  )
+
+export function createDocument(): Document {
+  return new Document()
+}

@@ -1,0 +1,5 @@
+export const recordInputStateChange = Symbol("recordInputStateChange")
+export const recordOptionStateChange = Symbol("recordOptionStateChange")
+export const recordPopoverStateChange = Symbol("recordPopoverStateChange")
+export const recordScrollStateChange = Symbol("recordScrollStateChange")
+export const recordTextAreaStateChange = Symbol("recordTextAreaStateChange")

@@ -1,0 +1,30 @@
+{
+  "name": "@zavx0z/renderer-webgpu",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "test": "bun test test",
+    "typecheck": "tsc --noEmit --pretty false --project tsconfig.json",
+    "check": "bun run typecheck && bun run test"
+  },
+  "peerDependencies": {
+    "@engine/core": "0.0.1",
+    "@zavx0z/renderer": "^0.1.0"
+  },
+  "peerDependenciesMeta": {
+    "@engine/core": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@engine/core": "link:@engine/core",
+    "@types/bun": "^1.4.0",
+    "@webgpu/types": "^0.1.68",
+    "@zavx0z/renderer": "workspace:*",
+    "typescript": "^7.0.2"
+  }
+}

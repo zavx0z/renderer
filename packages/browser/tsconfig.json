@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "lib": ["ESNext", "DOM"],
+    "target": "ESNext",
+    "module": "Preserve",
+    "moduleDetection": "force",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "exactOptionalPropertyTypes": true,
+    "types": ["@webgpu/types", "bun"],
+    "paths": {
+      "@engine/core": ["../../../webxr-space/projects/engine/packages/core/src/index.ts"],
+      "@zavx0z/dom": ["../dom/src/index.ts"],
+      "@zavx0z/renderer": ["../core/src/index.ts"],
+      "@zavx0z/renderer-webgpu": ["../webgpu/src/index.ts"]
+    }
+  },
+  "include": ["src/**/*.ts", "test/**/*.ts"]
+}
