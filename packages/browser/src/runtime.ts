@@ -10,9 +10,11 @@ import {
 } from "@zavx0z/dom"
 import {
   createDocumentInteractionController,
+  createDocumentInteractionState,
   createDocumentRenderer,
   type CreateDocumentRendererOptions,
   type DocumentInteractionController,
+  type DocumentInteractionState,
   type DocumentRenderer,
   type PointerInput,
   type RenderFrame,
@@ -96,6 +98,7 @@ export type DocumentCanvasRuntimeSeams = Readonly<{
   createDocumentRenderer(options: CreateDocumentRendererOptions): DocumentRenderer
   createInteraction(options: Readonly<{
     document: Document
+    interactionState: DocumentInteractionState
     tooltipDelayMs: number
   }>): DocumentInteractionController
   createNativeInputHost(options: Readonly<{requestFrame(): void}>): DocumentNativeInputHost
@@ -190,14 +193,17 @@ export async function createDocumentCanvasRuntimeWithSeams(
     requestPresentation: () => requestBackendPresentation(),
   })
   let viewport = readViewport(options.canvas, seams)
+  const interactionState = createDocumentInteractionState(options.document)
   let documentRenderer = seams.createDocumentRenderer({
     document: options.document,
     root: options.root,
     viewport,
     styleSheets,
+    interactionState,
   })
   const interaction = seams.createInteraction({
     document: options.document,
+    interactionState,
     tooltipDelayMs,
   })
   const overlay = seams.createOverlay({content: backend.root, viewport, distance})
@@ -278,6 +284,7 @@ export async function createDocumentCanvasRuntimeWithSeams(
         root: options.root,
         viewport: next,
         styleSheets,
+        interactionState,
       })
       viewport = next
       overlay.resize(next)

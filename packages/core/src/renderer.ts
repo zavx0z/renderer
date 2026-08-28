@@ -22,7 +22,7 @@ import {
   resolveLineHeight,
   type ComputedStyle,
   type CSSLength,
-  type StyleRule,
+  type StyleRuleIndex,
 } from "./css.ts"
 import { DirtyTracker } from "./dirty.ts"
 import {
@@ -227,6 +227,10 @@ export const createDocumentRenderer = (
 ): DocumentRenderer => {
   const viewport = validateViewport(options.viewport)
   validateRoot(options.document, options.root)
+  if (
+    options.interactionState !== undefined &&
+    options.interactionState.document !== options.document
+  ) throw new TypeError("interactionState belongs to another Document")
   const rules = parseStyleSheets(options.styleSheets ?? [])
   const dirty = new DirtyTracker(options.root)
   const layoutCache = new WeakMap<Node, LayoutNode>()
@@ -243,6 +247,21 @@ export const createDocumentRenderer = (
   const unsubscribeState = options.document.subscribeStateChanges(
     invalidateStateBatch,
   )
+  const unsubscribeInteraction = options.interactionState?.subscribe(({elements}) => {
+    if (disposed) return
+    let affected = false
+    for (const element of elements) {
+      if (
+        options.root.contains(element) ||
+        element === options.root
+      ) {
+        affected = true
+        dirty.invalidate(element)
+        subtreeDirty.add(element)
+      }
+    }
+    if (affected) blockFastPath()
+  }) ?? (() => {})
 
   const renderer: DocumentRenderer = Object.freeze({
     document: options.document,
@@ -269,6 +288,7 @@ export const createDocumentRenderer = (
       disposed = true
       unsubscribe()
       unsubscribeState()
+      unsubscribeInteraction()
     },
   })
 
@@ -283,6 +303,7 @@ export const createDocumentRenderer = (
         transformTarget,
         layoutCache,
         rules,
+        options.interactionState,
         revision + 1,
       )
       if (incremental !== null) {
@@ -326,6 +347,7 @@ export const createDocumentRenderer = (
       new Set(dirty.snapshot()),
       subtreeDirty,
       layoutCache,
+      options.interactionState,
     )
     revision++
     frame = next
@@ -439,7 +461,7 @@ const tryBuildCharacterDataFrame = (
   const displayText = parentBox
     ? ellipsizeSingleLine(nextText, parent.style, parentBox.contentWidth)
     : nextText
-  if (displayText === "") return null
+  if (displayText === "" || !hasPaintableText(displayText)) return null
 
   const nextBox: RenderBox = Object.freeze({
     ...previousBox,
@@ -489,7 +511,8 @@ const tryBuildTransformFrame = (
   previous: RenderFrame,
   target: Element,
   layoutCache: WeakMap<Node, LayoutNode>,
-  rules: readonly StyleRule[],
+  rules: StyleRuleIndex,
+  interactionState: CreateDocumentRendererOptions["interactionState"],
   revision: number,
 ): RenderFrame | null => {
   if (previous.scrolls.size > 0 || target instanceof HTMLElement && target.popover !== null) {
@@ -498,7 +521,12 @@ const tryBuildTransformFrame = (
   const layoutNode = layoutCache.get(target)
   const targetBox = previous.boxByNode.get(target)
   if (!layoutNode || !targetBox || subtreeOwnsOverflowClip(layoutNode)) return null
-  const nextStyle = computeStyle(target, layoutNode.parent?.style ?? ROOT_STYLE, rules)
+  const nextStyle = computeStyle(
+    target,
+    layoutNode.parent?.style ?? ROOT_STYLE,
+    rules,
+    interactionState,
+  )
   if (!sameStyleExceptTransform(layoutNode.style, nextStyle)) return null
   layoutNode.style = nextStyle
 
@@ -694,11 +722,12 @@ const buildFrame = (
   document: Document,
   root: Node,
   viewport: RenderViewport,
-  rules: readonly StyleRule[],
+  rules: StyleRuleIndex,
   revision: number,
   dirtyNodes: ReadonlySet<Node>,
   subtreeDirty: ReadonlySet<Node>,
   layoutCache: WeakMap<Node, LayoutNode>,
+  interactionState: CreateDocumentRendererOptions["interactionState"],
 ): RenderFrame => {
   const popoverInheritedStyles = new WeakMap<HTMLElement, ComputedStyle>()
   const tree = buildLayoutTree(
@@ -713,6 +742,7 @@ const buildFrame = (
     false,
     null,
     popoverInheritedStyles,
+    interactionState,
   )
   const state: BuildState = {
     boxes: [],
@@ -782,6 +812,7 @@ const buildFrame = (
       true,
       popover,
       popoverInheritedStyles,
+      interactionState,
     )
     const size = measure(topTree, viewport.width, viewport.height, state)
     const width = Math.min(viewport.width, size.width)
@@ -832,13 +863,14 @@ const buildLayoutTree = (
   parent: LayoutNode | null,
   inheritedStyle: ComputedStyle,
   inheritedOpacity: number,
-  rules: readonly StyleRule[],
+  rules: StyleRuleIndex,
   dirtyNodes: ReadonlySet<Node>,
   subtreeDirty: ReadonlySet<Node>,
   layoutCache: WeakMap<Node, LayoutNode>,
   force: boolean,
   allowedPopover: HTMLElement | null,
   popoverInheritedStyles: WeakMap<HTMLElement, ComputedStyle>,
+  interactionState: CreateDocumentRendererOptions["interactionState"],
 ): LayoutNode => {
   if (node instanceof HTMLElement && node.popover !== null) {
     popoverInheritedStyles.set(node, inheritedStyle)
@@ -866,7 +898,7 @@ const buildLayoutTree = (
   }
 
   if (isElement(node)) {
-    const computedStyle = computeStyle(node, inheritedStyle, rules)
+    const computedStyle = computeStyle(node, inheritedStyle, rules, interactionState)
     const popoverExcluded = node instanceof HTMLElement &&
       node.popover !== null &&
       (node !== allowedPopover || node[getPopoverVisibilityState]() !== "showing")
@@ -905,7 +937,7 @@ const buildLayoutTree = (
         tag === "textarea"
         ? Object.freeze([])
         : Object.freeze(
-            childNodes(node).map((child) =>
+            layoutChildNodes(node).map((child) =>
               buildLayoutTree(
                 child,
                 layoutNode,
@@ -918,6 +950,7 @@ const buildLayoutTree = (
                 forceChildren,
                 allowedPopover,
                 popoverInheritedStyles,
+                interactionState,
               ),
             ),
           )
@@ -937,7 +970,7 @@ const buildLayoutTree = (
     transparent: true,
   }
   const children = Object.freeze(
-    childNodes(node).map((child) =>
+    layoutChildNodes(node).map((child) =>
       buildLayoutTree(
         child,
         layoutNode,
@@ -950,6 +983,7 @@ const buildLayoutTree = (
         force || subtreeDirty.has(node),
         allowedPopover,
         popoverInheritedStyles,
+        interactionState,
       ),
     ),
   )
@@ -2853,7 +2887,7 @@ const emitReplacedControlPresentation = (
     ? "•".repeat(graphemeCount(liveValue))
     : source.replace(/[\r\n]+/g, " ")
   const text = ellipsizeSingleLine(rawText, layoutNode.style, box.contentWidth, true)
-  if (text === "") return
+  if (text === "" || !hasPaintableText(text)) return
   const lineHeight = resolveLineHeight(layoutNode.style)
   state.displayList.push(
     Object.freeze({
@@ -2923,7 +2957,7 @@ const emitSelectPresentation = (
     box.contentWidth,
     true,
   )
-  if (label === "" || box.contentWidth <= 0 || box.contentHeight <= 0) return
+  if (label === "" || !hasPaintableText(label) || box.contentWidth <= 0 || box.contentHeight <= 0) return
   const lineHeight = resolveLineHeight(layoutNode.style)
   state.displayList.push(
     Object.freeze({
@@ -2970,7 +3004,7 @@ const emitTextAreaPresentation = (
   const lineHeight = resolveLineHeight(layoutNode.style)
   for (let index = 0; index < lines.length; index++) {
     const line = lines[index]
-    if (!line) continue
+    if (!line || !hasPaintableText(line)) continue
     state.displayList.push(Object.freeze({
       kind: "text",
       key: `value:${index}`,
@@ -3463,6 +3497,9 @@ const childNodes = (node: Node): Node[] => {
   return Array.from(children)
 }
 
+const layoutChildNodes = (node: Node): Node[] =>
+  childNodes(node).filter(child => child.nodeType !== 8)
+
 const showingPopovers = (root: Node): readonly HTMLElement[] => {
   const popovers: HTMLElement[] = []
   const visit = (node: Node): void => {
@@ -3587,7 +3624,7 @@ const emitTextItems = (
     const displayLine = !multiline
       ? ellipsizeSingleLine(line, overflowStyle, alignmentWidth)
       : line
-    if (displayLine === "") continue
+    if (displayLine === "" || !hasPaintableText(displayLine)) continue
     state.displayList.push(
       Object.freeze({
         kind: "text",
@@ -3614,6 +3651,8 @@ const emitTextItems = (
 
 const splitTextLines = (value: string): readonly string[] =>
   value.split(/\r\n|\r|\n/)
+
+const hasPaintableText = (value: string): boolean => value.trim().length > 0
 
 const hasLineBreak = (value: string): boolean => /[\r\n]/.test(value)
 

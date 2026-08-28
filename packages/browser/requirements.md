@@ -55,6 +55,13 @@ Core `DocumentInteractionController.wheel()`; Core выбирает scroll owner
 меняет standard DOM `scrollTop`/`scrollLeft`, после чего runtime выполняет один
 новый frame. Browser package не реализует собственный scroll law.
 
+Каждый Canvas/Plane/Overlay runtime создаёт один lazy Core
+`DocumentInteractionState` и передаёт exact owner одновременно CPU renderer и
+interaction controller. Hover/pressed не проецируются в `class` или
+`data-ui-state`: изменение pointer chain invalidates только symmetric difference
+старой/новой exact Element ancestor chain. До первого pointer event координата
+не считается известной и synthetic `:hover` в `(0, 0)` не создаётся.
+
 Accepted semantic pointer-down prevents the browser canvas default before the
 hidden native input proxy is focused, so the browser cannot immediately steal
 focus back from the semantic `HTMLInputElement`.

@@ -2,10 +2,13 @@ import {describe, expect, test} from "bun:test"
 import {
   CachedText,
   ImageMaterial,
+  InstancedRoundedRect,
   Mesh,
   Object3D,
   PlaneGeometry,
   RoundedRectMaterial,
+  ROUNDED_RECT_INSTANCE_OFFSETS,
+  ROUNDED_RECT_INSTANCE_RECORD_BYTE_LENGTH,
   type BufferGeometry,
   type TrueTypeFont,
 } from "@engine/core"
@@ -92,6 +95,22 @@ describe("RendererWebGpuBackend", () => {
     expect(material.radii).toEqual([4, 3, 2, 1])
     expect(material.opacity).toBe(0.6)
     expect(invalidated).toEqual([])
+  })
+
+  test("accepts modern CSS Color 4 space and slash transport forms", () => {
+    const fixture = renderFixture()
+    const backend = new RendererWebGpuBackend({invalidateGeometry() {}})
+
+    backend.applyFrame(frame(fixture.document, fixture.root, [
+      rect(fixture.root, {
+        color: "rgb(29 29 29)",
+        border: uniformBorder(2, "rgba(71 114 179 / 50%)"),
+      }),
+    ]))
+
+    const material = requireRoundedMaterial(requireMesh(backend.root.children[0]))
+    expect(material.fill).toMatchObject({r: 29 / 255, g: 29 / 255, b: 29 / 255, a: 1})
+    expect(material.border).toMatchObject({r: 71 / 255, g: 114 / 255, b: 179 / 255, a: 0.5})
   })
 
   test("updates Rect transform on the same Engine owners without geometry work", () => {
@@ -660,6 +679,413 @@ describe("RendererWebGpuBackend", () => {
     expect(backend.root.children).toEqual([stable])
   })
 
+  test("collapses 10k pairwise-disjoint Rects into one real retained draw owner", () => {
+    const fixture = renderFixture()
+    const invalidated: BufferGeometry[] = []
+    const backend = new RendererWebGpuBackend({
+      invalidateGeometry: (geometry) => invalidated.push(geometry),
+    })
+    const items = Array.from({length: 10_000}, (_, index) => {
+      const node = fixture.document.createElement("div")
+      return rect(node, {
+        x: (index % 100) * 12,
+        y: Math.floor(index / 100) * 12,
+        width: 10,
+        height: 10,
+      })
+    })
+
+    backend.applyFrame(frame(fixture.document, fixture.root, items))
+
+    expect(backend.root.children).toHaveLength(1)
+    const batch = requireInstancedRoundedRect(backend.root.children[0])
+    expect(batch).toMatchObject({firstInstance: 0, count: 10_000})
+    expect(batch.layer.instances.count).toBe(10_000)
+    expect(batch.layer.instances.capacity).toBe(16_384)
+    expect(backend.diagnostics).toMatchObject({
+      rectScalarDraws: 0,
+      rectInstancedDraws: 1,
+      rectInstancedInstances: 10_000,
+      rectActiveSlots: 10_000,
+      pendingRecordUploadBytes: 16_384 * ROUNDED_RECT_INSTANCE_RECORD_BYTE_LENGTH,
+      pendingOrderUploadBytes: 16_384 * Uint32Array.BYTES_PER_ELEMENT,
+    })
+
+    backend.dispose()
+    expect(invalidated).toEqual([batch.geometry])
+  })
+
+  test("reuses a validated batch plan and prepares only changed Rect references", () => {
+    const fixture = renderFixture()
+    const nodes = [0, 1, 2].map(() => fixture.document.createElement("div"))
+    const initial = [
+      rect(nodes[0]!, {x: 0, color: "#112233"}),
+      rect(nodes[1]!, {x: 20, color: "#445566"}),
+      rect(nodes[2]!, {x: 40, color: "#778899"}),
+    ]
+    const backend = new RendererWebGpuBackend({invalidateGeometry() {}})
+    backend.applyFrame(frame(fixture.document, fixture.root, initial))
+    const batch = requireInstancedRoundedRect(backend.root.children[0])
+    const layer = batch.layer.instances
+    const middleHandle = layer.handleAt(1)
+    layer.recordAttribute.clearUpdateRanges()
+    layer.orderAttribute.clearUpdateRanges()
+
+    const changed = [...initial]
+    changed[1] = rect(nodes[1]!, {
+      x: 20,
+      color: "rgba(10 20 30 / 50%)",
+      opacity: 0.75,
+      border: uniformBorder(2, "#abcdef", {
+        topLeft: 4,
+        topRight: 3,
+        bottomRight: 2,
+        bottomLeft: 1,
+      }),
+    })
+    backend.applyFrame(frame(fixture.document, fixture.root, changed, 2))
+
+    expect(backend.root.children).toEqual([batch])
+    expect(layer.handleAt(1)).toBe(middleHandle)
+    expect(backend.diagnostics).toMatchObject({
+      revision: 2,
+      rectPlanReused: true,
+      rectPreparedItems: 1,
+      pendingRecordUploadBytes: ROUNDED_RECT_INSTANCE_RECORD_BYTE_LENGTH,
+      pendingOrderUploadBytes: 0,
+    })
+
+    const record = instanceRecord(layer.readRecord(middleHandle))
+    const scalar = new RendererWebGpuBackend({
+      rectInstancing: "disabled",
+      invalidateGeometry() {},
+    })
+    scalar.applyFrame(frame(fixture.document, fixture.root, changed))
+    const scalarMaterial = requireRoundedMaterial(requireMesh(scalar.root.children[1]))
+    expect(Array.from(record.slice(
+      ROUNDED_RECT_INSTANCE_OFFSETS.fill,
+      ROUNDED_RECT_INSTANCE_OFFSETS.fill + 4,
+    ))).toEqual([
+      Math.fround(scalarMaterial.fill.r),
+      Math.fround(scalarMaterial.fill.g),
+      Math.fround(scalarMaterial.fill.b),
+      Math.fround(scalarMaterial.fill.a),
+    ])
+    expect(Array.from(record.slice(
+      ROUNDED_RECT_INSTANCE_OFFSETS.border,
+      ROUNDED_RECT_INSTANCE_OFFSETS.border + 4,
+    ))).toEqual([
+      Math.fround(scalarMaterial.border.r),
+      Math.fround(scalarMaterial.border.g),
+      Math.fround(scalarMaterial.border.b),
+      Math.fround(scalarMaterial.border.a),
+    ])
+    expect(Array.from(record.slice(
+      ROUNDED_RECT_INSTANCE_OFFSETS.radii,
+      ROUNDED_RECT_INSTANCE_OFFSETS.radii + 4,
+    ))).toEqual(Array.from(scalarMaterial.radii))
+    expect(Array.from(record.slice(
+      ROUNDED_RECT_INSTANCE_OFFSETS.borderWidths,
+      ROUNDED_RECT_INSTANCE_OFFSETS.borderWidths + 4,
+    ))).toEqual(Array.from(scalarMaterial.borderWidths))
+    expect(record[ROUNDED_RECT_INSTANCE_OFFSETS.params]).toBe(scalarMaterial.opacity)
+
+    layer.recordAttribute.clearUpdateRanges()
+    backend.applyFrame(frame(fixture.document, fixture.root, changed, 3))
+    expect(backend.diagnostics).toMatchObject({
+      rectPlanReused: true,
+      rectPreparedItems: 0,
+      pendingRecordUploadBytes: 0,
+    })
+
+    layer.recordAttribute.addUpdateRange(0, 1)
+    expect(() => backend.applyFrame(frame(fixture.document, fixture.root, changed, 4)))
+      .toThrow("instance storage changed outside")
+  })
+
+  test("falls back to full planning on reorder, geometry, clip, overlap and compatibility changes", () => {
+    const cases = [
+      {
+        name: "reorder",
+        change(items: readonly Extract<DisplayItem, {kind: "rect"}>[]) {
+          return [items[2]!, items[0]!, items[1]!]
+        },
+      },
+      {
+        name: "geometry",
+        change(items: readonly Extract<DisplayItem, {kind: "rect"}>[]) {
+          return [items[0]!, rect(items[1]!.node, {x: 21}), items[2]!]
+        },
+      },
+      {
+        name: "clip",
+        change(items: readonly Extract<DisplayItem, {kind: "rect"}>[]) {
+          return [items[0]!, rect(items[1]!.node, {x: 20, clips: [renderClip({x: 20})]}), items[2]!]
+        },
+      },
+      {
+        name: "overlap",
+        change(items: readonly Extract<DisplayItem, {kind: "rect"}>[]) {
+          return [items[0]!, rect(items[1]!.node, {x: 5}), items[2]!]
+        },
+      },
+      {
+        name: "compatibility",
+        change(items: readonly Extract<DisplayItem, {kind: "rect"}>[]) {
+          return [
+            items[0]!,
+            rect(items[1]!.node, {
+              x: 20,
+              transform: {scaleX: 0, scaleY: 1, translateX: 0, translateY: 0},
+            }),
+            items[2]!,
+          ]
+        },
+      },
+    ] as const
+
+    for (const scenario of cases) {
+      const fixture = renderFixture()
+      const nodes = [0, 1, 2].map(() => fixture.document.createElement("div"))
+      const initial = [
+        rect(nodes[0]!, {x: 0}),
+        rect(nodes[1]!, {x: 20}),
+        rect(nodes[2]!, {x: 40}),
+      ]
+      const backend = new RendererWebGpuBackend({invalidateGeometry() {}})
+      backend.applyFrame(frame(fixture.document, fixture.root, initial))
+
+      backend.applyFrame(frame(
+        fixture.document,
+        fixture.root,
+        scenario.change(initial),
+        2,
+      ))
+
+      expect(backend.diagnostics.rectPlanReused, scenario.name).toBeFalse()
+      expect(backend.diagnostics.rectPreparedItems, scenario.name).toBe(3)
+    }
+  })
+
+  test("validates fast-path payloads and frame ownership before retained mutation", () => {
+    const fixture = renderFixture()
+    const nodes = [0, 1, 2].map(() => fixture.document.createElement("div"))
+    const items = [
+      rect(nodes[0]!, {x: 0}),
+      rect(nodes[1]!, {x: 20}),
+      rect(nodes[2]!, {x: 40}),
+    ]
+    const backend = new RendererWebGpuBackend({invalidateGeometry() {}})
+    backend.applyFrame(frame(fixture.document, fixture.root, items))
+    const batch = requireInstancedRoundedRect(backend.root.children[0])
+    const layer = batch.layer.instances
+    const middleHandle = layer.handleAt(1)
+    const before = Array.from(layer.readRecord(middleHandle))
+    layer.recordAttribute.clearUpdateRanges()
+
+    const invalid = [...items]
+    invalid[1] = rect(nodes[1]!, {x: 20, color: "not-a-color"})
+    expect(() => backend.applyFrame(frame(fixture.document, fixture.root, invalid, 2)))
+      .toThrow("Unsupported resolved display color")
+    expect(backend.root.children).toEqual([batch])
+    expect(Array.from(layer.readRecord(middleHandle))).toEqual(before)
+    expect(layer.recordAttribute.needsUpdate).toBeFalse()
+    expect(backend.diagnostics.revision).toBe(1)
+
+    const other = renderFixture()
+    expect(() => backend.applyFrame(frame(other.document, other.root, [], 2)))
+      .toThrow("another Document")
+    const otherRoot = fixture.document.createElement("section")
+    fixture.root.appendChild(otherRoot)
+    expect(() => backend.applyFrame(frame(fixture.document, otherRoot, [], 2)))
+      .toThrow("another root")
+    expect(() => backend.applyFrame(frame(fixture.document, fixture.root, items, 0)))
+      .toThrow("precedes applied revision")
+    expect(() => backend.applyFrame(Object.freeze({
+      ...frame(fixture.document, fixture.root, items, 2),
+      revision: 1.5,
+    }))).toThrow("non-negative safe integer")
+
+    const recovered = [...items]
+    recovered[1] = rect(nodes[1]!, {x: 20, color: "#ff8000"})
+    backend.applyFrame(frame(fixture.document, fixture.root, recovered, 3))
+    expect(backend.diagnostics).toMatchObject({
+      revision: 3,
+      rectPlanReused: true,
+      rectPreparedItems: 1,
+      pendingRecordUploadBytes: ROUNDED_RECT_INSTANCE_RECORD_BYTE_LENGTH,
+    })
+  })
+
+  test("keeps token slots stable through update, insert, delete and reorder", () => {
+    const fixture = renderFixture()
+    const nodes = [0, 1, 2, 3].map(() => fixture.document.createElement("div"))
+    const backend = new RendererWebGpuBackend({invalidateGeometry() {}})
+    backend.applyFrame(frame(fixture.document, fixture.root, [
+      rect(nodes[0]!, {x: 0, color: "#ff0000"}),
+      rect(nodes[1]!, {x: 20, color: "#00ff00"}),
+      rect(nodes[2]!, {x: 40, color: "#0000ff"}),
+    ]))
+    const batch = requireInstancedRoundedRect(backend.root.children[0])
+    const layer = batch.layer.instances
+    const first = layer.handleAt(0)
+    const second = layer.handleAt(1)
+    const third = layer.handleAt(2)
+    layer.recordAttribute.clearUpdateRanges()
+    layer.orderAttribute.clearUpdateRanges()
+
+    backend.applyFrame(frame(fixture.document, fixture.root, [
+      rect(nodes[2]!, {x: 40, color: "#0000ff"}),
+      rect(nodes[0]!, {x: 0, color: "#ffffff"}),
+      rect(nodes[1]!, {x: 20, color: "#00ff00"}),
+    ], 2))
+
+    expect(layer.handleAt(0)).toBe(third)
+    expect(layer.handleAt(1)).toBe(first)
+    expect(layer.handleAt(2)).toBe(second)
+    expect(layer.recordAttribute.updateRanges).toEqual([{
+      offset: first.slot * ROUNDED_RECT_INSTANCE_RECORD_BYTE_LENGTH,
+      count: ROUNDED_RECT_INSTANCE_RECORD_BYTE_LENGTH,
+    }])
+    expect(layer.orderAttribute.updateRanges).toEqual([{offset: 0, count: 3}])
+    expect(backend.diagnostics).toMatchObject({
+      pendingRecordUploadBytes: ROUNDED_RECT_INSTANCE_RECORD_BYTE_LENGTH,
+      pendingOrderUploadBytes: 3 * Uint32Array.BYTES_PER_ELEMENT,
+    })
+
+    layer.recordAttribute.clearUpdateRanges()
+    layer.orderAttribute.clearUpdateRanges()
+    backend.applyFrame(frame(fixture.document, fixture.root, [
+      rect(nodes[2]!, {x: 40, color: "#0000ff"}),
+      rect(nodes[3]!, {x: 60, color: "#ffff00"}),
+      rect(nodes[0]!, {x: 0, color: "#ffffff"}),
+    ], 3))
+
+    expect(layer.handleAt(0)).toBe(third)
+    expect(layer.handleAt(2)).toBe(first)
+    expect(layer.has(second)).toBeFalse()
+    expect(layer.handleAt(1).slot).toBe(second.slot)
+    expect(layer.handleAt(1).generation).toBe(second.generation + 1)
+  })
+
+  test("breaks runs at text, clips and overlap while disabled mode stays scalar", () => {
+    const fixture = renderFixture()
+    const nodes = Array.from({length: 7}, () => fixture.document.createElement("div"))
+    const textNode = fixture.document.createTextNode("barrier")
+    const backend = new RendererWebGpuBackend({font: fakeFont(), invalidateGeometry() {}})
+    backend.applyFrame(frame(fixture.document, fixture.root, [
+      rect(nodes[0]!, {x: 0}),
+      rect(nodes[1]!, {x: 20}),
+      text(textNode, "barrier"),
+      rect(nodes[2]!, {x: 40}),
+      rect(nodes[3]!, {x: 60}),
+      rect(nodes[4]!, {x: 80, clips: [renderClip({x: 80})]}),
+      rect(nodes[5]!, {x: 100, width: 20}),
+      rect(nodes[6]!, {x: 110, width: 20}),
+    ]))
+
+    expect(backend.root.children.map((child) => child.constructor.name)).toEqual([
+      "InstancedRoundedRect",
+      "CachedText",
+      "InstancedRoundedRect",
+      "Mesh",
+      "Mesh",
+      "Mesh",
+    ])
+    expect(backend.diagnostics).toMatchObject({
+      rectScalarDraws: 3,
+      rectInstancedDraws: 2,
+      rectInstancedInstances: 4,
+    })
+
+    const disabled = new RendererWebGpuBackend({
+      rectInstancing: "disabled",
+      invalidateGeometry() {},
+    })
+    disabled.applyFrame(frame(fixture.document, fixture.root, [
+      rect(nodes[0]!, {x: 0}),
+      rect(nodes[1]!, {x: 20}),
+    ]))
+    expect(disabled.root.children.every((child) => child instanceof Mesh)).toBeTrue()
+    expect(disabled.diagnostics).toMatchObject({
+      rectScalarDraws: 2,
+      rectInstancedDraws: 0,
+      rectActiveSlots: 0,
+    })
+  })
+
+  test("falls back at the explicit slot and spatial-index policy bounds", () => {
+    const fixture = renderFixture()
+    const nodes = Array.from({length: 4}, () => fixture.document.createElement("div"))
+    const backend = new RendererWebGpuBackend({
+      maxRectInstances: 2,
+      invalidateGeometry() {},
+    })
+    backend.applyFrame(frame(fixture.document, fixture.root, [
+      rect(nodes[0]!, {x: 0}),
+      rect(nodes[1]!, {x: 20}),
+      rect(nodes[2]!, {x: 40}),
+    ]))
+    expect(backend.root.children.map((child) => child.constructor.name)).toEqual([
+      "InstancedRoundedRect",
+      "Mesh",
+    ])
+    expect(backend.diagnostics).toMatchObject({rectActiveSlots: 2, rectScalarDraws: 1})
+
+    backend.applyFrame(frame(fixture.document, fixture.root, [
+      rect(nodes[0]!, {x: 0, width: 1_000_000, height: 1_000_000}),
+      rect(nodes[3]!, {x: 2_000_000}),
+    ], 2))
+    expect(backend.root.children.every((child) => child instanceof Mesh)).toBeTrue()
+    expect(backend.diagnostics.rectInstancedDraws).toBe(0)
+  })
+
+  test("packs shadows and negative transforms in DPR-independent logical values", () => {
+    const fixture = renderFixture()
+    const nodes = [fixture.document.createElement("div"), fixture.document.createElement("div")]
+    const backend = new RendererWebGpuBackend({invalidateGeometry() {}})
+    const items = [
+      rect(nodes[0]!, {
+        x: 100,
+        y: 40,
+        width: 20,
+        height: 10,
+        color: "rgba(10 20 30 / 50%)",
+        shadow: {blurRadius: 3, spreadRadius: 2},
+        transform: {scaleX: -2, scaleY: 0.5, translateX: 400, translateY: 7},
+      }),
+      rect(nodes[1]!, {x: 300, y: 100}),
+    ]
+    backend.applyFrame(frame(fixture.document, fixture.root, items))
+    const batch = requireInstancedRoundedRect(backend.root.children[0])
+    const first = batch.layer.instances.handleAt(0)
+    const bytes = batch.layer.instances.readRecord(first)
+    const record = new Float32Array(bytes.buffer, bytes.byteOffset, bytes.byteLength / 4)
+
+    expect(Array.from(record.slice(
+      ROUNDED_RECT_INSTANCE_OFFSETS.rect,
+      ROUNDED_RECT_INSTANCE_OFFSETS.rect + 4,
+    ))).toEqual([100, 40, 20, 10])
+    expect(Array.from(record.slice(
+      ROUNDED_RECT_INSTANCE_OFFSETS.transform,
+      ROUNDED_RECT_INSTANCE_OFFSETS.transform + 4,
+    ))).toEqual([-2, 0.5, 400, 7])
+    expect(Array.from(record.slice(
+      ROUNDED_RECT_INSTANCE_OFFSETS.params,
+      ROUNDED_RECT_INSTANCE_OFFSETS.params + 4,
+    ))).toEqual([1, 3, 2, 0])
+
+    batch.layer.instances.recordAttribute.clearUpdateRanges()
+    batch.layer.instances.orderAttribute.clearUpdateRanges()
+    const highDensityFrame = Object.freeze({
+      ...frame(fixture.document, fixture.root, items, 2),
+      viewport: Object.freeze({width: 1280, height: 960}),
+    })
+    backend.applyFrame(highDensityFrame)
+    expect(batch.layer.instances.recordAttribute.needsUpdate).toBeFalse()
+    expect(batch.layer.instances.orderAttribute.needsUpdate).toBeFalse()
+  })
+
   test("disposes owned resources exactly once and rejects later frames", () => {
     const fixture = renderFixture()
     const aNode = fixture.document.createElement("div")
@@ -806,6 +1232,15 @@ function requireObject(value: Object3D | undefined): Object3D {
 function requireCachedText(value: Object3D | undefined): CachedText {
   if (!(value instanceof CachedText)) throw new Error("Expected Engine CachedText")
   return value
+}
+
+function requireInstancedRoundedRect(value: Object3D | undefined): InstancedRoundedRect {
+  if (!(value instanceof InstancedRoundedRect)) throw new Error("Expected InstancedRoundedRect")
+  return value
+}
+
+function instanceRecord(bytes: Uint8Array): Float32Array {
+  return new Float32Array(bytes.buffer, bytes.byteOffset, bytes.byteLength / Float32Array.BYTES_PER_ELEMENT)
 }
 
 function requireRoundedMaterial(mesh: Mesh): RoundedRectMaterial {

@@ -87,6 +87,7 @@ export type {
 } from "./mutation.ts"
 export type {
   DocumentStateChange,
+  FocusStateChange,
   InputCheckedStateChange,
   InputIndeterminateStateChange,
   InputSelectionStateChange,

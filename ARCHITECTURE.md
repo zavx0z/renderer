@@ -1,10 +1,14 @@
 # Architecture
 
-This repository owns one document rendering pipeline with three separately
+This repository owns one document rendering pipeline with separately
 loadable production packages:
 
 ```text
-@zavx0z/dom
+@zavx0z/template/compiler → @zavx0z/template/compiled
+                                      ↓
+                              @zavx0z/react
+                                      ↓
+@zavx0z/dom ←─────────────────────────┘
     ↓
 @zavx0z/renderer
     ↓
@@ -43,15 +47,24 @@ array position.
 retained Engine/WebGPU realization. It does not own DOM, CSS, HTML control, or
 authoring semantics.
 
+Compatible consecutive Rect display items are reduced here, never inside a
+component: the backend maps stable `(node, key)` identities into Engine
+`InstanceLayer` slots and emits shared-unit-quad `InstancedRoundedRect` runs.
+Clip, overlap, unsupported policy and non-Rect items remain explicit scalar
+barriers, preserving the immutable display list and CPU hit metadata as the
+only semantic and interaction owners.
+
 ## Authoring boundary
 
 Imperative DOM, templates, custom elements, and optional framework adapters all
 mutate the same DOM. Consumer code never receives a render surface, manual
 rectangle, Engine object, or materializer function.
 
-`@zavx0z/dom-react` is an optional mutation-mode host adapter. React owns its
-component/Fiber tree and commits standard DOM mutations; it does not create a
-second render/layout tree and does not make `react-dom` a dependency.
+npm React, `react-reconciler`, Fiber and a persistent virtual DOM are not part
+of this workspace. `@zavx0z/react` owns the scheduler/hooks runtime;
+`@zavx0z/template/compiler` lowers familiar component syntax to the shared
+Template ABI and direct semantic-DOM mount/update operations. Neither may add
+another render or layout tree.
 
 `@zavx0z/dom-devtools` assigns stable realm-local IDs and exposes immutable
 serializable DOM/render snapshots plus compact mutation signals. It is the

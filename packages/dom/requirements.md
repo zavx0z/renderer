@@ -151,6 +151,10 @@ attribute and returns the HTML default `0` for buttons or `-1` otherwise.
 Moving focus dispatches `blur`, `focusout`, `focus`, `focusin` in the order
 observed by current browsers. Focus and blur do not bubble; focusin and focusout
 do. All four are FocusEvents with the opposite element as `relatedTarget`.
+Every committed focus transition also publishes coalesced `focus` and
+`focus-within` records through the independent Document state-change channel.
+Only the exact old/new focused Elements and the symmetric difference of their
+HTMLElement ancestor chains are reported. Attribute mutation is not fabricated.
 
 This target-independent realm has no Window, viewport focus, body element,
 scrolling, focus ring, Shadow DOM or navigable. Therefore `UIEvent.view` accepts

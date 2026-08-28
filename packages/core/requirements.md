@@ -30,8 +30,11 @@ maps preserve Map lookup, size, order, iteration and `forEach` without exposing
 
 ## `RENDERER-CPU-003` — cascade
 
-The initial cascade supports flat author rules with tag, class, id, attribute
-and descendant selectors. Specificity and source order decide declarations;
+The initial cascade supports flat author rules with tag, class, id, attribute,
+child and descendant selectors. The bounded native pseudo-class subset is
+`:hover`, `:active`, `:focus`, `:focus-within`, `:disabled`, `:checked` and
+`:indeterminate`. Unsupported selector syntax rejects that selector rather than
+partially matching it. Specificity and source order decide declarations;
 inline style wins over author rules. `color`, `font-size`, `line-height` and
 `letter-spacing` inherit. Supported
 properties are `display`, physical `width`/`height` and logical
@@ -53,6 +56,21 @@ longhand wins at the same specificity. Inherited `white-space` supports
 `normal` collapsing, `pre` preservation and `nowrap` collapsing without line
 breaks; formatting-only whitespace under
 `normal` paints nothing.
+
+The computed `color` resolves `currentcolor` against the inherited computed
+color. `background` and `background-color` resolve `currentcolor` against that
+element's computed `color`, exactly as border colors and box-shadow already do.
+Absent backgrounds remain absent, `transparent` remains transparent and literal
+colors remain unchanged.
+
+Rules are indexed once by the strongest available id, class, attribute or tag
+in their rightmost compound. Resolving an Element visits only the universal
+rules and buckets named by that exact Element, then applies the ordinary
+specificity/source-order cascade. Pointer pseudo state is held by one optional
+renderer-owned `DocumentInteractionState` shared with the interaction
+controller; semantic focus and control pseudo state are read directly from the
+DOM. `@scope`, cascade layers and a component style compiler remain pending and
+are not accepted by this bounded parser.
 
 ## `RENDERER-CPU-004` — layout
 
@@ -100,8 +118,12 @@ entry keyed by the exact semantic `Node`. Backgrounds or borders emit `Rect`
 display items. Each Rect carries a resolved fill color, effective
 ancestor-composited opacity, non-uniform border widths and colors, and normalized
 corner radii; these fields are finite pixel values or resolved color strings and
-require no CSS interpretation in a backend. Non-empty Text nodes emit `Text`
-display items with effective opacity and resolved letter spacing. Non-empty image sources with positive
+require no CSS interpretation in a backend. In particular, no Rect fill, border
+or shadow color may carry the CSS context keyword `currentcolor` into a backend.
+Text nodes with at least one paintable character emit `Text` display items with
+effective opacity and resolved letter spacing. Whitespace-only Text still owns
+its measured layout advance under preserving white-space modes but emits no
+paint item or empty GPU geometry. Non-empty image sources with positive
 content geometry emit one resolved `Image` item. Every display item and hit record carries
 its immutable inherited clip stack and resolved RenderTransform; every clip
 retains the transform of its own overflow owner. Display items use the
@@ -109,7 +131,8 @@ stable composite identity `(node, key)`, so one semantic node may own multiple
 paint fragments without being copied. Keys prefixed by `ua:` are reserved for
 renderer-owned presentation. `display:none` removes the complete subtree from
 boxes, paint and hit output. Standard Comment nodes are invisible region
-anchors and produce no box, paint item or hit entry.
+anchors and do not participate in block or Flex layout, nor produce a box,
+paint item or hit entry.
 
 ## `RENDERER-CPU-007` — invalidation
 

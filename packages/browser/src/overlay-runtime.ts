@@ -10,9 +10,11 @@ import type {
 } from "@zavx0z/dom"
 import {
   createDocumentInteractionController,
+  createDocumentInteractionState,
   createDocumentRenderer,
   type CreateDocumentRendererOptions,
   type DocumentInteractionController,
+  type DocumentInteractionState,
   type DocumentRenderer,
   type PointerInput,
   type RenderFrame,
@@ -73,6 +75,7 @@ export type DocumentOverlayRuntimeSeams = Readonly<{
   createDocumentRenderer(options: CreateDocumentRendererOptions): DocumentRenderer
   createInteraction(options: Readonly<{
     document: Document
+    interactionState: DocumentInteractionState
     tooltipDelayMs: number
   }>): DocumentInteractionController
   now(): number
@@ -102,6 +105,7 @@ export function createDocumentOverlayRuntimeWithSeams(
   validateSeams(seams)
   const styleSheets = Object.freeze([...options.styleSheets])
   const tooltipDelayMs = finiteNonNegative(options.tooltipDelayMs ?? 500, "tooltipDelayMs")
+  const interactionState = createDocumentInteractionState(options.document)
   let requestBackendPresentation = (): void => {}
   let backend: RendererWebGpuBackend | null = null
   let overlay: RendererWebGpuScreenOverlay | null = null
@@ -150,9 +154,11 @@ export function createDocumentOverlayRuntimeWithSeams(
       root: options.root,
       viewport: options.viewport,
       styleSheets,
+      interactionState,
     })
     interaction = seams.createInteraction({
       document: options.document,
+      interactionState,
       tooltipDelayMs,
     })
     requestBackendPresentation = (): void => {
@@ -198,6 +204,7 @@ export function createDocumentOverlayRuntimeWithSeams(
       root: options.root,
       viewport,
       styleSheets,
+      interactionState,
     })
     try {
       requiredOverlay.resize(viewport)

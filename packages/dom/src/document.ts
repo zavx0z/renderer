@@ -30,6 +30,7 @@ import {
   isProgrammaticallyFocusable
 } from "./internal/focus.ts"
 import {
+  recordFocusStateChange,
   recordInputStateChange,
   recordOptionStateChange,
   recordPopoverStateChange,
@@ -43,6 +44,7 @@ import type {NodeList} from "./node-list.ts"
 import {findElementById, queryAll, queryFirst} from "./selectors.ts"
 import type {
   DocumentStateChange,
+  FocusStateChange,
   InputStateChange,
   OptionSelectedStateChange,
   PopoverStateChange,
@@ -253,6 +255,24 @@ export class Document extends Node {
     if (this.transactionDepth === 0) this.flushStateChanges()
   }
 
+  [recordFocusStateChange](change: FocusStateChange): void {
+    const state = this.ensureStateChangeState()
+    const targetChanges = state.pending.get(change.target) ?? new Map<string, DocumentStateChange>()
+    const key = `focus:${change.property}`
+    const current = targetChanges.get(key) as FocusStateChange | undefined
+    const next: FocusStateChange = Object.freeze({
+      type: "focus",
+      target: change.target,
+      property: change.property,
+      oldValue: current?.oldValue ?? change.oldValue,
+      newValue: change.newValue
+    })
+    if (next.oldValue === next.newValue) targetChanges.delete(key)
+    else targetChanges.set(key, next)
+    this.updatePendingTarget(state, change.target, targetChanges)
+    if (this.transactionDepth === 0) this.flushStateChanges()
+  }
+
   [recordInputStateChange](change: InputStateChange): void {
     const state = this.ensureStateChangeState()
     const targetChanges = state.pending.get(change.target) ?? new Map<string, DocumentStateChange>()
@@ -326,6 +346,10 @@ export class Document extends Node {
   }
 
   [changeFocus](nextElement: HTMLElement | null): void {
+    this.transaction(() => this.applyFocusChange(nextElement))
+  }
+
+  private applyFocusChange(nextElement: HTMLElement | null): void {
     if (nextElement && (nextElement.ownerDocument !== this || !nextElement[isProgrammaticallyFocusable]())) {
       return
     }
@@ -337,6 +361,7 @@ export class Document extends Node {
     focusState.revision += 1
     const revision = focusState.revision
     focusState.activeElement = null
+    this.recordFocusTransition(previousElement, null)
 
     if (previousElement) {
       previousElement.dispatchEvent(new FocusEvent("blur", {
@@ -354,6 +379,7 @@ export class Document extends Node {
 
     if (!nextElement || !nextElement[isProgrammaticallyFocusable]()) return
     focusState.activeElement = nextElement
+    this.recordFocusTransition(null, nextElement)
     nextElement.dispatchEvent(new FocusEvent("focus", {
       composed: true,
       relatedTarget: previousElement
@@ -369,8 +395,57 @@ export class Document extends Node {
   [clearFocusInSubtree](subtree: Node): void {
     const focusState = this.focusState
     if (!focusState?.activeElement || !subtree.contains(focusState.activeElement)) return
+    const previousElement = focusState.activeElement
     focusState.activeElement = null
     focusState.revision += 1
+    this.recordFocusTransition(previousElement, null)
+  }
+
+  private recordFocusTransition(
+    previousElement: HTMLElement | null,
+    nextElement: HTMLElement | null
+  ): void {
+    if (previousElement !== null) {
+      this[recordFocusStateChange](Object.freeze({
+        type: "focus",
+        target: previousElement,
+        property: "focus",
+        oldValue: true,
+        newValue: false
+      }))
+    }
+    if (nextElement !== null) {
+      this[recordFocusStateChange](Object.freeze({
+        type: "focus",
+        target: nextElement,
+        property: "focus",
+        oldValue: false,
+        newValue: true
+      }))
+    }
+
+    const previousWithin = focusChain(previousElement)
+    const nextWithin = focusChain(nextElement)
+    for (const element of previousWithin) {
+      if (nextWithin.has(element)) continue
+      this[recordFocusStateChange](Object.freeze({
+        type: "focus",
+        target: element,
+        property: "focus-within",
+        oldValue: true,
+        newValue: false
+      }))
+    }
+    for (const element of nextWithin) {
+      if (previousWithin.has(element)) continue
+      this[recordFocusStateChange](Object.freeze({
+        type: "focus",
+        target: element,
+        property: "focus-within",
+        oldValue: false,
+        newValue: true
+      }))
+    }
   }
 
   private flushMutations(): void {
@@ -432,6 +507,14 @@ export class Document extends Node {
       state.flushing = false
     }
   }
+}
+
+const focusChain = (element: HTMLElement | null): Set<HTMLElement> => {
+  const chain = new Set<HTMLElement>()
+  for (let current: Element | null = element; current; current = current.parentElement) {
+    if (current instanceof HTMLElement) chain.add(current)
+  }
+  return chain
 }
 
 const sameStateValue = (left: unknown, right: unknown): boolean => {

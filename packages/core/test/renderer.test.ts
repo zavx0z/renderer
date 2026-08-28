@@ -125,6 +125,75 @@ describe("CPU document renderer", () => {
     })
   })
 
+  it("resolves currentcolor for computed color and backgrounds before display projection", () => {
+    const document = createDocument()
+    const root = document.createElement("div")
+    const glyph = document.createElement("span")
+    const literal = document.createElement("span")
+    const transparent = document.createElement("span")
+    document.appendChild(root)
+    root.append(glyph, literal, transparent)
+    root.setAttribute("style", "color:rgb(71 114 179)")
+    glyph.setAttribute(
+      "style",
+      "display:block; width:12px; height:12px; color:currentcolor; background:currentcolor; border:1px solid currentcolor; box-shadow:0 0 2px currentcolor",
+    )
+    literal.setAttribute(
+      "style",
+      "display:block; width:12px; height:12px; color:#102030; background:#abcdef; border:1px solid currentcolor",
+    )
+    transparent.setAttribute(
+      "style",
+      "display:block; width:12px; height:12px; color:#405060; background:transparent; border:1px solid currentcolor",
+    )
+
+    const renderer = createDocumentRenderer({
+      document,
+      root,
+      viewport: {width: 100, height: 100},
+    })
+    const frame = renderer.flush()
+    const glyphBackground = frame.displayList.find((item) =>
+      item.kind === "rect" && item.node === glyph && item.key === "background"
+    )
+    const glyphShadow = frame.displayList.find((item) =>
+      item.kind === "rect" && item.node === glyph && item.key === "shadow"
+    )
+    const literalBackground = frame.displayList.find((item) =>
+      item.kind === "rect" && item.node === literal && item.key === "background"
+    )
+    const transparentBackground = frame.displayList.find((item) =>
+      item.kind === "rect" && item.node === transparent && item.key === "background"
+    )
+
+    expect(glyphBackground).toMatchObject({
+      color: "rgb(71 114 179)",
+      border: {colors: {
+        top: "rgb(71 114 179)",
+        right: "rgb(71 114 179)",
+        bottom: "rgb(71 114 179)",
+        left: "rgb(71 114 179)",
+      }},
+    })
+    expect(glyphShadow).toMatchObject({color: "rgb(71 114 179)"})
+    expect(literalBackground).toMatchObject({
+      color: "#abcdef",
+      border: {colors: {top: "#102030", right: "#102030", bottom: "#102030", left: "#102030"}},
+    })
+    expect(transparentBackground).toMatchObject({
+      color: "transparent",
+      border: {colors: {top: "#405060", right: "#405060", bottom: "#405060", left: "#405060"}},
+    })
+    for (const item of frame.displayList) {
+      if (item.kind !== "rect") continue
+      expect(item.color.toLowerCase()).not.toBe("currentcolor")
+      for (const color of Object.values(item.border.colors)) {
+        expect(color.toLowerCase()).not.toBe("currentcolor")
+      }
+    }
+    renderer.dispose()
+  })
+
   it("lays out deterministic flex rows and columns with growth, gap and padding", () => {
     const document = createDocument()
     const row = document.createElement("div")
@@ -315,6 +384,20 @@ describe("CPU document renderer", () => {
     expect(frame.displayList.filter((item) => item.kind === "text")).toEqual([
       expect.objectContaining({node: label.firstChild, text: "Visible"}),
     ])
+
+    const fixed = document.createElement("span")
+    fixed.textContent = "Fixed"
+    root.appendChild(fixed)
+    root.setAttribute("style", "display:flex; flex-direction:column; height:100px; flex-grow:1")
+    label.setAttribute("style", "flex-grow:1")
+    fixed.setAttribute("style", "height:20px")
+    const flexFrame = createDocumentRenderer({
+      document,
+      root,
+      viewport: {width: 200, height: 100},
+    }).flush()
+    expect(flexFrame.boxByNode.get(label)).toMatchObject({y: 0, height: 80})
+    expect(flexFrame.boxByNode.get(fixed)).toMatchObject({y: 80, height: 20})
   })
 })
 

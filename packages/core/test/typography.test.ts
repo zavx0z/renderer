@@ -7,6 +7,27 @@ import {
 } from "../src/index.ts"
 
 describe("inherited line-height and letter-spacing", () => {
+  test("keeps whitespace layout while omitting non-painting text items", () => {
+    const document = createDocument()
+    const root = document.createElement("span")
+    const text = document.createTextNode("   ")
+    document.appendChild(root)
+    root.appendChild(text)
+    root.setAttribute("style", "display:block; width:80px; height:20px; white-space:pre; background:#112233")
+    const renderer = createDocumentRenderer({document, root, viewport: {width: 100, height: 40}})
+
+    const whitespace = renderer.flush()
+    expect(whitespace.boxByNode.get(text)?.width).toBeGreaterThan(0)
+    expect(textItems(whitespace, text)).toHaveLength(0)
+    expect(whitespace.displayList.some(item => item.kind === "rect" && item.node === root)).toBe(true)
+
+    text.data = " X "
+    expect(textItems(renderer.flush(), text).map(item => item.text)).toEqual([" X "])
+    text.data = "   "
+    expect(textItems(renderer.flush(), text)).toHaveLength(0)
+    renderer.dispose()
+  })
+
   test("resolves unitless inheritance per child font and measures every character gap", () => {
     const document = createDocument()
     const root = document.createElement("div")

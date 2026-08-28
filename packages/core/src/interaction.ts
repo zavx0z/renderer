@@ -16,6 +16,7 @@ import type {
   RenderScrollMetrics,
 } from "./types.ts"
 import {appendImmutableArray} from "./immutable-array.ts"
+import type {DocumentInteractionState} from "./pseudo-state.ts"
 
 export type PointerInput = Readonly<{
   clientX: number
@@ -60,6 +61,7 @@ export type CreateDocumentInteractionControllerOptions = Readonly<{
   tooltipMaxWidth?: number
   tooltipBackground?: string
   tooltipColor?: string
+  interactionState?: DocumentInteractionState
 }>
 
 export interface DocumentInteractionController {
@@ -105,6 +107,10 @@ const UA_TITLE_BORDER: RenderBorder = Object.freeze({
 export const createDocumentInteractionController = (
   options: CreateDocumentInteractionControllerOptions,
 ): DocumentInteractionController => {
+  if (
+    options.interactionState !== undefined &&
+    options.interactionState.document !== options.document
+  ) throw new TypeError("interactionState belongs to another Document")
   const tooltipDelayMs = nonNegative(options.tooltipDelayMs ?? 500, "tooltipDelayMs")
   const tooltipFontSize = positive(options.tooltipFontSize ?? 12, "tooltipFontSize")
   const tooltipMaxWidth = positive(options.tooltipMaxWidth ?? 320, "tooltipMaxWidth")
@@ -116,6 +122,7 @@ export const createDocumentInteractionController = (
   let hoverStartedAt = 0
   let pointerX = 0
   let pointerY = 0
+  let hasPointerPosition = false
   let currentTooltip: TitleTooltip | null = null
   let cachedBase: RenderFrame | null = null
   let cachedSignature = ""
@@ -139,6 +146,7 @@ export const createDocumentInteractionController = (
       validatePointer(input)
       pointerX = input.clientX
       pointerY = input.clientY
+      hasPointerPosition = true
       const now = input.timeStamp ?? Date.now()
       const target = hitTest(frame, pointerX, pointerY)?.node ?? null
       transitionHover(target, input, now)
@@ -152,10 +160,12 @@ export const createDocumentInteractionController = (
       validatePointer(input)
       pointerX = input.clientX
       pointerY = input.clientY
+      hasPointerPosition = true
       const now = input.timeStamp ?? Date.now()
       const hit = hitTest(frame, pointerX, pointerY)
       transitionHover(hit?.node ?? null, input, now)
       pressed = hit?.node ?? null
+      options.interactionState?.setActiveElement(pressed)
       titleCandidate = null
       currentTooltip = null
       if (hit) {
@@ -173,17 +183,22 @@ export const createDocumentInteractionController = (
       validatePointer(input)
       pointerX = input.clientX
       pointerY = input.clientY
+      hasPointerPosition = true
       const now = input.timeStamp ?? Date.now()
       const hit = hitTest(frame, pointerX, pointerY)
       transitionHover(hit?.node ?? null, input, now)
       const released = hit?.node ?? null
-      released?.dispatchEvent(pointerEvent("pointerup", input, null, true, true))
-      if (released !== null && released === pressed && hit?.disabled !== true) {
-        activateElement(released, input)
+      try {
+        released?.dispatchEvent(pointerEvent("pointerup", input, null, true, true))
+        if (released !== null && released === pressed && hit?.disabled !== true) {
+          activateElement(released, input)
+        }
+      } finally {
+        pressed = null
+        options.interactionState?.setActiveElement(null)
+        refreshTitleCandidate(now)
+        invalidatePresentation()
       }
-      pressed = null
-      refreshTitleCandidate(now)
-      invalidatePresentation()
       return released
     },
     pointerCancel(frame, input) {
@@ -191,11 +206,15 @@ export const createDocumentInteractionController = (
       validateFrame(frame)
       validatePointer(input)
       const target = pressed ?? hovered
-      target?.dispatchEvent(pointerEvent("pointercancel", input, null, true, false))
-      pressed = null
-      currentTooltip = null
-      refreshTitleCandidate(input.timeStamp ?? Date.now())
-      invalidatePresentation()
+      try {
+        target?.dispatchEvent(pointerEvent("pointercancel", input, null, true, false))
+      } finally {
+        pressed = null
+        options.interactionState?.setActiveElement(null)
+        currentTooltip = null
+        refreshTitleCandidate(input.timeStamp ?? Date.now())
+        invalidatePresentation()
+      }
     },
     wheel(frame, input) {
       assertActive()
@@ -270,6 +289,8 @@ export const createDocumentInteractionController = (
       disposed = true
       hovered = null
       pressed = null
+      options.interactionState?.setHoveredElement(null)
+      options.interactionState?.setActiveElement(null)
       titleCandidate = null
       currentTooltip = null
       invalidatePresentation()
@@ -297,6 +318,7 @@ export const createDocumentInteractionController = (
     }
 
     hovered = target
+    options.interactionState?.setHoveredElement(target)
     titleCandidate = resolveTitle(target)
     hoverStartedAt = now
     currentTooltip = null
@@ -310,6 +332,7 @@ export const createDocumentInteractionController = (
   }
 
   function synchronizeHover(frame: RenderFrame, now: number): void {
+    if (!hasPointerPosition) return
     const target = hitTest(frame, pointerX, pointerY)?.node ?? null
     if (target === hovered) return
     transitionHover(target, {

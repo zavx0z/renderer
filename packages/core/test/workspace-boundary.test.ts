@@ -36,10 +36,10 @@ describe("renderer workspace retirement boundary", () => {
 
     const names = await Promise.all([
       "browser",
+      "react",
       "core",
       "devtools",
       "dom",
-      "react",
       "webgpu",
     ].map(async (directory) => {
       const manifest = await Bun.file(new URL(`packages/${directory}/package.json`, workspaceRoot)).json() as {
@@ -49,11 +49,28 @@ describe("renderer workspace retirement boundary", () => {
     }))
     expect(names).toEqual([
       "@zavx0z/renderer-browser",
+      "@zavx0z/react",
       "@zavx0z/renderer",
       "@zavx0z/dom-devtools",
       "@zavx0z/dom",
-      "@zavx0z/dom-react",
       "@zavx0z/renderer-webgpu",
     ])
+  })
+
+  test("contains no React runtime or reconciler dependency", async () => {
+    const manifests = await Array.fromAsync(
+      new Bun.Glob("packages/*/package.json").scan({cwd: new URL("../../../", import.meta.url).pathname}),
+    )
+    for (const relativePath of manifests) {
+      const manifest = await Bun.file(new URL(`../../../${relativePath}`, import.meta.url)).json() as {
+        dependencies?: Record<string, string>
+        devDependencies?: Record<string, string>
+        peerDependencies?: Record<string, string>
+      }
+      const graph = {...manifest.dependencies, ...manifest.devDependencies, ...manifest.peerDependencies}
+      for (const forbidden of ["react", "react-dom", "react-reconciler", "@types/react", "@types/react-reconciler"]) {
+        expect(graph[forbidden], `${relativePath}: ${forbidden}`).toBeUndefined()
+      }
+    }
   })
 })

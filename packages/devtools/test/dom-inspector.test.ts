@@ -288,7 +288,7 @@ describe("DOM inspector live state", () => {
 
     input.focus()
     const focused = inspector.snapshot(root)
-    expect(focused.stateVersion).toBe(initialStateVersion)
+    expect(focused.stateVersion).toBe(initialStateVersion + 1)
     expect(record(focused, inputId).state).toMatchObject({focused: true})
 
     const changes: Array<Parameters<Parameters<typeof inspector.subscribe>[0]>[0]> = []
@@ -305,7 +305,7 @@ describe("DOM inspector live state", () => {
     })
 
     expect(document.version).toBe(initialMutationVersion)
-    expect(document.stateVersion).toBe(initialStateVersion + 1)
+    expect(document.stateVersion).toBe(initialStateVersion + 2)
     expect(changes).toHaveLength(1)
     expect(changes[0]).toEqual({
       kind: "state",

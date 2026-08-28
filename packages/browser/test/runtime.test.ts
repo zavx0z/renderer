@@ -229,6 +229,44 @@ describe("document canvas browser runtime", () => {
     runtime.dispose()
   })
 
+  test("shares native hover and active state between the browser interaction and CPU renderer", async () => {
+    const document = createDocument()
+    const button = document.createElement("button")
+    document.appendChild(button)
+    button.setAttribute("data-component", "button")
+    const harness = createHarness({left: 0, top: 0, width: 80, height: 40})
+    const seams: DocumentCanvasRuntimeSeams = Object.freeze({
+      ...harness.seams,
+      createDocumentRenderer,
+      createInteraction: (options) => createDocumentInteractionController(options),
+    })
+    const runtime = await createDocumentCanvasRuntimeWithSeams({
+      canvas: harness.canvas.element,
+      document,
+      root: button,
+      styleSheets: [String.raw`
+        [data-component="button"] {
+          display: block;
+          width: 40px;
+          height: 20px;
+          background: #111111;
+        }
+        [data-component="button"]:hover { background: #222222; }
+        [data-component="button"]:active { background: #333333; }
+      `],
+      font: fakeFont(),
+    }, seams)
+
+    expect(backgroundColor(runtime.currentFrame, button)).toBe("#111111")
+    harness.canvas.emit("pointermove", pointer({clientX: 5, clientY: 5, pointerId: 3}))
+    expect(backgroundColor(runtime.currentFrame, button)).toBe("#222222")
+    harness.canvas.emit("pointerdown", pointer({clientX: 5, clientY: 5, pointerId: 3}))
+    expect(backgroundColor(runtime.currentFrame, button)).toBe("#333333")
+    harness.canvas.emit("pointerup", pointer({clientX: 5, clientY: 5, pointerId: 3}))
+    expect(backgroundColor(runtime.currentFrame, button)).toBe("#222222")
+    runtime.dispose()
+  })
+
   test("coalesces external mutation and live input-state channels into one requested frame", async () => {
     const document = createDocument()
     const root = document.createElement("div")
@@ -913,6 +951,13 @@ function frame(
     hits: new Map(),
     scrolls: new Map(),
   })
+}
+
+function backgroundColor(frame: RenderFrame, node: SemanticNode): string | undefined {
+  const item = frame.displayList.find((candidate) =>
+    candidate.kind === "rect" && candidate.node === node && candidate.key === "background"
+  )
+  return item?.kind === "rect" ? item.color : undefined
 }
 
 function pointer(values: Partial<PointerEvent> = {}): PointerEvent {

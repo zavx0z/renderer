@@ -1,22 +1,36 @@
 {
   "compilerOptions": {
-    "lib": ["ESNext"],
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "target": "ESNext",
     "module": "Preserve",
     "moduleDetection": "force",
     "moduleResolution": "bundler",
+    "jsx": "preserve",
+    "jsxImportSource": "@zavx0z/template",
     "allowImportingTsExtensions": true,
     "verbatimModuleSyntax": true,
     "noEmit": true,
     "strict": true,
+    "exactOptionalPropertyTypes": true,
     "skipLibCheck": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
-    "types": ["bun", "react"],
+    "types": ["@webgpu/types", "bun"],
     "paths": {
-      "@zavx0z/dom": ["../dom/src/index.ts"]
+      "@engine/core": ["../../../webxr-space/projects/engine/packages/core/src/index.ts"],
+      "@zavx0z/react": ["./src/index.ts"],
+      "@zavx0z/dom": ["../dom/src/index.ts"],
+      "@zavx0z/renderer": ["../core/src/index.ts"],
+      "@zavx0z/renderer-webgpu": ["../webgpu/src/index.ts"],
+      "@zavx0z/template": ["../../../template/index.ts"],
+      "@zavx0z/template/*": ["../../../template/*"]
     }
   },
-  "include": ["src/**/*.ts", "test/**/*.ts"]
+  "include": [
+    "src/**/*.ts",
+    "test/**/*.ts",
+    "test/**/*.tsx",
+    "../../../webxr-space/projects/engine/packages/core/src/types/assets.d.ts"
+  ]
 }

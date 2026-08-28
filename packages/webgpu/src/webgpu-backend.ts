@@ -1,12 +1,18 @@
 import {
   BufferGeometry,
+  type BufferAttribute,
   CachedText,
   Color,
   ImageMaterial,
+  InstancedRoundedRect,
+  type InstanceHandle,
   Matrix4,
   Mesh,
   Object3D,
   PlaneGeometry,
+  ROUNDED_RECT_INSTANCE_OFFSETS,
+  ROUNDED_RECT_INSTANCE_RECORD_BYTE_LENGTH,
+  RoundedRectInstanceLayer,
   RoundedRectMaterial,
   Text,
   TextMaterial,
@@ -30,6 +36,27 @@ export type RendererWebGpuBackendOptions = Readonly<{
   invalidateGeometry(geometry: BufferGeometry): void
   /** Schedules a new host presentation after an asynchronous texture change. */
   requestPresentation?(): void
+  /** Safe retained Rect runs are enabled by default; disabled is an oracle/fallback mode. */
+  rectInstancing?: "safe" | "disabled"
+  /** Hard retained-slot bound. Overflow remains on the scalar path. */
+  maxRectInstances?: number
+}>
+
+export type RendererWebGpuBackendDiagnostics = Readonly<{
+  revision: number
+  /** True only when the previous validated batching topology was reused. */
+  rectPlanReused: boolean
+  /** Display-list items traversed by prepare; reused frames count only changed references. */
+  rectPreparedItems: number
+  rectScalarDraws: number
+  rectInstancedDraws: number
+  rectInstancedInstances: number
+  rectActiveSlots: number
+  rectRecordCapacity: number
+  pendingRecordUploadRanges: number
+  pendingRecordUploadBytes: number
+  pendingOrderUploadRanges: number
+  pendingOrderUploadBytes: number
 }>
 
 type DisplayNode = DisplayItem["node"]
@@ -62,6 +89,8 @@ type PreparedRectItem = Readonly<{
   token: DisplayToken
 }>
 
+type PreparedRectPayload = Omit<PreparedRectItem, "token">
+
 type PreparedTextItem = Readonly<{
   kind: "text"
   item: TextDisplayItem
@@ -81,6 +110,46 @@ type PreparedImageItem = Readonly<{
 }>
 
 type PreparedItem = PreparedRectItem | PreparedTextItem | PreparedImageItem
+
+type PreparedRectBatch = Readonly<{
+  kind: "rect-batch"
+  items: readonly PreparedRectItem[]
+  firstInstance: number
+}>
+
+type PlannedItem = PreparedItem | PreparedRectBatch
+
+type PreparedFramePlan = Readonly<{
+  items: readonly PlannedItem[]
+  slottedRects: readonly PreparedRectItem[]
+  batchedTokens: ReadonlySet<DisplayToken>
+}>
+
+type PreparedFrameCache = Readonly<{
+  revision: number
+  viewportWidth: number
+  viewportHeight: number
+  prepared: PreparedItem[]
+  plan: PreparedFramePlan
+  rootChildren: readonly Object3D[]
+  reusableSources: boolean
+  recordVersion: number
+  orderVersion: number
+}>
+
+type PreparedRectRecordUpdate = Readonly<{
+  index: number
+  value: PreparedRectItem
+  handle: InstanceHandle
+  previousRecord: Float32Array
+  nextRecord: Float32Array
+  writeRecord: boolean
+}>
+
+type ReusedPreparedFrame = Readonly<{
+  plan: PreparedFramePlan
+  recordUpdates: readonly PreparedRectRecordUpdate[]
+}>
 
 type RetainedClipSpace = {
   coordinateSpace: Object3D
@@ -124,6 +193,9 @@ type RetainedEntry = RectEntry | TextEntry | ImageEntry
 const WHITE = "#ffffff"
 const NO_PRESENTATION_CLIPS: readonly PresentationClipShape[] = Object.freeze([])
 const NO_PREPARED_CLIPS: readonly PreparedClip[] = Object.freeze([])
+const DEFAULT_MAX_RECT_INSTANCES = 1_048_576
+const RECT_RUN_INDEX_CELL_SIZE = 64
+const MAX_RECT_RUN_INDEX_CELLS = 256
 
 /**
  * Retained projection of resolved Rect/Text/Image display items into Engine objects.
@@ -138,37 +210,116 @@ export class RendererWebGpuBackend {
   readonly #font: TrueTypeFont | undefined
   readonly #invalidateGeometry: (geometry: BufferGeometry) => void
   readonly #requestPresentation: (() => void) | undefined
+  readonly #rectInstancing: "safe" | "disabled"
+  readonly #rectLayer: RoundedRectInstanceLayer
   readonly #tokens = new WeakMap<DisplayNode, Map<string, DisplayToken>>()
+  readonly #rectHandles = new Map<DisplayToken, InstanceHandle>()
+  readonly #rectRecords = new Map<DisplayToken, Float32Array>()
+  readonly #rectSourceItems = new Map<DisplayToken, RectDisplayItem>()
+  readonly #rectRuns: InstancedRoundedRect[] = []
+  readonly #preparedRectCache = new WeakMap<RectDisplayItem, PreparedRectPayload>()
   #entries = new Map<DisplayToken, RetainedEntry>()
+  #preparedFrameCache: PreparedFrameCache | null = null
+  #frameDocument: RenderFrame["document"] | null = null
+  #frameRoot: RenderFrame["root"] | null = null
+  #lastFrameRevision = -1
+  #diagnosticRevision = 0
+  #rectPlanReused = false
+  #rectPreparedItems = 0
+  #rectScalarDraws = 0
+  #rectInstancedInstances = 0
+  #rectLayerWasPresented = false
   #disposed = false
 
   constructor(options: RendererWebGpuBackendOptions) {
     this.#font = options.font
     this.#invalidateGeometry = options.invalidateGeometry
     this.#requestPresentation = options.requestPresentation
+    this.#rectInstancing = options.rectInstancing ?? "safe"
+    if (this.#rectInstancing !== "safe" && this.#rectInstancing !== "disabled") {
+      throw new Error("RendererWebGpuBackendOptions.rectInstancing must be safe or disabled")
+    }
+    const maxRectInstances = options.maxRectInstances ?? DEFAULT_MAX_RECT_INSTANCES
+    if (!Number.isInteger(maxRectInstances) || maxRectInstances <= 0) {
+      throw new RangeError("RendererWebGpuBackendOptions.maxRectInstances must be a positive integer")
+    }
+    this.#rectLayer = new RoundedRectInstanceLayer({
+      initialCapacity: 0,
+      maxCapacity: maxRectInstances,
+    })
     this.root.name = "@zavx0z/renderer-webgpu"
     this.root.renderLayer = "ui"
+  }
+
+  public get diagnostics(): RendererWebGpuBackendDiagnostics {
+    const instances = this.#rectLayer.instances
+    return Object.freeze({
+      revision: this.#diagnosticRevision,
+      rectPlanReused: this.#rectPlanReused,
+      rectPreparedItems: this.#rectPreparedItems,
+      rectScalarDraws: this.#rectScalarDraws,
+      rectInstancedDraws: this.#rectRuns.filter((run) => run.parent === this.root).length,
+      rectInstancedInstances: this.#rectInstancedInstances,
+      rectActiveSlots: instances.count,
+      rectRecordCapacity: instances.capacity,
+      pendingRecordUploadRanges: instances.recordAttribute.fullUpdateRequired
+        ? 1
+        : instances.recordAttribute.updateRanges.length,
+      pendingRecordUploadBytes: pendingUploadBytes(instances.recordAttribute),
+      pendingOrderUploadRanges: instances.orderAttribute.fullUpdateRequired
+        ? 1
+        : instances.orderAttribute.updateRanges.length,
+      pendingOrderUploadBytes: pendingUploadBytes(instances.orderAttribute),
+    })
   }
 
   /** Applies one complete immutable display frame to the stable Engine root. */
   public applyFrame(frame: RenderFrame): void {
     if (this.#disposed) throw new Error("RendererWebGpuBackend is disposed")
+    this.#validateFrameEnvelope(frame)
+
+    const reused = this.#tryReusePreparedFrame(frame)
+    if (reused !== null) {
+      this.#applyReusedPreparedFrame(frame, reused)
+      return
+    }
 
     const prepared = this.#prepareFrame(frame)
+    const plan = this.#planFrame(prepared)
     const created = new Map<DisplayToken, RetainedEntry>()
 
     // Allocate every required replacement before mutating retained entries.
-    for (const value of prepared) {
+    for (const value of plan.items) {
+      if (value.kind === "rect-batch") continue
       const existing = this.#entries.get(value.token)
       if (existing?.kind === value.item.kind) continue
       created.set(value.token, this.#createEntry(value))
     }
 
+    this.#synchronizeRectLayer(plan.slottedRects)
+
     const nextEntries = new Map<DisplayToken, RetainedEntry>()
     const nextNodes: Object3D[] = []
     const stale: RetainedEntry[] = []
+    let rectRunIndex = 0
+    let rectScalarDraws = 0
+    let rectInstancedInstances = 0
 
-    for (const value of prepared) {
+    for (const value of plan.items) {
+      if (value.kind === "rect-batch") {
+        let run = this.#rectRuns[rectRunIndex]
+        if (run === undefined) {
+          run = new InstancedRoundedRect(this.#rectLayer)
+          this.#rectRuns.push(run)
+        }
+        run.name = `rect-run:${rectRunIndex}`
+        run.setRange(value.firstInstance, value.items.length)
+        this.#rectLayerWasPresented = true
+        nextNodes.push(run)
+        rectRunIndex += 1
+        rectInstancedInstances += value.items.length
+        continue
+      }
       const existing = this.#entries.get(value.token)
       const entry = existing?.kind === value.item.kind
         ? existing
@@ -179,6 +330,7 @@ export class RendererWebGpuBackend {
       if (existing !== undefined && existing !== entry) stale.push(existing)
       nextEntries.set(value.token, entry)
       nextNodes.push(entry.node)
+      if (value.kind === "rect") rectScalarDraws += 1
     }
 
     for (const [token, entry] of this.#entries) {
@@ -190,6 +342,12 @@ export class RendererWebGpuBackend {
 
     this.#entries = nextEntries
     this.#setRootChildren(nextNodes)
+    this.#diagnosticRevision = frame.revision
+    this.#rectPlanReused = false
+    this.#rectPreparedItems = prepared.length
+    this.#rectScalarDraws = rectScalarDraws
+    this.#rectInstancedInstances = rectInstancedInstances
+    this.#commitPreparedFrame(frame, prepared, plan, prepared.every(isReusablePreparedItem))
     for (const geometry of geometries) this.#invalidateGeometry(geometry)
     this.#invalidateEvictedTextGeometries()
   }
@@ -202,22 +360,322 @@ export class RendererWebGpuBackend {
     const geometries = new Set<BufferGeometry>()
     for (const entry of this.#entries.values()) this.#detachEntry(entry, geometries)
     this.#entries.clear()
+    this.#rectLayer.instances.clear()
+    this.#rectHandles.clear()
+    this.#rectRecords.clear()
+    this.#rectSourceItems.clear()
+    this.#preparedFrameCache = null
+    this.#frameDocument = null
+    this.#frameRoot = null
+    this.#lastFrameRevision = -1
+    for (const run of this.#rectRuns) run.parent = null
     this.root.children = []
 
     for (const geometry of geometries) this.#invalidateGeometry(geometry)
+    if (this.#rectLayerWasPresented) this.#invalidateGeometry(this.#rectLayer.geometry)
     this.#invalidateEvictedTextGeometries()
   }
 
-  #prepareFrame(frame: RenderFrame): readonly PreparedItem[] {
+  #validateFrameEnvelope(frame: RenderFrame): void {
+    if (frame === null || typeof frame !== "object") {
+      throw new TypeError("RendererWebGpuBackend frame must be an object")
+    }
+    if (!Number.isSafeInteger(frame.revision) || frame.revision < 0) {
+      throw new RangeError("frame.revision must be a non-negative safe integer")
+    }
+    if (
+      frame.document === null
+      || typeof frame.document !== "object"
+      || frame.document.nodeType !== 9
+    ) {
+      throw new TypeError("frame.document must be a semantic Document")
+    }
+    if (
+      frame.root === null
+      || typeof frame.root !== "object"
+      || !Number.isInteger(frame.root.nodeType)
+    ) {
+      throw new TypeError("frame.root must be a semantic Node")
+    }
+    if (frame.root !== frame.document && frame.root.ownerDocument !== frame.document) {
+      throw new TypeError("frame.root belongs to another Document")
+    }
+    if (!Array.isArray(frame.displayList)) {
+      throw new TypeError("frame.displayList must be an immutable Array-compatible list")
+    }
+    if (frame.viewport === null || typeof frame.viewport !== "object") {
+      throw new TypeError("frame.viewport must be an object")
+    }
+    if (this.#frameDocument !== null && frame.document !== this.#frameDocument) {
+      throw new TypeError("RendererWebGpuBackend frame belongs to another Document")
+    }
+    if (this.#frameRoot !== null && frame.root !== this.#frameRoot) {
+      throw new TypeError("RendererWebGpuBackend frame uses another root")
+    }
+    if (frame.revision < this.#lastFrameRevision) {
+      throw new RangeError(
+        `frame.revision ${frame.revision} precedes applied revision ${this.#lastFrameRevision}`,
+      )
+    }
     assertFiniteNonNegative(frame.viewport.width, "frame.viewport.width")
     assertFiniteNonNegative(frame.viewport.height, "frame.viewport.height")
-    assertFinite(frame.revision, "frame.revision")
+  }
 
+  #tryReusePreparedFrame(frame: RenderFrame): ReusedPreparedFrame | null {
+    const cached = this.#preparedFrameCache
+    if (
+      this.#rectInstancing !== "safe"
+      || cached === null
+      || !cached.reusableSources
+      || cached.viewportWidth !== frame.viewport.width
+      || cached.viewportHeight !== frame.viewport.height
+      || cached.prepared.length !== frame.displayList.length
+      || !sameObjectOrder(this.root.children, cached.rootChildren)
+    ) return null
+    if (
+      this.#rectLayer.instances.recordAttribute.version !== cached.recordVersion
+      || this.#rectLayer.instances.orderAttribute.version !== cached.orderVersion
+    ) {
+      throw new Error("Retained Rect instance storage changed outside RendererWebGpuBackend")
+    }
+    if (!this.#hasRetainedBatchTopology(cached.plan)) return null
+
+    const recordUpdates: PreparedRectRecordUpdate[] = []
+    for (let index = 0; index < cached.prepared.length; index += 1) {
+      const previous = cached.prepared[index]!
+      const item = frame.displayList[index]!
+      if (item === previous.item) continue
+      if (frame.revision === cached.revision) return null
+      if (!sameDisplayIdentity(previous.item, item)) return null
+      if (
+        previous.kind !== "rect"
+        || item.kind !== "rect"
+        || !cached.plan.batchedTokens.has(previous.token)
+        || !sameRectBatchTopology(previous.item, item)
+        || !isReusableDisplayItem(item)
+      ) return null
+
+      const value = this.#prepareRectAt(item, previous.token, index, frame)
+      if (!isRectInstanceCompatible(value)) return null
+      const handle = this.#rectHandles.get(previous.token)
+      const previousRecord = this.#rectRecords.get(previous.token)
+      if (
+        handle === undefined
+        || previousRecord === undefined
+        || !this.#rectLayer.instances.has(handle)
+      ) return null
+      const nextRecord = packRectInstance(value)
+      recordUpdates.push(Object.freeze({
+        index,
+        value,
+        handle,
+        previousRecord,
+        nextRecord,
+        writeRecord: !sameFloatRecord(previousRecord, nextRecord),
+      }))
+    }
+
+    return Object.freeze({
+      plan: cached.plan,
+      recordUpdates: Object.freeze(recordUpdates),
+    })
+  }
+
+  #applyReusedPreparedFrame(frame: RenderFrame, reused: ReusedPreparedFrame): void {
+    const written: PreparedRectRecordUpdate[] = []
+    try {
+      for (const update of reused.recordUpdates) {
+        if (!update.writeRecord) continue
+        this.#rectLayer.instances.setRecord(update.handle, update.nextRecord)
+        written.push(update)
+      }
+    } catch (error) {
+      const rollbackErrors: unknown[] = []
+      for (let index = written.length - 1; index >= 0; index -= 1) {
+        const update = written[index]!
+        try {
+          this.#rectLayer.instances.setRecord(update.handle, update.previousRecord)
+        } catch (rollbackError) {
+          rollbackErrors.push(rollbackError)
+        }
+      }
+      if (rollbackErrors.length > 0) {
+        throw new AggregateError([error, ...rollbackErrors], "Rect instance update and rollback both failed")
+      }
+      throw error
+    }
+
+    for (const update of reused.recordUpdates) {
+      if (update.writeRecord) this.#rectRecords.set(update.value.token, update.nextRecord)
+      this.#rectSourceItems.set(update.value.token, update.value.item)
+      this.#preparedFrameCache!.prepared[update.index] = update.value
+    }
+    this.#diagnosticRevision = frame.revision
+    this.#rectPlanReused = true
+    this.#rectPreparedItems = reused.recordUpdates.length
+    this.#commitPreparedFrame(frame, this.#preparedFrameCache!.prepared, reused.plan, true)
+    this.#invalidateEvictedTextGeometries()
+  }
+
+  #commitPreparedFrame(
+    frame: RenderFrame,
+    prepared: PreparedItem[],
+    plan: PreparedFramePlan,
+    reusableSources: boolean,
+  ): void {
+    this.#frameDocument = frame.document
+    this.#frameRoot = frame.root
+    this.#lastFrameRevision = frame.revision
+    this.#preparedFrameCache = Object.freeze({
+      revision: frame.revision,
+      viewportWidth: frame.viewport.width,
+      viewportHeight: frame.viewport.height,
+      prepared,
+      plan,
+      rootChildren: Object.freeze([...this.root.children]),
+      reusableSources,
+      recordVersion: this.#rectLayer.instances.recordAttribute.version,
+      orderVersion: this.#rectLayer.instances.orderAttribute.version,
+    })
+  }
+
+  #hasRetainedBatchTopology(plan: PreparedFramePlan): boolean {
+    if (this.#rectLayer.instances.count !== plan.slottedRects.length) return false
+    let runIndex = 0
+    for (const item of plan.items) {
+      if (item.kind !== "rect-batch") continue
+      const run = this.#rectRuns[runIndex]
+      if (
+        run === undefined
+        || run.parent !== this.root
+        || run.firstInstance !== item.firstInstance
+        || run.count !== item.items.length
+      ) return false
+      runIndex += 1
+    }
+    return this.#rectRuns.filter((run) => run.parent === this.root).length === runIndex
+  }
+
+  #planFrame(prepared: readonly PreparedItem[]): PreparedFramePlan {
+    if (this.#rectInstancing === "disabled") {
+      return Object.freeze({
+        items: prepared,
+        slottedRects: Object.freeze([]),
+        batchedTokens: new Set<DisplayToken>(),
+      })
+    }
+
+    const slottedRects: PreparedRectItem[] = []
+    const batchedTokens = new Set<DisplayToken>()
+    const orderIndexByToken = new Map<DisplayToken, number>()
+    for (const value of prepared) {
+      if (
+        value.kind !== "rect"
+        || !isRectInstanceCompatible(value)
+        || slottedRects.length >= this.#rectLayer.instances.maxCapacity
+      ) continue
+      orderIndexByToken.set(value.token, slottedRects.length)
+      slottedRects.push(value)
+    }
+
+    const items: PlannedItem[] = []
+    let run: PreparedRectItem[] = []
+    let spatialIndex = new RectRunSpatialIndex()
+    const flushRun = (): void => {
+      if (run.length >= 2) {
+        const firstInstance = orderIndexByToken.get(run[0]!.token)
+        if (firstInstance === undefined) throw new Error("Rect run lost its instance order")
+        for (const value of run) batchedTokens.add(value.token)
+        items.push(Object.freeze({
+          kind: "rect-batch",
+          items: Object.freeze([...run]),
+          firstInstance,
+        }))
+      } else if (run.length === 1) {
+        items.push(run[0]!)
+      }
+      run = []
+      spatialIndex = new RectRunSpatialIndex()
+    }
+
+    for (const value of prepared) {
+      const orderIndex = value.kind === "rect"
+        ? orderIndexByToken.get(value.token)
+        : undefined
+      if (value.kind !== "rect" || orderIndex === undefined) {
+        flushRun()
+        items.push(value)
+        continue
+      }
+
+      const candidateBounds = rectInstanceBounds(value)
+      let admission = spatialIndex.add(candidateBounds)
+      if (admission === "overlap") {
+        flushRun()
+        admission = spatialIndex.add(candidateBounds)
+      }
+      if (admission === "too-large") {
+        flushRun()
+        items.push(value)
+        continue
+      }
+      run.push(value)
+    }
+    flushRun()
+
+    return Object.freeze({
+      items: Object.freeze(items),
+      slottedRects: Object.freeze(slottedRects),
+      batchedTokens,
+    })
+  }
+
+  #synchronizeRectLayer(values: readonly PreparedRectItem[]): void {
+    const desiredTokens = new Set(values.map(({token}) => token))
+    for (const [token, handle] of this.#rectHandles) {
+      if (desiredTokens.has(token)) continue
+      this.#rectLayer.instances.remove(handle)
+      this.#rectHandles.delete(token)
+      this.#rectRecords.delete(token)
+      this.#rectSourceItems.delete(token)
+    }
+
+    for (let orderIndex = 0; orderIndex < values.length; orderIndex += 1) {
+      const value = values[orderIndex]!
+      let handle = this.#rectHandles.get(value.token)
+      if (handle === undefined) {
+        const record = packRectInstance(value)
+        handle = this.#rectLayer.instances.allocate(record, orderIndex)
+        this.#rectHandles.set(value.token, handle)
+        this.#rectRecords.set(value.token, record)
+        this.#rectSourceItems.set(value.token, value.item)
+        continue
+      }
+
+      if (this.#rectLayer.instances.handleAt(orderIndex) !== handle) {
+        this.#rectLayer.instances.move(handle, orderIndex)
+      }
+      if (this.#rectSourceItems.get(value.token) === value.item) continue
+      const record = packRectInstance(value)
+      const previous = this.#rectRecords.get(value.token)
+      if (previous === undefined || !sameFloatRecord(previous, record)) {
+        this.#rectLayer.instances.setRecord(handle, record)
+        this.#rectRecords.set(value.token, record)
+      }
+      this.#rectSourceItems.set(value.token, value.item)
+    }
+  }
+
+  #prepareFrame(frame: RenderFrame): PreparedItem[] {
     const tokens = new Set<DisplayToken>()
     const prepared: PreparedItem[] = []
     for (let index = 0; index < frame.displayList.length; index++) {
       const item = frame.displayList[index]!
+      if (item === null || typeof item !== "object") {
+        throw new TypeError(`Display item at index ${index} must be an object`)
+      }
       if (!item.key) throw new Error(`Display item at index ${index} requires a non-empty key`)
+      this.#validateDisplayNode(item.node, frame, `frame.displayList[${index}].node`)
       const token = this.#tokenFor(item.node, item.key)
       if (tokens.has(token)) throw new Error(`Duplicate display item identity at index ${index}`)
       tokens.add(token)
@@ -275,12 +733,42 @@ export class RendererWebGpuBackend {
     return prepared
   }
 
+  #prepareRectAt(
+    item: RectDisplayItem,
+    token: DisplayToken,
+    index: number,
+    frame: RenderFrame,
+  ): PreparedRectItem {
+    const label = `frame.displayList[${index}]`
+    if (!item.key) throw new Error(`Display item at index ${index} requires a non-empty key`)
+    this.#validateDisplayNode(item.node, frame, `${label}.node`)
+    assertFinite(item.x, `${label}.x`)
+    assertFinite(item.y, `${label}.y`)
+    this.#validateTransform(item.transform, `${label}.transform`)
+    assertFiniteNonNegative(item.width, `${label}.width`)
+    assertFiniteNonNegative(item.height, `${label}.height`)
+    return this.#prepareRect(item, token, label, frame)
+  }
+
+  #validateDisplayNode(node: DisplayNode, frame: RenderFrame, label: string): void {
+    if (node === null || typeof node !== "object") {
+      throw new TypeError(`${label} must be a semantic Node`)
+    }
+    if (node !== frame.document && node.ownerDocument !== frame.document) {
+      throw new TypeError(`${label} belongs to another Document`)
+    }
+  }
+
   #prepareRect(
     item: RectDisplayItem,
     token: DisplayToken,
     label: string,
     frame: RenderFrame,
   ): PreparedRectItem {
+    const cacheable = Array.isArray(item.clips) && item.clips.length === 0
+    const cached = cacheable ? this.#preparedRectCache.get(item) : undefined
+    if (cached !== undefined) return Object.freeze({...cached, token})
+
     const opacity = assertUnitOpacity(item.opacity, `${label}.opacity`)
     const border = item.border
     if (border === null || typeof border !== "object") {
@@ -304,7 +792,7 @@ export class RendererWebGpuBackend {
     }
     const borderColor = visibleUniformBorderColor(widths, border.colors, label)
     const shadow = prepareRectShadow(item, widths, label)
-    return Object.freeze({
+    const prepared = Object.freeze({
       kind: "rect",
       item,
       fill: parseDisplayColor(item.color || WHITE),
@@ -316,6 +804,11 @@ export class RendererWebGpuBackend {
       clips: this.#prepareClips(item.clips, frame, label),
       token,
     })
+    if (cacheable) {
+      const {token: _token, ...payload} = prepared
+      this.#preparedRectCache.set(item, Object.freeze(payload))
+    }
+    return prepared
   }
 
   #prepareClips(
@@ -626,6 +1119,206 @@ export class RendererWebGpuBackend {
   }
 }
 
+type RectBounds = Readonly<{
+  minX: number
+  minY: number
+  maxX: number
+  maxY: number
+}>
+
+type RectRunAdmission = "accepted" | "overlap" | "too-large"
+
+class RectRunSpatialIndex {
+  readonly #rows = new Map<number, Map<number, RectBounds[]>>()
+
+  public add(bounds: RectBounds): RectRunAdmission {
+    if (![bounds.minX, bounds.minY, bounds.maxX, bounds.maxY].every(Number.isFinite)) {
+      return "too-large"
+    }
+    const minCellX = Math.floor(bounds.minX / RECT_RUN_INDEX_CELL_SIZE)
+    const maxCellX = Math.floor(bounds.maxX / RECT_RUN_INDEX_CELL_SIZE)
+    const minCellY = Math.floor(bounds.minY / RECT_RUN_INDEX_CELL_SIZE)
+    const maxCellY = Math.floor(bounds.maxY / RECT_RUN_INDEX_CELL_SIZE)
+    if (![minCellX, maxCellX, minCellY, maxCellY].every(Number.isSafeInteger)) {
+      return "too-large"
+    }
+    const cellCount = (maxCellX - minCellX + 1) * (maxCellY - minCellY + 1)
+    if (cellCount > MAX_RECT_RUN_INDEX_CELLS) return "too-large"
+
+    for (let cellY = minCellY; cellY <= maxCellY; cellY += 1) {
+      const row = this.#rows.get(cellY)
+      if (row === undefined) continue
+      for (let cellX = minCellX; cellX <= maxCellX; cellX += 1) {
+        const occupants = row.get(cellX)
+        if (occupants?.some((previous) => rectBoundsOverlap(previous, bounds))) {
+          return "overlap"
+        }
+      }
+    }
+
+    for (let cellY = minCellY; cellY <= maxCellY; cellY += 1) {
+      let row = this.#rows.get(cellY)
+      if (row === undefined) {
+        row = new Map()
+        this.#rows.set(cellY, row)
+      }
+      for (let cellX = minCellX; cellX <= maxCellX; cellX += 1) {
+        const occupants = row.get(cellX)
+        if (occupants === undefined) row.set(cellX, [bounds])
+        else occupants.push(bounds)
+      }
+    }
+    return "accepted"
+  }
+}
+
+function isRectInstanceCompatible(value: PreparedRectItem): boolean {
+  return value.clips.length === 0
+    && value.item.width > 0
+    && value.item.height > 0
+    && value.item.transform.scaleX !== 0
+    && value.item.transform.scaleY !== 0
+}
+
+function rectInstanceBounds(value: PreparedRectItem): RectBounds {
+  const {item} = value
+  const geometryWidth = value.shadow?.geometryWidth ?? item.width
+  const geometryHeight = value.shadow?.geometryHeight ?? item.height
+  const center = applyRenderTransform(
+    item.transform,
+    item.x + item.width / 2,
+    item.y + item.height / 2,
+  )
+  const halfWidth = Math.abs(item.transform.scaleX) * geometryWidth / 2
+  const halfHeight = Math.abs(item.transform.scaleY) * geometryHeight / 2
+  return Object.freeze({
+    minX: center.x - halfWidth,
+    minY: center.y - halfHeight,
+    maxX: center.x + halfWidth,
+    maxY: center.y + halfHeight,
+  })
+}
+
+function rectBoundsOverlap(left: RectBounds, right: RectBounds): boolean {
+  return !(
+    left.maxX < right.minX
+    || right.maxX < left.minX
+    || left.maxY < right.minY
+    || right.maxY < left.minY
+  )
+}
+
+function packRectInstance(value: PreparedRectItem): Float32Array {
+  const record = new Float32Array(ROUNDED_RECT_INSTANCE_RECORD_BYTE_LENGTH / 4)
+  const {item} = value
+  record.set([item.x, item.y, item.width, item.height], ROUNDED_RECT_INSTANCE_OFFSETS.rect)
+  record.set([
+    item.transform.scaleX,
+    item.transform.scaleY,
+    item.transform.translateX,
+    item.transform.translateY,
+  ], ROUNDED_RECT_INSTANCE_OFFSETS.transform)
+  record.set([value.fill.r, value.fill.g, value.fill.b, value.fill.a], ROUNDED_RECT_INSTANCE_OFFSETS.fill)
+  record.set(
+    [value.border.r, value.border.g, value.border.b, value.border.a],
+    ROUNDED_RECT_INSTANCE_OFFSETS.border,
+  )
+  record.set(value.radii, ROUNDED_RECT_INSTANCE_OFFSETS.radii)
+  record.set(value.borderWidths, ROUNDED_RECT_INSTANCE_OFFSETS.borderWidths)
+  record.set([
+    value.opacity,
+    value.shadow?.blurRadius ?? 0,
+    value.shadow?.spreadRadius ?? 0,
+    0,
+  ], ROUNDED_RECT_INSTANCE_OFFSETS.params)
+  return record
+}
+
+function sameFloatRecord(left: Float32Array, right: Float32Array): boolean {
+  if (left.length !== right.length) return false
+  for (let index = 0; index < left.length; index += 1) {
+    if (left[index] !== right[index]) return false
+  }
+  return true
+}
+
+function sameObjectOrder(left: readonly object[], right: readonly object[]): boolean {
+  return left.length === right.length
+    && left.every((value, index) => value === right[index])
+}
+
+function sameDisplayIdentity(left: DisplayItem, right: DisplayItem): boolean {
+  return left.kind === right.kind
+    && left.node === right.node
+    && left.key === right.key
+}
+
+function sameRectBatchTopology(left: RectDisplayItem, right: RectDisplayItem): boolean {
+  return Object.is(left.x, right.x)
+    && Object.is(left.y, right.y)
+    && Object.is(left.width, right.width)
+    && Object.is(left.height, right.height)
+    && sameRenderTransform(left.transform, right.transform)
+    && sameRectShadowGeometry(left.shadow, right.shadow)
+    && Array.isArray(right.clips)
+    && left.clips.length === 0
+    && right.clips.length === 0
+}
+
+function sameRenderTransform(left: RenderTransform, right: RenderTransform): boolean {
+  return Object.is(left.scaleX, right.scaleX)
+    && Object.is(left.scaleY, right.scaleY)
+    && Object.is(left.translateX, right.translateX)
+    && Object.is(left.translateY, right.translateY)
+}
+
+function sameRectShadowGeometry(
+  left: RectDisplayItem["shadow"],
+  right: RectDisplayItem["shadow"],
+): boolean {
+  if (left === null || right === null) return left === right
+  return Object.is(left.blurRadius, right.blurRadius)
+    && Object.is(left.spreadRadius, right.spreadRadius)
+}
+
+function isReusablePreparedItem(value: PreparedItem): boolean {
+  return isReusableDisplayItem(value.item)
+}
+
+function isReusableDisplayItem(item: DisplayItem): boolean {
+  if (
+    !Object.isFrozen(item)
+    || !Object.isFrozen(item.transform)
+    || !Object.isFrozen(item.clips)
+    || !item.clips.every(isReusableRenderClip)
+  ) return false
+  if (item.kind !== "rect") return true
+  return Object.isFrozen(item.border)
+    && Object.isFrozen(item.border.widths)
+    && Object.isFrozen(item.border.colors)
+    && Object.isFrozen(item.border.radii)
+    && (item.shadow === null || Object.isFrozen(item.shadow))
+}
+
+function isReusableRenderClip(clip: RenderClip): boolean {
+  return Object.isFrozen(clip)
+    && Object.isFrozen(clip.transform)
+    && Object.isFrozen(clip.radii)
+    && Object.isFrozen(clip.radii.topLeft)
+    && Object.isFrozen(clip.radii.topRight)
+    && Object.isFrozen(clip.radii.bottomRight)
+    && Object.isFrozen(clip.radii.bottomLeft)
+}
+
+function pendingUploadBytes(attribute: BufferAttribute): number {
+  if (!attribute.needsUpdate) return 0
+  if (attribute.fullUpdateRequired) return attribute.array.byteLength
+  return attribute.updateRanges.reduce(
+    (total, range) => total + range.count * attribute.array.BYTES_PER_ELEMENT,
+    0,
+  )
+}
+
 function positionPlane(
   node: Mesh,
   item: Readonly<{
@@ -839,18 +1532,42 @@ function parseDisplayColor(value: string): Color {
 
   const functional = /^(rgb|rgba)\((.*)\)$/.exec(normalized)
   if (functional !== null) {
-    const parts = functional[2]!.split(",").map((part) => part.trim())
-    const expected = functional[1] === "rgba" ? 4 : 3
-    if (parts.length === expected) {
-      const r = parseRgbChannel(parts[0]!)
-      const g = parseRgbChannel(parts[1]!)
-      const b = parseRgbChannel(parts[2]!)
-      const a = parts[3] === undefined ? 1 : parseAlphaChannel(parts[3])
+    const parts = functionalColorParts(functional[1]!, functional[2]!)
+    if (parts !== null) {
+      const r = parseRgbChannel(parts.channels[0])
+      const g = parseRgbChannel(parts.channels[1])
+      const b = parseRgbChannel(parts.channels[2])
+      const a = parts.alpha === null ? 1 : parseAlphaChannel(parts.alpha)
       if ([r, g, b, a].every(Number.isFinite)) return new Color(r, g, b, a)
     }
   }
 
   throw new Error(`Unsupported resolved display color: ${value}`)
+}
+
+function functionalColorParts(
+  functionName: string,
+  value: string,
+): Readonly<{channels: readonly [string, string, string]; alpha: string | null}> | null {
+  if (value.includes(",")) {
+    const parts = value.split(",").map((part) => part.trim())
+    const expected = functionName === "rgba" ? 4 : 3
+    if (parts.length !== expected || parts.some((part) => part.length === 0)) return null
+    return Object.freeze({
+      channels: Object.freeze([parts[0]!, parts[1]!, parts[2]!] as const),
+      alpha: parts[3] ?? null,
+    })
+  }
+
+  const slash = value.split("/")
+  if (slash.length > 2) return null
+  const channels = slash[0]?.trim().split(/\s+/).filter(Boolean) ?? []
+  const alpha = slash[1]?.trim() ?? null
+  if (channels.length !== 3 || alpha === "") return null
+  return Object.freeze({
+    channels: Object.freeze([channels[0]!, channels[1]!, channels[2]!] as const),
+    alpha,
+  })
 }
 
 function parseRgbChannel(value: string): number {

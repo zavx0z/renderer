@@ -1,4 +1,5 @@
 export { createDocumentRenderer } from "./renderer.ts"
+export {createDocumentInteractionState} from "./pseudo-state.ts"
 export {
   createDocumentInteractionController,
   hitTest,
@@ -48,3 +49,8 @@ export type {
   TitleCandidate,
   TitleTooltip,
 } from "./interaction.ts"
+export type {
+  DocumentInteractionState,
+  DocumentInteractionStateChange,
+  DocumentInteractionStateSubscriber,
+} from "./pseudo-state.ts"

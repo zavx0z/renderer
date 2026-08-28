@@ -5,6 +5,14 @@ import type {HTMLOptionElement} from "./html-option-element.ts"
 import type {HTMLTextAreaElement} from "./html-text-area-element.ts"
 import type {TextSelection} from "./internal/text-selection.ts"
 
+export type FocusStateChange = Readonly<{
+  type: "focus"
+  target: HTMLElement
+  property: "focus" | "focus-within"
+  oldValue: boolean
+  newValue: boolean
+}>
+
 export type ScrollStateChange = Readonly<{
   type: "scroll"
   target: HTMLElement
@@ -89,6 +97,7 @@ export type PopoverStateChange = Readonly<{
 }>
 
 export type DocumentStateChange =
+  | FocusStateChange
   | ScrollStateChange
   | InputStateChange
   | OptionSelectedStateChange

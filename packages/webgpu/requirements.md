@@ -9,7 +9,12 @@ accessibility или input semantics.
 1. Backend принимает канонический `RenderFrame` из `@zavx0z/renderer`.
    Пара `DisplayItem.node` + `DisplayItem.key` является retained identity
    visual item и должна встречаться в `displayList` не более одного раза.
-   Один semantic node может порождать несколько visual items.
+   Один semantic node может порождать несколько visual items. Первый успешно
+   применённый frame привязывает backend к exact `Document` и root; другой
+   owner отклоняется. Revision является non-negative safe integer и не может
+   идти назад. Повтор той же revision остаётся допустим для exact clean frame
+   либо interaction overlay, но не получает incremental batch fast path при
+   изменившемся display list.
 2. Поддерживаются только `kind: "rect" | "text" | "image"`. Неизвестный kind,
    пустой `key`, повторная пара `node` + `key`, отрицательный размер Rect,
    нечисловая geometry, opacity вне finite `0..1` и malformed border завершают
@@ -19,9 +24,10 @@ accessibility или input semantics.
    `(x, -(y + fontSize), 0)`. Paint order задаётся порядком `displayList` и
    `root.children` под Engine `renderLayer = "ui"`.
 4. `color` уже разрешён upstream. Backend поддерживает только транспортные
-   формы `#rgb`, `#rgba`, `#rrggbb`, `#rrggbbaa`, `rgb(...)`, `rgba(...)` и
-   `transparent`. Внутренний белый fallback защищает только от structurally
-   malformed external frame; полный CSS color parsing запрещён.
+   формы `#rgb`, `#rgba`, `#rrggbb`, `#rrggbbaa`, legacy comma и modern
+   space/slash формы `rgb(...)`/`rgba(...)`, а также `transparent`. Внутренний
+   белый fallback защищает только от structurally malformed external frame;
+   полный CSS color parsing запрещён.
 5. `RectDisplayItem.opacity` является уже разрешённым upstream effective
    ancestor product. Backend передаёт его в `RoundedRectMaterial.opacity`, не
    вычисляя CSS semantics повторно. Per-corner radii передаются в порядке
@@ -58,7 +64,7 @@ accessibility или input semantics.
 
 1. Backend создаёт и публично предоставляет один стабильный `Object3D` root с
    `renderLayer = "ui"`.
-2. Стабильная пара `node` + `key` того же kind сохраняет Engine object,
+2. На scalar fallback стабильная пара `node` + `key` того же kind сохраняет Engine object,
    geometry и material. Position и paint обновляются in place. Каждый Rect
    использует `RoundedRectMaterial`; fill, opacity, four-edge border widths и четыре
    corner radii изменяются на том же material. Rect resize меняет
@@ -77,14 +83,67 @@ accessibility или input semantics.
    `invalidateGeometry` не вызывается.
 6. Изменение kind при том же `node` создаёт новый Engine object и освобождает
    прежний owned resource.
-7. `root.children` всегда повторяет порядок `frame.displayList`. Backend не
-   создаёт скрытые дополнительные scene roots.
+7. `root.children` сохраняет exact paint order `frame.displayList`: scalar
+   owner представляет один item, а `InstancedRoundedRect` — один consecutive
+   run на его точном месте. Backend не создаёт скрытые дополнительные scene
+   roots и не переносит run через scalar barrier.
 8. Shadow Rect использует тот же RoundedRect pipeline и один стабильный
    Mesh/PlaneGeometry/RoundedRectMaterial. Изменение offset, blur, spread,
    color, opacity, radii или transform обновляет эти owners in place; plane
    vertex resize не вызывает `invalidateGeometry`, новый texture/offscreen
    pass/pipeline не создаётся. Удаление shadow item следует обычному exact
    cleanup закону.
+
+## Retained Rect instancing
+
+1. Safe instancing включён по умолчанию. `rectInstancing: "disabled"` оставляет
+   весь кадр на scalar пути только как явный oracle/fallback для проверки.
+   `maxRectInstances` является positive hard bound; overflow не расширяет его
+   молча и остаётся scalar.
+2. Backend сначала валидирует полный immutable frame по обычному контракту.
+   Затем он автоматически выделяет maximal consecutive Rect runs. В run
+   допускаются только positive-size Rect без clips, с finite non-zero
+   axis-aligned scale/translation и с уже представимыми scalar fill/border/
+   radii/shadow значениями.
+3. AABB каждого кандидата включает analytical shadow expansion и signed scale.
+   Внутри одного draw допускаются только pairwise non-overlapping AABB. Touch,
+   overlap, clip, Text, Image, capacity overflow либо bounded spatial-index
+   policy разрывает run. Индекс использует 64-logical-unit cells; Rect,
+   покрывающий больше 256 cells либо выходящий за safe integer cell address,
+   остаётся scalar. Поэтому blending order
+   внутри draw не может изменить пиксель, а порядок между run и scalar owners
+   остаётся порядком display list.
+4. Один backend владеет одним Engine `RoundedRectInstanceLayer`. Каждая
+   retained пара `(node, key)` в совместимом subset получает canonical
+   generation-guarded handle и stable physical slot. Insert/delete/reorder
+   меняет только dense order; один изменённый item помечает ровно свой
+   128-byte record. Несколько `InstancedRoundedRect` run views разделяют unit
+   quad, records и order и вызывают один indexed instanced draw на run.
+5. Packed record содержит exact logical `x/y/width/height`, signed transform,
+   fill/border RGBA, четыре radii, четыре widths, opacity, shadow blur/spread и
+   local Z. DPR и viewport не переписывают эти значения. CPU `RenderFrame.hits`
+   остаётся единственным hit oracle; Engine не получает semantic node.
+6. `diagnostics` раздельно показывает scalar Rect draws, instanced run draws,
+   admitted instances, active slots/capacity и pending record/order upload
+   ranges/bytes. `rectPlanReused` и `rectPreparedItems` показывают, был ли
+   использован incremental plan и сколько display-list items прошли текущий
+   prepare traversal (на fast path — только changed references). Эти счётчики
+   не подменяют фактический Engine draw: Engine
+   pipeline тестируется отдельным command/readback seam.
+7. После успешного полного кадра backend может повторно использовать его
+   validated prepared plan только при неизменных Document/root/viewport,
+   display-list length, exact `(node,key,kind)` order, retained root topology и
+   deep-immutable source records. Изменившиеся references допускаются на fast
+   path только для Rect внутри уже существующего instanced run и только при
+   равных x/y/width/height, transform, shadow expansion и empty clip topology.
+   Reorder, scalar item change, geometry/transform/shadow/clip change,
+   overlap/compatibility change либо mutable source немедленно выбирают полный
+   prepare/plan/synchronize fallback.
+8. Fast path полностью validates и packs все changed Rects до первой retained
+   mutation. Затем он меняет только отличающиеся 128-byte records; dense order,
+   run owners, scalar entries и root children не трогаются. Ошибка preparation
+   сохраняет предыдущие records и diagnostics, а неожиданная ошибка нескольких
+   record writes откатывает уже применённые records прежде чем выйти fail-closed.
 
 ## Presentation clip transport
 
@@ -120,13 +179,15 @@ accessibility или input semantics.
 ## Cleanup
 
 1. Удалённый item немедленно отсоединяется от root и удаляется из retained map.
-2. Каждая принадлежащая Rect или Image geometry ровно один раз передаётся обязательному
+2. Каждая принадлежащая scalar Rect или Image geometry ровно один раз передаётся обязательному
    `invalidateGeometry` callback. Shared geometry `CachedText` не
    инвалидируется вместе с отдельным Text item.
 3. Engine-эвикты shared Text layout cache также передаются
    `invalidateGeometry` после кадра либо disposal.
 4. `dispose()` идемпотентен, удаляет все owned children и invalidates все
-   owned non-shared geometries. `applyFrame()` после disposal запрещён.
+   owned non-shared geometries. Если instanced layer хотя бы раз был
+   представлен, его shared unit-quad/storage geometry invalidates ровно один
+   раз. `applyFrame()` после disposal запрещён.
 5. Каждый retained Image получает source-specific `ImageMaterial.onTextureChange`.
    Callback запрашивает host presentation только пока exact entry активен и
    source остаётся текущим. Callback старого source, удалённого item или

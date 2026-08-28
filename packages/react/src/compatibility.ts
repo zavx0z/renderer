@@ -1,0 +1,61 @@
+export type CompatibilityStatus = "supported" | "unsupported"
+
+export const reactCompatibility = Object.freeze({
+  package: "@zavx0z/react",
+  reference: "React 19.2 hook names",
+  compilerOwner: "@zavx0z/template",
+  runtimeModel: "compiled-static-template",
+  reactPackageAlias: false,
+  fiber: false,
+  virtualDom: false,
+  features: Object.freeze({
+    createRoot: "supported",
+    functionComponents: "supported",
+    nestedComponents: "supported",
+    memo: "supported",
+    keyedCollections: "supported",
+    conditionalRanges: "supported",
+    customHooks: "supported",
+    contextConsumer: "unsupported",
+    jsxContextProvider: "unsupported",
+    lowLevelContextProviders: "supported",
+    debugValueInspection: "unsupported",
+    effectEventCallsiteValidation: "unsupported",
+    governedReactImports: "unsupported",
+    templateCompilerAbi: "supported",
+    templateCompilerIntegration: "supported",
+    compilerExport: "unsupported",
+    tsxAuthoring: "supported",
+    browserTargetBuild: "supported",
+    browserExecution: "unsupported",
+    gpuInstancing: "unsupported",
+    passivePaintScheduling: "unsupported",
+    serverExternalStoreSnapshots: "unsupported",
+    sourceMaps: "unsupported",
+    staticTemplateIdentity: "supported",
+    strictModeEffectReplay: "unsupported"
+  }),
+  hooks: Object.freeze({
+    use: "unsupported",
+    useActionState: "unsupported",
+    useCallback: "supported",
+    useContext: "supported",
+    useDebugValue: "supported",
+    useDeferredValue: "unsupported",
+    useEffect: "supported",
+    useEffectEvent: "supported",
+    useId: "supported",
+    useImperativeHandle: "supported",
+    useInsertionEffect: "supported",
+    useLayoutEffect: "supported",
+    useMemo: "supported",
+    useOptimistic: "unsupported",
+    useReducer: "supported",
+    useRef: "supported",
+    useState: "supported",
+    useSyncExternalStore: "supported",
+    useTransition: "unsupported"
+  })
+} as const)
+
+export type ReactCompatibilityManifest = typeof reactCompatibility

@@ -1,4 +1,5 @@
 import type { Document, Element, Node } from "@zavx0z/dom"
+import type {DocumentInteractionState} from "./pseudo-state.ts"
 
 export type RenderDisplay = "block" | "inline" | "flex" | "none"
 export type RenderFlexDirection = "row" | "column"
@@ -200,6 +201,7 @@ export type CreateDocumentRendererOptions = Readonly<{
   root: Node
   viewport: RenderViewport
   styleSheets?: readonly string[]
+  interactionState?: DocumentInteractionState
 }>
 
 export interface DocumentRenderer {

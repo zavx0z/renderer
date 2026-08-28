@@ -59,22 +59,18 @@ advisory text, допускаемый для tooltip, с наследовани�
 `title` не заменяет доступное имя: сам стандарт предупреждает, что полагаться
 на него для accessibility нельзя.
 
-## React
+## Component authoring without React
 
-`react-dom` нельзя направить на произвольные JavaScript DOM objects: это готовый
-host renderer браузера. Нужен custom renderer. Официальный React reconciler
-рекомендует mutation mode платформам с `appendChild`/`removeChild` и описывает
-`createInstance()` через `document.createElement()`:
-[React reconciler README](https://github.com/facebook/react/blob/v19.2.0/packages/react-reconciler/README.md).
+The removed React custom-renderer path preserved React's Fiber/component tree
+and generic reconciliation overhead even though its host instances were
+semantic `@zavx0z/dom` nodes. The accepted direction has no `react`,
+`react-reconciler`, Fiber or persistent virtual DOM dependency.
 
-`@zavx0z/dom-react` реализует этот путь для React 19.2. Fiber остаётся
-authoring/component tree, а host instances — те же `@zavx0z/dom` nodes, которые
-читает renderer. React DevTools может подключиться через reconciler hook.
-
-React Three Fiber подтверждает общую модель custom renderer: JSX `mesh`
-создаёт `THREE.Mesh`, а не browser element:
-[R3F introduction](https://r3f.docs.pmnd.rs/),
-[how it works](https://r3f.docs.pmnd.rs/tutorials/how-it-works).
+Familiar JSX, hook names and root APIs are an authoring contract only.
+`@zavx0z/template/compiler` lowers JSX to the shared compiled-template ABI;
+`@zavx0z/react` owns stable keyed ranges and compact hook slots. Static
+DOM identity is retained, clean frames perform no component work, and the
+renderer continues to consume the same one semantic tree.
 
 ## Browser DevTools
 
@@ -121,10 +117,10 @@ world occlusion и не заменяет собственный renderer. Его
 
 ## Принятая граница репозиториев
 
-- `renderer`: DOM, CPU renderer, WebGPU backend, browser host, React adapter,
-  DevTools bridge;
+- `renderer`: `@zavx0z/react` runtime, DOM, CPU renderer, WebGPU backend,
+  browser host and DevTools bridge;
 - `engine`: GPU/scene/material/resource owner;
-- `template`: addressed DOM compiler;
+- `template`: tagged-template and JSX compiler plus shared compiled-template ABI;
 - `ui`: DOM/CSS compositions, theme/assets and private stories;
 - `storybook`: shared DOM Workbench/lifecycle;
 - generic `layout`, `ui/elements` и отдельный `ui/hud`: retired после

@@ -1,4 +1,5 @@
 import type { Element, Node } from "@zavx0z/dom"
+import type {DocumentInteractionState} from "./pseudo-state.ts"
 import type {
   RenderAlignItems,
   RenderBorderColors,
@@ -106,15 +107,28 @@ type AttributeSelector = Readonly<{
   value?: string
 }>
 
+type SupportedPseudoClass =
+  | "active"
+  | "checked"
+  | "disabled"
+  | "focus"
+  | "focus-within"
+  | "hover"
+  | "indeterminate"
+
+type SelectorCombinator = "child" | "descendant"
+
 type CompoundSelector = Readonly<{
   tag: string | null
   id: string | null
   classes: readonly string[]
   attributes: readonly AttributeSelector[]
+  pseudos: readonly SupportedPseudoClass[]
 }>
 
 type ParsedSelector = Readonly<{
   compounds: readonly CompoundSelector[]
+  combinators: readonly SelectorCombinator[]
   specificity: readonly [number, number, number]
 }>
 
@@ -122,6 +136,14 @@ export type StyleRule = Readonly<{
   selector: ParsedSelector
   declarations: DeclarationMap
   order: number
+}>
+
+export type StyleRuleIndex = Readonly<{
+  universal: readonly StyleRule[]
+  byAttribute: ReadonlyMap<string, readonly StyleRule[]>
+  byClass: ReadonlyMap<string, readonly StyleRule[]>
+  byId: ReadonlyMap<string, readonly StyleRule[]>
+  byTag: ReadonlyMap<string, readonly StyleRule[]>
 }>
 
 type CascadedValue = Readonly<{
@@ -162,7 +184,7 @@ const CENTER_ORIGIN: ComputedTransformOrigin = Object.freeze({
 
 export const parseStyleSheets = (
   styleSheets: readonly string[],
-): readonly StyleRule[] => {
+): StyleRuleIndex => {
   const rules: StyleRule[] = []
   let order = 0
   for (const styleSheet of styleSheets) {
@@ -174,20 +196,90 @@ export const parseStyleSheets = (
       const declarationSource = match[2]
       if (!selectorSource || declarationSource == null) continue
       const declarations = parseDeclarations(declarationSource)
-      for (const part of selectorSource.split(",")) {
-        const selector = parseSelector(part.trim())
-        if (!selector) continue
+      const selectors = selectorSource
+        .split(",")
+        .map((part) => parseSelector(part.trim()))
+      if (selectors.some((selector) => selector === null)) continue
+      for (const selector of selectors) {
+        if (selector === null) continue
         rules.push(Object.freeze({ selector, declarations, order: order++ }))
       }
     }
   }
-  return Object.freeze(rules)
+  return indexStyleRules(rules)
+}
+
+const indexStyleRules = (rules: readonly StyleRule[]): StyleRuleIndex => {
+  const universal: StyleRule[] = []
+  const byAttribute = new Map<string, StyleRule[]>()
+  const byClass = new Map<string, StyleRule[]>()
+  const byId = new Map<string, StyleRule[]>()
+  const byTag = new Map<string, StyleRule[]>()
+
+  for (const rule of rules) {
+    const compound = rule.selector.compounds.at(-1)!
+    if (compound.id !== null) appendIndexedRule(byId, compound.id, rule)
+    else if (compound.classes[0] !== undefined) {
+      appendIndexedRule(byClass, compound.classes[0], rule)
+    } else if (compound.attributes[0] !== undefined) {
+      appendIndexedRule(byAttribute, compound.attributes[0].name, rule)
+    } else if (compound.tag !== null && compound.tag !== "*") {
+      appendIndexedRule(byTag, compound.tag, rule)
+    } else universal.push(rule)
+  }
+
+  return Object.freeze({
+    universal: Object.freeze(universal),
+    byAttribute: freezeRuleIndex(byAttribute),
+    byClass: freezeRuleIndex(byClass),
+    byId: freezeRuleIndex(byId),
+    byTag: freezeRuleIndex(byTag),
+  })
+}
+
+const appendIndexedRule = (
+  index: Map<string, StyleRule[]>,
+  key: string,
+  rule: StyleRule,
+): void => {
+  const rules = index.get(key)
+  if (rules === undefined) index.set(key, [rule])
+  else rules.push(rule)
+}
+
+const freezeRuleIndex = (
+  source: ReadonlyMap<string, readonly StyleRule[]>,
+): ReadonlyMap<string, readonly StyleRule[]> => {
+  const result = new Map<string, readonly StyleRule[]>()
+  for (const [key, rules] of source) result.set(key, Object.freeze([...rules]))
+  return result
+}
+
+const forEachCandidateRule = (
+  index: StyleRuleIndex,
+  element: Element,
+  callback: (rule: StyleRule) => void,
+): void => {
+  for (const rule of index.universal) callback(rule)
+  for (const rule of index.byTag.get(elementTag(element)) ?? []) callback(rule)
+
+  const id = element.getAttribute("id")
+  if (id !== null) {
+    for (const rule of index.byId.get(id) ?? []) callback(rule)
+  }
+  for (const className of classTokens(element.getAttribute("class") ?? "")) {
+    for (const rule of index.byClass.get(className) ?? []) callback(rule)
+  }
+  for (const name of element.getAttributeNames()) {
+    for (const rule of index.byAttribute.get(name) ?? []) callback(rule)
+  }
 }
 
 export const computeStyle = (
   element: Element,
   parent: ComputedStyle | null,
-  rules: readonly StyleRule[],
+  rules: StyleRuleIndex,
+  interactionState?: DocumentInteractionState,
 ): ComputedStyle => {
   const tag = elementTag(element)
   const values = new Map<string, CascadedValue>()
@@ -201,8 +293,8 @@ export const computeStyle = (
     sequence,
   )
 
-  for (const rule of rules) {
-    if (!matchesSelector(element, rule.selector)) continue
+  forEachCandidateRule(rules, element, (rule) => {
+    if (!matchesSelector(element, rule.selector, interactionState)) return
     applyDeclarations(
       values,
       rule.declarations,
@@ -210,7 +302,7 @@ export const computeStyle = (
       rule.order,
       sequence,
     )
-  }
+  })
 
   const inline = readInlineStyle(element)
   if (inline)
@@ -222,7 +314,14 @@ export const computeStyle = (
       sequence,
     )
 
-  const color = readValue(values, "color") ?? parent?.color ?? "#000000"
+  const inheritedColor = parent?.color ?? "#000000"
+  const color = resolvedColor(readValue(values, "color"), inheritedColor)
+  const backgroundValue =
+    readValue(values, "background-color") ??
+    readValue(values, "background")
+  const background = backgroundValue === undefined
+    ? null
+    : resolvedColor(backgroundValue, color)
   const fontSize = nonNegativeNumber(
     readValue(values, "font-size"),
     parent?.fontSize ?? 16,
@@ -262,10 +361,7 @@ export const computeStyle = (
     borderWidths: readEdges(values, "border", ZERO_EDGES, false, "width"),
     borderColors: readBorderColors(values, color),
     borderRadii: readBorderRadii(values),
-    background:
-      readValue(values, "background-color") ??
-      readValue(values, "background") ??
-      null,
+    background,
     color,
     fontSize,
     lineHeight: parseLineHeight(
@@ -829,25 +925,94 @@ const parseBorder = (
 }
 
 const parseSelector = (source: string): ParsedSelector | null => {
-  if (!source || /[>+~:]/.test(source)) return null
+  const tokens = tokenizeSelector(source)
+  if (tokens === null) return null
   const compounds: CompoundSelector[] = []
   let ids = 0
   let classes = 0
   let tags = 0
 
-  for (const part of source.split(/\s+/)) {
+  for (const part of tokens.compounds) {
     const compound = parseCompoundSelector(part)
     if (!compound) return null
     compounds.push(compound)
     if (compound.id) ids++
-    classes += compound.classes.length + compound.attributes.length
+    classes += compound.classes.length + compound.attributes.length + compound.pseudos.length
     if (compound.tag && compound.tag !== "*") tags++
   }
 
   if (compounds.length === 0) return null
   return Object.freeze({
     compounds: Object.freeze(compounds),
+    combinators: Object.freeze(tokens.combinators),
     specificity: Object.freeze([ids, classes, tags] as const),
+  })
+}
+
+const tokenizeSelector = (
+  source: string,
+): Readonly<{
+  compounds: readonly string[]
+  combinators: readonly SelectorCombinator[]
+}> | null => {
+  const compounds: string[] = []
+  const combinators: SelectorCombinator[] = []
+  let cursor = 0
+
+  const skipWhitespace = (): boolean => {
+    const start = cursor
+    while (cursor < source.length && /\s/.test(source[cursor]!)) cursor++
+    return cursor !== start
+  }
+
+  skipWhitespace()
+  while (cursor < source.length) {
+    const start = cursor
+    let bracketDepth = 0
+    let quote: "\"" | "'" | null = null
+    while (cursor < source.length) {
+      const character = source[cursor]!
+      if (quote !== null) {
+        if (character === "\\") return null
+        if (character === quote) quote = null
+        cursor++
+        continue
+      }
+      if (character === "\"" || character === "'") {
+        if (bracketDepth === 0) return null
+        quote = character
+        cursor++
+        continue
+      }
+      if (character === "[") bracketDepth++
+      else if (character === "]") {
+        bracketDepth--
+        if (bracketDepth < 0) return null
+      } else if (bracketDepth === 0 && (character === ">" || /\s/.test(character))) {
+        break
+      }
+      cursor++
+    }
+    if (quote !== null || bracketDepth !== 0) return null
+    const compound = source.slice(start, cursor).trim()
+    if (compound === "") return null
+    compounds.push(compound)
+
+    const separated = skipWhitespace()
+    if (cursor >= source.length) break
+    if (source[cursor] === ">") {
+      cursor++
+      skipWhitespace()
+      if (cursor >= source.length || source[cursor] === ">") return null
+      combinators.push("child")
+    } else if (separated) combinators.push("descendant")
+    else return null
+  }
+
+  if (compounds.length === 0 || combinators.length !== compounds.length - 1) return null
+  return Object.freeze({
+    compounds: Object.freeze(compounds),
+    combinators: Object.freeze(combinators),
   })
 }
 
@@ -857,6 +1022,7 @@ const parseCompoundSelector = (source: string): CompoundSelector | null => {
   let id: string | null = null
   const classes: string[] = []
   const attributes: AttributeSelector[] = []
+  const pseudos: SupportedPseudoClass[] = []
 
   const tagMatch = /^(\*|[a-zA-Z][\w-]*)/.exec(source)
   if (tagMatch?.[0]) {
@@ -868,6 +1034,7 @@ const parseCompoundSelector = (source: string): CompoundSelector | null => {
     const rest = source.slice(cursor)
     const idMatch = /^#([\w-]+)/.exec(rest)
     if (idMatch?.[1]) {
+      if (id !== null) return null
       id = idMatch[1]
       cursor += idMatch[0].length
       continue
@@ -883,9 +1050,9 @@ const parseCompoundSelector = (source: string): CompoundSelector | null => {
     )
     if (attributeMatch?.[1]) {
       const attribute = attributeMatch[2] === undefined
-        ? Object.freeze({name: attributeMatch[1]})
+        ? Object.freeze({name: attributeMatch[1].toLowerCase()})
         : Object.freeze({
-            name: attributeMatch[1],
+            name: attributeMatch[1].toLowerCase(),
             value: attributeMatch[2].trim(),
           })
       attributes.push(
@@ -894,43 +1061,63 @@ const parseCompoundSelector = (source: string): CompoundSelector | null => {
       cursor += attributeMatch[0].length
       continue
     }
+    const pseudoMatch = /^:([a-z-]+)/.exec(rest)
+    if (pseudoMatch?.[1]) {
+      if (!isSupportedPseudoClass(pseudoMatch[1])) return null
+      pseudos.push(pseudoMatch[1])
+      cursor += pseudoMatch[0].length
+      continue
+    }
     return null
   }
 
-  if (!tag && !id && classes.length === 0 && attributes.length === 0)
+  if (!tag && !id && classes.length === 0 && attributes.length === 0 && pseudos.length === 0)
     return null
   return Object.freeze({
     tag,
     id,
     classes: Object.freeze(classes),
     attributes: Object.freeze(attributes),
+    pseudos: Object.freeze(pseudos),
   })
 }
+
+const isSupportedPseudoClass = (value: string): value is SupportedPseudoClass =>
+  value === "active" ||
+  value === "checked" ||
+  value === "disabled" ||
+  value === "focus" ||
+  value === "focus-within" ||
+  value === "hover" ||
+  value === "indeterminate"
 
 const matchesSelector = (
   element: Element,
   selector: ParsedSelector,
+  interactionState?: DocumentInteractionState,
 ): boolean => {
   let current: Element | null = element
   for (let index = selector.compounds.length - 1; index >= 0; index--) {
     const compound = selector.compounds[index]
     if (!compound) return false
-    if (index === selector.compounds.length - 1) {
-      if (!current || !matchesCompound(current, compound)) return false
-      current = parentElement(current)
-      continue
-    }
-    while (current && !matchesCompound(current, compound))
-      current = parentElement(current)
-    if (!current) return false
+    if (!current || !matchesCompound(current, compound, interactionState)) return false
+    if (index === 0) return true
+
+    const combinator = selector.combinators[index - 1]
     current = parentElement(current)
+    if (combinator === "child") continue
+    const ancestor = selector.compounds[index - 1]!
+    while (current && !matchesCompound(current, ancestor, interactionState)) {
+      current = parentElement(current)
+    }
   }
-  return true
+  return false
 }
 
 const matchesCompound = (
   element: Element,
   selector: CompoundSelector,
+  interactionState?: DocumentInteractionState,
 ): boolean => {
   if (
     selector.tag &&
@@ -940,9 +1127,7 @@ const matchesCompound = (
     return false
   if (selector.id && element.getAttribute("id") !== selector.id) return false
 
-  const classNames = new Set(
-    (element.getAttribute("class") ?? "").split(/\s+/).filter(Boolean),
-  )
+  const classNames = new Set(classTokens(element.getAttribute("class") ?? ""))
   for (const className of selector.classes)
     if (!classNames.has(className)) return false
 
@@ -954,8 +1139,75 @@ const matchesCompound = (
     )
       return false
   }
+  for (const pseudo of selector.pseudos) {
+    if (!matchesPseudoClass(element, pseudo, interactionState)) return false
+  }
   return true
 }
+
+const classTokens = (value: string): readonly string[] =>
+  value.split(/\s+/).filter(Boolean)
+
+const matchesPseudoClass = (
+  element: Element,
+  pseudo: SupportedPseudoClass,
+  interactionState?: DocumentInteractionState,
+): boolean => {
+  switch (pseudo) {
+    case "active":
+      return interactionState?.document === element.ownerDocument &&
+        interactionState.isActive(element)
+    case "hover":
+      return interactionState?.document === element.ownerDocument &&
+        interactionState.isHovered(element)
+    case "focus":
+      return element.ownerDocument?.activeElement === element
+    case "focus-within": {
+      const activeElement = element.ownerDocument?.activeElement ?? null
+      return activeElement !== null && element.contains(activeElement)
+    }
+    case "disabled":
+      return isEffectivelyDisabled(element)
+    case "checked":
+      return element.localName === "input" && readBooleanProperty(element, "checked") ||
+        element.localName === "option" && readBooleanProperty(element, "selected")
+    case "indeterminate":
+      return element.localName === "input" && readBooleanProperty(element, "indeterminate")
+  }
+}
+
+const readBooleanProperty = (element: Element, property: string): boolean =>
+  (element as Element & Record<string, unknown>)[property] === true
+
+const isEffectivelyDisabled = (element: Element): boolean => {
+  if (!DISABLABLE_TAGS.has(element.localName)) return false
+  if (readBooleanProperty(element, "disabled")) return true
+  if (!FIELDSET_DISABLED_TAGS.has(element.localName)) return false
+
+  for (let ancestor = element.parentElement; ancestor; ancestor = ancestor.parentElement) {
+    if (ancestor.localName !== "fieldset" || !ancestor.hasAttribute("disabled")) continue
+    const firstLegend = ancestor.children.find((child) => child.localName === "legend") ?? null
+    if (firstLegend?.contains(element)) continue
+    return true
+  }
+  return false
+}
+
+const DISABLABLE_TAGS = new Set([
+  "button",
+  "fieldset",
+  "input",
+  "option",
+  "select",
+  "textarea",
+])
+
+const FIELDSET_DISABLED_TAGS = new Set([
+  "button",
+  "input",
+  "select",
+  "textarea",
+])
 
 const parentElement = (node: Node): Element | null => {
   let parent = node.parentNode
