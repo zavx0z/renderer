@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "lib": ["ESNext", "DOM"],
+    "target": "ESNext",
+    "module": "Preserve",
+    "moduleDetection": "force",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "verbatimModuleSyntax": true,
+    "noEmit": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+    "exactOptionalPropertyTypes": true,
+    "jsx": "react-jsx",
+    "jsxImportSource": "@zavx0z/dom-components",
+    "types": ["bun"],
+    "paths": {
+      "@zavx0z/dom": ["../dom/src/index.ts"],
+      "@zavx0z/dom-components": ["./src/index.ts"],
+      "@zavx0z/dom-components/*": ["./src/*.ts"]
+    }
+  },
+  "include": [
+    "src/**/*.ts",
+    "test/boundary.test.ts",
+    "test/compiler.test.ts",
+    "test/fixture/counter.tsx",
+    "test/fixture/unsupported-derived.tsx"
+  ],
+  "exclude": ["test/browser-fixture/**/*.ts", "test/browser-fixture/**/*.tsx"]
+}

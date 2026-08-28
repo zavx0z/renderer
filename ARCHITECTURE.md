@@ -1,7 +1,7 @@
 # Architecture
 
-This repository owns one document rendering pipeline with three separately
-loadable production packages:
+This repository owns one document rendering pipeline with separately loadable
+production packages:
 
 ```text
 @zavx0z/dom
@@ -13,10 +13,20 @@ loadable production packages:
 @engine/core
 ```
 
+`@zavx0z/web-realm` is an authoring compatibility boundary in front of
+`@zavx0z/dom`, not another stage or tree. A build-scoped lexical binding maps
+ordinary names such as `window`, `document`, `Element` and `Event` to one
+explicit semantic `Document`. The real browser `WindowProxy` and `Document`
+remain the platform host and are never replaced or monkey-patched.
+
 `@zavx0z/renderer-browser` is the platform composition root for a browser
 canvas. It connects those exact owners, viewport resize, routed camera input,
 world document planes and camera-locked document overlays in one Engine frame;
 it does not add another semantic or layout tree.
+
+One browser canvas may therefore present several semantic Documents. Each
+Document has its own web-realm facade and renderer read bridge, while all of
+them may delegate allowed platform capabilities to the same native WindowProxy.
 
 ## Semantic DOM
 
@@ -49,9 +59,25 @@ Imperative DOM, templates, custom elements, and optional framework adapters all
 mutate the same DOM. Consumer code never receives a render surface, manual
 rectangle, Engine object, or materializer function.
 
+`@zavx0z/dom-components` is the lean component path: function components and
+props use React-shaped TSX, while its Bun/TypeScript 7 transform lowers the
+supported `useState` reads to direct signal subscriptions on exact semantic
+nodes. Components execute once on mount; updates do not reconcile or retain a
+virtual/Fiber tree. The bounded API is intentionally not React-compatible.
+
 `@zavx0z/dom-react` is an optional mutation-mode host adapter. React owns its
 component/Fiber tree and commits standard DOM mutations; it does not create a
 second render/layout tree and does not make `react-dom` a dependency.
+
+`@zavx0z/web-realm` injects lexical bindings only into selected application
+modules and explicitly selected bundled dependencies. Its Window facade owns
+the semantic `document` and DOM constructor identities, delegates an allowlist
+of URL/history/timer/network/native capabilities to the browser host, and
+throws for names outside its support matrix. Renderer-backed reads pull from
+the attached renderer lazily; no geometry or computed-style tree is copied
+into DOM instances. `react-dom` module imports are a separate build concern:
+they fail closed unless the explicit `react-dom/client` to
+`@zavx0z/dom-react` adapter policy is enabled.
 
 `@zavx0z/dom-devtools` assigns stable realm-local IDs and exposes immutable
 serializable DOM/render snapshots plus compact mutation signals. It is the

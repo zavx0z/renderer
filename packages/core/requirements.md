@@ -688,3 +688,18 @@ forced full frame while preserving stable keys and untouched records.
 Selection, caret, glyph shaping, kerning, bidi, font fallback, ligatures,
 grapheme-cluster truncation and browser-exact font metrics remain explicit
 future text-engine phases; this slice creates none of them implicitly.
+
+## `RENDERER-CPU-028` — exact lazy computed-style read boundary
+
+Each live DocumentRenderer exposes its current immutable computed cascade for
+an Element only through `getRendererComputedStyle(renderer, element)`. The read
+flushes pending renderer invalidation, requires the exact renderer Document and
+root subtree, and rejects reads after disposal. It returns the same computed
+style object already consumed by layout and paint; it does not parse styles a
+second time or create a CSS/layout mirror.
+
+The element-to-style association is renderer-owned external `WeakMap` state.
+It is rebuilt or patched with the normal frame pipeline and is deleted with the
+renderer reader on dispose, preserving the existing lean semantic node shape
+and lazy derived-state model. CSSStyleDeclaration serialization and unsupported
+property policy belong to a compatibility facade, not to the CPU renderer.

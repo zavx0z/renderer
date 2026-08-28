@@ -1,4 +1,4 @@
-export { createDocumentRenderer } from "./renderer.ts"
+export { createDocumentRenderer, getRendererComputedStyle } from "./renderer.ts"
 export {
   createDocumentInteractionController,
   hitTest,
@@ -40,6 +40,17 @@ export type {
   RenderZIndex,
   TextDisplayItem,
 } from "./types.ts"
+export type {
+  CSSLength as RendererCSSLength,
+  ComputedBoxShadow as RendererComputedBoxShadow,
+  ComputedCornerRadii as RendererComputedCornerRadii,
+  ComputedLineHeight as RendererComputedLineHeight,
+  ComputedScrollbarWidth as RendererComputedScrollbarWidth,
+  ComputedStyle as RendererComputedStyle,
+  ComputedTextOverflow as RendererComputedTextOverflow,
+  ComputedTransformFunction as RendererComputedTransformFunction,
+  ComputedTransformOrigin as RendererComputedTransformOrigin,
+} from "./css.ts"
 export type {
   CreateDocumentInteractionControllerOptions,
   DocumentInteractionController,

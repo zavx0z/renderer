@@ -36,10 +36,12 @@ describe("renderer workspace retirement boundary", () => {
 
     const names = await Promise.all([
       "browser",
+      "components",
       "core",
       "devtools",
       "dom",
       "react",
+      "web-realm",
       "webgpu",
     ].map(async (directory) => {
       const manifest = await Bun.file(new URL(`packages/${directory}/package.json`, workspaceRoot)).json() as {
@@ -49,10 +51,12 @@ describe("renderer workspace retirement boundary", () => {
     }))
     expect(names).toEqual([
       "@zavx0z/renderer-browser",
+      "@zavx0z/dom-components",
       "@zavx0z/renderer",
       "@zavx0z/dom-devtools",
       "@zavx0z/dom",
       "@zavx0z/dom-react",
+      "@zavx0z/web-realm",
       "@zavx0z/renderer-webgpu",
     ])
   })

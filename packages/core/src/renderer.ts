@@ -94,6 +94,10 @@ type FrameCollectionIndexes = Readonly<{
 }>
 
 const collectionIndexesByFrame = new WeakMap<RenderFrame, FrameCollectionIndexes>()
+const computedStyleReaders = new WeakMap<
+  DocumentRenderer,
+  (element: Element) => ComputedStyle
+>()
 
 const ZERO_EDGES: RenderEdges = Object.freeze({
   top: 0,
@@ -230,6 +234,7 @@ export const createDocumentRenderer = (
   const rules = parseStyleSheets(options.styleSheets ?? [])
   const dirty = new DirtyTracker(options.root)
   const layoutCache = new WeakMap<Node, LayoutNode>()
+  const computedStyles = new WeakMap<Element, ComputedStyle>()
   const subtreeDirty = new Set<Node>([options.root])
   const characterDataTargets = new Set<Text>()
   let frame: RenderFrame | null = null
@@ -269,10 +274,27 @@ export const createDocumentRenderer = (
       disposed = true
       unsubscribe()
       unsubscribeState()
+      computedStyleReaders.delete(renderer)
     },
   })
 
+  computedStyleReaders.set(renderer, readComputedStyle)
+
   return renderer
+
+  function readComputedStyle(element: Element): ComputedStyle {
+    assertActive()
+    if (element.ownerDocument !== options.document) {
+      throw new TypeError("The Element belongs to another Document")
+    }
+    if (element !== options.root && !options.root.contains(element)) {
+      throw new RangeError("The Element is outside this renderer root")
+    }
+    flush()
+    const style = computedStyles.get(element)
+    if (!style) throw new Error("The Element has no renderer computed style")
+    return style
+  }
 
   function flush(): RenderFrame {
     assertActive()
@@ -282,6 +304,7 @@ export const createDocumentRenderer = (
         frame,
         transformTarget,
         layoutCache,
+        computedStyles,
         rules,
         revision + 1,
       )
@@ -326,6 +349,7 @@ export const createDocumentRenderer = (
       new Set(dirty.snapshot()),
       subtreeDirty,
       layoutCache,
+      computedStyles,
     )
     revision++
     frame = next
@@ -399,6 +423,16 @@ export const createDocumentRenderer = (
   function assertActive(): void {
     if (disposed) throw new Error("Cannot use a disposed document renderer")
   }
+}
+
+/** Reads the exact immutable cascade result owned by a live DocumentRenderer. */
+export const getRendererComputedStyle = (
+  renderer: DocumentRenderer,
+  element: Element,
+): ComputedStyle => {
+  const reader = computedStyleReaders.get(renderer)
+  if (!reader) throw new TypeError("Expected a live @zavx0z/renderer DocumentRenderer")
+  return reader(element)
 }
 
 const tryBuildCharacterDataFrame = (
@@ -489,6 +523,7 @@ const tryBuildTransformFrame = (
   previous: RenderFrame,
   target: Element,
   layoutCache: WeakMap<Node, LayoutNode>,
+  computedStyles: WeakMap<Element, ComputedStyle>,
   rules: readonly StyleRule[],
   revision: number,
 ): RenderFrame | null => {
@@ -501,6 +536,7 @@ const tryBuildTransformFrame = (
   const nextStyle = computeStyle(target, layoutNode.parent?.style ?? ROOT_STYLE, rules)
   if (!sameStyleExceptTransform(layoutNode.style, nextStyle)) return null
   layoutNode.style = nextStyle
+  computedStyles.set(target, nextStyle)
 
   const nextTransforms = new Map<Node, RenderTransform>()
   const parentTransform = nearestBoxTransform(layoutNode.parent, previous)
@@ -699,6 +735,7 @@ const buildFrame = (
   dirtyNodes: ReadonlySet<Node>,
   subtreeDirty: ReadonlySet<Node>,
   layoutCache: WeakMap<Node, LayoutNode>,
+  computedStyles: WeakMap<Element, ComputedStyle>,
 ): RenderFrame => {
   const popoverInheritedStyles = new WeakMap<HTMLElement, ComputedStyle>()
   const tree = buildLayoutTree(
@@ -710,6 +747,7 @@ const buildFrame = (
     dirtyNodes,
     subtreeDirty,
     layoutCache,
+    computedStyles,
     false,
     null,
     popoverInheritedStyles,
@@ -779,6 +817,7 @@ const buildFrame = (
       new Set([popover]),
       new Set([popover]),
       new WeakMap(),
+      computedStyles,
       true,
       popover,
       popoverInheritedStyles,
@@ -836,6 +875,7 @@ const buildLayoutTree = (
   dirtyNodes: ReadonlySet<Node>,
   subtreeDirty: ReadonlySet<Node>,
   layoutCache: WeakMap<Node, LayoutNode>,
+  computedStyles: WeakMap<Element, ComputedStyle>,
   force: boolean,
   allowedPopover: HTMLElement | null,
   popoverInheritedStyles: WeakMap<HTMLElement, ComputedStyle>,
@@ -867,6 +907,7 @@ const buildLayoutTree = (
 
   if (isElement(node)) {
     const computedStyle = computeStyle(node, inheritedStyle, rules)
+    computedStyles.set(node, computedStyle)
     const popoverExcluded = node instanceof HTMLElement &&
       node.popover !== null &&
       (node !== allowedPopover || node[getPopoverVisibilityState]() !== "showing")
@@ -895,14 +936,19 @@ const buildLayoutTree = (
       tag,
       transparent: false,
     }
-    const children =
+    const suppressesChildren =
       style.display === "none" ||
-        tag === "input" ||
-        tag === "img" ||
-        tag === "select" ||
-        tag === "progress" ||
-        tag === "meter" ||
-        tag === "textarea"
+      tag === "input" ||
+      tag === "img" ||
+      tag === "select" ||
+      tag === "progress" ||
+      tag === "meter" ||
+      tag === "textarea"
+    if (suppressesChildren) {
+      clearDescendantComputedStyles(node, computedStyles)
+    }
+    const children =
+      suppressesChildren
         ? Object.freeze([])
         : Object.freeze(
             childNodes(node).map((child) =>
@@ -915,6 +961,7 @@ const buildLayoutTree = (
                 dirtyNodes,
                 subtreeDirty,
                 layoutCache,
+                computedStyles,
                 forceChildren,
                 allowedPopover,
                 popoverInheritedStyles,
@@ -947,6 +994,7 @@ const buildLayoutTree = (
         dirtyNodes,
         subtreeDirty,
         layoutCache,
+        computedStyles,
         force || subtreeDirty.has(node),
         allowedPopover,
         popoverInheritedStyles,
@@ -956,6 +1004,16 @@ const buildLayoutTree = (
   layoutNode.children = children
   layoutCache.set(node, layoutNode)
   return layoutNode
+}
+
+const clearDescendantComputedStyles = (
+  node: Node,
+  computedStyles: WeakMap<Element, ComputedStyle>,
+): void => {
+  for (const child of childNodes(node)) {
+    if (isElement(child)) computedStyles.delete(child)
+    clearDescendantComputedStyles(child, computedStyles)
+  }
 }
 
 const measure = (

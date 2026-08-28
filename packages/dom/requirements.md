@@ -591,5 +591,22 @@ image adapter. The document renderer may consume the exact reflected `src`,
 The first slice intentionally excludes parsing, serialization, namespaces,
 live collections including live `NodeList`/`HTMLCollection`, the remainder of
 Selectors, Shadow DOM, custom elements, CSSOM beyond the declared requested
-scroll subset, forms, accessibility projection, tooltip timing, geometry, hit
-testing and rendering.
+scroll subset, forms, accessibility projection, tooltip timing, hit testing
+and rendering.
+
+## DOM-CORE-026 — external renderer-backed rectangle reads
+
+`Element.getBoundingClientRect()` uses the standard name and returns this DOM
+realm's immutable finite `DOMRectReadOnly`. The DOM package stores no layout,
+box or renderer state on Document, Element or Node instances. Instead, one
+external adapter may be attached to one exact Document through the explicit
+`@zavx0z/dom/render-read` renderer boundary and is consulted only when the
+application performs the read.
+
+Without an attached adapter the read throws `NotSupportedError`. A second
+adapter on the same Document throws `InvalidStateError`; detach is idempotent;
+and an adapter result from another DOM identity is rejected. Detached or
+unpainted element behavior and transformed viewport coordinates are the
+attached renderer owner's policy. Client rect lists, ranges, offset metrics,
+scroll layout metrics, mutable `DOMRect`, observers and browser-exact
+sub-pixel/fragment geometry remain unsupported rather than fabricated.

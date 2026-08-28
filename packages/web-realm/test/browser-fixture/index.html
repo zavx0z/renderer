@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>zavx0z web realm browser proof</title>
+    <style>
+      :root { color-scheme: dark; font-family: ui-monospace, monospace; }
+      body { margin: 24px; background: #020617; color: #e2e8f0; }
+      canvas { width: 320px; height: 180px; border: 1px solid #334155; }
+      pre { padding: 16px; border: 1px solid #334155; white-space: pre-wrap; }
+      pre[data-status="pass"] { border-color: #22c55e; color: #86efac; }
+      pre[data-status="fail"] { border-color: #ef4444; color: #fca5a5; }
+    </style>
+  </head>
+  <body>
+    <h1>Web realm browser proof</h1>
+    <canvas id="host-canvas" width="320" height="180"></canvas>
+    <pre id="result">PENDING</pre>
+    <script type="module" src="./browser-entry.js"></script>
+  </body>
+</html>

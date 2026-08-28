@@ -9,6 +9,8 @@ This workspace is the clean document-engine replacement for the historical
 - `@zavx0z/renderer` — CSS, layout, paint, display-list, and hit projection.
 - `@zavx0z/renderer-webgpu` — retained Engine/WebGPU realization.
 - `@zavx0z/renderer-browser` — browser canvas/input/lifecycle composition.
+- `@zavx0z/dom-components` — signal-backed function components and bounded TSX build transform.
+- `@zavx0z/web-realm` — per-Document ordinary web-name compatibility and Bun binding.
 - `@zavx0z/dom-react` — optional React 19 mutation renderer into the same DOM.
 - `@zavx0z/dom-devtools` — serializable custom-panel and AI inspection bridge.
 
@@ -34,4 +36,8 @@ See [ARCHITECTURE.md](ARCHITECTURE.md), [requirements.md](requirements.md),
 in [packages/dom/SUPPORT.md](packages/dom/SUPPORT.md). Reproducible baseline
 commands and current open budgets are in [PERFORMANCE.md](PERFORMANCE.md).
 The standards/project comparison and the React/DevTools consequences are in
-[RESEARCH.md](RESEARCH.md).
+[RESEARCH.md](RESEARCH.md). The compatibility and dependency matrix for
+ordinary web-named application source is in
+[packages/web-realm/SUPPORT.md](packages/web-realm/SUPPORT.md).
+The standalone Bun `link:` component application is in
+[examples/components-counter](examples/components-counter/README.md).

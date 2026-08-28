@@ -1,0 +1,39 @@
+{
+  "name": "@zavx0z/web-realm",
+  "version": "0.1.0",
+  "description": "Per-Document browser compatibility facade for the zavx0z semantic DOM renderer",
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "bun@1.4.0",
+  "sideEffects": false,
+  "exports": {
+    ".": "./src/index.ts",
+    "./bun": "./src/bun.ts",
+    "./globals": "./src/globals.d.ts",
+    "./react-dom-client": "./src/react-dom-client.ts"
+  },
+  "scripts": {
+    "test": "bun test ./test",
+    "typecheck": "tsc -p tsconfig.json --pretty false && tsc -p tsconfig.globals.json --pretty false",
+    "check": "bun run typecheck && bun run test"
+  },
+  "peerDependencies": {
+    "@zavx0z/dom": "^0.1.0",
+    "@zavx0z/dom-react": "^0.1.0",
+    "@zavx0z/renderer": "^0.1.0"
+  },
+  "peerDependenciesMeta": {
+    "@zavx0z/dom-react": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@engine/core": "link:@engine/core",
+    "@types/bun": "^1.4.0",
+    "@zavx0z/dom": "workspace:*",
+    "@zavx0z/dom-react": "workspace:*",
+    "@zavx0z/renderer": "workspace:*",
+    "@zavx0z/renderer-webgpu": "workspace:*",
+    "typescript": "^7.0.2"
+  }
+}

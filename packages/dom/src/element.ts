@@ -5,6 +5,8 @@ import type {AttributeMutation} from "./mutation.ts"
 import {Node} from "./node.ts"
 import type {NodeOrString} from "./node.ts"
 import type {NodeList} from "./node-list.ts"
+import {readElementBoundingClientRect} from "./render-read.ts"
+import type {DOMRectReadOnly} from "./dom-rect.ts"
 import {
   closestMatch,
   matchesSelector,
@@ -154,6 +156,10 @@ export class Element extends Node {
 
   querySelectorAll(selectors: string): NodeList<Element> {
     return queryAll(this, selectors)
+  }
+
+  getBoundingClientRect(): DOMRectReadOnly {
+    return readElementBoundingClientRect(this)
   }
 
   override get textContent(): string {

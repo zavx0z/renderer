@@ -1,0 +1,37 @@
+{
+  "name": "@zavx0z/dom-components",
+  "version": "0.1.0",
+  "description": "Signal-backed TSX components that commit directly to @zavx0z/dom",
+  "license": "MIT",
+  "type": "module",
+  "packageManager": "bun@1.4.0",
+  "sideEffects": false,
+  "bin": {
+    "zavx0z-build": "./src/build-cli.ts"
+  },
+  "exports": {
+    ".": "./src/index.ts",
+    "./bun": "./src/bun.ts",
+    "./internal": "./src/internal.ts",
+    "./jsx-runtime": "./src/jsx-runtime.ts",
+    "./jsx-dev-runtime": "./src/jsx-dev-runtime.ts"
+  },
+  "scripts": {
+    "test": "bun test ./test",
+    "typecheck": "tsc -p tsconfig.json --pretty false && tsc -p tsconfig.browser.json --pretty false",
+    "check": "bun run typecheck && bun run test"
+  },
+  "peerDependencies": {
+    "@zavx0z/dom": "^0.1.0",
+    "typescript": "^7.0.0"
+  },
+  "devDependencies": {
+    "@engine/core": "link:@engine/core",
+    "@types/bun": "^1.4.0",
+    "@zavx0z/dom": "workspace:*",
+    "@zavx0z/renderer": "workspace:*",
+    "@zavx0z/renderer-browser": "workspace:*",
+    "@zavx0z/renderer-webgpu": "workspace:*",
+    "typescript": "^7.0.2"
+  }
+}

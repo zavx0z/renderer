@@ -30,3 +30,26 @@ No compatibility aliases or re-exports preserve the historical root Renderer,
 Layout, or Elements APIs. Old packages are removed only after all consumers are
 migrated and the replacement passes semantic, visual, interaction, build,
 browser, memory, and retained-identity gates.
+
+## RENDERER-PIPELINE-006 — realm-scoped ordinary web authoring
+
+Ordinary supported `window`, `document`, DOM constructor, event and Web API
+names may be bound lexically to one explicit semantic Document. This boundary
+must never replace or mutate the browser WindowProxy/Document, and several
+semantic Documents sharing one native canvas must retain independent realms.
+
+Semantic DOM identities come only from `@zavx0z/dom`. URL, navigation, timers,
+networking and native capabilities remain delegated to an explicit platform
+host allowlist. Geometry and computed-style reads pull lazy derived state from
+the renderer for that exact Document. Unsupported names, detached bridges,
+cross-Document values, recognized direct dynamic-code escape paths and
+unapproved framework host imports fail closed instead of falling through to
+the native DOM or fabricated values.
+
+## RENDERER-PIPELINE-007 — bounded signal component authoring
+
+React-shaped TSX components may bind state directly to exact semantic nodes,
+but they must not introduce a second DOM, layout, display, Fiber or persistent
+virtual tree. The supported Bun transform and runtime are explicit, bounded
+contracts: unsupported state escapes, dynamic component props and keyed lists
+fail closed rather than claiming React or general npm compatibility.

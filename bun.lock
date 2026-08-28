@@ -31,6 +31,26 @@
         "@engine/core",
       ],
     },
+    "packages/components": {
+      "name": "@zavx0z/dom-components",
+      "version": "0.1.0",
+      "bin": {
+        "zavx0z-build": "./src/build-cli.ts",
+      },
+      "devDependencies": {
+        "@engine/core": "link:@engine/core",
+        "@types/bun": "^1.4.0",
+        "@zavx0z/dom": "workspace:*",
+        "@zavx0z/renderer": "workspace:*",
+        "@zavx0z/renderer-browser": "workspace:*",
+        "@zavx0z/renderer-webgpu": "workspace:*",
+        "typescript": "^7.0.2",
+      },
+      "peerDependencies": {
+        "@zavx0z/dom": "^0.1.0",
+        "typescript": "^7.0.0",
+      },
+    },
     "packages/core": {
       "name": "@zavx0z/renderer",
       "version": "0.1.0",
@@ -89,6 +109,27 @@
         "@zavx0z/dom": "^0.1.0",
         "react": "^19.2.0",
       },
+    },
+    "packages/web-realm": {
+      "name": "@zavx0z/web-realm",
+      "version": "0.1.0",
+      "devDependencies": {
+        "@engine/core": "link:@engine/core",
+        "@types/bun": "^1.4.0",
+        "@zavx0z/dom": "workspace:*",
+        "@zavx0z/dom-react": "workspace:*",
+        "@zavx0z/renderer": "workspace:*",
+        "@zavx0z/renderer-webgpu": "workspace:*",
+        "typescript": "^7.0.2",
+      },
+      "peerDependencies": {
+        "@zavx0z/dom": "^0.1.0",
+        "@zavx0z/dom-react": "^0.1.0",
+        "@zavx0z/renderer": "^0.1.0",
+      },
+      "optionalPeers": [
+        "@zavx0z/dom-react",
+      ],
     },
     "packages/webgpu": {
       "name": "@zavx0z/renderer-webgpu",
@@ -164,6 +205,8 @@
 
     "@zavx0z/dom": ["@zavx0z/dom@workspace:packages/dom"],
 
+    "@zavx0z/dom-components": ["@zavx0z/dom-components@workspace:packages/components"],
+
     "@zavx0z/dom-devtools": ["@zavx0z/dom-devtools@workspace:packages/devtools"],
 
     "@zavx0z/dom-react": ["@zavx0z/dom-react@workspace:packages/react"],
@@ -173,6 +216,8 @@
     "@zavx0z/renderer-browser": ["@zavx0z/renderer-browser@workspace:packages/browser"],
 
     "@zavx0z/renderer-webgpu": ["@zavx0z/renderer-webgpu@workspace:packages/webgpu"],
+
+    "@zavx0z/web-realm": ["@zavx0z/web-realm@workspace:packages/web-realm"],
 
     "bun-types": ["bun-types@1.4.0", "", { "dependencies": { "@types/node": "*" } }, "sha512-iIKw23BspnQQYd3prITOBxeUsxBHnwzX6YJfGMuNOZzeNcMmVqzIIVGRm1l69ogaPQmb4wB6BN8mA5bE9YuC5Q=="],
 

@@ -1,0 +1,11 @@
+jsx = "react-jsx"
+jsxImportSource = "@zavx0z/dom-components"
+
+[loader]
+".wgsl" = "text"
+
+[serve]
+port = 4180
+
+[serve.static]
+plugins = ["@zavx0z/dom-components/bun"]

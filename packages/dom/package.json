@@ -20,6 +20,8 @@
     "./pointer-event": "./src/pointer-event.ts",
     "./event-target": "./src/event-target.ts",
     "./mutation": "./src/mutation.ts",
+    "./render-read": "./src/render-read.ts",
+    "./dom-rect": "./src/dom-rect.ts",
     "./state-change": "./src/state-change.ts",
     "./popover-state": "./src/popover-state.ts",
     "./node": "./src/node.ts",

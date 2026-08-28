@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "types": ["@webgpu/types", "bun"]
+  },
+  "include": [
+    "test/browser-build.test.ts",
+    "test/browser-fixture/build.ts",
+    "test/browser-fixture/application/browser-entry.tsx",
+    "test/end-to-end.test.ts",
+    "test/fixture/counter.tsx",
+    "test/fixture/entry.tsx",
+    "../../../engine/packages/core/src/types/assets.d.ts"
+  ]
+}
