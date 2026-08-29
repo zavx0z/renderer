@@ -475,6 +475,152 @@ describe("createDocumentSpaceRuntime", () => {
     runtime.dispose()
   })
 
+  test("routes nested overlay descendants through their nearest enabled or disabled control", async () => {
+    const harness = createHarness()
+    const runtime = await createDocumentSpaceRuntimeWithSeams({
+      ...harness.options,
+      cameraGestures: true,
+    }, harness.seams)
+    const control = nestedControl(harness.document)
+    control.button.setAttribute("data-overlay-id", "nested-overlay")
+    harness.experience.appendChild(control.button)
+    runtime.addOverlay({id: "nested-overlay", root: control.button})
+    let worldDoubleClicks = 0
+    runtime.addWorld({
+      id: "world",
+      space: new Space(),
+      viewport: {x: 0, y: 0, width: 100, height: 100},
+      viewPoint: snapshot(),
+      cameraGestures: true,
+      onDoubleClick() { worldDoubleClicks += 1 },
+    })
+    let clicks = 0
+    control.button.addEventListener("click", () => { clicks += 1 })
+    runtime.render()
+
+    harness.canvas.emit("pointerdown", pointer({
+      clientX: 10,
+      clientY: 10,
+      pointerId: 80,
+      buttons: 1,
+    }))
+    expect(runtime.activeOverlayId).toBe("nested-overlay")
+    expect(runtime.activeWorldId).toBeNull()
+    expect(harness.canvas.captured.has(80)).toBeTrue()
+    harness.canvas.emit("pointerup", pointer({clientX: 75, clientY: 10, pointerId: 80}))
+    expect(clicks).toBe(1)
+    expect(harness.canvas.captured.has(80)).toBeFalse()
+
+    control.button.disabled = true
+    runtime.render()
+    const zooms = harness.calls.zooms.length
+    harness.canvas.emit("pointerdown", pointer({
+      clientX: 10,
+      clientY: 10,
+      pointerId: 81,
+      buttons: 1,
+    }))
+    expect(runtime.activeOverlayId).toBe("nested-overlay")
+    expect(runtime.activeWorldId).toBeNull()
+    harness.canvas.emit("pointerup", pointer({clientX: 10, clientY: 10, pointerId: 81}))
+    expect(clicks).toBe(1)
+    harness.canvas.emit("wheel", wheel({clientX: 10, clientY: 10, deltaY: 8, ctrlKey: true}))
+    expect(harness.calls.zooms).toHaveLength(zooms)
+    harness.canvas.emit("dblclick", mouse({clientX: 10, clientY: 10}))
+    expect(worldDoubleClicks).toBe(0)
+    let contextMenus = 0
+    harness.canvas.emit("contextmenu", mouse({
+      clientX: 10,
+      clientY: 10,
+      preventDefault() { contextMenus += 1 },
+    }))
+    expect(contextMenus).toBe(0)
+
+    harness.canvas.emit("pointerdown", pointer({
+      clientX: 10,
+      clientY: 10,
+      pointerId: 82,
+      buttons: 1,
+    }))
+    expect(harness.canvas.captured.has(82)).toBeTrue()
+    harness.canvas.emit("pointercancel", pointer({clientX: 10, clientY: 10, pointerId: 82}))
+    expect(harness.canvas.captured.has(82)).toBeFalse()
+    expect(runtime.activeOverlayId).toBeNull()
+    runtime.dispose()
+  })
+
+  test("routes nested plane descendants before global camera gestures", async () => {
+    const harness = createHarness()
+    const runtime = await createDocumentSpaceRuntimeWithSeams({
+      ...harness.options,
+      cameraGestures: true,
+    }, harness.seams)
+    const control = nestedControl(harness.document)
+    control.button.setAttribute("data-plane-id", "nested-plane")
+    control.button.setAttribute("data-actual-plane-runtime", "")
+    harness.experience.appendChild(control.button)
+    runtime.addPlane({
+      id: "nested-plane",
+      root: control.button,
+      viewport: {width: 100, height: 100},
+      worldUnitsPerPixel: 0.02,
+    })
+    let clicks = 0
+    control.button.addEventListener("click", () => { clicks += 1 })
+    runtime.render()
+    const orbits = harness.calls.orbits.length
+
+    harness.canvas.emit("pointerdown", pointer({
+      clientX: 10,
+      clientY: 10,
+      pointerId: 90,
+      buttons: 1,
+    }))
+    expect(runtime.activePlaneId).toBe("nested-plane")
+    expect(harness.calls.orbits).toHaveLength(orbits)
+    expect(harness.canvas.captured.has(90)).toBeTrue()
+    harness.canvas.emit("pointerup", pointer({clientX: 75, clientY: 10, pointerId: 90}))
+    expect(clicks).toBe(1)
+    expect(harness.canvas.captured.has(90)).toBeFalse()
+
+    control.button.disabled = true
+    runtime.render()
+    const zooms = harness.calls.zooms.length
+    harness.canvas.emit("pointerdown", pointer({
+      clientX: 10,
+      clientY: 10,
+      pointerId: 91,
+      buttons: 1,
+    }))
+    expect(runtime.activePlaneId).toBe("nested-plane")
+    expect(harness.calls.orbits).toHaveLength(orbits)
+    harness.canvas.emit("pointerup", pointer({clientX: 10, clientY: 10, pointerId: 91}))
+    expect(clicks).toBe(1)
+    harness.canvas.emit("wheel", wheel({clientX: 10, clientY: 10, deltaY: 8, ctrlKey: true}))
+    expect(harness.calls.zooms).toHaveLength(zooms)
+    const pans = harness.calls.pans.length
+    harness.canvas.emit("pointerdown", pointer({
+      clientX: 10,
+      clientY: 10,
+      pointerId: 92,
+      button: 2,
+      buttons: 2,
+    }))
+    expect(runtime.activePlaneId).toBe("nested-plane")
+    expect(harness.calls.pans).toHaveLength(pans)
+    harness.canvas.emit("pointercancel", pointer({clientX: 10, clientY: 10, pointerId: 92}))
+    expect(harness.canvas.captured.has(92)).toBeFalse()
+    expect(runtime.activePlaneId).toBeNull()
+    let contextMenus = 0
+    harness.canvas.emit("contextmenu", mouse({
+      clientX: 10,
+      clientY: 10,
+      preventDefault() { contextMenus += 1 },
+    }))
+    expect(contextMenus).toBe(0)
+    runtime.dispose()
+  })
+
   test("rejects duplicate, attached and malformed world owners before mutating the host", async () => {
     const harness = createHarness()
     const runtime = await createDocumentSpaceRuntimeWithSeams(harness.options, harness.seams)
@@ -899,6 +1045,10 @@ function createHarness() {
       const id = (options.root as {getAttribute?(name: string): string | null})
         .getAttribute?.("data-plane-id")
       if (id === undefined || id === null) throw new Error("Fixture plane id is absent")
+      if ((options.root as {hasAttribute?(name: string): boolean})
+        .hasAttribute?.("data-actual-plane-runtime")) {
+        return createDocumentPlaneRuntime(options)
+      }
       const runtime = new FakePlaneRuntime(options)
       planes.set(id, runtime)
       return runtime.runtime
@@ -1253,6 +1403,21 @@ function overlayRegistration(
     id,
     root,
   } as const
+}
+
+function nestedControl(document: ReturnType<typeof createDocument>) {
+  const button = document.createElement("button")
+  const left = document.createElement("span")
+  const right = document.createElement("span")
+  const icon = document.createElement("img")
+  button.setAttribute("style", "display:flex; width:100px; height:100px; padding:0")
+  left.setAttribute("style", "display:block; width:50px; height:100px")
+  right.setAttribute("style", "display:block; width:50px; height:100px")
+  icon.setAttribute("style", "display:block; width:40px; height:40px")
+  left.appendChild(icon)
+  right.append("Label")
+  button.append(left, right)
+  return {button, icon, left, right}
 }
 
 function emptyFrame(

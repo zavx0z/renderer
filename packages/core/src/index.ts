@@ -3,6 +3,7 @@ export {createDocumentInteractionState} from "./pseudo-state.ts"
 export {
   createDocumentInteractionController,
   hitTest,
+  resolvePointerOwnerHit,
   resolveTitle,
 } from "./interaction.ts"
 export type {

@@ -97,6 +97,7 @@ export function memo<Props>(
   const wrapped = defineCompiledTemplate<Props>({
     bindingCount: template.bindingCount,
     displayName: `Memo(${template.displayName})`,
+    styleSheets: template.styleSheets,
     mount: template.mount,
     render: template.render
   })

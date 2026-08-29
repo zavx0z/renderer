@@ -308,6 +308,44 @@
     {
       "blockedBy": [],
       "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Live native browser execution.",
+          "path": "packages/browser/src/plane-runtime.ts",
+          "proves": "Plane, overlay and isolated canvas runtimes route exact Document style revisions through their existing coalesced frame lifecycle.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "compiled stylesheet subscription",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Every browser host and live WebGPU pixels.",
+          "path": "packages/browser/test/plane-runtime.test.ts",
+          "proves": "Late registration requests a frame, changes projected style and becomes inert after disposal.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "compiled-stylesheet-scheduling",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.compiled-stylesheet-scheduling",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
       "conformance": "adapted",
       "consumers": [],
       "evidence": [
@@ -1007,18 +1045,18 @@
       "consumers": [],
       "evidence": [
         {
-          "doesNotProve": "Complete browser-host semantics.",
-          "path": "packages/browser/src/runtime.ts",
-          "proves": "The bounded host slice exists.",
+          "doesNotProve": "Live native browser execution and unrelated world-scene activation.",
+          "path": "packages/browser/src/space-runtime.ts",
+          "proves": "Overlay/plane arbitration uses the nearest rendered interactive or disabled ancestor without replacing the deepest semantic event target.",
           "repository": "renderer",
           "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "semantic-pointer-events",
+          "symbol": "resolvePointerOwnerHit arbitration",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Live browser/native input/WebGPU acceptance.",
-          "path": "packages/browser/test/runtime.test.ts",
-          "proves": "Current adapter behavior.",
+          "doesNotProve": "Native browser trusted events and live WebGPU pixels.",
+          "path": "packages/browser/test/space-runtime.test.ts",
+          "proves": "Actual canvas listener routing over nested span/img descendants, cross-child release, disabled world/camera blocking, wheel/context/double-click arbitration and capture cleanup.",
           "repository": "renderer",
           "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
           "symbol": "semantic-pointer-events",
@@ -1031,7 +1069,7 @@
         "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
       },
       "limitations": [
-        "Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout."
+        "Implemented through the bounded one-Experience host; live native browser acceptance remains separate."
       ],
       "owner": {
         "package": "@zavx0z/renderer-browser",

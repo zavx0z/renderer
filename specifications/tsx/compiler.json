@@ -901,6 +901,24 @@
       }
     },
     {
+      "description": "Template compiler support boundary for static style extraction.",
+      "domain": "tsx",
+      "id": "tsx.compiler.static-style-extraction",
+      "kind": "tsx-compiler",
+      "name": "static style extraction",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#static-style-extraction",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
       "description": "Template compiler support boundary for style bindings.",
       "domain": "tsx",
       "id": "tsx.compiler.style-bindings",

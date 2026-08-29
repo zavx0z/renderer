@@ -31,6 +31,18 @@ export {NodeList} from "./node-list.ts"
 export {DOMTokenList} from "./dom-token-list.ts"
 export {Document, createDocument} from "./document.ts"
 export type {HTMLElementTagNameMap} from "./document.ts"
+export {
+  acquireDocumentCompiledStyleSheets,
+  readDocumentCompiledStyleSheets,
+  subscribeDocumentCompiledStyleSheets
+} from "./compiled-style-sheet.ts"
+export type {
+  DocumentCompiledStyleSheet,
+  DocumentCompiledStyleSheetChange,
+  DocumentCompiledStyleSheetLease,
+  DocumentCompiledStyleSheetSnapshot,
+  DocumentCompiledStyleSheetSubscriber
+} from "./compiled-style-sheet.ts"
 export {DocumentFragment} from "./document-fragment.ts"
 export {CharacterData} from "./character-data.ts"
 export {Text} from "./text.ts"

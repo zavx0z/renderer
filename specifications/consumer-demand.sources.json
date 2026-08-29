@@ -2,6 +2,26 @@
   "schemaVersion": 1,
   "entries": [
     {
+      "capability": "tsx.compiler.static-style-extraction",
+      "repository": "ui",
+      "package": "@ui/components",
+      "subject": "Button component-local styles",
+      "scope": "production",
+      "path": "packages/components/button.tsx",
+      "anchor": "export function Button(props: ButtonProps)",
+      "behavior": "Extract Button owner declarations, native pseudo states and finite conditional variants from intrinsic style objects without defineStyles or runtime owner-style scanning."
+    },
+    {
+      "capability": "renderer.features.compiled-stylesheet-lifecycle",
+      "repository": "ui",
+      "package": "@ui/components",
+      "subject": "Button automatic stylesheet adoption",
+      "scope": "production",
+      "path": "packages/components/button.tsx",
+      "anchor": "export function Button(props: ButtonProps)",
+      "behavior": "Adopt the exact compiled Button stylesheet once per Document and make it visible to every same-Document projection without manual buttonCss or consumer styleSheets wiring."
+    },
+    {
       "capability": "html.behaviors.input-type-range",
       "repository": "ui",
       "package": "@ui/components",

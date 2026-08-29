@@ -1,4 +1,5 @@
 import {
+  acquireDocumentCompiledStyleSheets,
   DocumentFragment,
   Element,
   Event,
@@ -10,6 +11,7 @@ import {
   Node,
   Text,
   type Document,
+  type DocumentCompiledStyleSheetLease,
   type EventListener
 } from "@zavx0z/dom"
 import {
@@ -436,6 +438,90 @@ class DocumentScheduler {
   }
 }
 
+type PreparedStyleSheetCommit = Readonly<{
+  rollback(): void
+}>
+
+const noStyleSheetCommit: PreparedStyleSheetCommit = Object.freeze({rollback() {}})
+
+class RootStyleSheetOwner {
+  readonly document: Document
+  private readonly acquiredStyleSheets = new Map<string, string>()
+  private readonly acquiredTemplates = new Set<CompiledTemplate<unknown>>()
+  private readonly leases: DocumentCompiledStyleSheetLease[] = []
+  private readonly pendingTemplates = new Map<CompiledTemplate<unknown>, number>()
+  private disposed = false
+
+  constructor(document: Document) {
+    this.document = document
+  }
+
+  stage(template: CompiledTemplate<unknown>): void {
+    if (this.disposed) throw new Error("Cannot stage styles for an unmounted component root")
+    if (this.acquiredTemplates.has(template)) return
+    this.pendingTemplates.set(template, (this.pendingTemplates.get(template) ?? 0) + 1)
+  }
+
+  unstage(template: CompiledTemplate<unknown>): void {
+    const count = this.pendingTemplates.get(template)
+    if (count === undefined) return
+    if (count === 1) this.pendingTemplates.delete(template)
+    else this.pendingTemplates.set(template, count - 1)
+  }
+
+  commitPending(): PreparedStyleSheetCommit {
+    if (this.pendingTemplates.size === 0) return noStyleSheetCommit
+    const pending = [...this.pendingTemplates]
+    const nextStyleSheets = new Map<string, string>()
+    for (const [template] of pending) {
+      for (const styleSheet of template.styleSheets) {
+        const current = this.acquiredStyleSheets.get(styleSheet.id) ?? nextStyleSheets.get(styleSheet.id)
+        if (current !== undefined && current !== styleSheet.cssText) {
+          throw new Error(`Compiled stylesheet id collision: ${styleSheet.id}`)
+        }
+        if (current === undefined) nextStyleSheets.set(styleSheet.id, styleSheet.cssText)
+      }
+    }
+    const acquired = [...nextStyleSheets].map(([id, cssText]) => Object.freeze({id, cssText}))
+    const lease = acquireDocumentCompiledStyleSheets(this.document, acquired)
+    for (const [template] of pending) this.acquiredTemplates.add(template)
+    for (const [id, cssText] of nextStyleSheets) this.acquiredStyleSheets.set(id, cssText)
+    for (const [template] of pending) this.pendingTemplates.delete(template)
+    if (acquired.length > 0) this.leases.push(lease)
+    else lease.release()
+
+    let rolledBack = false
+    return Object.freeze({
+      rollback: () => {
+        if (rolledBack) return
+        rolledBack = true
+        if (acquired.length > 0) {
+          const index = this.leases.lastIndexOf(lease)
+          if (index >= 0) this.leases.splice(index, 1)
+          lease.release()
+        }
+        for (const [id] of nextStyleSheets) this.acquiredStyleSheets.delete(id)
+        for (const [template, count] of pending) {
+          this.acquiredTemplates.delete(template)
+          this.pendingTemplates.set(template, (this.pendingTemplates.get(template) ?? 0) + count)
+        }
+      }
+    })
+  }
+
+  dispose(): void {
+    if (this.disposed) return
+    this.disposed = true
+    this.pendingTemplates.clear()
+    this.acquiredTemplates.clear()
+    this.acquiredStyleSheets.clear()
+    for (let index = this.leases.length - 1; index >= 0; index -= 1) {
+      this.leases[index]!.release()
+    }
+    this.leases.length = 0
+  }
+}
+
 class ComponentInstance<Props> {
   declare keyedValidationEpoch: number | undefined
 
@@ -443,6 +529,7 @@ class ComponentInstance<Props> {
   readonly end: Node
   readonly rootId: number
   readonly scheduler: DocumentScheduler
+  readonly styleSheetOwner: RootStyleSheetOwner
   readonly start: Node
   readonly template: CompiledTemplate<Props>
 
@@ -468,6 +555,7 @@ class ComponentInstance<Props> {
 
   constructor(
     scheduler: DocumentScheduler,
+    styleSheetOwner: RootStyleSheetOwner,
     rootId: number,
     rootIdentifierPrefix: string,
     template: CompiledTemplate<Props>,
@@ -477,6 +565,7 @@ class ComponentInstance<Props> {
     contextProvisions: readonly ContextProvision[]
   ) {
     this.scheduler = scheduler
+    this.styleSheetOwner = styleSheetOwner
     this.document = scheduler.document
     this.rootId = rootId
     this.rootIdentifierPrefix = rootIdentifierPrefix
@@ -489,6 +578,7 @@ class ComponentInstance<Props> {
     this.end = this.document.createComment(`/component:${template.displayName}`)
     this.staging = this.document.createDocumentFragment()
     this.values = Array.from({length: template.bindingCount}, () => unset)
+    this.styleSheetOwner.stage(template as CompiledTemplate<unknown>)
 
     try {
       this.mountStaticTemplate()
@@ -517,6 +607,7 @@ class ComponentInstance<Props> {
   stageChild(value: ComponentValue, parentFrame: ContextFrame | null): ComponentInstance<unknown> {
     return new ComponentInstance(
       this.scheduler,
+      this.styleSheetOwner,
       this.rootId,
       this.rootIdentifierPrefix,
       value.template,
@@ -707,6 +798,7 @@ class ComponentInstance<Props> {
     this.values.fill(unset)
     this.props = undefined as unknown as Readonly<Props>
     this.scheduler.disposes += 1
+    this.styleSheetOwner.unstage(this.template as CompiledTemplate<unknown>)
     if (firstError) throw firstError
   }
 
@@ -1368,9 +1460,17 @@ function commitPreparedUpdate(prepared: PreparedComponentUpdate, connected: bool
   try {
     validatePreparedRanges(prepared)
     prepared.instance.document.transaction(() => {
-      validateExternalSnapshotsDeep(prepared)
-      applyHostPatchesDeep(prepared, applied)
-      applyRangeDomDeep(prepared)
+      const styleSheetCommit = connected
+        ? prepared.instance.styleSheetOwner.commitPending()
+        : noStyleSheetCommit
+      try {
+        validateExternalSnapshotsDeep(prepared)
+        applyHostPatchesDeep(prepared, applied)
+        applyRangeDomDeep(prepared)
+      } catch (error) {
+        styleSheetCommit.rollback()
+        throw error
+      }
     })
     markPreparedRangesValidatedDeep(prepared)
   } catch (error) {
@@ -1727,6 +1827,7 @@ export function createRoot(container: RootContainer, options: RootOptions = {}):
   if (!document) throw new TypeError("The component root container has no ownerDocument")
   if (roots.has(container)) throw new Error("This container already has a live component root")
   const scheduler = schedulerFor(document)
+  const styleSheetOwner = new RootStyleSheetOwner(document)
   const rootId = scheduler.nextRootId()
   const prefix = options.identifierPrefix ?? ""
   let instance: ComponentInstance<unknown> | null = null
@@ -1763,6 +1864,7 @@ export function createRoot(container: RootContainer, options: RootOptions = {}):
 
       const staged = new ComponentInstance(
         scheduler,
+        styleSheetOwner,
         rootId,
         prefix,
         template,
@@ -1783,8 +1885,14 @@ export function createRoot(container: RootContainer, options: RootOptions = {}):
           }
           try {
             document.transaction(() => {
-              staged.validateExternalSnapshots()
-              container.replaceChildren(staged.stagedRegion)
+              const styleSheetCommit = styleSheetOwner.commitPending()
+              try {
+                staged.validateExternalSnapshots()
+                container.replaceChildren(staged.stagedRegion)
+              } catch (error) {
+                styleSheetCommit.rollback()
+                throw error
+              }
             })
             break
           } catch (error) {
@@ -1813,13 +1921,21 @@ export function createRoot(container: RootContainer, options: RootOptions = {}):
       if (!active) return
       const previous = instance
       instance = null
+      let firstError: unknown = null
       try {
-        document.transaction(() => container.replaceChildren())
-        previous?.dispose()
+        try {
+          document.transaction(() => {
+            try { container.replaceChildren() } finally { styleSheetOwner.dispose() }
+          })
+        } catch (error) {
+          firstError = error
+        }
+        try { previous?.dispose() } catch (error) { firstError ??= error }
       } finally {
         active = false
         roots.delete(container)
       }
+      if (firstError) throw firstError
     }
   }
 

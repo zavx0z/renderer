@@ -395,6 +395,7 @@ const tsxCompilerFeatures: ManualDefinition[] = [
     "react-import-rejection", "dynamic-import-rejection", "dangerously-set-inner-html-rejection", "async-component-rejection",
     "arrow-component-rejection", "early-return-rejection", "component-escape-rejection", "fixed-slot-abi",
     "binding-range-validation", "binding-realm-validation", "same-parent-anchor-validation",
+    "static-style-extraction",
   ].map((id) => ({ id, kind: "tsx-compiler", description: `Template compiler support boundary for ${id.replaceAll("-", " ")}.` })),
 ]
 
@@ -407,6 +408,7 @@ const rendererFeatures: ManualDefinition[] = [
     "incremental-patches", "tooltip-title", "pointer", "wheel", "default-activation", "popover-projection",
     "immutable-frame", "clean-frame-fast-path", "text-leaf-fast-path", "transform-subtree-fast-path", "performance-paths",
     "projection-root-inheritance",
+    "compiled-stylesheet-lifecycle",
     "caret-selection-paint", "vector-path-display-item", "geometry-readback", "backend-neutral-diagnostics",
   ].map((id) => ({ id, kind: "renderer-stage", description: `CPU Renderer ${id.replaceAll("-", " ")} capability.` })),
 ]
@@ -419,6 +421,7 @@ const browserFeatures: ManualDefinition[] = [
     "camera-gestures", "cleanup", "error-boundaries", "lifecycle-boundaries", "animation-frame-coalescing",
     "native-browser-evidence", "same-document-input-identity", "number-input-proxy", "select-picker", "clipboard-proxy",
     "one-experience-topology", "direct-world-regions",
+    "compiled-stylesheet-scheduling",
   ].map((id) => ({ id, kind: "browser-host", description: `Browser composition ${id.replaceAll("-", " ")} capability.` })),
 ]
 

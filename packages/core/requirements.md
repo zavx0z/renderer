@@ -147,7 +147,16 @@ The interaction controller resolves the topmost deepest hit from a
 `RenderFrame`, emits `PointerEvent` boundary and pointer events through the DOM
 capture/target/bubble path, focuses an enabled interactive target, and invokes
 its standard `click()` activation when pointer-down and pointer-up resolve to
-the same target. Disabled controls receive no activation.
+the same semantic activation owner. Disabled controls receive no activation.
+
+The deepest hit remains the ordinary pointer event and hover target. For focus,
+disabled ownership and click continuity, Core resolves its nearest rendered
+interactive or disabled ancestor. Down/up on different descendants or padding
+of the same control activates that control once; down/up on the exact same
+descendant dispatches `click` from that descendant and lets it bubble normally.
+A disabled owner retains semantic/capture ownership but never focuses or
+activates. A noninteractive element with no control ancestor preserves the
+ordinary same-target synthetic click behavior.
 
 Hit testing accepts a candidate only when the point belongs to its border-box
 and to every axis-aware rounded rectangle in its inherited clip stack.
@@ -711,3 +720,34 @@ forced full frame while preserving stable keys and untouched records.
 Selection, caret, glyph shaping, kerning, bidi, font fallback, ligatures,
 grapheme-cluster truncation and browser-exact font metrics remain explicit
 future text-engine phases; this slice creates none of them implicitly.
+
+## `RENDERER-CPU-028` — Document compiled stylesheet lifecycle
+
+Each DocumentRenderer combines the exact active compiled owner stylesheet
+snapshot of its Document first and explicit caller-provided global/consumer
+`styleSheets` second. Equal-specificity consumer tokens therefore preserve the
+legacy aggregate order during migration; inline style still wins over both. A
+compiled-style revision invalidates the complete projection root before the
+next flush, so late registration and last-owner release affect ordinary
+cascade, pseudos and inheritance without replacing semantic Nodes.
+
+Parsed rule indexes are cached per exact Document, compiled-style revision and
+global CSS content. Same-Document plane/overlay renderers with equal global CSS
+reuse the same immutable index, including after viewport-bound renderer
+replacement. The cache contains no DOM scan, component registry or WebGPU
+state; a Document becoming unreachable releases the cache through weak
+ownership.
+
+## `RENDERER-CPU-029` — future dynamic pseudo variable boundary
+
+Instance-dependent pseudo values require both `css.features.custom-properties`
+and `css.functions.var-function`. The future path keeps one compiler-extracted
+static pseudo rule with `var(--z-*)`; each semantic Element supplies only its
+addressed inline custom-property value, which participates in ordinary cascade
+and inheritance. Renderer, not React or a Component, resolves substitution.
+
+Until those capabilities are implemented, Renderer admits neither custom
+property cascade nor `var()` substitution for compiled pseudos. Template fails
+such author source before bundling. Per-instance stylesheet rules, DOM/style
+scanning, JS hover/focus listeners and `data-state` pseudo emulation are
+forbidden substitutes.

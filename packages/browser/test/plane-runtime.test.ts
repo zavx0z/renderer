@@ -3,7 +3,7 @@ import {
   Object3D,
   type TrueTypeFont,
 } from "@engine/core"
-import {createDocument} from "@zavx0z/dom"
+import {acquireDocumentCompiledStyleSheets, createDocument} from "@zavx0z/dom"
 import {
   createDocumentInteractionController,
   createDocumentRenderer,
@@ -30,6 +30,7 @@ describe("createDocumentPlaneRuntime", () => {
     const root = document.createElement("div")
     const label = document.createElement("span")
     label.append("World display")
+    label.setAttribute("data-z-late", "")
     root.setAttribute("style", "width: 160px; height: 80px; background: #112233")
     document.appendChild(root)
     root.appendChild(label)
@@ -59,18 +60,30 @@ describe("createDocumentPlaneRuntime", () => {
     expect(presentations).toBe(1)
     expect(frameRequests).toBe(0)
 
+    const styleLease = acquireDocumentCompiledStyleSheets(document, [{
+      id: "late-plane-style",
+      cssText: "[data-z-late]{color:#abcdef}"
+    }])
+    expect(frameRequests).toBe(1)
+    const styled = runtime.flush()
+    const labelText = styled.displayList.find(item => item.kind === "text" && item.node.parentNode === label)
+    expect(labelText).toMatchObject({kind: "text", color: "#abcdef"})
+
     const frames: RenderFrame[] = []
     runtime.subscribe((frame) => frames.push(frame))
     expect(frames).toEqual([runtime.frame])
     const initial = runtime.frame
     label.textContent = "Updated"
-    expect(frameRequests).toBe(1)
+    expect(frameRequests).toBe(2)
     const updated = runtime.flush()
     expect(updated).not.toBe(initial)
     expect(frames.at(-1)).toBe(updated)
-    expect(presentations).toBe(2)
+    expect(presentations).toBe(3)
 
     runtime.dispose()
+    const requestsBeforeRelease = frameRequests
+    styleLease.release()
+    expect(frameRequests).toBe(requestsBeforeRelease)
     expect(runtime.disposed).toBeTrue()
     expect(invalidations).toBeGreaterThan(0)
     expect(() => runtime.flush()).toThrow("disposed")

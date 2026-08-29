@@ -134850,7 +134850,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "44",
+          "lines": "45",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -134946,7 +134946,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -134978,7 +134978,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135010,7 +135010,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "44",
+          "lines": "45",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135042,7 +135042,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "52",
+          "lines": "53",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135074,7 +135074,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "52",
+          "lines": "53",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135106,7 +135106,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "52",
+          "lines": "53",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135138,7 +135138,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135170,7 +135170,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135234,7 +135234,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135266,7 +135266,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "44",
+          "lines": "45",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135298,7 +135298,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135330,7 +135330,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135362,7 +135362,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135394,7 +135394,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135426,7 +135426,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135458,7 +135458,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135490,7 +135490,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135522,7 +135522,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135554,7 +135554,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135586,7 +135586,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135618,7 +135618,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135650,7 +135650,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135682,7 +135682,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135714,7 +135714,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135746,7 +135746,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135778,7 +135778,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135810,7 +135810,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135842,7 +135842,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135874,7 +135874,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135906,7 +135906,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135938,7 +135938,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135970,7 +135970,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136002,7 +136002,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136034,7 +136034,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136066,7 +136066,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136098,7 +136098,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136130,7 +136130,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136162,7 +136162,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136185,6 +136185,45 @@
         "stage": "cpu"
       },
       "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "3",
+          "path": "packages/core/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "resolvePointerOwnerHit",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "External-standard compatibility unless separately mapped.",
+          "path": "packages/core/test/renderer.test.ts",
+          "proves": "The bounded project API has behavioral coverage.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "resolvePointerOwnerHit",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.resolvepointerownerhit",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "status": "implemented"
     },
     {
       "blockedBy": [],
@@ -136226,7 +136265,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136258,7 +136297,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "44",
+          "lines": "45",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136290,7 +136329,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "44",
+          "lines": "45",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136322,7 +136361,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "44",
+          "lines": "45",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136609,6 +136648,80 @@
     {
       "blockedBy": [],
       "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "The standard CSSOM styleSheets/adoptedStyleSheets interfaces.",
+          "path": "packages/dom/src/compiled-style-sheet.ts",
+          "proves": "Exact Document-scoped immutable records, collision rejection, revision snapshots, subscriptions and reference-counted leases.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "Document compiled stylesheet registry",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Template compiler extraction outside the Renderer repository.",
+          "path": "packages/react/src/runtime.ts",
+          "proves": "Exact compiled template metadata is acquired once per ComponentRoot and released on unmount without per-instance scanning.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "RootStyleSheetOwner",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "General incremental layout cost after a style change.",
+          "path": "packages/core/src/stylesheet-cache.ts",
+          "proves": "Same-Document projections share parsed rules by compiled revision and explicit global CSS content.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "cachedDocumentStyleRules",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Full CSSOM behavior.",
+          "path": "packages/dom/test/compiled-style-sheet.test.ts",
+          "proves": "Registry deduplication, collision atomicity, transaction coalescing and lease release.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "compiled-stylesheet-lifecycle",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Compiler extraction and native browser pixels.",
+          "path": "packages/react/test/compiled-style-sheet.test.ts",
+          "proves": "One thousand instances, multiple roots, collision rollback, memo metadata and root release.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "compiled-stylesheet-lifecycle",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Unsupported CSS grammar and general renderer performance.",
+          "path": "packages/core/test/compiled-style-sheet.test.ts",
+          "proves": "Initial/late rules, explicit global CSS, shared projection cache, pseudos, inheritance and release.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "compiled-stylesheet-lifecycle",
+          "type": "unit-test"
+        }
+      ],
+      "id": "renderer.features.compiled-stylesheet-lifecycle",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
       "conformance": "adapted",
       "consumers": [],
       "evidence": [
@@ -136653,18 +136766,18 @@
       "consumers": [],
       "evidence": [
         {
-          "doesNotProve": "The complete CSS/browser algorithm.",
-          "path": "packages/core/src/renderer.ts",
-          "proves": "The bounded CPU frame stage exists.",
+          "doesNotProve": "The complete Pointer Events hit-testing, capture and browser default-action standards.",
+          "path": "packages/core/src/interaction.ts",
+          "proves": "Deepest pointer targets retain ordinary dispatch while nearest interactive/disabled ancestors own focus, disabled state and cross-descendant activation continuity.",
           "repository": "renderer",
           "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "default-activation",
+          "symbol": "resolvePointerOwnerHit",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Unsupported values and general incremental coverage.",
+          "doesNotProve": "Native browser trusted events and every interactive HTML element.",
           "path": "packages/core/test/interaction.test.ts",
-          "proves": "Observable behavior for the bounded subset.",
+          "proves": "Nested target bubbling, same-descendant click target, cross-descendant owner activation, disabled suppression, ordinary noninteractive click and cancel cleanup.",
           "repository": "renderer",
           "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
           "symbol": "default-activation",
@@ -136677,7 +136790,7 @@
         "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
       },
       "limitations": [
-        "The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests."
+        "Implemented for the bounded rendered-control set; complete browser Pointer Events and default actions remain outside Core."
       ],
       "owner": {
         "package": "@zavx0z/renderer",
@@ -137242,18 +137355,18 @@
       "consumers": [],
       "evidence": [
         {
-          "doesNotProve": "The complete CSS/browser algorithm.",
-          "path": "packages/core/src/renderer.ts",
-          "proves": "The bounded CPU frame stage exists.",
+          "doesNotProve": "The complete Pointer Events hit-testing, capture and browser default-action standards.",
+          "path": "packages/core/src/interaction.ts",
+          "proves": "Deepest pointer targets retain ordinary dispatch while nearest interactive/disabled ancestors own focus, disabled state and cross-descendant activation continuity.",
           "repository": "renderer",
           "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "pointer",
+          "symbol": "resolvePointerOwnerHit",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Unsupported values and general incremental coverage.",
+          "doesNotProve": "Native browser trusted events and every interactive HTML element.",
           "path": "packages/core/test/interaction.test.ts",
-          "proves": "Observable behavior for the bounded subset.",
+          "proves": "Nested target bubbling, same-descendant click target, cross-descendant owner activation, disabled suppression, ordinary noninteractive click and cancel cleanup.",
           "repository": "renderer",
           "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
           "symbol": "pointer",
@@ -137266,7 +137379,7 @@
         "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
       },
       "limitations": [
-        "The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests."
+        "Implemented for the bounded rendered-control set; complete browser Pointer Events and default actions remain outside Core."
       ],
       "owner": {
         "package": "@zavx0z/renderer",

@@ -64,6 +64,15 @@ Core `DocumentInteractionController.wheel()`; Core выбирает scroll owner
 меняет standard DOM `scrollTop`/`scrollLeft`, после чего runtime выполняет один
 новый frame. Browser package не реализует собственный scroll law.
 
+Plane/overlay arbitration проверяет не только deepest rendered hit, но и его
+nearest rendered interactive или disabled ancestor через Core pointer-owner
+contract. Поэтому `span`/`img` внутри Button сохраняют exact event target и
+bubbling, одновременно не отдавая control padding/contents bounded world либо
+camera gesture. Disabled control также удерживает pointer/wheel/contextmenu/
+double-click arbitration без focus или activation. Passive overlay paint без
+такого owner по-прежнему пропускает input к bounded world согласно общей
+priority law.
+
 Каждый isolated CanvasRuntime создаёт один lazy Core `DocumentInteractionState`.
 SpaceRuntime создаёт один exact state для Experience и передаёт его всем Plane/
 Overlay runtimes одновременно с их CPU renderer и interaction controller.
@@ -313,3 +322,18 @@ Ctrl+wheel — viewport-aware anchored zoom. Optional `onDoubleClick()` полу
 тот же top visible world только после interactive-overlay rejection и
 автоматически запрашивает shared frame. V1 не объявляет Engine object activation,
 semantic scene tree или multi-touch pinch policy.
+
+## `RENDERER-BROWSER-013` — compiled stylesheet frame scheduling
+
+CanvasRuntime, PlaneRuntime и OverlayRuntime подписываются на opaque
+compiled-style revision своего exact semantic Document наряду с mutation и
+live-state channels. Late template registration и last-root release используют
+обычный coalesced frame path; host не сканирует DOM, template instances или
+style attributes и не создаёт второй stylesheet realm.
+
+В SpaceRuntime каждый same-Document projection получает один общий cached
+compiled rule index через CPU owner. Explicit `styleSheets` Experience остаются
+global/consumer CSS и не заменяются component metadata; они следуют после
+compiled owner sheets в author cascade. Dispose каждого runtime отключает exact
+style subscription, поэтому поздний release не планирует frame через
+освобождённый projection.

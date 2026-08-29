@@ -10,14 +10,14 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 
 | Repository | Branch | Revision | Dirty at generation |
 |---|---|---|---:|
-| demo | main | `7a88ae3d6fa82b53d03f08e0cc9f86b1c41f0325` | yes |
-| engine | main | `bd54c046d22cea8ea09002bed42d7cc405206c75` | yes |
-| interpreter | main | `879b4e01a4abd12756f86228784421e26270f485` | yes |
-| metafor | main | `fbc4aa770d8d1399d20bfa6e126fcd980722425d` | yes |
+| demo | main | `b71608957a9c8df7f595c7fd08ef14ab5247d9a3` | yes |
+| engine | main | `001bde9140eb0d535e97458535197787066a64aa` | no |
+| interpreter | main | `f3ddf4e115726ee43f04dbfef71dfae8893e4af4` | yes |
+| metafor | main | `2534bbc82280f28e87fadb56d8a50d3a7f92b1ac` | yes |
 | node | main | `66b616a912950a023a2ddff5d62702e4074b0011` | no |
-| renderer | main | `f043ec96f1656318deffc2a9813635b8d18bd7df` | yes |
-| template | main | `d04acced6c6a40d9270afd9d0ffb875d9d6a9b3b` | no |
-| ui | main | `5ed63adbc1d53c018bd7c5526df4d9ef175ffeef` | yes |
+| renderer | main | `658124f4df03f1b46cbe1ad250a714e45111d2d5` | yes |
+| template | main | `871eb8576094519ee9f7f48a638971b29c5a16b0` | no |
+| ui | main | `a2a7c476cb6ce81c43aa35315703db19e1c35891` | yes |
 
 ## Pinned external sources
 
@@ -52,15 +52,15 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 
 | Domain | Spec entries | Mapped | Implemented | Partial | Unsupported | Not applicable | Unverified | Missing |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| browser | 63 | 63 | 12 | 20 | 4 | 0 | 27 | 0 |
+| browser | 64 | 64 | 13 | 20 | 4 | 0 | 27 | 0 |
 | css | 3032 | 3032 | 0 | 171 | 2861 | 0 | 0 | 0 |
 | devtools | 31 | 31 | 13 | 0 | 5 | 0 | 13 | 0 |
-| dom | 1196 | 1196 | 69 | 242 | 713 | 0 | 172 | 0 |
+| dom | 1204 | 1204 | 72 | 242 | 713 | 0 | 177 | 0 |
 | engine | 151 | 151 | 13 | 34 | 5 | 0 | 99 | 0 |
 | html | 3729 | 3729 | 0 | 995 | 1947 | 787 | 0 | 0 |
 | react | 217 | 217 | 28 | 50 | 70 | 35 | 34 | 0 |
-| renderer | 93 | 93 | 3 | 41 | 4 | 0 | 45 | 0 |
-| tsx | 152 | 152 | 66 | 22 | 28 | 0 | 36 | 0 |
+| renderer | 95 | 95 | 5 | 41 | 4 | 0 | 45 | 0 |
+| tsx | 154 | 154 | 67 | 22 | 28 | 0 | 37 | 0 |
 | webgpu | 37 | 37 | 18 | 11 | 1 | 0 | 7 | 0 |
 
 ## Owner overlays
@@ -68,13 +68,13 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | Package | Repository | Revision | Records |
 |---|---|---|---:|
 | @engine/core | engine | `18c55d6c3dc68d1f2ab257378a505e5bac2eea3e` | 151 |
-| @zavx0z/dom | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 4925 |
+| @zavx0z/dom | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 4933 |
 | @zavx0z/dom-devtools | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 31 |
 | @zavx0z/react | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 217 |
-| @zavx0z/renderer | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 3125 |
-| @zavx0z/renderer-browser | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 63 |
+| @zavx0z/renderer | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 3127 |
+| @zavx0z/renderer-browser | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 64 |
 | @zavx0z/renderer-webgpu | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 37 |
-| @zavx0z/template | template | `87d0ec3d2a9f19c3750d567ee20dc4bace995e90` | 152 |
+| @zavx0z/template | template | `87d0ec3d2a9f19c3750d567ee20dc4bace995e90` | 154 |
 
 ## Complete matrix
 
@@ -90,6 +90,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `browser.features.capture` | browser-host | partial | adapted | @zavx0z/renderer-browser/browser-host | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. | 2 | 0 |
 | `browser.features.cleanup` | browser-host | implemented | extension | @zavx0z/renderer-browser/browser-host | — | 2 | 0 |
 | `browser.features.clipboard-proxy` | browser-host | unsupported | none | @zavx0z/renderer-browser/browser-host | The native host intentionally exposes only the current text input/textarea proxy subset; this control/browser integration is absent. | 1 | 0 |
+| `browser.features.compiled-stylesheet-scheduling` | browser-host | implemented | extension | @zavx0z/renderer-browser/browser-host | — | 2 | 0 |
 | `browser.features.composition-ime` | browser-host | partial | adapted | @zavx0z/renderer-browser/browser-host | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. | 2 | 0 |
 | `browser.features.device-pixel-ratio` | browser-host | partial | adapted | @zavx0z/renderer-browser/browser-host | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. | 2 | 0 |
 | `browser.features.direct-world-regions` | browser-host | implemented | extension | @zavx0z/renderer-browser/browser-host | — | 3 | 0 |
@@ -108,7 +109,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `browser.features.same-document-input-identity` | browser-host | implemented | extension | @zavx0z/renderer-browser/browser-host | — | 2 | 0 |
 | `browser.features.select-picker` | browser-host | unsupported | none | @zavx0z/renderer-browser/browser-host | The native host intentionally exposes only the current text input/textarea proxy subset; this control/browser integration is absent. | 1 | 0 |
 | `browser.features.selection-synchronization` | browser-host | implemented | extension | @zavx0z/renderer-browser/browser-host | — | 2 | 0 |
-| `browser.features.semantic-pointer-events` | browser-host | partial | adapted | @zavx0z/renderer-browser/browser-host | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. | 2 | 0 |
+| `browser.features.semantic-pointer-events` | browser-host | partial | adapted | @zavx0z/renderer-browser/browser-host | Implemented through the bounded one-Experience host; live native browser acceptance remains separate. | 2 | 0 |
 | `browser.features.text-input-proxy` | browser-host | partial | adapted | @zavx0z/renderer-browser/browser-host | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. | 2 | 1 |
 | `browser.features.textarea-proxy` | browser-host | partial | adapted | @zavx0z/renderer-browser/browser-host | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. | 2 | 0 |
 | `browser.features.viewport` | browser-host | partial | adapted | @zavx0z/renderer-browser/browser-host | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. | 2 | 0 |
@@ -4296,6 +4297,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `platform.at-zavx0z-dom.export-paths.popover-state.symbols.popovervalue` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.popover-state.symbols.popovervisibilitystate` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root` | package-export-path | partial | extension | @zavx0z/dom/semantic | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
+| `platform.at-zavx0z-dom.export-paths.root.symbols.acquiredocumentcompiledstylesheets` | runtime-export | implemented | extension | @zavx0z/dom/semantic | — | 2 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.addeventlisteneroptions` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.attributemutation` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.characterdata` | runtime-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
@@ -4308,6 +4310,11 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `platform.at-zavx0z-dom.export-paths.root.symbols.customevent` | runtime-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.customeventinit` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.document` | runtime-export | partial | extension | @zavx0z/dom/semantic | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
+| `platform.at-zavx0z-dom.export-paths.root.symbols.documentcompiledstylesheet` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-zavx0z-dom.export-paths.root.symbols.documentcompiledstylesheetchange` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-zavx0z-dom.export-paths.root.symbols.documentcompiledstylesheetlease` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-zavx0z-dom.export-paths.root.symbols.documentcompiledstylesheetsnapshot` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-zavx0z-dom.export-paths.root.symbols.documentcompiledstylesheetsubscriber` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.documentfragment` | runtime-export | partial | extension | @zavx0z/dom/semantic | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.documentmutation` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.documentstatechange` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
@@ -4373,12 +4380,14 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `platform.at-zavx0z-dom.export-paths.root.symbols.popoverstatechange` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.popovervalue` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.popovervisibilitystate` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-zavx0z-dom.export-paths.root.symbols.readdocumentcompiledstylesheets` | runtime-export | implemented | extension | @zavx0z/dom/semantic | — | 2 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.scrollbehavior` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.scrollstatechange` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.scrolltooptions` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.showpopoveroptions` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.statechangebatch` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.statechangesubscriber` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-zavx0z-dom.export-paths.root.symbols.subscribedocumentcompiledstylesheets` | runtime-export | implemented | extension | @zavx0z/dom/semantic | — | 2 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.text` | runtime-export | partial | extension | @zavx0z/dom/semantic | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.textareaselectionstatechange` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.textareastatechange` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
@@ -8580,6 +8589,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.renderviewport` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.renderwhitespace` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.renderzindex` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-zavx0z-renderer.export-paths.root.symbols.resolvepointerownerhit` | runtime-export | implemented | extension | @zavx0z/renderer/cpu | — | 2 | 0 |
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.resolvetitle` | runtime-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.textdisplayitem` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.titlecandidate` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
@@ -8592,8 +8602,9 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `renderer.features.cascade` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.clean-frame-fast-path` | renderer-stage | implemented | extension | @zavx0z/renderer/cpu | — | 2 | 0 |
 | `renderer.features.clip-stacks` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
+| `renderer.features.compiled-stylesheet-lifecycle` | renderer-stage | implemented | extension | @zavx0z/renderer/cpu | — | 6 | 1 |
 | `renderer.features.computed-style` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
-| `renderer.features.default-activation` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
+| `renderer.features.default-activation` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Implemented for the bounded rendered-control set; complete browser Pointer Events and default actions remain outside Core. | 2 | 0 |
 | `renderer.features.display-list` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.flex-layout` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.form-control-projection` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
@@ -8608,7 +8619,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `renderer.features.line-breaking` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Text measurement is an adapted fixed advance model without shaping, kerning, bidi, fallback, or full inline formatting. | 2 | 0 |
 | `renderer.features.overflow` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.performance-paths` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
-| `renderer.features.pointer` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
+| `renderer.features.pointer` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Implemented for the bounded rendered-control set; complete browser Pointer Events and default actions remain outside Core. | 2 | 0 |
 | `renderer.features.popover-projection` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.positioning` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.progress-meter` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
@@ -8649,6 +8660,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `platform.at-zavx0z-template.export-paths.compiled.symbols.bindtext` | runtime-export | implemented | extension | @zavx0z/template/compiler | — | 2 | 0 |
 | `platform.at-zavx0z-template.export-paths.compiled.symbols.childbinding` | type-export | unverified | unknown | @zavx0z/template/compiler | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-template.export-paths.compiled.symbols.compiledmount` | type-export | unverified | unknown | @zavx0z/template/compiler | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-zavx0z-template.export-paths.compiled.symbols.compiledstylesheet` | type-export | unverified | unknown | @zavx0z/template/compiler | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-template.export-paths.compiled.symbols.compiledtemplate` | type-export | unverified | unknown | @zavx0z/template/compiler | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-template.export-paths.compiled.symbols.compiledtemplatedefinition` | type-export | unverified | unknown | @zavx0z/template/compiler | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-template.export-paths.compiled.symbols.conditionalbinding` | type-export | unverified | unknown | @zavx0z/template/compiler | Export/type presence is not behavioral evidence. | 1 | 0 |
@@ -8750,6 +8762,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `tsx.compiler.source-maps` | tsx-compiler | unsupported | none | @zavx0z/template/compiler | The governed TSX compiler rejects this syntax or does not provide the requested diagnostic/source-map contract. | 1 | 0 |
 | `tsx.compiler.source-roots` | tsx-compiler | implemented | extension | @zavx0z/template/compiler | — | 2 | 0 |
 | `tsx.compiler.spreads` | tsx-compiler | unsupported | none | @zavx0z/template/compiler | The governed TSX compiler rejects this syntax or does not provide the requested diagnostic/source-map contract. | 1 | 0 |
+| `tsx.compiler.static-style-extraction` | tsx-compiler | implemented | extension | @zavx0z/template/compiler | — | 4 | 1 |
 | `tsx.compiler.style-bindings` | tsx-compiler | implemented | extension | @zavx0z/template/compiler | — | 2 | 0 |
 | `tsx.compiler.symbol-resolution` | tsx-compiler | implemented | extension | @zavx0z/template/compiler | — | 2 | 0 |
 | `tsx.tagged-html.arrays` | tagged-html | implemented | extension | @zavx0z/template/compiler | — | 2 | 0 |

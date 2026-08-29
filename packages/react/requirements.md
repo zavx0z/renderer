@@ -173,3 +173,19 @@ preserves the previous handle when render or handle creation fails.
 successfully committed callback and rejects render-phase invocation.
 `useDebugValue` stores its raw value and optional formatter without eagerly
 executing the formatter.
+
+## DOM-COMPONENTS-020 — compiled stylesheet adoption
+
+Every compiled template exposes immutable `styleSheets` metadata owned by the
+Template ABI. A ComponentRoot stages metadata from exact templates encountered
+through ordinary retained component construction and acquires every unique
+stylesheet id at most once for that root. One thousand instances of one
+template therefore own one root-level acquisition, not one thousand style
+objects or stylesheet injections.
+
+Acquisition joins the successful Document commit; a failed prepared tree does
+not replace the committed DOM or leave a conflicting stylesheet. Multiple
+roots in one Document share the Document registry's reference-counted record.
+Root `unmount()` releases every stylesheet acquired by that root; disposing an
+individual instance performs no stylesheet scan or reference-count churn.
+`memo` preserves the wrapped template's stylesheet metadata.

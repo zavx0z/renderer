@@ -127,6 +127,24 @@
       }
     },
     {
+      "description": "CPU Renderer compiled stylesheet lifecycle capability.",
+      "domain": "renderer",
+      "id": "renderer.features.compiled-stylesheet-lifecycle",
+      "kind": "renderer-stage",
+      "name": "compiled stylesheet lifecycle",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#compiled-stylesheet-lifecycle",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
       "description": "CPU Renderer computed style capability.",
       "domain": "renderer",
       "id": "renderer.features.computed-style",

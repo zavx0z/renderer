@@ -11,7 +11,7 @@
           "path": "src/main.ts",
           "proves": "Present the journal root from the shared Experience Document on a stable resizable plane with capture and diagnostics.",
           "repository": "demo",
-          "revision": "7a88ae3d6fa82b53d03f08e0cc9f86b1c41f0325+dirty",
+          "revision": "b71608957a9c8df7f595c7fd08ef14ab5247d9a3+dirty",
           "symbol": "Journal plane",
           "type": "consumer-usage"
         }
@@ -33,7 +33,7 @@
           "path": "cosmos/internal/visual/main/index.ts",
           "proves": "Attach the Cosmos main root from the shared Experience Document to a stable world plane with the intended stylesheet and camera gestures.",
           "repository": "metafor",
-          "revision": "fbc4aa770d8d1399d20bfa6e126fcd980722425d+dirty",
+          "revision": "2534bbc82280f28e87fadb56d8a50d3a7f92b1ac+dirty",
           "symbol": "Cosmos display plane",
           "type": "consumer-usage"
         }
@@ -55,7 +55,7 @@
           "path": "packages/interpreter/web/main.ts",
           "proves": "Project every module root from one shared Experience Document into stable world planes with nearest-plane input, resize, capture and cleanup.",
           "repository": "interpreter",
-          "revision": "879b4e01a4abd12756f86228784421e26270f485+dirty",
+          "revision": "f3ddf4e115726ee43f04dbfef71dfae8893e4af4+dirty",
           "symbol": "Module displays",
           "type": "consumer-usage"
         }
@@ -73,16 +73,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "158",
+          "lines": "157",
           "path": "packages/components/inspector.tsx",
           "proves": "Focused numeric field editing inside nested scrollable Inspector groups.",
           "repository": "ui",
-          "revision": "5ed63adbc1d53c018bd7c5526df4d9ef175ffeef+dirty",
+          "revision": "a2a7c476cb6ce81c43aa35315703db19e1c35891+dirty",
           "symbol": "Inspector numeric fields",
           "type": "consumer-usage"
         }
       ],
-      "line": 158,
+      "line": 157,
       "package": "@ui/components",
       "path": "packages/components/inspector.tsx",
       "repository": "ui",
@@ -99,7 +99,7 @@
           "path": "packages/components/number-input.tsx",
           "proves": "Native typed number editing, focus, input/change, Escape rollback and selection through the exact semantic owner.",
           "repository": "ui",
-          "revision": "5ed63adbc1d53c018bd7c5526df4d9ef175ffeef+dirty",
+          "revision": "a2a7c476cb6ce81c43aa35315703db19e1c35891+dirty",
           "symbol": "NumberInput",
           "type": "consumer-usage"
         }
@@ -121,7 +121,7 @@
           "path": "src/main.ts",
           "proves": "Own one semantic Document, Canvas, Engine Renderer and Space for every Demo projection root.",
           "repository": "demo",
-          "revision": "7a88ae3d6fa82b53d03f08e0cc9f86b1c41f0325+dirty",
+          "revision": "b71608957a9c8df7f595c7fd08ef14ab5247d9a3+dirty",
           "symbol": "Demo presentation host",
           "type": "consumer-usage"
         }
@@ -143,7 +143,7 @@
           "path": "packages/interpreter/web/main.ts",
           "proves": "Own one semantic Document, Canvas, Engine Renderer and Space for all module display roots in the Interpreter Experience.",
           "repository": "interpreter",
-          "revision": "879b4e01a4abd12756f86228784421e26270f485+dirty",
+          "revision": "f3ddf4e115726ee43f04dbfef71dfae8893e4af4+dirty",
           "symbol": "Interpreter presentation host",
           "type": "consumer-usage"
         }
@@ -165,7 +165,7 @@
           "path": "cosmos/internal/visual/main/index.ts",
           "proves": "Own one semantic Document, Canvas, Engine Renderer and Space for the Cosmos main plane and dock HUD projection.",
           "repository": "metafor",
-          "revision": "fbc4aa770d8d1399d20bfa6e126fcd980722425d+dirty",
+          "revision": "2534bbc82280f28e87fadb56d8a50d3a7f92b1ac+dirty",
           "symbol": "Cosmos presentation host",
           "type": "consumer-usage"
         }
@@ -187,7 +187,7 @@
           "path": "cosmos/internal/visual/main/index.ts",
           "proves": "Attach the dock sibling root from the same Experience Document to a camera-locked overlay using the host stylesheet realm.",
           "repository": "metafor",
-          "revision": "fbc4aa770d8d1399d20bfa6e126fcd980722425d+dirty",
+          "revision": "2534bbc82280f28e87fadb56d8a50d3a7f92b1ac+dirty",
           "symbol": "Cosmos display dock",
           "type": "consumer-usage"
         }
@@ -209,7 +209,7 @@
           "path": "quantum/bulk/dom/overlay-runtime.ts",
           "proves": "Compose the HUD through the shared browser overlay owner rather than reimplementing pointer mapping, capture, hit and lifecycle.",
           "repository": "metafor",
-          "revision": "fbc4aa770d8d1399d20bfa6e126fcd980722425d+dirty",
+          "revision": "2534bbc82280f28e87fadb56d8a50d3a7f92b1ac+dirty",
           "symbol": "Bulk DOM overlay",
           "type": "consumer-usage"
         }
@@ -231,7 +231,7 @@
           "path": "packages/interpreter/web/dom/terminal.ts",
           "proves": "Route focused text entry, keyboard control sequences and composition into the semantic terminal input owner.",
           "repository": "interpreter",
-          "revision": "879b4e01a4abd12756f86228784421e26270f485+dirty",
+          "revision": "f3ddf4e115726ee43f04dbfef71dfae8893e4af4+dirty",
           "symbol": "Terminal",
           "type": "consumer-usage"
         }
@@ -253,7 +253,7 @@
           "path": "packages/components/code-editor.tsx",
           "proves": "Two-axis scrolling with clipping and stable retained line/token identity.",
           "repository": "ui",
-          "revision": "5ed63adbc1d53c018bd7c5526df4d9ef175ffeef+dirty",
+          "revision": "a2a7c476cb6ce81c43aa35315703db19e1c35891+dirty",
           "symbol": "CodeEditor",
           "type": "consumer-usage"
         }
@@ -297,7 +297,7 @@
           "path": "packages/components/code-editor.tsx",
           "proves": "Preserve source whitespace and prevent wrapping for read-only code lines.",
           "repository": "ui",
-          "revision": "5ed63adbc1d53c018bd7c5526df4d9ef175ffeef+dirty",
+          "revision": "a2a7c476cb6ce81c43aa35315703db19e1c35891+dirty",
           "symbol": "CodeEditor",
           "type": "consumer-usage"
         }
@@ -319,7 +319,7 @@
           "path": "packages/interpreter/web/dom/source-editor.ts",
           "proves": "Keep semantic textarea selection start/end/direction synchronized with the editable source.",
           "repository": "interpreter",
-          "revision": "879b4e01a4abd12756f86228784421e26270f485+dirty",
+          "revision": "f3ddf4e115726ee43f04dbfef71dfae8893e4af4+dirty",
           "symbol": "SourceEditor",
           "type": "consumer-usage"
         }
@@ -341,7 +341,7 @@
           "path": "packages/interpreter/web/dom/terminal.ts",
           "proves": "Retain and expose terminal text selection for copy instead of returning a fabricated null snapshot.",
           "repository": "interpreter",
-          "revision": "879b4e01a4abd12756f86228784421e26270f485+dirty",
+          "revision": "f3ddf4e115726ee43f04dbfef71dfae8893e4af4+dirty",
           "symbol": "Terminal selection",
           "type": "consumer-usage"
         }
@@ -363,7 +363,7 @@
           "path": "packages/interpreter/web/dom/source-editor.ts",
           "proves": "Use current rendered line geometry instead of a hard-coded line height and viewport.",
           "repository": "interpreter",
-          "revision": "879b4e01a4abd12756f86228784421e26270f485+dirty",
+          "revision": "f3ddf4e115726ee43f04dbfef71dfae8893e4af4+dirty",
           "symbol": "SourceEditor scrollToLine",
           "type": "consumer-usage"
         }
@@ -385,7 +385,7 @@
           "path": "packages/components/number-input.tsx",
           "proves": "A scrub gesture continues outside the control until pointerup/cancel without component-owned capture emulation.",
           "repository": "ui",
-          "revision": "5ed63adbc1d53c018bd7c5526df4d9ef175ffeef+dirty",
+          "revision": "a2a7c476cb6ce81c43aa35315703db19e1c35891+dirty",
           "symbol": "NumberInput scrub",
           "type": "consumer-usage"
         }
@@ -407,7 +407,7 @@
           "path": "packages/interpreter/web/dom/file-tree.ts",
           "proves": "Expose tree rows, level, expansion and selection through the semantic accessibility mapping.",
           "repository": "interpreter",
-          "revision": "879b4e01a4abd12756f86228784421e26270f485+dirty",
+          "revision": "f3ddf4e115726ee43f04dbfef71dfae8893e4af4+dirty",
           "symbol": "FileTree",
           "type": "consumer-usage"
         }
@@ -429,7 +429,7 @@
           "path": "packages/interpreter/web/dom/source-editor.ts",
           "proves": "Copy/cut/paste the current source selection through the browser host without a component-local clipboard dispatcher.",
           "repository": "interpreter",
-          "revision": "879b4e01a4abd12756f86228784421e26270f485+dirty",
+          "revision": "f3ddf4e115726ee43f04dbfef71dfae8893e4af4+dirty",
           "symbol": "SourceEditor",
           "type": "consumer-usage"
         }
@@ -447,16 +447,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "142",
+          "lines": "141",
           "path": "packages/components/color-input.tsx",
           "proves": "Stable controlled RGBA channels with range input/change semantics and analytical color paint.",
           "repository": "ui",
-          "revision": "5ed63adbc1d53c018bd7c5526df4d9ef175ffeef+dirty",
+          "revision": "a2a7c476cb6ce81c43aa35315703db19e1c35891+dirty",
           "symbol": "ColorInput",
           "type": "consumer-usage"
         }
       ],
-      "line": 142,
+      "line": 141,
       "package": "@ui/components",
       "path": "packages/components/color-input.tsx",
       "repository": "ui",
@@ -469,16 +469,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "186",
+          "lines": "185",
           "path": "packages/components/color-input.tsx",
           "proves": "An anchored top-layer color picker with clipping, light dismiss, Escape and focus restoration instead of an inline hidden panel.",
           "repository": "ui",
-          "revision": "5ed63adbc1d53c018bd7c5526df4d9ef175ffeef+dirty",
+          "revision": "a2a7c476cb6ce81c43aa35315703db19e1c35891+dirty",
           "symbol": "ColorInput",
           "type": "consumer-usage"
         }
       ],
-      "line": 186,
+      "line": 185,
       "package": "@ui/components",
       "path": "packages/components/color-input.tsx",
       "repository": "ui",
@@ -495,7 +495,7 @@
           "path": "packages/components/enum-input.tsx",
           "proves": "Open a collapsed select picker, navigate options by keyboard, activate one option and dispatch input/change.",
           "repository": "ui",
-          "revision": "5ed63adbc1d53c018bd7c5526df4d9ef175ffeef+dirty",
+          "revision": "a2a7c476cb6ce81c43aa35315703db19e1c35891+dirty",
           "symbol": "EnumInput",
           "type": "consumer-usage"
         }
@@ -583,7 +583,7 @@
           "path": "src/main.ts",
           "proves": "Observe neutral plane/frame diagnostics without reaching into retained Engine/WebGPU owner objects.",
           "repository": "demo",
-          "revision": "7a88ae3d6fa82b53d03f08e0cc9f86b1c41f0325+dirty",
+          "revision": "b71608957a9c8df7f595c7fd08ef14ab5247d9a3+dirty",
           "symbol": "Journal diagnostics",
           "type": "consumer-usage"
         }
@@ -605,7 +605,7 @@
           "path": "packages/interpreter/web/dom/source-editor.ts",
           "proves": "Paint a visible caret and selected range aligned with the separately tokenized presentation.",
           "repository": "interpreter",
-          "revision": "879b4e01a4abd12756f86228784421e26270f485+dirty",
+          "revision": "f3ddf4e115726ee43f04dbfef71dfae8893e4af4+dirty",
           "symbol": "SourceEditor",
           "type": "consumer-usage"
         }
@@ -618,6 +618,28 @@
       "subject": "SourceEditor"
     },
     {
+      "behavior": "Adopt the exact compiled Button stylesheet once per Document and make it visible to every same-Document projection without manual buttonCss or consumer styleSheets wiring.",
+      "capability": "renderer.features.compiled-stylesheet-lifecycle",
+      "evidence": [
+        {
+          "doesNotProve": "Platform implementation or conformance.",
+          "lines": "48",
+          "path": "packages/components/button.tsx",
+          "proves": "Adopt the exact compiled Button stylesheet once per Document and make it visible to every same-Document projection without manual buttonCss or consumer styleSheets wiring.",
+          "repository": "ui",
+          "revision": "a2a7c476cb6ce81c43aa35315703db19e1c35891+dirty",
+          "symbol": "Button automatic stylesheet adoption",
+          "type": "consumer-usage"
+        }
+      ],
+      "line": 48,
+      "package": "@ui/components",
+      "path": "packages/components/button.tsx",
+      "repository": "ui",
+      "scope": "production",
+      "subject": "Button automatic stylesheet adoption"
+    },
+    {
       "behavior": "Render journal images with object-fit, explicit dimensions, retained texture readiness and cleanup.",
       "capability": "renderer.features.images",
       "evidence": [
@@ -627,7 +649,7 @@
           "path": "src/dom/journalDocument.ts",
           "proves": "Render journal images with object-fit, explicit dimensions, retained texture readiness and cleanup.",
           "repository": "demo",
-          "revision": "7a88ae3d6fa82b53d03f08e0cc9f86b1c41f0325+dirty",
+          "revision": "b71608957a9c8df7f595c7fd08ef14ab5247d9a3+dirty",
           "symbol": "Journal document",
           "type": "consumer-usage"
         }
@@ -693,7 +715,7 @@
           "path": "src/dom/journalDocument.ts",
           "proves": "Compile linked .tsx component exports through the Template JSX profile instead of importing removed imperative controllers.",
           "repository": "demo",
-          "revision": "7a88ae3d6fa82b53d03f08e0cc9f86b1c41f0325+dirty",
+          "revision": "b71608957a9c8df7f595c7fd08ef14ab5247d9a3+dirty",
           "symbol": "Compiled UI migration",
           "type": "consumer-usage"
         }
@@ -715,7 +737,7 @@
           "path": "packages/interpreter/web/dom/source-editor.ts",
           "proves": "Configure JSX compilation and migrate stale create*Controller imports to compiled component roots.",
           "repository": "interpreter",
-          "revision": "879b4e01a4abd12756f86228784421e26270f485+dirty",
+          "revision": "f3ddf4e115726ee43f04dbfef71dfae8893e4af4+dirty",
           "symbol": "Compiled web UI migration",
           "type": "consumer-usage"
         }
@@ -737,7 +759,7 @@
           "path": "cosmos/internal/visual/main/index.ts",
           "proves": "Compile linked .tsx component exports and remove stale imperative createButton usage without restoring legacy APIs.",
           "repository": "metafor",
-          "revision": "fbc4aa770d8d1399d20bfa6e126fcd980722425d+dirty",
+          "revision": "2534bbc82280f28e87fadb56d8a50d3a7f92b1ac+dirty",
           "symbol": "Compiled dock migration",
           "type": "consumer-usage"
         }
@@ -750,6 +772,28 @@
       "subject": "Compiled dock migration"
     },
     {
+      "behavior": "Extract Button owner declarations, native pseudo states and finite conditional variants from intrinsic style objects without defineStyles or runtime owner-style scanning.",
+      "capability": "tsx.compiler.static-style-extraction",
+      "evidence": [
+        {
+          "doesNotProve": "Platform implementation or conformance.",
+          "lines": "48",
+          "path": "packages/components/button.tsx",
+          "proves": "Extract Button owner declarations, native pseudo states and finite conditional variants from intrinsic style objects without defineStyles or runtime owner-style scanning.",
+          "repository": "ui",
+          "revision": "a2a7c476cb6ce81c43aa35315703db19e1c35891+dirty",
+          "symbol": "Button component-local styles",
+          "type": "consumer-usage"
+        }
+      ],
+      "line": 48,
+      "package": "@ui/components",
+      "path": "packages/components/button.tsx",
+      "repository": "ui",
+      "scope": "production",
+      "subject": "Button component-local styles"
+    },
+    {
       "behavior": "Parse the bounded meta/log/conditional/map source contract without treating ordinary HTML as executable DOM UI.",
       "capability": "tsx.tagged-html.static-element-names",
       "evidence": [
@@ -759,7 +803,7 @@
           "path": "create-metafor/dsl/matter.ts",
           "proves": "Parse the bounded meta/log/conditional/map source contract without treating ordinary HTML as executable DOM UI.",
           "repository": "metafor",
-          "revision": "fbc4aa770d8d1399d20bfa6e126fcd980722425d+dirty",
+          "revision": "2534bbc82280f28e87fadb56d8a50d3a7f92b1ac+dirty",
           "symbol": "Matter source parser",
           "type": "consumer-usage"
         }

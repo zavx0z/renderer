@@ -72,6 +72,20 @@ semantic node may create zero, one, or several boxes and display items. A
 display item is retained by the composite identity `(node, key)`, never by its
 array position.
 
+Compiled component styles travel as immutable metadata on exact compiled
+templates. A ComponentRoot acquires those records in its semantic Document;
+the Document deduplicates equal ids, rejects conflicting content and publishes
+one transaction-coalesced revision of the active set. This opaque registry is
+not the standard CSSOM `Document.styleSheets` interface.
+
+CPU renderers merge the Document's compiled owner sheets before explicit
+caller-provided global/consumer sheets and share one parsed rule index for equal
+Document revision and explicit CSS. This preserves later consumer-token
+precedence during migration, while inline declarations remain highest. Every
+same-Document plane and overlay observes the same style-set revision. Component
+instances never scan DOM nodes or inject a stylesheet per instance; the last
+owning ComponentRoot release removes the compiled record.
+
 ## WebGPU backend
 
 `@zavx0z/renderer-webgpu` consumes the abstract display list and owns only its

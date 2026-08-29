@@ -1,4 +1,15 @@
 import {Comment} from "./comment.ts"
+import {
+  acquireDocumentCompiledStyleSheetsInternal,
+  readDocumentCompiledStyleSheetsInternal,
+  subscribeDocumentCompiledStyleSheetsInternal
+} from "./compiled-style-sheet.ts"
+import type {
+  DocumentCompiledStyleSheet,
+  DocumentCompiledStyleSheetLease,
+  DocumentCompiledStyleSheetSnapshot,
+  DocumentCompiledStyleSheetSubscriber
+} from "./compiled-style-sheet.ts"
 import {DocumentFragment} from "./document-fragment.ts"
 import {Element} from "./element.ts"
 import {FocusEvent} from "./focus-event.ts"
@@ -63,6 +74,18 @@ type StateChangeState = {
   version: number
 }
 
+type CompiledStyleSheetEntry = {
+  references: number
+  styleSheet: DocumentCompiledStyleSheet
+}
+
+type CompiledStyleSheetState = {
+  dirty: boolean
+  entries: Map<string, CompiledStyleSheetEntry>
+  snapshot: DocumentCompiledStyleSheetSnapshot
+  subscribers: Set<DocumentCompiledStyleSheetSubscriber>
+}
+
 export interface HTMLElementTagNameMap {
   button: HTMLButtonElement
   div: HTMLDivElement
@@ -103,6 +126,7 @@ export class Document extends Node {
   private mutationVersion = 0
   private focusState: {activeElement: HTMLElement | null; revision: number} | null = null
   private stateChangeState: StateChangeState | null = null
+  private compiledStyleSheetState: CompiledStyleSheetState | null = null
 
   constructor() {
     super(null, Node.DOCUMENT_NODE, "#document")
@@ -212,6 +236,7 @@ export class Document extends Node {
     } finally {
       this.transactionDepth -= 1
       if (this.transactionDepth === 0) {
+        this.flushCompiledStyleSheets()
         this.flushMutations()
         this.flushStateChanges()
       }
@@ -221,6 +246,84 @@ export class Document extends Node {
   subscribeMutations(subscriber: MutationSubscriber): () => void {
     this.mutationSubscribers.add(subscriber)
     return () => this.mutationSubscribers.delete(subscriber)
+  }
+
+  [acquireDocumentCompiledStyleSheetsInternal](
+    styleSheets: readonly DocumentCompiledStyleSheet[]
+  ): DocumentCompiledStyleSheetLease {
+    if (!Array.isArray(styleSheets)) {
+      throw new TypeError("Compiled styleSheets must be an array")
+    }
+    const unique = new Map<string, DocumentCompiledStyleSheet>()
+    for (const source of styleSheets) {
+      if (source === null || typeof source !== "object") {
+        throw new TypeError("A compiled stylesheet must be an object")
+      }
+      if (typeof source.id !== "string" || typeof source.cssText !== "string") {
+        throw new TypeError("A compiled stylesheet requires string id and cssText")
+      }
+      const id = source.id.trim()
+      const {cssText} = source
+      if (id.length === 0) throw new TypeError("A compiled stylesheet id cannot be empty")
+      const previous = unique.get(id)
+      if (previous !== undefined && previous.cssText !== cssText) {
+        throw new Error(`Compiled stylesheet id collision: ${id}`)
+      }
+      if (previous === undefined) unique.set(id, Object.freeze({id, cssText}))
+    }
+
+    const state = this.ensureCompiledStyleSheetState()
+    for (const [id, source] of unique) {
+      const current = state.entries.get(id)
+      if (current !== undefined && current.styleSheet.cssText !== source.cssText) {
+        throw new Error(`Compiled stylesheet id collision: ${id}`)
+      }
+      if (current?.references === Number.MAX_SAFE_INTEGER) {
+        throw new RangeError(`Compiled stylesheet reference overflow: ${id}`)
+      }
+    }
+
+    for (const [id, source] of unique) {
+      const current = state.entries.get(id)
+      if (current === undefined) {
+        state.entries.set(id, {references: 1, styleSheet: source})
+        state.dirty = true
+      } else current.references += 1
+    }
+    if (this.transactionDepth === 0) this.flushCompiledStyleSheets()
+
+    let released = false
+    return Object.freeze({
+      release: () => {
+        if (released) return
+        released = true
+        for (const id of unique.keys()) {
+          const current = state.entries.get(id)
+          if (current === undefined) continue
+          current.references -= 1
+          if (current.references === 0) {
+            state.entries.delete(id)
+            state.dirty = true
+          }
+        }
+        if (this.transactionDepth === 0) this.flushCompiledStyleSheets()
+      }
+    })
+  }
+
+  [readDocumentCompiledStyleSheetsInternal](): DocumentCompiledStyleSheetSnapshot {
+    return this.ensureCompiledStyleSheetState().snapshot
+  }
+
+  [subscribeDocumentCompiledStyleSheetsInternal](
+    subscriber: DocumentCompiledStyleSheetSubscriber
+  ): () => void {
+    if (typeof subscriber !== "function") {
+      throw new TypeError("Compiled stylesheet subscriber must be a function")
+    }
+    const state = this.ensureCompiledStyleSheetState()
+    state.subscribers.add(subscriber)
+    return () => state.subscribers.delete(subscriber)
   }
 
   recordMutation(mutation: DocumentMutation): void {
@@ -474,6 +577,30 @@ export class Document extends Node {
       subscribers: new Set(),
       version: 0
     }
+  }
+
+  private ensureCompiledStyleSheetState(): CompiledStyleSheetState {
+    return this.compiledStyleSheetState ??= {
+      dirty: false,
+      entries: new Map(),
+      snapshot: Object.freeze({revision: 0, styleSheets: Object.freeze([])}),
+      subscribers: new Set()
+    }
+  }
+
+  private flushCompiledStyleSheets(): void {
+    const state = this.compiledStyleSheetState
+    if (!state?.dirty) return
+    state.dirty = false
+    const styleSheets = Object.freeze([...state.entries.values()].map(entry => entry.styleSheet))
+    if (
+      styleSheets.length === state.snapshot.styleSheets.length &&
+      styleSheets.every((styleSheet, index) => styleSheet === state.snapshot.styleSheets[index])
+    ) return
+    const revision = state.snapshot.revision + 1
+    state.snapshot = Object.freeze({revision, styleSheets})
+    const change = Object.freeze({document: this, revision, styleSheets})
+    for (const subscriber of [...state.subscribers]) subscriber(change)
   }
 
   private updatePendingTarget(

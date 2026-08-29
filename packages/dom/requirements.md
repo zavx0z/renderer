@@ -610,3 +610,18 @@ overviews. Former section overviews are documented as variant grouping
 metadata and never select a representative leaf. Unknown routes remain
 fail-closed. The runtime adapter receives the exact package-tab Document and
 mounts only Nodes owned by that realm.
+
+## DOM-CORE-027 — opaque compiled stylesheet ownership
+
+One Document owns an opaque, ordered set of immutable compiled stylesheet
+records `{id, cssText}` independently of its semantic Node tree. Acquisition
+deduplicates repeated ids with exact equal CSS and returns an idempotent lease;
+the same id with different CSS fails before changing the active set. A record
+remains active until the last lease releases it.
+
+Every active-set change advances one monotonic Document-local revision and
+publishes one immutable snapshot to synchronous subscribers. Changes inside an
+outer `Document.transaction()` are coalesced; acquiring and releasing the same
+previously absent record in that transaction publishes nothing. This internal
+compiled-style transport does not claim `CSSStyleSheet`, `StyleSheetList`,
+`Document.styleSheets` or `adoptedStyleSheets` CSSOM behavior.

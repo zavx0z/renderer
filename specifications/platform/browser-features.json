@@ -145,6 +145,24 @@
       }
     },
     {
+      "description": "Browser composition compiled stylesheet scheduling capability.",
+      "domain": "browser",
+      "id": "browser.features.compiled-stylesheet-scheduling",
+      "kind": "browser-host",
+      "name": "compiled stylesheet scheduling",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#compiled-stylesheet-scheduling",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
       "description": "Browser composition composition ime capability.",
       "domain": "browser",
       "id": "browser.features.composition-ime",

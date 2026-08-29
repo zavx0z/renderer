@@ -117,7 +117,9 @@ export const createDocumentInteractionController = (
   const tooltipBackground = options.tooltipBackground ?? "#111827f2"
   const tooltipColor = options.tooltipColor ?? "#f9fafb"
   let hovered: Element | null = null
-  let pressed: Element | null = null
+  let pressedTarget: Element | null = null
+  let pressedOwner: Element | null = null
+  let pressedOwnerDisabled = false
   let titleCandidate: TitleCandidate | null = null
   let hoverStartedAt = 0
   let pointerX = 0
@@ -135,7 +137,7 @@ export const createDocumentInteractionController = (
       return hovered
     },
     get pressedElement() {
-      return pressed
+      return pressedOwner
     },
     get tooltip() {
       return currentTooltip
@@ -163,16 +165,21 @@ export const createDocumentInteractionController = (
       hasPointerPosition = true
       const now = input.timeStamp ?? Date.now()
       const hit = hitTest(frame, pointerX, pointerY)
+      const ownerHit = resolvePointerOwnerHit(frame, hit)
       transitionHover(hit?.node ?? null, input, now)
-      pressed = hit?.node ?? null
-      options.interactionState?.setActiveElement(pressed)
+      pressedTarget = hit?.node ?? null
+      pressedOwner = ownerHit?.node ?? pressedTarget
+      pressedOwnerDisabled = ownerHit?.disabled ?? hit?.disabled ?? false
+      options.interactionState?.setActiveElement(pressedTarget)
       titleCandidate = null
       currentTooltip = null
       if (hit) {
         const accepted = hit.node.dispatchEvent(
           pointerEvent("pointerdown", input, null, true, true),
         )
-        if (accepted && hit.interactive && !hit.disabled) focusElement(hit.node)
+        if (accepted && ownerHit?.interactive === true && !ownerHit.disabled) {
+          focusElement(ownerHit.node)
+        }
       }
       invalidatePresentation()
       return hit?.node ?? null
@@ -186,15 +193,28 @@ export const createDocumentInteractionController = (
       hasPointerPosition = true
       const now = input.timeStamp ?? Date.now()
       const hit = hitTest(frame, pointerX, pointerY)
+      const ownerHit = resolvePointerOwnerHit(frame, hit)
       transitionHover(hit?.node ?? null, input, now)
       const released = hit?.node ?? null
+      const releasedOwner = ownerHit?.node ?? released
+      const releasedOwnerDisabled = ownerHit?.disabled ?? hit?.disabled ?? false
       try {
         released?.dispatchEvent(pointerEvent("pointerup", input, null, true, true))
-        if (released !== null && released === pressed && hit?.disabled !== true) {
-          activateElement(released, input)
+        if (
+          releasedOwner !== null &&
+          releasedOwner === pressedOwner &&
+          !pressedOwnerDisabled &&
+          !releasedOwnerDisabled
+        ) {
+          activateElement(
+            released !== null && released === pressedTarget ? released : releasedOwner,
+            input,
+          )
         }
       } finally {
-        pressed = null
+        pressedTarget = null
+        pressedOwner = null
+        pressedOwnerDisabled = false
         options.interactionState?.setActiveElement(null)
         refreshTitleCandidate(now)
         invalidatePresentation()
@@ -205,11 +225,13 @@ export const createDocumentInteractionController = (
       assertActive()
       validateFrame(frame)
       validatePointer(input)
-      const target = pressed ?? hovered
+      const target = pressedTarget ?? hovered
       try {
         target?.dispatchEvent(pointerEvent("pointercancel", input, null, true, false))
       } finally {
-        pressed = null
+        pressedTarget = null
+        pressedOwner = null
+        pressedOwnerDisabled = false
         options.interactionState?.setActiveElement(null)
         currentTooltip = null
         refreshTitleCandidate(input.timeStamp ?? Date.now())
@@ -288,7 +310,9 @@ export const createDocumentInteractionController = (
       if (disposed) return
       disposed = true
       hovered = null
-      pressed = null
+      pressedTarget = null
+      pressedOwner = null
+      pressedOwnerDisabled = false
       options.interactionState?.setHoveredElement(null)
       options.interactionState?.setActiveElement(null)
       titleCandidate = null
@@ -394,6 +418,23 @@ export const hitTest = (
     ) {
       return hit
     }
+  }
+  return null
+}
+
+/** Resolves the nearest interactive or disabled semantic owner of an exact hit. */
+export const resolvePointerOwnerHit = (
+  frame: RenderFrame,
+  hit: HitMetadata | null,
+): HitMetadata | null => {
+  if (hit === null) return null
+  for (
+    let element: Element | null = hit.node;
+    element !== null;
+    element = element.parentElement
+  ) {
+    const candidate = frame.hits.get(element)
+    if (candidate?.interactive === true || candidate?.disabled === true) return candidate
   }
   return null
 }

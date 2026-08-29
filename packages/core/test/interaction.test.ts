@@ -145,4 +145,95 @@ describe("document interaction bridge", () => {
     expect(events).toEqual(["click:true", "input", "change"])
     expect(renderer.flush().displayList.some(item => item.key === "indicator")).toBe(true)
   })
+
+  test("activates one nearest control across different nested pointer targets", () => {
+    const document = createDocument()
+    const button = document.createElement("button")
+    const left = document.createElement("span")
+    const right = document.createElement("span")
+    document.appendChild(button)
+    button.setAttribute("style", "display:flex; width:100px; height:24px; padding:0")
+    left.setAttribute("style", "display:block; width:50px; height:24px")
+    right.setAttribute("style", "display:block; width:50px; height:24px")
+    left.append("Left")
+    right.append("Right")
+    button.append(left, right)
+    const frame = createDocumentRenderer({
+      document,
+      root: button,
+      viewport: {width: 100, height: 24},
+    }).flush()
+    const interaction = createDocumentInteractionController({document})
+    const leftBox = frame.boxByNode.get(left)!
+    const rightBox = frame.boxByNode.get(right)!
+    const events: string[] = []
+    const clickTargets: unknown[] = []
+    left.addEventListener("pointerdown", () => events.push("left:down"))
+    left.addEventListener("pointercancel", () => events.push("left:cancel"))
+    right.addEventListener("pointerup", () => events.push("right:up"))
+    button.addEventListener("click", event => {
+      events.push("button:click")
+      clickTargets.push(event.target)
+    })
+
+    interaction.pointerDown(frame, center(leftBox))
+    interaction.pointerUp(frame, center(leftBox))
+    expect(clickTargets).toEqual([left])
+    events.length = 0
+
+    expect(interaction.pointerMove(frame, center(leftBox))).toBe(left)
+    expect(interaction.hoveredElement).toBe(left)
+    expect(interaction.pointerDown(frame, center(leftBox))).toBe(left)
+    expect(interaction.pressedElement).toBe(button)
+    expect(document.activeElement).toBe(button)
+    expect(interaction.pointerUp(frame, center(rightBox))).toBe(right)
+    expect(events).toEqual(["left:down", "right:up", "button:click"])
+    expect(clickTargets.at(-1)).toBe(button)
+
+    interaction.pointerDown(frame, center(leftBox))
+    interaction.pointerCancel(frame, center(rightBox))
+    expect(events.at(-1)).toBe("left:cancel")
+    expect(clickTargets).toHaveLength(2)
+    expect(interaction.pressedElement).toBeNull()
+  })
+
+  test("keeps disabled control ownership without activation and preserves plain element clicks", () => {
+    const document = createDocument()
+    const root = document.createElement("div")
+    const button = document.createElement("button")
+    const icon = document.createElement("img")
+    const plain = document.createElement("span")
+    document.appendChild(root)
+    root.setAttribute("style", "display:flex; width:80px; height:20px")
+    button.setAttribute("style", "display:block; width:40px; height:20px; padding:0")
+    icon.setAttribute("style", "display:block; width:40px; height:20px")
+    plain.setAttribute("style", "display:block; width:40px; height:20px")
+    button.disabled = true
+    button.appendChild(icon)
+    root.append(button, plain)
+    const frame = createDocumentRenderer({
+      document,
+      root,
+      viewport: {width: 80, height: 20},
+    }).flush()
+    const interaction = createDocumentInteractionController({document})
+    let disabledClicks = 0
+    let plainClicks = 0
+    button.addEventListener("click", () => disabledClicks++)
+    plain.addEventListener("click", () => plainClicks++)
+
+    interaction.pointerDown(frame, center(frame.boxByNode.get(icon)!))
+    expect(interaction.pressedElement).toBe(button)
+    interaction.pointerUp(frame, center(frame.boxByNode.get(icon)!))
+    expect(disabledClicks).toBe(0)
+    expect(document.activeElement).toBeNull()
+
+    interaction.pointerDown(frame, center(frame.boxByNode.get(plain)!))
+    interaction.pointerUp(frame, center(frame.boxByNode.get(plain)!))
+    expect(plainClicks).toBe(1)
+  })
 })
+
+function center(box: Readonly<{x: number; y: number; width: number; height: number}>) {
+  return {clientX: box.x + box.width / 2, clientY: box.y + box.height / 2}
+}

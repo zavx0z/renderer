@@ -951,8 +951,8 @@
       "path": "platform/browser-exports.json"
     },
     {
-      "digest": "e747fe5c1352927089fe282f88f908be181c4d585c208d2c77de4676f825b0ed",
-      "entries": 31,
+      "digest": "30bf1a7f2d556f89dab6bea4e9c503e38bd3a2ca5f6bc573804d75fb65a83239",
+      "entries": 32,
       "path": "platform/browser-features.json"
     },
     {
@@ -966,8 +966,8 @@
       "path": "platform/devtools-features.json"
     },
     {
-      "digest": "70bd87957d64b5ce52d1e6e93feb67cdb811910e4cd8fa07f8b8ac5110a8970a",
-      "entries": 232,
+      "digest": "551dfb87bb711afdbf9c86cd77bf43009a9f98fbe08202c6cd7d3b6655cd815c",
+      "entries": 240,
       "path": "platform/dom-exports.json"
     },
     {
@@ -986,18 +986,18 @@
       "path": "platform/react-exports.json"
     },
     {
-      "digest": "4c33b77ea02584f9263baeffc774109001b10cf82225ceac3155f65a562c669e",
-      "entries": 49,
+      "digest": "420a989097e3b3ddca1605e8b658ad6867b9bdff41ccb92552abc99a9f45d30e",
+      "entries": 50,
       "path": "platform/renderer-exports.json"
     },
     {
-      "digest": "d403d56a79751073a692724968f81d6520a801ef1c6e16ec9e8beed7c870d981",
-      "entries": 44,
+      "digest": "6d6a2928ea91179d15067802dc4c008c1241db387d3cab2513de2f6189418845",
+      "entries": 45,
       "path": "platform/renderer-features.json"
     },
     {
-      "digest": "1b841c0676545cd07bb6b164cdbd5673fd3ff886d01691470e28c90073937ff3",
-      "entries": 66,
+      "digest": "86873c61296987167173aeec7d051e9f2611e30bd09bf507d788eb736b988b15",
+      "entries": 67,
       "path": "platform/template-exports.json"
     },
     {
@@ -1056,8 +1056,8 @@
       "path": "react-19.2/semantics.json"
     },
     {
-      "digest": "2e556d085428ec37ed3f1af591684eb1d9f8014c6a4a73ee3eda0d5771e2db05",
-      "entries": 52,
+      "digest": "1d7348bb5c16053bc00fcdc4b2b45ccf21773ef9538926078bc6d8dd9ffc9cd7",
+      "entries": 53,
       "path": "tsx/compiler.json"
     },
     {
@@ -1073,5 +1073,5 @@
   ],
   "generatorVersion": "1.0.0",
   "schemaVersion": 1,
-  "totalEntries": 8701
+  "totalEntries": 8714
 }

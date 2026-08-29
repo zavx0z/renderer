@@ -14,6 +14,52 @@ import {
 import {createRoot, defineStyles, type StyleValue} from "../src/index.ts"
 
 describe("class-free styles through the document renderer", () => {
+  test("adopts compiled template styles without explicit renderer wiring", () => {
+    const Button = defineCompiledTemplate<Record<string, never>>({
+      bindingCount: 0,
+      displayName: "AutoStyledButton",
+      styleSheets: [{
+        id: "auto-styled-button",
+        cssText: [
+          "[data-z-auto-button]{display:block;width:40px;height:20px;background:#123456;color:#abcdef}",
+          "[data-z-auto-button]:hover{background:#654321}"
+        ].join("\n")
+      }],
+      mount(document) {
+        const button = document.createElement("button")
+        const label = document.createElement("span")
+        button.setAttribute("data-z-auto-button", "")
+        label.append("Auto")
+        button.appendChild(label)
+        return {nodes: [button], bindings: []}
+      },
+      render() {}
+    })
+    const document = createDocument()
+    const host = document.createElement("main")
+    document.appendChild(host)
+    const root = createRoot(host)
+    root.render(Button, {})
+    const button = host.querySelector("button")!
+    const interactionState = createDocumentInteractionState(document)
+    const renderer = createDocumentRenderer({
+      document,
+      root: host,
+      viewport: {width: 80, height: 40},
+      interactionState,
+      styleSheets: []
+    })
+
+    const initial = renderer.flush()
+    expect(background(initial, button).color).toBe("#123456")
+    expect(initial.displayList.find(item => item.kind === "text")).toMatchObject({color: "#abcdef"})
+    interactionState.setHoveredElement(button)
+    expect(background(renderer.flush(), button).color).toBe("#654321")
+
+    renderer.dispose()
+    root.unmount()
+  })
+
   test("resolves native pseudos and keeps caller style above owner defaults", () => {
     const styles = defineStyles("style.renderer.fixture", {
       root: {

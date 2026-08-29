@@ -7,6 +7,7 @@ import {
   HTMLSelectElement,
   HTMLTextAreaElement,
   getPopoverVisibilityState,
+  subscribeDocumentCompiledStyleSheets,
   type Document,
   type Element,
   type MutationBatch,
@@ -17,7 +18,6 @@ import {
 import {
   computeStyle,
   elementTag,
-  parseStyleSheets,
   resolveLength,
   resolveLineHeight,
   type ComputedStyle,
@@ -25,6 +25,10 @@ import {
   type StyleRuleIndex,
 } from "./css.ts"
 import { DirtyTracker } from "./dirty.ts"
+import {
+  cachedDocumentStyleRules,
+  prepareHostStyleSheets
+} from "./stylesheet-cache.ts"
 import {
   immutableArray,
   replaceImmutableArray,
@@ -231,7 +235,9 @@ export const createDocumentRenderer = (
     options.interactionState !== undefined &&
     options.interactionState.document !== options.document
   ) throw new TypeError("interactionState belongs to another Document")
-  const rules = parseStyleSheets(options.styleSheets ?? [])
+  const hostStyleSheets = prepareHostStyleSheets(options.styleSheets ?? [])
+  let styleRuleEntry = cachedDocumentStyleRules(options.document, hostStyleSheets)
+  let rules = styleRuleEntry.rules
   const dirty = new DirtyTracker(options.root)
   const layoutCache = new WeakMap<Node, LayoutNode>()
   const subtreeDirty = new Set<Node>([options.root])
@@ -246,6 +252,15 @@ export const createDocumentRenderer = (
   )
   const unsubscribeState = options.document.subscribeStateChanges(
     invalidateStateBatch,
+  )
+  const unsubscribeStyleSheets = subscribeDocumentCompiledStyleSheets(
+    options.document,
+    () => {
+      if (disposed) return
+      dirty.invalidate(options.root)
+      subtreeDirty.add(options.root)
+      blockFastPath()
+    },
   )
   const unsubscribeInteraction = options.interactionState?.subscribe(({elements}) => {
     if (disposed) return
@@ -292,6 +307,7 @@ export const createDocumentRenderer = (
       disposed = true
       unsubscribe()
       unsubscribeState()
+      unsubscribeStyleSheets()
       unsubscribeInteraction()
     },
   })
@@ -300,6 +316,14 @@ export const createDocumentRenderer = (
 
   function flush(): RenderFrame {
     assertActive()
+    const nextStyleRuleEntry = cachedDocumentStyleRules(options.document, hostStyleSheets)
+    if (nextStyleRuleEntry !== styleRuleEntry) {
+      styleRuleEntry = nextStyleRuleEntry
+      rules = nextStyleRuleEntry.rules
+      dirty.invalidate(options.root)
+      subtreeDirty.add(options.root)
+      blockFastPath()
+    }
     if (frame && !dirty.dirty) return frame
     if (frame !== null && transformTarget !== null) {
       const incremental = tryBuildTransformFrame(

@@ -395,6 +395,26 @@ function classifyRenderer(entry: CapabilityInventoryEntry): Classification {
       test("renderer", "packages/core/test/renderer.test.ts", name, "Ancestor-derived color/font values and reparent invalidation on an exact projection root.", "Full CSS inheritance and cross-browser conformance."),
     ])
   }
+  if (name === "compiled-stylesheet-lifecycle") {
+    return implemented("extension", [
+      implementation("renderer", "packages/dom/src/compiled-style-sheet.ts", "Document compiled stylesheet registry", undefined, "Exact Document-scoped immutable records, collision rejection, revision snapshots, subscriptions and reference-counted leases.", "The standard CSSOM styleSheets/adoptedStyleSheets interfaces."),
+      implementation("renderer", "packages/react/src/runtime.ts", "RootStyleSheetOwner", undefined, "Exact compiled template metadata is acquired once per ComponentRoot and released on unmount without per-instance scanning.", "Template compiler extraction outside the Renderer repository."),
+      implementation("renderer", "packages/core/src/stylesheet-cache.ts", "cachedDocumentStyleRules", undefined, "Same-Document projections share parsed rules by compiled revision and explicit global CSS content.", "General incremental layout cost after a style change."),
+      test("renderer", "packages/dom/test/compiled-style-sheet.test.ts", name, "Registry deduplication, collision atomicity, transaction coalescing and lease release.", "Full CSSOM behavior."),
+      test("renderer", "packages/react/test/compiled-style-sheet.test.ts", name, "One thousand instances, multiple roots, collision rollback, memo metadata and root release.", "Compiler extraction and native browser pixels."),
+      test("renderer", "packages/core/test/compiled-style-sheet.test.ts", name, "Initial/late rules, explicit global CSS, shared projection cache, pseudos, inheritance and release.", "Unsupported CSS grammar and general renderer performance."),
+    ])
+  }
+  if (name === "pointer" || name === "default-activation") {
+    return partial(
+      "adapted",
+      [
+        implementation("renderer", "packages/core/src/interaction.ts", "resolvePointerOwnerHit", undefined, "Deepest pointer targets retain ordinary dispatch while nearest interactive/disabled ancestors own focus, disabled state and cross-descendant activation continuity.", "The complete Pointer Events hit-testing, capture and browser default-action standards."),
+        test("renderer", "packages/core/test/interaction.test.ts", name, "Nested target bubbling, same-descendant click target, cross-descendant owner activation, disabled suppression, ordinary noninteractive click and cancel cleanup.", "Native browser trusted events and every interactive HTML element."),
+      ],
+      "Implemented for the bounded rendered-control set; complete browser Pointer Events and default actions remain outside Core.",
+    )
+  }
   const implementedNames = new Set(["immutable-frame", "clean-frame-fast-path"])
   if (implementedNames.has(name)) {
     return implemented("extension", [implementation("renderer", "packages/core/src/renderer.ts", name, undefined, "Bounded immutable frame/clean reuse contract.", "General incremental rendering."), test("renderer", "packages/core/test/renderer.test.ts", name, "Exact frame identity and mutation protection.", "All dirty update paths.")])
@@ -440,6 +460,22 @@ function classifyBrowser(entry: CapabilityInventoryEntry): Classification {
         doesNotProve: "Every Engine scene, device, viewport size or input modality.",
       },
     ])
+  }
+  if (name === "compiled-stylesheet-scheduling") {
+    return implemented("extension", [
+      implementation("renderer", "packages/browser/src/plane-runtime.ts", "compiled stylesheet subscription", undefined, "Plane, overlay and isolated canvas runtimes route exact Document style revisions through their existing coalesced frame lifecycle.", "Live native browser execution."),
+      test("renderer", "packages/browser/test/plane-runtime.test.ts", name, "Late registration requests a frame, changes projected style and becomes inert after disposal.", "Every browser host and live WebGPU pixels."),
+    ])
+  }
+  if (name === "semantic-pointer-events") {
+    return partial(
+      "adapted",
+      [
+        implementation("renderer", "packages/browser/src/space-runtime.ts", "resolvePointerOwnerHit arbitration", undefined, "Overlay/plane arbitration uses the nearest rendered interactive or disabled ancestor without replacing the deepest semantic event target.", "Live native browser execution and unrelated world-scene activation."),
+        test("renderer", "packages/browser/test/space-runtime.test.ts", name, "Actual canvas listener routing over nested span/img descendants, cross-child release, disabled world/camera blocking, wheel/context/double-click arbitration and capture cleanup.", "Native browser trusted events and live WebGPU pixels."),
+      ],
+      "Implemented through the bounded one-Experience host; live native browser acceptance remains separate.",
+    )
   }
   const implementedNames = new Set(["pointer-mapping", "selection-synchronization", "cancellation-rollback", "document-plane", "multiple-planes", "overlays", "camera-gestures", "cleanup", "animation-frame-coalescing", "same-document-input-identity"])
   if (implementedNames.has(name)) {
@@ -509,6 +545,14 @@ function classifyTaggedHtml(entry: CapabilityInventoryEntry): Classification {
 
 function classifyTsxCompiler(entry: CapabilityInventoryEntry): Classification {
   const suffix = entry.id.slice("tsx.compiler.".length)
+  if (suffix === "static-style-extraction") {
+    return implemented("extension", [
+      implementation("template", "compiler/style.ts", "component-local static style extraction", undefined, "Module-stable base declarations, supported pseudos and conditional static fragments become scoped compiled stylesheet metadata and addressed markers.", "Dynamic pseudo values, style spreads, computed keys and general CSS nesting."),
+      implementation("template", "compiled.ts", "CompiledTemplate.styleSheets", undefined, "Immutable stylesheet metadata crosses the compiled-template ABI with exact duplicate collapse and collision rejection.", "Document registration and rendered pixels outside Template."),
+      test("template", "compiler/style-compiler.test.ts", suffix, "Golden lowering, module-stable expressions, authored precedence, residual caller style and exact fail-closed diagnostics.", "Downstream Document/Renderer lifecycle."),
+      test("template", "compiled-style-sheet.test.ts", suffix, "Compiled metadata reaches the runtime package without runtime JSX or defineStyles authoring.", "Native browser presentation."),
+    ])
+  }
   const implementedNames = new Set([
     "intrinsic-elements", "function-components", "nested-components", "props", "children", "primitive-children", "component-children",
     "conditional-branches", "refs", "callback-refs", "object-refs", "event-bindings", "event-capture-bindings", "property-bindings",
@@ -593,11 +637,17 @@ function classifyPublicExport(entry: CapabilityInventoryEntry, status: Capabilit
 
 function domExportStatus(entry: CapabilityInventoryEntry): CapabilityStatus {
   if (entry.kind === "package-export-path") return "partial"
+  if ([
+    "acquireDocumentCompiledStyleSheets",
+    "readDocumentCompiledStyleSheets",
+    "subscribeDocumentCompiledStyleSheets",
+  ].includes(entry.name)) return "implemented"
   return ["Node", "Document", "DocumentFragment", "Text", "Comment", "Element", "Event", "EventTarget"].includes(entry.name) ? "partial" : "unverified"
 }
 
 function rendererExportStatus(entry: CapabilityInventoryEntry): CapabilityStatus {
   if (entry.kind === "package-export-path") return "partial"
+  if (entry.name === "resolvePointerOwnerHit") return "implemented"
   return ["createDocumentRenderer", "DocumentInteractionController", "hitTest"].includes(entry.name) ? "partial" : "unverified"
 }
 

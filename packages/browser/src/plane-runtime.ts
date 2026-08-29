@@ -2,10 +2,11 @@ import type {
   BufferGeometry,
   TrueTypeFont,
 } from "@engine/core"
-import type {
-  Document,
-  Element,
-  Node,
+import {
+  subscribeDocumentCompiledStyleSheets,
+  type Document,
+  type Element,
+  type Node,
 } from "@zavx0z/dom"
 import {
   createDocumentInteractionController,
@@ -125,6 +126,7 @@ export function createDocumentPlaneRuntimeWithSeams(
   let currentFrame: RenderFrame | null = null
   let unsubscribeMutations = (): void => {}
   let unsubscribeStateChanges = (): void => {}
+  let unsubscribeStyleSheets = (): void => {}
   let disposed = false
   let requestVersion = 0
   const subscribers = new Set<DocumentPlaneRuntimeFrameSubscriber>()
@@ -142,8 +144,10 @@ export function createDocumentPlaneRuntimeWithSeams(
     requestBackendPresentation = (): void => {}
     unsubscribeMutations()
     unsubscribeStateChanges()
+    unsubscribeStyleSheets()
     unsubscribeMutations = () => {}
     unsubscribeStateChanges = () => {}
+    unsubscribeStyleSheets = () => {}
     interaction?.dispose()
     renderer?.dispose()
     backend?.dispose()
@@ -177,6 +181,7 @@ export function createDocumentPlaneRuntimeWithSeams(
     }
     unsubscribeMutations = options.document.subscribeMutations(requestFrame)
     unsubscribeStateChanges = options.document.subscribeStateChanges(requestFrame)
+    unsubscribeStyleSheets = subscribeDocumentCompiledStyleSheets(options.document, requestFrame)
   } catch (error) {
     cleanupOwners()
     throw error

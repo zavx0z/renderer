@@ -196,6 +196,18 @@
 - Dependencies: none
 - Forbidden local workarounds: Restoring create*Controller exports; Adding a second JSX runtime
 
+### P2 — gap.css.dynamic-pseudo-custom-properties
+
+- Capability: `css.features.custom-properties`
+- Reported by: ui/@ui/components/component-local dynamic pseudo styles — one Button hover value depends on props or component state
+- Expected: Template emits one shared static pseudo rule using var(--z-*), each instance supplies only an addressed inline custom-property value, and Renderer resolves ordinary cascade, inheritance and var() substitution without per-instance rules or runtime scanning.
+- Actual: Static pseudos are compiled, but CPU Renderer implements neither custom-property cascade nor var() substitution; direct props/state values inside a pseudo therefore fail at the Template compiler boundary.
+- Owner: renderer/@zavx0z/renderer/cpu
+- Minimal source: Render two Buttons with style={{"--z-hover-background": props.hoverColor, ":hover": {background: "var(--z-hover-background)"}}} and different hoverColor values.
+- Recommended conformance test: Assert one shared compiled pseudo rule, two inline custom-property values, exact inherited/cascaded substitution on hover, and no per-instance stylesheet allocation.
+- Dependencies: `css.functions.var-function`
+- Forbidden local workarounds: A stylesheet or selector generated for every component instance; Runtime scanning of mounted style objects or DOM nodes; JavaScript hover/focus listeners or data-state pseudo emulation
+
 ### P2 — gap.css.named-color-transport
 
 - Capability: `css.properties.color`
@@ -226,7 +238,7 @@
 | P4 | `browser.features.pointer-capture` | partial | @zavx0z/renderer-browser/browser-host | 0 | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. |
 | P4 | `browser.features.resize` | partial | @zavx0z/renderer-browser/browser-host | 0 | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. |
 | P1 | `browser.features.select-picker` | unsupported | @zavx0z/renderer-browser/browser-host | 0 | The native host intentionally exposes only the current text input/textarea proxy subset; this control/browser integration is absent. |
-| P4 | `browser.features.semantic-pointer-events` | partial | @zavx0z/renderer-browser/browser-host | 0 | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. |
+| P4 | `browser.features.semantic-pointer-events` | partial | @zavx0z/renderer-browser/browser-host | 0 | Implemented through the bounded one-Experience host; live native browser acceptance remains separate. |
 | P2 | `browser.features.text-input-proxy` | partial | @zavx0z/renderer-browser/browser-host | 1 | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. |
 | P4 | `browser.features.textarea-proxy` | partial | @zavx0z/renderer-browser/browser-host | 0 | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. |
 | P4 | `browser.features.viewport` | partial | @zavx0z/renderer-browser/browser-host | 0 | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. |
@@ -1538,7 +1550,7 @@
 | P3 | `css.features.containment` | unsupported | @zavx0z/renderer/cpu | 0 | The current stylesheet/cascade/layout pipeline does not implement this CSS module capability. |
 | P3 | `css.features.counters` | unsupported | @zavx0z/renderer/cpu | 0 | The current stylesheet/cascade/layout pipeline does not implement this CSS module capability. |
 | P3 | `css.features.cssom` | unsupported | @zavx0z/renderer/cpu | 0 | The current stylesheet/cascade/layout pipeline does not implement this CSS module capability. |
-| P3 | `css.features.custom-properties` | unsupported | @zavx0z/renderer/cpu | 0 | The current stylesheet/cascade/layout pipeline does not implement this CSS module capability. |
+| P2 | `css.features.custom-properties` | unsupported | @zavx0z/renderer/cpu | 0 | The current stylesheet/cascade/layout pipeline does not implement this CSS module capability. |
 | P3 | `css.features.data-types` | partial | @zavx0z/renderer/cpu | 0 | Only the explicitly admitted values/algorithms are implemented. |
 | P3 | `css.features.declarations` | partial | @zavx0z/renderer/cpu | 0 | Only the explicitly admitted values/algorithms are implemented. |
 | P3 | `css.features.descriptors` | unsupported | @zavx0z/renderer/cpu | 0 | The current stylesheet/cascade/layout pipeline does not implement this CSS module capability. |
@@ -7377,6 +7389,11 @@
 | P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.customevent` | unverified | @zavx0z/dom/semantic | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.customeventinit` | unverified | @zavx0z/dom/semantic | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.document` | partial | @zavx0z/dom/semantic | 0 | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. |
+| P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.documentcompiledstylesheet` | unverified | @zavx0z/dom/semantic | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.documentcompiledstylesheetchange` | unverified | @zavx0z/dom/semantic | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.documentcompiledstylesheetlease` | unverified | @zavx0z/dom/semantic | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.documentcompiledstylesheetsnapshot` | unverified | @zavx0z/dom/semantic | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.documentcompiledstylesheetsubscriber` | unverified | @zavx0z/dom/semantic | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.documentfragment` | partial | @zavx0z/dom/semantic | 0 | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. |
 | P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.documentmutation` | unverified | @zavx0z/dom/semantic | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.documentstatechange` | unverified | @zavx0z/dom/semantic | 0 | Export/type presence is not behavioral evidence. |
@@ -7629,6 +7646,7 @@
 | P4 | `platform.at-zavx0z-template.export-paths.compiled.symbols.bindingvalues` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-template.export-paths.compiled.symbols.childbinding` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-template.export-paths.compiled.symbols.compiledmount` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-template.export-paths.compiled.symbols.compiledstylesheet` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-template.export-paths.compiled.symbols.compiledtemplate` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-template.export-paths.compiled.symbols.compiledtemplatedefinition` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-template.export-paths.compiled.symbols.conditionalbinding` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
@@ -7782,7 +7800,7 @@
 | P4 | `renderer.features.cascade` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
 | P4 | `renderer.features.clip-stacks` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
 | P4 | `renderer.features.computed-style` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
-| P4 | `renderer.features.default-activation` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
+| P4 | `renderer.features.default-activation` | partial | @zavx0z/renderer/cpu | 0 | Implemented for the bounded rendered-control set; complete browser Pointer Events and default actions remain outside Core. |
 | P4 | `renderer.features.display-list` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
 | P4 | `renderer.features.flex-layout` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
 | P4 | `renderer.features.form-control-projection` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
@@ -7796,7 +7814,7 @@
 | P4 | `renderer.features.line-breaking` | partial | @zavx0z/renderer/cpu | 0 | Text measurement is an adapted fixed advance model without shaping, kerning, bidi, fallback, or full inline formatting. |
 | P4 | `renderer.features.overflow` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
 | P4 | `renderer.features.performance-paths` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
-| P4 | `renderer.features.pointer` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
+| P4 | `renderer.features.pointer` | partial | @zavx0z/renderer/cpu | 0 | Implemented for the bounded rendered-control set; complete browser Pointer Events and default actions remain outside Core. |
 | P4 | `renderer.features.popover-projection` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
 | P4 | `renderer.features.positioning` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
 | P4 | `renderer.features.progress-meter` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
