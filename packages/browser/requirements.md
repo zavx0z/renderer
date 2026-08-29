@@ -1,9 +1,10 @@
 # Требования `@zavx0z/renderer-browser`
 
 `@zavx0z/renderer-browser` — generic browser composition owner semantic
-`@zavx0z/dom` Document. Он предоставляет готовый host одного WebGPU canvas и
-caller-owned runtime world-space document plane, соединяет уже существующих
-production owners и не объявляет UI, Storybook, HTML mirror или новый renderer.
+`@zavx0z/dom` Document. Один application Experience владеет одним semantic
+Document, одним WebGPU canvas, одним Engine Renderer/Space/ViewPoint и одним
+input/frame lifecycle. Displays и camera-locked overlays являются projection
+roots этого же Document и Space, а не отдельными приложениями или realms.
 
 ## `RENDERER-BROWSER-001` — один owner graph
 
@@ -12,6 +13,14 @@ author `styleSheets` и обязательный готовый `TrueTypeFont`. 
 публично предоставляет один Engine `Renderer`, `Space`, fixed `ViewPoint`, CPU
 `DocumentRenderer`, `DocumentInteractionController`,
 `RendererWebGpuBackend` и `RendererWebGpuScreenOverlay`.
+
+CanvasRuntime является complete isolated Experience host. Это не helper для
+component, panel, display, story или другой surface внутри уже существующего
+Experience. CanvasRuntime и SpaceRuntime используют один internal
+presentation-host claim: native browser Document одновременно допускает только
+один renderer-browser host, exact canvas нельзя claim-ить повторно, dispose
+освобождает claim, а failed construction атомарно откатывает его. Другой native
+Document/page может владеть своим независимым Experience.
 
 DOM, Renderer, WebGPU backend и Engine являются peers. Package не содержит
 копий их types, compatibility aliases или скрытой загрузки font.
@@ -55,9 +64,10 @@ Core `DocumentInteractionController.wheel()`; Core выбирает scroll owner
 меняет standard DOM `scrollTop`/`scrollLeft`, после чего runtime выполняет один
 новый frame. Browser package не реализует собственный scroll law.
 
-Каждый Canvas/Plane/Overlay runtime создаёт один lazy Core
-`DocumentInteractionState` и передаёт exact owner одновременно CPU renderer и
-interaction controller. Hover/pressed не проецируются в `class` или
+Каждый isolated CanvasRuntime создаёт один lazy Core `DocumentInteractionState`.
+SpaceRuntime создаёт один exact state для Experience и передаёт его всем Plane/
+Overlay runtimes одновременно с их CPU renderer и interaction controller.
+Hover/pressed не проецируются в `class` или
 `data-ui-state`: изменение pointer chain invalidates только symmetric difference
 старой/новой exact Element ancestor chain. До первого pointer event координата
 не считается известной и synthetic `:hover` в `(0, 0)` не создаётся.
@@ -80,12 +90,11 @@ Text-like `HTMLInputElement` ограничен standard selection-applicable ty
 Checkbox/radio и остальные input types остаются DOM-owned activation и никогда
 не зеркалируются.
 
-Host переключает один exact active semantic Document и optional owner id.
-Переключение либо deactivation снимает прежний semantic/native focus; повторное
-назначение того же Document может сменить owner id без потери target identity.
-Canvas runtime закрепляет свой Document, а SpaceRuntime выбирает Document
-nearest plane при accepted pointer focus. Empty hit, active plane removal и
-runtime dispose выполняют blur/cleanup. Canvas предоставляет readonly
+Host закрепляет один exact active semantic Document и optional projection owner
+id. В SpaceRuntime Document остаётся одним и тем же, а accepted pointer focus
+меняет только owner id nearest plane/overlay без потери semantic target identity.
+Deactivation, empty hit, active projection removal и runtime dispose выполняют
+blur/cleanup. Canvas предоставляет readonly
 `inputTarget`; SpaceRuntime также предоставляет readonly `activeInputPlaneId`.
 
 Input proxy отражает `type`, оба proxy — live `value`, `readOnly`, `disabled` и
@@ -135,6 +144,10 @@ author `styleSheets`, готовый font, logical viewport,
 CPU `DocumentRenderer`, `DocumentInteractionController`,
 `RendererWebGpuBackend` и `RendererWebGpuDocumentPlane`.
 
+Optional caller-supplied `DocumentInteractionState` должен принадлежать тому же
+Document. SpaceRuntime передаёт всем своим plane/overlay projections один exact
+shared state; standalone owner при отсутствии state создаёт bounded local owner.
+
 Runtime не создаёт Canvas, Engine Renderer, Space, ViewPoint, ScreenOverlay,
 native input, ResizeObserver, timer или animation loop. Caller помещает stable
 `plane` в собственный world и вызывает `flush()` по своему scheduling law.
@@ -158,14 +171,20 @@ renderer; backend, plane, content и interaction identity сохраняются
 interaction и backend owners. Late backend callback становится inert; direct
 operations после dispose fail closed.
 
-## `RENDERER-BROWSER-008` — one space, multiple document planes
+## `RENDERER-BROWSER-008` — one Experience, multiple same-Document projections
 
-`createDocumentSpaceRuntime()` владеет одним canvas, Engine Renderer, Space,
-ViewPoint, Raycaster, ResizeObserver и coalesced animation-frame loop. Каждый
-registered stable id получает ровно один `createDocumentPlaneRuntime()`;
+`createDocumentSpaceRuntime()` принимает и вместе владеет exact `canvas`,
+`document`, `styleSheets` и `font`, а также одним Engine Renderer, Space,
+ViewPoint, Raycaster, shared `DocumentInteractionState`, ResizeObserver и
+coalesced animation-frame loop. Plane registration принимает только connected
+same-Document `root`, logical viewport, world density и projection transform;
+overlay registration — только connected same-Document `root` и projection parameters.
+Foreign, detached, duplicate и overlapping roots отклоняются до owner
+allocation. Каждый registered stable id получает ровно один
+`createDocumentPlaneRuntime()`;
 SpaceRuntime не создаёт параллельный DOM/CSS/display-list/backend contract.
-Duplicate id отклоняется до owner allocation. Document/root/style/font для id
-не заменяются: новый semantic owner требует explicit remove + add.
+Duplicate id отклоняется до owner allocation. Root и projection parameters для
+id не заменяются; Document/style/font принадлежат Experience целиком.
 
 `addPlane()` возвращает exact созданный `DocumentPlaneRuntime`. `updatePlane()`
 меняет только logical viewport, `worldUnitsPerPixel` и ordinary world
@@ -201,9 +220,12 @@ policy. Dispose отменяет общий frame, observer/listeners/captures �
 каждый registered PlaneRuntime. V1 не реализует drag-resize, caret
 geometry/paint, occlusion beyond nearest finite plane или automatic
 CSS/world layout. Keyboard/IME routing ограничен exact active text-like target
-через один `DocumentNativeInputHost`; focus traversal между displays не
-заявлен. Остальные механизмы требуют следующих отдельных owners; Surface, HUD,
-panel и product semantics здесь запрещены.
+через один `DocumentNativeInputHost`. Ordinary same-Document reparent между
+registered display и overlay roots сохраняет exact Element identity, listeners,
+focus и ownerDocument; после следующего shared frame Element присутствует
+только в destination projection. Cross-Document adoption/remount не является
+projection move. Остальные механизмы требуют следующих отдельных owners;
+Surface, HUD, panel и product semantics здесь запрещены.
 
 ## `RENDERER-BROWSER-009` — semantic screen overlays
 
@@ -236,3 +258,58 @@ Semantic overlay hit имеет приоритет; interactive world hit и anc
 освобождает active camera captures. ViewPoint pose, semantic Documents и
 registered owners сохраняются; policy near/far, focus display и camera storage
 остаются у consumer composition.
+
+## `RENDERER-BROWSER-011` — one Experience topology
+
+Renderer-browser не допускает два CanvasRuntime/SpaceRuntime host в одном
+native browser Document. Один SpaceRuntime связывает exact semantic Document,
+stylesheet realm, font, interaction state, Canvas, Engine Renderer, Space и
+ViewPoint. Projection roots могут принимать и отдавать те же live Elements
+обычной DOM mutation без второго canvas, Document, component mount или private
+presentation lifecycle. CPU projection root получает inherited computed values
+из реальных semantic ancestors и invalidates при их mutation/reparenting.
+
+## `RENDERER-BROWSER-012` — bounded direct-world regions
+
+`DocumentSpaceRuntime.addWorld()` принимает exact caller-owned unattached Engine
+`Space`, logical top-left Canvas viewport, serializable ViewPoint snapshot и
+optional visibility, camera gesture, resize и double-click callbacks. Stable id
+разделяет одно identity space с plane/overlay ids. Один Engine Space нельзя
+зарегистрировать повторно или неявно забрать у другого parent; host Space не
+может быть собственным bounded child.
+
+Runtime добавляет exact Space в свой host Space, создаёт для него один
+listener-free Engine `ViewPoint({controls: "host"})` и передаёт ordered visible
+regions в один `Renderer.renderComposition()`. Он не создаёт Canvas, Renderer,
+parallel Space host, browser listener set или отдельный animation-frame loop.
+Bounded Space исключается Engine из base traversal и рисуется один раз через
+свой ViewPoint. `removeWorld()`, returned runtime `dispose()` и host disposal
+отсоединяют exact Space, освобождают ViewPoint и отменяют его captures.
+
+Caller viewport хранится в logical canvas pixels. Перед каждым composition
+slice host пересекает его с текущим logical Canvas viewport и переводит edges в
+positive integer backing-pixel viewport: left/top округляются вниз, right/bottom
+вверх и clamp-ятся текущим backing extent. Null, hidden, zero или полностью
+outside viewport не участвует в render/input. `onResize()` получает exact
+resolved logical viewport, backing viewport и pixel ratio только при изменении;
+при переходе в non-presented state получает `null`. ViewPoint client viewport
+обновляется из того же Canvas rect и resolved logical viewport, поэтому aspect
+и anchored zoom используют одну geometry owner.
+
+`requestRender()` returned world runtime делегирует существующему coalesced host
+frame. Один shared frame обновляет base ViewPoint, registered semantic
+projections и world ViewPoints, затем выполняет одну Engine composition и одну
+capture boundary. `subscribePresented()` публикует каждый действительно
+представленный общий кадр, включая camera/world-only repaint без новой semantic
+revision. Scene animation policy остаётся caller-owned.
+
+Input priority: interactive semantic overlay, top visible bounded world, nearest
+document plane, global camera. Non-interactive overlay paint внутри bounded
+viewport не скрывает direct-world input; scrollable overlay ancestor с реальным
+remaining scroll сохраняет wheel ownership. World pointer capture удерживает id
+до up/cancel; hide, camera disable, remove и dispose освобождают его. Primary
+drag вызывает public ViewPoint orbit, secondary drag — pan, wheel — pan,
+Ctrl+wheel — viewport-aware anchored zoom. Optional `onDoubleClick()` получает
+тот же top visible world только после interactive-overlay rejection и
+автоматически запрашивает shared frame. V1 не объявляет Engine object activation,
+semantic scene tree или multi-touch pinch policy.

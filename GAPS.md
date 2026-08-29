@@ -21,7 +21,7 @@
 - Capability: `engine.features.browser-document-boundary`
 - Reported by: renderer/@zavx0z/renderer-browser/Document-bound browser composition — secondary Document or canvas runtime
 - Expected: Engine receives host-neutral inputs/resources; browser document/canvas/listener ownership stays in renderer-browser.
-- Actual: ViewPoint accepts HTMLElement, mutates touchAction and binds global document; Renderer creates/owns HTMLCanvasElement.
+- Actual: ViewPoint now has a listener-free host mode with explicit client viewport, but default browser controls still accept/mutate HTMLElement state and Renderer.init still owns an HTMLCanvasElement/GPUCanvasContext boundary.
 - Owner: engine/@engine/core/public-boundary
 - Minimal source: Create ViewPoint for an element in a secondary Document and inspect listener owner and restored touchAction after disposal.
 - Recommended conformance test: Assert listeners bind ownerDocument and browser state is restored or entirely browser-owner controlled.
@@ -4165,7 +4165,7 @@
 | P3 | `dom.mixins.xpathevaluatorbase.methods.evaluate` | unsupported | @zavx0z/dom/semantic | 0 | No current runtime implementation and behavioral test were found for this pinned DOM member. |
 | P4 | `engine.features.analytical-ui-materials` | partial | @engine/core/gpu-scene-resource | 0 | Implementation exists, but the public lifecycle/value space or focused behavioral evidence is incomplete. |
 | P4 | `engine.features.animation` | partial | @engine/core/gpu-scene-resource | 0 | A bounded implementation exists without focused behavioral tests for many admitted branches. |
-| P0 | `engine.features.browser-document-boundary` | unsupported | @engine/core/gpu-scene-resource | 0 | ViewPoint binds global document and mutates HTMLElement touchAction; Renderer owns HTMLCanvasElement. |
+| P0 | `engine.features.browser-document-boundary` | partial | @engine/core/gpu-scene-resource | 0 | Listener-free host ViewPoints are available, but default browser controls and Renderer.init still accept browser-owned HTMLElement/HTMLCanvasElement resources. |
 | P4 | `engine.features.capture-readback` | partial | @engine/core/gpu-scene-resource | 0 | Implementation exists, but the public lifecycle/value space or focused behavioral evidence is incomplete. |
 | P4 | `engine.features.clip-surface-unification` | partial | @engine/core/gpu-scene-resource | 0 | Implementation exists, but the public lifecycle/value space or focused behavioral evidence is incomplete. |
 | P4 | `engine.features.culling` | partial | @engine/core/gpu-scene-resource | 0 | Implementation exists, but the public lifecycle/value space or focused behavioral evidence is incomplete. |
@@ -7203,7 +7203,10 @@
 | P4 | `platform.at-engine-core.export-paths.root.symbols.radialbackdropmaterialparameters` | unverified | @engine/core/gpu-scene-resource | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-engine-core.export-paths.root.symbols.ray` | unverified | @engine/core/gpu-scene-resource | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-engine-core.export-paths.root.symbols.raycaster` | partial | @engine/core/gpu-scene-resource | 0 | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. |
+| P4 | `platform.at-engine-core.export-paths.root.symbols.renderboundedview` | unverified | @engine/core/gpu-scene-resource | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-engine-core.export-paths.root.symbols.rendercomposition` | unverified | @engine/core/gpu-scene-resource | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-engine-core.export-paths.root.symbols.renderer` | partial | @engine/core/gpu-scene-resource | 0 | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. |
+| P4 | `platform.at-engine-core.export-paths.root.symbols.rendererphysicalviewport` | unverified | @engine/core/gpu-scene-resource | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-engine-core.export-paths.root.symbols.renderlayer` | unverified | @engine/core/gpu-scene-resource | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-engine-core.export-paths.root.symbols.renderoverlay` | unverified | @engine/core/gpu-scene-resource | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-engine-core.export-paths.root.symbols.replaceexternalsourceoptions` | unverified | @engine/core/gpu-scene-resource | 0 | Export/type presence is not behavioral evidence. |
@@ -7236,6 +7239,8 @@
 | P4 | `platform.at-engine-core.export-paths.root.symbols.typedarray` | unverified | @engine/core/gpu-scene-resource | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-engine-core.export-paths.root.symbols.vector3` | unverified | @engine/core/gpu-scene-resource | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-engine-core.export-paths.root.symbols.viewpoint` | partial | @engine/core/gpu-scene-resource | 0 | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. |
+| P4 | `platform.at-engine-core.export-paths.root.symbols.viewpointclientviewport` | unverified | @engine/core/gpu-scene-resource | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-engine-core.export-paths.root.symbols.viewpointcontrols` | unverified | @engine/core/gpu-scene-resource | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-engine-core.export-paths.root.symbols.viewpointparameters` | unverified | @engine/core/gpu-scene-resource | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-engine-core.export-paths.root.symbols.wireframeinstancedmesh` | unverified | @engine/core/gpu-scene-resource | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-dom-devtools.export-paths.root.symbols.createdominspectoroptions` | unverified | @zavx0z/dom-devtools/inspection | 0 | Export/type presence is not behavioral evidence. |
@@ -7558,6 +7563,11 @@
 | P4 | `platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceruntime` | unverified | @zavx0z/renderer-browser/browser-host | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspacevector3` | unverified | @zavx0z/renderer-browser/browser-host | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceviewpointsnapshot` | unverified | @zavx0z/renderer-browser/browser-host | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceworldregistration` | unverified | @zavx0z/renderer-browser/browser-host | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceworldresize` | unverified | @zavx0z/renderer-browser/browser-host | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceworldruntime` | unverified | @zavx0z/renderer-browser/browser-host | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceworldupdate` | unverified | @zavx0z/renderer-browser/browser-host | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceworldviewport` | unverified | @zavx0z/renderer-browser/browser-host | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-renderer-webgpu.export-paths.root.symbols.rendererwebgpubackenddiagnostics` | unverified | @zavx0z/renderer-webgpu/webgpu | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-renderer-webgpu.export-paths.root.symbols.rendererwebgpubackendoptions` | unverified | @zavx0z/renderer-webgpu/webgpu | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-renderer-webgpu.export-paths.root.symbols.rendererwebgpudocumentplaneintersection` | unverified | @zavx0z/renderer-webgpu/webgpu | 0 | Export/type presence is not behavioral evidence. |

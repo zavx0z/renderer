@@ -389,6 +389,12 @@ function classifyCssFeature(entry: CapabilityInventoryEntry, stages: Record<stri
 function classifyRenderer(entry: CapabilityInventoryEntry): Classification {
   if (!entry.id.startsWith("renderer.features.")) return unsupported(entry, "No current CPU renderer evidence was mapped.")
   const name = entry.id.slice("renderer.features.".length)
+  if (name === "projection-root-inheritance") {
+    return implemented("extension", [
+      implementation("renderer", "packages/core/src/renderer.ts", "projectionRootInheritedStyle", undefined, "A projection root computes inherited values through its real semantic ancestor chain and observes ancestor mutations/reparenting.", "Complete CSS inheritance and every property grammar."),
+      test("renderer", "packages/core/test/renderer.test.ts", name, "Ancestor-derived color/font values and reparent invalidation on an exact projection root.", "Full CSS inheritance and cross-browser conformance."),
+    ])
+  }
   const implementedNames = new Set(["immutable-frame", "clean-frame-fast-path"])
   if (implementedNames.has(name)) {
     return implemented("extension", [implementation("renderer", "packages/core/src/renderer.ts", name, undefined, "Bounded immutable frame/clean reuse contract.", "General incremental rendering."), test("renderer", "packages/core/test/renderer.test.ts", name, "Exact frame identity and mutation protection.", "All dirty update paths.")])
@@ -412,6 +418,29 @@ function classifyBrowser(entry: CapabilityInventoryEntry): Classification {
   if (name === "native-browser-evidence") return unverified(entry, "All current Browser tests use Bun seams/fakes; no live browser console, pixels, native IME, or real ResizeObserver/rAF evidence was reproduced.")
   if (name === "error-boundaries") return unsupported(entry, "The browser composition owner has lifecycle validation but no general application error-boundary contract.")
   if (["number-input-proxy", "select-picker", "clipboard-proxy"].includes(name)) return unsupported(entry, "The native host intentionally exposes only the current text input/textarea proxy subset; this control/browser integration is absent.")
+  if (name === "one-experience-topology") {
+    return implemented("extension", [
+      implementation("renderer", "packages/browser/src/space-runtime.ts", name, undefined, "One exact semantic Document/style/font/interaction owner is shared by every projection in one Space host.", "Live native browser execution."),
+      implementation("renderer", "packages/browser/src/presentation-host.ts", "presentation-host claim", undefined, "CanvasRuntime and SpaceRuntime share one native-Document/canvas cardinality claim with rollback and release.", "Direct Engine-only canvas ownership outside renderer-browser."),
+      test("renderer", "packages/browser/test/space-runtime.test.ts", name, "Same-Document display/HUD reparenting, foreign/detached rejection, shared state and host lifecycle.", "Live browser/native input/WebGPU pixels."),
+      test("renderer", "packages/browser/test/presentation-host.test.ts", "presentation-host claim", "Exact canvas/native Document cardinality and release.", "Cross-process or direct Engine hosts."),
+    ])
+  }
+  if (name === "direct-world-regions") {
+    return implemented("extension", [
+      implementation("renderer", "packages/browser/src/space-runtime.ts", "addWorld", undefined, "One host attaches bounded direct Engine Spaces, maps logical/DPR viewport geometry and routes input through the shared frame lifecycle.", "Unrelated direct-world picking and application-specific scene behavior."),
+      test("renderer", "packages/browser/test/space-runtime.test.ts", name, "Exact Space attachment, framebuffer geometry, overlay/world/plane input priority, capture cleanup and presented-frame notification.", "Cross-process hosts and unrelated browser controls."),
+      {
+        type: "visual-evidence",
+        repository: "external",
+        revision: "daa1cf663667710894282ce8",
+        path: "storybook://captures/capture_JncmVXljfyjQ_ihTqhrfD47d",
+        symbol: "@engine/core/space/coordinate-system/z-up",
+        proves: "The exact Engine owner route presents a visible non-black bounded world through the shared Storybook canvas with zero console errors.",
+        doesNotProve: "Every Engine scene, device, viewport size or input modality.",
+      },
+    ])
+  }
   const implementedNames = new Set(["pointer-mapping", "selection-synchronization", "cancellation-rollback", "document-plane", "multiple-planes", "overlays", "camera-gestures", "cleanup", "animation-frame-coalescing", "same-document-input-identity"])
   if (implementedNames.has(name)) {
     return implemented("extension", [implementation("renderer", browserSourcePath(name), name, undefined, "The bounded browser composition adapter logic.", "Live native browser execution."), test("renderer", browserTestPath(name), name, "Adapter lifecycle, mapping, rollback, and identity.", "Live browser/native input/WebGPU pixels.")])
@@ -507,13 +536,39 @@ function classifyDevtools(entry: CapabilityInventoryEntry): Classification {
 function classifyEngine(entry: CapabilityInventoryEntry): Classification {
   if (entry.id.startsWith("platform.")) return classifyPublicExport(entry, engineExportStatus(entry))
   const name = entry.id.slice("engine.features.".length)
+  if (name === "bounded-multi-view-frame") {
+    return implemented("extension", [
+      implementation("engine", "packages/core/src/renderer/index.ts", "Renderer.renderComposition", undefined, "One Renderer/current texture presents a base Space, ordered bounded descendant Spaces and foreground overlays with independent ViewPoints and pass bounds.", "Unrelated post-processing and multi-canvas composition."),
+      test("engine", "packages/core/src/renderer/render-composition.test.ts", name, "Root ownership, exclusion, ordering, exact physical viewport validation and legacy delegation.", "GPU pixels on every adapter."),
+      {
+        type: "integration-test",
+        repository: "engine",
+        revision: revisions.engine ?? "unknown",
+        path: "packages/core/src/renderer/render-composition.webgpu.test.ts",
+        symbol: "Renderer bounded composition WebGPU pass",
+        proves: "One initialized Renderer/current texture paints the bounded Space background inside its scissor while preserving base pixels outside.",
+        doesNotProve: "Every material pipeline or physical GPU adapter.",
+      },
+    ])
+  }
   const implementedNames = new Set(["buffer-attributes", "dirty-intervals", "instance-layer", "instanced-rounded-rectangles", "draw-range-views", "clipping", "gpu-device-evidence"])
   if (implementedNames.has(name)) return implemented("extension", [implementation("engine", engineSourcePath(name), name, undefined, "Bounded Engine ABI implementation.", "DOM/CSS semantics and unsupported renderables."), test("engine", engineTestPath(name), name, "Behavioral and, where applicable, real GPU pipeline/pixel evidence.", "Browser integration and unrelated Engine features.")])
   if (name === "glyph-cache-identity") return unsupportedGap(entry, "Glyph geometry cache keys only by gid, so different fonts with the same glyph ID reuse incorrect geometry.", "gap.engine.glyph-cache-font-identity")
   if (name === "texture-device-identity") return unsupportedGap(entry, "Texture and fallback caches are process-global by src rather than scoped by GPUDevice.", "gap.engine.texture-cache-device-identity")
   if (name === "renderer-disposal") return unsupportedGap(entry, "Renderer and TextureLoader have no whole-owner teardown for GPU resources, caches, callbacks, pipelines, or attachments.", "gap.engine.renderer-resource-teardown")
   if (name === "dom-css-ownership-boundary") return unsupportedGap(entry, "@engine/core publicly owns CSS-like LayoutProps/ComputedLayout on Object3D, violating the accepted platform boundary.", "gap.engine.css-layout-ownership")
-  if (name === "browser-document-boundary") return unsupportedGap(entry, "ViewPoint binds global document and mutates HTMLElement touchAction; Renderer owns HTMLCanvasElement.", "gap.engine.browser-document-ownership")
+  if (name === "browser-document-boundary") {
+    return {
+      status: "partial",
+      conformance: "extension",
+      limitations: ["Listener-free host ViewPoints are available, but default browser controls and Renderer.init still accept browser-owned HTMLElement/HTMLCanvasElement resources."],
+      evidence: [
+        implementation("engine", "packages/core/src/core/view-point.ts", "ViewPoint host controls", undefined, "Host mode owns camera math and viewport mapping without browser listeners or element mutation.", "A fully host-neutral Renderer/canvas boundary."),
+        test("engine", "packages/core/src/core/view-point.test.ts", name, "Listener-free viewport-aware controls and anchored zoom mapping.", "Default browser controls and Renderer canvas ownership."),
+      ],
+      blocks: ["gap.engine.browser-document-ownership"],
+    }
+  }
   if (name === "index-buffer-format") return unverifiedGap(entry, "setIndex accepts arbitrary typed arrays while Renderer binds every non-Uint32 index as uint16; invalid inputs are not rejected.", "gap.engine.index-buffer-format")
   if (name === "material-groups") return unsupportedGap(entry, "Public Mesh documentation promises material arrays mapped to geometry.groups, but BufferGeometry has no groups and Renderer uses material[0].", "gap.engine.material-groups")
   const partialNames = new Set(["scene-graph", "transforms", "world-transform-update", "geometry", "materials", "analytical-ui-materials", "text", "font-loading", "texture-image-loading", "ray-casting", "culling", "view-point", "space", "webgpu-pipelines", "resource-lifetime", "capture-readback", "loaders", "gltf", "animation", "public-math", "device-loss", "legacy-ui-display-flag", "clip-surface-unification"])
@@ -783,18 +838,18 @@ function rendererLimitation(name: string): string {
 }
 
 function browserSourcePath(name: string): string {
+  if (name.includes("multiple") || name.includes("camera") || name.includes("experience")) return "packages/browser/src/space-runtime.ts"
   if (name.includes("plane")) return "packages/browser/src/plane-runtime.ts"
   if (name.includes("overlay")) return "packages/browser/src/overlay-runtime.ts"
   if (name.includes("input") || name.includes("keyboard") || name.includes("composition") || name.includes("selection") || name.includes("cancellation")) return "packages/browser/src/native-input-host.ts"
-  if (name.includes("multiple") || name.includes("camera")) return "packages/browser/src/space-runtime.ts"
   return "packages/browser/src/runtime.ts"
 }
 
 function browserTestPath(name: string): string {
+  if (name.includes("multiple") || name.includes("camera") || name.includes("experience")) return "packages/browser/test/space-runtime.test.ts"
   if (name.includes("plane")) return "packages/browser/test/plane-runtime.test.ts"
   if (name.includes("overlay")) return "packages/browser/test/overlay-runtime.test.ts"
   if (name.includes("input") || name.includes("keyboard") || name.includes("composition") || name.includes("selection") || name.includes("cancellation")) return "packages/browser/test/native-input-host.test.ts"
-  if (name.includes("multiple") || name.includes("camera")) return "packages/browser/test/space-runtime.test.ts"
   return "packages/browser/test/runtime.test.ts"
 }
 

@@ -37,6 +37,24 @@
       }
     },
     {
+      "description": "Engine bounded multi view frame capability.",
+      "domain": "engine",
+      "id": "engine.features.bounded-multi-view-frame",
+      "kind": "engine-contract",
+      "name": "bounded multi view frame",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#bounded-multi-view-frame",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
       "description": "Engine browser document boundary capability.",
       "domain": "engine",
       "id": "engine.features.browser-document-boundary",

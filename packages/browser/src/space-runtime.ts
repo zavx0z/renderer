@@ -11,7 +11,9 @@ import type {
   Node,
 } from "@zavx0z/dom"
 import {
+  createDocumentInteractionState,
   hitTest,
+  type DocumentInteractionState,
   type HitMetadata,
   type PointerInput,
   type RenderFrame,
@@ -36,6 +38,7 @@ import {
   type DocumentNativeInputHost,
   type DocumentNativeInputTarget,
 } from "./native-input-host.ts"
+import {claimBrowserPresentationHost} from "./presentation-host.ts"
 
 export type DocumentSpaceVector3 = Readonly<{x: number; y: number; z: number}>
 export type DocumentSpaceQuaternion = Readonly<{x: number; y: number; z: number; w: number}>
@@ -58,10 +61,7 @@ export type DocumentSpacePlaneTransform = Readonly<{
 
 export type DocumentSpacePlaneRegistration = Readonly<{
   id: string
-  document: Document
   root: Node
-  styleSheets: readonly string[]
-  font: TrueTypeFont
   viewport: RenderViewport
   worldUnitsPerPixel: number
   transform?: DocumentSpacePlaneTransform
@@ -76,16 +76,65 @@ export type DocumentSpacePlaneUpdate = Readonly<{
 
 export type DocumentSpaceOverlayRegistration = Readonly<{
   id: string
-  document: Document
   root: Node
-  styleSheets: readonly string[]
-  font: TrueTypeFont
   distance?: number
   tooltipDelayMs?: number
 }>
 
+/** One caller-owned direct world region in logical canvas coordinates. */
+export type DocumentSpaceWorldViewport = Readonly<{
+  x: number
+  y: number
+  width: number
+  height: number
+}>
+
+/** Exact logical/backing geometry published after host viewport resolution. */
+export type DocumentSpaceWorldResize = Readonly<{
+  logicalViewport: DocumentSpaceWorldViewport
+  backingViewport: DocumentSpaceWorldViewport
+  pixelRatio: number
+}>
+
+export type DocumentSpaceWorldRegistration = Readonly<{
+  id: string
+  space: Space
+  viewport: DocumentSpaceWorldViewport | null
+  viewPoint: DocumentSpaceViewPointSnapshot
+  visible?: boolean
+  cameraGestures?: boolean
+  onResize?(resize: DocumentSpaceWorldResize | null): void
+  onDoubleClick?(): void
+}>
+
+export type DocumentSpaceWorldUpdate = Readonly<{
+  viewport?: DocumentSpaceWorldViewport | null
+  viewPoint?: DocumentSpaceViewPointSnapshot
+  visible?: boolean
+  cameraGestures?: boolean
+}>
+
+export type DocumentSpaceWorldRuntime = Readonly<{
+  id: string
+  space: Space
+  viewPoint: ViewPoint
+  viewport: DocumentSpaceWorldViewport | null
+  logicalViewport: DocumentSpaceWorldViewport | null
+  backingViewport: DocumentSpaceWorldViewport | null
+  visible: boolean
+  cameraGesturesEnabled: boolean
+  disposed: boolean
+  requestRender(): void
+  snapshotViewPoint(): DocumentSpaceViewPointSnapshot
+  restoreViewPoint(snapshot: DocumentSpaceViewPointSnapshot): void
+  dispose(): void
+}>
+
 export type CreateDocumentSpaceRuntimeOptions = Readonly<{
   canvas: HTMLCanvasElement
+  document: Document
+  styleSheets: readonly string[]
+  font: TrueTypeFont
   pixelRatio?: number
   viewPoint?: DocumentSpaceViewPointSnapshot
   cameraGestures?: boolean
@@ -93,6 +142,10 @@ export type CreateDocumentSpaceRuntimeOptions = Readonly<{
 
 export type DocumentSpaceRuntime = Readonly<{
   canvas: HTMLCanvasElement
+  document: Document
+  styleSheets: readonly string[]
+  font: TrueTypeFont
+  interactionState: DocumentInteractionState
   engineRenderer: EngineRenderer
   space: Space
   viewPoint: ViewPoint
@@ -104,10 +157,13 @@ export type DocumentSpaceRuntime = Readonly<{
   activeInputPlaneId: string | null
   planeIds: readonly string[]
   overlayIds: readonly string[]
+  worldIds: readonly string[]
   activePlaneId: string | null
   hoveredPlaneId: string | null
   activeOverlayId: string | null
   hoveredOverlayId: string | null
+  activeWorldId: string | null
+  hoveredWorldId: string | null
   cameraGesturesEnabled: boolean
   presentedFrames: number
   disposed: boolean
@@ -118,6 +174,10 @@ export type DocumentSpaceRuntime = Readonly<{
   addOverlay(registration: DocumentSpaceOverlayRegistration): DocumentOverlayRuntime
   getOverlay(id: string): DocumentOverlayRuntime | undefined
   removeOverlay(id: string): boolean
+  addWorld(registration: DocumentSpaceWorldRegistration): DocumentSpaceWorldRuntime
+  getWorld(id: string): DocumentSpaceWorldRuntime | undefined
+  updateWorld(id: string, update: DocumentSpaceWorldUpdate): DocumentSpaceWorldRuntime
+  removeWorld(id: string): boolean
   render(): void
   requestRender(): void
   resize(): void
@@ -125,6 +185,7 @@ export type DocumentSpaceRuntime = Readonly<{
   snapshotViewPoint(): DocumentSpaceViewPointSnapshot
   restoreViewPoint(snapshot: DocumentSpaceViewPointSnapshot): void
   setCameraGesturesEnabled(enabled: boolean): void
+  subscribePresented(listener: (frame: number) => void): () => void
   dispose(): void
 }>
 
@@ -146,6 +207,10 @@ export type DocumentSpaceRuntimeSeams = Readonly<{
   initializeEngineRenderer(renderer: EngineRenderer, canvas: HTMLCanvasElement): Promise<void>
   createSpace(): Space
   createViewPoint(canvas: HTMLCanvasElement, snapshot: DocumentSpaceViewPointSnapshot): ViewPoint
+  createWorldViewPoint(
+    snapshot: DocumentSpaceViewPointSnapshot,
+    viewport: DocumentSpaceWorldViewport,
+  ): ViewPoint
   createRaycaster(): Raycaster
   createNativeInputHost(options: Readonly<{requestFrame(): void}>): DocumentNativeInputHost
   createPlaneRuntime(options: CreateDocumentPlaneRuntimeOptions): DocumentPlaneRuntime
@@ -176,6 +241,21 @@ type OverlayRecord = {
   tooltipDelayMs: number
 }
 
+type WorldRecord = {
+  id: string
+  runtime: DocumentSpaceWorldRuntime
+  order: number
+  requestedViewport: DocumentSpaceWorldViewport | null
+  logicalViewport: DocumentSpaceWorldViewport | null
+  backingViewport: DocumentSpaceWorldViewport | null
+  visible: boolean
+  cameraGestures: boolean
+  onResize: ((resize: DocumentSpaceWorldResize | null) => void) | null
+  onDoubleClick: (() => void) | null
+  resizeSignature: string | null
+  disposed: boolean
+}
+
 type CapturedPlanePointer = {
   kind: "plane"
   planeId: string
@@ -195,7 +275,19 @@ type CapturedCameraPointer = {
   clientY: number
 }
 
-type CapturedPointer = CapturedPlanePointer | CapturedOverlayPointer | CapturedCameraPointer
+type CapturedWorldPointer = {
+  kind: "world"
+  worldId: string
+  mode: "orbit" | "pan" | null
+  clientX: number
+  clientY: number
+}
+
+type CapturedPointer =
+  | CapturedPlanePointer
+  | CapturedOverlayPointer
+  | CapturedCameraPointer
+  | CapturedWorldPointer
 
 type PlaneHit = Readonly<{
   record: PlaneRecord
@@ -224,6 +316,7 @@ const defaultSeams = (): DocumentSpaceRuntimeSeams => Object.freeze({
   createViewPoint(canvas, snapshot) {
     const viewPoint = new ViewPoint({
       element: canvas,
+      controls: "host",
       fov: snapshot.fov,
       near: snapshot.near,
       far: snapshot.far,
@@ -232,7 +325,25 @@ const defaultSeams = (): DocumentSpaceRuntimeSeams => Object.freeze({
     })
     viewPoint.getUp().set(snapshot.up.x, snapshot.up.y, snapshot.up.z)
     viewPoint.update()
-    viewPoint.dispose()
+    return viewPoint
+  },
+  createWorldViewPoint(snapshot, viewport) {
+    const viewPoint = new ViewPoint({
+      controls: "host",
+      viewport: {
+        left: viewport.x,
+        top: viewport.y,
+        width: viewport.width,
+        height: viewport.height,
+      },
+      fov: snapshot.fov,
+      near: snapshot.near,
+      far: snapshot.far,
+      position: snapshot.position,
+      target: snapshot.target,
+    })
+    viewPoint.getUp().set(snapshot.up.x, snapshot.up.y, snapshot.up.z)
+    viewPoint.update()
     return viewPoint
   },
   createRaycaster: () => new Raycaster(),
@@ -264,7 +375,7 @@ const defaultSeams = (): DocumentSpaceRuntimeSeams => Object.freeze({
   now: () => performance.now(),
 })
 
-/** Creates one canvas host for independently owned world-space DOM planes. */
+/** Creates the one canvas/Document/Space host for one browser Experience. */
 export async function createDocumentSpaceRuntime(
   options: CreateDocumentSpaceRuntimeOptions,
 ): Promise<DocumentSpaceRuntime> {
@@ -277,11 +388,27 @@ export async function createDocumentSpaceRuntimeWithSeams(
   seams: DocumentSpaceRuntimeSeams,
 ): Promise<DocumentSpaceRuntime> {
   validateOptions(options)
+  const presentationHostClaim = claimBrowserPresentationHost(options.canvas)
+  try {
+    return await createClaimedDocumentSpaceRuntime(options, seams, presentationHostClaim)
+  } catch (error) {
+    presentationHostClaim.release()
+    throw error
+  }
+}
+
+const createClaimedDocumentSpaceRuntime = async (
+  options: CreateDocumentSpaceRuntimeOptions,
+  seams: DocumentSpaceRuntimeSeams,
+  presentationHostClaim: ReturnType<typeof claimBrowserPresentationHost>,
+): Promise<DocumentSpaceRuntime> => {
   validateSeams(seams)
   const fixedPixelRatio = options.pixelRatio === undefined
     ? null
     : finitePositive(options.pixelRatio, "pixelRatio")
+  const styleSheets = Object.freeze([...options.styleSheets])
   const initialViewPoint = validateViewPointSnapshot(options.viewPoint ?? DEFAULT_VIEW_POINT)
+  const interactionState = createDocumentInteractionState(options.document)
   const engineRenderer = seams.createEngineRenderer()
   await seams.initializeEngineRenderer(engineRenderer, options.canvas)
   const space = seams.createSpace()
@@ -289,14 +416,22 @@ export async function createDocumentSpaceRuntimeWithSeams(
   const raycaster = seams.createRaycaster()
   const records = new Map<string, PlaneRecord>()
   const overlays = new Map<string, OverlayRecord>()
+  const worlds = new Map<string, WorldRecord>()
+  const worldOwners = new Map<Space, string>()
+  const projectionRoots = new Map<Node, string>()
   const captures = new Map<number, CapturedPointer>()
+  const presentedListeners = new Set<(frame: number) => void>()
   let nextPlaneOrder = 0
   let nextOverlayOrder = 0
+  let nextWorldOrder = 0
   let hoveredPlaneId: string | null = null
   let activePlaneId: string | null = null
   let hoveredOverlayId: string | null = null
   let activeOverlayId: string | null = null
+  let hoveredWorldId: string | null = null
+  let activeWorldId: string | null = null
   let canvasViewport: RenderViewport = Object.freeze({width: 1, height: 1})
+  let currentPixelRatio = fixedPixelRatio ?? 1
   let cameraGesturesEnabled = options.cameraGestures === true
   let presentedFrames = 0
   let requestedFrame: unknown | null = null
@@ -390,9 +525,28 @@ export async function createDocumentSpaceRuntimeWithSeams(
       }
       viewPoint.update()
       for (const record of overlays.values()) record.runtime.updateForViewPoint(viewPoint)
+      for (const record of worlds.values()) {
+        synchronizeWorldGeometry(record)
+        if (record.visible && record.logicalViewport !== null) record.runtime.viewPoint.update()
+      }
       space.updateWorldMatrix(true)
-      engineRenderer.renderFrame(space, viewPoint)
+      engineRenderer.renderComposition({
+        space,
+        viewPoint,
+        overlays: [...overlays.values()]
+          .sort((left, right) => left.order - right.order)
+          .map((record) => record.runtime.overlay),
+        boundedViews: [...worlds.values()]
+          .filter((record) => record.visible && record.backingViewport !== null)
+          .sort((left, right) => left.order - right.order)
+          .map((record) => Object.freeze({
+            space: record.runtime.space,
+            viewPoint: record.runtime.viewPoint,
+            viewport: record.backingViewport!,
+          })),
+      })
       presentedFrames += 1
+      for (const listener of [...presentedListeners]) listener(presentedFrames)
     } finally {
       rendering = false
     }
@@ -414,25 +568,32 @@ export async function createDocumentSpaceRuntimeWithSeams(
   const addPlane = (registration: DocumentSpacePlaneRegistration): DocumentPlaneRuntime => {
     assertActive(disposed)
     const id = validatePlaneId(registration?.id)
-    if (records.has(id) || overlays.has(id)) {
+    if (records.has(id) || overlays.has(id) || worlds.has(id)) {
       throw new Error(`Document space owner id is already registered: ${id}`)
     }
+    validateProjectionRoot(options.document, registration.root)
+    const rootOwner = projectionRoots.get(registration.root)
+    if (rootOwner !== undefined) {
+      throw new Error(`Document space root is already registered by owner: ${rootOwner}`)
+    }
+    validateProjectionRootSeparation(projectionRoots, registration.root)
     const transform = validateTransform(registration.transform)
     const tooltipDelayMs = finiteNonNegative(registration.tooltipDelayMs ?? 500, "tooltipDelayMs")
     let record: PlaneRecord | null = null
     let requestedBeforeRegistration = false
     const runtime = seams.createPlaneRuntime({
-      document: registration.document,
+      document: options.document,
       root: registration.root,
-      styleSheets: registration.styleSheets,
-      font: registration.font,
+      styleSheets,
+      font: options.font,
       viewport: registration.viewport,
       worldUnitsPerPixel: registration.worldUnitsPerPixel,
+      interactionState,
       tooltipDelayMs,
       invalidateGeometry: (geometry) => engineRenderer.invalidateGeometry(geometry),
       requestFrame() {
         if (disposed) return
-        if (nativeInputHost.document === registration.document) nativeInputHost.synchronize()
+        if (nativeInputHost.document === options.document) nativeInputHost.synchronize()
         if (record === null) requestedBeforeRegistration = true
         else record.dirty = true
         requestRender()
@@ -455,6 +616,7 @@ export async function createDocumentSpaceRuntimeWithSeams(
       tooltipDelayMs,
     }
     records.set(id, record)
+    projectionRoots.set(registration.root, id)
     space.add(runtime.plane)
     requestRender()
     return runtime
@@ -496,6 +658,7 @@ export async function createDocumentSpaceRuntimeWithSeams(
     if (nativeInputHost.ownerId === id) nativeInputHost.setActiveDocument(null)
     space.remove(record.runtime.plane)
     records.delete(id)
+    projectionRoots.delete(record.runtime.root)
     record.runtime.dispose()
     requestRender()
     return true
@@ -509,24 +672,31 @@ export async function createDocumentSpaceRuntimeWithSeams(
   ): DocumentOverlayRuntime => {
     assertActive(disposed)
     const id = validatePlaneId(registration?.id)
-    if (records.has(id) || overlays.has(id)) {
+    if (records.has(id) || overlays.has(id) || worlds.has(id)) {
       throw new Error(`Document space owner id is already registered: ${id}`)
     }
+    validateProjectionRoot(options.document, registration.root)
+    const rootOwner = projectionRoots.get(registration.root)
+    if (rootOwner !== undefined) {
+      throw new Error(`Document space root is already registered by owner: ${rootOwner}`)
+    }
+    validateProjectionRootSeparation(projectionRoots, registration.root)
     const tooltipDelayMs = finiteNonNegative(registration.tooltipDelayMs ?? 500, "tooltipDelayMs")
     let record: OverlayRecord | null = null
     let requestedBeforeRegistration = false
     const runtime = seams.createOverlayRuntime({
-      document: registration.document,
+      document: options.document,
       root: registration.root,
-      styleSheets: registration.styleSheets,
-      font: registration.font,
+      styleSheets,
+      font: options.font,
       viewport: canvasViewport,
+      interactionState,
       ...(registration.distance === undefined ? {} : {distance: registration.distance}),
       tooltipDelayMs,
       invalidateGeometry: (geometry) => engineRenderer.invalidateGeometry(geometry),
       requestFrame() {
         if (disposed) return
-        if (nativeInputHost.document === registration.document) nativeInputHost.synchronize()
+        if (nativeInputHost.document === options.document) nativeInputHost.synchronize()
         if (record === null) requestedBeforeRegistration = true
         else record.dirty = true
         requestRender()
@@ -543,6 +713,7 @@ export async function createDocumentSpaceRuntimeWithSeams(
       tooltipDelayMs,
     }
     overlays.set(id, record)
+    projectionRoots.set(registration.root, id)
     space.add(runtime.overlay)
     requestRender()
     return runtime
@@ -559,7 +730,264 @@ export async function createDocumentSpaceRuntimeWithSeams(
     if (nativeInputHost.ownerId === id) nativeInputHost.setActiveDocument(null)
     space.remove(record.runtime.overlay)
     overlays.delete(id)
+    projectionRoots.delete(record.runtime.root)
     record.runtime.dispose()
+    requestRender()
+    return true
+  }
+
+  const worldIds = (): readonly string[] => Object.freeze([...worlds.keys()])
+
+  const getWorld = (id: string): DocumentSpaceWorldRuntime | undefined =>
+    worlds.get(validatePlaneId(id))?.runtime
+
+  const resolveWorldGeometry = (
+    requested: DocumentSpaceWorldViewport | null,
+    visible: boolean,
+  ): Readonly<{
+    logicalViewport: DocumentSpaceWorldViewport | null
+    backingViewport: DocumentSpaceWorldViewport | null
+    clientViewport: DocumentSpaceWorldViewport
+  }> => {
+    const rect = seams.readCanvasRect(options.canvas)
+    if (!visible || requested === null) {
+      return Object.freeze({
+        logicalViewport: null,
+        backingViewport: null,
+        clientViewport: Object.freeze({
+          x: rect.left,
+          y: rect.top,
+          width: positiveExtent(rect.width),
+          height: positiveExtent(rect.height),
+        }),
+      })
+    }
+    const left = clamp(requested.x, 0, canvasViewport.width)
+    const top = clamp(requested.y, 0, canvasViewport.height)
+    const right = clamp(requested.x + requested.width, left, canvasViewport.width)
+    const bottom = clamp(requested.y + requested.height, top, canvasViewport.height)
+    if (right <= left || bottom <= top) {
+      return Object.freeze({
+        logicalViewport: null,
+        backingViewport: null,
+        clientViewport: Object.freeze({
+          x: rect.left,
+          y: rect.top,
+          width: positiveExtent(rect.width),
+          height: positiveExtent(rect.height),
+        }),
+      })
+    }
+    const logicalViewport = Object.freeze({
+      x: left,
+      y: top,
+      width: right - left,
+      height: bottom - top,
+    })
+    const backingWidth = Math.max(1, Math.floor(canvasViewport.width * currentPixelRatio))
+    const backingHeight = Math.max(1, Math.floor(canvasViewport.height * currentPixelRatio))
+    const backingLeft = clamp(Math.floor(left * currentPixelRatio), 0, backingWidth)
+    const backingTop = clamp(Math.floor(top * currentPixelRatio), 0, backingHeight)
+    const backingRight = clamp(Math.ceil(right * currentPixelRatio), backingLeft, backingWidth)
+    const backingBottom = clamp(Math.ceil(bottom * currentPixelRatio), backingTop, backingHeight)
+    const backingViewport = Object.freeze({
+      x: backingLeft,
+      y: backingTop,
+      width: backingRight - backingLeft,
+      height: backingBottom - backingTop,
+    })
+    const scaleX = positiveExtent(rect.width) / canvasViewport.width
+    const scaleY = positiveExtent(rect.height) / canvasViewport.height
+    return Object.freeze({
+      logicalViewport,
+      backingViewport,
+      clientViewport: Object.freeze({
+        x: rect.left + left * scaleX,
+        y: rect.top + top * scaleY,
+        width: logicalViewport.width * scaleX,
+        height: logicalViewport.height * scaleY,
+      }),
+    })
+  }
+
+  const synchronizeWorldGeometry = (record: WorldRecord): void => {
+    const geometry = resolveWorldGeometry(record.requestedViewport, record.visible)
+    record.logicalViewport = geometry.logicalViewport
+    record.backingViewport = geometry.backingViewport
+    record.runtime.viewPoint.setViewport({
+      left: geometry.clientViewport.x,
+      top: geometry.clientViewport.y,
+      width: geometry.clientViewport.width,
+      height: geometry.clientViewport.height,
+    })
+    const signature = geometry.logicalViewport === null || geometry.backingViewport === null
+      ? "hidden"
+      : [
+          geometry.logicalViewport.x,
+          geometry.logicalViewport.y,
+          geometry.logicalViewport.width,
+          geometry.logicalViewport.height,
+          geometry.backingViewport.x,
+          geometry.backingViewport.y,
+          geometry.backingViewport.width,
+          geometry.backingViewport.height,
+          currentPixelRatio,
+        ].join(":")
+    if (record.resizeSignature === signature) return
+    record.resizeSignature = signature
+    if (record.onResize === null) return
+    record.onResize(
+      geometry.logicalViewport === null || geometry.backingViewport === null
+        ? null
+        : Object.freeze({
+            logicalViewport: geometry.logicalViewport,
+            backingViewport: geometry.backingViewport,
+            pixelRatio: currentPixelRatio,
+          }),
+    )
+  }
+
+  const addWorld = (
+    registration: DocumentSpaceWorldRegistration,
+  ): DocumentSpaceWorldRuntime => {
+    assertActive(disposed)
+    if (registration === null || typeof registration !== "object") {
+      throw new TypeError("Document space world registration is required")
+    }
+    const id = validatePlaneId(registration.id)
+    if (records.has(id) || overlays.has(id) || worlds.has(id)) {
+      throw new Error(`Document space owner id is already registered: ${id}`)
+    }
+    if (!(registration.space instanceof Space)) {
+      throw new TypeError("Document space world must be an exact Engine Space")
+    }
+    if (registration.space === space) throw new Error("Document space world cannot be the host Space")
+    if (registration.space.parent !== null) {
+      throw new Error("Document space world must be an unattached Engine Space")
+    }
+    const existingOwner = worldOwners.get(registration.space)
+    if (existingOwner !== undefined) {
+      throw new Error(`Document space world is already registered by owner: ${existingOwner}`)
+    }
+    const requestedViewport = validateWorldViewport(registration.viewport)
+    const snapshot = validateViewPointSnapshot(registration.viewPoint)
+    const visible = registration.visible ?? true
+    const cameraGestures = registration.cameraGestures ?? true
+    if (typeof visible !== "boolean") throw new TypeError("World visibility must be boolean")
+    if (typeof cameraGestures !== "boolean") throw new TypeError("World cameraGestures must be boolean")
+    if (registration.onResize !== undefined && typeof registration.onResize !== "function") {
+      throw new TypeError("World onResize must be a function")
+    }
+    if (registration.onDoubleClick !== undefined && typeof registration.onDoubleClick !== "function") {
+      throw new TypeError("World onDoubleClick must be a function")
+    }
+    const initialGeometry = resolveWorldGeometry(requestedViewport, visible)
+    const worldViewPoint = seams.createWorldViewPoint(snapshot, initialGeometry.clientViewport)
+    let record!: WorldRecord
+    const runtime: DocumentSpaceWorldRuntime = Object.freeze({
+      id,
+      space: registration.space,
+      viewPoint: worldViewPoint,
+      get viewport() { return record.requestedViewport },
+      get logicalViewport() { return record.logicalViewport },
+      get backingViewport() { return record.backingViewport },
+      get visible() { return record.visible },
+      get cameraGesturesEnabled() { return record.cameraGestures },
+      get disposed() { return record.disposed },
+      requestRender() {
+        if (record.disposed) throw new Error("Document space world is disposed")
+        requestRender()
+      },
+      snapshotViewPoint() {
+        if (record.disposed) throw new Error("Document space world is disposed")
+        worldViewPoint.update()
+        return viewPointSnapshot(worldViewPoint)
+      },
+      restoreViewPoint(value) {
+        if (record.disposed) throw new Error("Document space world is disposed")
+        applyViewPointSnapshot(worldViewPoint, validateViewPointSnapshot(value))
+        requestRender()
+      },
+      dispose() {
+        if (record.disposed || disposed) return
+        removeWorld(id)
+      },
+    })
+    record = {
+      id,
+      runtime,
+      order: nextWorldOrder++,
+      requestedViewport,
+      logicalViewport: null,
+      backingViewport: null,
+      visible,
+      cameraGestures,
+      onResize: registration.onResize ?? null,
+      onDoubleClick: registration.onDoubleClick ?? null,
+      resizeSignature: null,
+      disposed: false,
+    }
+    try {
+      worlds.set(id, record)
+      worldOwners.set(registration.space, id)
+      space.add(registration.space)
+      synchronizeWorldGeometry(record)
+      requestRender()
+      return runtime
+    } catch (error) {
+      worlds.delete(id)
+      worldOwners.delete(registration.space)
+      space.remove(registration.space)
+      record.disposed = true
+      worldViewPoint.dispose()
+      throw error
+    }
+  }
+
+  const updateWorld = (
+    idValue: string,
+    update: DocumentSpaceWorldUpdate,
+  ): DocumentSpaceWorldRuntime => {
+    assertActive(disposed)
+    const id = validatePlaneId(idValue)
+    const record = worlds.get(id)
+    if (record === undefined) throw new Error(`Unknown document space world id: ${id}`)
+    if (update === null || typeof update !== "object") throw new TypeError("World update is required")
+    if (update.viewport !== undefined) record.requestedViewport = validateWorldViewport(update.viewport)
+    if (update.visible !== undefined) {
+      if (typeof update.visible !== "boolean") throw new TypeError("World visibility must be boolean")
+      record.visible = update.visible
+    }
+    if (update.cameraGestures !== undefined) {
+      if (typeof update.cameraGestures !== "boolean") throw new TypeError("World cameraGestures must be boolean")
+      record.cameraGestures = update.cameraGestures
+      if (!record.cameraGestures) cancelCapturedWorld(id)
+    }
+    if (update.viewPoint !== undefined) {
+      applyViewPointSnapshot(record.runtime.viewPoint, validateViewPointSnapshot(update.viewPoint))
+    }
+    synchronizeWorldGeometry(record)
+    if (!record.visible || record.logicalViewport === null) {
+      if (hoveredWorldId === id) hoveredWorldId = null
+      cancelCapturedWorld(id)
+    }
+    requestRender()
+    return record.runtime
+  }
+
+  function removeWorld(idValue: string): boolean {
+    assertActive(disposed)
+    const id = validatePlaneId(idValue)
+    const record = worlds.get(id)
+    if (record === undefined) return false
+    cancelCapturedWorld(id)
+    if (hoveredWorldId === id) hoveredWorldId = null
+    if (activeWorldId === id) activeWorldId = null
+    worlds.delete(id)
+    worldOwners.delete(record.runtime.space)
+    if (record.runtime.space.parent === space) space.remove(record.runtime.space)
+    record.disposed = true
+    record.runtime.viewPoint.dispose()
     requestRender()
     return true
   }
@@ -583,6 +1011,7 @@ export async function createDocumentSpaceRuntimeWithSeams(
     const height = positiveExtent(rect.height)
     const nextViewport = Object.freeze({width, height})
     const pixelRatio = fixedPixelRatio ?? finitePositiveOrOne(seams.devicePixelRatio())
+    currentPixelRatio = pixelRatio
     engineRenderer.setPixelRatio(pixelRatio)
     engineRenderer.setSize(width, height)
     viewPoint.setAspectRatio(width / height)
@@ -596,6 +1025,7 @@ export async function createDocumentSpaceRuntimeWithSeams(
         record.dirty = false
       }
     }
+    for (const record of worlds.values()) synchronizeWorldGeometry(record)
     requestRender()
   }
 
@@ -652,6 +1082,23 @@ export async function createDocumentSpaceRuntimeWithSeams(
       if (!record.runtime.overlay.visible || !record.runtime.overlay.content.visible) continue
       const hit = hitTest(record.runtime.renderer.flush(), point.x, point.y)
       if (hit !== null) return Object.freeze({record, point, hit})
+    }
+    return null
+  }
+
+  const pickWorld = (clientX: number, clientY: number): WorldRecord | null => {
+    const point = overlayPoint(clientX, clientY)
+    if (point === null) return null
+    const ordered = [...worlds.values()].sort((left, right) => right.order - left.order)
+    for (const record of ordered) {
+      const viewport = record.logicalViewport
+      if (!record.visible || viewport === null) continue
+      if (
+        point.x >= viewport.x &&
+        point.y >= viewport.y &&
+        point.x < viewport.x + viewport.width &&
+        point.y < viewport.y + viewport.height
+      ) return record
     }
     return null
   }
@@ -733,10 +1180,15 @@ export async function createDocumentSpaceRuntimeWithSeams(
     }))
   }
 
+  const clearHoveredWorld = (): void => {
+    hoveredWorldId = null
+  }
+
   const refreshActiveOwners = (): void => {
     const last = [...captures.values()].at(-1)
     activePlaneId = last?.kind === "plane" ? last.planeId : null
     activeOverlayId = last?.kind === "overlay" ? last.overlayId : null
+    activeWorldId = last?.kind === "world" ? last.worldId : null
   }
 
   const releasePointer = (pointerId: number): void => {
@@ -768,6 +1220,12 @@ export async function createDocumentSpaceRuntimeWithSeams(
     }
   }
 
+  function cancelCapturedWorld(id: string): void {
+    for (const [pointerId, capture] of [...captures]) {
+      if (capture.kind === "world" && capture.worldId === id) releasePointer(pointerId)
+    }
+  }
+
   const setCameraGesturesEnabled = (enabled: boolean): void => {
     assertActive(disposed)
     if (typeof enabled !== "boolean") throw new TypeError("Camera gesture state must be boolean")
@@ -777,6 +1235,13 @@ export async function createDocumentSpaceRuntimeWithSeams(
     for (const [pointerId, capture] of [...captures]) {
       if (capture.kind === "camera") releasePointer(pointerId)
     }
+  }
+
+  const subscribePresented = (listener: (frame: number) => void): (() => void) => {
+    assertActive(disposed)
+    if (typeof listener !== "function") throw new TypeError("Presented frame listener must be a function")
+    presentedListeners.add(listener)
+    return () => presentedListeners.delete(listener)
   }
 
   const onPointerMove = (event: PointerEvent): void => {
@@ -794,6 +1259,26 @@ export async function createDocumentSpaceRuntimeWithSeams(
         requestRender()
         return
       }
+      if (capture.kind === "world") {
+        const record = worlds.get(capture.worldId)
+        if (record === undefined || !record.visible || record.logicalViewport === null) {
+          releasePointer(event.pointerId)
+          return
+        }
+        const deltaX = event.clientX - capture.clientX
+        const deltaY = event.clientY - capture.clientY
+        capture.clientX = event.clientX
+        capture.clientY = event.clientY
+        if (capture.mode === "orbit") record.runtime.viewPoint.orbit(deltaX, deltaY)
+        else if (capture.mode === "pan") record.runtime.viewPoint.pan(deltaX, deltaY)
+        hoveredWorldId = record.id
+        activeWorldId = record.id
+        if (capture.mode !== null) {
+          if (event.cancelable) event.preventDefault()
+          requestRender()
+        }
+        return
+      }
       if (capture.kind === "overlay") {
         const record = overlays.get(capture.overlayId)
         const point = overlayPoint(event.clientX, event.clientY)
@@ -806,6 +1291,7 @@ export async function createDocumentSpaceRuntimeWithSeams(
         record.runtime.pointerMove(input)
         hoveredOverlayId = record.id
         activeOverlayId = record.id
+        activeWorldId = null
         scheduleTooltipFrame({kind: "overlay", id: record.id}, record.tooltipDelayMs)
         return
       }
@@ -826,11 +1312,31 @@ export async function createDocumentSpaceRuntimeWithSeams(
       record.runtime.pointerMove(input)
       hoveredPlaneId = record.id
       activePlaneId = record.id
+      activeWorldId = null
       scheduleTooltipFrame({kind: "plane", id: record.id}, record.tooltipDelayMs)
       return
     }
     const overlayHit = pickOverlay(event.clientX, event.clientY)
     if (overlayHit?.record.id !== hoveredOverlayId) clearHoveredOverlay(event)
+    if (overlayHit !== null && overlayHit.hit.interactive) {
+      clearHoveredWorld()
+      clearHoveredPlane(event)
+      hoveredOverlayId = overlayHit.record.id
+      overlayHit.record.runtime.pointerMove(localPointerInput(event, overlayHit.point))
+      scheduleTooltipFrame(
+        {kind: "overlay", id: overlayHit.record.id},
+        overlayHit.record.tooltipDelayMs,
+      )
+      return
+    }
+    const world = pickWorld(event.clientX, event.clientY)
+    if (world !== null) {
+      clearHoveredOverlay(event)
+      clearHoveredPlane(event)
+      hoveredWorldId = world.id
+      return
+    }
+    clearHoveredWorld()
     if (overlayHit !== null) {
       clearHoveredPlane(event)
       hoveredOverlayId = overlayHit.record.id
@@ -855,7 +1361,8 @@ export async function createDocumentSpaceRuntimeWithSeams(
     cancelCapturedPointer(event.pointerId)
     const overlayHit = pickOverlay(event.clientX, event.clientY)
     if (overlayHit?.record.id !== hoveredOverlayId) clearHoveredOverlay(event)
-    if (overlayHit !== null) {
+    if (overlayHit !== null && overlayHit.hit.interactive) {
+      clearHoveredWorld()
       clearHoveredPlane(event)
       hoveredOverlayId = overlayHit.record.id
       const input = localPointerInput(event, overlayHit.point)
@@ -875,8 +1382,37 @@ export async function createDocumentSpaceRuntimeWithSeams(
       })
       activeOverlayId = overlayHit.record.id
       activePlaneId = null
+      activeWorldId = null
       return
     }
+    const world = pickWorld(event.clientX, event.clientY)
+    if (world !== null) {
+      clearHoveredOverlay(event)
+      clearHoveredPlane(event)
+      hoveredWorldId = world.id
+      nativeInputHost.setActiveDocument(null)
+      const mode = world.cameraGestures
+        ? event.button === 2
+          ? "pan"
+          : event.button === 0
+            ? "orbit"
+            : null
+        : null
+      if (event.cancelable) event.preventDefault()
+      options.canvas.setPointerCapture?.(event.pointerId)
+      captures.set(event.pointerId, {
+        kind: "world",
+        worldId: world.id,
+        mode,
+        clientX: event.clientX,
+        clientY: event.clientY,
+      })
+      activeWorldId = world.id
+      activePlaneId = null
+      activeOverlayId = null
+      return
+    }
+    clearHoveredWorld()
     const hit = pickPlane(event.clientX, event.clientY)
     if (hit?.record.id !== hoveredPlaneId) clearHoveredPlane(event)
     const logicalHit = !cameraGesturesEnabled || hit === null
@@ -907,6 +1443,7 @@ export async function createDocumentSpaceRuntimeWithSeams(
       })
       activePlaneId = null
       activeOverlayId = null
+      activeWorldId = null
       return
     }
     if (hit === null) {
@@ -927,6 +1464,7 @@ export async function createDocumentSpaceRuntimeWithSeams(
     captures.set(event.pointerId, {kind: "plane", planeId: hit.record.id, input})
     activePlaneId = hit.record.id
     activeOverlayId = null
+    activeWorldId = null
   }
 
   const onPointerUp = (event: PointerEvent): void => {
@@ -934,6 +1472,10 @@ export async function createDocumentSpaceRuntimeWithSeams(
     const capture = captures.get(event.pointerId)
     if (capture === undefined) return
     if (capture.kind === "camera") {
+      releasePointer(event.pointerId)
+      return
+    }
+    if (capture.kind === "world") {
       releasePointer(event.pointerId)
       return
     }
@@ -967,12 +1509,35 @@ export async function createDocumentSpaceRuntimeWithSeams(
   const onPointerLeave = (event: PointerEvent): void => {
     if (disposed || captures.has(event.pointerId)) return
     clearHoveredOverlay(event)
+    clearHoveredWorld()
     clearHoveredPlane(event)
   }
 
   const onWheel = (event: WheelEvent): void => {
     if (disposed) return
     const overlayHit = pickOverlay(event.clientX, event.clientY)
+    const overlayFrame = overlayHit?.record.runtime.renderer.flush() ?? null
+    const overlayOwnsWheel = overlayHit !== null && (
+      overlayHit.hit.interactive ||
+      overlayFrame !== null && hasRemainingScroll(overlayFrame, overlayHit.hit.node, event)
+    )
+    if (overlayHit !== null && overlayOwnsWheel) {
+      const target = overlayHit.record.runtime.wheel(localWheelInput(event, overlayHit.point))
+      if (target !== null && event.cancelable) event.preventDefault()
+      return
+    }
+    const world = pickWorld(event.clientX, event.clientY)
+    if (world !== null) {
+      if (!world.cameraGestures) return
+      routeCameraWheel(
+        world.runtime.viewPoint,
+        event,
+        world.logicalViewport?.height ?? canvasViewport.height,
+      )
+      if (event.cancelable) event.preventDefault()
+      requestRender()
+      return
+    }
     if (overlayHit !== null) {
       const target = overlayHit.record.runtime.wheel(localWheelInput(event, overlayHit.point))
       if (target !== null && event.cancelable) event.preventDefault()
@@ -1011,7 +1576,22 @@ export async function createDocumentSpaceRuntimeWithSeams(
   }
 
   const onContextMenu = (event: MouseEvent): void => {
-    if (cameraGesturesEnabled && event.cancelable) event.preventDefault()
+    const overlayHit = pickOverlay(event.clientX, event.clientY)
+    if (overlayHit?.hit.interactive === true) return
+    const world = pickWorld(event.clientX, event.clientY)
+    if ((world?.cameraGestures === true || cameraGesturesEnabled) && event.cancelable) {
+      event.preventDefault()
+    }
+  }
+
+  const onDoubleClick = (event: MouseEvent): void => {
+    if (disposed) return
+    const overlayHit = pickOverlay(event.clientX, event.clientY)
+    if (overlayHit?.hit.interactive === true) return
+    const world = pickWorld(event.clientX, event.clientY)
+    if (world === null || world.onDoubleClick === null) return
+    world.onDoubleClick()
+    requestRender()
   }
 
   options.canvas.addEventListener("pointermove", onPointerMove)
@@ -1021,9 +1601,14 @@ export async function createDocumentSpaceRuntimeWithSeams(
   options.canvas.addEventListener("pointerleave", onPointerLeave)
   options.canvas.addEventListener("wheel", onWheel, {passive: false})
   options.canvas.addEventListener("contextmenu", onContextMenu)
+  options.canvas.addEventListener("dblclick", onDoubleClick)
 
   const runtime: DocumentSpaceRuntime = Object.freeze({
     canvas: options.canvas,
+    document: options.document,
+    styleSheets,
+    font: options.font,
+    interactionState,
     engineRenderer,
     space,
     viewPoint,
@@ -1037,10 +1622,13 @@ export async function createDocumentSpaceRuntimeWithSeams(
     },
     get planeIds() { return planeIds() },
     get overlayIds() { return overlayIds() },
+    get worldIds() { return worldIds() },
     get activePlaneId() { return activePlaneId },
     get hoveredPlaneId() { return hoveredPlaneId },
     get activeOverlayId() { return activeOverlayId },
     get hoveredOverlayId() { return hoveredOverlayId },
+    get activeWorldId() { return activeWorldId },
+    get hoveredWorldId() { return hoveredWorldId },
     get cameraGesturesEnabled() { return cameraGesturesEnabled },
     get presentedFrames() { return presentedFrames },
     get disposed() { return disposed },
@@ -1051,6 +1639,10 @@ export async function createDocumentSpaceRuntimeWithSeams(
     addOverlay,
     getOverlay,
     removeOverlay,
+    addWorld,
+    getWorld,
+    updateWorld,
+    removeWorld,
     render,
     requestRender,
     resize,
@@ -1061,6 +1653,7 @@ export async function createDocumentSpaceRuntimeWithSeams(
     snapshotViewPoint,
     restoreViewPoint,
     setCameraGesturesEnabled,
+    subscribePresented,
     dispose() {
       if (disposed) return
       disposed = true
@@ -1076,11 +1669,14 @@ export async function createDocumentSpaceRuntimeWithSeams(
       options.canvas.removeEventListener("pointerleave", onPointerLeave)
       options.canvas.removeEventListener("wheel", onWheel)
       options.canvas.removeEventListener("contextmenu", onContextMenu)
+      options.canvas.removeEventListener("dblclick", onDoubleClick)
       for (const pointerId of [...captures.keys()]) cancelCapturedPointer(pointerId)
       hoveredPlaneId = null
       activePlaneId = null
       hoveredOverlayId = null
       activeOverlayId = null
+      hoveredWorldId = null
+      activeWorldId = null
       nativeInputHost.setActiveDocument(null)
       nativeInputHost.dispose()
       for (const record of records.values()) {
@@ -1093,7 +1689,17 @@ export async function createDocumentSpaceRuntimeWithSeams(
         record.runtime.dispose()
       }
       overlays.clear()
+      for (const record of worlds.values()) {
+        if (record.runtime.space.parent === space) space.remove(record.runtime.space)
+        record.disposed = true
+        record.runtime.viewPoint.dispose()
+      }
+      worlds.clear()
+      worldOwners.clear()
+      projectionRoots.clear()
+      presentedListeners.clear()
       viewPoint.dispose()
+      presentationHostClaim.release()
     },
   })
 
@@ -1119,10 +1725,47 @@ const validateOptions = (options: CreateDocumentSpaceRuntimeOptions): void => {
     typeof options.canvas.addEventListener !== "function" ||
     typeof options.canvas.getBoundingClientRect !== "function"
   ) throw new TypeError("canvas must be an HTMLCanvasElement-compatible owner")
+  if (options.document === null || typeof options.document !== "object" || options.document.nodeType !== 9) {
+    throw new TypeError("document must be a semantic Document")
+  }
+  if (!Array.isArray(options.styleSheets) || options.styleSheets.some((sheet) => typeof sheet !== "string")) {
+    throw new TypeError("styleSheets must be an array of CSS strings")
+  }
+  if (options.font === null || typeof options.font !== "object") {
+    throw new TypeError("font is required")
+  }
   if (options.pixelRatio !== undefined) finitePositive(options.pixelRatio, "pixelRatio")
   if (options.viewPoint !== undefined) validateViewPointSnapshot(options.viewPoint)
   if (options.cameraGestures !== undefined && typeof options.cameraGestures !== "boolean") {
     throw new TypeError("cameraGestures must be boolean")
+  }
+}
+
+const validateProjectionRoot = (document: Document, root: Node): void => {
+  if (
+    root === null ||
+    typeof root !== "object" ||
+    !Number.isInteger(root.nodeType) ||
+    typeof root.getRootNode !== "function"
+  ) {
+    throw new TypeError("Document space projection root must be a semantic Node")
+  }
+  if (root !== document && root.ownerDocument !== document) {
+    throw new TypeError("Document space projection root belongs to another Document")
+  }
+  if (root !== document && root.getRootNode() !== document) {
+    throw new TypeError("Document space projection root must belong to the connected Experience tree")
+  }
+}
+
+const validateProjectionRootSeparation = (
+  roots: ReadonlyMap<Node, string>,
+  root: Node,
+): void => {
+  for (const [registered, owner] of roots) {
+    if (registered.contains(root) || root.contains(registered)) {
+      throw new Error(`Document space projection root overlaps owner: ${owner}`)
+    }
   }
 }
 
@@ -1133,6 +1776,7 @@ const validateSeams = (seams: DocumentSpaceRuntimeSeams): void => {
     "initializeEngineRenderer",
     "createSpace",
     "createViewPoint",
+    "createWorldViewPoint",
     "createRaycaster",
     "createNativeInputHost",
     "createPlaneRuntime",
@@ -1155,6 +1799,22 @@ const validatePlaneId = (value: unknown): string => {
     throw new TypeError("Document space plane id must be a non-empty trimmed string")
   }
   return value
+}
+
+const validateWorldViewport = (
+  value: DocumentSpaceWorldViewport | null,
+): DocumentSpaceWorldViewport | null => {
+  if (value === null) return null
+  if (
+    typeof value !== "object" ||
+    !Number.isFinite(value.x) ||
+    !Number.isFinite(value.y) ||
+    !Number.isFinite(value.width) ||
+    !Number.isFinite(value.height) ||
+    value.width < 0 ||
+    value.height < 0
+  ) throw new RangeError("World viewport must have finite coordinates and non-negative extents")
+  return Object.freeze({x: value.x, y: value.y, width: value.width, height: value.height})
 }
 
 type ResolvedTransform = Readonly<{
@@ -1295,6 +1955,9 @@ const distance = (left: DocumentSpaceVector3, right: DocumentSpaceVector3): numb
 
 const positiveExtent = (value: number): number =>
   Number.isFinite(value) && value > 0 ? Math.max(1, Math.round(value)) : 1
+
+const clamp = (value: number, minimum: number, maximum: number): number =>
+  Math.min(maximum, Math.max(minimum, value))
 
 const finitePositiveOrOne = (value: number): number =>
   Number.isFinite(value) && value > 0 ? value : 1

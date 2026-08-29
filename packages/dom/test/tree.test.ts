@@ -89,6 +89,32 @@ describe("ordered tree mutation", () => {
     expect(third.isConnected).toBe(false)
   })
 
+  it("preserves focus and listeners when a node is reparented inside one Document", () => {
+    const document = createDocument()
+    const root = document.createElement("div")
+    const first = document.createElement("div")
+    const second = document.createElement("div")
+    const button = document.createElement("button")
+    let clicks = 0
+    button.addEventListener("click", () => { clicks += 1 })
+    document.appendChild(root)
+    root.append(first, second)
+    first.appendChild(button)
+    button.focus()
+
+    second.appendChild(button)
+    button.click()
+
+    expect(button.parentNode).toBe(second)
+    expect(button.ownerDocument).toBe(document)
+    expect(document.activeElement).toBe(button)
+    expect(clicks).toBe(1)
+
+    const detached = document.createElement("div")
+    detached.appendChild(button)
+    expect(document.activeElement).toBeNull()
+  })
+
   it("splices DocumentFragment children and replaces in place", () => {
     const document = createDocument()
     const root = document.createElement("div")

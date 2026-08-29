@@ -1,21 +1,21 @@
 {
   "consumerDemand": [
     {
-      "behavior": "Present the transactional journal Document on a stable resizable plane with capture and diagnostics.",
+      "behavior": "Present the journal root from the shared Experience Document on a stable resizable plane with capture and diagnostics.",
       "capability": "browser.features.document-plane",
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "401",
+          "lines": "406",
           "path": "src/main.ts",
-          "proves": "Present the transactional journal Document on a stable resizable plane with capture and diagnostics.",
+          "proves": "Present the journal root from the shared Experience Document on a stable resizable plane with capture and diagnostics.",
           "repository": "demo",
           "revision": "7a88ae3d6fa82b53d03f08e0cc9f86b1c41f0325+dirty",
           "symbol": "Journal plane",
           "type": "consumer-usage"
         }
       ],
-      "line": 401,
+      "line": 406,
       "package": "@zavx0z/demo",
       "path": "src/main.ts",
       "repository": "demo",
@@ -23,21 +23,21 @@
       "subject": "Journal plane"
     },
     {
-      "behavior": "Attach the Cosmos document to a stable world plane with the intended stylesheet and camera gestures.",
+      "behavior": "Attach the Cosmos main root from the shared Experience Document to a stable world plane with the intended stylesheet and camera gestures.",
       "capability": "browser.features.document-plane",
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "93",
+          "lines": "97",
           "path": "cosmos/internal/visual/main/index.ts",
-          "proves": "Attach the Cosmos document to a stable world plane with the intended stylesheet and camera gestures.",
+          "proves": "Attach the Cosmos main root from the shared Experience Document to a stable world plane with the intended stylesheet and camera gestures.",
           "repository": "metafor",
-          "revision": "603d5604ac550b044ad809d5be27190cba9118aa+dirty",
+          "revision": "fbc4aa770d8d1399d20bfa6e126fcd980722425d+dirty",
           "symbol": "Cosmos display plane",
           "type": "consumer-usage"
         }
       ],
-      "line": 93,
+      "line": 97,
       "package": "@internal/visual",
       "path": "cosmos/internal/visual/main/index.ts",
       "repository": "metafor",
@@ -45,21 +45,21 @@
       "subject": "Cosmos display plane"
     },
     {
-      "behavior": "Maintain one exact semantic Document per stable world plane with nearest-plane input, resize, capture and cleanup.",
+      "behavior": "Project every module root from one shared Experience Document into stable world planes with nearest-plane input, resize, capture and cleanup.",
       "capability": "browser.features.multiple-planes",
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "910",
+          "lines": "921",
           "path": "packages/interpreter/web/main.ts",
-          "proves": "Maintain one exact semantic Document per stable world plane with nearest-plane input, resize, capture and cleanup.",
+          "proves": "Project every module root from one shared Experience Document into stable world planes with nearest-plane input, resize, capture and cleanup.",
           "repository": "interpreter",
           "revision": "879b4e01a4abd12756f86228784421e26270f485+dirty",
           "symbol": "Module displays",
           "type": "consumer-usage"
         }
       ],
-      "line": 910,
+      "line": 921,
       "package": "@metafor/interpreter",
       "path": "packages/interpreter/web/main.ts",
       "repository": "interpreter",
@@ -76,7 +76,7 @@
           "path": "packages/components/inspector.tsx",
           "proves": "Focused numeric field editing inside nested scrollable Inspector groups.",
           "repository": "ui",
-          "revision": "2148fa46d41efdc6ece993a6298b4adb2ade0b19+dirty",
+          "revision": "5ed63adbc1d53c018bd7c5526df4d9ef175ffeef+dirty",
           "symbol": "Inspector numeric fields",
           "type": "consumer-usage"
         }
@@ -98,7 +98,7 @@
           "path": "packages/components/number-input.tsx",
           "proves": "Native typed number editing, focus, input/change, Escape rollback and selection through the exact semantic owner.",
           "repository": "ui",
-          "revision": "2148fa46d41efdc6ece993a6298b4adb2ade0b19+dirty",
+          "revision": "5ed63adbc1d53c018bd7c5526df4d9ef175ffeef+dirty",
           "symbol": "NumberInput",
           "type": "consumer-usage"
         }
@@ -111,16 +111,82 @@
       "subject": "NumberInput"
     },
     {
-      "behavior": "Attach the dock to a camera-locked overlay and apply the dock stylesheet to that exact runtime.",
+      "behavior": "Own one semantic Document, Canvas, Engine Renderer and Space for every Demo projection root.",
+      "capability": "browser.features.one-experience-topology",
+      "evidence": [
+        {
+          "doesNotProve": "Platform implementation or conformance.",
+          "lines": "398",
+          "path": "src/main.ts",
+          "proves": "Own one semantic Document, Canvas, Engine Renderer and Space for every Demo projection root.",
+          "repository": "demo",
+          "revision": "7a88ae3d6fa82b53d03f08e0cc9f86b1c41f0325+dirty",
+          "symbol": "Demo presentation host",
+          "type": "consumer-usage"
+        }
+      ],
+      "line": 398,
+      "package": "@zavx0z/demo",
+      "path": "src/main.ts",
+      "repository": "demo",
+      "scope": "production",
+      "subject": "Demo presentation host"
+    },
+    {
+      "behavior": "Own one semantic Document, Canvas, Engine Renderer and Space for all module display roots in the Interpreter Experience.",
+      "capability": "browser.features.one-experience-topology",
+      "evidence": [
+        {
+          "doesNotProve": "Platform implementation or conformance.",
+          "lines": "825",
+          "path": "packages/interpreter/web/main.ts",
+          "proves": "Own one semantic Document, Canvas, Engine Renderer and Space for all module display roots in the Interpreter Experience.",
+          "repository": "interpreter",
+          "revision": "879b4e01a4abd12756f86228784421e26270f485+dirty",
+          "symbol": "Interpreter presentation host",
+          "type": "consumer-usage"
+        }
+      ],
+      "line": 825,
+      "package": "@metafor/interpreter",
+      "path": "packages/interpreter/web/main.ts",
+      "repository": "interpreter",
+      "scope": "production",
+      "subject": "Interpreter presentation host"
+    },
+    {
+      "behavior": "Own one semantic Document, Canvas, Engine Renderer and Space for the Cosmos main plane and dock HUD projection.",
+      "capability": "browser.features.one-experience-topology",
+      "evidence": [
+        {
+          "doesNotProve": "Platform implementation or conformance.",
+          "lines": "82",
+          "path": "cosmos/internal/visual/main/index.ts",
+          "proves": "Own one semantic Document, Canvas, Engine Renderer and Space for the Cosmos main plane and dock HUD projection.",
+          "repository": "metafor",
+          "revision": "fbc4aa770d8d1399d20bfa6e126fcd980722425d+dirty",
+          "symbol": "Cosmos presentation host",
+          "type": "consumer-usage"
+        }
+      ],
+      "line": 82,
+      "package": "@internal/visual",
+      "path": "cosmos/internal/visual/main/index.ts",
+      "repository": "metafor",
+      "scope": "production",
+      "subject": "Cosmos presentation host"
+    },
+    {
+      "behavior": "Attach the dock sibling root from the same Experience Document to a camera-locked overlay using the host stylesheet realm.",
       "capability": "browser.features.overlays",
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
           "lines": "125",
           "path": "cosmos/internal/visual/main/index.ts",
-          "proves": "Attach the dock to a camera-locked overlay and apply the dock stylesheet to that exact runtime.",
+          "proves": "Attach the dock sibling root from the same Experience Document to a camera-locked overlay using the host stylesheet realm.",
           "repository": "metafor",
-          "revision": "603d5604ac550b044ad809d5be27190cba9118aa+dirty",
+          "revision": "fbc4aa770d8d1399d20bfa6e126fcd980722425d+dirty",
           "symbol": "Cosmos display dock",
           "type": "consumer-usage"
         }
@@ -142,7 +208,7 @@
           "path": "quantum/bulk/dom/overlay-runtime.ts",
           "proves": "Compose the HUD through the shared browser overlay owner rather than reimplementing pointer mapping, capture, hit and lifecycle.",
           "repository": "metafor",
-          "revision": "603d5604ac550b044ad809d5be27190cba9118aa+dirty",
+          "revision": "fbc4aa770d8d1399d20bfa6e126fcd980722425d+dirty",
           "symbol": "Bulk DOM overlay",
           "type": "consumer-usage"
         }
@@ -186,7 +252,7 @@
           "path": "packages/components/code-editor.tsx",
           "proves": "Two-axis scrolling with clipping and stable retained line/token identity.",
           "repository": "ui",
-          "revision": "2148fa46d41efdc6ece993a6298b4adb2ade0b19+dirty",
+          "revision": "5ed63adbc1d53c018bd7c5526df4d9ef175ffeef+dirty",
           "symbol": "CodeEditor",
           "type": "consumer-usage"
         }
@@ -208,7 +274,7 @@
           "path": "packages/ui/dom/node-editor.ts",
           "proves": "Pan/zoom reaches paint, clip and inverse hit consistently for the graph surface.",
           "repository": "node",
-          "revision": "9f390945f51f88c6374d5fb8f3215cf5d776e571+dirty",
+          "revision": "66b616a912950a023a2ddff5d62702e4074b0011",
           "symbol": "NodeEditor",
           "type": "consumer-usage"
         }
@@ -230,7 +296,7 @@
           "path": "packages/components/code-editor.tsx",
           "proves": "Preserve source whitespace and prevent wrapping for read-only code lines.",
           "repository": "ui",
-          "revision": "2148fa46d41efdc6ece993a6298b4adb2ade0b19+dirty",
+          "revision": "5ed63adbc1d53c018bd7c5526df4d9ef175ffeef+dirty",
           "symbol": "CodeEditor",
           "type": "consumer-usage"
         }
@@ -318,7 +384,7 @@
           "path": "packages/components/number-input.tsx",
           "proves": "A scrub gesture continues outside the control until pointerup/cancel without component-owned capture emulation.",
           "repository": "ui",
-          "revision": "2148fa46d41efdc6ece993a6298b4adb2ade0b19+dirty",
+          "revision": "5ed63adbc1d53c018bd7c5526df4d9ef175ffeef+dirty",
           "symbol": "NumberInput scrub",
           "type": "consumer-usage"
         }
@@ -384,7 +450,7 @@
           "path": "packages/components/color-input.tsx",
           "proves": "Stable controlled RGBA channels with range input/change semantics and analytical color paint.",
           "repository": "ui",
-          "revision": "2148fa46d41efdc6ece993a6298b4adb2ade0b19+dirty",
+          "revision": "5ed63adbc1d53c018bd7c5526df4d9ef175ffeef+dirty",
           "symbol": "ColorInput",
           "type": "consumer-usage"
         }
@@ -406,7 +472,7 @@
           "path": "packages/components/color-input.tsx",
           "proves": "An anchored top-layer color picker with clipping, light dismiss, Escape and focus restoration instead of an inline hidden panel.",
           "repository": "ui",
-          "revision": "2148fa46d41efdc6ece993a6298b4adb2ade0b19+dirty",
+          "revision": "5ed63adbc1d53c018bd7c5526df4d9ef175ffeef+dirty",
           "symbol": "ColorInput",
           "type": "consumer-usage"
         }
@@ -428,7 +494,7 @@
           "path": "packages/components/enum-input.tsx",
           "proves": "Open a collapsed select picker, navigate options by keyboard, activate one option and dispatch input/change.",
           "repository": "ui",
-          "revision": "2148fa46d41efdc6ece993a6298b4adb2ade0b19+dirty",
+          "revision": "5ed63adbc1d53c018bd7c5526df4d9ef175ffeef+dirty",
           "symbol": "EnumInput",
           "type": "consumer-usage"
         }
@@ -450,7 +516,7 @@
           "path": "packages/ui/node-system.tsx",
           "proves": "Observe topology/parameter snapshots without duplicating the canonical Node store.",
           "repository": "node",
-          "revision": "9f390945f51f88c6374d5fb8f3215cf5d776e571+dirty",
+          "revision": "66b616a912950a023a2ddff5d62702e4074b0011",
           "symbol": "NodeSystem view store",
           "type": "consumer-usage"
         }
@@ -472,7 +538,7 @@
           "path": "packages/ui/dom/field-mount.ts",
           "proves": "Mount and update a compiled component into a DocumentFragment while retaining the exact owner element and disposing on unmount.",
           "repository": "node",
-          "revision": "9f390945f51f88c6374d5fb8f3215cf5d776e571+dirty",
+          "revision": "66b616a912950a023a2ddff5d62702e4074b0011",
           "symbol": "mountField",
           "type": "consumer-usage"
         }
@@ -494,7 +560,7 @@
           "path": "packages/ui/node-system.tsx",
           "proves": "Retain node, link, parameter and socket identity across high-volume topology and parameter updates.",
           "repository": "node",
-          "revision": "9f390945f51f88c6374d5fb8f3215cf5d776e571+dirty",
+          "revision": "66b616a912950a023a2ddff5d62702e4074b0011",
           "symbol": "NodeSystem",
           "type": "consumer-usage"
         }
@@ -512,7 +578,7 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "417",
+          "lines": "419",
           "path": "src/main.ts",
           "proves": "Observe neutral plane/frame diagnostics without reaching into retained Engine/WebGPU owner objects.",
           "repository": "demo",
@@ -521,7 +587,7 @@
           "type": "consumer-usage"
         }
       ],
-      "line": 417,
+      "line": 419,
       "package": "@zavx0z/demo",
       "path": "src/main.ts",
       "repository": "demo",
@@ -556,7 +622,7 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "162",
+          "lines": "161",
           "path": "src/dom/journalDocument.ts",
           "proves": "Render journal images with object-fit, explicit dimensions, retained texture readiness and cleanup.",
           "repository": "demo",
@@ -565,7 +631,7 @@
           "type": "consumer-usage"
         }
       ],
-      "line": 162,
+      "line": 161,
       "package": "@zavx0z/demo",
       "path": "src/dom/journalDocument.ts",
       "repository": "demo",
@@ -582,7 +648,7 @@
           "path": "packages/ui/dom/node-editor.ts",
           "proves": "Scale grid and routed connection presentation without a local DOM geometry renderer.",
           "repository": "node",
-          "revision": "9f390945f51f88c6374d5fb8f3215cf5d776e571+dirty",
+          "revision": "66b616a912950a023a2ddff5d62702e4074b0011",
           "symbol": "NodeEditor grid and links",
           "type": "consumer-usage"
         }
@@ -604,7 +670,7 @@
           "path": "packages/ui/node-system.tsx",
           "proves": "Present routed links and grid primitives without decomposing them into component-owned rectangles and points.",
           "repository": "node",
-          "revision": "9f390945f51f88c6374d5fb8f3215cf5d776e571+dirty",
+          "revision": "66b616a912950a023a2ddff5d62702e4074b0011",
           "symbol": "NodeConnection",
           "type": "consumer-usage"
         }
@@ -622,7 +688,7 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "162",
+          "lines": "161",
           "path": "src/dom/journalDocument.ts",
           "proves": "Compile linked .tsx component exports through the Template JSX profile instead of importing removed imperative controllers.",
           "repository": "demo",
@@ -631,7 +697,7 @@
           "type": "consumer-usage"
         }
       ],
-      "line": 162,
+      "line": 161,
       "package": "@zavx0z/demo",
       "path": "src/dom/journalDocument.ts",
       "repository": "demo",
@@ -670,7 +736,7 @@
           "path": "cosmos/internal/visual/main/index.ts",
           "proves": "Compile linked .tsx component exports and remove stale imperative createButton usage without restoring legacy APIs.",
           "repository": "metafor",
-          "revision": "603d5604ac550b044ad809d5be27190cba9118aa+dirty",
+          "revision": "fbc4aa770d8d1399d20bfa6e126fcd980722425d+dirty",
           "symbol": "Compiled dock migration",
           "type": "consumer-usage"
         }
@@ -692,7 +758,7 @@
           "path": "create-metafor/dsl/matter.ts",
           "proves": "Parse the bounded meta/log/conditional/map source contract without treating ordinary HTML as executable DOM UI.",
           "repository": "metafor",
-          "revision": "603d5604ac550b044ad809d5be27190cba9118aa+dirty",
+          "revision": "fbc4aa770d8d1399d20bfa6e126fcd980722425d+dirty",
           "symbol": "Matter source parser",
           "type": "consumer-usage"
         }
@@ -907,15 +973,15 @@
     },
     {
       "actual": {
-        "behavior": "ViewPoint accepts HTMLElement, mutates touchAction and binds global document; Renderer creates/owns HTMLCanvasElement.",
+        "behavior": "ViewPoint now has a listener-free host mode with explicit client viewport, but default browser controls still accept/mutate HTMLElement state and Renderer.init still owns an HTMLCanvasElement/GPUCanvasContext boundary.",
         "evidence": [
           {
-            "doesNotProve": "Behavior on every browser.",
+            "doesNotProve": "A fully host-neutral Renderer/canvas boundary.",
             "path": "packages/core/src/core/view-point.ts",
-            "proves": "Browser globals and HTMLElement state are owned inside Engine.",
+            "proves": "Host controls avoid browser listeners/element mutation while the default compatibility mode retains an element-owned control path.",
             "repository": "engine",
             "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e",
-            "symbol": "ViewPoint attach/dispose",
+            "symbol": "ViewPoint controls",
             "type": "implementation"
           },
           {
@@ -2072,9 +2138,72 @@
       "blockedBy": [],
       "blocks": [],
       "conformance": "extension",
+      "consumers": [],
+      "description": "Browser composition direct world regions capability.",
+      "domain": "browser",
+      "evidence": [
+        {
+          "doesNotProve": "Unrelated direct-world picking and application-specific scene behavior.",
+          "path": "packages/browser/src/space-runtime.ts",
+          "proves": "One host attaches bounded direct Engine Spaces, maps logical/DPR viewport geometry and routes input through the shared frame lifecycle.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "addWorld",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Cross-process hosts and unrelated browser controls.",
+          "path": "packages/browser/test/space-runtime.test.ts",
+          "proves": "Exact Space attachment, framebuffer geometry, overlay/world/plane input priority, capture cleanup and presented-frame notification.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "direct-world-regions",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Every Engine scene, device, viewport size or input modality.",
+          "path": "storybook://captures/capture_JncmVXljfyjQ_ihTqhrfD47d",
+          "proves": "The exact Engine owner route presents a visible non-black bounded world through the shared Storybook canvas with zero console errors.",
+          "repository": "external",
+          "revision": "daa1cf663667710894282ce8",
+          "symbol": "@engine/core/space/coordinate-system/z-up",
+          "type": "visual-evidence"
+        }
+      ],
+      "id": "browser.features.direct-world-regions",
+      "kind": "browser-host",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "metadata": {},
+      "name": "direct world regions",
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#direct-world-regions",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
       "consumers": [
-        "demo:@zavx0z/demo:Journal plane:src/main.ts:401",
-        "metafor:@internal/visual:Cosmos display plane:cosmos/internal/visual/main/index.ts:93"
+        "demo:@zavx0z/demo:Journal plane:src/main.ts:406",
+        "metafor:@internal/visual:Cosmos display plane:cosmos/internal/visual/main/index.ts:97"
       ],
       "description": "Browser composition document plane capability.",
       "domain": "browser",
@@ -2108,9 +2237,9 @@
       "metadata": {
         "consumerDemand": [
           {
-            "behavior": "Present the transactional journal Document on a stable resizable plane with capture and diagnostics.",
+            "behavior": "Present the journal root from the shared Experience Document on a stable resizable plane with capture and diagnostics.",
             "capability": "browser.features.document-plane",
-            "line": 401,
+            "line": 406,
             "package": "@zavx0z/demo",
             "path": "src/main.ts",
             "repository": "demo",
@@ -2118,9 +2247,9 @@
             "subject": "Journal plane"
           },
           {
-            "behavior": "Attach the Cosmos document to a stable world plane with the intended stylesheet and camera gestures.",
+            "behavior": "Attach the Cosmos main root from the shared Experience Document to a stable world plane with the intended stylesheet and camera gestures.",
             "capability": "browser.features.document-plane",
-            "line": 93,
+            "line": 97,
             "package": "@internal/visual",
             "path": "cosmos/internal/visual/main/index.ts",
             "repository": "metafor",
@@ -2312,14 +2441,14 @@
       "blocks": [],
       "conformance": "extension",
       "consumers": [
-        "interpreter:@metafor/interpreter:Module displays:packages/interpreter/web/main.ts:910"
+        "interpreter:@metafor/interpreter:Module displays:packages/interpreter/web/main.ts:921"
       ],
       "description": "Browser composition multiple planes capability.",
       "domain": "browser",
       "evidence": [
         {
           "doesNotProve": "Live native browser execution.",
-          "path": "packages/browser/src/plane-runtime.ts",
+          "path": "packages/browser/src/space-runtime.ts",
           "proves": "The bounded browser composition adapter logic.",
           "repository": "renderer",
           "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
@@ -2328,7 +2457,7 @@
         },
         {
           "doesNotProve": "Live browser/native input/WebGPU pixels.",
-          "path": "packages/browser/test/plane-runtime.test.ts",
+          "path": "packages/browser/test/space-runtime.test.ts",
           "proves": "Adapter lifecycle, mapping, rollback, and identity.",
           "repository": "renderer",
           "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
@@ -2346,9 +2475,9 @@
       "metadata": {
         "consumerDemand": [
           {
-            "behavior": "Maintain one exact semantic Document per stable world plane with nearest-plane input, resize, capture and cleanup.",
+            "behavior": "Project every module root from one shared Experience Document into stable world planes with nearest-plane input, resize, capture and cleanup.",
             "capability": "browser.features.multiple-planes",
-            "line": 910,
+            "line": 921,
             "package": "@metafor/interpreter",
             "path": "packages/interpreter/web/main.ts",
             "repository": "interpreter",
@@ -2501,6 +2630,115 @@
       "blocks": [],
       "conformance": "extension",
       "consumers": [
+        "demo:@zavx0z/demo:Demo presentation host:src/main.ts:398",
+        "interpreter:@metafor/interpreter:Interpreter presentation host:packages/interpreter/web/main.ts:825",
+        "metafor:@internal/visual:Cosmos presentation host:cosmos/internal/visual/main/index.ts:82"
+      ],
+      "description": "Browser composition one experience topology capability.",
+      "domain": "browser",
+      "evidence": [
+        {
+          "doesNotProve": "Live native browser execution.",
+          "path": "packages/browser/src/space-runtime.ts",
+          "proves": "One exact semantic Document/style/font/interaction owner is shared by every projection in one Space host.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "one-experience-topology",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Direct Engine-only canvas ownership outside renderer-browser.",
+          "path": "packages/browser/src/presentation-host.ts",
+          "proves": "CanvasRuntime and SpaceRuntime share one native-Document/canvas cardinality claim with rollback and release.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "presentation-host claim",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live browser/native input/WebGPU pixels.",
+          "path": "packages/browser/test/space-runtime.test.ts",
+          "proves": "Same-Document display/HUD reparenting, foreign/detached rejection, shared state and host lifecycle.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "one-experience-topology",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Cross-process or direct Engine hosts.",
+          "path": "packages/browser/test/presentation-host.test.ts",
+          "proves": "Exact canvas/native Document cardinality and release.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "presentation-host claim",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.one-experience-topology",
+      "kind": "browser-host",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "metadata": {
+        "consumerDemand": [
+          {
+            "behavior": "Own one semantic Document, Canvas, Engine Renderer and Space for every Demo projection root.",
+            "capability": "browser.features.one-experience-topology",
+            "line": 398,
+            "package": "@zavx0z/demo",
+            "path": "src/main.ts",
+            "repository": "demo",
+            "scope": "production",
+            "subject": "Demo presentation host"
+          },
+          {
+            "behavior": "Own one semantic Document, Canvas, Engine Renderer and Space for all module display roots in the Interpreter Experience.",
+            "capability": "browser.features.one-experience-topology",
+            "line": 825,
+            "package": "@metafor/interpreter",
+            "path": "packages/interpreter/web/main.ts",
+            "repository": "interpreter",
+            "scope": "production",
+            "subject": "Interpreter presentation host"
+          },
+          {
+            "behavior": "Own one semantic Document, Canvas, Engine Renderer and Space for the Cosmos main plane and dock HUD projection.",
+            "capability": "browser.features.one-experience-topology",
+            "line": 82,
+            "package": "@internal/visual",
+            "path": "cosmos/internal/visual/main/index.ts",
+            "repository": "metafor",
+            "scope": "production",
+            "subject": "Cosmos presentation host"
+          }
+        ]
+      },
+      "name": "one experience topology",
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#one-experience-topology",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [
         "metafor:@internal/visual:Cosmos display dock:cosmos/internal/visual/main/index.ts:125",
         "metafor:@quantum/bulk:Bulk DOM overlay:quantum/bulk/dom/overlay-runtime.ts:63"
       ],
@@ -2536,7 +2774,7 @@
       "metadata": {
         "consumerDemand": [
           {
-            "behavior": "Attach the dock to a camera-locked overlay and apply the dock stylesheet to that exact runtime.",
+            "behavior": "Attach the dock sibling root from the same Experience Document to a camera-locked overlay using the host stylesheet realm.",
             "capability": "browser.features.overlays",
             "line": 125,
             "package": "@internal/visual",
@@ -261383,22 +261621,94 @@
     },
     {
       "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "description": "Engine bounded multi view frame capability.",
+      "domain": "engine",
+      "evidence": [
+        {
+          "doesNotProve": "Unrelated post-processing and multi-canvas composition.",
+          "path": "packages/core/src/renderer/index.ts",
+          "proves": "One Renderer/current texture presents a base Space, ordered bounded descendant Spaces and foreground overlays with independent ViewPoints and pass bounds.",
+          "repository": "engine",
+          "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e",
+          "symbol": "Renderer.renderComposition",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "GPU pixels on every adapter.",
+          "path": "packages/core/src/renderer/render-composition.test.ts",
+          "proves": "Root ownership, exclusion, ordering, exact physical viewport validation and legacy delegation.",
+          "repository": "engine",
+          "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e",
+          "symbol": "bounded-multi-view-frame",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Every material pipeline or physical GPU adapter.",
+          "path": "packages/core/src/renderer/render-composition.webgpu.test.ts",
+          "proves": "One initialized Renderer/current texture paints the bounded Space background inside its scissor while preserving base pixels outside.",
+          "repository": "engine",
+          "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e",
+          "symbol": "Renderer bounded composition WebGPU pass",
+          "type": "integration-test"
+        }
+      ],
+      "id": "engine.features.bounded-multi-view-frame",
+      "kind": "engine-contract",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      },
+      "limitations": [],
+      "metadata": {},
+      "name": "bounded multi view frame",
+      "owner": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#bounded-multi-view-frame",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
       "blocks": [
         "gap.engine.browser-document-ownership"
       ],
-      "conformance": "none",
+      "conformance": "extension",
       "consumers": [],
       "description": "Engine browser document boundary capability.",
       "domain": "engine",
       "evidence": [
         {
-          "doesNotProve": "Runtime implementation or observable conformance.",
-          "path": "packages/core/contract.md",
-          "proves": "The pinned project inventory contains engine.features.browser-document-boundary.",
+          "doesNotProve": "A fully host-neutral Renderer/canvas boundary.",
+          "path": "packages/core/src/core/view-point.ts",
+          "proves": "Host mode owns camera math and viewport mapping without browser listeners or element mutation.",
           "repository": "engine",
           "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e",
-          "symbol": "browser document boundary",
-          "type": "requirement"
+          "symbol": "ViewPoint host controls",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Default browser controls and Renderer canvas ownership.",
+          "path": "packages/core/src/core/view-point.test.ts",
+          "proves": "Listener-free viewport-aware controls and anchored zoom mapping.",
+          "repository": "engine",
+          "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e",
+          "symbol": "browser-document-boundary",
+          "type": "unit-test"
         }
       ],
       "id": "engine.features.browser-document-boundary",
@@ -261408,7 +261718,7 @@
         "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
       },
       "limitations": [
-        "ViewPoint binds global document and mutates HTMLElement touchAction; Renderer owns HTMLCanvasElement."
+        "Listener-free host ViewPoints are available, but default browser controls and Renderer.init still accept browser-owned HTMLElement/HTMLCanvasElement resources."
       ],
       "metadata": {},
       "name": "browser document boundary",
@@ -261428,7 +261738,7 @@
         "source": "engine-core-contract",
         "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
       },
-      "status": "unsupported"
+      "status": "partial"
     },
     {
       "blockedBy": [],
@@ -470890,9 +471200,9 @@
           "implemented": 5,
           "not-applicable": 0,
           "partial": 7,
-          "total": 100,
+          "total": 105,
           "unsupported": 0,
-          "unverified": 88
+          "unverified": 93
         },
         "package": "@engine/core",
         "sourceTarget": "src/index.ts",
@@ -474468,6 +474778,116 @@
     {
       "blockedBy": [],
       "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "description": "@engine/core public type export RenderBoundedView.",
+      "domain": "engine",
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "79",
+          "path": "packages/core/src/renderer/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "engine",
+          "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e",
+          "symbol": "RenderBoundedView",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-engine-core.export-paths.root.symbols.renderboundedview",
+      "kind": "type-export",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 79,
+        "path": "engine:packages/core/src/renderer/index.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "RenderBoundedView",
+      "owner": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/renderer/index.ts#L79",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "description": "@engine/core public type export RenderComposition.",
+      "domain": "engine",
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "79",
+          "path": "packages/core/src/renderer/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "engine",
+          "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e",
+          "symbol": "RenderComposition",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-engine-core.export-paths.root.symbols.rendercomposition",
+      "kind": "type-export",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 79,
+        "path": "engine:packages/core/src/renderer/index.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "RenderComposition",
+      "owner": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/renderer/index.ts#L79",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
       "conformance": "extension",
       "consumers": [],
       "description": "@engine/core public runtime export Renderer.",
@@ -474475,7 +474895,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "151",
+          "lines": "178",
           "path": "packages/core/src/renderer/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "engine",
@@ -474495,7 +474915,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 151,
+        "line": 178,
         "path": "engine:packages/core/src/renderer/index.ts",
         "repository": "engine",
         "typeOnly": false
@@ -474513,12 +474933,67 @@
       },
       "parent": "platform.at-engine-core.export-paths.root",
       "spec": {
-        "anchor": "engine:packages/core/src/renderer/index.ts#L151",
+        "anchor": "engine:packages/core/src/renderer/index.ts#L178",
         "profile": "project-contract",
         "source": "@engine/core-exports",
         "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
       },
       "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "description": "@engine/core public type export RendererPhysicalViewport.",
+      "domain": "engine",
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "79",
+          "path": "packages/core/src/renderer/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "engine",
+          "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e",
+          "symbol": "RendererPhysicalViewport",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-engine-core.export-paths.root.symbols.rendererphysicalviewport",
+      "kind": "type-export",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 79,
+        "path": "engine:packages/core/src/renderer/index.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "RendererPhysicalViewport",
+      "owner": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/renderer/index.ts#L79",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      },
+      "status": "unverified"
     },
     {
       "blockedBy": [],
@@ -474585,7 +475060,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "139",
+          "lines": "79",
           "path": "packages/core/src/renderer/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "engine",
@@ -474605,7 +475080,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 139,
+        "line": 79,
         "path": "engine:packages/core/src/renderer/index.ts",
         "repository": "engine",
         "typeOnly": true
@@ -474623,7 +475098,7 @@
       },
       "parent": "platform.at-engine-core.export-paths.root",
       "spec": {
-        "anchor": "engine:packages/core/src/renderer/index.ts#L139",
+        "anchor": "engine:packages/core/src/renderer/index.ts#L79",
         "profile": "project-contract",
         "source": "@engine/core-exports",
         "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
@@ -476297,7 +476772,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "91",
+          "lines": "116",
           "path": "packages/core/src/core/view-point.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "engine",
@@ -476317,7 +476792,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 91,
+        "line": 116,
         "path": "engine:packages/core/src/core/view-point.ts",
         "repository": "engine",
         "typeOnly": false
@@ -476335,12 +476810,122 @@
       },
       "parent": "platform.at-engine-core.export-paths.root",
       "spec": {
-        "anchor": "engine:packages/core/src/core/view-point.ts#L91",
+        "anchor": "engine:packages/core/src/core/view-point.ts#L116",
         "profile": "project-contract",
         "source": "@engine/core-exports",
         "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
       },
       "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "description": "@engine/core public type export ViewPointClientViewport.",
+      "domain": "engine",
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "66",
+          "path": "packages/core/src/core/view-point.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "engine",
+          "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e",
+          "symbol": "ViewPointClientViewport",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-engine-core.export-paths.root.symbols.viewpointclientviewport",
+      "kind": "type-export",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 66,
+        "path": "engine:packages/core/src/core/view-point.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "ViewPointClientViewport",
+      "owner": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/view-point.ts#L66",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "description": "@engine/core public type export ViewPointControls.",
+      "domain": "engine",
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "64",
+          "path": "packages/core/src/core/view-point.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "engine",
+          "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e",
+          "symbol": "ViewPointControls",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-engine-core.export-paths.root.symbols.viewpointcontrols",
+      "kind": "type-export",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 64,
+        "path": "engine:packages/core/src/core/view-point.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "ViewPointControls",
+      "owner": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/view-point.ts#L64",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      },
+      "status": "unverified"
     },
     {
       "blockedBy": [],
@@ -494381,9 +494966,9 @@
           "implemented": 0,
           "not-applicable": 0,
           "partial": 5,
-          "total": 26,
+          "total": 31,
           "unsupported": 0,
-          "unverified": 21
+          "unverified": 26
         },
         "package": "@zavx0z/renderer-browser",
         "sourceTarget": "src/index.ts",
@@ -494528,7 +495113,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "31",
+          "lines": "36",
           "path": "packages/browser/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -494548,7 +495133,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 31,
+        "line": 36,
         "path": "renderer:packages/browser/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -494566,7 +495151,7 @@
       },
       "parent": "platform.at-zavx0z-renderer-browser.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/browser/src/index.ts#L31",
+        "anchor": "renderer:packages/browser/src/index.ts#L36",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-browser-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -494583,7 +495168,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "32",
+          "lines": "37",
           "path": "packages/browser/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -494603,7 +495188,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 32,
+        "line": 37,
         "path": "renderer:packages/browser/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -494621,7 +495206,7 @@
       },
       "parent": "platform.at-zavx0z-renderer-browser.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/browser/src/index.ts#L32",
+        "anchor": "renderer:packages/browser/src/index.ts#L37",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-browser-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -495078,7 +495663,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "32",
+          "lines": "37",
           "path": "packages/browser/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -495098,7 +495683,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 32,
+        "line": 37,
         "path": "renderer:packages/browser/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -495116,7 +495701,7 @@
       },
       "parent": "platform.at-zavx0z-renderer-browser.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/browser/src/index.ts#L32",
+        "anchor": "renderer:packages/browser/src/index.ts#L37",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-browser-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -495133,7 +495718,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "32",
+          "lines": "37",
           "path": "packages/browser/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -495153,7 +495738,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 32,
+        "line": 37,
         "path": "renderer:packages/browser/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -495171,7 +495756,7 @@
       },
       "parent": "platform.at-zavx0z-renderer-browser.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/browser/src/index.ts#L32",
+        "anchor": "renderer:packages/browser/src/index.ts#L37",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-browser-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -495819,6 +496404,281 @@
         "typeOnly": true
       },
       "name": "DocumentSpaceViewPointSnapshot",
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "parent": "platform.at-zavx0z-renderer-browser.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/browser/src/index.ts#L20",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-browser-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "description": "@zavx0z/renderer-browser public type export DocumentSpaceWorldRegistration.",
+      "domain": "browser",
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "20",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DocumentSpaceWorldRegistration",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceworldregistration",
+      "kind": "type-export",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 20,
+        "path": "renderer:packages/browser/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DocumentSpaceWorldRegistration",
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "parent": "platform.at-zavx0z-renderer-browser.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/browser/src/index.ts#L20",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-browser-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "description": "@zavx0z/renderer-browser public type export DocumentSpaceWorldResize.",
+      "domain": "browser",
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "20",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DocumentSpaceWorldResize",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceworldresize",
+      "kind": "type-export",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 20,
+        "path": "renderer:packages/browser/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DocumentSpaceWorldResize",
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "parent": "platform.at-zavx0z-renderer-browser.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/browser/src/index.ts#L20",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-browser-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "description": "@zavx0z/renderer-browser public type export DocumentSpaceWorldRuntime.",
+      "domain": "browser",
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "20",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DocumentSpaceWorldRuntime",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceworldruntime",
+      "kind": "type-export",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 20,
+        "path": "renderer:packages/browser/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DocumentSpaceWorldRuntime",
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "parent": "platform.at-zavx0z-renderer-browser.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/browser/src/index.ts#L20",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-browser-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "description": "@zavx0z/renderer-browser public type export DocumentSpaceWorldUpdate.",
+      "domain": "browser",
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "20",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DocumentSpaceWorldUpdate",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceworldupdate",
+      "kind": "type-export",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 20,
+        "path": "renderer:packages/browser/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DocumentSpaceWorldUpdate",
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "parent": "platform.at-zavx0z-renderer-browser.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/browser/src/index.ts#L20",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-browser-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "description": "@zavx0z/renderer-browser public type export DocumentSpaceWorldViewport.",
+      "domain": "browser",
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "20",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DocumentSpaceWorldViewport",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceworldviewport",
+      "kind": "type-export",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 20,
+        "path": "renderer:packages/browser/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DocumentSpaceWorldViewport",
       "owner": {
         "package": "@zavx0z/renderer-browser",
         "repository": "renderer",
@@ -510602,7 +511462,7 @@
       "blocks": [],
       "conformance": "none",
       "consumers": [
-        "demo:@zavx0z/demo:Journal diagnostics:src/main.ts:417"
+        "demo:@zavx0z/demo:Journal diagnostics:src/main.ts:419"
       ],
       "description": "CPU Renderer backend neutral diagnostics capability.",
       "domain": "renderer",
@@ -510631,7 +511491,7 @@
           {
             "behavior": "Observe neutral plane/frame diagnostics without reaching into retained Engine/WebGPU owner objects.",
             "capability": "renderer.features.backend-neutral-diagnostics",
-            "line": 417,
+            "line": 419,
             "package": "@zavx0z/demo",
             "path": "src/main.ts",
             "repository": "demo",
@@ -511387,7 +512247,7 @@
       "blocks": [],
       "conformance": "adapted",
       "consumers": [
-        "demo:@zavx0z/demo:Journal document:src/dom/journalDocument.ts:162"
+        "demo:@zavx0z/demo:Journal document:src/dom/journalDocument.ts:161"
       ],
       "description": "CPU Renderer images capability.",
       "domain": "renderer",
@@ -511425,7 +512285,7 @@
           {
             "behavior": "Render journal images with object-fit, explicit dimensions, retained texture readiness and cleanup.",
             "capability": "renderer.features.images",
-            "line": 162,
+            "line": 161,
             "package": "@zavx0z/demo",
             "path": "src/dom/journalDocument.ts",
             "repository": "demo",
@@ -512122,6 +512982,60 @@
         "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
       },
       "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "description": "CPU Renderer projection root inheritance capability.",
+      "domain": "renderer",
+      "evidence": [
+        {
+          "doesNotProve": "Complete CSS inheritance and every property grammar.",
+          "path": "packages/core/src/renderer.ts",
+          "proves": "A projection root computes inherited values through its real semantic ancestor chain and observes ancestor mutations/reparenting.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "projectionRootInheritedStyle",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Full CSS inheritance and cross-browser conformance.",
+          "path": "packages/core/test/renderer.test.ts",
+          "proves": "Ancestor-derived color/font values and reparent invalidation on an exact projection root.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "projection-root-inheritance",
+          "type": "unit-test"
+        }
+      ],
+      "id": "renderer.features.projection-root-inheritance",
+      "kind": "renderer-stage",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "metadata": {},
+      "name": "projection root inheritance",
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#projection-root-inheritance",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "status": "implemented"
     },
     {
       "blockedBy": [],
@@ -513317,7 +514231,7 @@
       "blocks": [],
       "conformance": "extension",
       "consumers": [
-        "demo:@zavx0z/demo:Compiled UI migration:src/dom/journalDocument.ts:162",
+        "demo:@zavx0z/demo:Compiled UI migration:src/dom/journalDocument.ts:161",
         "interpreter:@metafor/interpreter:Compiled web UI migration:packages/interpreter/web/dom/source-editor.ts:170",
         "metafor:@internal/visual:Compiled dock migration:cosmos/internal/visual/main/index.ts:125"
       ],
@@ -513355,7 +514269,7 @@
           {
             "behavior": "Compile linked .tsx component exports through the Template JSX profile instead of importing removed imperative controllers.",
             "capability": "tsx.compiler.browser-target-build",
-            "line": 162,
+            "line": 161,
             "package": "@zavx0z/demo",
             "path": "src/dom/journalDocument.ts",
             "repository": "demo",
@@ -519148,7 +520062,7 @@
       "branch": "main",
       "dirty": true,
       "id": "engine",
-      "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      "revision": "bd54c046d22cea8ea09002bed42d7cc405206c75"
     },
     {
       "branch": "main",
@@ -519160,31 +520074,31 @@
       "branch": "main",
       "dirty": true,
       "id": "metafor",
-      "revision": "603d5604ac550b044ad809d5be27190cba9118aa"
+      "revision": "fbc4aa770d8d1399d20bfa6e126fcd980722425d"
     },
     {
       "branch": "main",
-      "dirty": true,
+      "dirty": false,
       "id": "node",
-      "revision": "9f390945f51f88c6374d5fb8f3215cf5d776e571"
+      "revision": "66b616a912950a023a2ddff5d62702e4074b0011"
     },
     {
       "branch": "main",
       "dirty": true,
       "id": "renderer",
-      "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      "revision": "f043ec96f1656318deffc2a9813635b8d18bd7df"
     },
     {
       "branch": "main",
-      "dirty": true,
+      "dirty": false,
       "id": "template",
-      "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      "revision": "d04acced6c6a40d9270afd9d0ffb875d9d6a9b3b"
     },
     {
       "branch": "main",
       "dirty": true,
       "id": "ui",
-      "revision": "2148fa46d41efdc6ece993a6298b4adb2ade0b19"
+      "revision": "5ed63adbc1d53c018bd7c5526df4d9ef175ffeef"
     }
   ],
   "schemaVersion": 1,
@@ -519195,14 +520109,14 @@
   },
   "statistics": {
     "browser": {
-      "implemented": 10,
-      "mappedEntries": 56,
+      "implemented": 12,
+      "mappedEntries": 63,
       "missing": 0,
       "not-applicable": 0,
       "partial": 20,
-      "specEntries": 56,
+      "specEntries": 63,
       "unsupported": 4,
-      "unverified": 22
+      "unverified": 27
     },
     "css": {
       "implemented": 0,
@@ -519235,14 +520149,14 @@
       "unverified": 172
     },
     "engine": {
-      "implemented": 12,
-      "mappedEntries": 145,
+      "implemented": 13,
+      "mappedEntries": 151,
       "missing": 0,
       "not-applicable": 0,
-      "partial": 33,
-      "specEntries": 145,
-      "unsupported": 6,
-      "unverified": 94
+      "partial": 34,
+      "specEntries": 151,
+      "unsupported": 5,
+      "unverified": 99
     },
     "html": {
       "implemented": 0,
@@ -519265,12 +520179,12 @@
       "unverified": 34
     },
     "renderer": {
-      "implemented": 2,
-      "mappedEntries": 92,
+      "implemented": 3,
+      "mappedEntries": 93,
       "missing": 0,
       "not-applicable": 0,
       "partial": 41,
-      "specEntries": 92,
+      "specEntries": 93,
       "unsupported": 4,
       "unverified": 45
     },
@@ -519301,12 +520215,12 @@
     "duplicateCapabilityIds": 0,
     "generatorVersion": "1.0.0",
     "inventoryFiles": 214,
-    "mappedEntries": 8687,
+    "mappedEntries": 8701,
     "missing": 0,
     "schemaErrors": 0,
     "schemaVersion": 1,
     "sourceArtifacts": 75,
-    "specEntries": 8687,
+    "specEntries": 8701,
     "unknownSupportIds": 0
   }
 }

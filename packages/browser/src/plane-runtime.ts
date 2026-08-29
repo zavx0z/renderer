@@ -37,6 +37,7 @@ export type CreateDocumentPlaneRuntimeOptions = Readonly<{
   invalidateGeometry(geometry: BufferGeometry): void
   requestFrame(): void
   requestPresentation(): void
+  interactionState?: DocumentInteractionState
   tooltipDelayMs?: number
 }>
 
@@ -50,6 +51,7 @@ export type DocumentPlaneRuntime = Readonly<{
   font: TrueTypeFont
   renderer: DocumentRenderer
   interaction: DocumentInteractionController
+  interactionState: DocumentInteractionState
   backend: RendererWebGpuBackend
   plane: RendererWebGpuDocumentPlane
   frame: RenderFrame
@@ -110,7 +112,11 @@ export function createDocumentPlaneRuntimeWithSeams(
   validateSeams(seams)
   const styleSheets = Object.freeze([...options.styleSheets])
   const tooltipDelayMs = finiteNonNegative(options.tooltipDelayMs ?? 500, "tooltipDelayMs")
-  const interactionState = createDocumentInteractionState(options.document)
+  if (
+    options.interactionState !== undefined &&
+    options.interactionState.document !== options.document
+  ) throw new TypeError("interactionState belongs to another Document")
+  const interactionState = options.interactionState ?? createDocumentInteractionState(options.document)
   let requestBackendPresentation = (): void => {}
   let backend: RendererWebGpuBackend | null = null
   let plane: RendererWebGpuDocumentPlane | null = null
@@ -248,6 +254,7 @@ export function createDocumentPlaneRuntimeWithSeams(
     font: options.font,
     get renderer() { return requiredRenderer },
     interaction: requiredInteraction,
+    interactionState,
     backend: requiredBackend,
     plane: requiredPlane,
     get frame() {

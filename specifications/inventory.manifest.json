@@ -946,13 +946,13 @@
       "path": "html/interfaces/html.json"
     },
     {
-      "digest": "43348d0d2564080720ce65b84909c2f5bc3d29d97c691545b88a0801e3c3d3a2",
-      "entries": 27,
+      "digest": "22f43af8007aae2b322f31313fb7e3b5389dbc21b47da91e5879a481ceede54a",
+      "entries": 32,
       "path": "platform/browser-exports.json"
     },
     {
-      "digest": "0bd3dd5a0e5301cd2f20dd2f911980906f5e91b66d662e09db2439d9091164a8",
-      "entries": 29,
+      "digest": "e747fe5c1352927089fe282f88f908be181c4d585c208d2c77de4676f825b0ed",
+      "entries": 31,
       "path": "platform/browser-features.json"
     },
     {
@@ -971,13 +971,13 @@
       "path": "platform/dom-exports.json"
     },
     {
-      "digest": "7e8a55b332794a87edf6a348015a279d4774850744006b842dbb9434b33f73dc",
-      "entries": 108,
+      "digest": "d8362ae00e98fa0a2e6b8c1ef2412840d83c95f6662242ff59bb9882b7947186",
+      "entries": 113,
       "path": "platform/engine-exports.json"
     },
     {
-      "digest": "d0549fda222ac330e534ec083a43ca4c8ebf0b82ee5e8b5de18858f5b593379d",
-      "entries": 37,
+      "digest": "093046ac89478c70c159f904a42d91597a42bde39734af241f0e2c1f2c5be98f",
+      "entries": 38,
       "path": "platform/engine-features.json"
     },
     {
@@ -991,8 +991,8 @@
       "path": "platform/renderer-exports.json"
     },
     {
-      "digest": "79b5bac9192d545282d2fdce7e0b2e0133320fcdd979b274d32a0b37aae19ace",
-      "entries": 43,
+      "digest": "d403d56a79751073a692724968f81d6520a801ef1c6e16ec9e8beed7c870d981",
+      "entries": 44,
       "path": "platform/renderer-features.json"
     },
     {
@@ -1073,5 +1073,5 @@
   ],
   "generatorVersion": "1.0.0",
   "schemaVersion": 1,
-  "totalEntries": 8687
+  "totalEntries": 8701
 }

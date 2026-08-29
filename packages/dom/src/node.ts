@@ -168,7 +168,8 @@ export abstract class Node extends EventTarget {
       }
 
       child.detach(true)
-      for (const candidate of inserted) candidate.detach(true)
+      const stateDocument = connectedMutationDocument(this)
+      for (const candidate of inserted) candidate.detach(true, stateDocument)
       const remaining = [...this.childNodes]
       const reference = remaining[insertionIndex] ?? null
       this.insertNodes(inserted, reference)
@@ -192,8 +193,12 @@ export abstract class Node extends EventTarget {
       const inserted = node.nodeType === Node.DOCUMENT_FRAGMENT_NODE ? [...node.childNodes] : [node]
       this.validateInsertion(inserted, this.childNodes)
       const removed = [...this.childNodes]
-      for (const child of removed) child.detach(false)
-      for (const child of inserted) child.detach(true)
+      const insertedSet = new Set(inserted)
+      const document = connectedMutationDocument(this)
+      for (const child of removed) {
+        child.detach(false, insertedSet.has(child) ? document : null)
+      }
+      for (const child of inserted) child.detach(true, document)
       for (const child of inserted) {
         this.adopt(child)
         this.linkBefore(child, null)
@@ -330,7 +335,8 @@ export abstract class Node extends EventTarget {
 
   private insertNodes(nodes: readonly Node[], reference: Node | null): void {
     if (nodes.length === 0) return
-    for (const node of nodes) node.detach(true)
+    const document = connectedMutationDocument(this)
+    for (const node of nodes) node.detach(true, document)
     const previousSibling = reference ? reference.previous : this.last
     for (const node of nodes) {
       this.adopt(node)
@@ -360,12 +366,15 @@ export abstract class Node extends EventTarget {
     else this.last = node
   }
 
-  private detach(record: boolean): void {
+  private detach(record: boolean, destinationDocument: Document | null = null): void {
     const parent = this.parent
     if (!parent) return
     const document = mutationDocument(this)
-    document?.[clearFocusInSubtree](this)
-    closePopoversInSubtree(this)
+    const preservesDocumentState = document !== null && document === destinationDocument
+    if (!preservesDocumentState) {
+      document?.[clearFocusInSubtree](this)
+      closePopoversInSubtree(this)
+    }
     const previous = this.previous
     const next = this.next
     if (previous) previous.next = next
@@ -396,4 +405,10 @@ export abstract class Node extends EventTarget {
     })
     document.recordMutation(mutation)
   }
+}
+
+function connectedMutationDocument(node: Node): Document | null {
+  const document = mutationDocument(node)
+  if (document === null) return null
+  return node === document || node.getRootNode() === document ? document : null
 }

@@ -82,7 +82,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 31,
+        "line": 36,
         "path": "renderer:packages/browser/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -95,7 +95,7 @@
       },
       "parent": "platform.at-zavx0z-renderer-browser.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/browser/src/index.ts#L31",
+        "anchor": "renderer:packages/browser/src/index.ts#L36",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-browser-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -108,7 +108,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 32,
+        "line": 37,
         "path": "renderer:packages/browser/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -121,7 +121,7 @@
       },
       "parent": "platform.at-zavx0z-renderer-browser.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/browser/src/index.ts#L32",
+        "anchor": "renderer:packages/browser/src/index.ts#L37",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-browser-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -342,7 +342,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 32,
+        "line": 37,
         "path": "renderer:packages/browser/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -355,7 +355,7 @@
       },
       "parent": "platform.at-zavx0z-renderer-browser.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/browser/src/index.ts#L32",
+        "anchor": "renderer:packages/browser/src/index.ts#L37",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-browser-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -368,7 +368,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 32,
+        "line": 37,
         "path": "renderer:packages/browser/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -381,7 +381,7 @@
       },
       "parent": "platform.at-zavx0z-renderer-browser.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/browser/src/index.ts#L32",
+        "anchor": "renderer:packages/browser/src/index.ts#L37",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-browser-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -686,6 +686,136 @@
         "typeOnly": true
       },
       "name": "DocumentSpaceViewPointSnapshot",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "parent": "platform.at-zavx0z-renderer-browser.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/browser/src/index.ts#L20",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-browser-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer-browser public type export DocumentSpaceWorldRegistration.",
+      "domain": "browser",
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceworldregistration",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 20,
+        "path": "renderer:packages/browser/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DocumentSpaceWorldRegistration",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "parent": "platform.at-zavx0z-renderer-browser.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/browser/src/index.ts#L20",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-browser-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer-browser public type export DocumentSpaceWorldResize.",
+      "domain": "browser",
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceworldresize",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 20,
+        "path": "renderer:packages/browser/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DocumentSpaceWorldResize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "parent": "platform.at-zavx0z-renderer-browser.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/browser/src/index.ts#L20",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-browser-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer-browser public type export DocumentSpaceWorldRuntime.",
+      "domain": "browser",
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceworldruntime",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 20,
+        "path": "renderer:packages/browser/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DocumentSpaceWorldRuntime",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "parent": "platform.at-zavx0z-renderer-browser.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/browser/src/index.ts#L20",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-browser-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer-browser public type export DocumentSpaceWorldUpdate.",
+      "domain": "browser",
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceworldupdate",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 20,
+        "path": "renderer:packages/browser/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DocumentSpaceWorldUpdate",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "parent": "platform.at-zavx0z-renderer-browser.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/browser/src/index.ts#L20",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-browser-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer-browser public type export DocumentSpaceWorldViewport.",
+      "domain": "browser",
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceworldviewport",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 20,
+        "path": "renderer:packages/browser/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DocumentSpaceWorldViewport",
       "ownerHint": {
         "package": "@zavx0z/renderer-browser",
         "repository": "renderer",

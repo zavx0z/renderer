@@ -406,6 +406,7 @@ const rendererFeatures: ManualDefinition[] = [
     "textarea-select-range", "z-index", "transforms", "shadows", "display-list", "hit-metadata", "invalidation",
     "incremental-patches", "tooltip-title", "pointer", "wheel", "default-activation", "popover-projection",
     "immutable-frame", "clean-frame-fast-path", "text-leaf-fast-path", "transform-subtree-fast-path", "performance-paths",
+    "projection-root-inheritance",
     "caret-selection-paint", "vector-path-display-item", "geometry-readback", "backend-neutral-diagnostics",
   ].map((id) => ({ id, kind: "renderer-stage", description: `CPU Renderer ${id.replaceAll("-", " ")} capability.` })),
 ]
@@ -417,6 +418,7 @@ const browserFeatures: ManualDefinition[] = [
     "selection-synchronization", "cancellation-rollback", "capture", "document-plane", "multiple-planes", "overlays",
     "camera-gestures", "cleanup", "error-boundaries", "lifecycle-boundaries", "animation-frame-coalescing",
     "native-browser-evidence", "same-document-input-identity", "number-input-proxy", "select-picker", "clipboard-proxy",
+    "one-experience-topology", "direct-world-regions",
   ].map((id) => ({ id, kind: "browser-host", description: `Browser composition ${id.replaceAll("-", " ")} capability.` })),
 ]
 
@@ -446,5 +448,6 @@ const engineFeatures: ManualDefinition[] = [
     "view-point", "space", "webgpu-pipelines", "resource-lifetime", "renderer-disposal", "capture-readback", "loaders",
     "gltf", "animation", "public-math", "index-buffer-format", "material-groups", "device-loss", "gpu-device-evidence",
     "dom-css-ownership-boundary", "browser-document-boundary", "legacy-ui-display-flag", "clip-surface-unification",
+    "bounded-multi-view-frame",
   ].map((id) => ({ id, kind: "engine-contract", description: `Engine ${id.replaceAll("-", " ")} capability.` })),
 ]

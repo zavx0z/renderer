@@ -38,6 +38,7 @@ export type CreateDocumentOverlayRuntimeOptions = Readonly<{
   invalidateGeometry(geometry: BufferGeometry): void
   requestFrame(): void
   requestPresentation(): void
+  interactionState?: DocumentInteractionState
   tooltipDelayMs?: number
 }>
 
@@ -51,6 +52,7 @@ export type DocumentOverlayRuntime = Readonly<{
   font: TrueTypeFont
   renderer: DocumentRenderer
   interaction: DocumentInteractionController
+  interactionState: DocumentInteractionState
   backend: RendererWebGpuBackend
   overlay: RendererWebGpuScreenOverlay
   frame: RenderFrame
@@ -105,7 +107,11 @@ export function createDocumentOverlayRuntimeWithSeams(
   validateSeams(seams)
   const styleSheets = Object.freeze([...options.styleSheets])
   const tooltipDelayMs = finiteNonNegative(options.tooltipDelayMs ?? 500, "tooltipDelayMs")
-  const interactionState = createDocumentInteractionState(options.document)
+  if (
+    options.interactionState !== undefined &&
+    options.interactionState.document !== options.document
+  ) throw new TypeError("interactionState belongs to another Document")
+  const interactionState = options.interactionState ?? createDocumentInteractionState(options.document)
   let requestBackendPresentation = (): void => {}
   let backend: RendererWebGpuBackend | null = null
   let overlay: RendererWebGpuScreenOverlay | null = null
@@ -234,6 +240,7 @@ export function createDocumentOverlayRuntimeWithSeams(
     font: options.font,
     get renderer() { return requiredRenderer },
     interaction: requiredInteraction,
+    interactionState,
     backend: requiredBackend,
     overlay: requiredOverlay,
     get frame() {

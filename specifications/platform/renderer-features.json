@@ -487,6 +487,24 @@
       }
     },
     {
+      "description": "CPU Renderer projection root inheritance capability.",
+      "domain": "renderer",
+      "id": "renderer.features.projection-root-inheritance",
+      "kind": "renderer-stage",
+      "name": "projection root inheritance",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#projection-root-inheritance",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
       "description": "CPU Renderer scroll metrics capability.",
       "domain": "renderer",
       "id": "renderer.features.scroll-metrics",

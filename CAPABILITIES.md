@@ -11,13 +11,13 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | Repository | Branch | Revision | Dirty at generation |
 |---|---|---|---:|
 | demo | main | `7a88ae3d6fa82b53d03f08e0cc9f86b1c41f0325` | yes |
-| engine | main | `18c55d6c3dc68d1f2ab257378a505e5bac2eea3e` | yes |
+| engine | main | `bd54c046d22cea8ea09002bed42d7cc405206c75` | yes |
 | interpreter | main | `879b4e01a4abd12756f86228784421e26270f485` | yes |
-| metafor | main | `603d5604ac550b044ad809d5be27190cba9118aa` | yes |
-| node | main | `9f390945f51f88c6374d5fb8f3215cf5d776e571` | yes |
-| renderer | main | `3c91038c3f14ccc44616209fd82b1e59b7369408` | yes |
-| template | main | `87d0ec3d2a9f19c3750d567ee20dc4bace995e90` | yes |
-| ui | main | `2148fa46d41efdc6ece993a6298b4adb2ade0b19` | yes |
+| metafor | main | `fbc4aa770d8d1399d20bfa6e126fcd980722425d` | yes |
+| node | main | `66b616a912950a023a2ddff5d62702e4074b0011` | no |
+| renderer | main | `f043ec96f1656318deffc2a9813635b8d18bd7df` | yes |
+| template | main | `d04acced6c6a40d9270afd9d0ffb875d9d6a9b3b` | no |
+| ui | main | `5ed63adbc1d53c018bd7c5526df4d9ef175ffeef` | yes |
 
 ## Pinned external sources
 
@@ -52,14 +52,14 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 
 | Domain | Spec entries | Mapped | Implemented | Partial | Unsupported | Not applicable | Unverified | Missing |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| browser | 56 | 56 | 10 | 20 | 4 | 0 | 22 | 0 |
+| browser | 63 | 63 | 12 | 20 | 4 | 0 | 27 | 0 |
 | css | 3032 | 3032 | 0 | 171 | 2861 | 0 | 0 | 0 |
 | devtools | 31 | 31 | 13 | 0 | 5 | 0 | 13 | 0 |
 | dom | 1196 | 1196 | 69 | 242 | 713 | 0 | 172 | 0 |
-| engine | 145 | 145 | 12 | 33 | 6 | 0 | 94 | 0 |
+| engine | 151 | 151 | 13 | 34 | 5 | 0 | 99 | 0 |
 | html | 3729 | 3729 | 0 | 995 | 1947 | 787 | 0 | 0 |
 | react | 217 | 217 | 28 | 50 | 70 | 35 | 34 | 0 |
-| renderer | 92 | 92 | 2 | 41 | 4 | 0 | 45 | 0 |
+| renderer | 93 | 93 | 3 | 41 | 4 | 0 | 45 | 0 |
 | tsx | 152 | 152 | 66 | 22 | 28 | 0 | 36 | 0 |
 | webgpu | 37 | 37 | 18 | 11 | 1 | 0 | 7 | 0 |
 
@@ -67,12 +67,12 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 
 | Package | Repository | Revision | Records |
 |---|---|---|---:|
-| @engine/core | engine | `18c55d6c3dc68d1f2ab257378a505e5bac2eea3e` | 145 |
+| @engine/core | engine | `18c55d6c3dc68d1f2ab257378a505e5bac2eea3e` | 151 |
 | @zavx0z/dom | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 4925 |
 | @zavx0z/dom-devtools | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 31 |
 | @zavx0z/react | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 217 |
-| @zavx0z/renderer | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 3124 |
-| @zavx0z/renderer-browser | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 56 |
+| @zavx0z/renderer | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 3125 |
+| @zavx0z/renderer-browser | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 63 |
 | @zavx0z/renderer-webgpu | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 37 |
 | @zavx0z/template | template | `87d0ec3d2a9f19c3750d567ee20dc4bace995e90` | 152 |
 
@@ -92,6 +92,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `browser.features.clipboard-proxy` | browser-host | unsupported | none | @zavx0z/renderer-browser/browser-host | The native host intentionally exposes only the current text input/textarea proxy subset; this control/browser integration is absent. | 1 | 0 |
 | `browser.features.composition-ime` | browser-host | partial | adapted | @zavx0z/renderer-browser/browser-host | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. | 2 | 0 |
 | `browser.features.device-pixel-ratio` | browser-host | partial | adapted | @zavx0z/renderer-browser/browser-host | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. | 2 | 0 |
+| `browser.features.direct-world-regions` | browser-host | implemented | extension | @zavx0z/renderer-browser/browser-host | — | 3 | 0 |
 | `browser.features.document-plane` | browser-host | implemented | extension | @zavx0z/renderer-browser/browser-host | — | 2 | 2 |
 | `browser.features.error-boundaries` | browser-host | unsupported | none | @zavx0z/renderer-browser/browser-host | The browser composition owner has lifecycle validation but no general application error-boundary contract. | 1 | 0 |
 | `browser.features.keyboard` | browser-host | partial | adapted | @zavx0z/renderer-browser/browser-host | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. | 2 | 0 |
@@ -99,6 +100,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `browser.features.multiple-planes` | browser-host | implemented | extension | @zavx0z/renderer-browser/browser-host | — | 2 | 1 |
 | `browser.features.native-browser-evidence` | browser-host | unverified | unknown | @zavx0z/renderer-browser/browser-host | All current Browser tests use Bun seams/fakes; no live browser console, pixels, native IME, or real ResizeObserver/rAF evidence was reproduced. | 1 | 0 |
 | `browser.features.number-input-proxy` | browser-host | unsupported | none | @zavx0z/renderer-browser/browser-host | The native host intentionally exposes only the current text input/textarea proxy subset; this control/browser integration is absent. | 1 | 2 |
+| `browser.features.one-experience-topology` | browser-host | implemented | extension | @zavx0z/renderer-browser/browser-host | — | 4 | 3 |
 | `browser.features.overlays` | browser-host | implemented | extension | @zavx0z/renderer-browser/browser-host | — | 2 | 2 |
 | `browser.features.pointer-capture` | browser-host | partial | adapted | @zavx0z/renderer-browser/browser-host | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. | 2 | 0 |
 | `browser.features.pointer-mapping` | browser-host | implemented | extension | @zavx0z/renderer-browser/browser-host | — | 2 | 0 |
@@ -138,6 +140,11 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceruntime` | type-export | unverified | unknown | @zavx0z/renderer-browser/browser-host | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspacevector3` | type-export | unverified | unknown | @zavx0z/renderer-browser/browser-host | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceviewpointsnapshot` | type-export | unverified | unknown | @zavx0z/renderer-browser/browser-host | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceworldregistration` | type-export | unverified | unknown | @zavx0z/renderer-browser/browser-host | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceworldresize` | type-export | unverified | unknown | @zavx0z/renderer-browser/browser-host | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceworldruntime` | type-export | unverified | unknown | @zavx0z/renderer-browser/browser-host | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceworldupdate` | type-export | unverified | unknown | @zavx0z/renderer-browser/browser-host | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceworldviewport` | type-export | unverified | unknown | @zavx0z/renderer-browser/browser-host | Export/type presence is not behavioral evidence. | 1 | 0 |
 
 ### css
 
@@ -4419,7 +4426,8 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 |---|---|---|---|---|---|---|---:|---:|
 | `engine.features.analytical-ui-materials` | engine-contract | partial | extension | @engine/core/gpu-scene-resource | Implementation exists, but the public lifecycle/value space or focused behavioral evidence is incomplete. | 2 | 0 |
 | `engine.features.animation` | engine-contract | partial | extension | @engine/core/gpu-scene-resource | A bounded implementation exists without focused behavioral tests for many admitted branches. | 2 | 0 |
-| `engine.features.browser-document-boundary` | engine-contract | unsupported | none | @engine/core/gpu-scene-resource | ViewPoint binds global document and mutates HTMLElement touchAction; Renderer owns HTMLCanvasElement. | 1 | 0 |
+| `engine.features.bounded-multi-view-frame` | engine-contract | implemented | extension | @engine/core/gpu-scene-resource | — | 3 | 0 |
+| `engine.features.browser-document-boundary` | engine-contract | partial | extension | @engine/core/gpu-scene-resource | Listener-free host ViewPoints are available, but default browser controls and Renderer.init still accept browser-owned HTMLElement/HTMLCanvasElement resources. | 2 | 0 |
 | `engine.features.buffer-attributes` | engine-contract | implemented | extension | @engine/core/gpu-scene-resource | — | 2 | 0 |
 | `engine.features.capture-readback` | engine-contract | partial | extension | @engine/core/gpu-scene-resource | Implementation exists, but the public lifecycle/value space or focused behavioral evidence is incomplete. | 2 | 0 |
 | `engine.features.clip-surface-unification` | engine-contract | partial | extension | @engine/core/gpu-scene-resource | Implementation exists, but the public lifecycle/value space or focused behavioral evidence is incomplete. | 2 | 0 |
@@ -4526,7 +4534,10 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `platform.at-engine-core.export-paths.root.symbols.radialbackdropmaterialparameters` | type-export | unverified | unknown | @engine/core/gpu-scene-resource | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-engine-core.export-paths.root.symbols.ray` | runtime-export | unverified | unknown | @engine/core/gpu-scene-resource | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-engine-core.export-paths.root.symbols.raycaster` | runtime-export | partial | extension | @engine/core/gpu-scene-resource | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
+| `platform.at-engine-core.export-paths.root.symbols.renderboundedview` | type-export | unverified | unknown | @engine/core/gpu-scene-resource | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-engine-core.export-paths.root.symbols.rendercomposition` | type-export | unverified | unknown | @engine/core/gpu-scene-resource | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-engine-core.export-paths.root.symbols.renderer` | runtime-export | partial | extension | @engine/core/gpu-scene-resource | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
+| `platform.at-engine-core.export-paths.root.symbols.rendererphysicalviewport` | type-export | unverified | unknown | @engine/core/gpu-scene-resource | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-engine-core.export-paths.root.symbols.renderlayer` | type-export | unverified | unknown | @engine/core/gpu-scene-resource | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-engine-core.export-paths.root.symbols.renderoverlay` | type-export | unverified | unknown | @engine/core/gpu-scene-resource | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-engine-core.export-paths.root.symbols.replaceexternalsourceoptions` | type-export | unverified | unknown | @engine/core/gpu-scene-resource | Export/type presence is not behavioral evidence. | 1 | 0 |
@@ -4560,6 +4571,8 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `platform.at-engine-core.export-paths.root.symbols.typedarray` | type-export | unverified | unknown | @engine/core/gpu-scene-resource | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-engine-core.export-paths.root.symbols.vector3` | runtime-export | unverified | unknown | @engine/core/gpu-scene-resource | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-engine-core.export-paths.root.symbols.viewpoint` | runtime-export | partial | extension | @engine/core/gpu-scene-resource | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
+| `platform.at-engine-core.export-paths.root.symbols.viewpointclientviewport` | type-export | unverified | unknown | @engine/core/gpu-scene-resource | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-engine-core.export-paths.root.symbols.viewpointcontrols` | type-export | unverified | unknown | @engine/core/gpu-scene-resource | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-engine-core.export-paths.root.symbols.viewpointparameters` | type-export | unverified | unknown | @engine/core/gpu-scene-resource | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-engine-core.export-paths.root.symbols.wireframeinstancedmesh` | runtime-export | unverified | unknown | @engine/core/gpu-scene-resource | Export/type presence is not behavioral evidence. | 1 | 0 |
 
@@ -8599,6 +8612,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `renderer.features.popover-projection` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.positioning` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.progress-meter` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
+| `renderer.features.projection-root-inheritance` | renderer-stage | implemented | extension | @zavx0z/renderer/cpu | — | 2 | 0 |
 | `renderer.features.scroll-metrics` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.scrollbar-paint` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.selector-matching` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |

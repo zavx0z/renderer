@@ -596,6 +596,34 @@ describe("document canvas browser runtime", () => {
     )).rejects.toThrow("font is required")
     expect(harness.calls.initialize).toBe(0)
   })
+
+  test("claims one isolated Experience host and rolls the claim back on failure", async () => {
+    const document = createDocument()
+    const root = document.createElement("div")
+    document.appendChild(root)
+    const harness = createHarness({left: 0, top: 0, width: 10, height: 10})
+    const options = {
+      canvas: harness.canvas.element,
+      document,
+      root,
+      styleSheets: [],
+      font: fakeFont(),
+    }
+    await expect(createDocumentCanvasRuntimeWithSeams(options, Object.freeze({
+      ...harness.seams,
+      async initializeEngineRenderer() { throw new Error("init failed") },
+    }))).rejects.toThrow("init failed")
+
+    const runtime = await createDocumentCanvasRuntimeWithSeams(options, harness.seams)
+    const initialized = harness.calls.initialize
+    await expect(createDocumentCanvasRuntimeWithSeams(options, harness.seams))
+      .rejects.toThrow("canvas already owns")
+    expect(harness.calls.initialize).toBe(initialized)
+
+    runtime.dispose()
+    const replacement = await createDocumentCanvasRuntimeWithSeams(options, harness.seams)
+    replacement.dispose()
+  })
 })
 
 type Rect = {left: number; top: number; width: number; height: number}

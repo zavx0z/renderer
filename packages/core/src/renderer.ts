@@ -258,6 +258,10 @@ export const createDocumentRenderer = (
         affected = true
         dirty.invalidate(element)
         subtreeDirty.add(element)
+      } else if (element.contains(options.root)) {
+        affected = true
+        dirty.invalidate(options.root)
+        subtreeDirty.add(options.root)
       }
     }
     if (affected) blockFastPath()
@@ -304,6 +308,7 @@ export const createDocumentRenderer = (
         layoutCache,
         rules,
         options.interactionState,
+        projectionRootInheritedStyle(options.root, rules, options.interactionState),
         revision + 1,
       )
       if (incremental !== null) {
@@ -388,6 +393,10 @@ export const createDocumentRenderer = (
           subtreeDirty.add(record.target)
           blockFastPath()
         }
+      } else if (mutationAffectsProjectionAncestry(record, options.root)) {
+        dirty.invalidate(options.root)
+        subtreeDirty.add(options.root)
+        blockFastPath()
       }
     }
   }
@@ -401,6 +410,10 @@ export const createDocumentRenderer = (
       ) {
         dirty.invalidate(record.target)
         subtreeDirty.add(record.target)
+        blockFastPath()
+      } else if (record.target.contains(options.root)) {
+        dirty.invalidate(options.root)
+        subtreeDirty.add(options.root)
         blockFastPath()
       }
     }
@@ -513,6 +526,7 @@ const tryBuildTransformFrame = (
   layoutCache: WeakMap<Node, LayoutNode>,
   rules: StyleRuleIndex,
   interactionState: CreateDocumentRendererOptions["interactionState"],
+  projectionInheritedStyle: ComputedStyle,
   revision: number,
 ): RenderFrame | null => {
   if (previous.scrolls.size > 0 || target instanceof HTMLElement && target.popover !== null) {
@@ -523,7 +537,7 @@ const tryBuildTransformFrame = (
   if (!layoutNode || !targetBox || subtreeOwnsOverflowClip(layoutNode)) return null
   const nextStyle = computeStyle(
     target,
-    layoutNode.parent?.style ?? ROOT_STYLE,
+    layoutNode.parent?.style ?? projectionInheritedStyle,
     rules,
     interactionState,
   )
@@ -730,10 +744,11 @@ const buildFrame = (
   interactionState: CreateDocumentRendererOptions["interactionState"],
 ): RenderFrame => {
   const popoverInheritedStyles = new WeakMap<HTMLElement, ComputedStyle>()
+  const inheritedStyle = projectionRootInheritedStyle(root, rules, interactionState)
   const tree = buildLayoutTree(
     root,
     null,
-    ROOT_STYLE,
+    inheritedStyle,
     1,
     rules,
     dirtyNodes,
@@ -856,6 +871,33 @@ const buildFrame = (
     scrolls,
   })
   return frame
+}
+
+const projectionRootInheritedStyle = (
+  root: Node,
+  rules: StyleRuleIndex,
+  interactionState: CreateDocumentRendererOptions["interactionState"],
+): ComputedStyle => {
+  const ancestors: Element[] = []
+  for (let ancestor = root.parentElement; ancestor; ancestor = ancestor.parentElement) {
+    ancestors.push(ancestor)
+  }
+  let inherited = ROOT_STYLE
+  for (let index = ancestors.length - 1; index >= 0; index -= 1) {
+    inherited = computeStyle(ancestors[index]!, inherited, rules, interactionState)
+  }
+  return inherited
+}
+
+const mutationAffectsProjectionAncestry = (
+  record: MutationBatch["records"][number],
+  root: Node,
+): boolean => {
+  if (record.target.contains(root)) return true
+  if (record.type !== "childList") return false
+  return [...record.addedNodes, ...record.removedNodes].some((node) =>
+    node === root || node.contains(root)
+  )
 }
 
 const buildLayoutTree = (

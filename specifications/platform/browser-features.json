@@ -181,6 +181,24 @@
       }
     },
     {
+      "description": "Browser composition direct world regions capability.",
+      "domain": "browser",
+      "id": "browser.features.direct-world-regions",
+      "kind": "browser-host",
+      "name": "direct world regions",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#direct-world-regions",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
       "description": "Browser composition document plane capability.",
       "domain": "browser",
       "id": "browser.features.document-plane",
@@ -301,6 +319,24 @@
       },
       "spec": {
         "anchor": "renderer-browser-contract#number-input-proxy",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition one experience topology capability.",
+      "domain": "browser",
+      "id": "browser.features.one-experience-topology",
+      "kind": "browser-host",
+      "name": "one experience topology",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#one-experience-topology",
         "profile": "project-contract",
         "source": "renderer-browser-contract",
         "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"

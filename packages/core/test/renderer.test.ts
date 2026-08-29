@@ -125,6 +125,49 @@ describe("CPU document renderer", () => {
     })
   })
 
+  it("inherits from real semantic ancestors and invalidates after projection-root reparenting", () => {
+    const document = createDocument()
+    const experience = document.createElement("div")
+    const firstOwner = document.createElement("section")
+    const secondOwner = document.createElement("section")
+    const projection = document.createElement("div")
+    const label = document.createElement("span")
+    document.appendChild(experience)
+    experience.append(firstOwner, secondOwner)
+    firstOwner.appendChild(projection)
+    projection.appendChild(label)
+    firstOwner.className = "first-owner"
+    secondOwner.className = "second-owner"
+    projection.className = "projection"
+    projection.setAttribute("style", "width:120px; height:30px")
+    label.append("Shared")
+
+    const renderer = createDocumentRenderer({
+      document,
+      root: projection,
+      viewport: {width: 120, height: 30},
+      styleSheets: [
+        ".first-owner { color:#112233; font-size:18px } " +
+        ".second-owner { color:#445566; font-size:24px }",
+      ],
+    })
+    const first = renderer.flush()
+    const firstText = first.displayList.find((item) => item.kind === "text")
+    expect(firstText).toMatchObject({color: "#112233", fontSize: 18})
+
+    secondOwner.appendChild(projection)
+    const moved = renderer.flush()
+    const movedText = moved.displayList.find((item) => item.kind === "text")
+    expect(moved.revision).toBe(first.revision + 1)
+    expect(movedText).toMatchObject({color: "#445566", fontSize: 24})
+
+    secondOwner.setAttribute("style", "color:#778899; font-size:30px")
+    const updated = renderer.flush()
+    const updatedText = updated.displayList.find((item) => item.kind === "text")
+    expect(updated.revision).toBe(moved.revision + 1)
+    expect(updatedText).toMatchObject({color: "#778899", fontSize: 30})
+  })
+
   it("resolves currentcolor for computed color and backgrounds before display projection", () => {
     const document = createDocument()
     const root = document.createElement("div")

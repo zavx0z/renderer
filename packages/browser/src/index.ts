@@ -27,6 +27,11 @@ export type {
   DocumentSpaceRuntime,
   DocumentSpaceVector3,
   DocumentSpaceViewPointSnapshot,
+  DocumentSpaceWorldRegistration,
+  DocumentSpaceWorldResize,
+  DocumentSpaceWorldRuntime,
+  DocumentSpaceWorldUpdate,
+  DocumentSpaceWorldViewport,
 } from "./space-runtime.ts"
 export {createDocumentNativeInputHost} from "./native-input-host.ts"
 export type {

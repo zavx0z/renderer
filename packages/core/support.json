@@ -137398,6 +137398,44 @@
     {
       "blockedBy": [],
       "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Complete CSS inheritance and every property grammar.",
+          "path": "packages/core/src/renderer.ts",
+          "proves": "A projection root computes inherited values through its real semantic ancestor chain and observes ancestor mutations/reparenting.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "projectionRootInheritedStyle",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Full CSS inheritance and cross-browser conformance.",
+          "path": "packages/core/test/renderer.test.ts",
+          "proves": "Ancestor-derived color/font values and reparent invalidation on an exact projection root.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "projection-root-inheritance",
+          "type": "unit-test"
+        }
+      ],
+      "id": "renderer.features.projection-root-inheritance",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
       "conformance": "adapted",
       "consumers": [],
       "evidence": [

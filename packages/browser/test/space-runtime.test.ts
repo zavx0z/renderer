@@ -21,6 +21,7 @@ import type {
   CreateDocumentPlaneRuntimeOptions,
   DocumentPlaneRuntime,
 } from "../src/plane-runtime.ts"
+import {createDocumentPlaneRuntime} from "../src/plane-runtime.ts"
 import {
   createDocumentOverlayRuntime,
   type DocumentOverlayRuntime,
@@ -40,22 +41,26 @@ describe("createDocumentSpaceRuntime", () => {
   test("registers stable ids and updates only the named plane owners", async () => {
     const harness = createHarness()
     const runtime = await createDocumentSpaceRuntimeWithSeams(
-      {canvas: harness.canvas.element},
+      harness.options,
       harness.seams,
     )
-    const first = registration("first")
+    const first = harness.registration("first")
     const firstRuntime = runtime.addPlane(first)
     const firstPlane = firstRuntime.plane
     const firstContent = firstPlane.content
 
     expect(runtime.planeIds).toEqual(["first"])
     expect(runtime.getPlane("first")).toBe(firstRuntime)
+    expect(runtime.document).toBe(harness.document)
+    expect(runtime.font).toBe(harness.font)
+    expect(runtime.styleSheets).toEqual(harness.options.styleSheets)
+    expect(firstRuntime.interactionState).toBe(runtime.interactionState)
     expect(harness.calls.planeRuntimeCreates).toBe(1)
-    expect(() => runtime.addPlane({...first, document: null as never})).toThrow("already registered")
+    expect(() => runtime.addPlane(first)).toThrow("already registered")
     expect(harness.calls.planeRuntimeCreates).toBe(1)
 
     const secondRuntime = runtime.addPlane({
-      ...registration("second"),
+      ...harness.registration("second"),
       transform: {position: {x: 0, y: 0, z: -5}},
     })
     expect(runtime.planeIds).toEqual(["first", "second"])
@@ -90,10 +95,12 @@ describe("createDocumentSpaceRuntime", () => {
   test("coalesces one shared loop and keeps presentation-only requests revision-neutral", async () => {
     const harness = createHarness()
     const runtime = await createDocumentSpaceRuntimeWithSeams(
-      {canvas: harness.canvas.element},
+      harness.options,
       harness.seams,
     )
-    runtime.addPlane(registration("main"))
+    const presented: number[] = []
+    const unsubscribePresented = runtime.subscribePresented((frame) => presented.push(frame))
+    runtime.addPlane(harness.registration("main"))
     runtime.render()
     const plane = harness.plane("main")
     const semanticFlushes = plane.calls.flushes
@@ -114,16 +121,23 @@ describe("createDocumentSpaceRuntime", () => {
     expect(plane.calls.flushes).toBe(semanticFlushes + 1)
     expect(plane.runtime.frame.revision).toBe(revision)
     expect(harness.calls.engineFrames).toBe(engineFrames + 2)
+    expect(presented).toEqual([
+      runtime.presentedFrames - 2,
+      runtime.presentedFrames - 1,
+      runtime.presentedFrames,
+    ])
+    unsubscribePresented()
+    expect(() => runtime.subscribePresented(null as never)).toThrow("listener")
     runtime.dispose()
   })
 
   test("schedules one delayed title frame and cancels it with hover ownership", async () => {
     const harness = createHarness()
     const runtime = await createDocumentSpaceRuntimeWithSeams(
-      {canvas: harness.canvas.element},
+      harness.options,
       harness.seams,
     )
-    runtime.addPlane({...registration("title"), tooltipDelayMs: 650})
+    runtime.addPlane({...harness.registration("title"), tooltipDelayMs: 650})
     runtime.render()
 
     harness.canvas.emit("pointermove", pointer({clientX: 50, clientY: 50, pointerId: 40}))
@@ -157,12 +171,12 @@ describe("createDocumentSpaceRuntime", () => {
   test("routes nearest inside hits, exposes hover/active ids and cancels removed capture", async () => {
     const harness = createHarness()
     const runtime = await createDocumentSpaceRuntimeWithSeams(
-      {canvas: harness.canvas.element},
+      harness.options,
       harness.seams,
     )
-    const near = runtime.addPlane(registration("near"))
+    const near = runtime.addPlane(harness.registration("near"))
     runtime.addPlane({
-      ...registration("far"),
+      ...harness.registration("far"),
       transform: {position: {x: 0, y: 0, z: -5}},
     })
     runtime.render()
@@ -210,28 +224,28 @@ describe("createDocumentSpaceRuntime", () => {
     runtime.dispose()
   })
 
-  test("switches the exact input Document and clears it on empty hit or plane removal", async () => {
+  test("keeps the exact Experience Document while changing input projection ownership", async () => {
     const harness = createHarness()
     const runtime = await createDocumentSpaceRuntimeWithSeams(
-      {canvas: harness.canvas.element},
+      harness.options,
       harness.seams,
     )
-    const inputRegistration = registration("input")
-    const input = inputRegistration.document.createElement("input")
+    const inputRegistration = harness.registration("input")
+    const input = harness.document.createElement("input")
     input.value = "first"
     inputRegistration.root.appendChild(input)
     runtime.addPlane(inputRegistration)
     runtime.render()
 
     harness.canvas.emit("pointerdown", pointer({clientX: 50, clientY: 50, pointerId: 12, buttons: 1}))
-    expect(inputRegistration.document.activeElement).toBe(input)
+    expect(harness.document.activeElement).toBe(input)
     expect(runtime.inputTarget).toBe(input)
     expect(runtime.activeInputPlaneId).toBe("input")
-    expect(harness.nativeHost.document).toBe(inputRegistration.document)
+    expect(harness.nativeHost.document).toBe(harness.document)
     expect(harness.nativeHost.ownerId).toBe("input")
 
     harness.canvas.emit("pointerdown", pointer({clientX: 200, clientY: 200, pointerId: 12}))
-    expect(inputRegistration.document.activeElement).toBeNull()
+    expect(harness.document.activeElement).toBeNull()
     expect(runtime.inputTarget).toBeNull()
     expect(runtime.activeInputPlaneId).toBeNull()
 
@@ -248,11 +262,11 @@ describe("createDocumentSpaceRuntime", () => {
   test("uses registration order only for exact distance ties", async () => {
     const harness = createHarness()
     const runtime = await createDocumentSpaceRuntimeWithSeams(
-      {canvas: harness.canvas.element},
+      harness.options,
       harness.seams,
     )
-    runtime.addPlane(registration("alpha"))
-    runtime.addPlane(registration("beta"))
+    runtime.addPlane(harness.registration("alpha"))
+    runtime.addPlane(harness.registration("beta"))
     runtime.render()
 
     harness.canvas.emit("pointermove", pointer({clientX: 50, clientY: 50}))
@@ -265,7 +279,7 @@ describe("createDocumentSpaceRuntime", () => {
   test("owns canvas resize, capture and explicit ViewPoint snapshot/restore hooks", async () => {
     const harness = createHarness()
     const runtime = await createDocumentSpaceRuntimeWithSeams({
-      canvas: harness.canvas.element,
+      ...harness.options,
       pixelRatio: 2,
       viewPoint: snapshot({position: {x: 0, y: 0, z: 20}}),
     }, harness.seams)
@@ -301,14 +315,211 @@ describe("createDocumentSpaceRuntime", () => {
     runtime.dispose()
   })
 
+  test("attaches one bounded direct world to the shared composition with exact backing geometry", async () => {
+    const harness = createHarness()
+    const runtime = await createDocumentSpaceRuntimeWithSeams(
+      harness.options,
+      harness.seams,
+    )
+    const worldSpace = new Space()
+    const resizes: unknown[] = []
+    const world = runtime.addWorld({
+      id: "preview",
+      space: worldSpace,
+      viewport: {x: 10, y: 20, width: 50, height: 40},
+      viewPoint: snapshot({position: {x: 4, y: -8, z: 12}}),
+      onResize(value) { resizes.push(value) },
+    })
+    const semanticOverlay = runtime.addOverlay(harness.overlayRegistration("semantic"))
+
+    expect(runtime.worldIds).toEqual(["preview"])
+    expect(runtime.getWorld("preview")).toBe(world)
+    expect(runtime.space.children).toContain(worldSpace)
+    expect(worldSpace.parent).toBe(runtime.space)
+    expect(world.logicalViewport).toEqual({x: 10, y: 20, width: 50, height: 40})
+    expect(world.backingViewport).toEqual({x: 15, y: 30, width: 75, height: 60})
+    expect(resizes).toEqual([{
+      logicalViewport: {x: 10, y: 20, width: 50, height: 40},
+      backingViewport: {x: 15, y: 30, width: 75, height: 60},
+      pixelRatio: 1.5,
+    }])
+
+    runtime.render()
+    const composition = harness.calls.compositions.at(-1) as any
+    expect(composition.space).toBe(runtime.space)
+    expect(composition.viewPoint).toBe(runtime.viewPoint)
+    expect(composition.overlays).toEqual([semanticOverlay.overlay])
+    expect(composition.boundedViews).toEqual([{
+      space: worldSpace,
+      viewPoint: world.viewPoint,
+      viewport: {x: 15, y: 30, width: 75, height: 60},
+    }])
+
+    runtime.updateWorld("preview", {viewport: {x: 80, y: 90, width: 50, height: 20}})
+    expect(world.logicalViewport).toEqual({x: 80, y: 90, width: 20, height: 10})
+    expect(world.backingViewport).toEqual({x: 120, y: 135, width: 30, height: 15})
+    expect(harness.calls.viewports.at(-1)).toEqual({left: 80, top: 90, width: 20, height: 10})
+
+    const pending = harness.pendingFrames()
+    world.requestRender()
+    world.requestRender()
+    expect(harness.pendingFrames()).toBe(Math.max(1, pending))
+    if (harness.pendingFrames() > 0) harness.flushFrame()
+
+    runtime.updateWorld("preview", {visible: false})
+    expect(world.logicalViewport).toBeNull()
+    expect(world.backingViewport).toBeNull()
+    expect(resizes.at(-1)).toBeNull()
+    runtime.render()
+    expect((harness.calls.compositions.at(-1) as any).boundedViews).toEqual([])
+
+    runtime.updateWorld("preview", {
+      visible: true,
+      viewPoint: snapshot({position: {x: 1, y: 2, z: 30}}),
+    })
+    expect(world.snapshotViewPoint()).toEqual(snapshot({position: {x: 1, y: 2, z: 30}}))
+    const disposals = harness.calls.viewPointDisposals
+    expect(runtime.removeWorld("preview")).toBeTrue()
+    expect(runtime.removeWorld("preview")).toBeFalse()
+    expect(world.disposed).toBeTrue()
+    expect(worldSpace.parent).toBeNull()
+    expect(harness.calls.viewPointDisposals).toBe(disposals + 1)
+    runtime.dispose()
+  })
+
+  test("routes interactive overlay before bounded world and bounded world before plane/global camera", async () => {
+    const harness = createHarness()
+    const runtime = await createDocumentSpaceRuntimeWithSeams({
+      ...harness.options,
+      cameraGestures: true,
+    }, harness.seams)
+    runtime.addPlane(harness.registration("plane"))
+    const passiveRoot = harness.document.createElement("div")
+    passiveRoot.setAttribute("data-overlay-id", "passive")
+    passiveRoot.setAttribute("style", "width:100px; height:100px; background:#111")
+    harness.experience.appendChild(passiveRoot)
+    runtime.addOverlay({id: "passive", root: passiveRoot})
+    let doubleClicks = 0
+    const world = runtime.addWorld({
+      id: "world",
+      space: new Space(),
+      viewport: {x: 20, y: 20, width: 60, height: 60},
+      viewPoint: snapshot(),
+      onDoubleClick() { doubleClicks += 1 },
+    })
+    runtime.render()
+
+    harness.canvas.emit("pointermove", pointer({clientX: 50, clientY: 50, pointerId: 70}))
+    expect(runtime.hoveredWorldId).toBe("world")
+    expect(runtime.hoveredOverlayId).toBeNull()
+    expect(runtime.hoveredPlaneId).toBeNull()
+    harness.canvas.emit("pointerdown", pointer({
+      clientX: 50,
+      clientY: 50,
+      pointerId: 70,
+      button: 0,
+      buttons: 1,
+    }))
+    expect(runtime.activeWorldId).toBe("world")
+    harness.canvas.emit("pointermove", pointer({
+      clientX: 57,
+      clientY: 46,
+      pointerId: 70,
+      button: 0,
+      buttons: 1,
+    }))
+    expect(runtime.activeWorldId).toBe("world")
+    expect(harness.calls.orbits).toContainEqual([7, -4])
+    expect(harness.plane("plane").calls.pointerDowns).toEqual([])
+    harness.canvas.emit("pointerup", pointer({clientX: 57, clientY: 46, pointerId: 70}))
+    expect(runtime.activeWorldId).toBeNull()
+
+    harness.canvas.emit("wheel", wheel({clientX: 40, clientY: 45, deltaY: 10, ctrlKey: true}))
+    expect(harness.calls.zooms).toContainEqual([-10, 40, 45])
+    harness.canvas.emit("dblclick", mouse({clientX: 40, clientY: 45}))
+    expect(doubleClicks).toBe(1)
+
+    const interactive = harness.overlayRegistration("interactive")
+    runtime.addOverlay(interactive)
+    runtime.render()
+    const orbitCount = harness.calls.orbits.length
+    harness.canvas.emit("pointerdown", pointer({
+      clientX: 50,
+      clientY: 50,
+      pointerId: 71,
+      button: 0,
+      buttons: 1,
+    }))
+    expect(runtime.activeOverlayId).toBe("interactive")
+    expect(runtime.activeWorldId).toBeNull()
+    harness.canvas.emit("pointermove", pointer({clientX: 60, clientY: 50, pointerId: 71, buttons: 1}))
+    expect(harness.calls.orbits).toHaveLength(orbitCount)
+    harness.canvas.emit("pointerup", pointer({clientX: 60, clientY: 50, pointerId: 71}))
+    harness.canvas.emit("dblclick", mouse({clientX: 50, clientY: 50}))
+    expect(doubleClicks).toBe(1)
+
+    runtime.removeOverlay("interactive")
+    harness.canvas.emit("pointerdown", pointer({
+      clientX: 50,
+      clientY: 50,
+      pointerId: 72,
+      button: 0,
+      buttons: 1,
+    }))
+    expect(harness.canvas.captured.has(72)).toBeTrue()
+    runtime.updateWorld("world", {visible: false})
+    expect(harness.canvas.captured.has(72)).toBeFalse()
+    expect(runtime.activeWorldId).toBeNull()
+    expect(runtime.hoveredWorldId).toBeNull()
+    expect(world.visible).toBeFalse()
+    runtime.dispose()
+  })
+
+  test("rejects duplicate, attached and malformed world owners before mutating the host", async () => {
+    const harness = createHarness()
+    const runtime = await createDocumentSpaceRuntimeWithSeams(harness.options, harness.seams)
+    const owner = new Space()
+    const first = runtime.addWorld({
+      id: "world",
+      space: owner,
+      viewport: {x: 0, y: 0, width: 20, height: 20},
+      viewPoint: snapshot(),
+    })
+    expect(() => runtime.addPlane({...harness.registration("world")})).toThrow("already registered")
+    expect(() => runtime.addWorld({
+      id: "duplicate-space",
+      space: owner,
+      viewport: {x: 0, y: 0, width: 20, height: 20},
+      viewPoint: snapshot(),
+    })).toThrow("unattached")
+    const parent = new Space()
+    const attached = new Space()
+    parent.add(attached)
+    expect(() => runtime.addWorld({
+      id: "attached",
+      space: attached,
+      viewport: {x: 0, y: 0, width: 20, height: 20},
+      viewPoint: snapshot(),
+    })).toThrow("unattached")
+    expect(() => runtime.addWorld({
+      id: "invalid-viewport",
+      space: new Space(),
+      viewport: {x: 0, y: 0, width: -1, height: 20},
+      viewPoint: snapshot(),
+    })).toThrow("viewport")
+    first.dispose()
+    expect(runtime.worldIds).toEqual([])
+    runtime.dispose()
+  })
+
   test("routes camera-locked DOM overlays before world planes in the same Engine frame", async () => {
     const harness = createHarness()
     const runtime = await createDocumentSpaceRuntimeWithSeams(
-      {canvas: harness.canvas.element},
+      harness.options,
       harness.seams,
     )
-    const plane = runtime.addPlane(registration("world"))
-    const overlayRegistrationValue = overlayRegistration("hud")
+    const plane = runtime.addPlane(harness.registration("world"))
+    const overlayRegistrationValue = harness.overlayRegistration("hud")
     let clicks = 0
     overlayRegistrationValue.root.addEventListener("click", () => { clicks += 1 })
     const overlay = runtime.addOverlay(overlayRegistrationValue)
@@ -354,10 +565,10 @@ describe("createDocumentSpaceRuntime", () => {
   test("routes empty-space orbit, pan and zoom after semantic hit ownership", async () => {
     const harness = createHarness()
     const runtime = await createDocumentSpaceRuntimeWithSeams({
-      canvas: harness.canvas.element,
+      ...harness.options,
       cameraGestures: true,
     }, harness.seams)
-    runtime.addPlane(registration("world"))
+    runtime.addPlane(harness.registration("world"))
     runtime.render()
 
     harness.canvas.emit("pointerdown", pointer({
@@ -416,11 +627,11 @@ describe("createDocumentSpaceRuntime", () => {
   test("cleans all exact owners, listeners, captures and pending work", async () => {
     const harness = createHarness()
     const runtime = await createDocumentSpaceRuntimeWithSeams(
-      {canvas: harness.canvas.element},
+      harness.options,
       harness.seams,
     )
-    runtime.addPlane(registration("one"))
-    runtime.addPlane(registration("two"))
+    runtime.addPlane(harness.registration("one"))
+    runtime.addPlane(harness.registration("two"))
     harness.canvas.emit("pointerdown", pointer({clientX: 50, clientY: 50, pointerId: 4, buttons: 1}))
     runtime.requestRender()
     expect(harness.pendingFrames()).toBe(1)
@@ -437,27 +648,56 @@ describe("createDocumentSpaceRuntime", () => {
     expect(harness.pendingTimers()).toBe(0)
     expect(harness.plane("one").runtime.disposed).toBeTrue()
     expect(harness.plane("two").runtime.disposed).toBeTrue()
-    expect(() => runtime.addPlane(registration("late"))).toThrow("disposed")
+    expect(() => runtime.addPlane(harness.registration("late"))).toThrow("disposed")
     expect(() => runtime.render()).toThrow("disposed")
   })
 
   test("fails before plane allocation for duplicate ids and malformed transforms", async () => {
     const harness = createHarness()
     const runtime = await createDocumentSpaceRuntimeWithSeams(
-      {canvas: harness.canvas.element},
+      harness.options,
       harness.seams,
     )
-    runtime.addPlane(registration("valid"))
+    const validRegistration = harness.registration("valid")
+    runtime.addPlane(validRegistration)
     const allocations = harness.calls.planeRuntimeCreates
+    const foreignRoot = createDocument().createElement("div")
+    const detachedRoot = harness.document.createElement("div")
     expect(() => runtime.addPlane({
-      ...registration("valid"),
+      id: "foreign",
+      root: foreignRoot,
+      viewport: {width: 10, height: 10},
+      worldUnitsPerPixel: 1,
+    })).toThrow("another Document")
+    expect(() => runtime.addOverlay({id: "foreign-overlay", root: foreignRoot}))
+      .toThrow("another Document")
+    expect(() => runtime.addPlane({
+      id: "detached",
+      root: detachedRoot,
+      viewport: {width: 10, height: 10},
+      worldUnitsPerPixel: 1,
+    })).toThrow("connected Experience tree")
+    expect(() => runtime.addOverlay({id: "detached-overlay", root: detachedRoot}))
+      .toThrow("connected Experience tree")
+    expect(harness.calls.planeRuntimeCreates).toBe(allocations)
+    expect(harness.calls.overlayRuntimeCreates).toBe(0)
+    expect(() => runtime.addOverlay({id: "duplicate-root", root: validRegistration.root}))
+      .toThrow("root is already registered")
+    expect(harness.calls.overlayRuntimeCreates).toBe(0)
+    const nestedRoot = harness.document.createElement("div")
+    validRegistration.root.appendChild(nestedRoot)
+    expect(() => runtime.addOverlay({id: "overlapping-root", root: nestedRoot}))
+      .toThrow("overlaps owner")
+    expect(harness.calls.overlayRuntimeCreates).toBe(0)
+    expect(() => runtime.addPlane({
+      ...harness.registration("valid"),
       transform: {scale: {x: 0, y: 1, z: 1}},
     })).toThrow("already registered")
     expect(harness.calls.planeRuntimeCreates).toBe(allocations)
-    expect(() => runtime.addOverlay({...overlayRegistration("valid")})).toThrow("already registered")
+    expect(() => runtime.addOverlay({...harness.overlayRegistration("valid")})).toThrow("already registered")
     expect(harness.calls.overlayRuntimeCreates).toBe(0)
     expect(() => runtime.addPlane({
-      ...registration("invalid"),
+      ...harness.registration("invalid"),
       transform: {scale: {x: 0, y: 1, z: 1}},
     })).toThrow("scale")
     expect(harness.calls.planeRuntimeCreates).toBe(allocations)
@@ -465,6 +705,82 @@ describe("createDocumentSpaceRuntime", () => {
     expect(() => runtime.restoreViewPoint(snapshot({position: {x: 0, y: 0, z: 0}})))
       .toThrow("must differ")
     runtime.dispose()
+  })
+
+  test("reparents one focused Element from display to display to HUD in one Experience", async () => {
+    const harness = createHarness()
+    const runtime = await createDocumentSpaceRuntimeWithSeams(
+      harness.options,
+      Object.freeze({
+        ...harness.seams,
+        createPlaneRuntime: createDocumentPlaneRuntime,
+        createOverlayRuntime: createDocumentOverlayRuntime,
+      }),
+    )
+    const displayARegistration = harness.registration("display-a")
+    const displayBRegistration = harness.registration("display-b")
+    const hudRegistration = harness.overlayRegistration("hud")
+    const button = harness.document.createElement("button")
+    const identity = button
+    let clicks = 0
+    button.append("Move me")
+    button.setAttribute("style", "width:80px; height:24px; background:#112233")
+    button.addEventListener("click", () => { clicks += 1 })
+    displayARegistration.root.appendChild(button)
+    button.focus()
+
+    const displayA = runtime.addPlane(displayARegistration)
+    const displayB = runtime.addPlane(displayBRegistration)
+    const hud = runtime.addOverlay(hudRegistration)
+    runtime.render()
+
+    expect(displayA.interactionState).toBe(runtime.interactionState)
+    expect(displayB.interactionState).toBe(runtime.interactionState)
+    expect(hud.interactionState).toBe(runtime.interactionState)
+    expect(displayA.frame.boxByNode.has(button)).toBeTrue()
+    expect(displayB.frame.boxByNode.has(button)).toBeFalse()
+    expect(hud.frame.boxByNode.has(button)).toBeFalse()
+
+    displayBRegistration.root.appendChild(button)
+    runtime.render()
+    button.click()
+    expect(button).toBe(identity)
+    expect(button.ownerDocument).toBe(harness.document)
+    expect(harness.document.activeElement).toBe(button)
+    expect(clicks).toBe(1)
+    expect(displayA.frame.boxByNode.has(button)).toBeFalse()
+    expect(displayB.frame.boxByNode.has(button)).toBeTrue()
+    expect(hud.frame.boxByNode.has(button)).toBeFalse()
+
+    hudRegistration.root.appendChild(button)
+    runtime.render()
+    button.click()
+    expect(button).toBe(identity)
+    expect(button.ownerDocument).toBe(harness.document)
+    expect(harness.document.activeElement).toBe(button)
+    expect(clicks).toBe(2)
+    expect(displayA.frame.boxByNode.has(button)).toBeFalse()
+    expect(displayB.frame.boxByNode.has(button)).toBeFalse()
+    expect(hud.frame.boxByNode.has(button)).toBeTrue()
+    runtime.dispose()
+  })
+
+  test("claims one Space host and releases or rolls it back exactly", async () => {
+    const harness = createHarness()
+    await expect(createDocumentSpaceRuntimeWithSeams(harness.options, Object.freeze({
+      ...harness.seams,
+      async initializeEngineRenderer() { throw new Error("space init failed") },
+    }))).rejects.toThrow("space init failed")
+
+    const runtime = await createDocumentSpaceRuntimeWithSeams(harness.options, harness.seams)
+    const initialized = harness.calls.initializes
+    await expect(createDocumentSpaceRuntimeWithSeams(harness.options, harness.seams))
+      .rejects.toThrow("canvas already owns")
+    expect(harness.calls.initializes).toBe(initialized)
+
+    runtime.dispose()
+    const replacement = await createDocumentSpaceRuntimeWithSeams(harness.options, harness.seams)
+    replacement.dispose()
   })
 
   test("contains no product, Surface, manual CSS layout or duplicated document pipeline", async () => {
@@ -491,12 +807,19 @@ describe("createDocumentSpaceRuntime", () => {
 
 function createHarness() {
   const canvas = new FakeCanvas({left: 0, top: 0, width: 100, height: 100})
+  const document = createDocument()
+  const experience = document.createElement("div")
+  document.appendChild(experience)
+  const font = fakeFont()
   const calls = {
     initializes: 0,
     engineFrames: 0,
     pixelRatios: [] as number[],
     sizes: [] as Array<readonly [number, number]>,
     aspects: [] as number[],
+    viewports: [] as Array<Readonly<{left: number; top: number; width: number; height: number}>>,
+    compositions: [] as unknown[],
+    worldViewPoints: [] as ViewPoint[],
     captures: 0,
     planeRuntimeCreates: 0,
     overlayRuntimeCreates: 0,
@@ -513,7 +836,10 @@ function createHarness() {
     setPixelRatio(value: number) { calls.pixelRatios.push(value) },
     setSize(width: number, height: number) { calls.sizes.push([width, height]) },
     invalidateGeometry() {},
-    renderFrame() { calls.engineFrames += 1 },
+    renderComposition(composition: unknown) {
+      calls.engineFrames += 1
+      calls.compositions.push(composition)
+    },
     captureLastPresentedFramePng() {
       calls.captures += 1
       return Promise.resolve(capture)
@@ -549,13 +875,29 @@ function createHarness() {
       viewPoint.far = initial.far
       return viewPoint
     },
+    createWorldViewPoint(initial, viewport) {
+      const worldViewPoint = fakeViewPoint(calls)
+      worldViewPoint.position.set(initial.position.x, initial.position.y, initial.position.z)
+      worldViewPoint.getTarget().set(initial.target.x, initial.target.y, initial.target.z)
+      worldViewPoint.getUp().set(initial.up.x, initial.up.y, initial.up.z)
+      worldViewPoint.fov = initial.fov
+      worldViewPoint.near = initial.near
+      worldViewPoint.far = initial.far
+      worldViewPoint.setViewport({
+        left: viewport.x,
+        top: viewport.y,
+        width: viewport.width,
+        height: viewport.height,
+      })
+      calls.worldViewPoints.push(worldViewPoint)
+      return worldViewPoint
+    },
     createRaycaster: () => raycaster,
     createNativeInputHost: () => nativeHost.host,
     createPlaneRuntime(options) {
       calls.planeRuntimeCreates += 1
-      const id = [...options.document.childNodes]
-        .map((node) => (node as {getAttribute?(name: string): string | null}).getAttribute?.("data-plane-id"))
-        .find((value) => value !== undefined && value !== null)
+      const id = (options.root as {getAttribute?(name: string): string | null})
+        .getAttribute?.("data-plane-id")
       if (id === undefined || id === null) throw new Error("Fixture plane id is absent")
       const runtime = new FakePlaneRuntime(options)
       planes.set(id, runtime)
@@ -563,10 +905,8 @@ function createHarness() {
     },
     createOverlayRuntime(options) {
       calls.overlayRuntimeCreates += 1
-      const id = [...options.document.childNodes]
-        .flatMap((node) => [...node.childNodes, node])
-        .map((node) => (node as {getAttribute?(name: string): string | null}).getAttribute?.("data-overlay-id"))
-        .find((value) => value !== undefined && value !== null)
+      const id = (options.root as {getAttribute?(name: string): string | null})
+        .getAttribute?.("data-overlay-id")
       if (id === undefined || id === null) throw new Error("Fixture overlay id is absent")
       const runtime = createDocumentOverlayRuntime(options)
       overlays.set(id, runtime)
@@ -597,10 +937,21 @@ function createHarness() {
   })
   return {
     canvas,
+    document,
+    experience,
+    font,
+    options: Object.freeze({
+      canvas: canvas.element,
+      document,
+      styleSheets: Object.freeze([]),
+      font,
+    }),
     calls,
     capture,
     nativeHost,
     seams,
+    registration: (id: string) => registration(document, experience, id),
+    overlayRegistration: (id: string) => overlayRegistration(document, experience, id),
     plane(id: string) {
       const plane = planes.get(id)
       if (plane === undefined) throw new Error(`Unknown fixture plane ${id}`)
@@ -660,6 +1011,7 @@ class FakePlaneRuntime {
       font: options.font,
       renderer: {flush: () => this.#frame} as never,
       interaction: {} as never,
+      interactionState: options.interactionState!,
       backend: {root: plane.content} as never,
       plane,
       get frame() { return thisOwner.#frame },
@@ -822,6 +1174,7 @@ class FakeCanvas {
 
 function fakeViewPoint(calls: {
   aspects: number[]
+  viewports: Array<Readonly<{left: number; top: number; width: number; height: number}>>
   viewPointDisposals: number
   orbits: Array<readonly [number, number]>
   pans: Array<readonly [number, number]>
@@ -845,6 +1198,10 @@ function fakeViewPoint(calls: {
     setAspectRatio(value: number) {
       calls.aspects.push(value)
     },
+    setViewport(value: Readonly<{left: number; top: number; width: number; height: number}>) {
+      calls.viewports.push(value)
+      calls.aspects.push(value.width / value.height)
+    },
     orbit(deltaX: number, deltaY: number) {
       calls.orbits.push([deltaX, deltaY])
       position.x += deltaX
@@ -865,36 +1222,36 @@ function fakeViewPoint(calls: {
   } as unknown as ViewPoint
 }
 
-function registration(id: string) {
-  const document = createDocument()
+function registration(
+  document: ReturnType<typeof createDocument>,
+  experience: SemanticNode,
+  id: string,
+) {
   const root = document.createElement("div")
   root.setAttribute("data-plane-id", id)
   root.setAttribute("style", "width: 100px; height: 100px")
-  document.appendChild(root)
+  experience.appendChild(root)
   return {
     id,
-    document,
     root,
-    styleSheets: [],
-    font: fakeFont(),
     viewport: {width: 100, height: 100},
     worldUnitsPerPixel: 0.02,
   } as const
 }
 
-function overlayRegistration(id: string) {
-  const document = createDocument()
+function overlayRegistration(
+  document: ReturnType<typeof createDocument>,
+  experience: SemanticNode,
+  id: string,
+) {
   const root = document.createElement("button")
   root.setAttribute("data-overlay-id", id)
   root.setAttribute("style", "width: 100px; height: 100px")
   root.append("Overlay")
-  document.appendChild(root)
+  experience.appendChild(root)
   return {
     id,
-    document,
     root,
-    styleSheets: [],
-    font: fakeFont(),
   } as const
 }
 
@@ -950,6 +1307,16 @@ function wheel(values: Partial<WheelEvent> = {}): WheelEvent {
     preventDefault() {},
     ...values,
   } as WheelEvent
+}
+
+function mouse(values: Partial<MouseEvent> = {}): MouseEvent {
+  return {
+    clientX: 0,
+    clientY: 0,
+    cancelable: true,
+    preventDefault() {},
+    ...values,
+  } as MouseEvent
 }
 
 function snapshot(

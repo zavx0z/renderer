@@ -392,6 +392,53 @@
       "consumers": [],
       "evidence": [
         {
+          "doesNotProve": "Unrelated direct-world picking and application-specific scene behavior.",
+          "path": "packages/browser/src/space-runtime.ts",
+          "proves": "One host attaches bounded direct Engine Spaces, maps logical/DPR viewport geometry and routes input through the shared frame lifecycle.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "addWorld",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Cross-process hosts and unrelated browser controls.",
+          "path": "packages/browser/test/space-runtime.test.ts",
+          "proves": "Exact Space attachment, framebuffer geometry, overlay/world/plane input priority, capture cleanup and presented-frame notification.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "direct-world-regions",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Every Engine scene, device, viewport size or input modality.",
+          "path": "storybook://captures/capture_JncmVXljfyjQ_ihTqhrfD47d",
+          "proves": "The exact Engine owner route presents a visible non-black bounded world through the shared Storybook canvas with zero console errors.",
+          "repository": "external",
+          "revision": "daa1cf663667710894282ce8",
+          "symbol": "@engine/core/space/coordinate-system/z-up",
+          "type": "visual-evidence"
+        }
+      ],
+      "id": "browser.features.direct-world-regions",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
           "doesNotProve": "Live native browser execution.",
           "path": "packages/browser/src/plane-runtime.ts",
           "proves": "The bounded browser composition adapter logic.",
@@ -542,7 +589,7 @@
       "evidence": [
         {
           "doesNotProve": "Live native browser execution.",
-          "path": "packages/browser/src/plane-runtime.ts",
+          "path": "packages/browser/src/space-runtime.ts",
           "proves": "The bounded browser composition adapter logic.",
           "repository": "renderer",
           "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
@@ -551,7 +598,7 @@
         },
         {
           "doesNotProve": "Live browser/native input/WebGPU pixels.",
-          "path": "packages/browser/test/plane-runtime.test.ts",
+          "path": "packages/browser/test/space-runtime.test.ts",
           "proves": "Adapter lifecycle, mapping, rollback, and identity.",
           "repository": "renderer",
           "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
@@ -633,6 +680,62 @@
         "stage": "browser-host"
       },
       "status": "unsupported"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Live native browser execution.",
+          "path": "packages/browser/src/space-runtime.ts",
+          "proves": "One exact semantic Document/style/font/interaction owner is shared by every projection in one Space host.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "one-experience-topology",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Direct Engine-only canvas ownership outside renderer-browser.",
+          "path": "packages/browser/src/presentation-host.ts",
+          "proves": "CanvasRuntime and SpaceRuntime share one native-Document/canvas cardinality claim with rollback and release.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "presentation-host claim",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live browser/native input/WebGPU pixels.",
+          "path": "packages/browser/test/space-runtime.test.ts",
+          "proves": "Same-Document display/HUD reparenting, foreign/detached rejection, shared state and host lifecycle.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "one-experience-topology",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Cross-process or direct Engine hosts.",
+          "path": "packages/browser/test/presentation-host.test.ts",
+          "proves": "Exact canvas/native Document cardinality and release.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "presentation-host claim",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.one-experience-topology",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "implemented"
     },
     {
       "blockedBy": [],
@@ -1200,7 +1303,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "31",
+          "lines": "36",
           "path": "packages/browser/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -1232,7 +1335,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "32",
+          "lines": "37",
           "path": "packages/browser/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -1520,7 +1623,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "32",
+          "lines": "37",
           "path": "packages/browser/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -1552,7 +1655,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "32",
+          "lines": "37",
           "path": "packages/browser/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -1946,6 +2049,166 @@
         }
       ],
       "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceviewpointsnapshot",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "20",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DocumentSpaceWorldRegistration",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceworldregistration",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "20",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DocumentSpaceWorldResize",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceworldresize",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "20",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DocumentSpaceWorldRuntime",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceworldruntime",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "20",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DocumentSpaceWorldUpdate",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceworldupdate",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "20",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DocumentSpaceWorldViewport",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceworldviewport",
       "lastVerified": {
         "date": "2026-08-29",
         "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"

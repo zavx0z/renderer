@@ -32,6 +32,7 @@ import {
   type DocumentNativeInputHost,
   type DocumentNativeInputTarget,
 } from "./native-input-host.ts"
+import {claimBrowserPresentationHost} from "./presentation-host.ts"
 
 export type CreateDocumentCanvasRuntimeOptions = Readonly<{
   canvas: HTMLCanvasElement
@@ -159,7 +160,9 @@ const defaultSeams = (): DocumentCanvasRuntimeSeams => Object.freeze({
 })
 
 /**
-Creates one production browser runtime around a caller-owned semantic tree.
+Creates one complete isolated browser Experience around a caller-owned semantic
+tree. A component, panel, display or overlay inside another Experience must use
+that Experience's `DocumentSpaceRuntime` projection roots instead.
 
 The required font is already resolved by the caller. This function performs no
 network fetch, DOM mirroring, UI composition or Storybook lifecycle work.
@@ -176,6 +179,20 @@ export async function createDocumentCanvasRuntimeWithSeams(
   seams: DocumentCanvasRuntimeSeams,
 ): Promise<DocumentCanvasRuntime> {
   validateOptions(options)
+  const presentationHostClaim = claimBrowserPresentationHost(options.canvas)
+  try {
+    return await createClaimedDocumentCanvasRuntime(options, seams, presentationHostClaim)
+  } catch (error) {
+    presentationHostClaim.release()
+    throw error
+  }
+}
+
+const createClaimedDocumentCanvasRuntime = async (
+  options: CreateDocumentCanvasRuntimeOptions,
+  seams: DocumentCanvasRuntimeSeams,
+  presentationHostClaim: ReturnType<typeof claimBrowserPresentationHost>,
+): Promise<DocumentCanvasRuntime> => {
   const styleSheets = Object.freeze([...options.styleSheets])
   const tooltipDelayMs = finiteNonNegative(options.tooltipDelayMs ?? 500, "tooltipDelayMs")
   const distance = finitePositive(options.distance ?? 600, "distance")
@@ -413,6 +430,7 @@ export async function createDocumentCanvasRuntimeWithSeams(
     interaction.dispose()
     documentRenderer.dispose()
     backend.dispose()
+    presentationHostClaim.release()
   }
 
   const runtime: DocumentCanvasRuntime = Object.freeze({

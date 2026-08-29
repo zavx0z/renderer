@@ -216,16 +216,16 @@
         "behavior": "Engine receives host-neutral inputs/resources; browser document/canvas/listener ownership stays in renderer-browser."
       },
       "actual": {
-        "behavior": "ViewPoint accepts HTMLElement, mutates touchAction and binds global document; Renderer creates/owns HTMLCanvasElement.",
+        "behavior": "ViewPoint now has a listener-free host mode with explicit client viewport, but default browser controls still accept/mutate HTMLElement state and Renderer.init still owns an HTMLCanvasElement/GPUCanvasContext boundary.",
         "evidence": [
           {
             "type": "implementation",
             "repository": "engine",
             "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e",
             "path": "packages/core/src/core/view-point.ts",
-            "symbol": "ViewPoint attach/dispose",
-            "proves": "Browser globals and HTMLElement state are owned inside Engine.",
-            "doesNotProve": "Behavior on every browser."
+            "symbol": "ViewPoint controls",
+            "proves": "Host controls avoid browser listeners/element mutation while the default compatibility mode retains an element-owned control path.",
+            "doesNotProve": "A fully host-neutral Renderer/canvas boundary."
           },
           {
             "type": "implementation",

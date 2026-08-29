@@ -219,7 +219,17 @@
       "scope": "production",
       "path": "packages/interpreter/web/main.ts",
       "anchor": "function syncModuleDisplays(): void",
-      "behavior": "Maintain one exact semantic Document per stable world plane with nearest-plane input, resize, capture and cleanup."
+      "behavior": "Project every module root from one shared Experience Document into stable world planes with nearest-plane input, resize, capture and cleanup."
+    },
+    {
+      "capability": "browser.features.one-experience-topology",
+      "repository": "interpreter",
+      "package": "@metafor/interpreter",
+      "subject": "Interpreter presentation host",
+      "scope": "production",
+      "path": "packages/interpreter/web/main.ts",
+      "anchor": "uiCanvas = await createDocumentSpaceRuntime({",
+      "behavior": "Own one semantic Document, Canvas, Engine Renderer and Space for all module display roots in the Interpreter Experience."
     },
     {
       "capability": "browser.features.overlays",
@@ -239,7 +249,7 @@
       "scope": "production",
       "path": "cosmos/internal/visual/main/index.ts",
       "anchor": "runtime.addPlane({",
-      "behavior": "Attach the Cosmos document to a stable world plane with the intended stylesheet and camera gestures."
+      "behavior": "Attach the Cosmos main root from the shared Experience Document to a stable world plane with the intended stylesheet and camera gestures."
     },
     {
       "capability": "browser.features.overlays",
@@ -249,7 +259,17 @@
       "scope": "production",
       "path": "cosmos/internal/visual/main/index.ts",
       "anchor": "runtime.addOverlay({",
-      "behavior": "Attach the dock to a camera-locked overlay and apply the dock stylesheet to that exact runtime."
+      "behavior": "Attach the dock sibling root from the same Experience Document to a camera-locked overlay using the host stylesheet realm."
+    },
+    {
+      "capability": "browser.features.one-experience-topology",
+      "repository": "metafor",
+      "package": "@internal/visual",
+      "subject": "Cosmos presentation host",
+      "scope": "production",
+      "path": "cosmos/internal/visual/main/index.ts",
+      "anchor": "export const runtime = await createDocumentSpaceRuntime({",
+      "behavior": "Own one semantic Document, Canvas, Engine Renderer and Space for the Cosmos main plane and dock HUD projection."
     },
     {
       "capability": "browser.features.document-plane",
@@ -259,7 +279,17 @@
       "scope": "production",
       "path": "src/main.ts",
       "anchor": "const journalPlane = runtime.addPlane({",
-      "behavior": "Present the transactional journal Document on a stable resizable plane with capture and diagnostics."
+      "behavior": "Present the journal root from the shared Experience Document on a stable resizable plane with capture and diagnostics."
+    },
+    {
+      "capability": "browser.features.one-experience-topology",
+      "repository": "demo",
+      "package": "@zavx0z/demo",
+      "subject": "Demo presentation host",
+      "scope": "production",
+      "path": "src/main.ts",
+      "anchor": "runtime = await createDocumentSpaceRuntime({",
+      "behavior": "Own one semantic Document, Canvas, Engine Renderer and Space for every Demo projection root."
     },
     {
       "capability": "renderer.features.backend-neutral-diagnostics",

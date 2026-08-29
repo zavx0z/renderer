@@ -1864,13 +1864,65 @@
       }
     },
     {
+      "description": "@engine/core public type export RenderBoundedView.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.renderboundedview",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 79,
+        "path": "engine:packages/core/src/renderer/index.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "RenderBoundedView",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/renderer/index.ts#L79",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export RenderComposition.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.rendercomposition",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 79,
+        "path": "engine:packages/core/src/renderer/index.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "RenderComposition",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/renderer/index.ts#L79",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
       "description": "@engine/core public runtime export Renderer.",
       "domain": "engine",
       "id": "platform.at-engine-core.export-paths.root.symbols.renderer",
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 151,
+        "line": 178,
         "path": "engine:packages/core/src/renderer/index.ts",
         "repository": "engine",
         "typeOnly": false
@@ -1883,7 +1935,33 @@
       },
       "parent": "platform.at-engine-core.export-paths.root",
       "spec": {
-        "anchor": "engine:packages/core/src/renderer/index.ts#L151",
+        "anchor": "engine:packages/core/src/renderer/index.ts#L178",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export RendererPhysicalViewport.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.rendererphysicalviewport",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 79,
+        "path": "engine:packages/core/src/renderer/index.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "RendererPhysicalViewport",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/renderer/index.ts#L79",
         "profile": "project-contract",
         "source": "@engine/core-exports",
         "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
@@ -1922,7 +2000,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 139,
+        "line": 79,
         "path": "engine:packages/core/src/renderer/index.ts",
         "repository": "engine",
         "typeOnly": true
@@ -1935,7 +2013,7 @@
       },
       "parent": "platform.at-engine-core.export-paths.root",
       "spec": {
-        "anchor": "engine:packages/core/src/renderer/index.ts#L139",
+        "anchor": "engine:packages/core/src/renderer/index.ts#L79",
         "profile": "project-contract",
         "source": "@engine/core-exports",
         "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
@@ -2728,7 +2806,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 91,
+        "line": 116,
         "path": "engine:packages/core/src/core/view-point.ts",
         "repository": "engine",
         "typeOnly": false
@@ -2741,7 +2819,59 @@
       },
       "parent": "platform.at-engine-core.export-paths.root",
       "spec": {
-        "anchor": "engine:packages/core/src/core/view-point.ts#L91",
+        "anchor": "engine:packages/core/src/core/view-point.ts#L116",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export ViewPointClientViewport.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.viewpointclientviewport",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 66,
+        "path": "engine:packages/core/src/core/view-point.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "ViewPointClientViewport",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/view-point.ts#L66",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export ViewPointControls.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.viewpointcontrols",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 64,
+        "path": "engine:packages/core/src/core/view-point.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "ViewPointControls",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/view-point.ts#L64",
         "profile": "project-contract",
         "source": "@engine/core-exports",
         "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"

@@ -2,21 +2,21 @@
   "generatorVersion": "1.0.0",
   "records": [
     {
-      "behavior": "Present the transactional journal Document on a stable resizable plane with capture and diagnostics.",
+      "behavior": "Present the journal root from the shared Experience Document on a stable resizable plane with capture and diagnostics.",
       "capability": "browser.features.document-plane",
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "401",
+          "lines": "406",
           "path": "src/main.ts",
-          "proves": "Present the transactional journal Document on a stable resizable plane with capture and diagnostics.",
+          "proves": "Present the journal root from the shared Experience Document on a stable resizable plane with capture and diagnostics.",
           "repository": "demo",
           "revision": "7a88ae3d6fa82b53d03f08e0cc9f86b1c41f0325+dirty",
           "symbol": "Journal plane",
           "type": "consumer-usage"
         }
       ],
-      "line": 401,
+      "line": 406,
       "package": "@zavx0z/demo",
       "path": "src/main.ts",
       "repository": "demo",
@@ -24,21 +24,21 @@
       "subject": "Journal plane"
     },
     {
-      "behavior": "Attach the Cosmos document to a stable world plane with the intended stylesheet and camera gestures.",
+      "behavior": "Attach the Cosmos main root from the shared Experience Document to a stable world plane with the intended stylesheet and camera gestures.",
       "capability": "browser.features.document-plane",
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "93",
+          "lines": "97",
           "path": "cosmos/internal/visual/main/index.ts",
-          "proves": "Attach the Cosmos document to a stable world plane with the intended stylesheet and camera gestures.",
+          "proves": "Attach the Cosmos main root from the shared Experience Document to a stable world plane with the intended stylesheet and camera gestures.",
           "repository": "metafor",
-          "revision": "603d5604ac550b044ad809d5be27190cba9118aa+dirty",
+          "revision": "fbc4aa770d8d1399d20bfa6e126fcd980722425d+dirty",
           "symbol": "Cosmos display plane",
           "type": "consumer-usage"
         }
       ],
-      "line": 93,
+      "line": 97,
       "package": "@internal/visual",
       "path": "cosmos/internal/visual/main/index.ts",
       "repository": "metafor",
@@ -46,21 +46,21 @@
       "subject": "Cosmos display plane"
     },
     {
-      "behavior": "Maintain one exact semantic Document per stable world plane with nearest-plane input, resize, capture and cleanup.",
+      "behavior": "Project every module root from one shared Experience Document into stable world planes with nearest-plane input, resize, capture and cleanup.",
       "capability": "browser.features.multiple-planes",
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "910",
+          "lines": "921",
           "path": "packages/interpreter/web/main.ts",
-          "proves": "Maintain one exact semantic Document per stable world plane with nearest-plane input, resize, capture and cleanup.",
+          "proves": "Project every module root from one shared Experience Document into stable world planes with nearest-plane input, resize, capture and cleanup.",
           "repository": "interpreter",
           "revision": "879b4e01a4abd12756f86228784421e26270f485+dirty",
           "symbol": "Module displays",
           "type": "consumer-usage"
         }
       ],
-      "line": 910,
+      "line": 921,
       "package": "@metafor/interpreter",
       "path": "packages/interpreter/web/main.ts",
       "repository": "interpreter",
@@ -77,7 +77,7 @@
           "path": "packages/components/inspector.tsx",
           "proves": "Focused numeric field editing inside nested scrollable Inspector groups.",
           "repository": "ui",
-          "revision": "2148fa46d41efdc6ece993a6298b4adb2ade0b19+dirty",
+          "revision": "5ed63adbc1d53c018bd7c5526df4d9ef175ffeef+dirty",
           "symbol": "Inspector numeric fields",
           "type": "consumer-usage"
         }
@@ -99,7 +99,7 @@
           "path": "packages/components/number-input.tsx",
           "proves": "Native typed number editing, focus, input/change, Escape rollback and selection through the exact semantic owner.",
           "repository": "ui",
-          "revision": "2148fa46d41efdc6ece993a6298b4adb2ade0b19+dirty",
+          "revision": "5ed63adbc1d53c018bd7c5526df4d9ef175ffeef+dirty",
           "symbol": "NumberInput",
           "type": "consumer-usage"
         }
@@ -112,16 +112,82 @@
       "subject": "NumberInput"
     },
     {
-      "behavior": "Attach the dock to a camera-locked overlay and apply the dock stylesheet to that exact runtime.",
+      "behavior": "Own one semantic Document, Canvas, Engine Renderer and Space for every Demo projection root.",
+      "capability": "browser.features.one-experience-topology",
+      "evidence": [
+        {
+          "doesNotProve": "Platform implementation or conformance.",
+          "lines": "398",
+          "path": "src/main.ts",
+          "proves": "Own one semantic Document, Canvas, Engine Renderer and Space for every Demo projection root.",
+          "repository": "demo",
+          "revision": "7a88ae3d6fa82b53d03f08e0cc9f86b1c41f0325+dirty",
+          "symbol": "Demo presentation host",
+          "type": "consumer-usage"
+        }
+      ],
+      "line": 398,
+      "package": "@zavx0z/demo",
+      "path": "src/main.ts",
+      "repository": "demo",
+      "scope": "production",
+      "subject": "Demo presentation host"
+    },
+    {
+      "behavior": "Own one semantic Document, Canvas, Engine Renderer and Space for all module display roots in the Interpreter Experience.",
+      "capability": "browser.features.one-experience-topology",
+      "evidence": [
+        {
+          "doesNotProve": "Platform implementation or conformance.",
+          "lines": "825",
+          "path": "packages/interpreter/web/main.ts",
+          "proves": "Own one semantic Document, Canvas, Engine Renderer and Space for all module display roots in the Interpreter Experience.",
+          "repository": "interpreter",
+          "revision": "879b4e01a4abd12756f86228784421e26270f485+dirty",
+          "symbol": "Interpreter presentation host",
+          "type": "consumer-usage"
+        }
+      ],
+      "line": 825,
+      "package": "@metafor/interpreter",
+      "path": "packages/interpreter/web/main.ts",
+      "repository": "interpreter",
+      "scope": "production",
+      "subject": "Interpreter presentation host"
+    },
+    {
+      "behavior": "Own one semantic Document, Canvas, Engine Renderer and Space for the Cosmos main plane and dock HUD projection.",
+      "capability": "browser.features.one-experience-topology",
+      "evidence": [
+        {
+          "doesNotProve": "Platform implementation or conformance.",
+          "lines": "82",
+          "path": "cosmos/internal/visual/main/index.ts",
+          "proves": "Own one semantic Document, Canvas, Engine Renderer and Space for the Cosmos main plane and dock HUD projection.",
+          "repository": "metafor",
+          "revision": "fbc4aa770d8d1399d20bfa6e126fcd980722425d+dirty",
+          "symbol": "Cosmos presentation host",
+          "type": "consumer-usage"
+        }
+      ],
+      "line": 82,
+      "package": "@internal/visual",
+      "path": "cosmos/internal/visual/main/index.ts",
+      "repository": "metafor",
+      "scope": "production",
+      "subject": "Cosmos presentation host"
+    },
+    {
+      "behavior": "Attach the dock sibling root from the same Experience Document to a camera-locked overlay using the host stylesheet realm.",
       "capability": "browser.features.overlays",
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
           "lines": "125",
           "path": "cosmos/internal/visual/main/index.ts",
-          "proves": "Attach the dock to a camera-locked overlay and apply the dock stylesheet to that exact runtime.",
+          "proves": "Attach the dock sibling root from the same Experience Document to a camera-locked overlay using the host stylesheet realm.",
           "repository": "metafor",
-          "revision": "603d5604ac550b044ad809d5be27190cba9118aa+dirty",
+          "revision": "fbc4aa770d8d1399d20bfa6e126fcd980722425d+dirty",
           "symbol": "Cosmos display dock",
           "type": "consumer-usage"
         }
@@ -143,7 +209,7 @@
           "path": "quantum/bulk/dom/overlay-runtime.ts",
           "proves": "Compose the HUD through the shared browser overlay owner rather than reimplementing pointer mapping, capture, hit and lifecycle.",
           "repository": "metafor",
-          "revision": "603d5604ac550b044ad809d5be27190cba9118aa+dirty",
+          "revision": "fbc4aa770d8d1399d20bfa6e126fcd980722425d+dirty",
           "symbol": "Bulk DOM overlay",
           "type": "consumer-usage"
         }
@@ -187,7 +253,7 @@
           "path": "packages/components/code-editor.tsx",
           "proves": "Two-axis scrolling with clipping and stable retained line/token identity.",
           "repository": "ui",
-          "revision": "2148fa46d41efdc6ece993a6298b4adb2ade0b19+dirty",
+          "revision": "5ed63adbc1d53c018bd7c5526df4d9ef175ffeef+dirty",
           "symbol": "CodeEditor",
           "type": "consumer-usage"
         }
@@ -209,7 +275,7 @@
           "path": "packages/ui/dom/node-editor.ts",
           "proves": "Pan/zoom reaches paint, clip and inverse hit consistently for the graph surface.",
           "repository": "node",
-          "revision": "9f390945f51f88c6374d5fb8f3215cf5d776e571+dirty",
+          "revision": "66b616a912950a023a2ddff5d62702e4074b0011",
           "symbol": "NodeEditor",
           "type": "consumer-usage"
         }
@@ -231,7 +297,7 @@
           "path": "packages/components/code-editor.tsx",
           "proves": "Preserve source whitespace and prevent wrapping for read-only code lines.",
           "repository": "ui",
-          "revision": "2148fa46d41efdc6ece993a6298b4adb2ade0b19+dirty",
+          "revision": "5ed63adbc1d53c018bd7c5526df4d9ef175ffeef+dirty",
           "symbol": "CodeEditor",
           "type": "consumer-usage"
         }
@@ -319,7 +385,7 @@
           "path": "packages/components/number-input.tsx",
           "proves": "A scrub gesture continues outside the control until pointerup/cancel without component-owned capture emulation.",
           "repository": "ui",
-          "revision": "2148fa46d41efdc6ece993a6298b4adb2ade0b19+dirty",
+          "revision": "5ed63adbc1d53c018bd7c5526df4d9ef175ffeef+dirty",
           "symbol": "NumberInput scrub",
           "type": "consumer-usage"
         }
@@ -385,7 +451,7 @@
           "path": "packages/components/color-input.tsx",
           "proves": "Stable controlled RGBA channels with range input/change semantics and analytical color paint.",
           "repository": "ui",
-          "revision": "2148fa46d41efdc6ece993a6298b4adb2ade0b19+dirty",
+          "revision": "5ed63adbc1d53c018bd7c5526df4d9ef175ffeef+dirty",
           "symbol": "ColorInput",
           "type": "consumer-usage"
         }
@@ -407,7 +473,7 @@
           "path": "packages/components/color-input.tsx",
           "proves": "An anchored top-layer color picker with clipping, light dismiss, Escape and focus restoration instead of an inline hidden panel.",
           "repository": "ui",
-          "revision": "2148fa46d41efdc6ece993a6298b4adb2ade0b19+dirty",
+          "revision": "5ed63adbc1d53c018bd7c5526df4d9ef175ffeef+dirty",
           "symbol": "ColorInput",
           "type": "consumer-usage"
         }
@@ -429,7 +495,7 @@
           "path": "packages/components/enum-input.tsx",
           "proves": "Open a collapsed select picker, navigate options by keyboard, activate one option and dispatch input/change.",
           "repository": "ui",
-          "revision": "2148fa46d41efdc6ece993a6298b4adb2ade0b19+dirty",
+          "revision": "5ed63adbc1d53c018bd7c5526df4d9ef175ffeef+dirty",
           "symbol": "EnumInput",
           "type": "consumer-usage"
         }
@@ -451,7 +517,7 @@
           "path": "packages/ui/node-system.tsx",
           "proves": "Observe topology/parameter snapshots without duplicating the canonical Node store.",
           "repository": "node",
-          "revision": "9f390945f51f88c6374d5fb8f3215cf5d776e571+dirty",
+          "revision": "66b616a912950a023a2ddff5d62702e4074b0011",
           "symbol": "NodeSystem view store",
           "type": "consumer-usage"
         }
@@ -473,7 +539,7 @@
           "path": "packages/ui/dom/field-mount.ts",
           "proves": "Mount and update a compiled component into a DocumentFragment while retaining the exact owner element and disposing on unmount.",
           "repository": "node",
-          "revision": "9f390945f51f88c6374d5fb8f3215cf5d776e571+dirty",
+          "revision": "66b616a912950a023a2ddff5d62702e4074b0011",
           "symbol": "mountField",
           "type": "consumer-usage"
         }
@@ -495,7 +561,7 @@
           "path": "packages/ui/node-system.tsx",
           "proves": "Retain node, link, parameter and socket identity across high-volume topology and parameter updates.",
           "repository": "node",
-          "revision": "9f390945f51f88c6374d5fb8f3215cf5d776e571+dirty",
+          "revision": "66b616a912950a023a2ddff5d62702e4074b0011",
           "symbol": "NodeSystem",
           "type": "consumer-usage"
         }
@@ -513,7 +579,7 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "417",
+          "lines": "419",
           "path": "src/main.ts",
           "proves": "Observe neutral plane/frame diagnostics without reaching into retained Engine/WebGPU owner objects.",
           "repository": "demo",
@@ -522,7 +588,7 @@
           "type": "consumer-usage"
         }
       ],
-      "line": 417,
+      "line": 419,
       "package": "@zavx0z/demo",
       "path": "src/main.ts",
       "repository": "demo",
@@ -557,7 +623,7 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "162",
+          "lines": "161",
           "path": "src/dom/journalDocument.ts",
           "proves": "Render journal images with object-fit, explicit dimensions, retained texture readiness and cleanup.",
           "repository": "demo",
@@ -566,7 +632,7 @@
           "type": "consumer-usage"
         }
       ],
-      "line": 162,
+      "line": 161,
       "package": "@zavx0z/demo",
       "path": "src/dom/journalDocument.ts",
       "repository": "demo",
@@ -583,7 +649,7 @@
           "path": "packages/ui/dom/node-editor.ts",
           "proves": "Scale grid and routed connection presentation without a local DOM geometry renderer.",
           "repository": "node",
-          "revision": "9f390945f51f88c6374d5fb8f3215cf5d776e571+dirty",
+          "revision": "66b616a912950a023a2ddff5d62702e4074b0011",
           "symbol": "NodeEditor grid and links",
           "type": "consumer-usage"
         }
@@ -605,7 +671,7 @@
           "path": "packages/ui/node-system.tsx",
           "proves": "Present routed links and grid primitives without decomposing them into component-owned rectangles and points.",
           "repository": "node",
-          "revision": "9f390945f51f88c6374d5fb8f3215cf5d776e571+dirty",
+          "revision": "66b616a912950a023a2ddff5d62702e4074b0011",
           "symbol": "NodeConnection",
           "type": "consumer-usage"
         }
@@ -623,7 +689,7 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "162",
+          "lines": "161",
           "path": "src/dom/journalDocument.ts",
           "proves": "Compile linked .tsx component exports through the Template JSX profile instead of importing removed imperative controllers.",
           "repository": "demo",
@@ -632,7 +698,7 @@
           "type": "consumer-usage"
         }
       ],
-      "line": 162,
+      "line": 161,
       "package": "@zavx0z/demo",
       "path": "src/dom/journalDocument.ts",
       "repository": "demo",
@@ -671,7 +737,7 @@
           "path": "cosmos/internal/visual/main/index.ts",
           "proves": "Compile linked .tsx component exports and remove stale imperative createButton usage without restoring legacy APIs.",
           "repository": "metafor",
-          "revision": "603d5604ac550b044ad809d5be27190cba9118aa+dirty",
+          "revision": "fbc4aa770d8d1399d20bfa6e126fcd980722425d+dirty",
           "symbol": "Compiled dock migration",
           "type": "consumer-usage"
         }
@@ -693,7 +759,7 @@
           "path": "create-metafor/dsl/matter.ts",
           "proves": "Parse the bounded meta/log/conditional/map source contract without treating ordinary HTML as executable DOM UI.",
           "repository": "metafor",
-          "revision": "603d5604ac550b044ad809d5be27190cba9118aa+dirty",
+          "revision": "fbc4aa770d8d1399d20bfa6e126fcd980722425d+dirty",
           "symbol": "Matter source parser",
           "type": "consumer-usage"
         }

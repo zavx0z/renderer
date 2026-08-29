@@ -19,8 +19,39 @@ loadable production packages:
 
 `@zavx0z/renderer-browser` is the platform composition root for a browser
 canvas. It connects those exact owners, viewport resize, routed camera input,
-world document planes and camera-locked document overlays in one Engine frame;
-it does not add another semantic or layout tree.
+world document planes, bounded direct Engine worlds and camera-locked document
+overlays in one Engine frame; it does not add another semantic or layout tree.
+
+## Application presentation host
+
+One application Experience resolves exactly one presentation host. That host
+owns one semantic `Document`, one native canvas, one Engine `Renderer`, one
+`Space`, one `ViewPoint`, and one coordinated input/frame lifecycle.
+
+Displays, ordinary world-space UI and camera-locked HUD are projection roots of
+that same Document and Space. They own viewport, transform, clip, visibility and
+ordering parameters; they do not own another Document, canvas, Engine renderer,
+Space, stylesheet realm or semantic tree.
+
+An arbitrary direct Engine `Space` may be attached as one bounded child view of
+the same presentation host. Renderer-browser owns its logical-to-backing
+viewport conversion, listener-free ViewPoint, routed camera input, capture and
+shared frame lifecycle. Engine owns the one-canvas multi-view composition and
+framebuffer scissor. The attached world remains caller content; it does not
+become a second application or acquire a private Canvas/Renderer/RAF loop.
+
+Moving an Element between display, world and HUD roots is an ordinary
+same-Document reparent. Its DOM identity, listeners, component state,
+focus/event relations and cascade ancestry remain authoritative while derived
+layout and presentation are recomputed for the destination projection. A
+consumer must not approximate that operation through cross-Document adoption,
+remounting, duplicated component state or a private canvas/runtime.
+
+A separate browser page, window or independently owned application is a
+separate Experience and may own its own presentation host. A component, story,
+panel, display or overlay inside one Experience is not such a boundary. The
+executable contract and evidence live in
+[`packages/browser/requirements.md`](packages/browser/requirements.md).
 
 ## Semantic DOM
 
