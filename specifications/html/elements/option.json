@@ -1,0 +1,215 @@
+{
+  "entries": [
+    {
+      "description": "Option in a list box or combo box control",
+      "domain": "html",
+      "id": "html.elements.option",
+      "kind": "element",
+      "metadata": {
+        "categories": "none",
+        "children": "text*; div*; phrasing*",
+        "interface": "HTMLOptionElement",
+        "parents": "select; datalist; optgroup; div*"
+      },
+      "name": "option",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-option-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <option> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.option.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "option",
+        "interface": "HTMLOptionElement"
+      },
+      "name": "option implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.option",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "disabled content attribute on <option>.",
+      "domain": "html",
+      "id": "html.elements.option.attributes.disabled",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "option",
+        "interface": "HTMLOptionElement"
+      },
+      "name": "disabled",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.option",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-option-disabled",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "label content attribute on <option>.",
+      "domain": "html",
+      "id": "html.elements.option.attributes.label",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "option",
+        "interface": "HTMLOptionElement"
+      },
+      "name": "label",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.option",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-option-label",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "selected content attribute on <option>.",
+      "domain": "html",
+      "id": "html.elements.option.attributes.selected",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "option",
+        "interface": "HTMLOptionElement"
+      },
+      "name": "selected",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.option",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-option-selected",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "value content attribute on <option>.",
+      "domain": "html",
+      "id": "html.elements.option.attributes.value",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "option",
+        "interface": "HTMLOptionElement"
+      },
+      "name": "value",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.option",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-option-value",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <option> element content categories.",
+      "domain": "html",
+      "id": "html.elements.option.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "option",
+        "interface": "HTMLOptionElement"
+      },
+      "name": "option content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.option",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-option-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <option> element content model.",
+      "domain": "html",
+      "id": "html.elements.option.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "option",
+        "interface": "HTMLOptionElement"
+      },
+      "name": "option content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.option",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-option-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <option> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.option.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "option",
+        "interface": "HTMLOptionElement"
+      },
+      "name": "option interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.option",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-option-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/option.json"
+}

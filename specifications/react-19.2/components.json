@@ -1,0 +1,112 @@
+{
+  "entries": [
+    {
+      "description": "react public export Activity in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.components.react.activity",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "Activity",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.Activity",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export Fragment in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.components.react.fragment",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "Fragment",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.Fragment",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export Profiler in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.components.react.profiler",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "Profiler",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.Profiler",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export StrictMode in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.components.react.strictmode",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "StrictMode",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.StrictMode",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export Suspense in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.components.react.suspense",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "Suspense",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.Suspense",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "react-19.2/components.json"
+}

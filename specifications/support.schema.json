@@ -1,0 +1,139 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zavx0z.dev/schemas/platform-support-overlay-v1.json",
+  "title": "Platform owner support overlay",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "generatorVersion",
+    "repository",
+    "package",
+    "revision",
+    "verificationDate",
+    "records"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "generatorVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "repository": {
+      "type": "string",
+      "minLength": 1
+    },
+    "package": {
+      "type": "string",
+      "minLength": 1
+    },
+    "revision": {
+      "type": "string",
+      "minLength": 1
+    },
+    "verificationDate": {
+      "type": "string",
+      "format": "date"
+    },
+    "records": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "status",
+          "conformance",
+          "owner",
+          "limitations",
+          "evidence",
+          "consumers",
+          "blockedBy",
+          "blocks",
+          "lastVerified"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9][a-z0-9._-]*$"
+          },
+          "status": {
+            "enum": ["implemented", "partial", "unsupported", "not-applicable", "unverified"]
+          },
+          "conformance": {
+            "enum": ["exact", "adapted", "extension", "none", "unknown"]
+          },
+          "owner": {
+            "$ref": "platform-capability-v1.json#/$defs/owner"
+          },
+          "stages": {
+            "type": "object",
+            "minProperties": 1,
+            "additionalProperties": {
+              "enum": ["implemented", "partial", "unsupported", "not-applicable", "unverified"]
+            }
+          },
+          "limitations": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            },
+            "uniqueItems": true
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "$ref": "platform-capability-v1.json#/$defs/evidence"
+            }
+          },
+          "consumers": {
+            "$ref": "platform-capability-v1.json#/$defs/idList"
+          },
+          "blockedBy": {
+            "$ref": "platform-capability-v1.json#/$defs/idList"
+          },
+          "blocks": {
+            "$ref": "platform-capability-v1.json#/$defs/idList"
+          },
+          "lastVerified": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["revision", "date"],
+            "properties": {
+              "revision": {
+                "type": "string",
+                "minLength": 1
+              },
+              "date": {
+                "type": "string",
+                "format": "date"
+              }
+            }
+          }
+        },
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "status": {
+                  "const": "not-applicable"
+                }
+              },
+              "required": ["status"]
+            },
+            "then": {
+              "required": ["reason"]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

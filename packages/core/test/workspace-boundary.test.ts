@@ -32,7 +32,8 @@ describe("renderer workspace retirement boundary", () => {
       private: true,
       workspaces: ["packages/*"],
     })
-    expect(root.scripts.check).toBe("bun run typecheck && bun run test")
+    expect(root.scripts.check).toBe("bun run typecheck && bun run test && bun run capabilities:check")
+    expect(root.scripts["capabilities:check"]).toBe("bun run capabilities:typecheck && bun test scripts/capabilities")
 
     const names = await Promise.all([
       "browser",

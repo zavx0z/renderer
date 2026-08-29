@@ -1,0 +1,1113 @@
+{
+  "entries": [
+    {
+      "description": "interface CSSFontFaceDescriptors from css-fonts-5.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-fonts-5.idl",
+        "inheritance": "CSSStyleDeclaration"
+      },
+      "name": "CSSFontFaceDescriptors",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.ascent-override Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.ascent-override",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"ascent-override\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "ascent-override",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.ascent-override",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.ascentOverride Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.ascentoverride",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"ascentOverride\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "ascentOverride",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.ascentOverride",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.descent-override Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.descent-override",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"descent-override\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "descent-override",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.descent-override",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.descentOverride Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.descentoverride",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"descentOverride\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "descentOverride",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.descentOverride",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.font-display Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.font-display",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"font-display\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "font-display",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.font-display",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.font-family Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.font-family",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"font-family\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "font-family",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.font-family",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.font-feature-settings Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.font-feature-settings",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"font-feature-settings\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "font-feature-settings",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.font-feature-settings",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.font-language-override Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.font-language-override",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"font-language-override\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "font-language-override",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.font-language-override",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.font-named-instance Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.font-named-instance",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"font-named-instance\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "font-named-instance",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.font-named-instance",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.font-size Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.font-size",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"font-size\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "font-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.font-size",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.font-stretch Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.font-stretch",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"font-stretch\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "font-stretch",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.font-stretch",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.font-style Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.font-style",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"font-style\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "font-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.font-style",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.font-variation-settings Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.font-variation-settings",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"font-variation-settings\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "font-variation-settings",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.font-variation-settings",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.font-weight Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.font-weight",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"font-weight\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "font-weight",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.font-weight",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.font-width Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.font-width",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"font-width\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "font-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.font-width",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.fontDisplay Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.fontdisplay",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"fontDisplay\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "fontDisplay",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.fontDisplay",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.fontFamily Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.fontfamily",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"fontFamily\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "fontFamily",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.fontFamily",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.fontFeatureSettings Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.fontfeaturesettings",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"fontFeatureSettings\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "fontFeatureSettings",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.fontFeatureSettings",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.fontLanguageOverride Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.fontlanguageoverride",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"fontLanguageOverride\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "fontLanguageOverride",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.fontLanguageOverride",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.fontNamedInstance Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.fontnamedinstance",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"fontNamedInstance\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "fontNamedInstance",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.fontNamedInstance",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.fontSize Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.fontsize",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"fontSize\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "fontSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.fontSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.fontStretch Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.fontstretch",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"fontStretch\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "fontStretch",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.fontStretch",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.fontStyle Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.fontstyle",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"fontStyle\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "fontStyle",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.fontStyle",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.fontVariationSettings Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.fontvariationsettings",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"fontVariationSettings\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "fontVariationSettings",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.fontVariationSettings",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.fontWeight Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.fontweight",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"fontWeight\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "fontWeight",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.fontWeight",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.fontWidth Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.fontwidth",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"fontWidth\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "fontWidth",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.fontWidth",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.line-gap-override Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.line-gap-override",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"line-gap-override\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "line-gap-override",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.line-gap-override",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.lineGapOverride Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.linegapoverride",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"lineGapOverride\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "lineGapOverride",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.lineGapOverride",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.size-adjust Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.size-adjust",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"size-adjust\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "size-adjust",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.size-adjust",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.sizeAdjust Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.sizeadjust",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"sizeAdjust\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "sizeAdjust",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.sizeAdjust",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.src Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.src",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"src\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "src",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.src",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.subscript-position-override Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.subscript-position-override",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"subscript-position-override\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "subscript-position-override",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.subscript-position-override",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.subscript-size-override Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.subscript-size-override",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"subscript-size-override\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "subscript-size-override",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.subscript-size-override",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.subscriptPositionOverride Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.subscriptpositionoverride",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"subscriptPositionOverride\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "subscriptPositionOverride",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.subscriptPositionOverride",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.subscriptSizeOverride Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.subscriptsizeoverride",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"subscriptSizeOverride\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "subscriptSizeOverride",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.subscriptSizeOverride",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.superscript-position-override Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.superscript-position-override",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"superscript-position-override\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "superscript-position-override",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.superscript-position-override",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.superscript-size-override Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.superscript-size-override",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"superscript-size-override\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "superscript-size-override",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.superscript-size-override",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.superscriptPositionOverride Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.superscriptpositionoverride",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"superscriptPositionOverride\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "superscriptPositionOverride",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.superscriptPositionOverride",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.superscriptSizeOverride Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.superscriptsizeoverride",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"superscriptSizeOverride\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "superscriptSizeOverride",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.superscriptSizeOverride",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.unicode-range Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.unicode-range",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"unicode-range\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "unicode-range",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.unicode-range",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors.unicodeRange Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.attributes.unicoderange",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts-5.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"unicodeRange\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "unicodeRange",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors.unicodeRange",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceDescriptors has CSSStyleDeclaration as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSStyleDeclaration"
+      },
+      "name": "CSSFontFaceDescriptors inherits CSSStyleDeclaration",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceDescriptors",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSFontFaceRule from css-fonts-5.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacerule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-fonts-5.idl",
+        "inheritance": "CSSRule"
+      },
+      "name": "CSSFontFaceRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceRule.style Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacerule.attributes.style",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SameObject",
+          "PutForwards={\"type\":\"identifier\",\"value\":\"cssText\"}"
+        ],
+        "idlSource": "css-fonts-5.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"style\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSFontFaceDescriptors\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SameObject\",\"rhs\":null,\"arguments\":[]},{\"type\":\"extended-attribute\",\"name\":\"PutForwards\",\"rhs\":{\"type\":\"identifier\",\"value\":\"cssText\"},\"arguments\":[]}],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacerule",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceRule.style",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFaceRule has CSSRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts-5.interfaces.cssfontfacerule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSRule"
+      },
+      "name": "CSSFontFaceRule inherits CSSRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts-5.interfaces.cssfontfacerule",
+      "spec": {
+        "anchor": "webref/idl/css-fonts-5.idl#WebIDL:CSSFontFaceRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-fonts-5.json"
+}

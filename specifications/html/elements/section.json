@@ -1,0 +1,123 @@
+{
+  "entries": [
+    {
+      "description": "Generic document or application section",
+      "domain": "html",
+      "id": "html.elements.section",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; sectioning; palpable",
+        "children": "flow",
+        "interface": "HTMLElement",
+        "parents": "flow"
+      },
+      "name": "section",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/sections.html#the-section-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <section> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.section.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "section",
+        "interface": "HTMLElement"
+      },
+      "name": "section implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.section",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <section> element content categories.",
+      "domain": "html",
+      "id": "html.elements.section.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "section",
+        "interface": "HTMLElement"
+      },
+      "name": "section content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.section",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/sections.html#the-section-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <section> element content model.",
+      "domain": "html",
+      "id": "html.elements.section.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "section",
+        "interface": "HTMLElement"
+      },
+      "name": "section content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.section",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/sections.html#the-section-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <section> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.section.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "section",
+        "interface": "HTMLElement"
+      },
+      "name": "section interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.section",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/sections.html#the-section-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/section.json"
+}

@@ -1,5 +1,10 @@
 # Clean document-engine migration
 
+This file records the historical cutover. Current capability status and owner
+evidence are generated in `capabilities.index.json`. In particular, the current
+authoring owner is compiled `@zavx0z/react`; npm React, ReactDOM, reconciler,
+Fiber, React DevTools integration and a React custom renderer are not targets.
+
 The old root Renderer contour has been removed after its replacement and
 external-source zero-import gates passed. Generic Layout and `@ui/elements`
 were also retired after their consumer zero-import gates passed. The final
@@ -37,14 +42,11 @@ Gates:
 
 ## Slice 3 — authoring
 
-Template bindings and optional framework hosts mutate the same DOM through one
-transaction boundary. A binding update must not rebuild unaffected semantic
-nodes or derived resources.
-
-The React adapter uses the same boundary through `createRoot(container)` and
-retains host instances across keyed updates. React DevTools may attach through
-the reconciler hook; browser Elements/CSS panels still require a separate
-engine bridge because these nodes are not Blink backend nodes.
+Template compiles governed TSX to the fixed-slot ABI. `@zavx0z/react` executes
+that compiled program through `createRoot(container)` against the same semantic
+DOM and retains host instances across keyed updates. Browser Elements/CSS
+panels still require the explicit `@zavx0z/dom-devtools` bridge because these
+nodes are not Blink backend nodes.
 
 ## Slice 4 — product integration
 

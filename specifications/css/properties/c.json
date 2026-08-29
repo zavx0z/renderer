@@ -1,0 +1,3149 @@
+{
+  "entries": [
+    {
+      "domain": "css",
+      "id": "css.properties.caption-side",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "table-caption boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "top",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "caption-side",
+          "captionSide"
+        ],
+        "syntax": "top | bottom"
+      },
+      "name": "caption-side",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-tables-3/#propdef-caption-side",
+        "profile": "standard",
+        "source": "css:css-tables-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.caret",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "text or elements that accept text input",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "longhands": [
+          "caret-color",
+          "caret-animation",
+          "caret-shape"
+        ],
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "caret"
+        ],
+        "syntax": "<'caret-color'> || <'caret-animation'> || <'caret-shape'>"
+      },
+      "name": "caret",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-ui-4/#propdef-caret",
+        "profile": "standard",
+        "source": "css:css-ui-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.caret-animation",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "text or elements that accept text input",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "caret-animation",
+          "caretAnimation"
+        ],
+        "syntax": "auto | manual"
+      },
+      "name": "caret-animation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-ui-4/#propdef-caret-animation",
+        "profile": "standard",
+        "source": "css:css-ui-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.caret-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "text or elements that accept text input",
+        "canonicalOrder": "per grammar",
+        "computedValue": "The computed value for auto is auto. For <color> values, see CSS Color 4 § 15. Resolving <color> Values.",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "caret-color",
+          "caretColor"
+        ],
+        "syntax": "auto | <color> [auto | <color>]?"
+      },
+      "name": "caret-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-ui-4/#propdef-caret-color",
+        "profile": "standard",
+        "source": "css:css-ui-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.caret-shape",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "text or elements that accept text input",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "caret-shape",
+          "caretShape"
+        ],
+        "syntax": "auto | bar | block | underscore"
+      },
+      "name": "caret-shape",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-ui-4/#propdef-caret-shape",
+        "profile": "standard",
+        "source": "css:css-ui-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.clear",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block-level elements, floats, regions, pages",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "clear"
+        ],
+        "syntax": "inline-start | inline-end | block-start | block-end | left | right | top | bottom | both-inline | both-block | both | none"
+      },
+      "name": "clear",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-floats-3/#propdef-clear",
+        "profile": "standard",
+        "source": "css:css-page-floats-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.clip",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "Absolutely positioned elements. In SVG, it applies to elements which establish a new viewport, pattern elements and mask elements.",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "clip"
+        ],
+        "syntax": "<rect()> | auto"
+      },
+      "name": "clip",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-masking-1/#propdef-clip",
+        "profile": "standard",
+        "source": "css:css-masking-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.clip-path",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "All elements. In SVG, it applies to container elements excluding the defs element, all graphics elements and the use element",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified, but with <url> values made absolute",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "clip-path",
+          "clipPath"
+        ],
+        "syntax": "<clip-source> | [ <basic-shape> || <geometry-box> ] | none"
+      },
+      "name": "clip-path",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-masking-1/#propdef-clip-path",
+        "profile": "standard",
+        "source": "css:css-masking-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.clip-rule",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "Applies to SVG graphics elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "nonzero",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "clip-rule",
+          "clipRule"
+        ],
+        "syntax": "nonzero | evenodd"
+      },
+      "name": "clip-rule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-masking-1/#propdef-clip-rule",
+        "profile": "standard",
+        "source": "css:css-masking-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "computed color, see resolving color values",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "CanvasText",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "color"
+        ],
+        "syntax": "<color>"
+      },
+      "name": "color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-color-4/#propdef-color",
+        "profile": "standard",
+        "source": "css:css-color-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.color-adjust",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "print-color-adjust"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "color-adjust",
+          "colorAdjust"
+        ],
+        "syntax": "<'print-color-adjust'>"
+      },
+      "name": "color-adjust",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-color-adjust-1/#propdef-color-adjust",
+        "profile": "standard",
+        "source": "css:css-color-adjust-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.color-interpolation",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "container elements, graphics elements, gradient elements, ‘use’ and ‘animate’",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "sRGB",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "color-interpolation",
+          "colorInterpolation"
+        ],
+        "syntax": "auto | sRGB | linearRGB"
+      },
+      "name": "color-interpolation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/painting.html#ColorInterpolationProperty",
+        "profile": "standard",
+        "source": "css:svgwg",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.color-interpolation-filters",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "All filter primitives",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "linearRGB",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "color-interpolation-filters",
+          "colorInterpolationFilters"
+        ],
+        "syntax": "auto | sRGB | linearRGB"
+      },
+      "name": "color-interpolation-filters",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/filter-effects-1/#propdef-color-interpolation-filters",
+        "profile": "standard",
+        "source": "css:filter-effects-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.color-scheme",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword normal, or a color scheme support",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "color-scheme",
+          "colorScheme"
+        ],
+        "syntax": "normal | [ light | dark | <custom-ident> ]+ && only?"
+      },
+      "name": "color-scheme",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-color-adjust-1/#propdef-color-scheme",
+        "profile": "standard",
+        "source": "css:css-color-adjust-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.column-count",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "block containers except table wrapper boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "column-count",
+          "columnCount"
+        ],
+        "syntax": "auto | <integer [1,∞]>"
+      },
+      "name": "column-count",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-multicol-2/#propdef-column-count",
+        "profile": "standard",
+        "source": "css:css-multicol-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.column-fill",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "multicol containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "balance",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "column-fill",
+          "columnFill"
+        ],
+        "syntax": "auto | balance | balance-all"
+      },
+      "name": "column-fill",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-multicol-2/#propdef-column-fill",
+        "profile": "standard",
+        "source": "css:css-multicol-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.column-gap",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "multi-column containers, flex containers, grid containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword, else a computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "see § 2.3 Percentages In gap Properties",
+        "styleDeclaration": [
+          "column-gap",
+          "columnGap"
+        ],
+        "syntax": "normal | <length-percentage [0,∞]> | <line-width>"
+      },
+      "name": "column-gap",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-column-gap",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.column-height",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "block containers except table wrapper boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword auto or an absolute length",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "column-height",
+          "columnHeight"
+        ],
+        "syntax": "auto | <length [0,∞]>"
+      },
+      "name": "column-height",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-multicol-2/#propdef-column-height",
+        "profile": "standard",
+        "source": "css:css-multicol-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.column-rule",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "column-rule-width",
+          "column-rule-style",
+          "column-rule-color"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "column-rule",
+          "columnRule"
+        ],
+        "syntax": "<gap-rule-list> | <gap-auto-rule-list>"
+      },
+      "name": "column-rule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-column-rule",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.column-rule-break",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "grid containers, flex containers, multicol containers, and grid lanes containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "column-rule-break",
+          "columnRuleBreak"
+        ],
+        "syntax": "none | normal | intersection"
+      },
+      "name": "column-rule-break",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-break",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.column-rule-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "repeatable list, see § 4.7 Interpolation of list values.",
+        "appliesTo": "grid containers, flex containers, multicol containers, and grid lanes containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "currentcolor",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "column-rule-color",
+          "columnRuleColor"
+        ],
+        "syntax": "<line-color-list> | <auto-line-color-list>"
+      },
+      "name": "column-rule-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-color",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.column-rule-inset",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "Same as column-rule-inset-cap, column-rule-inset-junction, row-rule-inset-cap, and row-rule-inset-junction",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "column-rule-inset-cap-start",
+          "column-rule-inset-cap-end",
+          "column-rule-inset-junction-start",
+          "column-rule-inset-junction-end"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "column-rule-inset",
+          "columnRuleInset"
+        ],
+        "syntax": "<'column-rule-inset-cap'> [ / <'column-rule-inset-junction'> ]?"
+      },
+      "name": "column-rule-inset",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-inset",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.column-rule-inset-cap",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "Same as column-rule-inset-cap-start, column-rule-inset-cap-end, column-rule-inset-junction-start, column-rule-inset-junction-end, row-rule-inset-cap-start, row-rule-inset-cap-end, row-rule-inset-junction-start, and row-rule-inset-junction-end",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "column-rule-inset-cap-start",
+          "column-rule-inset-cap-end"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "column-rule-inset-cap",
+          "columnRuleInsetCap"
+        ],
+        "syntax": "<inset-value> <inset-value>?"
+      },
+      "name": "column-rule-inset-cap",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-inset-cap",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.column-rule-inset-cap-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "grid containers, flex containers, multicol containers, and grid lanes containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "percentages": "refer to the crossing gap width",
+        "styleDeclaration": [
+          "column-rule-inset-cap-end",
+          "columnRuleInsetCapEnd"
+        ],
+        "syntax": "<inset-value>"
+      },
+      "name": "column-rule-inset-cap-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-inset-cap-end",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.column-rule-inset-cap-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "grid containers, flex containers, multicol containers, and grid lanes containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "percentages": "refer to the crossing gap width",
+        "styleDeclaration": [
+          "column-rule-inset-cap-start",
+          "columnRuleInsetCapStart"
+        ],
+        "syntax": "<inset-value>"
+      },
+      "name": "column-rule-inset-cap-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-inset-cap-start",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.column-rule-inset-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "Same as column-rule-inset-cap-start, column-rule-inset-junction-start, column-rule-inset-cap-end, column-rule-inset-junction-end, row-rule-inset-cap-start, row-rule-inset-junction-start, row-rule-inset-cap-end, and row-rule-inset-junction-end",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "column-rule-inset-cap-end",
+          "column-rule-inset-junction-end"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "column-rule-inset-end",
+          "columnRuleInsetEnd"
+        ],
+        "syntax": "<inset-value>"
+      },
+      "name": "column-rule-inset-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-inset-end",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.column-rule-inset-junction",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "Same as column-rule-inset-cap-start, column-rule-inset-cap-end, column-rule-inset-junction-start, column-rule-inset-junction-end, row-rule-inset-cap-start, row-rule-inset-cap-end, row-rule-inset-junction-start, and row-rule-inset-junction-end",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "column-rule-inset-junction-start",
+          "column-rule-inset-junction-end"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "column-rule-inset-junction",
+          "columnRuleInsetJunction"
+        ],
+        "syntax": "<inset-value> <inset-value>?"
+      },
+      "name": "column-rule-inset-junction",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-inset-junction",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.column-rule-inset-junction-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "grid containers, flex containers, multicol containers, and grid lanes containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "percentages": "refer to the crossing gap width",
+        "styleDeclaration": [
+          "column-rule-inset-junction-end",
+          "columnRuleInsetJunctionEnd"
+        ],
+        "syntax": "<inset-value>"
+      },
+      "name": "column-rule-inset-junction-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-inset-junction-end",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.column-rule-inset-junction-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "grid containers, flex containers, multicol containers, and grid lanes containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "percentages": "refer to the crossing gap width",
+        "styleDeclaration": [
+          "column-rule-inset-junction-start",
+          "columnRuleInsetJunctionStart"
+        ],
+        "syntax": "<inset-value>"
+      },
+      "name": "column-rule-inset-junction-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-inset-junction-start",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.column-rule-inset-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "Same as column-rule-inset-cap-start, column-rule-inset-junction-start, column-rule-inset-cap-end, column-rule-inset-junction-end, row-rule-inset-cap-start, row-rule-inset-junction-start, row-rule-inset-cap-end, and row-rule-inset-junction-end",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "column-rule-inset-cap-start",
+          "column-rule-inset-junction-start"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "column-rule-inset-start",
+          "columnRuleInsetStart"
+        ],
+        "syntax": "<inset-value>"
+      },
+      "name": "column-rule-inset-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-inset-start",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.column-rule-style",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "grid containers, flex containers, multicol containers, and grid lanes containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "column-rule-style",
+          "columnRuleStyle"
+        ],
+        "syntax": "<line-style-list> | <auto-line-style-list>"
+      },
+      "name": "column-rule-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-style",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.column-rule-visibility-items",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "grid containers and multicol containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "column-rule-visibility-items",
+          "columnRuleVisibilityItems"
+        ],
+        "syntax": "all | around | between | normal"
+      },
+      "name": "column-rule-visibility-items",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-visibility-items",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.column-rule-width",
+      "kind": "property",
+      "metadata": {
+        "animationType": "repeatable list, see § 4.7 Interpolation of list values.",
+        "appliesTo": "grid containers, flex containers, multicol containers, and grid lanes containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list of absolute lengths, snapped as a border width",
+        "extended": [],
+        "inherited": "no",
+        "initial": "medium",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "column-rule-width",
+          "columnRuleWidth"
+        ],
+        "syntax": "<line-width-list> | <auto-line-width-list>"
+      },
+      "name": "column-rule-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-column-rule-width",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.column-span",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "in-flow block-level elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "column-span",
+          "columnSpan"
+        ],
+        "syntax": "none | <integer [1,∞]> | all | auto"
+      },
+      "name": "column-span",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-multicol-2/#propdef-column-span",
+        "profile": "standard",
+        "source": "css:css-multicol-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.column-width",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "block containers except table wrapper boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword auto or an absolute length",
+        "extended": [
+          "https://drafts.csswg.org/css-sizing-3/"
+        ],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "column-width",
+          "columnWidth"
+        ],
+        "syntax": "auto | <length [0,∞]> | min-content | max-content | fit-content(<length-percentage>)"
+      },
+      "name": "column-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-multicol-2/#propdef-column-width",
+        "profile": "standard",
+        "source": "css:css-multicol-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.column-wrap",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "multicol containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "column-wrap",
+          "columnWrap"
+        ],
+        "syntax": "auto | nowrap | wrap"
+      },
+      "name": "column-wrap",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-multicol-2/#propdef-column-wrap",
+        "profile": "standard",
+        "source": "css:css-multicol-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.columns",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "column-width",
+          "column-count",
+          "column-height"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "columns"
+        ],
+        "syntax": "[ <'column-width'> || <'column-count'> ] [ / <'column-height'> ]?"
+      },
+      "name": "columns",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-multicol-2/#propdef-columns",
+        "profile": "standard",
+        "source": "css:css-multicol-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.contain",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "See below",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword none or one or more of size, layout, style, paint",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "contain"
+        ],
+        "syntax": "none | strict | content | [ [size | inline-size] || layout || style || paint ]"
+      },
+      "name": "contain",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-contain-2/#propdef-contain",
+        "profile": "standard",
+        "source": "css:css-contain-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.contain-intrinsic-block-size",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "elements with size containment",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified, with <length> values computed",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "logicalPropertyGroup": "contain-intrinsic-size",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "contain-intrinsic-block-size",
+          "containIntrinsicBlockSize"
+        ],
+        "syntax": "auto? [ none | <length [0,∞]> ]"
+      },
+      "name": "contain-intrinsic-block-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-block-size",
+        "profile": "standard",
+        "source": "css:css-sizing-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.contain-intrinsic-height",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "elements with size containment",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified, with <length> values computed",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "logicalPropertyGroup": "contain-intrinsic-size",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "contain-intrinsic-height",
+          "containIntrinsicHeight"
+        ],
+        "syntax": "auto? [ none | <length [0,∞]> ]"
+      },
+      "name": "contain-intrinsic-height",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-height",
+        "profile": "standard",
+        "source": "css:css-sizing-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.contain-intrinsic-inline-size",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "elements with size containment",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified, with <length> values computed",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "logicalPropertyGroup": "contain-intrinsic-size",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "contain-intrinsic-inline-size",
+          "containIntrinsicInlineSize"
+        ],
+        "syntax": "auto? [ none | <length [0,∞]> ]"
+      },
+      "name": "contain-intrinsic-inline-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-inline-size",
+        "profile": "standard",
+        "source": "css:css-sizing-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.contain-intrinsic-size",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "contain-intrinsic-width",
+          "contain-intrinsic-height"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "contain-intrinsic-size",
+          "containIntrinsicSize"
+        ],
+        "syntax": "[ auto? [ none | <length [0,∞]> ] ]{1,2}"
+      },
+      "name": "contain-intrinsic-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-size",
+        "profile": "standard",
+        "source": "css:css-sizing-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.contain-intrinsic-width",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "elements with size containment",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified, with <length> values computed",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "logicalPropertyGroup": "contain-intrinsic-size",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "contain-intrinsic-width",
+          "containIntrinsicWidth"
+        ],
+        "syntax": "auto? [ none | <length [0,∞]> ]"
+      },
+      "name": "contain-intrinsic-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-sizing-4/#propdef-contain-intrinsic-width",
+        "profile": "standard",
+        "source": "css:css-sizing-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.container",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "container-name",
+          "container-type"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "container"
+        ],
+        "syntax": "<'container-name'> [ / <'container-type'> ]?"
+      },
+      "name": "container",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-conditional-5/#propdef-container",
+        "profile": "standard",
+        "source": "css:css-conditional-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.container-name",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword none, or an ordered list of identifiers",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "container-name",
+          "containerName"
+        ],
+        "syntax": "none | <custom-ident>+"
+      },
+      "name": "container-name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-conditional-5/#propdef-container-name",
+        "profile": "standard",
+        "source": "css:css-conditional-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.container-type",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "container-type",
+          "containerType"
+        ],
+        "syntax": "normal | [ [ size | inline-size ] || scroll-state ]"
+      },
+      "name": "container-type",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-conditional-5/#propdef-container-type",
+        "profile": "standard",
+        "source": "css:css-conditional-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.content",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements, tree-abiding pseudo-elements, and page margin boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "See prose below",
+        "extended": [
+          "https://drafts.csswg.org/css-gcpm-3/"
+        ],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "content"
+        ],
+        "syntax": "normal | none | [ <content-replacement> | <content-list> ] [/ [ <string> | <counter> | <attr()> ]+ ]? | <element()>"
+      },
+      "name": "content",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-content-3/#propdef-content",
+        "profile": "standard",
+        "source": "css:css-content-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.content-visibility",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see § 4.1 Animating and Interpolating content-visibility",
+        "appliesTo": "elements for which size containment can apply",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "visible",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "content-visibility",
+          "contentVisibility"
+        ],
+        "syntax": "visible | auto | hidden"
+      },
+      "name": "content-visibility",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-contain-2/#propdef-content-visibility",
+        "profile": "standard",
+        "source": "css:css-contain-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.continue",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block containers and multicol containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [
+          "https://drafts.csswg.org/css-overflow-5/"
+        ],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "continue"
+        ],
+        "syntax": "auto | discard | collapse | -webkit-legacy | overflow | paginate | fragments"
+      },
+      "name": "continue",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-4/#propdef-continue",
+        "profile": "standard",
+        "source": "css:css-overflow-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.copy-into",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements and pseudo-elements, but not ::first-line or ::first-letter.",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "copy-into",
+          "copyInto"
+        ],
+        "syntax": "none | [ [ <custom-ident> <content-level>] [, <custom-ident> <content-level>]* ]?"
+      },
+      "name": "copy-into",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gcpm-4/#propdef-copy-into",
+        "profile": "standard",
+        "source": "css:css-gcpm-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "border-radius",
+          "corner-shape"
+        ],
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "corner"
+        ],
+        "syntax": "<'border-radius'> || <'corner-shape'>"
+      },
+      "name": "corner",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-block-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "border-block-end-radius",
+          "corner-block-end-shape"
+        ],
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "corner-block-end",
+          "cornerBlockEnd"
+        ],
+        "syntax": "<'border-top-radius'> || <'corner-top-shape'>"
+      },
+      "name": "corner-block-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-block-end",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-block-end-shape",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "corner-end-start-shape",
+          "corner-end-end-shape"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "corner-block-end-shape",
+          "cornerBlockEndShape"
+        ],
+        "syntax": "<'corner-top-left-shape'>{1,2}"
+      },
+      "name": "corner-block-end-shape",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-block-end-shape",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-block-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "border-block-start-radius",
+          "corner-block-start-shape"
+        ],
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "corner-block-start",
+          "cornerBlockStart"
+        ],
+        "syntax": "<'border-top-radius'> || <'corner-top-shape'>"
+      },
+      "name": "corner-block-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-block-start",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-block-start-shape",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "corner-start-start-shape",
+          "corner-start-end-shape"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "corner-block-start-shape",
+          "cornerBlockStartShape"
+        ],
+        "syntax": "<'corner-top-left-shape'>{1,2}"
+      },
+      "name": "corner-block-start-shape",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-block-start-shape",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-bottom",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "border-bottom-radius",
+          "corner-bottom-shape"
+        ],
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "corner-bottom",
+          "cornerBottom"
+        ],
+        "syntax": "<'border-top-radius'> || <'corner-top-shape'>"
+      },
+      "name": "corner-bottom",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-bottom",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-bottom-left",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "border-bottom-left-radius",
+          "corner-bottom-left-shape"
+        ],
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "corner-bottom-left",
+          "cornerBottomLeft"
+        ],
+        "syntax": "<'border-top-left-radius'> || <'corner-top-left-shape'>"
+      },
+      "name": "corner-bottom-left",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-bottom-left",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-bottom-left-shape",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see superellipse interpolation",
+        "appliesTo": "all elements where border-radius can apply",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the corresponding superellipse() value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "round",
+        "logicalPropertyGroup": "corner-shape",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "corner-bottom-left-shape",
+          "cornerBottomLeftShape"
+        ],
+        "syntax": "<corner-shape-value>"
+      },
+      "name": "corner-bottom-left-shape",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-bottom-left-shape",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-bottom-right",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "border-bottom-right-radius",
+          "corner-bottom-right-shape"
+        ],
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "corner-bottom-right",
+          "cornerBottomRight"
+        ],
+        "syntax": "<'border-top-left-radius'> || <'corner-top-left-shape'>"
+      },
+      "name": "corner-bottom-right",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-bottom-right",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-bottom-right-shape",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see superellipse interpolation",
+        "appliesTo": "all elements where border-radius can apply",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the corresponding superellipse() value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "round",
+        "logicalPropertyGroup": "corner-shape",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "corner-bottom-right-shape",
+          "cornerBottomRightShape"
+        ],
+        "syntax": "<corner-shape-value>"
+      },
+      "name": "corner-bottom-right-shape",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-bottom-right-shape",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-bottom-shape",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "corner-bottom-left-shape",
+          "corner-bottom-right-shape"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "corner-bottom-shape",
+          "cornerBottomShape"
+        ],
+        "syntax": "<'corner-top-left-shape'>{1,2}"
+      },
+      "name": "corner-bottom-shape",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-bottom-shape",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-end-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "border-end-end-radius",
+          "corner-end-end-shape"
+        ],
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "corner-end-end",
+          "cornerEndEnd"
+        ],
+        "syntax": "<'border-top-left-radius'> || <'corner-top-left-shape'>"
+      },
+      "name": "corner-end-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-end-end",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-end-end-shape",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see superellipse interpolation",
+        "appliesTo": "all elements where border-radius can apply",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the corresponding superellipse() value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "round",
+        "logicalPropertyGroup": "corner-shape",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "corner-end-end-shape",
+          "cornerEndEndShape"
+        ],
+        "syntax": "<corner-shape-value>"
+      },
+      "name": "corner-end-end-shape",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-end-end-shape",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-end-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "border-end-start-radius",
+          "corner-end-start-shape"
+        ],
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "corner-end-start",
+          "cornerEndStart"
+        ],
+        "syntax": "<'border-top-left-radius'> || <'corner-top-left-shape'>"
+      },
+      "name": "corner-end-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-end-start",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-end-start-shape",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see superellipse interpolation",
+        "appliesTo": "all elements where border-radius can apply",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the corresponding superellipse() value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "round",
+        "logicalPropertyGroup": "corner-shape",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "corner-end-start-shape",
+          "cornerEndStartShape"
+        ],
+        "syntax": "<corner-shape-value>"
+      },
+      "name": "corner-end-start-shape",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-end-start-shape",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-inline-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "border-inline-end-radius",
+          "corner-inline-end-shape"
+        ],
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "corner-inline-end",
+          "cornerInlineEnd"
+        ],
+        "syntax": "<'border-top-radius'> || <'corner-top-shape'>"
+      },
+      "name": "corner-inline-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-inline-end",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-inline-end-shape",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "corner-start-end-shape",
+          "corner-end-end-shape"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "corner-inline-end-shape",
+          "cornerInlineEndShape"
+        ],
+        "syntax": "<'corner-top-left-shape'>{1,2}"
+      },
+      "name": "corner-inline-end-shape",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-inline-end-shape",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-inline-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "border-inline-start-radius",
+          "corner-inline-start-shape"
+        ],
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "corner-inline-start",
+          "cornerInlineStart"
+        ],
+        "syntax": "<'border-top-radius'> || <'corner-top-shape'>"
+      },
+      "name": "corner-inline-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-inline-start",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-inline-start-shape",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "corner-start-start-shape",
+          "corner-end-start-shape"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "corner-inline-start-shape",
+          "cornerInlineStartShape"
+        ],
+        "syntax": "<'corner-top-left-shape'>{1,2}"
+      },
+      "name": "corner-inline-start-shape",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-inline-start-shape",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-left",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "border-left-radius",
+          "corner-left-shape"
+        ],
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "corner-left",
+          "cornerLeft"
+        ],
+        "syntax": "<'border-top-radius'> || <'corner-top-shape'>"
+      },
+      "name": "corner-left",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-left",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-left-shape",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "corner-top-left-shape",
+          "corner-bottom-left-shape"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "corner-left-shape",
+          "cornerLeftShape"
+        ],
+        "syntax": "<'corner-top-left-shape'>{1,2}"
+      },
+      "name": "corner-left-shape",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-left-shape",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-right",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "border-right-radius",
+          "corner-right-shape"
+        ],
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "corner-right",
+          "cornerRight"
+        ],
+        "syntax": "<'border-top-radius'> || <'corner-top-shape'>"
+      },
+      "name": "corner-right",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-right",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-right-shape",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "corner-top-right-shape",
+          "corner-bottom-right-shape"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "corner-right-shape",
+          "cornerRightShape"
+        ],
+        "syntax": "<'corner-top-left-shape'>{1,2}"
+      },
+      "name": "corner-right-shape",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-right-shape",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-shape",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements where border-radius can apply",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "round",
+        "longhands": [
+          "corner-top-left-shape",
+          "corner-top-right-shape",
+          "corner-bottom-right-shape",
+          "corner-bottom-left-shape"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "corner-shape",
+          "cornerShape"
+        ],
+        "syntax": "<'corner-top-left-shape'>{1,4}"
+      },
+      "name": "corner-shape",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-shape",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-start-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "border-start-end-radius",
+          "corner-start-end-shape"
+        ],
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "corner-start-end",
+          "cornerStartEnd"
+        ],
+        "syntax": "<'border-top-left-radius'> || <'corner-top-left-shape'>"
+      },
+      "name": "corner-start-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-start-end",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-start-end-shape",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see superellipse interpolation",
+        "appliesTo": "all elements where border-radius can apply",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the corresponding superellipse() value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "round",
+        "logicalPropertyGroup": "corner-shape",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "corner-start-end-shape",
+          "cornerStartEndShape"
+        ],
+        "syntax": "<corner-shape-value>"
+      },
+      "name": "corner-start-end-shape",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-start-end-shape",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-start-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "border-start-start-radius",
+          "corner-start-start-shape"
+        ],
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "corner-start-start",
+          "cornerStartStart"
+        ],
+        "syntax": "<'border-top-left-radius'> || <'corner-top-left-shape'>"
+      },
+      "name": "corner-start-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-start-start",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-start-start-shape",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see superellipse interpolation",
+        "appliesTo": "all elements where border-radius can apply",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the corresponding superellipse() value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "round",
+        "logicalPropertyGroup": "corner-shape",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "corner-start-start-shape",
+          "cornerStartStartShape"
+        ],
+        "syntax": "<corner-shape-value>"
+      },
+      "name": "corner-start-start-shape",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-start-start-shape",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-top",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "border-top-radius",
+          "corner-top-shape"
+        ],
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "corner-top",
+          "cornerTop"
+        ],
+        "syntax": "<'border-top-radius'> || <'corner-top-shape'>"
+      },
+      "name": "corner-top",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-top",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-top-left",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "border-top-left-radius",
+          "corner-top-left-shape"
+        ],
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "corner-top-left",
+          "cornerTopLeft"
+        ],
+        "syntax": "<'border-top-left-radius'> || <'corner-top-left-shape'>"
+      },
+      "name": "corner-top-left",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-top-left",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-top-left-shape",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see superellipse interpolation",
+        "appliesTo": "all elements where border-radius can apply",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the corresponding superellipse() value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "round",
+        "logicalPropertyGroup": "corner-shape",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "corner-top-left-shape",
+          "cornerTopLeftShape"
+        ],
+        "syntax": "<corner-shape-value>"
+      },
+      "name": "corner-top-left-shape",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-top-left-shape",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-top-right",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "border-top-right-radius",
+          "corner-top-right-shape"
+        ],
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "corner-top-right",
+          "cornerTopRight"
+        ],
+        "syntax": "<'border-top-left-radius'> || <'corner-top-left-shape'>"
+      },
+      "name": "corner-top-right",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-top-right",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-top-right-shape",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see superellipse interpolation",
+        "appliesTo": "all elements where border-radius can apply",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the corresponding superellipse() value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "round",
+        "logicalPropertyGroup": "corner-shape",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "corner-top-right-shape",
+          "cornerTopRightShape"
+        ],
+        "syntax": "<corner-shape-value>"
+      },
+      "name": "corner-top-right-shape",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-top-right-shape",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.corner-top-shape",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "corner-top-left-shape",
+          "corner-top-right-shape"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "corner-top-shape",
+          "cornerTopShape"
+        ],
+        "syntax": "<'corner-top-left-shape'>{1,2}"
+      },
+      "name": "corner-top-shape",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-corner-top-shape",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.counter-increment",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword none or a list, each item an identifier paired with an integer",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "counter-increment",
+          "counterIncrement"
+        ],
+        "syntax": "[ <counter-name> <integer>? ]+ | none"
+      },
+      "name": "counter-increment",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-lists-3/#propdef-counter-increment",
+        "profile": "standard",
+        "source": "css:css-lists-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.counter-reset",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword none or a list, each item an identifier or a reversed() function paired with an integer",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "counter-reset",
+          "counterReset"
+        ],
+        "syntax": "[ <counter-name> <integer>? | <reversed-counter-name> <integer>? ]+ | none"
+      },
+      "name": "counter-reset",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-lists-3/#propdef-counter-reset",
+        "profile": "standard",
+        "source": "css:css-lists-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.counter-set",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword none or a list, each item an identifier paired with an integer",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "counter-set",
+          "counterSet"
+        ],
+        "syntax": "[ <counter-name> <integer>? ]+ | none"
+      },
+      "name": "counter-set",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-lists-3/#propdef-counter-set",
+        "profile": "standard",
+        "source": "css:css-lists-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.cue",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "see individual properties",
+        "longhands": [
+          "cue-before",
+          "cue-after"
+        ],
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "cue"
+        ],
+        "syntax": "<'cue-before'> <'cue-after'>?"
+      },
+      "name": "cue",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-speech-1/#propdef-cue",
+        "profile": "standard",
+        "source": "css:css-speech-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.cue-after",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "cue-after",
+          "cueAfter"
+        ],
+        "syntax": "<url> <decibel>? | none"
+      },
+      "name": "cue-after",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-speech-1/#propdef-cue-after",
+        "profile": "standard",
+        "source": "css:css-speech-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.cue-before",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "cue-before",
+          "cueBefore"
+        ],
+        "syntax": "<url> <decibel>? | none"
+      },
+      "name": "cue-before",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-speech-1/#propdef-cue-before",
+        "profile": "standard",
+        "source": "css:css-speech-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.cursor",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified, except with any relative URLs converted to absolute",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "cursor"
+        ],
+        "syntax": "[<cursor-image>,]* <cursor-predefined>"
+      },
+      "name": "cursor",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-ui-4/#propdef-cursor",
+        "profile": "standard",
+        "source": "css:css-ui-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.cx",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "‘circle’ and ‘ellipse’ elements",
+        "computedValue": "an absolute length or percentage",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "media": "visual",
+        "percentages": "refer to the width of the current SVG viewport (see Units)",
+        "styleDeclaration": [
+          "cx"
+        ],
+        "syntax": "<length-percentage>"
+      },
+      "name": "cx",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/geometry.html#CxProperty",
+        "profile": "standard",
+        "source": "css:svgwg",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.cy",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "‘circle’ and ‘ellipse’ elements",
+        "computedValue": "an absolute length or percentage",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "media": "visual",
+        "percentages": "refer to the height of the current SVG viewport (see Units)",
+        "styleDeclaration": [
+          "cy"
+        ],
+        "syntax": "<length-percentage>"
+      },
+      "name": "cy",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/geometry.html#CyProperty",
+        "profile": "standard",
+        "source": "css:svgwg",
+        "version": "8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/properties/c.json"
+}

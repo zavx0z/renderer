@@ -1,0 +1,28 @@
+{
+  "entries": [
+    {
+      "description": "react/compiler-runtime public export c in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.compiler-runtime.react-compiler-runtime.c",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react/compiler-runtime"
+      },
+      "name": "c",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react/compiler-runtime@19.2.0#exports.c",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "react-19.2/compiler-runtime.json"
+}

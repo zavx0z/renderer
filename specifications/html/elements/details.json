@@ -1,0 +1,192 @@
+{
+  "entries": [
+    {
+      "description": "Disclosure control for hiding details",
+      "domain": "html",
+      "id": "html.elements.details",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; interactive; palpable",
+        "children": "summary*; flow",
+        "interface": "HTMLDetailsElement",
+        "parents": "flow"
+      },
+      "name": "details",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <details> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.details.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "details",
+        "interface": "HTMLDetailsElement"
+      },
+      "name": "details implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.details",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <details> element activation and default action.",
+      "domain": "html",
+      "id": "html.elements.details.activation-behavior",
+      "kind": "activation-behavior",
+      "metadata": {
+        "element": "details",
+        "interface": "HTMLDetailsElement"
+      },
+      "name": "details activation and default action",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.details",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "name content attribute on <details>.",
+      "domain": "html",
+      "id": "html.elements.details.attributes.name",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "details",
+        "interface": "HTMLDetailsElement"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.details",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/interactive-elements.html#attr-details-name",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "open content attribute on <details>.",
+      "domain": "html",
+      "id": "html.elements.details.attributes.open",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "details",
+        "interface": "HTMLDetailsElement"
+      },
+      "name": "open",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.details",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/interactive-elements.html#attr-details-open",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <details> element content categories.",
+      "domain": "html",
+      "id": "html.elements.details.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "details",
+        "interface": "HTMLDetailsElement"
+      },
+      "name": "details content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.details",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <details> element content model.",
+      "domain": "html",
+      "id": "html.elements.details.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "details",
+        "interface": "HTMLDetailsElement"
+      },
+      "name": "details content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.details",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <details> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.details.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "details",
+        "interface": "HTMLDetailsElement"
+      },
+      "name": "details interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.details",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/details.json"
+}

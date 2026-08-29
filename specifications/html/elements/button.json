@@ -1,0 +1,468 @@
+{
+  "entries": [
+    {
+      "description": "Button control",
+      "domain": "html",
+      "id": "html.elements.button",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; phrasing; interactive; listed; labelable; submittable; form-associated; palpable",
+        "children": "phrasing*",
+        "interface": "HTMLButtonElement",
+        "parents": "phrasing; select*"
+      },
+      "name": "button",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-button-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <button> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.button.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "button",
+        "interface": "HTMLButtonElement"
+      },
+      "name": "button implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.button",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <button> element activation and default action.",
+      "domain": "html",
+      "id": "html.elements.button.activation-behavior",
+      "kind": "activation-behavior",
+      "metadata": {
+        "element": "button",
+        "interface": "HTMLButtonElement"
+      },
+      "name": "button activation and default action",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.button",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-button-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "command content attribute on <button>.",
+      "domain": "html",
+      "id": "html.elements.button.attributes.command",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "button",
+        "interface": "HTMLButtonElement"
+      },
+      "name": "command",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.button",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-button-command",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "commandfor content attribute on <button>.",
+      "domain": "html",
+      "id": "html.elements.button.attributes.commandfor",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "button",
+        "interface": "HTMLButtonElement"
+      },
+      "name": "commandfor",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.button",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-button-commandfor",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "disabled content attribute on <button>.",
+      "domain": "html",
+      "id": "html.elements.button.attributes.disabled",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "button",
+        "interface": "HTMLButtonElement"
+      },
+      "name": "disabled",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.button",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fe-disabled",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "form content attribute on <button>.",
+      "domain": "html",
+      "id": "html.elements.button.attributes.form",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "button",
+        "interface": "HTMLButtonElement"
+      },
+      "name": "form",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.button",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fae-form",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "formaction content attribute on <button>.",
+      "domain": "html",
+      "id": "html.elements.button.attributes.formaction",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "button",
+        "interface": "HTMLButtonElement"
+      },
+      "name": "formaction",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.button",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fs-formaction",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "formenctype content attribute on <button>.",
+      "domain": "html",
+      "id": "html.elements.button.attributes.formenctype",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "button",
+        "interface": "HTMLButtonElement"
+      },
+      "name": "formenctype",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.button",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fs-formenctype",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "formmethod content attribute on <button>.",
+      "domain": "html",
+      "id": "html.elements.button.attributes.formmethod",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "button",
+        "interface": "HTMLButtonElement"
+      },
+      "name": "formmethod",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.button",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fs-formmethod",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "formnovalidate content attribute on <button>.",
+      "domain": "html",
+      "id": "html.elements.button.attributes.formnovalidate",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "button",
+        "interface": "HTMLButtonElement"
+      },
+      "name": "formnovalidate",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.button",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fs-formnovalidate",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "formtarget content attribute on <button>.",
+      "domain": "html",
+      "id": "html.elements.button.attributes.formtarget",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "button",
+        "interface": "HTMLButtonElement"
+      },
+      "name": "formtarget",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.button",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fs-formtarget",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "name content attribute on <button>.",
+      "domain": "html",
+      "id": "html.elements.button.attributes.name",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "button",
+        "interface": "HTMLButtonElement"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.button",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fe-name",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "popovertarget content attribute on <button>.",
+      "domain": "html",
+      "id": "html.elements.button.attributes.popovertarget",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "button",
+        "interface": "HTMLButtonElement"
+      },
+      "name": "popovertarget",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.button",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/popover.html#attr-popovertarget",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "popovertargetaction content attribute on <button>.",
+      "domain": "html",
+      "id": "html.elements.button.attributes.popovertargetaction",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "button",
+        "interface": "HTMLButtonElement"
+      },
+      "name": "popovertargetaction",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.button",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/popover.html#attr-popovertargetaction",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "type content attribute on <button>.",
+      "domain": "html",
+      "id": "html.elements.button.attributes.type",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "button",
+        "interface": "HTMLButtonElement"
+      },
+      "name": "type",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.button",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-button-type",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "value content attribute on <button>.",
+      "domain": "html",
+      "id": "html.elements.button.attributes.value",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "button",
+        "interface": "HTMLButtonElement"
+      },
+      "name": "value",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.button",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-button-value",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <button> element content categories.",
+      "domain": "html",
+      "id": "html.elements.button.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "button",
+        "interface": "HTMLButtonElement"
+      },
+      "name": "button content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.button",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-button-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <button> element content model.",
+      "domain": "html",
+      "id": "html.elements.button.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "button",
+        "interface": "HTMLButtonElement"
+      },
+      "name": "button content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.button",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-button-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <button> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.button.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "button",
+        "interface": "HTMLButtonElement"
+      },
+      "name": "button interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.button",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-button-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/button.json"
+}

@@ -1,0 +1,149 @@
+{
+  "entries": [
+    {
+      "description": "interface CSSLayerBlockRule from css-cascade.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-cascade.interfaces.csslayerblockrule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-cascade.idl",
+        "inheritance": "CSSGroupingRule"
+      },
+      "name": "CSSLayerBlockRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-cascade.idl#WebIDL:CSSLayerBlockRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSLayerBlockRule.name Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-cascade.interfaces.csslayerblockrule.attributes.name",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-cascade.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"name\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-cascade.interfaces.csslayerblockrule",
+      "spec": {
+        "anchor": "webref/idl/css-cascade.idl#WebIDL:CSSLayerBlockRule.name",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSLayerBlockRule has CSSGroupingRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-cascade.interfaces.csslayerblockrule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSGroupingRule"
+      },
+      "name": "CSSLayerBlockRule inherits CSSGroupingRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-cascade.interfaces.csslayerblockrule",
+      "spec": {
+        "anchor": "webref/idl/css-cascade.idl#WebIDL:CSSLayerBlockRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSLayerStatementRule from css-cascade.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-cascade.interfaces.csslayerstatementrule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-cascade.idl",
+        "inheritance": "CSSRule"
+      },
+      "name": "CSSLayerStatementRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-cascade.idl#WebIDL:CSSLayerStatementRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSLayerStatementRule.nameList Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-cascade.interfaces.csslayerstatementrule.attributes.namelist",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-cascade.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"nameList\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"FrozenArray\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"}]},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "nameList",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-cascade.interfaces.csslayerstatementrule",
+      "spec": {
+        "anchor": "webref/idl/css-cascade.idl#WebIDL:CSSLayerStatementRule.nameList",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSLayerStatementRule has CSSRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-cascade.interfaces.csslayerstatementrule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSRule"
+      },
+      "name": "CSSLayerStatementRule inherits CSSRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-cascade.interfaces.csslayerstatementrule",
+      "spec": {
+        "anchor": "webref/idl/css-cascade.idl#WebIDL:CSSLayerStatementRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-cascade.json"
+}

@@ -1,0 +1,1087 @@
+{
+  "generatorVersion": "1.0.0",
+  "package": "@zavx0z/dom-devtools",
+  "records": [
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "none",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Runtime implementation or observable conformance.",
+          "path": "packages/devtools/requirements.md",
+          "proves": "The pinned project inventory contains devtools.features.css-panel.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "css panel",
+          "type": "requirement"
+        }
+      ],
+      "id": "devtools.features.css-panel",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "The inspection bridge intentionally has no panel/editing/transport/React/Engine integration for this capability."
+      ],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "unsupported"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Browser panel, editing, transport, or Engine resources.",
+          "lines": "31-319",
+          "path": "packages/devtools/src/inspector.ts",
+          "proves": "Pull snapshot/notification inspection bridge.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "deep-frozen-json",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Chrome DevTools integration.",
+          "path": "packages/devtools/test/dom-inspector.test.ts",
+          "proves": "Exact identity, snapshots, projection, notifications, and disposal.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "deep-frozen-json",
+          "type": "unit-test"
+        }
+      ],
+      "id": "devtools.features.deep-frozen-json",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Browser panel, editing, transport, or Engine resources.",
+          "lines": "31-319",
+          "path": "packages/devtools/src/inspector.ts",
+          "proves": "Pull snapshot/notification inspection bridge.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "display-key-projection",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Chrome DevTools integration.",
+          "path": "packages/devtools/test/dom-inspector.test.ts",
+          "proves": "Exact identity, snapshots, projection, notifications, and disposal.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "display-key-projection",
+          "type": "unit-test"
+        }
+      ],
+      "id": "devtools.features.display-key-projection",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Browser panel, editing, transport, or Engine resources.",
+          "lines": "31-319",
+          "path": "packages/devtools/src/inspector.ts",
+          "proves": "Pull snapshot/notification inspection bridge.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "disposal",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Chrome DevTools integration.",
+          "path": "packages/devtools/test/dom-inspector.test.ts",
+          "proves": "Exact identity, snapshots, projection, notifications, and disposal.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "disposal",
+          "type": "unit-test"
+        }
+      ],
+      "id": "devtools.features.disposal",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Browser panel, editing, transport, or Engine resources.",
+          "lines": "31-319",
+          "path": "packages/devtools/src/inspector.ts",
+          "proves": "Pull snapshot/notification inspection bridge.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "document-inspector",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Chrome DevTools integration.",
+          "path": "packages/devtools/test/dom-inspector.test.ts",
+          "proves": "Exact identity, snapshots, projection, notifications, and disposal.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "document-inspector",
+          "type": "unit-test"
+        }
+      ],
+      "id": "devtools.features.document-inspector",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "none",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Runtime implementation or observable conformance.",
+          "path": "packages/devtools/requirements.md",
+          "proves": "The pinned project inventory contains devtools.features.editing.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "editing",
+          "type": "requirement"
+        }
+      ],
+      "id": "devtools.features.editing",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "The inspection bridge intentionally has no panel/editing/transport/React/Engine integration for this capability."
+      ],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "unsupported"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "none",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Runtime implementation or observable conformance.",
+          "path": "packages/devtools/requirements.md",
+          "proves": "The pinned project inventory contains devtools.features.engine-resource-inspection.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "engine resource inspection",
+          "type": "requirement"
+        }
+      ],
+      "id": "devtools.features.engine-resource-inspection",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "The inspection bridge intentionally has no panel/editing/transport/React/Engine integration for this capability."
+      ],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "unsupported"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Browser panel, editing, transport, or Engine resources.",
+          "lines": "31-319",
+          "path": "packages/devtools/src/inspector.ts",
+          "proves": "Pull snapshot/notification inspection bridge.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "hit-projection",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Chrome DevTools integration.",
+          "path": "packages/devtools/test/dom-inspector.test.ts",
+          "proves": "Exact identity, snapshots, projection, notifications, and disposal.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "hit-projection",
+          "type": "unit-test"
+        }
+      ],
+      "id": "devtools.features.hit-projection",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Browser panel, editing, transport, or Engine resources.",
+          "lines": "31-319",
+          "path": "packages/devtools/src/inspector.ts",
+          "proves": "Pull snapshot/notification inspection bridge.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "mutation-notifications",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Chrome DevTools integration.",
+          "path": "packages/devtools/test/dom-inspector.test.ts",
+          "proves": "Exact identity, snapshots, projection, notifications, and disposal.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "mutation-notifications",
+          "type": "unit-test"
+        }
+      ],
+      "id": "devtools.features.mutation-notifications",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "none",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Runtime implementation or observable conformance.",
+          "path": "packages/devtools/requirements.md",
+          "proves": "The pinned project inventory contains devtools.features.react-devtools-integration.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "react devtools integration",
+          "type": "requirement"
+        }
+      ],
+      "id": "devtools.features.react-devtools-integration",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "The inspection bridge intentionally has no panel/editing/transport/React/Engine integration for this capability."
+      ],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "unsupported"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Browser panel, editing, transport, or Engine resources.",
+          "lines": "31-319",
+          "path": "packages/devtools/src/inspector.ts",
+          "proves": "Pull snapshot/notification inspection bridge.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "renderer-projection",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Chrome DevTools integration.",
+          "path": "packages/devtools/test/dom-inspector.test.ts",
+          "proves": "Exact identity, snapshots, projection, notifications, and disposal.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "renderer-projection",
+          "type": "unit-test"
+        }
+      ],
+      "id": "devtools.features.renderer-projection",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Browser panel, editing, transport, or Engine resources.",
+          "lines": "31-319",
+          "path": "packages/devtools/src/inspector.ts",
+          "proves": "Pull snapshot/notification inspection bridge.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "reverse-reference-release",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Chrome DevTools integration.",
+          "path": "packages/devtools/test/dom-inspector.test.ts",
+          "proves": "Exact identity, snapshots, projection, notifications, and disposal.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "reverse-reference-release",
+          "type": "unit-test"
+        }
+      ],
+      "id": "devtools.features.reverse-reference-release",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Browser panel, editing, transport, or Engine resources.",
+          "lines": "31-319",
+          "path": "packages/devtools/src/inspector.ts",
+          "proves": "Pull snapshot/notification inspection bridge.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "stable-node-ids",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Chrome DevTools integration.",
+          "path": "packages/devtools/test/dom-inspector.test.ts",
+          "proves": "Exact identity, snapshots, projection, notifications, and disposal.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "stable-node-ids",
+          "type": "unit-test"
+        }
+      ],
+      "id": "devtools.features.stable-node-ids",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Browser panel, editing, transport, or Engine resources.",
+          "lines": "31-319",
+          "path": "packages/devtools/src/inspector.ts",
+          "proves": "Pull snapshot/notification inspection bridge.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "state-notifications",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Chrome DevTools integration.",
+          "path": "packages/devtools/test/dom-inspector.test.ts",
+          "proves": "Exact identity, snapshots, projection, notifications, and disposal.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "state-notifications",
+          "type": "unit-test"
+        }
+      ],
+      "id": "devtools.features.state-notifications",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Browser panel, editing, transport, or Engine resources.",
+          "lines": "31-319",
+          "path": "packages/devtools/src/inspector.ts",
+          "proves": "Pull snapshot/notification inspection bridge.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "subtree-snapshots",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Chrome DevTools integration.",
+          "path": "packages/devtools/test/dom-inspector.test.ts",
+          "proves": "Exact identity, snapshots, projection, notifications, and disposal.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "subtree-snapshots",
+          "type": "unit-test"
+        }
+      ],
+      "id": "devtools.features.subtree-snapshots",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "none",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Runtime implementation or observable conformance.",
+          "path": "packages/devtools/requirements.md",
+          "proves": "The pinned project inventory contains devtools.features.transport.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "transport",
+          "type": "requirement"
+        }
+      ],
+      "id": "devtools.features.transport",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "The inspection bridge intentionally has no panel/editing/transport/React/Engine integration for this capability."
+      ],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "unsupported"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Every symbol and observable behavior behind the path.",
+          "path": "packages/devtools/package.json",
+          "proves": "The package export path exists.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": ".",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "External-standard compatibility unless separately mapped.",
+          "path": "packages/devtools/test/dom-inspector.test.ts",
+          "proves": "The bounded project API has behavioral coverage.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": ".",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "1",
+          "path": "packages/devtools/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "createDomInspector",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "External-standard compatibility unless separately mapped.",
+          "path": "packages/devtools/test/dom-inspector.test.ts",
+          "proves": "The bounded project API has behavioral coverage.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "createDomInspector",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.createdominspector",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "2",
+          "path": "packages/devtools/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "CreateDomInspectorOptions",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.createdominspectoroptions",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "2",
+          "path": "packages/devtools/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DomInspector",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.dominspector",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "2",
+          "path": "packages/devtools/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DomInspectorAttribute",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.dominspectorattribute",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "2",
+          "path": "packages/devtools/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DomInspectorBox",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.dominspectorbox",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "2",
+          "path": "packages/devtools/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DomInspectorChange",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.dominspectorchange",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "2",
+          "path": "packages/devtools/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DomInspectorDisplay",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.dominspectordisplay",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "2",
+          "path": "packages/devtools/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DomInspectorHit",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.dominspectorhit",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "2",
+          "path": "packages/devtools/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DomInspectorHTMLElementState",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.dominspectorhtmlelementstate",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "2",
+          "path": "packages/devtools/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DomInspectorInputState",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.dominspectorinputstate",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "2",
+          "path": "packages/devtools/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DomInspectorLiveState",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.dominspectorlivestate",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "2",
+          "path": "packages/devtools/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DomInspectorNode",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.dominspectornode",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "2",
+          "path": "packages/devtools/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DomInspectorSnapshot",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.dominspectorsnapshot",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "2",
+          "path": "packages/devtools/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DomInspectorSubscriber",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.dominspectorsubscriber",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "status": "unverified"
+    }
+  ],
+  "repository": "renderer",
+  "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+  "schemaVersion": 1,
+  "verificationDate": "2026-08-29"
+}

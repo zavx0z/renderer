@@ -1,0 +1,570 @@
+{
+  "entries": [
+    {
+      "description": "callback ViewTransitionUpdateCallback from css-view-transitions.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-view-transitions.callbacks.viewtransitionupdatecallback",
+      "kind": "callback",
+      "metadata": {
+        "idlSource": "css-view-transitions.idl"
+      },
+      "name": "ViewTransitionUpdateCallback",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-view-transitions.idl#WebIDL:ViewTransitionUpdateCallback",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "dictionary StartViewTransitionOptions from css-view-transitions.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-view-transitions.dictionaries.startviewtransitionoptions",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "css-view-transitions.idl"
+      },
+      "name": "StartViewTransitionOptions",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-view-transitions.idl#WebIDL:StartViewTransitionOptions",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "StartViewTransitionOptions.types Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-view-transitions.dictionaries.startviewtransitionoptions.fields.types",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-view-transitions.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"types\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":true,\"union\":false,\"idlType\":[{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"}]},\"default\":{\"type\":\"null\"},\"required\":false}"
+      },
+      "name": "types",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-view-transitions.dictionaries.startviewtransitionoptions",
+      "spec": {
+        "anchor": "webref/idl/css-view-transitions.idl#WebIDL:StartViewTransitionOptions.types",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "StartViewTransitionOptions.update Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-view-transitions.dictionaries.startviewtransitionoptions.fields.update",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-view-transitions.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"update\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"ViewTransitionUpdateCallback\"},\"default\":{\"type\":\"null\"},\"required\":false}"
+      },
+      "name": "update",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-view-transitions.dictionaries.startviewtransitionoptions",
+      "spec": {
+        "anchor": "webref/idl/css-view-transitions.idl#WebIDL:StartViewTransitionOptions.update",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSViewTransitionRule from css-view-transitions.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-view-transitions.interfaces.cssviewtransitionrule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-view-transitions.idl",
+        "inheritance": "CSSRule"
+      },
+      "name": "CSSViewTransitionRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-view-transitions.idl#WebIDL:CSSViewTransitionRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSViewTransitionRule.navigation Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-view-transitions.interfaces.cssviewtransitionrule.attributes.navigation",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-view-transitions.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"navigation\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "navigation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-view-transitions.interfaces.cssviewtransitionrule",
+      "spec": {
+        "anchor": "webref/idl/css-view-transitions.idl#WebIDL:CSSViewTransitionRule.navigation",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSViewTransitionRule.types Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-view-transitions.interfaces.cssviewtransitionrule.attributes.types",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SameObject"
+        ],
+        "idlSource": "css-view-transitions.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"types\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"FrozenArray\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"}]},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SameObject\",\"rhs\":null,\"arguments\":[]}],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "types",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-view-transitions.interfaces.cssviewtransitionrule",
+      "spec": {
+        "anchor": "webref/idl/css-view-transitions.idl#WebIDL:CSSViewTransitionRule.types",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSViewTransitionRule has CSSRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-view-transitions.interfaces.cssviewtransitionrule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSRule"
+      },
+      "name": "CSSViewTransitionRule inherits CSSRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-view-transitions.interfaces.cssviewtransitionrule",
+      "spec": {
+        "anchor": "webref/idl/css-view-transitions.idl#WebIDL:CSSViewTransitionRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface Document from css-view-transitions.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-view-transitions.interfaces.document",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "css-view-transitions.idl"
+      },
+      "name": "Document",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-view-transitions.idl#WebIDL:Document",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "Document.activeViewTransition Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-view-transitions.interfaces.document.attributes.activeviewtransition",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-view-transitions.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"activeViewTransition\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"ViewTransition\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "activeViewTransition",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-view-transitions.interfaces.document",
+      "spec": {
+        "anchor": "webref/idl/css-view-transitions.idl#WebIDL:Document.activeViewTransition",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "Document.startViewTransition Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-view-transitions.interfaces.document.methods.startviewtransition",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-view-transitions.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"startViewTransition\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"ViewTransition\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"callbackOptions\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":true,\"idlType\":[{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"ViewTransitionUpdateCallback\"},{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"StartViewTransitionOptions\"}]},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "startViewTransition",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-view-transitions.interfaces.document",
+      "spec": {
+        "anchor": "webref/idl/css-view-transitions.idl#WebIDL:Document.startViewTransition",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface Element from css-view-transitions.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-view-transitions.interfaces.element",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "css-view-transitions.idl"
+      },
+      "name": "Element",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-view-transitions.idl#WebIDL:Element",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "Element.activeViewTransition Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-view-transitions.interfaces.element.attributes.activeviewtransition",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-view-transitions.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"activeViewTransition\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"ViewTransition\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "activeViewTransition",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-view-transitions.interfaces.element",
+      "spec": {
+        "anchor": "webref/idl/css-view-transitions.idl#WebIDL:Element.activeViewTransition",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "Element.startViewTransition Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-view-transitions.interfaces.element.methods.startviewtransition",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-view-transitions.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"startViewTransition\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"ViewTransition\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"callbackOptions\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":true,\"idlType\":[{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"ViewTransitionUpdateCallback\"},{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"StartViewTransitionOptions\"}]},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "startViewTransition",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-view-transitions.interfaces.element",
+      "spec": {
+        "anchor": "webref/idl/css-view-transitions.idl#WebIDL:Element.startViewTransition",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface ViewTransition from css-view-transitions.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-view-transitions.interfaces.viewtransition",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-view-transitions.idl"
+      },
+      "name": "ViewTransition",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-view-transitions.idl#WebIDL:ViewTransition",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "ViewTransition.finished Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-view-transitions.interfaces.viewtransition.attributes.finished",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-view-transitions.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"finished\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"Promise\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"}]},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "finished",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-view-transitions.interfaces.viewtransition",
+      "spec": {
+        "anchor": "webref/idl/css-view-transitions.idl#WebIDL:ViewTransition.finished",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "ViewTransition.ready Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-view-transitions.interfaces.viewtransition.attributes.ready",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-view-transitions.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"ready\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"Promise\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"}]},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "ready",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-view-transitions.interfaces.viewtransition",
+      "spec": {
+        "anchor": "webref/idl/css-view-transitions.idl#WebIDL:ViewTransition.ready",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "ViewTransition.transitionRoot Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-view-transitions.interfaces.viewtransition.attributes.transitionroot",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-view-transitions.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"transitionRoot\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"Element\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "transitionRoot",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-view-transitions.interfaces.viewtransition",
+      "spec": {
+        "anchor": "webref/idl/css-view-transitions.idl#WebIDL:ViewTransition.transitionRoot",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "ViewTransition.types Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-view-transitions.interfaces.viewtransition.attributes.types",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SameObject"
+        ],
+        "idlSource": "css-view-transitions.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"types\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"ViewTransitionTypeSet\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SameObject\",\"rhs\":null,\"arguments\":[]}],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "types",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-view-transitions.interfaces.viewtransition",
+      "spec": {
+        "anchor": "webref/idl/css-view-transitions.idl#WebIDL:ViewTransition.types",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "ViewTransition.updateCallbackDone Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-view-transitions.interfaces.viewtransition.attributes.updatecallbackdone",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-view-transitions.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"updateCallbackDone\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"Promise\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"}]},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "updateCallbackDone",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-view-transitions.interfaces.viewtransition",
+      "spec": {
+        "anchor": "webref/idl/css-view-transitions.idl#WebIDL:ViewTransition.updateCallbackDone",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "ViewTransition.skipTransition Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-view-transitions.interfaces.viewtransition.methods.skiptransition",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-view-transitions.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"skipTransition\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "skipTransition",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-view-transitions.interfaces.viewtransition",
+      "spec": {
+        "anchor": "webref/idl/css-view-transitions.idl#WebIDL:ViewTransition.skipTransition",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "ViewTransition.waitUntil Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-view-transitions.interfaces.viewtransition.methods.waituntil",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-view-transitions.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"waitUntil\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"promise\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"Promise\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"any\"}]},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "waitUntil",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-view-transitions.interfaces.viewtransition",
+      "spec": {
+        "anchor": "webref/idl/css-view-transitions.idl#WebIDL:ViewTransition.waitUntil",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface ViewTransitionTypeSet from css-view-transitions.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-view-transitions.interfaces.viewtransitiontypeset",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-view-transitions.idl"
+      },
+      "name": "ViewTransitionTypeSet",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-view-transitions.idl#WebIDL:ViewTransitionTypeSet",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "ViewTransitionTypeSet.setlike-dbb2d962 Web IDL setlike.",
+      "domain": "css",
+      "id": "css.cssom.css-view-transitions.interfaces.viewtransitiontypeset.setlike.setlike-dbb2d962",
+      "kind": "setlike",
+      "metadata": {
+        "idlSource": "css-view-transitions.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"setlike\",\"idlType\":[{\"type\":null,\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"}],\"arguments\":[],\"extAttrs\":[],\"readonly\":false,\"async\":false}"
+      },
+      "name": "setlike-dbb2d962",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-view-transitions.interfaces.viewtransitiontypeset",
+      "spec": {
+        "anchor": "webref/idl/css-view-transitions.idl#WebIDL:ViewTransitionTypeSet.setlike-dbb2d962",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-view-transitions.json"
+}

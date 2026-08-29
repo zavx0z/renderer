@@ -1,0 +1,123 @@
+{
+  "entries": [
+    {
+      "description": "Alternate voice",
+      "domain": "html",
+      "id": "html.elements.i",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; phrasing; palpable",
+        "children": "phrasing",
+        "interface": "HTMLElement",
+        "parents": "phrasing"
+      },
+      "name": "i",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-i-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <i> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.i.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "i",
+        "interface": "HTMLElement"
+      },
+      "name": "i implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.i",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <i> element content categories.",
+      "domain": "html",
+      "id": "html.elements.i.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "i",
+        "interface": "HTMLElement"
+      },
+      "name": "i content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.i",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-i-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <i> element content model.",
+      "domain": "html",
+      "id": "html.elements.i.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "i",
+        "interface": "HTMLElement"
+      },
+      "name": "i content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.i",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-i-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <i> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.i.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "i",
+        "interface": "HTMLElement"
+      },
+      "name": "i interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.i",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-i-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/i.json"
+}

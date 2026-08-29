@@ -1,0 +1,468 @@
+{
+  "entries": [
+    {
+      "description": "Image",
+      "domain": "html",
+      "id": "html.elements.img",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; phrasing; embedded; interactive*; form-associated; palpable",
+        "children": "empty",
+        "interface": "HTMLImageElement",
+        "parents": "phrasing; picture"
+      },
+      "name": "img",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <img> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.img.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "img",
+        "interface": "HTMLImageElement"
+      },
+      "name": "img implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.img",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <img> element activation and default action.",
+      "domain": "html",
+      "id": "html.elements.img.activation-behavior",
+      "kind": "activation-behavior",
+      "metadata": {
+        "element": "img",
+        "interface": "HTMLImageElement"
+      },
+      "name": "img activation and default action",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.img",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "alt content attribute on <img>.",
+      "domain": "html",
+      "id": "html.elements.img.attributes.alt",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "img",
+        "interface": "HTMLImageElement"
+      },
+      "name": "alt",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.img",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/embedded-content.html#attr-img-alt",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "controls content attribute on <img>.",
+      "domain": "html",
+      "id": "html.elements.img.attributes.controls",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "img",
+        "interface": "HTMLImageElement"
+      },
+      "name": "controls",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.img",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/embedded-content.html#attr-img-controls",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "crossorigin content attribute on <img>.",
+      "domain": "html",
+      "id": "html.elements.img.attributes.crossorigin",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "img",
+        "interface": "HTMLImageElement"
+      },
+      "name": "crossorigin",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.img",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/embedded-content.html#attr-img-crossorigin",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "decoding content attribute on <img>.",
+      "domain": "html",
+      "id": "html.elements.img.attributes.decoding",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "img",
+        "interface": "HTMLImageElement"
+      },
+      "name": "decoding",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.img",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/embedded-content.html#attr-img-decoding",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "fetchpriority content attribute on <img>.",
+      "domain": "html",
+      "id": "html.elements.img.attributes.fetchpriority",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "img",
+        "interface": "HTMLImageElement"
+      },
+      "name": "fetchpriority",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.img",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/embedded-content.html#attr-img-fetchpriority",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "height content attribute on <img>.",
+      "domain": "html",
+      "id": "html.elements.img.attributes.height",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "img",
+        "interface": "HTMLImageElement"
+      },
+      "name": "height",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.img",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/embedded-content-other.html#attr-dim-height",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "ismap content attribute on <img>.",
+      "domain": "html",
+      "id": "html.elements.img.attributes.ismap",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "img",
+        "interface": "HTMLImageElement"
+      },
+      "name": "ismap",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.img",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/embedded-content.html#attr-img-ismap",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "loading content attribute on <img>.",
+      "domain": "html",
+      "id": "html.elements.img.attributes.loading",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "img",
+        "interface": "HTMLImageElement"
+      },
+      "name": "loading",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.img",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/embedded-content.html#attr-img-loading",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "referrerpolicy content attribute on <img>.",
+      "domain": "html",
+      "id": "html.elements.img.attributes.referrerpolicy",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "img",
+        "interface": "HTMLImageElement"
+      },
+      "name": "referrerpolicy",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.img",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/embedded-content.html#attr-img-referrerpolicy",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "sizes content attribute on <img>.",
+      "domain": "html",
+      "id": "html.elements.img.attributes.sizes",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "img",
+        "interface": "HTMLImageElement"
+      },
+      "name": "sizes",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.img",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/embedded-content.html#attr-img-sizes",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "src content attribute on <img>.",
+      "domain": "html",
+      "id": "html.elements.img.attributes.src",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "img",
+        "interface": "HTMLImageElement"
+      },
+      "name": "src",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.img",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/embedded-content.html#attr-img-src",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "srcset content attribute on <img>.",
+      "domain": "html",
+      "id": "html.elements.img.attributes.srcset",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "img",
+        "interface": "HTMLImageElement"
+      },
+      "name": "srcset",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.img",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/embedded-content.html#attr-img-srcset",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "usemap content attribute on <img>.",
+      "domain": "html",
+      "id": "html.elements.img.attributes.usemap",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "img",
+        "interface": "HTMLImageElement"
+      },
+      "name": "usemap",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.img",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/image-maps.html#attr-hyperlink-usemap",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "width content attribute on <img>.",
+      "domain": "html",
+      "id": "html.elements.img.attributes.width",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "img",
+        "interface": "HTMLImageElement"
+      },
+      "name": "width",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.img",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/embedded-content-other.html#attr-dim-width",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <img> element content categories.",
+      "domain": "html",
+      "id": "html.elements.img.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "img",
+        "interface": "HTMLImageElement"
+      },
+      "name": "img content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.img",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <img> element content model.",
+      "domain": "html",
+      "id": "html.elements.img.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "img",
+        "interface": "HTMLImageElement"
+      },
+      "name": "img content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.img",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <img> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.img.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "img",
+        "interface": "HTMLImageElement"
+      },
+      "name": "img interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.img",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/img.json"
+}

@@ -1,0 +1,819 @@
+{
+  "entries": [
+    {
+      "description": "dictionary GetComposedRangesOptions from selection-api.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.dictionaries.getcomposedrangesoptions",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "selection-api.idl"
+      },
+      "name": "GetComposedRangesOptions",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:GetComposedRangesOptions",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "GetComposedRangesOptions.shadowRoots Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.dictionaries.getcomposedrangesoptions.fields.shadowroots",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"shadowRoots\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"ShadowRoot\"}]},\"default\":{\"type\":\"sequence\",\"value\":[]},\"required\":false}"
+      },
+      "name": "shadowRoots",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.dictionaries.getcomposedrangesoptions",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:GetComposedRangesOptions.shadowRoots",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface Document from selection-api.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.document",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "selection-api.idl"
+      },
+      "name": "Document",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Document",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Document.getSelection Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.document.methods.getselection",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"getSelection\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"Selection\"},\"arguments\":[],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "getSelection",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.interfaces.document",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Document.getSelection",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface Selection from selection-api.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.selection",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "selection-api.idl"
+      },
+      "name": "Selection",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Selection",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Selection.anchorNode Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.selection.attributes.anchornode",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"anchorNode\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"Node\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "anchorNode",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.interfaces.selection",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Selection.anchorNode",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Selection.anchorOffset Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.selection.attributes.anchoroffset",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"anchorOffset\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "anchorOffset",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.interfaces.selection",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Selection.anchorOffset",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Selection.direction Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.selection.attributes.direction",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"direction\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "direction",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.interfaces.selection",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Selection.direction",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Selection.focusNode Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.selection.attributes.focusnode",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"focusNode\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"Node\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "focusNode",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.interfaces.selection",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Selection.focusNode",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Selection.focusOffset Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.selection.attributes.focusoffset",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"focusOffset\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "focusOffset",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.interfaces.selection",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Selection.focusOffset",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Selection.isCollapsed Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.selection.attributes.iscollapsed",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"isCollapsed\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "isCollapsed",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.interfaces.selection",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Selection.isCollapsed",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Selection.rangeCount Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.selection.attributes.rangecount",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"rangeCount\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "rangeCount",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.interfaces.selection",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Selection.rangeCount",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Selection.type Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.selection.attributes.type",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"type\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "type",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.interfaces.selection",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Selection.type",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Selection.addRange Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.selection.methods.addrange",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"addRange\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"range\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"Range\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "addRange",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.interfaces.selection",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Selection.addRange",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Selection.collapse Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.selection.methods.collapse",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"collapse\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"node\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"Node\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"offset\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "collapse",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.interfaces.selection",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Selection.collapse",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Selection.collapseToEnd Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.selection.methods.collapsetoend",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"collapseToEnd\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "collapseToEnd",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.interfaces.selection",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Selection.collapseToEnd",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Selection.collapseToStart Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.selection.methods.collapsetostart",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"collapseToStart\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "collapseToStart",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.interfaces.selection",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Selection.collapseToStart",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Selection.containsNode Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.selection.methods.containsnode",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"containsNode\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"node\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"Node\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"allowPartialContainment\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "containsNode",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.interfaces.selection",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Selection.containsNode",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Selection.deleteFromDocument Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.selection.methods.deletefromdocument",
+      "kind": "operation",
+      "metadata": {
+        "extendedAttributes": [
+          "CEReactions"
+        ],
+        "idlSource": "selection-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"deleteFromDocument\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[],\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"CEReactions\",\"rhs\":null,\"arguments\":[]}],\"special\":\"\"}"
+      },
+      "name": "deleteFromDocument",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.interfaces.selection",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Selection.deleteFromDocument",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Selection.empty Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.selection.methods.empty",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"empty\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "empty",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.interfaces.selection",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Selection.empty",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Selection.extend Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.selection.methods.extend",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"extend\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"node\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"Node\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"offset\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "extend",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.interfaces.selection",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Selection.extend",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Selection.getComposedRanges Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.selection.methods.getcomposedranges",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"getComposedRanges\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"StaticRange\"}]},\"arguments\":[{\"type\":\"argument\",\"name\":\"options\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"GetComposedRangesOptions\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "getComposedRanges",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.interfaces.selection",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Selection.getComposedRanges",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Selection.getRangeAt Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.selection.methods.getrangeat",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"getRangeAt\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"Range\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"index\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "getRangeAt",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.interfaces.selection",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Selection.getRangeAt",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Selection.modify Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.selection.methods.modify",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"modify\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"alter\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"direction\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"granularity\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "modify",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.interfaces.selection",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Selection.modify",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Selection.removeAllRanges Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.selection.methods.removeallranges",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"removeAllRanges\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "removeAllRanges",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.interfaces.selection",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Selection.removeAllRanges",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Selection.removeRange Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.selection.methods.removerange",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"removeRange\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"range\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"Range\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "removeRange",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.interfaces.selection",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Selection.removeRange",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Selection.selectAllChildren Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.selection.methods.selectallchildren",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"selectAllChildren\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"node\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"Node\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "selectAllChildren",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.interfaces.selection",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Selection.selectAllChildren",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Selection.setBaseAndExtent Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.selection.methods.setbaseandextent",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"setBaseAndExtent\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"anchorNode\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"Node\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"anchorOffset\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"focusNode\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"Node\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"focusOffset\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "setBaseAndExtent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.interfaces.selection",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Selection.setBaseAndExtent",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Selection.setPosition Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.selection.methods.setposition",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"setPosition\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"node\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"Node\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"offset\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "setPosition",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.interfaces.selection",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Selection.setPosition",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Selection.stringifier Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.selection.methods.stringifier",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"\",\"arguments\":[],\"extAttrs\":[],\"special\":\"stringifier\"}",
+        "special": "stringifier"
+      },
+      "name": "stringifier",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.interfaces.selection",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Selection.stringifier",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface Window from selection-api.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.window",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "selection-api.idl"
+      },
+      "name": "Window",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Window",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Window.getSelection Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.interfaces.window.methods.getselection",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"getSelection\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"Selection\"},\"arguments\":[],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "getSelection",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.interfaces.window",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:Window.getSelection",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface mixin GlobalEventHandlers from selection-api.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.mixins.globaleventhandlers",
+      "kind": "interface mixin",
+      "metadata": {
+        "idlSource": "selection-api.idl"
+      },
+      "name": "GlobalEventHandlers",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:GlobalEventHandlers",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "GlobalEventHandlers.onselectionchange Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.mixins.globaleventhandlers.attributes.onselectionchange",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"onselectionchange\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"EventHandler\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "onselectionchange",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.mixins.globaleventhandlers",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:GlobalEventHandlers.onselectionchange",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "GlobalEventHandlers.onselectstart Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.selection-api.mixins.globaleventhandlers.attributes.onselectstart",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "selection-api.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"onselectstart\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"EventHandler\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "onselectstart",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.selection-api.mixins.globaleventhandlers",
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#WebIDL:GlobalEventHandlers.onselectstart",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "dom/interfaces/selection-api.json"
+}

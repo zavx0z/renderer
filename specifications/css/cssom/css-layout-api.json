@@ -1,0 +1,2065 @@
+{
+  "entries": [
+    {
+      "description": "dictionary BreakTokenOptions from css-layout-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.dictionaries.breaktokenoptions",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "css-layout-api.idl"
+      },
+      "name": "BreakTokenOptions",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:BreakTokenOptions",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "BreakTokenOptions.childBreakTokens Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.dictionaries.breaktokenoptions.fields.childbreaktokens",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"childBreakTokens\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"ChildBreakToken\"}]},\"default\":null,\"required\":false}"
+      },
+      "name": "childBreakTokens",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.dictionaries.breaktokenoptions",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:BreakTokenOptions.childBreakTokens",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "BreakTokenOptions.data Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.dictionaries.breaktokenoptions.fields.data",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"data\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"any\"},\"default\":{\"type\":\"null\"},\"required\":false}"
+      },
+      "name": "data",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.dictionaries.breaktokenoptions",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:BreakTokenOptions.data",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "dictionary FragmentResultOptions from css-layout-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.dictionaries.fragmentresultoptions",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "css-layout-api.idl"
+      },
+      "name": "FragmentResultOptions",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:FragmentResultOptions",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FragmentResultOptions.autoBlockSize Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.dictionaries.fragmentresultoptions.fields.autoblocksize",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"autoBlockSize\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"required\":false}"
+      },
+      "name": "autoBlockSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.dictionaries.fragmentresultoptions",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:FragmentResultOptions.autoBlockSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FragmentResultOptions.blockSize Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.dictionaries.fragmentresultoptions.fields.blocksize",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"blockSize\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"required\":false}"
+      },
+      "name": "blockSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.dictionaries.fragmentresultoptions",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:FragmentResultOptions.blockSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FragmentResultOptions.breakToken Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.dictionaries.fragmentresultoptions.fields.breaktoken",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"breakToken\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"BreakTokenOptions\"},\"default\":{\"type\":\"null\"},\"required\":false}"
+      },
+      "name": "breakToken",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.dictionaries.fragmentresultoptions",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:FragmentResultOptions.breakToken",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FragmentResultOptions.childFragments Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.dictionaries.fragmentresultoptions.fields.childfragments",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"childFragments\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"LayoutFragment\"}]},\"default\":{\"type\":\"sequence\",\"value\":[]},\"required\":false}"
+      },
+      "name": "childFragments",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.dictionaries.fragmentresultoptions",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:FragmentResultOptions.childFragments",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FragmentResultOptions.data Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.dictionaries.fragmentresultoptions.fields.data",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"data\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"any\"},\"default\":{\"type\":\"null\"},\"required\":false}"
+      },
+      "name": "data",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.dictionaries.fragmentresultoptions",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:FragmentResultOptions.data",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FragmentResultOptions.inlineSize Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.dictionaries.fragmentresultoptions.fields.inlinesize",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"inlineSize\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"required\":false}"
+      },
+      "name": "inlineSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.dictionaries.fragmentresultoptions",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:FragmentResultOptions.inlineSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "dictionary IntrinsicSizesResultOptions from css-layout-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.dictionaries.intrinsicsizesresultoptions",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "css-layout-api.idl"
+      },
+      "name": "IntrinsicSizesResultOptions",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:IntrinsicSizesResultOptions",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "IntrinsicSizesResultOptions.maxContentSize Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.dictionaries.intrinsicsizesresultoptions.fields.maxcontentsize",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"maxContentSize\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"default\":null,\"required\":false}"
+      },
+      "name": "maxContentSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.dictionaries.intrinsicsizesresultoptions",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:IntrinsicSizesResultOptions.maxContentSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "IntrinsicSizesResultOptions.minContentSize Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.dictionaries.intrinsicsizesresultoptions.fields.mincontentsize",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"minContentSize\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"default\":null,\"required\":false}"
+      },
+      "name": "minContentSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.dictionaries.intrinsicsizesresultoptions",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:IntrinsicSizesResultOptions.minContentSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "dictionary LayoutConstraintsOptions from css-layout-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.dictionaries.layoutconstraintsoptions",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "css-layout-api.idl"
+      },
+      "name": "LayoutConstraintsOptions",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutConstraintsOptions",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutConstraintsOptions.availableBlockSize Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.dictionaries.layoutconstraintsoptions.fields.availableblocksize",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"availableBlockSize\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"default\":null,\"required\":false}"
+      },
+      "name": "availableBlockSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.dictionaries.layoutconstraintsoptions",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutConstraintsOptions.availableBlockSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutConstraintsOptions.availableInlineSize Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.dictionaries.layoutconstraintsoptions.fields.availableinlinesize",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"availableInlineSize\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"default\":null,\"required\":false}"
+      },
+      "name": "availableInlineSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.dictionaries.layoutconstraintsoptions",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutConstraintsOptions.availableInlineSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutConstraintsOptions.blockFragmentationOffset Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.dictionaries.layoutconstraintsoptions.fields.blockfragmentationoffset",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"blockFragmentationOffset\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"default\":null,\"required\":false}"
+      },
+      "name": "blockFragmentationOffset",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.dictionaries.layoutconstraintsoptions",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutConstraintsOptions.blockFragmentationOffset",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutConstraintsOptions.blockFragmentationType Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.dictionaries.layoutconstraintsoptions.fields.blockfragmentationtype",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"blockFragmentationType\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"BlockFragmentationType\"},\"default\":{\"type\":\"string\",\"value\":\"none\"},\"required\":false}"
+      },
+      "name": "blockFragmentationType",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.dictionaries.layoutconstraintsoptions",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutConstraintsOptions.blockFragmentationType",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutConstraintsOptions.data Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.dictionaries.layoutconstraintsoptions.fields.data",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"data\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"any\"},\"default\":null,\"required\":false}"
+      },
+      "name": "data",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.dictionaries.layoutconstraintsoptions",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutConstraintsOptions.data",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutConstraintsOptions.fixedBlockSize Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.dictionaries.layoutconstraintsoptions.fields.fixedblocksize",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"fixedBlockSize\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"default\":null,\"required\":false}"
+      },
+      "name": "fixedBlockSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.dictionaries.layoutconstraintsoptions",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutConstraintsOptions.fixedBlockSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutConstraintsOptions.fixedInlineSize Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.dictionaries.layoutconstraintsoptions.fields.fixedinlinesize",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"fixedInlineSize\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"default\":null,\"required\":false}"
+      },
+      "name": "fixedInlineSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.dictionaries.layoutconstraintsoptions",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutConstraintsOptions.fixedInlineSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutConstraintsOptions.percentageBlockSize Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.dictionaries.layoutconstraintsoptions.fields.percentageblocksize",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"percentageBlockSize\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"default\":null,\"required\":false}"
+      },
+      "name": "percentageBlockSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.dictionaries.layoutconstraintsoptions",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutConstraintsOptions.percentageBlockSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutConstraintsOptions.percentageInlineSize Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.dictionaries.layoutconstraintsoptions.fields.percentageinlinesize",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"percentageInlineSize\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"default\":null,\"required\":false}"
+      },
+      "name": "percentageInlineSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.dictionaries.layoutconstraintsoptions",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutConstraintsOptions.percentageInlineSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "dictionary LayoutOptions from css-layout-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.dictionaries.layoutoptions",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "css-layout-api.idl"
+      },
+      "name": "LayoutOptions",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutOptions",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutOptions.childDisplay Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.dictionaries.layoutoptions.fields.childdisplay",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"childDisplay\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"ChildDisplayType\"},\"default\":{\"type\":\"string\",\"value\":\"block\"},\"required\":false}"
+      },
+      "name": "childDisplay",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.dictionaries.layoutoptions",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutOptions.childDisplay",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutOptions.sizing Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.dictionaries.layoutoptions.fields.sizing",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"sizing\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"LayoutSizingMode\"},\"default\":{\"type\":\"string\",\"value\":\"block-like\"},\"required\":false}"
+      },
+      "name": "sizing",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.dictionaries.layoutoptions",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutOptions.sizing",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "enum BlockFragmentationType from css-layout-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.enums.blockfragmentationtype",
+      "kind": "enum",
+      "metadata": {
+        "idlSource": "css-layout-api.idl"
+      },
+      "name": "BlockFragmentationType",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:BlockFragmentationType",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "BlockFragmentationType enum value column.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.enums.blockfragmentationtype.values.column",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "column"
+      },
+      "name": "column",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.enums.blockfragmentationtype",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:BlockFragmentationType",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "BlockFragmentationType enum value none.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.enums.blockfragmentationtype.values.none",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "none"
+      },
+      "name": "none",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.enums.blockfragmentationtype",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:BlockFragmentationType",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "BlockFragmentationType enum value page.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.enums.blockfragmentationtype.values.page",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "page"
+      },
+      "name": "page",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.enums.blockfragmentationtype",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:BlockFragmentationType",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "BlockFragmentationType enum value region.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.enums.blockfragmentationtype.values.region",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "region"
+      },
+      "name": "region",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.enums.blockfragmentationtype",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:BlockFragmentationType",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "enum BreakType from css-layout-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.enums.breaktype",
+      "kind": "enum",
+      "metadata": {
+        "idlSource": "css-layout-api.idl"
+      },
+      "name": "BreakType",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:BreakType",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "BreakType enum value column.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.enums.breaktype.values.column",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "column"
+      },
+      "name": "column",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.enums.breaktype",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:BreakType",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "BreakType enum value line.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.enums.breaktype.values.line",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "line"
+      },
+      "name": "line",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.enums.breaktype",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:BreakType",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "BreakType enum value none.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.enums.breaktype.values.none",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "none"
+      },
+      "name": "none",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.enums.breaktype",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:BreakType",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "BreakType enum value page.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.enums.breaktype.values.page",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "page"
+      },
+      "name": "page",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.enums.breaktype",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:BreakType",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "BreakType enum value region.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.enums.breaktype.values.region",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "region"
+      },
+      "name": "region",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.enums.breaktype",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:BreakType",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "enum ChildDisplayType from css-layout-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.enums.childdisplaytype",
+      "kind": "enum",
+      "metadata": {
+        "idlSource": "css-layout-api.idl"
+      },
+      "name": "ChildDisplayType",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:ChildDisplayType",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "ChildDisplayType enum value block.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.enums.childdisplaytype.values.block",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "block"
+      },
+      "name": "block",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.enums.childdisplaytype",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:ChildDisplayType",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "ChildDisplayType enum value normal.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.enums.childdisplaytype.values.normal",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "normal"
+      },
+      "name": "normal",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.enums.childdisplaytype",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:ChildDisplayType",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "enum LayoutSizingMode from css-layout-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.enums.layoutsizingmode",
+      "kind": "enum",
+      "metadata": {
+        "idlSource": "css-layout-api.idl"
+      },
+      "name": "LayoutSizingMode",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutSizingMode",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutSizingMode enum value block-like.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.enums.layoutsizingmode.values.block-like",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "block-like"
+      },
+      "name": "block-like",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.enums.layoutsizingmode",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutSizingMode",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutSizingMode enum value manual.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.enums.layoutsizingmode.values.manual",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "manual"
+      },
+      "name": "manual",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.enums.layoutsizingmode",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutSizingMode",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface BreakToken from css-layout-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.breaktoken",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"LayoutWorklet\"}"
+        ],
+        "idlSource": "css-layout-api.idl"
+      },
+      "name": "BreakToken",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:BreakToken",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "BreakToken.childBreakTokens Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.breaktoken.attributes.childbreaktokens",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"childBreakTokens\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"FrozenArray\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"ChildBreakToken\"}]},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "childBreakTokens",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.breaktoken",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:BreakToken.childBreakTokens",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "BreakToken.data Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.breaktoken.attributes.data",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"data\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"any\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "data",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.breaktoken",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:BreakToken.data",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface ChildBreakToken from css-layout-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.childbreaktoken",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"LayoutWorklet\"}"
+        ],
+        "idlSource": "css-layout-api.idl"
+      },
+      "name": "ChildBreakToken",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:ChildBreakToken",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "ChildBreakToken.breakType Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.childbreaktoken.attributes.breaktype",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"breakType\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"BreakType\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "breakType",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.childbreaktoken",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:ChildBreakToken.breakType",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "ChildBreakToken.child Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.childbreaktoken.attributes.child",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"child\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"LayoutChild\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "child",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.childbreaktoken",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:ChildBreakToken.child",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface FragmentResult from css-layout-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.fragmentresult",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"LayoutWorklet\"}"
+        ],
+        "idlSource": "css-layout-api.idl"
+      },
+      "name": "FragmentResult",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:FragmentResult",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FragmentResult.blockSize Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.fragmentresult.attributes.blocksize",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"blockSize\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "blockSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.fragmentresult",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:FragmentResult.blockSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FragmentResult.inlineSize Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.fragmentresult.attributes.inlinesize",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"inlineSize\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "inlineSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.fragmentresult",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:FragmentResult.inlineSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FragmentResult.constructor Web IDL constructor.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.fragmentresult.constructors.constructor",
+      "kind": "constructor",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "signature": "{\"type\":\"constructor\",\"arguments\":[{\"type\":\"argument\",\"name\":\"options\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"FragmentResultOptions\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[]}"
+      },
+      "name": "constructor",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.fragmentresult",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:FragmentResult.constructor",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface IntrinsicSizes from css-layout-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.intrinsicsizes",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"LayoutWorklet\"}"
+        ],
+        "idlSource": "css-layout-api.idl"
+      },
+      "name": "IntrinsicSizes",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:IntrinsicSizes",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "IntrinsicSizes.maxContentSize Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.intrinsicsizes.attributes.maxcontentsize",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"maxContentSize\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "maxContentSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.intrinsicsizes",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:IntrinsicSizes.maxContentSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "IntrinsicSizes.minContentSize Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.intrinsicsizes.attributes.mincontentsize",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"minContentSize\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "minContentSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.intrinsicsizes",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:IntrinsicSizes.minContentSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface LayoutChild from css-layout-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutchild",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"LayoutWorklet\"}"
+        ],
+        "idlSource": "css-layout-api.idl"
+      },
+      "name": "LayoutChild",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutChild",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutChild.styleMap Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutchild.attributes.stylemap",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"styleMap\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"StylePropertyMapReadOnly\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "styleMap",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.layoutchild",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutChild.styleMap",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutChild.intrinsicSizes Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutchild.methods.intrinsicsizes",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"intrinsicSizes\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"Promise\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"IntrinsicSizes\"}]},\"arguments\":[],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "intrinsicSizes",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.layoutchild",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutChild.intrinsicSizes",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutChild.layoutNextFragment Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutchild.methods.layoutnextfragment",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"layoutNextFragment\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"Promise\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"LayoutFragment\"}]},\"arguments\":[{\"type\":\"argument\",\"name\":\"constraints\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"LayoutConstraintsOptions\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"breakToken\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"ChildBreakToken\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "layoutNextFragment",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.layoutchild",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutChild.layoutNextFragment",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface LayoutConstraints from css-layout-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutconstraints",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"LayoutWorklet\"}"
+        ],
+        "idlSource": "css-layout-api.idl"
+      },
+      "name": "LayoutConstraints",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutConstraints",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutConstraints.availableBlockSize Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutconstraints.attributes.availableblocksize",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"availableBlockSize\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "availableBlockSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.layoutconstraints",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutConstraints.availableBlockSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutConstraints.availableInlineSize Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutconstraints.attributes.availableinlinesize",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"availableInlineSize\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "availableInlineSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.layoutconstraints",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutConstraints.availableInlineSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutConstraints.blockFragmentationOffset Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutconstraints.attributes.blockfragmentationoffset",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"blockFragmentationOffset\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "blockFragmentationOffset",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.layoutconstraints",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutConstraints.blockFragmentationOffset",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutConstraints.blockFragmentationType Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutconstraints.attributes.blockfragmentationtype",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"blockFragmentationType\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"BlockFragmentationType\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "blockFragmentationType",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.layoutconstraints",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutConstraints.blockFragmentationType",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutConstraints.data Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutconstraints.attributes.data",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"data\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"any\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "data",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.layoutconstraints",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutConstraints.data",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutConstraints.fixedBlockSize Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutconstraints.attributes.fixedblocksize",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"fixedBlockSize\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "fixedBlockSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.layoutconstraints",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutConstraints.fixedBlockSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutConstraints.fixedInlineSize Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutconstraints.attributes.fixedinlinesize",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"fixedInlineSize\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "fixedInlineSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.layoutconstraints",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutConstraints.fixedInlineSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutConstraints.percentageBlockSize Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutconstraints.attributes.percentageblocksize",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"percentageBlockSize\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "percentageBlockSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.layoutconstraints",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutConstraints.percentageBlockSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutConstraints.percentageInlineSize Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutconstraints.attributes.percentageinlinesize",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"percentageInlineSize\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "percentageInlineSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.layoutconstraints",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutConstraints.percentageInlineSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface LayoutEdges from css-layout-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutedges",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"LayoutWorklet\"}"
+        ],
+        "idlSource": "css-layout-api.idl"
+      },
+      "name": "LayoutEdges",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutEdges",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutEdges.block Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutedges.attributes.block",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"block\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "block",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.layoutedges",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutEdges.block",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutEdges.blockEnd Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutedges.attributes.blockend",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"blockEnd\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "blockEnd",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.layoutedges",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutEdges.blockEnd",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutEdges.blockStart Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutedges.attributes.blockstart",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"blockStart\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "blockStart",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.layoutedges",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutEdges.blockStart",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutEdges.inline Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutedges.attributes.inline",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"inline\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "inline",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.layoutedges",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutEdges.inline",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutEdges.inlineEnd Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutedges.attributes.inlineend",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"inlineEnd\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "inlineEnd",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.layoutedges",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutEdges.inlineEnd",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutEdges.inlineStart Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutedges.attributes.inlinestart",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"inlineStart\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "inlineStart",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.layoutedges",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutEdges.inlineStart",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface LayoutFragment from css-layout-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutfragment",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"LayoutWorklet\"}"
+        ],
+        "idlSource": "css-layout-api.idl"
+      },
+      "name": "LayoutFragment",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutFragment",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutFragment.blockOffset Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutfragment.attributes.blockoffset",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"blockOffset\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "blockOffset",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.layoutfragment",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutFragment.blockOffset",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutFragment.blockSize Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutfragment.attributes.blocksize",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"blockSize\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "blockSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.layoutfragment",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutFragment.blockSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutFragment.breakToken Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutfragment.attributes.breaktoken",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"breakToken\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"ChildBreakToken\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "breakToken",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.layoutfragment",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutFragment.breakToken",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutFragment.data Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutfragment.attributes.data",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"data\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"any\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "data",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.layoutfragment",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutFragment.data",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutFragment.inlineOffset Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutfragment.attributes.inlineoffset",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"inlineOffset\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "inlineOffset",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.layoutfragment",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutFragment.inlineOffset",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutFragment.inlineSize Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutfragment.attributes.inlinesize",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"inlineSize\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "inlineSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.layoutfragment",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutFragment.inlineSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface LayoutWorkletGlobalScope from css-layout-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutworkletglobalscope",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Global={\"type\":\"identifier-list\",\"value\":[{\"value\":\"Worklet\"},{\"value\":\"LayoutWorklet\"}]}",
+          "Exposed={\"type\":\"identifier\",\"value\":\"LayoutWorklet\"}"
+        ],
+        "idlSource": "css-layout-api.idl",
+        "inheritance": "WorkletGlobalScope"
+      },
+      "name": "LayoutWorkletGlobalScope",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutWorkletGlobalScope",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutWorkletGlobalScope has WorkletGlobalScope as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutworkletglobalscope.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "WorkletGlobalScope"
+      },
+      "name": "LayoutWorkletGlobalScope inherits WorkletGlobalScope",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.layoutworkletglobalscope",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutWorkletGlobalScope",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LayoutWorkletGlobalScope.registerLayout Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.interfaces.layoutworkletglobalscope.methods.registerlayout",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-layout-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"registerLayout\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"name\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"layoutCtor\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"VoidFunction\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "registerLayout",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.interfaces.layoutworkletglobalscope",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:LayoutWorkletGlobalScope.registerLayout",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "namespace CSS from css-layout-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.namespaces.css",
+      "kind": "namespace",
+      "metadata": {
+        "idlSource": "css-layout-api.idl"
+      },
+      "name": "CSS",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:CSS",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSS.layoutWorklet Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-layout-api.namespaces.css.attributes.layoutworklet",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SameObject"
+        ],
+        "idlSource": "css-layout-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"layoutWorklet\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"Worklet\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SameObject\",\"rhs\":null,\"arguments\":[]}],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "layoutWorklet",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-layout-api.namespaces.css",
+      "spec": {
+        "anchor": "webref/idl/css-layout-api.idl#WebIDL:CSS.layoutWorklet",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-layout-api.json"
+}

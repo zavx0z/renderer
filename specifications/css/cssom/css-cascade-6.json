@@ -1,0 +1,102 @@
+{
+  "entries": [
+    {
+      "description": "interface CSSScopeRule from css-cascade-6.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-cascade-6.interfaces.cssscoperule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-cascade-6.idl",
+        "inheritance": "CSSGroupingRule"
+      },
+      "name": "CSSScopeRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-cascade-6.idl#WebIDL:CSSScopeRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSScopeRule.end Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-cascade-6.interfaces.cssscoperule.attributes.end",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-cascade-6.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"end\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-cascade-6.interfaces.cssscoperule",
+      "spec": {
+        "anchor": "webref/idl/css-cascade-6.idl#WebIDL:CSSScopeRule.end",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSScopeRule.start Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-cascade-6.interfaces.cssscoperule.attributes.start",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-cascade-6.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"start\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-cascade-6.interfaces.cssscoperule",
+      "spec": {
+        "anchor": "webref/idl/css-cascade-6.idl#WebIDL:CSSScopeRule.start",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSScopeRule has CSSGroupingRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-cascade-6.interfaces.cssscoperule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSGroupingRule"
+      },
+      "name": "CSSScopeRule inherits CSSGroupingRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-cascade-6.interfaces.cssscoperule",
+      "spec": {
+        "anchor": "webref/idl/css-cascade-6.idl#WebIDL:CSSScopeRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-cascade-6.json"
+}

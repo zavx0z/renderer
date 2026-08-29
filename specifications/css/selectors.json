@@ -1,0 +1,3447 @@
+{
+  "entries": [
+    {
+      "description": "The column combinator, which consists of two pipes (||) represents the relationship of a column element to a cell element belonging to the column it represents. Column membership is determined based on the semantics of the document language only: whether and how the elements are presented is not considered. If a cell element belongs to more than one column, it is represented by a selector indicating membership in any of those columns.",
+      "domain": "css",
+      "id": "css.selectors.anonymous-565d240f",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "'|' '|'"
+      },
+      "name": "||",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-5/#selectordef-column",
+        "profile": "standard",
+        "source": "css:selectors-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "A child combinator describes a childhood relationship between two elements. A child combinator is made of the \"greater-than sign\" (U+003E, >) code point and separates two compound selectors.",
+      "domain": "css",
+      "id": "css.selectors.anonymous-62b67e1f",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "'>'"
+      },
+      "name": ">",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#selectordef-child",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The subsequent-sibling combinator is made of the \"tilde\" (U+007E, ~) code point that separates two compound selectors. The elements represented by the two compound selectors share the same parent in the document tree and the element represented by the first compound selector precedes (not necessarily immediately) the element represented by the second one.",
+      "domain": "css",
+      "id": "css.selectors.anonymous-7ace431c",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "'~'"
+      },
+      "name": "~",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#selectordef-sibling",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "When using a nested style rule, one must be able to refer to the elements matched by the parent rule; that is, after all, the entire point of nesting. To accomplish that, this specification defines a new selector, the nesting selector, written as & (U+0026 AMPERSAND).",
+      "domain": "css",
+      "id": "css.selectors.anonymous-951dcee3",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "'&'"
+      },
+      "name": "&",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-nesting-1/#selectordef-",
+        "profile": "standard",
+        "source": "css:css-nesting-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The next-sibling combinator is made of the “plus sign” (U+002B, +) code point that separates two compound selectors. The elements represented by the two compound selectors share the same parent in the document tree and the element represented by the first compound selector immediately precedes the element represented by the second one. Non-element nodes (e.g. text between elements) are ignored when considering the adjacency of elements.",
+      "domain": "css",
+      "id": "css.selectors.anonymous-a318c242",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "'+'"
+      },
+      "name": "+",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#selectordef-adjacent",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :active pseudo-class applies while an element is being “activated” by the user, as defined by the host language; for example, while a hyperlink is being triggered.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-active",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":active"
+      },
+      "name": ":active",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#active-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :active-view-transition pseudo-class applies to the root element of the document, if it has an active view transition.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-active-view-transition",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":active-view-transition"
+      },
+      "name": ":active-view-transition",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-view-transitions-2/#active-view-transition-pseudo",
+        "profile": "standard",
+        "source": "css:css-view-transitions-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :active-view-transition-type() pseudo-class applies to the root element of the document, if it has a matching active view transition. It has the following syntax definition:",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-active-view-transition-type-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": []
+      },
+      "name": ":active-view-transition-type()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-view-transitions-2/#active-view-transition-type-pseudo",
+        "profile": "standard",
+        "source": "css:css-view-transitions-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-after",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":after"
+      },
+      "name": ":after",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css2/#selectordef-after",
+        "profile": "standard",
+        "source": "css:css2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :animated-image pseudo-class matches elements representing a declarative image where a animated image has been loaded. For the animated-image pseudo-class to match, the image must not only be in a format that is capable of animation, but must also be an actually animated image.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-animated-image",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":animated-image"
+      },
+      "name": ":animated-image",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-image-animation-1/#selectordef-animated-image",
+        "profile": "standard",
+        "source": "css:css-image-animation-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :any-link pseudo-class represents an element that acts as the source anchor of a hyperlink. For example, in [HTML], any a or area elements with an href attribute are hyperlinks, and thus match :any-link. It matches an element if the element would match either :link or :visited, and is equivalent to :is(:link, :visited).",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-any-link",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":any-link"
+      },
+      "name": ":any-link",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#any-link-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :autofill pseudo-class represents input elements that have been automatically filled by the user agent, and have not been subsequently altered by the user.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-autofill",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":autofill"
+      },
+      "name": ":autofill",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#selectordef-autofill",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-before",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":before"
+      },
+      "name": ":before",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css2/#selectordef-before",
+        "profile": "standard",
+        "source": "css:css2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :blank pseudo-class applies to user-input elements whose input value is empty (consists of the empty string or otherwise null input).",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-blank",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":blank"
+      },
+      "name": ":blank",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-5/#blank-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :buffering pseudo-class represents an element that is capable of being “played” or “paused”, when that element cannot continue playing because it is actively attempting to obtain media data but has not yet obtained enough data to resume playback. (Note that the element is still considered to be “playing” when it is “buffering”. Whenever :buffering matches an element, :playing also matches the element.)",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-buffering",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":buffering"
+      },
+      "name": ":buffering",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#selectordef-buffering",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "When such elements are toggled “on” the :checked pseudo-class applies. For example, [HTML] defines that checked checkboxes, radio buttons, and selected <option> elements match :checked. Similarly, when such elements are toggled “off”, the :unchecked pseudo-class applies.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-checked",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":checked"
+      },
+      "name": ":checked",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#checked-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :current pseudo-class represents the element, or an ancestor of the element, that is currently being displayed.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-current",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":current"
+      },
+      "name": ":current",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-5/#current-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "Its alternate form :current() takes a list of compound selectors as its argument: it represents the :current element that matches the argument or, if that does not match, the innermost ancestor of the :current element that does. (If neither the :current element nor its ancestors match the argument, then the selector does not represent anything.)",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-current-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": []
+      },
+      "name": ":current()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-5/#selectordef-current",
+        "profile": "standard",
+        "source": "css:selectors-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :default pseudo-class applies to the one or more UI elements that are the default among a set of similar elements. Typically applies to context menu items, buttons and select lists/menus.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-default",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":default"
+      },
+      "name": ":default",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#default-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "In some host languages, elements can have a distinction between being “defined”/“constructed” or not. The :defined pseudo-class matches elements that are fully defined, as dictated by the host language.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-defined",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":defined"
+      },
+      "name": ":defined",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#defined-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :dir() pseudo-class allows the author to write selectors that represent an element based on its directionality as determined by the document language. For example, [HTML] defines how to determine the directionality of an element, based on a combination of the dir attribute, the surrounding text, and other factors. As another example, the its:dir and dirRule element of the Internationalization Tag Set [ITS20] are able to define the directionality of an element in [XML10].",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-dir-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": []
+      },
+      "name": ":dir()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#dir-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "Conversely, the :disabled pseudo-class represents user interface elements that are in a disabled state; such elements must have a corresponding enabled state.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-disabled",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":disabled"
+      },
+      "name": ":disabled",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#disabled-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :empty pseudo-class represents an element that has no children except, optionally, document white space characters. In terms of the document tree, only element nodes and content nodes (such as [DOM] text nodes, and entity references) whose data has a non-zero length must be considered as affecting emptiness; comments, processing instructions, and other nodes must not affect whether an element is considered empty or not.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-empty",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":empty"
+      },
+      "name": ":empty",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#empty-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :enabled pseudo-class represents user interface elements that are in an enabled state; such elements must have a corresponding disabled state.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-enabled",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":enabled"
+      },
+      "name": ":enabled",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#enabled-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "Authors may also specify style for the first page of a document with the :first pseudo-class:",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-first",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":first"
+      },
+      "name": ":first",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css2/#selectordef-first",
+        "profile": "standard",
+        "source": "css:css2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :first-child pseudo-class represents an element that is first among its inclusive siblings. Same as :nth-child(1).",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-first-child",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":first-child"
+      },
+      "name": ":first-child",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#first-child-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-first-letter",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":first-letter"
+      },
+      "name": ":first-letter",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css2/#selectordef-first-letter",
+        "profile": "standard",
+        "source": "css:css2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-first-line",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":first-line"
+      },
+      "name": ":first-line",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css2/#selectordef-first-line",
+        "profile": "standard",
+        "source": "css:css2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "Same as :nth-of-page(n), but where n = 1 (it is the first matched element on the page).",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-first-of-page",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":first-of-page"
+      },
+      "name": ":first-of-page",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gcpm-4/#selectordef-first-of-page",
+        "profile": "standard",
+        "source": "css:css-gcpm-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :first-of-type pseudo-class represents the same element as :nth-of-type(1).",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-first-of-type",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":first-of-type"
+      },
+      "name": ":first-of-type",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#first-of-type-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :focus pseudo-class applies while an element (or pseudo-element) has the focus (accepts keyboard or other forms of input).",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-focus",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":focus"
+      },
+      "name": ":focus",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#focus-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "While the :focus pseudo-class always matches the currently-focused element, UAs only sometimes visibly indicate focus (such as by drawing a “focus ring”), instead using a variety of heuristics to visibly indicate the focus only when it would be most helpful to the user. The :focus-visible pseudo-class matches a focused element (or pseudo-element) in these situations only, allowing authors to change the appearance of the focus indicator without changing when a focus indicator appears.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-focus-visible",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":focus-visible"
+      },
+      "name": ":focus-visible",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#focus-visible-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :focus-within pseudo-class applies to any element (or pseudo-element) for which the :focus pseudo-class applies, as well as to an element (or pseudo-element) whose descendant in the flat tree (including non-element nodes, such as text nodes) matches the conditions for matching :focus.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-focus-within",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":focus-within"
+      },
+      "name": ":focus-within",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#focus-within-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :fullscreen pseudo-class represents an element which is displayed in a mode that takes up most (usually all) of the screen, such as that defined by the Fullscreen API. [FULLSCREEN]",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-fullscreen",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":fullscreen"
+      },
+      "name": ":fullscreen",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#selectordef-fullscreen",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :future pseudo-class represents any element that is defined to occur entirely after a :current element. For example, the WebVTT spec defines the :future pseudo-class relative to the current playback position of a media element. If a time-based order of elements is not defined by the document language, then this represents any element that is a (possibly indirect) next sibling of a :current element.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-future",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":future"
+      },
+      "name": ":future",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-5/#future-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The relational pseudo-class, :has(), is a functional pseudo-class taking a <relative-selector-list> as an argument. It represents an element if any of the relative selectors would match at least one element when anchored against this element.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-has-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": []
+      },
+      "name": ":has()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#has-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :has-slotted pseudo-class matches slot elements which have a non-empty list of flattened slotted nodes.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-has-slotted",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":has-slotted"
+      },
+      "name": ":has-slotted",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-shadow-1/#selectordef-has-slotted",
+        "profile": "standard",
+        "source": "css:css-shadow-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The (non-functional) :heading pseudo-class matches an element which has a heading level, with respect to the semantics defined by the document language (e.g. [HTML5]).",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-heading",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":heading"
+      },
+      "name": ":heading",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-5/#heading-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "As a functional pseudo-class, :heading() notation represents elements that have a heading level among matching any of the provided integer values. The syntax is:",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-heading-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":heading( <level># )"
+      },
+      "name": ":heading()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-5/#heading-functional-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :high-value pseudo-class matches on a meter element when its value is over the value specified by the high HTML attribute.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-high-value",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":high-value"
+      },
+      "name": ":high-value",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-forms-1/#selectordef-high-value",
+        "profile": "standard",
+        "source": "css:css-forms-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :host pseudo-class, when evaluated in the context of a shadow tree, matches the shadow tree’s shadow host. In any other context, it matches nothing.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-host",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":host"
+      },
+      "name": ":host",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-shadow-1/#selectordef-host",
+        "profile": "standard",
+        "source": "css:css-shadow-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :host-context() functional pseudo-class tests whether there is an ancestor, outside the shadow tree, which matches a particular selector. Its syntax is:",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-host-context-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": []
+      },
+      "name": ":host-context()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-shadow-1/#selectordef-host-context",
+        "profile": "standard",
+        "source": "css:css-shadow-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :host() function pseudo-class has the syntax:",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-host-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": []
+      },
+      "name": ":host()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-shadow-1/#selectordef-host-function",
+        "profile": "standard",
+        "source": "css:css-shadow-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :hover pseudo-class applies while the user designates an element (or pseudo-element) with a pointing device, but does not necessarily activate it. For example, a visual user agent could apply this pseudo-class when the cursor (mouse pointer) hovers over a box generated by the element. Interactive user agents that cannot detect hovering due to hardware limitations (e.g., a pen device that does not detect hovering) are still conforming; the selector will simply never match in such a UA.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-hover",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":hover"
+      },
+      "name": ":hover",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#hover-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :in-range and :out-of-range pseudo-classes apply only to elements that have range limitations. An element is :in-range or :out-of-range when the value that the element is bound to is in range or out of range with respect to its range limits as defined by the document language. An element that lacks data range limits or is not a form control is neither :in-range nor :out-of-range. E.g. a slider element with a value of 11 presented as a slider control that only represents the values from 1-10 is :out-of-range. Another example is a menu element with a value of \"E\" that happens to be presented in a popup menu that only has choices \"A\", \"B\" and \"C\".",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-in-range",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":in-range"
+      },
+      "name": ":in-range",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#in-range-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "If an element that could match :checked or :unchecked is neither \"on\" nor \"off\", the :indeterminate pseudo-class applies. :indeterminate also matches elements which do not have a notion of being \"checked\", but whose \"value\" is still in an indeterminate state, such as a progress meter whose progress percentage is unknown.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-indeterminate",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":indeterminate"
+      },
+      "name": ":indeterminate",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#indeterminate-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :interest-source pseudo-class applies to an interest source element that the user is currently \"showing interest\" in, and the :interest-target pseudo-class applies to the associated interest target of an element matching :interest-source.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-interest-source",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":interest-source"
+      },
+      "name": ":interest-source",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-5/#selectordef-interest-source",
+        "profile": "standard",
+        "source": "css:selectors-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :interest-source pseudo-class applies to an interest source element that the user is currently \"showing interest\" in, and the :interest-target pseudo-class applies to the associated interest target of an element matching :interest-source.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-interest-target",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":interest-target"
+      },
+      "name": ":interest-target",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-5/#selectordef-interest-target",
+        "profile": "standard",
+        "source": "css:selectors-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "An element is :valid or :invalid when its contents or value is, respectively, valid or invalid with respect to data validity semantics defined by the document language (e.g. [XFORMS11] or [HTML]). An element which lacks data validity semantics is neither :valid nor :invalid.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-invalid",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":invalid"
+      },
+      "name": ":invalid",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#invalid-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The matches-any pseudo-class, :is(), is a functional pseudo-class taking a <forgiving-selector-list> as its sole argument.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-is-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": []
+      },
+      "name": ":is()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#matches-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "If the document language specifies how the (human) content language of an element is determined, it is possible to write selectors that represent an element based on its content language. The :lang() pseudo-class, which accepts a comma-separated list of one or more language ranges, represents an element whose content language is one of the languages listed in its argument. Each language range in :lang() is an extended language range, as defined in BCP 47, and must be a valid CSS <ident> or <string>. (Thus language ranges containing asterisks, for example, must be either correctly escaped or quoted as strings, e.g. :lang(\\*-Latn) or :lang(\"*-Latn\").)",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-lang-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": []
+      },
+      "name": ":lang()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#lang-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :last-child pseudo-class represents an element that is last among its inclusive siblings. Same as :nth-last-child(1).",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-last-child",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":last-child"
+      },
+      "name": ":last-child",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#last-child-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The element is the last matched element on the page.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-last-of-page",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":last-of-page"
+      },
+      "name": ":last-of-page",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gcpm-4/#selectordef-last-of-page",
+        "profile": "standard",
+        "source": "css:css-gcpm-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :last-of-type pseudo-class represents the same element as :nth-last-of-type(1).",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-last-of-type",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":last-of-type"
+      },
+      "name": ":last-of-type",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#last-of-type-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "All pages are automatically classified by user agents into either the :left or :right pseudo-class. Whether the first page of a document is :left or :right depends on the major writing direction of the root element. For example, the first page of a document with a left-to-right major writing direction would be a :right page, and the first page of a document with a right-to-left major writing direction would be a :left page. To explicitly force a document to begin printing on a left or right page, authors can insert a page break before the first generated box.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-left",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":left"
+      },
+      "name": ":left",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css2/#selectordef-left",
+        "profile": "standard",
+        "source": "css:css2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "User agents commonly display unvisited hyperlinks differently from previously visited ones. Selectors provides the pseudo-classes :link and :visited to distinguish them:",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-link",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":link"
+      },
+      "name": ":link",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#link-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "This specification defines a new :link-to() functional pseudo-class that matches link elements that link to a certain URL.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-link-to-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": []
+      },
+      "name": ":link-to()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-navigation-1/#link-to-pseudo",
+        "profile": "standard",
+        "source": "css:css-navigation-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :local-link pseudo-class allows authors to style hyperlinks based on the users current location within a site and to differentiate site-internal versus site-external links.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-local-link",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":local-link"
+      },
+      "name": ":local-link",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-5/#local-link-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :low-value pseudo-class matches on a meter element when its value is under the value specified by the low HTML attribute.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-low-value",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":low-value"
+      },
+      "name": ":low-value",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-forms-1/#selectordef-low-value",
+        "profile": "standard",
+        "source": "css:css-forms-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "As previous drafts of this specification used the name :matches() for this pseudo-class, UAs may additionally implement this obsolete name as a legacy selector alias for :is() if needed for backwards-compatibility.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-matches-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": []
+      },
+      "name": ":matches()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#selectordef-matches",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :modal pseudo-class represents an element which is in a state that excludes all interaction with elements outside it until it has been dismissed. Multiple elements can be :modal simultaneously, with only one of them active (able to receive input).",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-modal",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":modal"
+      },
+      "name": ":modal",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#selectordef-modal",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :muted pseudo-class represents an element that is capable of making sound, but is currently “muted“ (forced silent). (For the audio and video elements of HTML, see muted. [HTML])",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-muted",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":muted"
+      },
+      "name": ":muted",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#selectordef-muted",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "This specification defines a :navigation-source pseudo-class, matching the element that triggered the current navigation. It is a CSS reflection of the sourceElement property in the Navigation API. The trigger element can be an [^a^], [^area^], [^form^], a [^input/type/submit^] input, or a [^button^].",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-navigation-source",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":navigation-source"
+      },
+      "name": ":navigation-source",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-navigation-1/#navigation-source-pseudo",
+        "profile": "standard",
+        "source": "css:css-navigation-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The negation pseudo-class, :not(), is a functional pseudo-class taking a <complex-real-selector-list> as an argument. It represents an element that is not represented by its argument.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-not-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": []
+      },
+      "name": ":not()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#negation-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-nth-child-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":nth-child(An+B [of S]? )"
+      },
+      "name": ":nth-child()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#nth-child-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-nth-col-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":nth-col(An+B)"
+      },
+      "name": ":nth-col()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-5/#nth-col-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-nth-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":nth( <a-n-plus-b> [of <custom-ident>]? )"
+      },
+      "name": ":nth()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gcpm-3/#selectordef-nth",
+        "profile": "standard",
+        "source": "css:css-gcpm-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-nth-last-child-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":nth-last-child(An+B [of S]? )"
+      },
+      "name": ":nth-last-child()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#nth-last-child-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-nth-last-col-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":nth-last-col(An+B)"
+      },
+      "name": ":nth-last-col()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-5/#nth-last-col-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-nth-last-of-type-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":nth-last-of-type(An+B)"
+      },
+      "name": ":nth-last-of-type()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#nth-last-of-type-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-nth-of-page-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":nth-of-page(n)"
+      },
+      "name": ":nth-of-page()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gcpm-4/#selectordef-nth-of-page-n",
+        "profile": "standard",
+        "source": "css:css-gcpm-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-nth-of-type-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":nth-of-type(An+B)"
+      },
+      "name": ":nth-of-type()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#nth-of-type-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :only-child pseudo-class represents an element that has no siblings. Same as :first-child:last-child or :nth-child(1):nth-last-child(1), but with a lower specificity.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-only-child",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":only-child"
+      },
+      "name": ":only-child",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#only-child-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :only-of-type pseudo-class represents the same element as :first-of-type:last-of-type.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-only-of-type",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":only-of-type"
+      },
+      "name": ":only-of-type",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#only-of-type-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :open pseudo-class represents an element that has both “open” and “closed” states, and which is currently in the “open” state.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-open",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":open"
+      },
+      "name": ":open",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#selectordef-open",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :optimal-value pseudo-class matches on a meter element when its value is in the range determined by the optimum / low / high HTML attributes.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-optimal-value",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":optimal-value"
+      },
+      "name": ":optimal-value",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-forms-1/#selectordef-optimal-value",
+        "profile": "standard",
+        "source": "css:css-forms-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "A form element is :required or :optional if a value for it is, respectively, required or optional before the form it belongs to can be validly submitted. Elements that are not form elements are neither required nor optional.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-optional",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":optional"
+      },
+      "name": ":optional",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#optional-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :in-range and :out-of-range pseudo-classes apply only to elements that have range limitations. An element is :in-range or :out-of-range when the value that the element is bound to is in range or out of range with respect to its range limits as defined by the document language. An element that lacks data range limits or is not a form control is neither :in-range nor :out-of-range. E.g. a slider element with a value of 11 presented as a slider control that only represents the values from 1-10 is :out-of-range. Another example is a menu element with a value of \"E\" that happens to be presented in a popup menu that only has choices \"A\", \"B\" and \"C\".",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-out-of-range",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":out-of-range"
+      },
+      "name": ":out-of-range",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#out-of-range-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :past pseudo-class represents any element that is defined to occur entirely prior to a :current element. For example, the WebVTT spec defines the :past pseudo-class relative to the current playback position of a media element. If a time-based order of elements is not defined by the document language, then this represents any element that is a (possibly indirect) previous sibling of a :current element.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-past",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":past"
+      },
+      "name": ":past",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-5/#past-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :paused pseudo-class represents an element that is capable of being “played” or “paused”, when that element is “paused” (i.e. not ”playing”). (This includes both an explicit “paused” state, and other non-playing states like “loaded, hasn’t been activated yet”, etc.)",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-paused",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":paused"
+      },
+      "name": ":paused",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#selectordef-paused",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :picture-in-picture pseudo-class represents an element whose contents are being displayed in a “picture-in-picture” mode (i.e. displayed in a window confined to part of the screen and overlaying other content) rather than embedded in the document. For example, this pseudo-class can be used to style a video element’s box while its contents are being played in an overlaid window using the Picture-in-Picture API. [picture-in-picture]",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-picture-in-picture",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":picture-in-picture"
+      },
+      "name": ":picture-in-picture",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#selectordef-picture-in-picture",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "Input elements can sometimes show placeholder text as a hint to the user on what to type in. See, for example, the placeholder attribute in [HTML]. The :placeholder-shown pseudo-class matches an input element that is showing such placeholder text, whether that text is given by an attribute or a real element, or is otherwise implied by the UA.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-placeholder-shown",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":placeholder-shown"
+      },
+      "name": ":placeholder-shown",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#placeholder-shown-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :playing pseudo-class represents an element that is capable of being “played” or “paused”, when that element is “playing”. (This includes both when the element is explicitly playing, and when it’s temporarily stopped for some reason not connected to user intent, but will automatically resume when that reason is resolved, such as a “buffering” or “stalled” state.)",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-playing",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":playing"
+      },
+      "name": ":playing",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#selectordef-playing",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :popover-open pseudo-class represents an element that has both “popover-showing” and “popover-hidden” states and which is currently in the “popover-showing” state.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-popover-open",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":popover-open"
+      },
+      "name": ":popover-open",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#selectordef-popover-open",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "An element matches :read-write if it is user-alterable, as defined by the document language. Otherwise, it is :read-only.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-read-only",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":read-only"
+      },
+      "name": ":read-only",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#read-only-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "An element matches :read-write if it is user-alterable, as defined by the document language. Otherwise, it is :read-only.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-read-write",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":read-write"
+      },
+      "name": ":read-write",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#read-write-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "A form element is :required or :optional if a value for it is, respectively, required or optional before the form it belongs to can be validly submitted. Elements that are not form elements are neither required nor optional.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-required",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":required"
+      },
+      "name": ":required",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#required-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "All pages are automatically classified by user agents into either the :left or :right pseudo-class. Whether the first page of a document is :left or :right depends on the major writing direction of the root element. For example, the first page of a document with a left-to-right major writing direction would be a :right page, and the first page of a document with a right-to-left major writing direction would be a :left page. To explicitly force a document to begin printing on a left or right page, authors can insert a page break before the first generated box.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-right",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":right"
+      },
+      "name": ":right",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css2/#selectordef-right",
+        "profile": "standard",
+        "source": "css:css2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :root pseudo-class represents an element that is the root of the document.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-root",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":root"
+      },
+      "name": ":root",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#root-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "In some contexts, selectors are matched with respect to one or more scoping roots, such as when calling the querySelector() method in [DOM]. The :scope pseudo-class represents this scoping root, and may be either a true element or a virtual one (such as a DocumentFragment).",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-scope",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":scope"
+      },
+      "name": ":scope",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#scope-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :seeking pseudo-class represents an element that is capable of ”seeking” when that element is ”seeking”. (For the audio and video elements of HTML, see HTML § 4.8.11.9 Seeking.)",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-seeking",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":seeking"
+      },
+      "name": ":seeking",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#selectordef-seeking",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :snapped pseudo-class matches any snap targets, regardless of axis. The longform physical and logical pseudo-class selectors allow for more finite snapped children styling as they can target an individual axis.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-snapped",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":snapped"
+      },
+      "name": ":snapped",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "Matches the child snapped on the block axis.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-snapped-block",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":snapped-block"
+      },
+      "name": ":snapped-block",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped-block",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "Matches the child snapped on the inline axis.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-snapped-inline",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":snapped-inline"
+      },
+      "name": ":snapped-inline",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped-inline",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "Matches the child snapped on the horizontal axis.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-snapped-x",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":snapped-x"
+      },
+      "name": ":snapped-x",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped-x",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "Matches the child snapped on the vertical axis.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-snapped-y",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":snapped-y"
+      },
+      "name": ":snapped-y",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-2/#selectordef-snapped-y",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :stalled pseudo-class represents an element when that element cannot continue playing because it is actively attempting to obtain media data but it has failed to receive any data for some amount of time. For the audio and video elements of HTML, this amount of time is the media element stall timeout. [HTML] (Note that, like with the :buffering pseudo-class, the element is still considered to be “playing” when it is “stalled”. Whenever :stalled matches an element, :playing also matches the element.)",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-stalled",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":stalled"
+      },
+      "name": ":stalled",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#selectordef-stalled",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The element is the first matched element on the page, and neither it nor its ancestors have any previous siblings that appear on the page.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-start-of-page",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":start-of-page"
+      },
+      "name": ":start-of-page",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gcpm-4/#selectordef-start-of-page",
+        "profile": "standard",
+        "source": "css:css-gcpm-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-state-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":state( <ident> )"
+      },
+      "name": ":state()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-5/#state-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :target pseudo-class matches the document’s target elements. If the document’s URL has no fragment identifier, then the document has no target elements.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-target",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":target"
+      },
+      "name": ":target",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#target-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "In addition to the :target-current pseudo-class, this specification introduces the :target-before and :target-after pseudo-classes for use with scroll marker elements.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-target-after",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":target-after"
+      },
+      "name": ":target-after",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-5/#selectordef-target-after",
+        "profile": "standard",
+        "source": "css:css-overflow-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "In addition to the :target-current pseudo-class, this specification introduces the :target-before and :target-after pseudo-classes for use with scroll marker elements.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-target-before",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":target-before"
+      },
+      "name": ":target-before",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-5/#selectordef-target-before",
+        "profile": "standard",
+        "source": "css:css-overflow-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "Exactly one scroll marker within each scroll marker group is determined to be active at a time. Such \"active\" scroll markers match the :target-current pseudo-class.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-target-current",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":target-current"
+      },
+      "name": ":target-current",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-5/#selectordef-target-current",
+        "profile": "standard",
+        "source": "css:css-overflow-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "When such elements are toggled “on” the :checked pseudo-class applies. For example, [HTML] defines that checked checkboxes, radio buttons, and selected <option> elements match :checked. Similarly, when such elements are toggled “off”, the :unchecked pseudo-class applies.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-unchecked",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":unchecked"
+      },
+      "name": ":unchecked",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#unchecked-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :user-invalid and the :user-valid pseudo-classes represent an element with incorrect or correct input, respectively, but only after the user has significantly interacted with it. Their purpose is to help the user identify mistakes in their input.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-user-invalid",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":user-invalid"
+      },
+      "name": ":user-invalid",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#user-invalid-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :user-invalid and the :user-valid pseudo-classes represent an element with incorrect or correct input, respectively, but only after the user has significantly interacted with it. Their purpose is to help the user identify mistakes in their input.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-user-valid",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":user-valid"
+      },
+      "name": ":user-valid",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#user-valid-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "An element is :valid or :invalid when its contents or value is, respectively, valid or invalid with respect to data validity semantics defined by the document language (e.g. [XFORMS11] or [HTML]). An element which lacks data validity semantics is neither :valid nor :invalid.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-valid",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":valid"
+      },
+      "name": ":valid",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#valid-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "User agents commonly display unvisited hyperlinks differently from previously visited ones. Selectors provides the pseudo-classes :link and :visited to distinguish them:",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-visited",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":visited"
+      },
+      "name": ":visited",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#visited-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :volume-locked pseudo-class represents an element that is capable of making sound, and currently has its volume \"locked\" by the UA or the user, so the page author cannot change it. (For the audio and video elements of HTML, see the algorithm for setting the element’s effective media volume. [HTML])",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-volume-locked",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":volume-locked"
+      },
+      "name": ":volume-locked",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#selectordef-volume-locked",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The Specificity-adjustment pseudo-class, :where(), is a functional pseudo-class with the same syntax and functionality as :is(). Unlike :is(), neither the :where() pseudo-class, nor any of its arguments, contribute to the specificity of the selector—​its specificity is always zero.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-where-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": []
+      },
+      "name": ":where()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/selectors-4/#where-pseudo",
+        "profile": "standard",
+        "source": "css:selectors-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The :xr-overlay pseudo-class MUST match the overlay element for the duration of an immersive session using a DOM Overlay.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-class-xr-overlay",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": ":xr-overlay"
+      },
+      "name": ":xr-overlay",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://immersive-web.github.io/dom-overlays/#selectordef-xr-overlay",
+        "profile": "standard",
+        "source": "css:dom-overlays",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "Represents a styleable child pseudo-element immediately after the originating element’s actual content.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-after",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::after"
+      },
+      "name": "::after",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-pseudo-4/#selectordef-after",
+        "profile": "standard",
+        "source": "css:css-pseudo-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "Each element rendered in the top layer has a ::backdrop pseudo-element, for which it is the originating element.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-backdrop",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::backdrop"
+      },
+      "name": "::backdrop",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-position-4/#selectordef-backdrop",
+        "profile": "standard",
+        "source": "css:css-position-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "Represents a styleable child pseudo-element immediately before the originating element’s actual content.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-before",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::before"
+      },
+      "name": "::before",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-pseudo-4/#selectordef-before",
+        "profile": "standard",
+        "source": "css:css-pseudo-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::checkmark pseudo-element represents an indicator of whether the item is checked, and is present on checkboxes, radios, and option elements.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-checkmark",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::checkmark"
+      },
+      "name": "::checkmark",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-forms-1/#selectordef-checkmark",
+        "profile": "standard",
+        "source": "css:css-forms-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::clear-icon pseudo-element represents the portion of the input that allows the user to clear the input when clicked if provided by the user agent. With appearance: textfield, the user agent must not generate this part.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-clear-icon",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::clear-icon"
+      },
+      "name": "::clear-icon",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-forms-1/#selectordef-clear-icon",
+        "profile": "standard",
+        "source": "css:css-forms-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::color-swatch pseudo-element represents the portion of the control that displays the chosen color value.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-color-swatch",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::color-swatch"
+      },
+      "name": "::color-swatch",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-forms-1/#selectordef-color-swatch",
+        "profile": "standard",
+        "source": "css:css-forms-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::column pseudo-element represents the individual columns in a multi-column container. It only exists on multi-column containers.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-column",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::column"
+      },
+      "name": "::column",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-multicol-2/#selectordef-column",
+        "profile": "standard",
+        "source": "css:css-multicol-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::cue pseudo-element (with no argument) matches any list of WebVTT Node Objects constructed for the matched element, with the exception that the properties corresponding to the background shorthand must be applied to the WebVTT cue background box rather than the list of WebVTT Node Objects.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-cue",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::cue"
+      },
+      "name": "::cue",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/webvtt/#selectordef-cue",
+        "profile": "standard",
+        "source": "css:webvtt",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-cue-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::cue(selector)"
+      },
+      "name": "::cue()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/webvtt/#selectordef-cue-selector",
+        "profile": "standard",
+        "source": "css:webvtt",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::cue-region pseudo-element (with no argument) matches any list of WebVTT region objects constructed for the matched element.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-cue-region",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::cue-region"
+      },
+      "name": "::cue-region",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/webvtt/#selectordef-cue-region",
+        "profile": "standard",
+        "source": "css:webvtt",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-cue-region-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::cue-region(selector)"
+      },
+      "name": "::cue-region()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/webvtt/#selectordef-cue-region-selector",
+        "profile": "standard",
+        "source": "css:webvtt",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::details-content pseudo-element targets the additional information in a details element that can be expanded or collapsed. It is an element-backed pseudo-element.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-details-content",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::details-content"
+      },
+      "name": "::details-content",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-pseudo-4/#selectordef-details-content",
+        "profile": "standard",
+        "source": "css:css-pseudo-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::field-component pseudo-element represents the portions of the control that contain the date/time component values.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-field-component",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::field-component"
+      },
+      "name": "::field-component",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-forms-1/#selectordef-field-component",
+        "profile": "standard",
+        "source": "css:css-forms-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::field-content pseudo-element represents the portion of the input that contains the editable text.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-field-content",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::field-content"
+      },
+      "name": "::field-content",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-forms-1/#selectordef-field-content",
+        "profile": "standard",
+        "source": "css:css-forms-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::field-separator pseudo-element represents the portions of the control that separate the date/time component values if the user agent provides those portions.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-field-separator",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::field-separator"
+      },
+      "name": "::field-separator",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-forms-1/#selectordef-field-separator",
+        "profile": "standard",
+        "source": "css:css-forms-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::file-selector-button pseudo-element represents the button used to open a file picker, if the UA renders such a button.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-file-selector-button",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::file-selector-button"
+      },
+      "name": "::file-selector-button",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-forms-1/#selectordef-file-selector-button",
+        "profile": "standard",
+        "source": "css:css-forms-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::first-letter pseudo-element represents the first Letter, Number, or Symbol (Unicode category L*, N*, or S*) typographic character unit on the first formatted line of its originating element (the first letter) as well as its associated punctuation. Collectively, this text is the first-letter text. The ::first-letter pseudo-element can be used to create “initial caps” and “drop caps”, which are common typographic effects.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-first-letter",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::first-letter"
+      },
+      "name": "::first-letter",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-pseudo-4/#selectordef-first-letter",
+        "profile": "standard",
+        "source": "css:css-pseudo-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::first-line pseudo-element represents the contents of the first formatted line of its originating element.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-first-line",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::first-line"
+      },
+      "name": "::first-line",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-pseudo-4/#selectordef-first-line",
+        "profile": "standard",
+        "source": "css:css-pseudo-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::grammar-error pseudo-element represents a portion of text that has been flagged by the user agent as grammatically incorrect.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-grammar-error",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::grammar-error"
+      },
+      "name": "::grammar-error",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-pseudo-4/#selectordef-grammar-error",
+        "profile": "standard",
+        "source": "css:css-pseudo-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-highlight-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::highlight(<custom-ident>)"
+      },
+      "name": "::highlight()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-pseudo-4/#selectordef-highlight-custom-ident",
+        "profile": "standard",
+        "source": "css:css-pseudo-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::marker pseudo-element represents the automatically generated marker box of a list item. (See [CSS-DISPLAY-3] and [CSS-LISTS-3].)",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-marker",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::marker"
+      },
+      "name": "::marker",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-pseudo-4/#selectordef-marker",
+        "profile": "standard",
+        "source": "css:css-pseudo-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::nth-fragment() pseudo-element is a pseudo-element that describes some of the fragment boxes generated by an element. The argument to the pseudo-element takes the same syntax as the argument to the :nth-child() pseudo-class defined in [SELECT], and has the same meaning except that the number is relative to fragment boxes generated by the element instead of siblings of the element.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-nth-fragment-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": []
+      },
+      "name": "::nth-fragment()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-5/#selectordef-nth-fragment",
+        "profile": "standard",
+        "source": "css:css-overflow-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::part() pseudo-element allows you to select elements that have been exposed via a part attribute. The syntax is:",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-part-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::part( <ident>+ )"
+      },
+      "name": "::part()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-shadow-1/#selectordef-part",
+        "profile": "standard",
+        "source": "css:css-shadow-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::picker() pseudo-element represents the part of the form control that pops out of the page.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-picker-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::picker( <form-control-identifier>+ )"
+      },
+      "name": "::picker()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-forms-1/#selectordef-picker",
+        "profile": "standard",
+        "source": "css:css-forms-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::picker-icon pseudo-element represents the part of the control that represents the icon denoting the presence of the picker. It is only generated when the originating element has basic appearance and if it opens a picker. It is a fully styleable pseudo-element and inherits from its originating element.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-picker-icon",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::picker-icon"
+      },
+      "name": "::picker-icon",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-forms-1/#selectordef-picker-icon",
+        "profile": "standard",
+        "source": "css:css-forms-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::placeholder pseudo-element represents the portion of the input that contains the placeholder text.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-placeholder",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::placeholder"
+      },
+      "name": "::placeholder",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-forms-1/#selectordef-placeholder",
+        "profile": "standard",
+        "source": "css:css-forms-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::reveal-icon pseudo-element represents the portion of the input that allows the user to temporarily disable obscuring of sensitive text input when clicked if provided by the user agent. User agents providing ::reveal-icon may choose to remove it in some circumstances to help protect sensitive text input from being revealed unintentionally.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-reveal-icon",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::reveal-icon"
+      },
+      "name": "::reveal-icon",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-forms-1/#selectordef-reveal-icon",
+        "profile": "standard",
+        "source": "css:css-forms-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-scroll-button-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::scroll-button( '*' | <scroll-button-direction> )"
+      },
+      "name": "::scroll-button()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-5/#selectordef-scroll-button---scroll-button-direction",
+        "profile": "standard",
+        "source": "css:css-overflow-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "When the computed content value of a ::scroll-marker pseudo-element is not none and its nearest ancestor scroll container scroll container has a computed scroll-marker-group property that is not none, the pseudo-element generates a box attached as a child of the ::scroll-marker-group pseudo-element’s generated box on its nearest ancestor scroll container. These boxes are added in the tree order of their originating element.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-scroll-marker",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::scroll-marker"
+      },
+      "name": "::scroll-marker",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-5/#selectordef-scroll-marker",
+        "profile": "standard",
+        "source": "css:css-overflow-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::scroll-marker-group fully styleable pseudo-element is generated by a scroll container element having a computed scroll-marker-group property that is not none.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-scroll-marker-group",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::scroll-marker-group"
+      },
+      "name": "::scroll-marker-group",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-5/#selectordef-scroll-marker-group",
+        "profile": "standard",
+        "source": "css:css-overflow-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::search-text pseudo-element represents text identified by the user agent’s find-in-page feature. Since not all UAs style matched text in ways expressible with the highlight pseudo-elements, this pseudo-element is optional to implement. The :current pseudo-class (but not ::current()) may be combined with ::search-text to represent the currently focused match instance. The :past and :future pseudo-classes are reserved for analogous use in the future. Any unsupported combination of these pseudo-classes with ::search-text must be treated as invalid.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-search-text",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::search-text"
+      },
+      "name": "::search-text",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-pseudo-4/#selectordef-search-text",
+        "profile": "standard",
+        "source": "css:css-pseudo-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::selection pseudo-element represents the portion of a document that has been selected as the target or object of some possible future user-agent operation(s). It applies, for example, to selected text within an editable text field, which would be copied by a copy operation or replaced by a paste operation.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-selection",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::selection"
+      },
+      "name": "::selection",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-pseudo-4/#selectordef-selection",
+        "profile": "standard",
+        "source": "css:css-pseudo-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::slider-fill pseudo-element represents the portion containing the progressed portion of the control. When the progress of control is indeterminate (like with <progress>), the user agent must give this portion an inline-size of zero.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-slider-fill",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::slider-fill"
+      },
+      "name": "::slider-fill",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-forms-1/#selectordef-slider-fill",
+        "profile": "standard",
+        "source": "css:css-forms-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::slider-thumb pseudo-element represents the portion that allows the user to adjust the progress of the control.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-slider-thumb",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::slider-thumb"
+      },
+      "name": "::slider-thumb",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-forms-1/#selectordef-slider-thumb",
+        "profile": "standard",
+        "source": "css:css-forms-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::slider-track pseudo-element represents the portion containing both the progressed and unprogressed portions of the control.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-slider-track",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::slider-track"
+      },
+      "name": "::slider-track",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-forms-1/#selectordef-slider-track",
+        "profile": "standard",
+        "source": "css:css-forms-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::slotted() pseudo-element represents the elements assigned, after flattening, to a slot. This pseudo-element only exists on slots.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-slotted-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": []
+      },
+      "name": "::slotted()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-shadow-1/#selectordef-slotted",
+        "profile": "standard",
+        "source": "css:css-shadow-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::spelling-error pseudo-element represents a portion of text that has been flagged by the user agent as misspelled.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-spelling-error",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::spelling-error"
+      },
+      "name": "::spelling-error",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-pseudo-4/#selectordef-spelling-error",
+        "profile": "standard",
+        "source": "css:css-pseudo-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::step-control pseudo-element represents the portion of a number input that contains the up and down buttons.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-step-control",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::step-control"
+      },
+      "name": "::step-control",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-forms-1/#selectordef-step-control",
+        "profile": "standard",
+        "source": "css:css-forms-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::step-down pseudo-element represents the button that decrements the value inside a number input when activated.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-step-down",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::step-down"
+      },
+      "name": "::step-down",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-forms-1/#selectordef-step-down",
+        "profile": "standard",
+        "source": "css:css-forms-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::step-up pseudo-element represents the button that increments the value inside a number input when activated.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-step-up",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::step-up"
+      },
+      "name": "::step-up",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-forms-1/#selectordef-step-up",
+        "profile": "standard",
+        "source": "css:css-forms-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::target-text pseudo-element represents text directly targeted by the document URL’s fragment, if any.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-target-text",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::target-text"
+      },
+      "name": "::target-text",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-pseudo-4/#selectordef-target-text",
+        "profile": "standard",
+        "source": "css:css-pseudo-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::view-transition pseudo-element is a fully styleable pseudo-element that is also a pseudo-element root. If its originating element is the document’s document element, its containing block is the snapshot containing block.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-view-transition",
+      "kind": "selector",
+      "metadata": {
+        "extended": [],
+        "syntax": "::view-transition"
+      },
+      "name": "::view-transition",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-view-transitions-2/#selectordef-view-transition",
+        "profile": "standard",
+        "source": "css:css-view-transitions-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::view-transition-group-children() pseudo-element is created when mandated by the view-transition-group property on either the element itself or on its contained element. It serves as a container for descendant view-transition-group() pseudo-elements. By default, it is sized to the same size as the corresponding view-transition-group() pseudo element. By default, it has a transparent border that matches the size and shape of the border on the element that caused this structure to be created.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-view-transition-group-children-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": []
+      },
+      "name": "::view-transition-group-children()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-view-transitions-2/#selectordef-view-transition-group-children",
+        "profile": "standard",
+        "source": "css:css-view-transitions-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::view-transition-group() pseudo-element is a named view transition pseudo-element that represents a matching named view transition capture. A ::view-transition-group() pseudo-element is generated for each view transition name as a child of the ::view-transition pseudo-element, and contains a corresponding ::view-transition-image-pair().",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-view-transition-group-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": []
+      },
+      "name": "::view-transition-group()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-view-transitions-2/#selectordef-view-transition-group",
+        "profile": "standard",
+        "source": "css:css-view-transitions-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::view-transition-image-pair() pseudo-element is a named view transition pseudo-element that represents a pair of corresponding old/new view transition captures. This pseudo-element is a child of the corresponding ::view-transition-group() pseudo-element and contains a corresponding ::view-transition-old() pseudo-element and/or a corresponding ::view-transition-new() pseudo-element (in that order).",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-view-transition-image-pair-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": []
+      },
+      "name": "::view-transition-image-pair()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-view-transitions-2/#selectordef-view-transition-image-pair",
+        "profile": "standard",
+        "source": "css:css-view-transitions-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::view-transition-new() pseudo-element (like the analogous ::view-transition-old() pseudo-element) is an empty named view transition pseudo-element that represents a visual snapshot of the “new” state as a replaced element; it is omitted if there’s no “new” state to represent. Each ::view-transition-new() pseudo-element is a child of the corresponding ::view-transition-image-pair() pseudo-element.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-view-transition-new-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": []
+      },
+      "name": "::view-transition-new()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-view-transitions-2/#selectordef-view-transition-new",
+        "profile": "standard",
+        "source": "css:css-view-transitions-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The ::view-transition-old() pseudo-element is an empty named view transition pseudo-element that represents a visual snapshot of the “old” state as a replaced element; it is omitted if there’s no “old” state to represent. Each ::view-transition-old() pseudo-element is a child of the corresponding ::view-transition-image-pair() pseudo-element.",
+      "domain": "css",
+      "id": "css.selectors.pseudo-element-view-transition-old-function",
+      "kind": "selector",
+      "metadata": {
+        "extended": []
+      },
+      "name": "::view-transition-old()",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-view-transitions-2/#selectordef-view-transition-old",
+        "profile": "standard",
+        "source": "css:css-view-transitions-2",
+        "version": "8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/selectors.json"
+}

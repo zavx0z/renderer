@@ -1,0 +1,79 @@
+{
+  "entries": [
+    {
+      "description": "React 19.2 use client directive reference surface.",
+      "domain": "react",
+      "id": "react.directives.use-client",
+      "kind": "directive",
+      "name": "use client",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "https://react.dev/reference/rsc/use-client",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "React 19.2 use memo directive reference surface.",
+      "domain": "react",
+      "id": "react.directives.use-memo",
+      "kind": "directive",
+      "name": "use memo",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "https://react.dev/reference/rsc/use-memo",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "React 19.2 use no memo directive reference surface.",
+      "domain": "react",
+      "id": "react.directives.use-no-memo",
+      "kind": "directive",
+      "name": "use no memo",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "https://react.dev/reference/rsc/use-no-memo",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "React 19.2 use server directive reference surface.",
+      "domain": "react",
+      "id": "react.directives.use-server",
+      "kind": "directive",
+      "name": "use server",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "https://react.dev/reference/rsc/use-server",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "react-19.2/directives.json"
+}

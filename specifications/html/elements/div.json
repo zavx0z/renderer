@@ -1,0 +1,123 @@
+{
+  "entries": [
+    {
+      "description": "Generic flow container, or container for name-value groups in dl elements",
+      "domain": "html",
+      "id": "html.elements.div",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; palpable",
+        "children": "flow*",
+        "interface": "HTMLDivElement",
+        "parents": "flow; dl; option; optgroup; select"
+      },
+      "name": "div",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <div> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.div.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "div",
+        "interface": "HTMLDivElement"
+      },
+      "name": "div implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.div",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <div> element content categories.",
+      "domain": "html",
+      "id": "html.elements.div.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "div",
+        "interface": "HTMLDivElement"
+      },
+      "name": "div content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.div",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <div> element content model.",
+      "domain": "html",
+      "id": "html.elements.div.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "div",
+        "interface": "HTMLDivElement"
+      },
+      "name": "div content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.div",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <div> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.div.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "div",
+        "interface": "HTMLDivElement"
+      },
+      "name": "div interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.div",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/div.json"
+}

@@ -1,0 +1,1080 @@
+{
+  "entries": [
+    {
+      "description": "dictionary CSSParserOptions from css-parser-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.dictionaries.cssparseroptions",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "css-parser-api.idl"
+      },
+      "name": "CSSParserOptions",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserOptions",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSParserOptions.atRules Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.dictionaries.cssparseroptions.fields.atrules",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"atRules\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"object\"},\"default\":null,\"required\":false}"
+      },
+      "name": "atRules",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.dictionaries.cssparseroptions",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserOptions.atRules",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSParserAtRule from css-parser-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparseratrule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-parser-api.idl",
+        "inheritance": "CSSParserRule"
+      },
+      "name": "CSSParserAtRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserAtRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSParserAtRule.body Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparseratrule.attributes.body",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"body\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"FrozenArray\",\"nullable\":true,\"union\":false,\"idlType\":[{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSParserRule\"}]},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "body",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.interfaces.cssparseratrule",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserAtRule.body",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSParserAtRule.name Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparseratrule.attributes.name",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"name\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.interfaces.cssparseratrule",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserAtRule.name",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSParserAtRule.prelude Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparseratrule.attributes.prelude",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"prelude\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"FrozenArray\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSParserValue\"}]},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "prelude",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.interfaces.cssparseratrule",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserAtRule.prelude",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSParserAtRule.constructor Web IDL constructor.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparseratrule.constructors.constructor",
+      "kind": "constructor",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "signature": "{\"type\":\"constructor\",\"arguments\":[{\"type\":\"argument\",\"name\":\"name\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"prelude\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSToken\"}]},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"body\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":true,\"union\":false,\"idlType\":[{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSParserRule\"}]},\"default\":null,\"optional\":true,\"variadic\":false}],\"extAttrs\":[]}"
+      },
+      "name": "constructor",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.interfaces.cssparseratrule",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserAtRule.constructor",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSParserAtRule has CSSParserRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparseratrule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSParserRule"
+      },
+      "name": "CSSParserAtRule inherits CSSParserRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.interfaces.cssparseratrule",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserAtRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSParserAtRule.stringifier Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparseratrule.methods.stringifier",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"\",\"arguments\":[],\"extAttrs\":[],\"special\":\"stringifier\"}",
+        "special": "stringifier"
+      },
+      "name": "stringifier",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.interfaces.cssparseratrule",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserAtRule.stringifier",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSParserBlock from css-parser-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparserblock",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-parser-api.idl",
+        "inheritance": "CSSParserValue"
+      },
+      "name": "CSSParserBlock",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserBlock",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSParserBlock.body Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparserblock.attributes.body",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"body\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"FrozenArray\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSParserValue\"}]},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "body",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.interfaces.cssparserblock",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserBlock.body",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSParserBlock.name Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparserblock.attributes.name",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"name\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.interfaces.cssparserblock",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserBlock.name",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSParserBlock.constructor Web IDL constructor.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparserblock.constructors.constructor",
+      "kind": "constructor",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "signature": "{\"type\":\"constructor\",\"arguments\":[{\"type\":\"argument\",\"name\":\"name\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"body\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSParserValue\"}]},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[]}"
+      },
+      "name": "constructor",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.interfaces.cssparserblock",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserBlock.constructor",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSParserBlock has CSSParserValue as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparserblock.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSParserValue"
+      },
+      "name": "CSSParserBlock inherits CSSParserValue",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.interfaces.cssparserblock",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserBlock",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSParserBlock.stringifier Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparserblock.methods.stringifier",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"\",\"arguments\":[],\"extAttrs\":[],\"special\":\"stringifier\"}",
+        "special": "stringifier"
+      },
+      "name": "stringifier",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.interfaces.cssparserblock",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserBlock.stringifier",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSParserDeclaration from css-parser-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparserdeclaration",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-parser-api.idl",
+        "inheritance": "CSSParserRule"
+      },
+      "name": "CSSParserDeclaration",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserDeclaration",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSParserDeclaration.body Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparserdeclaration.attributes.body",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"body\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"FrozenArray\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSParserValue\"}]},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "body",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.interfaces.cssparserdeclaration",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserDeclaration.body",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSParserDeclaration.name Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparserdeclaration.attributes.name",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"name\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.interfaces.cssparserdeclaration",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserDeclaration.name",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSParserDeclaration.constructor Web IDL constructor.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparserdeclaration.constructors.constructor",
+      "kind": "constructor",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "signature": "{\"type\":\"constructor\",\"arguments\":[{\"type\":\"argument\",\"name\":\"name\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"body\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSParserRule\"}]},\"default\":null,\"optional\":true,\"variadic\":false}],\"extAttrs\":[]}"
+      },
+      "name": "constructor",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.interfaces.cssparserdeclaration",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserDeclaration.constructor",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSParserDeclaration has CSSParserRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparserdeclaration.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSParserRule"
+      },
+      "name": "CSSParserDeclaration inherits CSSParserRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.interfaces.cssparserdeclaration",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserDeclaration",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSParserDeclaration.stringifier Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparserdeclaration.methods.stringifier",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"\",\"arguments\":[],\"extAttrs\":[],\"special\":\"stringifier\"}",
+        "special": "stringifier"
+      },
+      "name": "stringifier",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.interfaces.cssparserdeclaration",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserDeclaration.stringifier",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSParserFunction from css-parser-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparserfunction",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-parser-api.idl",
+        "inheritance": "CSSParserValue"
+      },
+      "name": "CSSParserFunction",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserFunction",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSParserFunction.args Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparserfunction.attributes.args",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"args\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"FrozenArray\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"FrozenArray\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSParserValue\"}]}]},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "args",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.interfaces.cssparserfunction",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserFunction.args",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSParserFunction.name Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparserfunction.attributes.name",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"name\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.interfaces.cssparserfunction",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserFunction.name",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSParserFunction.constructor Web IDL constructor.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparserfunction.constructors.constructor",
+      "kind": "constructor",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "signature": "{\"type\":\"constructor\",\"arguments\":[{\"type\":\"argument\",\"name\":\"name\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"args\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSParserValue\"}]}]},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[]}"
+      },
+      "name": "constructor",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.interfaces.cssparserfunction",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserFunction.constructor",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSParserFunction has CSSParserValue as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparserfunction.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSParserValue"
+      },
+      "name": "CSSParserFunction inherits CSSParserValue",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.interfaces.cssparserfunction",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserFunction",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSParserFunction.stringifier Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparserfunction.methods.stringifier",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"\",\"arguments\":[],\"extAttrs\":[],\"special\":\"stringifier\"}",
+        "special": "stringifier"
+      },
+      "name": "stringifier",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.interfaces.cssparserfunction",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserFunction.stringifier",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSParserQualifiedRule from css-parser-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparserqualifiedrule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-parser-api.idl",
+        "inheritance": "CSSParserRule"
+      },
+      "name": "CSSParserQualifiedRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserQualifiedRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSParserQualifiedRule.body Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparserqualifiedrule.attributes.body",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"body\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"FrozenArray\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSParserRule\"}]},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "body",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.interfaces.cssparserqualifiedrule",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserQualifiedRule.body",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSParserQualifiedRule.prelude Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparserqualifiedrule.attributes.prelude",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"prelude\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"FrozenArray\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSParserValue\"}]},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "prelude",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.interfaces.cssparserqualifiedrule",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserQualifiedRule.prelude",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSParserQualifiedRule.constructor Web IDL constructor.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparserqualifiedrule.constructors.constructor",
+      "kind": "constructor",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "signature": "{\"type\":\"constructor\",\"arguments\":[{\"type\":\"argument\",\"name\":\"prelude\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSToken\"}]},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"body\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":true,\"union\":false,\"idlType\":[{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSParserRule\"}]},\"default\":null,\"optional\":true,\"variadic\":false}],\"extAttrs\":[]}"
+      },
+      "name": "constructor",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.interfaces.cssparserqualifiedrule",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserQualifiedRule.constructor",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSParserQualifiedRule has CSSParserRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparserqualifiedrule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSParserRule"
+      },
+      "name": "CSSParserQualifiedRule inherits CSSParserRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.interfaces.cssparserqualifiedrule",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserQualifiedRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSParserQualifiedRule.stringifier Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparserqualifiedrule.methods.stringifier",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"\",\"arguments\":[],\"extAttrs\":[],\"special\":\"stringifier\"}",
+        "special": "stringifier"
+      },
+      "name": "stringifier",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.interfaces.cssparserqualifiedrule",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserQualifiedRule.stringifier",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSParserRule from css-parser-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparserrule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-parser-api.idl"
+      },
+      "name": "CSSParserRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSParserValue from css-parser-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.interfaces.cssparservalue",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-parser-api.idl"
+      },
+      "name": "CSSParserValue",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSParserValue",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "namespace CSS from css-parser-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.namespaces.css",
+      "kind": "namespace",
+      "metadata": {
+        "idlSource": "css-parser-api.idl"
+      },
+      "name": "CSS",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSS",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSS.parseCommaValueList Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.namespaces.css.methods.parsecommavaluelist",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"parseCommaValueList\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSToken\"}]}]},\"arguments\":[{\"type\":\"argument\",\"name\":\"css\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "parseCommaValueList",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.namespaces.css",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSS.parseCommaValueList",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSS.parseDeclaration Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.namespaces.css.methods.parsedeclaration",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"parseDeclaration\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSParserDeclaration\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"css\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"options\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSParserOptions\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "parseDeclaration",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.namespaces.css",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSS.parseDeclaration",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSS.parseDeclarationList Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.namespaces.css.methods.parsedeclarationlist",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"parseDeclarationList\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"Promise\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSParserRule\"}]}]},\"arguments\":[{\"type\":\"argument\",\"name\":\"css\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSStringSource\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"options\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSParserOptions\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "parseDeclarationList",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.namespaces.css",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSS.parseDeclarationList",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSS.parseRule Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.namespaces.css.methods.parserule",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"parseRule\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"Promise\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSParserRule\"}]},\"arguments\":[{\"type\":\"argument\",\"name\":\"css\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSStringSource\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"options\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSParserOptions\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "parseRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.namespaces.css",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSS.parseRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSS.parseRuleList Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.namespaces.css.methods.parserulelist",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"parseRuleList\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"Promise\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSParserRule\"}]}]},\"arguments\":[{\"type\":\"argument\",\"name\":\"css\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSStringSource\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"options\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSParserOptions\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "parseRuleList",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.namespaces.css",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSS.parseRuleList",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSS.parseStylesheet Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.namespaces.css.methods.parsestylesheet",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"parseStylesheet\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"Promise\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSParserRule\"}]}]},\"arguments\":[{\"type\":\"argument\",\"name\":\"css\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSStringSource\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"options\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSParserOptions\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "parseStylesheet",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.namespaces.css",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSS.parseStylesheet",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSS.parseValue Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.namespaces.css.methods.parsevalue",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"parseValue\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSToken\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"css\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "parseValue",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.namespaces.css",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSS.parseValue",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSS.parseValueList Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.namespaces.css.methods.parsevaluelist",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-parser-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"parseValueList\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSToken\"}]},\"arguments\":[{\"type\":\"argument\",\"name\":\"css\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "parseValueList",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-parser-api.namespaces.css",
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSS.parseValueList",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "typedef CSSStringSource from css-parser-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.typedefs.cssstringsource",
+      "kind": "typedef",
+      "metadata": {
+        "idlSource": "css-parser-api.idl"
+      },
+      "name": "CSSStringSource",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSStringSource",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "typedef CSSToken from css-parser-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-parser-api.typedefs.csstoken",
+      "kind": "typedef",
+      "metadata": {
+        "idlSource": "css-parser-api.idl"
+      },
+      "name": "CSSToken",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-parser-api.idl#WebIDL:CSSToken",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-parser-api.json"
+}

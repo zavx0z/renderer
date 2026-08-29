@@ -1,0 +1,123 @@
+{
+  "entries": [
+    {
+      "description": "Stress emphasis",
+      "domain": "html",
+      "id": "html.elements.em",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; phrasing; palpable",
+        "children": "phrasing",
+        "interface": "HTMLElement",
+        "parents": "phrasing"
+      },
+      "name": "em",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-em-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <em> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.em.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "em",
+        "interface": "HTMLElement"
+      },
+      "name": "em implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.em",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <em> element content categories.",
+      "domain": "html",
+      "id": "html.elements.em.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "em",
+        "interface": "HTMLElement"
+      },
+      "name": "em content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.em",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-em-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <em> element content model.",
+      "domain": "html",
+      "id": "html.elements.em.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "em",
+        "interface": "HTMLElement"
+      },
+      "name": "em content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.em",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-em-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <em> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.em.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "em",
+        "interface": "HTMLElement"
+      },
+      "name": "em interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.em",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-em-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/em.json"
+}

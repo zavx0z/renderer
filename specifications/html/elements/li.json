@@ -1,0 +1,146 @@
+{
+  "entries": [
+    {
+      "description": "List item",
+      "domain": "html",
+      "id": "html.elements.li",
+      "kind": "element",
+      "metadata": {
+        "categories": "none",
+        "children": "flow",
+        "interface": "HTMLLIElement",
+        "parents": "ol; ul; menu*"
+      },
+      "name": "li",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-li-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <li> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.li.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "li",
+        "interface": "HTMLLIElement"
+      },
+      "name": "li implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.li",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "value content attribute on <li>.",
+      "domain": "html",
+      "id": "html.elements.li.attributes.value",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "li",
+        "interface": "HTMLLIElement"
+      },
+      "name": "value",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.li",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/grouping-content.html#attr-li-value",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <li> element content categories.",
+      "domain": "html",
+      "id": "html.elements.li.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "li",
+        "interface": "HTMLLIElement"
+      },
+      "name": "li content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.li",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-li-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <li> element content model.",
+      "domain": "html",
+      "id": "html.elements.li.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "li",
+        "interface": "HTMLLIElement"
+      },
+      "name": "li content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.li",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-li-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <li> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.li.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "li",
+        "interface": "HTMLLIElement"
+      },
+      "name": "li interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.li",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-li-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/li.json"
+}

@@ -1,0 +1,1372 @@
+{
+  "entries": [
+    {
+      "domain": "css",
+      "id": "css.properties.object-fit",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "replaced elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword(s)",
+        "extended": [],
+        "inherited": "no",
+        "initial": "fill",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "object-fit",
+          "objectFit"
+        ],
+        "syntax": "fill | none | [contain | cover] || scale-down"
+      },
+      "name": "object-fit",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-images-4/#propdef-object-fit",
+        "profile": "standard",
+        "source": "css:css-images-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.object-position",
+      "kind": "property",
+      "metadata": {
+        "animationType": "as for background-position",
+        "appliesTo": "replaced elements",
+        "canonicalOrder": "the horizontal component of the <position>, followed by the vertical component",
+        "computedValue": "as for background-position",
+        "extended": [],
+        "inherited": "no",
+        "initial": "50% 50%",
+        "percentages": "refer to width and height of element itself",
+        "styleDeclaration": [
+          "object-position",
+          "objectPosition"
+        ],
+        "syntax": "<position>"
+      },
+      "name": "object-position",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-images-3/#propdef-object-position",
+        "profile": "standard",
+        "source": "css:css-images-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.object-view-box",
+      "kind": "property",
+      "metadata": {
+        "animationType": "as <basic-shape> if possible, otherwise discrete",
+        "appliesTo": "replaced elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword, or computed <basic-shape> function",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "object-view-box",
+          "objectViewBox"
+        ],
+        "syntax": "none | <basic-shape-rect>"
+      },
+      "name": "object-view-box",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-images-5/#propdef-object-view-box",
+        "profile": "standard",
+        "source": "css:css-images-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.offset",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "transformable elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "offset-path",
+          "offset-distance",
+          "offset-rotate",
+          "offset-anchor",
+          "offset-position"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "offset"
+        ],
+        "syntax": "[ <'offset-position'>? [ <'offset-path'> [ <'offset-distance'> || <'offset-rotate'> ]? ]? ]! [ / <'offset-anchor'> ]?"
+      },
+      "name": "offset",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/motion-1/#propdef-offset",
+        "profile": "standard",
+        "source": "css:motion-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.offset-anchor",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "transformable elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the auto keyword or a computed <position>",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "media": "visual",
+        "percentages": "relative to the width and the height of the element’s reference box",
+        "styleDeclaration": [
+          "offset-anchor",
+          "offsetAnchor"
+        ],
+        "syntax": "auto | <position>"
+      },
+      "name": "offset-anchor",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/motion-1/#propdef-offset-anchor",
+        "profile": "standard",
+        "source": "css:motion-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.offset-distance",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "transformable elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "a computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "media": "visual",
+        "percentages": "relative to the offset path length",
+        "styleDeclaration": [
+          "offset-distance",
+          "offsetDistance"
+        ],
+        "syntax": "<length-percentage>"
+      },
+      "name": "offset-distance",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/motion-1/#propdef-offset-distance",
+        "profile": "standard",
+        "source": "css:motion-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.offset-path",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "transformable elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "offset-path",
+          "offsetPath"
+        ],
+        "syntax": "none | <offset-path> || <coord-box>"
+      },
+      "name": "offset-path",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/motion-1/#propdef-offset-path",
+        "profile": "standard",
+        "source": "css:motion-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.offset-position",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "transformable elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "The normal or auto keywords, or a computed <position>",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "media": "visual",
+        "percentages": "Refer to the size of containing block",
+        "styleDeclaration": [
+          "offset-position",
+          "offsetPosition"
+        ],
+        "syntax": "normal | auto | <position>"
+      },
+      "name": "offset-position",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/motion-1/#propdef-offset-position",
+        "profile": "standard",
+        "source": "css:motion-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.offset-rotate",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "transformable elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "computed <angle> value, optionally preceded by auto",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "offset-rotate",
+          "offsetRotate"
+        ],
+        "syntax": "[ auto | reverse ] || <angle>"
+      },
+      "name": "offset-rotate",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/motion-1/#propdef-offset-rotate",
+        "profile": "standard",
+        "source": "css:motion-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.opacity",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified number, clamped to the range [0,1]",
+        "extended": [],
+        "inherited": "no",
+        "initial": "1",
+        "percentages": "map to the range [0,1]",
+        "styleDeclaration": [
+          "opacity"
+        ],
+        "syntax": "<opacity-value>"
+      },
+      "name": "opacity",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-color-4/#propdef-opacity",
+        "profile": "standard",
+        "source": "css:css-color-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.order",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "flex items and grid items",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified integer",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "order"
+        ],
+        "syntax": "<integer>"
+      },
+      "name": "order",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-display-4/#propdef-order",
+        "profile": "standard",
+        "source": "css:css-display-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.orphans",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "block containers that establish an inline formatting context",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified integer",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "2",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "orphans"
+        ],
+        "syntax": "<integer [1,∞]>"
+      },
+      "name": "orphans",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-break-4/#propdef-orphans",
+        "profile": "standard",
+        "source": "css:css-break-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.outline",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "see individual properties",
+        "longhands": [
+          "outline-width",
+          "outline-style",
+          "outline-color"
+        ],
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "outline"
+        ],
+        "syntax": "<'outline-width'> || <'outline-style'> || <'outline-color'>"
+      },
+      "name": "outline",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-ui-4/#propdef-outline",
+        "profile": "standard",
+        "source": "css:css-ui-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.outline-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see below",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "outline-color",
+          "outlineColor"
+        ],
+        "syntax": "auto | <'border-top-color'>"
+      },
+      "name": "outline-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-ui-4/#propdef-outline-color",
+        "profile": "standard",
+        "source": "css:css-ui-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.outline-offset",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "absolute length",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "outline-offset",
+          "outlineOffset"
+        ],
+        "syntax": "<length>"
+      },
+      "name": "outline-offset",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-ui-4/#propdef-outline-offset",
+        "profile": "standard",
+        "source": "css:css-ui-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.outline-style",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "outline-style",
+          "outlineStyle"
+        ],
+        "syntax": "auto | <outline-line-style>"
+      },
+      "name": "outline-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-ui-4/#propdef-outline-style",
+        "profile": "standard",
+        "source": "css:css-ui-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.outline-width",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "absolute length, snapped as a border width",
+        "extended": [],
+        "inherited": "no",
+        "initial": "medium",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "outline-width",
+          "outlineWidth"
+        ],
+        "syntax": "<line-width>"
+      },
+      "name": "outline-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-ui-4/#propdef-outline-width",
+        "profile": "standard",
+        "source": "css:css-ui-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.overflow",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block containers [CSS2], flex containers [CSS3-FLEXBOX], and grid containers [CSS3-GRID-LAYOUT]",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "visible",
+        "longhands": [
+          "overflow-x",
+          "overflow-y"
+        ],
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "overflow"
+        ],
+        "syntax": "<'overflow-block'>{1,2}"
+      },
+      "name": "overflow",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-3/#propdef-overflow",
+        "profile": "standard",
+        "source": "css:css-overflow-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.overflow-anchor",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "overflow-anchor",
+          "overflowAnchor"
+        ],
+        "syntax": "auto | none"
+      },
+      "name": "overflow-anchor",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-anchoring-1/#propdef-overflow-anchor",
+        "profile": "standard",
+        "source": "css:css-scroll-anchoring-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.overflow-block",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block containers [CSS2], flex containers [CSS-FLEXBOX-1], grid containers [CSS-GRID-1], and table grid boxes [CSS-TABLES-3]",
+        "canonicalOrder": "per grammar",
+        "computedValue": "usually specified value, but see text",
+        "extended": [],
+        "inherited": "no",
+        "initial": "visible",
+        "logicalPropertyGroup": "overflow",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "overflow-block",
+          "overflowBlock"
+        ],
+        "syntax": "visible | hidden | clip | scroll | auto"
+      },
+      "name": "overflow-block",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-3/#propdef-overflow-block",
+        "profile": "standard",
+        "source": "css:css-overflow-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.overflow-clip-margin",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "boxes to which overflow applies",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0px",
+        "longhands": [
+          "overflow-clip-margin-top",
+          "overflow-clip-margin-right",
+          "overflow-clip-margin-bottom",
+          "overflow-clip-margin-left"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "overflow-clip-margin",
+          "overflowClipMargin"
+        ],
+        "syntax": "<visual-box> || <length>"
+      },
+      "name": "overflow-clip-margin",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin",
+        "profile": "standard",
+        "source": "css:css-overflow-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.overflow-clip-margin-block",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "boxes to which overflow applies",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0px",
+        "longhands": [
+          "overflow-clip-margin-block-start",
+          "overflow-clip-margin-block-end"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "overflow-clip-margin-block",
+          "overflowClipMarginBlock"
+        ],
+        "syntax": "<visual-box> || <length>"
+      },
+      "name": "overflow-clip-margin-block",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-block",
+        "profile": "standard",
+        "source": "css:css-overflow-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.overflow-clip-margin-block-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "per computed value if the <visual-box> values match; otherwise discrete",
+        "appliesTo": "boxes to which overflow applies",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the computed <length> and a <visual-box> keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0px",
+        "logicalPropertyGroup": "overflow-clip-margin",
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "overflow-clip-margin-block-end",
+          "overflowClipMarginBlockEnd"
+        ],
+        "syntax": "<visual-box> || <length>"
+      },
+      "name": "overflow-clip-margin-block-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-block-end",
+        "profile": "standard",
+        "source": "css:css-overflow-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.overflow-clip-margin-block-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "per computed value if the <visual-box> values match; otherwise discrete",
+        "appliesTo": "boxes to which overflow applies",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the computed <length> and a <visual-box> keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0px",
+        "logicalPropertyGroup": "overflow-clip-margin",
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "overflow-clip-margin-block-start",
+          "overflowClipMarginBlockStart"
+        ],
+        "syntax": "<visual-box> || <length>"
+      },
+      "name": "overflow-clip-margin-block-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-block-start",
+        "profile": "standard",
+        "source": "css:css-overflow-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.overflow-clip-margin-bottom",
+      "kind": "property",
+      "metadata": {
+        "animationType": "per computed value if the <visual-box> values match; otherwise discrete",
+        "appliesTo": "boxes to which overflow applies",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the computed <length> and a <visual-box> keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0px",
+        "logicalPropertyGroup": "overflow-clip-margin",
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "overflow-clip-margin-bottom",
+          "overflowClipMarginBottom"
+        ],
+        "syntax": "<visual-box> || <length>"
+      },
+      "name": "overflow-clip-margin-bottom",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-bottom",
+        "profile": "standard",
+        "source": "css:css-overflow-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.overflow-clip-margin-inline",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "boxes to which overflow applies",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0px",
+        "longhands": [
+          "overflow-clip-margin-inline-start",
+          "overflow-clip-margin-inline-end"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "overflow-clip-margin-inline",
+          "overflowClipMarginInline"
+        ],
+        "syntax": "<visual-box> || <length>"
+      },
+      "name": "overflow-clip-margin-inline",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-inline",
+        "profile": "standard",
+        "source": "css:css-overflow-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.overflow-clip-margin-inline-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "per computed value if the <visual-box> values match; otherwise discrete",
+        "appliesTo": "boxes to which overflow applies",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the computed <length> and a <visual-box> keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0px",
+        "logicalPropertyGroup": "overflow-clip-margin",
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "overflow-clip-margin-inline-end",
+          "overflowClipMarginInlineEnd"
+        ],
+        "syntax": "<visual-box> || <length>"
+      },
+      "name": "overflow-clip-margin-inline-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-inline-end",
+        "profile": "standard",
+        "source": "css:css-overflow-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.overflow-clip-margin-inline-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "per computed value if the <visual-box> values match; otherwise discrete",
+        "appliesTo": "boxes to which overflow applies",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the computed <length> and a <visual-box> keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0px",
+        "logicalPropertyGroup": "overflow-clip-margin",
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "overflow-clip-margin-inline-start",
+          "overflowClipMarginInlineStart"
+        ],
+        "syntax": "<visual-box> || <length>"
+      },
+      "name": "overflow-clip-margin-inline-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-inline-start",
+        "profile": "standard",
+        "source": "css:css-overflow-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.overflow-clip-margin-left",
+      "kind": "property",
+      "metadata": {
+        "animationType": "per computed value if the <visual-box> values match; otherwise discrete",
+        "appliesTo": "boxes to which overflow applies",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the computed <length> and a <visual-box> keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0px",
+        "logicalPropertyGroup": "overflow-clip-margin",
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "overflow-clip-margin-left",
+          "overflowClipMarginLeft"
+        ],
+        "syntax": "<visual-box> || <length>"
+      },
+      "name": "overflow-clip-margin-left",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-left",
+        "profile": "standard",
+        "source": "css:css-overflow-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.overflow-clip-margin-right",
+      "kind": "property",
+      "metadata": {
+        "animationType": "per computed value if the <visual-box> values match; otherwise discrete",
+        "appliesTo": "boxes to which overflow applies",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the computed <length> and a <visual-box> keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0px",
+        "logicalPropertyGroup": "overflow-clip-margin",
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "overflow-clip-margin-right",
+          "overflowClipMarginRight"
+        ],
+        "syntax": "<visual-box> || <length>"
+      },
+      "name": "overflow-clip-margin-right",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-right",
+        "profile": "standard",
+        "source": "css:css-overflow-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.overflow-clip-margin-top",
+      "kind": "property",
+      "metadata": {
+        "animationType": "per computed value if the <visual-box> values match; otherwise discrete",
+        "appliesTo": "boxes to which overflow applies",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the computed <length> and a <visual-box> keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0px",
+        "logicalPropertyGroup": "overflow-clip-margin",
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "overflow-clip-margin-top",
+          "overflowClipMarginTop"
+        ],
+        "syntax": "<visual-box> || <length>"
+      },
+      "name": "overflow-clip-margin-top",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-4/#propdef-overflow-clip-margin-top",
+        "profile": "standard",
+        "source": "css:css-overflow-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.overflow-inline",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block containers [CSS2], flex containers [CSS-FLEXBOX-1], grid containers [CSS-GRID-1], and table grid boxes [CSS-TABLES-3]",
+        "canonicalOrder": "per grammar",
+        "computedValue": "usually specified value, but see text",
+        "extended": [],
+        "inherited": "no",
+        "initial": "visible",
+        "logicalPropertyGroup": "overflow",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "overflow-inline",
+          "overflowInline"
+        ],
+        "syntax": "visible | hidden | clip | scroll | auto"
+      },
+      "name": "overflow-inline",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-3/#propdef-overflow-inline",
+        "profile": "standard",
+        "source": "css:css-overflow-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.overflow-wrap",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "text",
+        "canonicalOrder": "n/a",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "overflow-wrap",
+          "overflowWrap"
+        ],
+        "syntax": "normal | break-word | anywhere"
+      },
+      "name": "overflow-wrap",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-overflow-wrap",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.overflow-x",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block containers [CSS2], flex containers [CSS-FLEXBOX-1], grid containers [CSS-GRID-1], and table grid boxes [CSS-TABLES-3]",
+        "canonicalOrder": "per grammar",
+        "computedValue": "usually specified value, but see text",
+        "extended": [],
+        "inherited": "no",
+        "initial": "visible",
+        "logicalPropertyGroup": "overflow",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "overflow-x",
+          "overflowX"
+        ],
+        "syntax": "visible | hidden | clip | scroll | auto"
+      },
+      "name": "overflow-x",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-3/#propdef-overflow-x",
+        "profile": "standard",
+        "source": "css:css-overflow-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.overflow-y",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block containers [CSS2], flex containers [CSS-FLEXBOX-1], grid containers [CSS-GRID-1], and table grid boxes [CSS-TABLES-3]",
+        "canonicalOrder": "per grammar",
+        "computedValue": "usually specified value, but see text",
+        "extended": [],
+        "inherited": "no",
+        "initial": "visible",
+        "logicalPropertyGroup": "overflow",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "overflow-y",
+          "overflowY"
+        ],
+        "syntax": "visible | hidden | clip | scroll | auto"
+      },
+      "name": "overflow-y",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-3/#propdef-overflow-y",
+        "profile": "standard",
+        "source": "css:css-overflow-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.overlay",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see prose",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "overlay"
+        ],
+        "syntax": "none | auto"
+      },
+      "name": "overlay",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-position-4/#propdef-overlay",
+        "profile": "standard",
+        "source": "css:css-position-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.overscroll-behavior",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "scroll container elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto auto",
+        "longhands": [
+          "overscroll-behavior-x",
+          "overscroll-behavior-y"
+        ],
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "overscroll-behavior",
+          "overscrollBehavior"
+        ],
+        "syntax": "[ contain | none | auto | chain ]{1,2}"
+      },
+      "name": "overscroll-behavior",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overscroll-1/#propdef-overscroll-behavior",
+        "profile": "standard",
+        "source": "css:css-overscroll-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.overscroll-behavior-block",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "scroll container elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "logicalPropertyGroup": "overscroll-behavior",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "overscroll-behavior-block",
+          "overscrollBehaviorBlock"
+        ],
+        "syntax": "contain | none | auto | chain"
+      },
+      "name": "overscroll-behavior-block",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overscroll-1/#propdef-overscroll-behavior-block",
+        "profile": "standard",
+        "source": "css:css-overscroll-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.overscroll-behavior-inline",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "scroll container elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "logicalPropertyGroup": "overscroll-behavior",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "overscroll-behavior-inline",
+          "overscrollBehaviorInline"
+        ],
+        "syntax": "contain | none | auto | chain"
+      },
+      "name": "overscroll-behavior-inline",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overscroll-1/#propdef-overscroll-behavior-inline",
+        "profile": "standard",
+        "source": "css:css-overscroll-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.overscroll-behavior-x",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "scroll container elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "logicalPropertyGroup": "overscroll-behavior",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "overscroll-behavior-x",
+          "overscrollBehaviorX"
+        ],
+        "syntax": "contain | none | auto | chain"
+      },
+      "name": "overscroll-behavior-x",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overscroll-1/#propdef-overscroll-behavior-x",
+        "profile": "standard",
+        "source": "css:css-overscroll-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.overscroll-behavior-y",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "scroll container elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "logicalPropertyGroup": "overscroll-behavior",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "overscroll-behavior-y",
+          "overscrollBehaviorY"
+        ],
+        "syntax": "contain | none | auto | chain"
+      },
+      "name": "overscroll-behavior-y",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overscroll-1/#propdef-overscroll-behavior-y",
+        "profile": "standard",
+        "source": "css:css-overscroll-1",
+        "version": "8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/properties/o.json"
+}

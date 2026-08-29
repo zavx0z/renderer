@@ -1,0 +1,123 @@
+{
+  "entries": [
+    {
+      "description": "Caption for figure",
+      "domain": "html",
+      "id": "html.elements.figcaption",
+      "kind": "element",
+      "metadata": {
+        "categories": "none",
+        "children": "flow",
+        "interface": "HTMLElement",
+        "parents": "figure"
+      },
+      "name": "figcaption",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-figcaption-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <figcaption> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.figcaption.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "figcaption",
+        "interface": "HTMLElement"
+      },
+      "name": "figcaption implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.figcaption",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <figcaption> element content categories.",
+      "domain": "html",
+      "id": "html.elements.figcaption.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "figcaption",
+        "interface": "HTMLElement"
+      },
+      "name": "figcaption content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.figcaption",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-figcaption-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <figcaption> element content model.",
+      "domain": "html",
+      "id": "html.elements.figcaption.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "figcaption",
+        "interface": "HTMLElement"
+      },
+      "name": "figcaption content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.figcaption",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-figcaption-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <figcaption> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.figcaption.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "figcaption",
+        "interface": "HTMLElement"
+      },
+      "name": "figcaption interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.figcaption",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-figcaption-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/figcaption.json"
+}

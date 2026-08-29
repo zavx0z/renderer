@@ -1,0 +1,112 @@
+{
+  "entries": [
+    {
+      "description": "react/jsx-dev-runtime public export Fragment in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.jsx-runtime.react-jsx-dev-runtime.fragment",
+      "kind": "jsx-runtime-export",
+      "metadata": {
+        "entrypoint": "react/jsx-dev-runtime"
+      },
+      "name": "Fragment",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react/jsx-dev-runtime@19.2.0#exports.Fragment",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react/jsx-dev-runtime public export jsxDEV in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.jsx-runtime.react-jsx-dev-runtime.jsxdev",
+      "kind": "jsx-runtime-export",
+      "metadata": {
+        "entrypoint": "react/jsx-dev-runtime"
+      },
+      "name": "jsxDEV",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react/jsx-dev-runtime@19.2.0#exports.jsxDEV",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react/jsx-runtime public export Fragment in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.jsx-runtime.react-jsx-runtime.fragment",
+      "kind": "jsx-runtime-export",
+      "metadata": {
+        "entrypoint": "react/jsx-runtime"
+      },
+      "name": "Fragment",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react/jsx-runtime@19.2.0#exports.Fragment",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react/jsx-runtime public export jsx in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.jsx-runtime.react-jsx-runtime.jsx",
+      "kind": "jsx-runtime-export",
+      "metadata": {
+        "entrypoint": "react/jsx-runtime"
+      },
+      "name": "jsx",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react/jsx-runtime@19.2.0#exports.jsx",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react/jsx-runtime public export jsxs in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.jsx-runtime.react-jsx-runtime.jsxs",
+      "kind": "jsx-runtime-export",
+      "metadata": {
+        "entrypoint": "react/jsx-runtime"
+      },
+      "name": "jsxs",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react/jsx-runtime@19.2.0#exports.jsxs",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "react-19.2/jsx-runtime.json"
+}

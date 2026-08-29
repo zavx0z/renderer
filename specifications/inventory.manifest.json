@@ -1,0 +1,1077 @@
+{
+  "files": [
+    {
+      "digest": "245d91a60f4414248d5f33d06774f0fd1d93ececedf9ed96d837d95ad9fee0f0",
+      "entries": 157,
+      "path": "css/at-rules.json"
+    },
+    {
+      "digest": "4c08845d86bb8589871b1ae67246360f0bba691db3787cba2ceb96113ab614f1",
+      "entries": 76,
+      "path": "css/cssom/css-anchor-position.json"
+    },
+    {
+      "digest": "08915ca9e133e22926e00d3973c852312c6d998483aaee9111c6d233c2f7dc93",
+      "entries": 16,
+      "path": "css/cssom/css-animation-worklet.json"
+    },
+    {
+      "digest": "5ed3e4ed4c952a62586a7197789f0fa7b9a0e59dcbe3bab60f1f2923fbc6f3e5",
+      "entries": 7,
+      "path": "css/cssom/css-animations-2.json"
+    },
+    {
+      "digest": "cfac1ce87b6ad67bb6bd65008e9d8dd41b78b2092f62ea9b9214a56aacb02519",
+      "entries": 32,
+      "path": "css/cssom/css-animations.json"
+    },
+    {
+      "digest": "4c1c94a395503c3f61c2c2377a4735834dfa24f84b2b31465ec4f0394e6af02f",
+      "entries": 4,
+      "path": "css/cssom/css-cascade-6.json"
+    },
+    {
+      "digest": "4fa69965ed8af63a00be64c8ac797a8140e29db1a5995b47b54ac916689d6a99",
+      "entries": 6,
+      "path": "css/cssom/css-cascade.json"
+    },
+    {
+      "digest": "9b8ad063d0a42c50ed098359937bba34745d03db29e39533c5147030ec30f2d5",
+      "entries": 6,
+      "path": "css/cssom/css-color-5.json"
+    },
+    {
+      "digest": "1f4c19ab4e709e07898cc363a3e64e457ad4e5dbba1e434f8d4659e442e4f7d0",
+      "entries": 11,
+      "path": "css/cssom/css-conditional-5.json"
+    },
+    {
+      "digest": "5cf8f9b7cea52b363af911e53b2033e2afd6fa06d3e8efc55b223070345936e7",
+      "entries": 15,
+      "path": "css/cssom/css-conditional.json"
+    },
+    {
+      "digest": "aac5b7968caaf2561effbfa9531a3481179a3580f4ebf45e0ce1c04c6eccbb12",
+      "entries": 7,
+      "path": "css/cssom/css-contain.json"
+    },
+    {
+      "digest": "3495df295bd78f344fcd384787ec76f626f0631c6a020aa256b67c6db4c37146",
+      "entries": 15,
+      "path": "css/cssom/css-counter-styles.json"
+    },
+    {
+      "digest": "b5ac9c566e37768fe3684af55262e578ca6e36cd11b03ae484ad6fb1736125e5",
+      "entries": 82,
+      "path": "css/cssom/css-font-loading.json"
+    },
+    {
+      "digest": "3472459ba85c34b12702e8fec846bf977d93b6e3859b77b24f3b659451d487e6",
+      "entries": 46,
+      "path": "css/cssom/css-fonts-5.json"
+    },
+    {
+      "digest": "4cb567192e6909ed95948663f89330c4ea4e1b3ce802ed305ed7293d6b2946ff",
+      "entries": 21,
+      "path": "css/cssom/css-fonts.json"
+    },
+    {
+      "digest": "67eb0689659e412a684e8e68eddc53e40d9245c5eb6b92e0c8adf2be8f96b3cc",
+      "entries": 20,
+      "path": "css/cssom/css-highlight-api.json"
+    },
+    {
+      "digest": "8d485f32a5104337832c4299e1d1b83acc7d5dda3874c0f9a9650cd27f33406c",
+      "entries": 2,
+      "path": "css/cssom/css-images-4.json"
+    },
+    {
+      "digest": "7d6a6c69476bbd950451844e5788c95542a80ed4822c28baa0228d1384935d3e",
+      "entries": 89,
+      "path": "css/cssom/css-layout-api.json"
+    },
+    {
+      "digest": "c81ae3930a5f67bd8986cf9a00fab7d959da91d619ed8ba28b874890b8b4a6b6",
+      "entries": 12,
+      "path": "css/cssom/css-masking.json"
+    },
+    {
+      "digest": "2a2ac8a1c04b8da0a3d77ea9b0e4a4d5bba5443270e7a44dbcbc1bc1e0cfc6cb",
+      "entries": 32,
+      "path": "css/cssom/css-mixins.json"
+    },
+    {
+      "digest": "8d71dd3832c3dd482515d20ef798c6e530c6749764518389d8166a3418e7b3a1",
+      "entries": 28,
+      "path": "css/cssom/css-nav.json"
+    },
+    {
+      "digest": "d814c8ed9ce4b4902ffb2901d902d17f14a7e4a670a796d160733dcc806f98f8",
+      "entries": 3,
+      "path": "css/cssom/css-nesting.json"
+    },
+    {
+      "digest": "2e1426b61d5473ca6815be841b0b308d63229960f1174c9bb8865b97caff10cb",
+      "entries": 23,
+      "path": "css/cssom/css-paint-api.json"
+    },
+    {
+      "digest": "f5cb47be0af68e7093031ebbb6f27bd82d67e0e44d2572e904455ce998f37418",
+      "entries": 46,
+      "path": "css/cssom/css-parser-api.json"
+    },
+    {
+      "digest": "09d5023d63f388001ba3f4e48941085882d3eed4739247dc8acce66a3af8d39e",
+      "entries": 13,
+      "path": "css/cssom/css-properties-values-api.json"
+    },
+    {
+      "digest": "df35d241785bbeb36ca27935c45f0847d4c01b56e80be50bb01d875cffdc7545",
+      "entries": 8,
+      "path": "css/cssom/css-pseudo.json"
+    },
+    {
+      "digest": "156edc17bb816d5304f3ae3c6e9143548639aad5543623b860a5427155caec96",
+      "entries": 16,
+      "path": "css/cssom/css-regions.json"
+    },
+    {
+      "digest": "ef7d9a7befa8056c238aec5d70e0387aac1cfe6ce1d47f83d367f3afdd7f598c",
+      "entries": 12,
+      "path": "css/cssom/css-scroll-snap-2.json"
+    },
+    {
+      "digest": "ffd6eee802838c9d9ba9a0c40a4280660b9666f7ecff022d400737a4e69422c2",
+      "entries": 2,
+      "path": "css/cssom/css-shadow.json"
+    },
+    {
+      "digest": "70b39071757370f856403b40b027f425ba8cca6303fa4ae63152afc261714bf5",
+      "entries": 2,
+      "path": "css/cssom/css-sizing-4.json"
+    },
+    {
+      "digest": "b4e885de5fa8c4d6ee85ee398da1f7f3f6073a162f2de6ff42266b3e9f5b1465",
+      "entries": 9,
+      "path": "css/cssom/css-transitions-2.json"
+    },
+    {
+      "digest": "19c4c2becb13ee446ef2b9e24f7598b2a5ebc67b0c6a5b2e1a9de87652618103",
+      "entries": 16,
+      "path": "css/cssom/css-transitions.json"
+    },
+    {
+      "digest": "14cd721fdf9fc3c5c6fa54df93c890ef916f7c71d5cd44da9f2a98e449bdccd6",
+      "entries": 305,
+      "path": "css/cssom/css-typed-om.json"
+    },
+    {
+      "digest": "2936dc3a291652ebe248ebdf053cee47c068950a90409fd97ab164087ddd4aaa",
+      "entries": 24,
+      "path": "css/cssom/css-view-transitions.json"
+    },
+    {
+      "digest": "ea96c0f3f89c01d2b120134bd9d9c02006e2748359dda701ae6471b8c8008f25",
+      "entries": 4,
+      "path": "css/cssom/css-viewport.json"
+    },
+    {
+      "digest": "bcb5af17ca685cc0b0fef837b873af391815096693edc27f9e55b5a9e4bcad05",
+      "entries": 121,
+      "path": "css/cssom/cssom.json"
+    },
+    {
+      "digest": "c140e7b87af02eacdf35b95f84c53d0999422e90a719a7103aaf7834433e4dc0",
+      "entries": 81,
+      "path": "css/features.json"
+    },
+    {
+      "digest": "001329c990368c2dbb9ee34dbc1bcf7203474dd671598742bacd0413ded0ea40",
+      "entries": 162,
+      "path": "css/functions.json"
+    },
+    {
+      "digest": "258799d69d9ab01a45387c929b8d62cff85622eb6fef7b70258fe0c7a68d9954",
+      "entries": 28,
+      "path": "css/properties/a.json"
+    },
+    {
+      "digest": "a6f565fd6c68321c38058cac24232a575d17d4c4af8cf3c5a9c3781cc4c6515c",
+      "entries": 129,
+      "path": "css/properties/b.json"
+    },
+    {
+      "digest": "5951680a8b4fb7ab8ec6b207c41f1b43586fd3a7f8c3ad1f3a7ff72cd74f8456",
+      "entries": 93,
+      "path": "css/properties/c.json"
+    },
+    {
+      "digest": "8ca74daf0a460c165136d930cfab5185f234ac5ef0877b4920ae56953c48e0c0",
+      "entries": 5,
+      "path": "css/properties/d.json"
+    },
+    {
+      "digest": "95823a8d66a25614fc992010a3adca1d38f71911c2028e3b2f631e079ee5bac3",
+      "entries": 4,
+      "path": "css/properties/e.json"
+    },
+    {
+      "digest": "48a8e648975a1737a53e6d9305ee7ada9d470ce5b06d9cc0563fa4eca425778a",
+      "entries": 60,
+      "path": "css/properties/f.json"
+    },
+    {
+      "digest": "4a6676cd3902af1c275a225b479cad6d4d303bff0c2e0f8697260109fad03a37",
+      "entries": 20,
+      "path": "css/properties/g.json"
+    },
+    {
+      "digest": "6d0d21caec0330efc0ac9927ec13dfac0c6da3dea71b7037da16ba2daba0cb22",
+      "entries": 8,
+      "path": "css/properties/h.json"
+    },
+    {
+      "digest": "28f80417589fc827001c324044c64f36c72fb15fe31a544874c88aed710683c9",
+      "entries": 23,
+      "path": "css/properties/i.json"
+    },
+    {
+      "digest": "8246283e648665219429b1e920c7ad3440f1500ad89fed437ca5f91b586c872a",
+      "entries": 3,
+      "path": "css/properties/j.json"
+    },
+    {
+      "digest": "49d0dc667cae098500db4bd338c73face5b9d9a4a092ceeeb70d3e4f90590d94",
+      "entries": 16,
+      "path": "css/properties/l.json"
+    },
+    {
+      "digest": "8292f4c849f218e9e60c5df6d53b90eb35c71a2476d78f15d92e6d61823dd506",
+      "entries": 49,
+      "path": "css/properties/m.json"
+    },
+    {
+      "digest": "feaa23d4ab8326c6db5acac038ebf64e8226c4d1e7e4acc0931b876c35168e8d",
+      "entries": 4,
+      "path": "css/properties/n.json"
+    },
+    {
+      "digest": "768d1b139bf16f288ef14d754d4ee8d35c311aa0e8eddc97434f82d62f909c21",
+      "entries": 41,
+      "path": "css/properties/o.json"
+    },
+    {
+      "digest": "d2cd9989238b9bedc642046e6b05aa16d5219c7094429d8e19354dac1937a13e",
+      "entries": 70,
+      "path": "css/properties/other.json"
+    },
+    {
+      "digest": "1066aa82f68551d7acbab4c47bf7bcab98ed0e2d3293526a38353ecff3618a5f",
+      "entries": 37,
+      "path": "css/properties/p.json"
+    },
+    {
+      "digest": "e5c90fe01c54c88b9a4de292f5bc2310ae4e70474a91d55bcfc16505fcff6100",
+      "entries": 1,
+      "path": "css/properties/q.json"
+    },
+    {
+      "digest": "af92b559e878ed00d74acf00b4901b7be7c87833fff240a23d78c5cbb853315f",
+      "entries": 44,
+      "path": "css/properties/r.json"
+    },
+    {
+      "digest": "bb6fdf2f1fefd9648b1632eec35945fe5797a7595853c91c6696d69d37aa8373",
+      "entries": 73,
+      "path": "css/properties/s.json"
+    },
+    {
+      "digest": "71c9a6d534158bb7f9b52c014381e869cc80605e5a088c52a13fd73fa0f56705",
+      "entries": 68,
+      "path": "css/properties/t.json"
+    },
+    {
+      "digest": "74584e1bc77ca22c6417bd4c66255cf9dbd4a2a8dfc8cc1c05f07dbf2be3ea54",
+      "entries": 2,
+      "path": "css/properties/u.json"
+    },
+    {
+      "digest": "9c95f4da4206a07db64b3bb24d45e90d90db0e124ce3af034c6d2385c756b4b4",
+      "entries": 19,
+      "path": "css/properties/v.json"
+    },
+    {
+      "digest": "647e7ef3ecb9b2905363fee0c50b58443a6e6f773ab33994713adbe7bfc2c7da",
+      "entries": 17,
+      "path": "css/properties/w.json"
+    },
+    {
+      "digest": "5ed1be783d80da3a1de23fe2ed0739e66779d83a9b26101d83778d42643d7d0e",
+      "entries": 1,
+      "path": "css/properties/x.json"
+    },
+    {
+      "digest": "929f2eb3985bb156fc00d058ebd5295140b6fd445804b082d778c48e0a17796e",
+      "entries": 1,
+      "path": "css/properties/y.json"
+    },
+    {
+      "digest": "5e1b8b04a366c499e9defa36f8654c9ea72c75c9b27b0fe2c9d981c8e8315877",
+      "entries": 2,
+      "path": "css/properties/z.json"
+    },
+    {
+      "digest": "36b7990f8dd232f9982ac4d7b4aa842e53a5baa19a8fb98c544fc595a6561c59",
+      "entries": 158,
+      "path": "css/selectors.json"
+    },
+    {
+      "digest": "52e64b1aae5404b809081379a9cb5d569546d4ac4f5c2812ff8ec594f8e36e49",
+      "entries": 525,
+      "path": "css/types.json"
+    },
+    {
+      "digest": "66578aeea3c978fb73f291bfecc856f39ffc07ba5bca73f97958f2b06f3b44e0",
+      "entries": 37,
+      "path": "dom/algorithms.json"
+    },
+    {
+      "digest": "a0e05b940089a5ddc1705c527f96854a61d0e9fb1bc28f294beee4382e60254f",
+      "entries": 48,
+      "path": "dom/events.json"
+    },
+    {
+      "digest": "69accf69cdb3c2ba7074d52a33ff9a8aa1b5b334c8e5b2b5232751131ea9b8a6",
+      "entries": 163,
+      "path": "dom/interfaces/cssom-view.json"
+    },
+    {
+      "digest": "237254ed26bcc8c897fcdffa53d356e033bd4d2015dd6871af660422d9442720",
+      "entries": 482,
+      "path": "dom/interfaces/dom.json"
+    },
+    {
+      "digest": "b3c4293fb8806f0425a332ae1766ef191906bd95189ebcfb576ad7d07eea7d35",
+      "entries": 6,
+      "path": "dom/interfaces/input-events.json"
+    },
+    {
+      "digest": "0c9a0a026a7429fcfb8dbc668c48bec4283e150353d61cdc6336187f3ad84ad5",
+      "entries": 99,
+      "path": "dom/interfaces/pointerevents.json"
+    },
+    {
+      "digest": "88642f30fd1800c8b4dc23dfc59e86b50d2bfc1ac801f4a6887e631e5ed01fba",
+      "entries": 35,
+      "path": "dom/interfaces/selection-api.json"
+    },
+    {
+      "digest": "d63540b95775e5aa27d4c0b5e83cff564a56aa52fe388cb6f0e568547ef4466e",
+      "entries": 94,
+      "path": "dom/interfaces/uievents.json"
+    },
+    {
+      "digest": "844488c3149ea64ce6ef677ff5c3cfb1677131c5faa5c5c266f038415002157b",
+      "entries": 146,
+      "path": "html/attributes.json"
+    },
+    {
+      "digest": "81fdaabc7891d4bac2e1e1f539a0c5fa9357149e0177057ccb71d10a645c55bb",
+      "entries": 60,
+      "path": "html/behaviors.json"
+    },
+    {
+      "digest": "6056e71bae2f8393f0d80a57e9d6d1a74ae6fff9499906f6d21e202460486d31",
+      "entries": 14,
+      "path": "html/elements/a.json"
+    },
+    {
+      "digest": "76b763c194a458149f049ebbf8c254359a54a9656cf7d9bfd3dad416812679e0",
+      "entries": 5,
+      "path": "html/elements/abbr.json"
+    },
+    {
+      "digest": "fc5f8ede140fb1924f6e12edfdbe54b6a2b8cace4a79df41c3df940d0cb2cd57",
+      "entries": 5,
+      "path": "html/elements/address.json"
+    },
+    {
+      "digest": "70420780a6de8cd7053f1c420a745b2173d1866bd60aabb01951b6ffac9bf236",
+      "entries": 15,
+      "path": "html/elements/area.json"
+    },
+    {
+      "digest": "f2201a01a8ac6e354455b61e56d4eec35189ead6d82fc28168cbb09295d11ceb",
+      "entries": 5,
+      "path": "html/elements/article.json"
+    },
+    {
+      "digest": "5db040eb4a8bbc52d0a1c3bcb636fcc584757a8e7c152616c5f98aa1add59834",
+      "entries": 5,
+      "path": "html/elements/aside.json"
+    },
+    {
+      "digest": "df27e43baa8ac75da3b6fd45bfa0853d39b431627c363d6111c5bd26719f29ff",
+      "entries": 14,
+      "path": "html/elements/audio.json"
+    },
+    {
+      "digest": "eeef72f115b51900358cff7872da9e9ee8df02b54b611e64740ab9800dcf9f36",
+      "entries": 5,
+      "path": "html/elements/b.json"
+    },
+    {
+      "digest": "b2ce55ec57b9775c974ce0fec66e5e6374ac8ce2e3697f3bd4e7b869f8b2c4aa",
+      "entries": 7,
+      "path": "html/elements/base.json"
+    },
+    {
+      "digest": "5de88ec073cfba79fe86eafe04fd639b21270e02286bc188d4c0b90b153e84d7",
+      "entries": 5,
+      "path": "html/elements/bdi.json"
+    },
+    {
+      "digest": "ad21065047b8705c98917f6ade231f01a32116ef97a9edd747f7de2a8a09d8f6",
+      "entries": 5,
+      "path": "html/elements/bdo.json"
+    },
+    {
+      "digest": "33e2e30b644f635131c05c8b8561d55826fa7a2e53d828ffa89886dc0b64f39b",
+      "entries": 6,
+      "path": "html/elements/blockquote.json"
+    },
+    {
+      "digest": "72009fd7cbd7b7fbcbbb0b8b22169fc63653003ecd6b564b069eee33035b7603",
+      "entries": 23,
+      "path": "html/elements/body.json"
+    },
+    {
+      "digest": "72511201f10523e41553e40483b543f6a0bf4229484da2f0a93cded1c09e5f11",
+      "entries": 5,
+      "path": "html/elements/br.json"
+    },
+    {
+      "digest": "53ae66d046fb96a72357c27c3703327024b7c2f08e776ef2b5e79735e84cafae",
+      "entries": 20,
+      "path": "html/elements/button.json"
+    },
+    {
+      "digest": "520c29041087b2177481673aa6ff2144800fa3da829fc1de96375d8f607159c4",
+      "entries": 7,
+      "path": "html/elements/canvas.json"
+    },
+    {
+      "digest": "c3da22f4740dc4d1d190f389711b0f71a18d875a570000c0edaeb4a7bf670f51",
+      "entries": 5,
+      "path": "html/elements/caption.json"
+    },
+    {
+      "digest": "8b7afaea165fa4929525381fa71ec426c422b5d579f2ddf4f0e39cbc696d6536",
+      "entries": 5,
+      "path": "html/elements/cite.json"
+    },
+    {
+      "digest": "2a1d4e514cdd1b4971e1d6e8f0cca01cad2ac66aa5681b6f20e3485bfa40d335",
+      "entries": 5,
+      "path": "html/elements/code.json"
+    },
+    {
+      "digest": "d40701c47f8a56865a8fac5f104138bc4ae38c9588ea44b737e5d37c5c919760",
+      "entries": 6,
+      "path": "html/elements/col.json"
+    },
+    {
+      "digest": "51b43b200631f8cdcc69c0ee8524b79b625119410891d7bb2136959f584fd46d",
+      "entries": 6,
+      "path": "html/elements/colgroup.json"
+    },
+    {
+      "digest": "392d46c570e81cdbf99fc45904a5cca717f7975d635fb6104691b0d3a119ec76",
+      "entries": 6,
+      "path": "html/elements/data.json"
+    },
+    {
+      "digest": "0b638114257aef347e214f022248e1071eeb9ef11e0c41b651c92c57d07d0ba5",
+      "entries": 5,
+      "path": "html/elements/datalist.json"
+    },
+    {
+      "digest": "129aa047af46b95136a27cf95ee6f14598dc94c7189b9c4bee8ddd8530531a21",
+      "entries": 5,
+      "path": "html/elements/dd.json"
+    },
+    {
+      "digest": "7cadad596d50ec4f0a46a1dd6e29d737825c70e89d3a82d3dbf25352df0c6fd4",
+      "entries": 7,
+      "path": "html/elements/del.json"
+    },
+    {
+      "digest": "795212ff497c08a0eed4068cc5b9dfb929a06c548a0c0e9e5182958dc8b6b603",
+      "entries": 8,
+      "path": "html/elements/details.json"
+    },
+    {
+      "digest": "d756d28beaeaaf912bb8d91e0be1e8da05171f25b9642949e4aed9fece07a157",
+      "entries": 5,
+      "path": "html/elements/dfn.json"
+    },
+    {
+      "digest": "65d9d40c425d1626d669b8455540f8e8bc8d150fc1fdd10afb4f67bbb3dbcf91",
+      "entries": 7,
+      "path": "html/elements/dialog.json"
+    },
+    {
+      "digest": "6245cba3fb27023190bdcc0a5a41d24e86a814cbd1fdccc9398f5c0db0465e2b",
+      "entries": 5,
+      "path": "html/elements/div.json"
+    },
+    {
+      "digest": "b520f9ba2ad2006a3ef4070daba4f245fcc315759fbf948f5deaae443bf102de",
+      "entries": 5,
+      "path": "html/elements/dl.json"
+    },
+    {
+      "digest": "c6102a048bca0cdfef95aa576b5ec6f04c226f2eee872a6bc33f7c428f96d6f2",
+      "entries": 5,
+      "path": "html/elements/dt.json"
+    },
+    {
+      "digest": "6ad8b7f0c399e1127a97cf1abf59269816d5ce534f96d3983bf980048e2c91a7",
+      "entries": 5,
+      "path": "html/elements/em.json"
+    },
+    {
+      "digest": "90aba73b00dec23a20f5ff84edb7d6748aa9ced81fded623e2ff1210917d4043",
+      "entries": 10,
+      "path": "html/elements/embed.json"
+    },
+    {
+      "digest": "17cb412e79e18b2ddfcd2057cd02d89323f684bf2972c2f37696ab840d909246",
+      "entries": 8,
+      "path": "html/elements/fieldset.json"
+    },
+    {
+      "digest": "b2d57e884b5d57815d122ea7d5ef3258e791dc57478cc0bc38bb76f420601c71",
+      "entries": 5,
+      "path": "html/elements/figcaption.json"
+    },
+    {
+      "digest": "4b121aa5a57d261df1d70e4e306c51816fc97891bd03eb83513bd1147509c44d",
+      "entries": 5,
+      "path": "html/elements/figure.json"
+    },
+    {
+      "digest": "c245c6dc82017fc26726de5ddcd6684be51300822b63a5fbe93f72215353d74d",
+      "entries": 5,
+      "path": "html/elements/footer.json"
+    },
+    {
+      "digest": "4371645a34f76154921ed9f1f3be3fef49064b2ed6b040cbe6b8d12bf6dfbd00",
+      "entries": 14,
+      "path": "html/elements/form.json"
+    },
+    {
+      "digest": "59d570313393266bbb66fd59292c00d16453497250b1fb7b929804ce2fc5b59a",
+      "entries": 5,
+      "path": "html/elements/h1.json"
+    },
+    {
+      "digest": "12ecbb69d99ec49e508a2418c6dd4f412f90cdeccf634a34cc04e040c8668681",
+      "entries": 5,
+      "path": "html/elements/head.json"
+    },
+    {
+      "digest": "dcfcf4e6ce370f58abec18450cfab21905eb121a5f4f8d3b8fa05b62968edbc8",
+      "entries": 5,
+      "path": "html/elements/header.json"
+    },
+    {
+      "digest": "be5a7d60b78a410bb2fa3ae8e82f5964617e92e4ba4551170b20fc83bb31db39",
+      "entries": 5,
+      "path": "html/elements/hgroup.json"
+    },
+    {
+      "digest": "24fe2dc86e05ab20f3f256f1de113785e56fe21b85f6c29582c4f152efe619f5",
+      "entries": 5,
+      "path": "html/elements/hr.json"
+    },
+    {
+      "digest": "68d4d9ab84b8550814f31b50dee755f6bd849270bea4c18f24df2493392d96a1",
+      "entries": 5,
+      "path": "html/elements/html.json"
+    },
+    {
+      "digest": "459b76f4524220c7f54207216a873f862e7cea8b9d1f0d7a7b3f47d6bcaa31a2",
+      "entries": 5,
+      "path": "html/elements/i.json"
+    },
+    {
+      "digest": "c2762b90dd7cb44165cad8c7bea08e17cea3249ff9026844765358c7212e4f90",
+      "entries": 16,
+      "path": "html/elements/iframe.json"
+    },
+    {
+      "digest": "6b4bc72ebb274762695867e91c964878b8ff15ee9ad6448c911e1974b6cf3f24",
+      "entries": 20,
+      "path": "html/elements/img.json"
+    },
+    {
+      "digest": "e8157cfd4d978a413cc1779ef2475b9e07081f5a1f64b59450321e3600a440c5",
+      "entries": 40,
+      "path": "html/elements/input.json"
+    },
+    {
+      "digest": "53e4e3ed22c60e9e52f57e13b1f022199b8c8d1592602108a9adce0689928ff8",
+      "entries": 7,
+      "path": "html/elements/ins.json"
+    },
+    {
+      "digest": "ff79a7182b4582bc8b3bedcd21140d695940cdd64470710e7a3e9a2784602f7c",
+      "entries": 5,
+      "path": "html/elements/kbd.json"
+    },
+    {
+      "digest": "f4d1bc74ede0517bdc388a2a71d7f4657f5b69f8d9573ea66c8d0f1d3f2f479a",
+      "entries": 7,
+      "path": "html/elements/label.json"
+    },
+    {
+      "digest": "b3cc5b71de11065c81f7c530a2970bfc4c25265765b94047904b2c2e04f389c4",
+      "entries": 5,
+      "path": "html/elements/legend.json"
+    },
+    {
+      "digest": "98873646c1780c934fb4a6303ee49e5d97fdd1fd1c9e014a057dd3fe68bd57df",
+      "entries": 6,
+      "path": "html/elements/li.json"
+    },
+    {
+      "digest": "9c56e664466c3ad528f54043f16b7e123609fa0b48894ed9461f120b09d1b597",
+      "entries": 21,
+      "path": "html/elements/link.json"
+    },
+    {
+      "digest": "73738d19c661bc5d9974ce9a6ea760648c4ff2844cfd4ef3de44ba3fc135467b",
+      "entries": 5,
+      "path": "html/elements/main.json"
+    },
+    {
+      "digest": "2ede48a77836c8953c06f630e4612684120a63818db71da39cb7526cdfc4f0b1",
+      "entries": 6,
+      "path": "html/elements/map.json"
+    },
+    {
+      "digest": "4ff86ff3c8e6d21646bf3112a7ab48b682a765de354a390d71611b825df8e5aa",
+      "entries": 5,
+      "path": "html/elements/mark.json"
+    },
+    {
+      "digest": "a27bebdc328c066401011d763321260431240d3e96494f46d85e3694558acc43",
+      "entries": 5,
+      "path": "html/elements/math.json"
+    },
+    {
+      "digest": "b323960a58661c72cdd253783afab56f8a1da61339c6d813a00759ff1513bab5",
+      "entries": 5,
+      "path": "html/elements/menu.json"
+    },
+    {
+      "digest": "2498f49da4c48aee177ed29ad78be30acb7f271607374f7cc226c4be4bc7abd9",
+      "entries": 10,
+      "path": "html/elements/meta.json"
+    },
+    {
+      "digest": "efed1687c23a26b7277d7b7f13eb6cb399db3fa66bd315bbd7be370663d0d742",
+      "entries": 11,
+      "path": "html/elements/meter.json"
+    },
+    {
+      "digest": "467d8f40f0c9fac8306a61869f92d8f29c8d223c3272260fa643d96ed61991d6",
+      "entries": 5,
+      "path": "html/elements/nav.json"
+    },
+    {
+      "digest": "0f7fe9244c52c219c9850f2aa1b18f6a1e187f875eaef570508f2135bb9c5d49",
+      "entries": 5,
+      "path": "html/elements/noscript.json"
+    },
+    {
+      "digest": "d888fe157c2ac2cade64c39b876947dbef400626d6d03c7d7795d55566dfa385",
+      "entries": 12,
+      "path": "html/elements/object.json"
+    },
+    {
+      "digest": "1dd886f011ec9316140d72c82d9c442fdc28c458cfb0ad97fc8dd766a480a142",
+      "entries": 8,
+      "path": "html/elements/ol.json"
+    },
+    {
+      "digest": "665f82101d2151e88be25971112bce0176ef2f109ea116c0d79209b0d56dbbbd",
+      "entries": 7,
+      "path": "html/elements/optgroup.json"
+    },
+    {
+      "digest": "83bad85d2b8cf9a038837e793da89e898dfd11ceda13fca7a6b2053cff518af1",
+      "entries": 9,
+      "path": "html/elements/option.json"
+    },
+    {
+      "digest": "61848bae665796390a1b950df63be7a2745656ac8113c1cf1ffe18deab2d2154",
+      "entries": 8,
+      "path": "html/elements/output.json"
+    },
+    {
+      "digest": "5693ce8f951eccba884f6530ba9ee0853da4e9932ab9350cb2b87f5f7f2fc34a",
+      "entries": 5,
+      "path": "html/elements/p.json"
+    },
+    {
+      "digest": "65c7a7a31bbe969577024975c80482073b8ad08e82ed48bd0917e81ed86b6c65",
+      "entries": 5,
+      "path": "html/elements/picture.json"
+    },
+    {
+      "digest": "491b92b8ca3ef69146621e27ae4972499549295d1404759da8d984bf08df2732",
+      "entries": 5,
+      "path": "html/elements/pre.json"
+    },
+    {
+      "digest": "97a88c25cd9dcbf8e4d0f640000a6a58a3e1bd67920a745abfc611c2c8d93770",
+      "entries": 7,
+      "path": "html/elements/progress.json"
+    },
+    {
+      "digest": "6bb5dff5c6c6f1043d212d9875f03e3ce5c74bfdc268e65710a6e7783f72b643",
+      "entries": 6,
+      "path": "html/elements/q.json"
+    },
+    {
+      "digest": "9d41c7e6a1744559ea476fed1fb9e9f7f920973c582da601269ac6b1f1dee403",
+      "entries": 5,
+      "path": "html/elements/rp.json"
+    },
+    {
+      "digest": "05e58524d888f63163568662a7729662f96f8b75f67bc43ec895a62a890e760b",
+      "entries": 5,
+      "path": "html/elements/rt.json"
+    },
+    {
+      "digest": "13711df4a5ff277a48935f2cff4f2d6bfa8ecc1d1989e4d0c892966544b7b30b",
+      "entries": 5,
+      "path": "html/elements/ruby.json"
+    },
+    {
+      "digest": "ce690ef071f5dd516d1cfc550385125eff989a2f185124d00f0e1390430ac0eb",
+      "entries": 5,
+      "path": "html/elements/s.json"
+    },
+    {
+      "digest": "0aa4e0255691273925dc04ba6463c12c917b2ce66d1bc49f5ef11fb70163a39a",
+      "entries": 5,
+      "path": "html/elements/samp.json"
+    },
+    {
+      "digest": "d758a207193b34280671f938e07d0cb63393050074ee0392e8f17a6825f881e8",
+      "entries": 15,
+      "path": "html/elements/script.json"
+    },
+    {
+      "digest": "5f9533a4383b350355bf042b951fff10e7ccb61f3eea4ca7d66c59489f981100",
+      "entries": 5,
+      "path": "html/elements/search.json"
+    },
+    {
+      "digest": "1fbca964b4761f17ced23f4b880f6bf26bb054fe94a7d0507d9e3aa79064d64d",
+      "entries": 5,
+      "path": "html/elements/section.json"
+    },
+    {
+      "digest": "e07226d57f453e99e4e4a9e021242283e21e1e8a2e4dc8acf532a5598931e424",
+      "entries": 13,
+      "path": "html/elements/select.json"
+    },
+    {
+      "digest": "b7e3a82fee8e52900b2facb0077ea978062c8b6dd8830470090c0ac1083f214c",
+      "entries": 5,
+      "path": "html/elements/selectedcontent.json"
+    },
+    {
+      "digest": "e130b2a259de402028e6fbac77d7ab5b3da92a128fd1e867cd53f9e0fab47230",
+      "entries": 6,
+      "path": "html/elements/slot.json"
+    },
+    {
+      "digest": "ee4653c9b9c7d41218163700d27f0bba7c27ada2131653d6d906eb8db27240f9",
+      "entries": 5,
+      "path": "html/elements/small.json"
+    },
+    {
+      "digest": "856c73e7ab17a77a91e9c6b7fe2b0a643d7a8961fbede9916d2212c9730d37eb",
+      "entries": 12,
+      "path": "html/elements/source.json"
+    },
+    {
+      "digest": "7b7db3f1a3443816f9e438bd0573e9ea35e3464bbee4bc10364b7781ab1a71d7",
+      "entries": 5,
+      "path": "html/elements/span.json"
+    },
+    {
+      "digest": "8109111be4ec4b23749109dc265f07e47dcc9a675034305706e077a44d9c3112",
+      "entries": 5,
+      "path": "html/elements/strong.json"
+    },
+    {
+      "digest": "2084fdf499a9fcd92fb19de424a961816c1638ce5e47a535200ed4ee14442668",
+      "entries": 7,
+      "path": "html/elements/style.json"
+    },
+    {
+      "digest": "d0ebe646016de6dcc97e55c76bb23757920442538560cb03ad31a5ba6c62d9f3",
+      "entries": 5,
+      "path": "html/elements/sub.json"
+    },
+    {
+      "digest": "aea305a90cfebee09a724e56459f86273e2744e09365618288f5a0f880b4289c",
+      "entries": 6,
+      "path": "html/elements/summary.json"
+    },
+    {
+      "digest": "848f8cb45c78e29b71bc18e69ddf2d83633b3fa1c3b568598707fc6e5dab4323",
+      "entries": 5,
+      "path": "html/elements/sup.json"
+    },
+    {
+      "digest": "b9f5399f343ffeffc2f5ec15b70e4c42b545901ed5fcf93dbd74b5bfd1774bbb",
+      "entries": 5,
+      "path": "html/elements/svg.json"
+    },
+    {
+      "digest": "f73e7e488e0ed086e0a331b7e764cdd56b8cb57895dacacba8606ad3dea775e0",
+      "entries": 5,
+      "path": "html/elements/table.json"
+    },
+    {
+      "digest": "84c05e9afa8e55cb611c100ffe99cbd7faa32bdea8e3ff6ad215576f5e296bd4",
+      "entries": 5,
+      "path": "html/elements/tbody.json"
+    },
+    {
+      "digest": "5a973194fcffb44875e1bca01cd472e7b9310ad8d7b54426df7382dace8d01e6",
+      "entries": 8,
+      "path": "html/elements/td.json"
+    },
+    {
+      "digest": "926e97a94dc75835b4cde4d00d2ab38d45c81513130dd350f78f1d9af7dab83f",
+      "entries": 12,
+      "path": "html/elements/template.json"
+    },
+    {
+      "digest": "3887f79bddb181d0be7301d197c0da3799aec8e2250872b969d8af4d9a3d7636",
+      "entries": 19,
+      "path": "html/elements/textarea.json"
+    },
+    {
+      "digest": "608f27ee9ff4ad35637d35a96994c661542a7b7a89cb575524d0aa85233b3006",
+      "entries": 5,
+      "path": "html/elements/tfoot.json"
+    },
+    {
+      "digest": "d4085af07338c3cf4c15f755e4b01768ead033cc67cdfbf0b1c4152a8edb2bc4",
+      "entries": 10,
+      "path": "html/elements/th.json"
+    },
+    {
+      "digest": "0ac6756b2cce582bef0f7f9993a1e43a5be5de03fb0fd37ad40459f65caa3785",
+      "entries": 5,
+      "path": "html/elements/thead.json"
+    },
+    {
+      "digest": "1ac70d27aa86397eb0414292884eeb935d89854938aaea753160c3bd0c5e2456",
+      "entries": 6,
+      "path": "html/elements/time.json"
+    },
+    {
+      "digest": "7cf8e6c0c32c285f422eb62658b353363fb105ae8dff70270e44fa64d7dc44d7",
+      "entries": 5,
+      "path": "html/elements/title.json"
+    },
+    {
+      "digest": "b732531171626c5814094c335a787c1abdde0c849e1258f5dc7fde8d43d20bd9",
+      "entries": 5,
+      "path": "html/elements/tr.json"
+    },
+    {
+      "digest": "329aaf63fee867ba8b12ab6d347b36baa4b987bf61be0090631656f992b3b275",
+      "entries": 10,
+      "path": "html/elements/track.json"
+    },
+    {
+      "digest": "da38cc0ce7b6877d5d804f58afd79164d0110178eb7b59347a1368727ac1395c",
+      "entries": 5,
+      "path": "html/elements/u.json"
+    },
+    {
+      "digest": "a288b8422c6477a5bda56bbc3424315ebba2b90e3518e1748b0d9e1a04e5a4c6",
+      "entries": 5,
+      "path": "html/elements/ul.json"
+    },
+    {
+      "digest": "5aef2730debdfe1445c535f5c168bad36ccf025a2d0ae24140d5c0a4fb41ac37",
+      "entries": 5,
+      "path": "html/elements/var.json"
+    },
+    {
+      "digest": "cccb536b4edb97e680586c64f32de8d9556b9a17a5715e66506ff41f61bacef4",
+      "entries": 18,
+      "path": "html/elements/video.json"
+    },
+    {
+      "digest": "556422a6bae9c76df872946d92762bcf1b0d475f225afda0f22dec1f150c721b",
+      "entries": 5,
+      "path": "html/elements/wbr.json"
+    },
+    {
+      "digest": "52cdc4d26e3af1e991fad4a2317650aa1b221792f693ef4247cc185e1237e3ae",
+      "entries": 90,
+      "path": "html/events.json"
+    },
+    {
+      "digest": "4d323422ff643262f8475833e75518bf5adad26cbd582fcea1f54e16eba834d6",
+      "entries": 43,
+      "path": "html/interfaces/clipboard.json"
+    },
+    {
+      "digest": "e84d991378a7b9b0dcbb479d9efaf8436656733fddd53ca8607edb7fd11a91ca",
+      "entries": 2554,
+      "path": "html/interfaces/html.json"
+    },
+    {
+      "digest": "43348d0d2564080720ce65b84909c2f5bc3d29d97c691545b88a0801e3c3d3a2",
+      "entries": 27,
+      "path": "platform/browser-exports.json"
+    },
+    {
+      "digest": "0bd3dd5a0e5301cd2f20dd2f911980906f5e91b66d662e09db2439d9091164a8",
+      "entries": 29,
+      "path": "platform/browser-features.json"
+    },
+    {
+      "digest": "1f9d619ceabfcfc7b0186e47d6ea65420f17fcaa500b437457b1470cd28fd9ff",
+      "entries": 15,
+      "path": "platform/devtools-exports.json"
+    },
+    {
+      "digest": "97bd4512a95293f5169b8e63e176a117c38fb1b76bdde75798dcb5365fee3320",
+      "entries": 16,
+      "path": "platform/devtools-features.json"
+    },
+    {
+      "digest": "70bd87957d64b5ce52d1e6e93feb67cdb811910e4cd8fa07f8b8ac5110a8970a",
+      "entries": 232,
+      "path": "platform/dom-exports.json"
+    },
+    {
+      "digest": "7e8a55b332794a87edf6a348015a279d4774850744006b842dbb9434b33f73dc",
+      "entries": 108,
+      "path": "platform/engine-exports.json"
+    },
+    {
+      "digest": "d0549fda222ac330e534ec083a43ca4c8ebf0b82ee5e8b5de18858f5b593379d",
+      "entries": 37,
+      "path": "platform/engine-features.json"
+    },
+    {
+      "digest": "6857311c9c46872a2c503a208b935e9a9b0e20c50d7ea4c4042350de367d9ade",
+      "entries": 71,
+      "path": "platform/react-exports.json"
+    },
+    {
+      "digest": "4c33b77ea02584f9263baeffc774109001b10cf82225ceac3155f65a562c669e",
+      "entries": 49,
+      "path": "platform/renderer-exports.json"
+    },
+    {
+      "digest": "79b5bac9192d545282d2fdce7e0b2e0133320fcdd979b274d32a0b37aae19ace",
+      "entries": 43,
+      "path": "platform/renderer-features.json"
+    },
+    {
+      "digest": "1b841c0676545cd07bb6b164cdbd5673fd3ff886d01691470e28c90073937ff3",
+      "entries": 66,
+      "path": "platform/template-exports.json"
+    },
+    {
+      "digest": "3a8060ab36a3fc11e1bb9d79d78bd307681ff31ca6a4a1f8ad7dd5ba53e593c0",
+      "entries": 10,
+      "path": "platform/webgpu-exports.json"
+    },
+    {
+      "digest": "548c434a3b7f487dc96652baa74a4a6ff181336bcf41d2637f97c9927d052b11",
+      "entries": 27,
+      "path": "platform/webgpu-features.json"
+    },
+    {
+      "digest": "b917060570a498fb0b8379b4935492084be527848a78d7aeec450ac51b967982",
+      "entries": 9,
+      "path": "react-19.2/apis.json"
+    },
+    {
+      "digest": "f708dd85d2e367848d2835d07b244c1cb0f57b724c5ab67cbb6485399f5941a2",
+      "entries": 1,
+      "path": "react-19.2/compiler-runtime.json"
+    },
+    {
+      "digest": "23bcf2495e18e2903421ce0787e1afdebe256a5c222aa2296b8a14e434dc2564",
+      "entries": 5,
+      "path": "react-19.2/components.json"
+    },
+    {
+      "digest": "4a59544c33d653fae2ff505864ab7fbfb8415f8cfcaba77ff1efcf1a6d924822",
+      "entries": 4,
+      "path": "react-19.2/directives.json"
+    },
+    {
+      "digest": "992e935d32e413f4dbb10c86c73902a88e2ba1050dcef09c6c4e724087012bff",
+      "entries": 20,
+      "path": "react-19.2/hooks.json"
+    },
+    {
+      "digest": "75c05587c5f5d9589730d71db3a7c9ea02fdc89dbc951b28948843beeac71f81",
+      "entries": 5,
+      "path": "react-19.2/jsx-runtime.json"
+    },
+    {
+      "digest": "c1c3912b6724801d6d1963da79a1511fa1a1ae335e48cae77183b3ac64177e77",
+      "entries": 8,
+      "path": "react-19.2/legacy.json"
+    },
+    {
+      "digest": "2900417fe659f0f3130d5b66defbda7c78308bc3c3512d16703191bc1aed5030",
+      "entries": 29,
+      "path": "react-19.2/react-dom.json"
+    },
+    {
+      "digest": "1c034b66033045ee236800064fb65b62e7509a4c0d49981b8537063fe10b4eca",
+      "entries": 65,
+      "path": "react-19.2/semantics.json"
+    },
+    {
+      "digest": "2e556d085428ec37ed3f1af591684eb1d9f8014c6a4a73ee3eda0d5771e2db05",
+      "entries": 52,
+      "path": "tsx/compiler.json"
+    },
+    {
+      "digest": "7e567b7188992a2e03096cc5e7948b9fda8f6d145256587789d658aa96f98a3d",
+      "entries": 18,
+      "path": "tsx/tagged-html.json"
+    },
+    {
+      "digest": "2ef27d66c0081a705e29cffef217390cfaad1ecd919556b10f9274a1922ae12c",
+      "entries": 16,
+      "path": "tsx/typescript.json"
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "totalEntries": 8687
+}

@@ -1,0 +1,2322 @@
+{
+  "entries": [
+    {
+      "description": "dictionary MouseEventInit from pointerevents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.mouseeventinit",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "inheritance": "EventModifierInit"
+      },
+      "name": "MouseEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEventInit",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "MouseEventInit.button Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.mouseeventinit.fields.button",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"button\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"short\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"required\":false}"
+      },
+      "name": "button",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.mouseeventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEventInit.button",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "MouseEventInit.buttons Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.mouseeventinit.fields.buttons",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"buttons\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned short\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"required\":false}"
+      },
+      "name": "buttons",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.mouseeventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEventInit.buttons",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "MouseEventInit.clientX Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.mouseeventinit.fields.clientx",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"clientX\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"required\":false}"
+      },
+      "name": "clientX",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.mouseeventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEventInit.clientX",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "MouseEventInit.clientY Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.mouseeventinit.fields.clienty",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"clientY\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"required\":false}"
+      },
+      "name": "clientY",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.mouseeventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEventInit.clientY",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "MouseEventInit.relatedTarget Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.mouseeventinit.fields.relatedtarget",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"relatedTarget\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"EventTarget\"},\"default\":{\"type\":\"null\"},\"required\":false}"
+      },
+      "name": "relatedTarget",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.mouseeventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEventInit.relatedTarget",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "MouseEventInit.screenX Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.mouseeventinit.fields.screenx",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"screenX\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"required\":false}"
+      },
+      "name": "screenX",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.mouseeventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEventInit.screenX",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "MouseEventInit.screenY Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.mouseeventinit.fields.screeny",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"screenY\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"required\":false}"
+      },
+      "name": "screenY",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.mouseeventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEventInit.screenY",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "MouseEventInit has EventModifierInit as its declared base interface.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.mouseeventinit.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "EventModifierInit"
+      },
+      "name": "MouseEventInit inherits EventModifierInit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.mouseeventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEventInit",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "dictionary PointerEventInit from pointerevents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.pointereventinit",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "inheritance": "MouseEventInit"
+      },
+      "name": "PointerEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEventInit",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEventInit.altitudeAngle Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.pointereventinit.fields.altitudeangle",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"altitudeAngle\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"default\":null,\"required\":false}"
+      },
+      "name": "altitudeAngle",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.pointereventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEventInit.altitudeAngle",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEventInit.azimuthAngle Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.pointereventinit.fields.azimuthangle",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"azimuthAngle\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"default\":null,\"required\":false}"
+      },
+      "name": "azimuthAngle",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.pointereventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEventInit.azimuthAngle",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEventInit.coalescedEvents Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.pointereventinit.fields.coalescedevents",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"coalescedEvents\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"PointerEvent\"}]},\"default\":{\"type\":\"sequence\",\"value\":[]},\"required\":false}"
+      },
+      "name": "coalescedEvents",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.pointereventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEventInit.coalescedEvents",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEventInit.height Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.pointereventinit.fields.height",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"height\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"default\":{\"type\":\"number\",\"value\":\"1\"},\"required\":false}"
+      },
+      "name": "height",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.pointereventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEventInit.height",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEventInit.isPrimary Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.pointereventinit.fields.isprimary",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"isPrimary\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"required\":false}"
+      },
+      "name": "isPrimary",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.pointereventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEventInit.isPrimary",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEventInit.persistentDeviceId Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.pointereventinit.fields.persistentdeviceid",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"persistentDeviceId\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"required\":false}"
+      },
+      "name": "persistentDeviceId",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.pointereventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEventInit.persistentDeviceId",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEventInit.pointerId Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.pointereventinit.fields.pointerid",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"pointerId\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"required\":false}"
+      },
+      "name": "pointerId",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.pointereventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEventInit.pointerId",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEventInit.pointerType Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.pointereventinit.fields.pointertype",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"pointerType\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":{\"type\":\"string\",\"value\":\"\"},\"required\":false}"
+      },
+      "name": "pointerType",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.pointereventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEventInit.pointerType",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEventInit.predictedEvents Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.pointereventinit.fields.predictedevents",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"predictedEvents\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"PointerEvent\"}]},\"default\":{\"type\":\"sequence\",\"value\":[]},\"required\":false}"
+      },
+      "name": "predictedEvents",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.pointereventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEventInit.predictedEvents",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEventInit.pressure Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.pointereventinit.fields.pressure",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"pressure\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"float\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"required\":false}"
+      },
+      "name": "pressure",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.pointereventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEventInit.pressure",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEventInit.tangentialPressure Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.pointereventinit.fields.tangentialpressure",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"tangentialPressure\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"float\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"required\":false}"
+      },
+      "name": "tangentialPressure",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.pointereventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEventInit.tangentialPressure",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEventInit.tiltX Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.pointereventinit.fields.tiltx",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"tiltX\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"default\":null,\"required\":false}"
+      },
+      "name": "tiltX",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.pointereventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEventInit.tiltX",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEventInit.tiltY Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.pointereventinit.fields.tilty",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"tiltY\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"default\":null,\"required\":false}"
+      },
+      "name": "tiltY",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.pointereventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEventInit.tiltY",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEventInit.twist Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.pointereventinit.fields.twist",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"twist\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"required\":false}"
+      },
+      "name": "twist",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.pointereventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEventInit.twist",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEventInit.width Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.pointereventinit.fields.width",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"width\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"default\":{\"type\":\"number\",\"value\":\"1\"},\"required\":false}"
+      },
+      "name": "width",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.pointereventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEventInit.width",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEventInit has MouseEventInit as its declared base interface.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.pointereventinit.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "MouseEventInit"
+      },
+      "name": "PointerEventInit inherits MouseEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.pointereventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEventInit",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "dictionary WheelEventInit from pointerevents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.wheeleventinit",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "inheritance": "MouseEventInit"
+      },
+      "name": "WheelEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:WheelEventInit",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "WheelEventInit.deltaMode Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.wheeleventinit.fields.deltamode",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"deltaMode\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"required\":false}"
+      },
+      "name": "deltaMode",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.wheeleventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:WheelEventInit.deltaMode",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "WheelEventInit.deltaX Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.wheeleventinit.fields.deltax",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"deltaX\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"default\":{\"type\":\"number\",\"value\":\"0.0\"},\"required\":false}"
+      },
+      "name": "deltaX",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.wheeleventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:WheelEventInit.deltaX",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "WheelEventInit.deltaY Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.wheeleventinit.fields.deltay",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"deltaY\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"default\":{\"type\":\"number\",\"value\":\"0.0\"},\"required\":false}"
+      },
+      "name": "deltaY",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.wheeleventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:WheelEventInit.deltaY",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "WheelEventInit.deltaZ Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.wheeleventinit.fields.deltaz",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"deltaZ\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"default\":{\"type\":\"number\",\"value\":\"0.0\"},\"required\":false}"
+      },
+      "name": "deltaZ",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.wheeleventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:WheelEventInit.deltaZ",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "WheelEventInit.momentum Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.wheeleventinit.fields.momentum",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"momentum\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"required\":false}"
+      },
+      "name": "momentum",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.wheeleventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:WheelEventInit.momentum",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "WheelEventInit has MouseEventInit as its declared base interface.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.dictionaries.wheeleventinit.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "MouseEventInit"
+      },
+      "name": "WheelEventInit inherits MouseEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.dictionaries.wheeleventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:WheelEventInit",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface Element from pointerevents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.element",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "pointerevents.idl"
+      },
+      "name": "Element",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:Element",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Element.hasPointerCapture Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.element.methods.haspointercapture",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"hasPointerCapture\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"pointerId\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "hasPointerCapture",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.element",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:Element.hasPointerCapture",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Element.releasePointerCapture Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.element.methods.releasepointercapture",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"releasePointerCapture\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"pointerId\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "releasePointerCapture",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.element",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:Element.releasePointerCapture",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Element.setPointerCapture Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.element.methods.setpointercapture",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"setPointerCapture\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"pointerId\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "setPointerCapture",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.element",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:Element.setPointerCapture",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface MouseEvent from pointerevents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.mouseevent",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "pointerevents.idl",
+        "inheritance": "UIEvent"
+      },
+      "name": "MouseEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEvent",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface MouseEvent from pointerevents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.mouseevent--aae9b97d",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "pointerevents.idl"
+      },
+      "name": "MouseEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEvent",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "MouseEvent.initMouseEvent Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.mouseevent--aae9b97d.methods.initmouseevent",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"initMouseEvent\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"typeArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"bubblesArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"cancelableArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"viewArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"Window\"},\"default\":{\"type\":\"null\"},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"detailArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"screenXArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"screenYArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"clientXArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"clientYArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"ctrlKeyArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"altKeyArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"shiftKeyArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"metaKeyArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"buttonArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"short\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"relatedTargetArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"EventTarget\"},\"default\":{\"type\":\"null\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "initMouseEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.mouseevent--aae9b97d",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEvent.initMouseEvent",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "MouseEvent.altKey Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.mouseevent.attributes.altkey",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"altKey\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "altKey",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.mouseevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEvent.altKey",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "MouseEvent.button Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.mouseevent.attributes.button",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"button\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"short\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "button",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.mouseevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEvent.button",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "MouseEvent.buttons Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.mouseevent.attributes.buttons",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"buttons\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned short\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "buttons",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.mouseevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEvent.buttons",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "MouseEvent.clientX Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.mouseevent.attributes.clientx",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"clientX\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "clientX",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.mouseevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEvent.clientX",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "MouseEvent.clientY Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.mouseevent.attributes.clienty",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"clientY\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "clientY",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.mouseevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEvent.clientY",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "MouseEvent.ctrlKey Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.mouseevent.attributes.ctrlkey",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"ctrlKey\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "ctrlKey",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.mouseevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEvent.ctrlKey",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "MouseEvent.layerX Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.mouseevent.attributes.layerx",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"layerX\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "layerX",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.mouseevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEvent.layerX",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "MouseEvent.layerY Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.mouseevent.attributes.layery",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"layerY\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "layerY",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.mouseevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEvent.layerY",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "MouseEvent.metaKey Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.mouseevent.attributes.metakey",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"metaKey\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "metaKey",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.mouseevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEvent.metaKey",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "MouseEvent.relatedTarget Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.mouseevent.attributes.relatedtarget",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"relatedTarget\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"EventTarget\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "relatedTarget",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.mouseevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEvent.relatedTarget",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "MouseEvent.screenX Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.mouseevent.attributes.screenx",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"screenX\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "screenX",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.mouseevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEvent.screenX",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "MouseEvent.screenY Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.mouseevent.attributes.screeny",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"screenY\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "screenY",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.mouseevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEvent.screenY",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "MouseEvent.shiftKey Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.mouseevent.attributes.shiftkey",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"shiftKey\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "shiftKey",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.mouseevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEvent.shiftKey",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "MouseEvent.constructor Web IDL constructor.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.mouseevent.constructors.constructor",
+      "kind": "constructor",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"constructor\",\"arguments\":[{\"type\":\"argument\",\"name\":\"type\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"eventInitDict\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"MouseEventInit\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[]}"
+      },
+      "name": "constructor",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.mouseevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEvent.constructor",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "MouseEvent has UIEvent as its declared base interface.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.mouseevent.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "UIEvent"
+      },
+      "name": "MouseEvent inherits UIEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.mouseevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEvent",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "MouseEvent.getModifierState Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.mouseevent.methods.getmodifierstate",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"getModifierState\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"keyArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "getModifierState",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.mouseevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:MouseEvent.getModifierState",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface Navigator from pointerevents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.navigator",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "pointerevents.idl"
+      },
+      "name": "Navigator",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:Navigator",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Navigator.maxTouchPoints Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.navigator.attributes.maxtouchpoints",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"maxTouchPoints\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "maxTouchPoints",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.navigator",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:Navigator.maxTouchPoints",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface PointerEvent from pointerevents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.pointerevent",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "pointerevents.idl",
+        "inheritance": "MouseEvent"
+      },
+      "name": "PointerEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEvent",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEvent.altitudeAngle Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.pointerevent.attributes.altitudeangle",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"altitudeAngle\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "altitudeAngle",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.pointerevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEvent.altitudeAngle",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEvent.azimuthAngle Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.pointerevent.attributes.azimuthangle",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"azimuthAngle\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "azimuthAngle",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.pointerevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEvent.azimuthAngle",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEvent.height Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.pointerevent.attributes.height",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"height\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "height",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.pointerevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEvent.height",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEvent.isPrimary Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.pointerevent.attributes.isprimary",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"isPrimary\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "isPrimary",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.pointerevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEvent.isPrimary",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEvent.persistentDeviceId Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.pointerevent.attributes.persistentdeviceid",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"persistentDeviceId\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "persistentDeviceId",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.pointerevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEvent.persistentDeviceId",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEvent.pointerId Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.pointerevent.attributes.pointerid",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"pointerId\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "pointerId",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.pointerevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEvent.pointerId",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEvent.pointerType Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.pointerevent.attributes.pointertype",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"pointerType\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "pointerType",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.pointerevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEvent.pointerType",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEvent.pressure Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.pointerevent.attributes.pressure",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"pressure\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"float\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "pressure",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.pointerevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEvent.pressure",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEvent.tangentialPressure Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.pointerevent.attributes.tangentialpressure",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"tangentialPressure\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"float\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "tangentialPressure",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.pointerevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEvent.tangentialPressure",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEvent.tiltX Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.pointerevent.attributes.tiltx",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"tiltX\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "tiltX",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.pointerevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEvent.tiltX",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEvent.tiltY Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.pointerevent.attributes.tilty",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"tiltY\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "tiltY",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.pointerevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEvent.tiltY",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEvent.twist Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.pointerevent.attributes.twist",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"twist\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "twist",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.pointerevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEvent.twist",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEvent.width Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.pointerevent.attributes.width",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"width\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "width",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.pointerevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEvent.width",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEvent.constructor Web IDL constructor.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.pointerevent.constructors.constructor",
+      "kind": "constructor",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"constructor\",\"arguments\":[{\"type\":\"argument\",\"name\":\"type\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"eventInitDict\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"PointerEventInit\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[]}"
+      },
+      "name": "constructor",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.pointerevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEvent.constructor",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEvent has MouseEvent as its declared base interface.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.pointerevent.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "MouseEvent"
+      },
+      "name": "PointerEvent inherits MouseEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.pointerevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEvent",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEvent.getCoalescedEvents Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.pointerevent.methods.getcoalescedevents",
+      "kind": "operation",
+      "metadata": {
+        "extendedAttributes": [
+          "SecureContext"
+        ],
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"getCoalescedEvents\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"PointerEvent\"}]},\"arguments\":[],\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SecureContext\",\"rhs\":null,\"arguments\":[]}],\"special\":\"\"}"
+      },
+      "name": "getCoalescedEvents",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.pointerevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEvent.getCoalescedEvents",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PointerEvent.getPredictedEvents Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.pointerevent.methods.getpredictedevents",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"getPredictedEvents\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"PointerEvent\"}]},\"arguments\":[],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "getPredictedEvents",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.pointerevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:PointerEvent.getPredictedEvents",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface WheelEvent from pointerevents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.wheelevent",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "pointerevents.idl",
+        "inheritance": "MouseEvent"
+      },
+      "name": "WheelEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:WheelEvent",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "WheelEvent.deltaMode Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.wheelevent.attributes.deltamode",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"deltaMode\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "deltaMode",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.wheelevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:WheelEvent.deltaMode",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "WheelEvent.deltaX Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.wheelevent.attributes.deltax",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"deltaX\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "deltaX",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.wheelevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:WheelEvent.deltaX",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "WheelEvent.deltaY Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.wheelevent.attributes.deltay",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"deltaY\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "deltaY",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.wheelevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:WheelEvent.deltaY",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "WheelEvent.deltaZ Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.wheelevent.attributes.deltaz",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"deltaZ\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "deltaZ",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.wheelevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:WheelEvent.deltaZ",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "WheelEvent.momentum Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.wheelevent.attributes.momentum",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"momentum\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "momentum",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.wheelevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:WheelEvent.momentum",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "WheelEvent.DOM_DELTA_LINE Web IDL const.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.wheelevent.constants.dom_delta_line",
+      "kind": "const",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"const\",\"name\":\"DOM_DELTA_LINE\",\"idlType\":{\"type\":\"const-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"extAttrs\":[],\"value\":{\"type\":\"number\",\"value\":\"0x01\"}}"
+      },
+      "name": "DOM_DELTA_LINE",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.wheelevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:WheelEvent.DOM_DELTA_LINE",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "WheelEvent.DOM_DELTA_PAGE Web IDL const.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.wheelevent.constants.dom_delta_page",
+      "kind": "const",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"const\",\"name\":\"DOM_DELTA_PAGE\",\"idlType\":{\"type\":\"const-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"extAttrs\":[],\"value\":{\"type\":\"number\",\"value\":\"0x02\"}}"
+      },
+      "name": "DOM_DELTA_PAGE",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.wheelevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:WheelEvent.DOM_DELTA_PAGE",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "WheelEvent.DOM_DELTA_PIXEL Web IDL const.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.wheelevent.constants.dom_delta_pixel",
+      "kind": "const",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"const\",\"name\":\"DOM_DELTA_PIXEL\",\"idlType\":{\"type\":\"const-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"extAttrs\":[],\"value\":{\"type\":\"number\",\"value\":\"0x00\"}}"
+      },
+      "name": "DOM_DELTA_PIXEL",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.wheelevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:WheelEvent.DOM_DELTA_PIXEL",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "WheelEvent.constructor Web IDL constructor.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.wheelevent.constructors.constructor",
+      "kind": "constructor",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "signature": "{\"type\":\"constructor\",\"arguments\":[{\"type\":\"argument\",\"name\":\"type\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"eventInitDict\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"WheelEventInit\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[]}"
+      },
+      "name": "constructor",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.wheelevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:WheelEvent.constructor",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "WheelEvent has MouseEvent as its declared base interface.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.interfaces.wheelevent.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "MouseEvent"
+      },
+      "name": "WheelEvent inherits MouseEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.interfaces.wheelevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:WheelEvent",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface mixin GlobalEventHandlers from pointerevents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.mixins.globaleventhandlers",
+      "kind": "interface mixin",
+      "metadata": {
+        "idlSource": "pointerevents.idl"
+      },
+      "name": "GlobalEventHandlers",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:GlobalEventHandlers",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "GlobalEventHandlers.ongotpointercapture Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.mixins.globaleventhandlers.attributes.ongotpointercapture",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"ongotpointercapture\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"EventHandler\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "ongotpointercapture",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.mixins.globaleventhandlers",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:GlobalEventHandlers.ongotpointercapture",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "GlobalEventHandlers.onlostpointercapture Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.mixins.globaleventhandlers.attributes.onlostpointercapture",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"onlostpointercapture\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"EventHandler\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "onlostpointercapture",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.mixins.globaleventhandlers",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:GlobalEventHandlers.onlostpointercapture",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "GlobalEventHandlers.onpointercancel Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.mixins.globaleventhandlers.attributes.onpointercancel",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"onpointercancel\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"EventHandler\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "onpointercancel",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.mixins.globaleventhandlers",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:GlobalEventHandlers.onpointercancel",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "GlobalEventHandlers.onpointerdown Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.mixins.globaleventhandlers.attributes.onpointerdown",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"onpointerdown\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"EventHandler\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "onpointerdown",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.mixins.globaleventhandlers",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:GlobalEventHandlers.onpointerdown",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "GlobalEventHandlers.onpointerenter Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.mixins.globaleventhandlers.attributes.onpointerenter",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"onpointerenter\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"EventHandler\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "onpointerenter",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.mixins.globaleventhandlers",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:GlobalEventHandlers.onpointerenter",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "GlobalEventHandlers.onpointerleave Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.mixins.globaleventhandlers.attributes.onpointerleave",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"onpointerleave\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"EventHandler\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "onpointerleave",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.mixins.globaleventhandlers",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:GlobalEventHandlers.onpointerleave",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "GlobalEventHandlers.onpointermove Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.mixins.globaleventhandlers.attributes.onpointermove",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"onpointermove\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"EventHandler\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "onpointermove",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.mixins.globaleventhandlers",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:GlobalEventHandlers.onpointermove",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "GlobalEventHandlers.onpointerout Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.mixins.globaleventhandlers.attributes.onpointerout",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"onpointerout\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"EventHandler\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "onpointerout",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.mixins.globaleventhandlers",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:GlobalEventHandlers.onpointerout",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "GlobalEventHandlers.onpointerover Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.mixins.globaleventhandlers.attributes.onpointerover",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"onpointerover\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"EventHandler\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "onpointerover",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.mixins.globaleventhandlers",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:GlobalEventHandlers.onpointerover",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "GlobalEventHandlers.onpointerrawupdate Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.mixins.globaleventhandlers.attributes.onpointerrawupdate",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SecureContext"
+        ],
+        "idlSource": "pointerevents.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"onpointerrawupdate\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"EventHandler\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SecureContext\",\"rhs\":null,\"arguments\":[]}],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "onpointerrawupdate",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.mixins.globaleventhandlers",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:GlobalEventHandlers.onpointerrawupdate",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "GlobalEventHandlers.onpointerup Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.pointerevents.mixins.globaleventhandlers.attributes.onpointerup",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "pointerevents.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"onpointerup\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"EventHandler\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "onpointerup",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.pointerevents.mixins.globaleventhandlers",
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#WebIDL:GlobalEventHandlers.onpointerup",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "dom/interfaces/pointerevents.json"
+}

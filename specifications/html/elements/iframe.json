@@ -1,0 +1,376 @@
+{
+  "entries": [
+    {
+      "description": "Child navigable",
+      "domain": "html",
+      "id": "html.elements.iframe",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; phrasing; embedded; interactive; palpable",
+        "children": "empty",
+        "interface": "HTMLIFrameElement",
+        "parents": "phrasing"
+      },
+      "name": "iframe",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <iframe> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.iframe.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "iframe",
+        "interface": "HTMLIFrameElement"
+      },
+      "name": "iframe implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.iframe",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <iframe> element activation and default action.",
+      "domain": "html",
+      "id": "html.elements.iframe.activation-behavior",
+      "kind": "activation-behavior",
+      "metadata": {
+        "element": "iframe",
+        "interface": "HTMLIFrameElement"
+      },
+      "name": "iframe activation and default action",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.iframe",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "allow content attribute on <iframe>.",
+      "domain": "html",
+      "id": "html.elements.iframe.attributes.allow",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "iframe",
+        "interface": "HTMLIFrameElement"
+      },
+      "name": "allow",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.iframe",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/iframe-embed-object.html#attr-iframe-allow",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "allowfullscreen content attribute on <iframe>.",
+      "domain": "html",
+      "id": "html.elements.iframe.attributes.allowfullscreen",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "iframe",
+        "interface": "HTMLIFrameElement"
+      },
+      "name": "allowfullscreen",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.iframe",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/iframe-embed-object.html#attr-iframe-allowfullscreen",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "height content attribute on <iframe>.",
+      "domain": "html",
+      "id": "html.elements.iframe.attributes.height",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "iframe",
+        "interface": "HTMLIFrameElement"
+      },
+      "name": "height",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.iframe",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/embedded-content-other.html#attr-dim-height",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "loading content attribute on <iframe>.",
+      "domain": "html",
+      "id": "html.elements.iframe.attributes.loading",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "iframe",
+        "interface": "HTMLIFrameElement"
+      },
+      "name": "loading",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.iframe",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/iframe-embed-object.html#attr-iframe-loading",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "name content attribute on <iframe>.",
+      "domain": "html",
+      "id": "html.elements.iframe.attributes.name",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "iframe",
+        "interface": "HTMLIFrameElement"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.iframe",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/iframe-embed-object.html#attr-iframe-name",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "referrerpolicy content attribute on <iframe>.",
+      "domain": "html",
+      "id": "html.elements.iframe.attributes.referrerpolicy",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "iframe",
+        "interface": "HTMLIFrameElement"
+      },
+      "name": "referrerpolicy",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.iframe",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/iframe-embed-object.html#attr-iframe-referrerpolicy",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "sandbox content attribute on <iframe>.",
+      "domain": "html",
+      "id": "html.elements.iframe.attributes.sandbox",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "iframe",
+        "interface": "HTMLIFrameElement"
+      },
+      "name": "sandbox",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.iframe",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/iframe-embed-object.html#attr-iframe-sandbox",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "src content attribute on <iframe>.",
+      "domain": "html",
+      "id": "html.elements.iframe.attributes.src",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "iframe",
+        "interface": "HTMLIFrameElement"
+      },
+      "name": "src",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.iframe",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/iframe-embed-object.html#attr-iframe-src",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "srcdoc content attribute on <iframe>.",
+      "domain": "html",
+      "id": "html.elements.iframe.attributes.srcdoc",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "iframe",
+        "interface": "HTMLIFrameElement"
+      },
+      "name": "srcdoc",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.iframe",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/iframe-embed-object.html#attr-iframe-srcdoc",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "width content attribute on <iframe>.",
+      "domain": "html",
+      "id": "html.elements.iframe.attributes.width",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "iframe",
+        "interface": "HTMLIFrameElement"
+      },
+      "name": "width",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.iframe",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/embedded-content-other.html#attr-dim-width",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <iframe> element content categories.",
+      "domain": "html",
+      "id": "html.elements.iframe.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "iframe",
+        "interface": "HTMLIFrameElement"
+      },
+      "name": "iframe content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.iframe",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <iframe> element content model.",
+      "domain": "html",
+      "id": "html.elements.iframe.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "iframe",
+        "interface": "HTMLIFrameElement"
+      },
+      "name": "iframe content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.iframe",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <iframe> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.iframe.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "iframe",
+        "interface": "HTMLIFrameElement"
+      },
+      "name": "iframe interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.iframe",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-iframe-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/iframe.json"
+}

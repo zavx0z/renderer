@@ -1,0 +1,123 @@
+{
+  "entries": [
+    {
+      "description": "Menu of commands",
+      "domain": "html",
+      "id": "html.elements.menu",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; palpable*",
+        "children": "li; script-supporting elements",
+        "interface": "HTMLMenuElement",
+        "parents": "flow"
+      },
+      "name": "menu",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#menus",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <menu> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.menu.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "menu",
+        "interface": "HTMLMenuElement"
+      },
+      "name": "menu implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.menu",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <menu> element content categories.",
+      "domain": "html",
+      "id": "html.elements.menu.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "menu",
+        "interface": "HTMLMenuElement"
+      },
+      "name": "menu content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.menu",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#menus",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <menu> element content model.",
+      "domain": "html",
+      "id": "html.elements.menu.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "menu",
+        "interface": "HTMLMenuElement"
+      },
+      "name": "menu content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.menu",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#menus",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <menu> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.menu.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "menu",
+        "interface": "HTMLMenuElement"
+      },
+      "name": "menu interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.menu",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#menus",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/menu.json"
+}

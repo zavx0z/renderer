@@ -1,0 +1,2899 @@
+{
+  "entries": [
+    {
+      "description": "dictionary CSSStyleSheetInit from cssom.idl.",
+      "domain": "css",
+      "id": "css.cssom.cssom.dictionaries.cssstylesheetinit",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "cssom.idl"
+      },
+      "name": "CSSStyleSheetInit",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleSheetInit",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStyleSheetInit.baseURL Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.cssom.dictionaries.cssstylesheetinit.fields.baseurl",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"baseURL\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"DOMString\"},\"default\":{\"type\":\"null\"},\"required\":false}"
+      },
+      "name": "baseURL",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.dictionaries.cssstylesheetinit",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleSheetInit.baseURL",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStyleSheetInit.disabled Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.cssom.dictionaries.cssstylesheetinit.fields.disabled",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"disabled\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"required\":false}"
+      },
+      "name": "disabled",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.dictionaries.cssstylesheetinit",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleSheetInit.disabled",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStyleSheetInit.media Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.cssom.dictionaries.cssstylesheetinit.fields.media",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"media\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":true,\"idlType\":[{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"MediaList\"},{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"}]},\"default\":{\"type\":\"string\",\"value\":\"\"},\"required\":false}"
+      },
+      "name": "media",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.dictionaries.cssstylesheetinit",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleSheetInit.media",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "includes HTMLElement-includes-ElementCSSInlineStyle from cssom.idl.",
+      "domain": "css",
+      "id": "css.cssom.cssom.includes.htmlelement-includes-elementcssinlinestyle",
+      "kind": "includes",
+      "metadata": {
+        "idlSource": "cssom.idl"
+      },
+      "name": "HTMLElement-includes-ElementCSSInlineStyle",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:HTMLElement-includes-ElementCSSInlineStyle",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "includes MathMLElement-includes-ElementCSSInlineStyle from cssom.idl.",
+      "domain": "css",
+      "id": "css.cssom.cssom.includes.mathmlelement-includes-elementcssinlinestyle",
+      "kind": "includes",
+      "metadata": {
+        "idlSource": "cssom.idl"
+      },
+      "name": "MathMLElement-includes-ElementCSSInlineStyle",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:MathMLElement-includes-ElementCSSInlineStyle",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "includes ProcessingInstruction-includes-LinkStyle from cssom.idl.",
+      "domain": "css",
+      "id": "css.cssom.cssom.includes.processinginstruction-includes-linkstyle",
+      "kind": "includes",
+      "metadata": {
+        "idlSource": "cssom.idl"
+      },
+      "name": "ProcessingInstruction-includes-LinkStyle",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:ProcessingInstruction-includes-LinkStyle",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "includes SVGElement-includes-ElementCSSInlineStyle from cssom.idl.",
+      "domain": "css",
+      "id": "css.cssom.cssom.includes.svgelement-includes-elementcssinlinestyle",
+      "kind": "includes",
+      "metadata": {
+        "idlSource": "cssom.idl"
+      },
+      "name": "SVGElement-includes-ElementCSSInlineStyle",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:SVGElement-includes-ElementCSSInlineStyle",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSGroupingRule from cssom.idl.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssgroupingrule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "cssom.idl",
+        "inheritance": "CSSRule"
+      },
+      "name": "CSSGroupingRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSGroupingRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSGroupingRule.cssRules Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssgroupingrule.attributes.cssrules",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SameObject"
+        ],
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"cssRules\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSRuleList\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SameObject\",\"rhs\":null,\"arguments\":[]}],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "cssRules",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssgroupingrule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSGroupingRule.cssRules",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSGroupingRule has CSSRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssgroupingrule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSRule"
+      },
+      "name": "CSSGroupingRule inherits CSSRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssgroupingrule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSGroupingRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSGroupingRule.deleteRule Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssgroupingrule.methods.deleterule",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"deleteRule\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"index\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "deleteRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssgroupingrule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSGroupingRule.deleteRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSGroupingRule.insertRule Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssgroupingrule.methods.insertrule",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"insertRule\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"rule\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"index\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "insertRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssgroupingrule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSGroupingRule.insertRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSImportRule from cssom.idl.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssimportrule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "cssom.idl",
+        "inheritance": "CSSRule"
+      },
+      "name": "CSSImportRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSImportRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSImportRule.href Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssimportrule.attributes.href",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"href\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"USVString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "href",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssimportrule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSImportRule.href",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSImportRule.layerName Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssimportrule.attributes.layername",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"layerName\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "layerName",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssimportrule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSImportRule.layerName",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSImportRule.media Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssimportrule.attributes.media",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SameObject",
+          "PutForwards={\"type\":\"identifier\",\"value\":\"mediaText\"}"
+        ],
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"media\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"MediaList\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SameObject\",\"rhs\":null,\"arguments\":[]},{\"type\":\"extended-attribute\",\"name\":\"PutForwards\",\"rhs\":{\"type\":\"identifier\",\"value\":\"mediaText\"},\"arguments\":[]}],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "media",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssimportrule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSImportRule.media",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSImportRule.styleSheet Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssimportrule.attributes.stylesheet",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SameObject"
+        ],
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"styleSheet\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"CSSStyleSheet\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SameObject\",\"rhs\":null,\"arguments\":[]}],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "styleSheet",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssimportrule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSImportRule.styleSheet",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSImportRule.supportsText Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssimportrule.attributes.supportstext",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"supportsText\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "supportsText",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssimportrule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSImportRule.supportsText",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSImportRule has CSSRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssimportrule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSRule"
+      },
+      "name": "CSSImportRule inherits CSSRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssimportrule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSImportRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSMarginRule from cssom.idl.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssmarginrule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "cssom.idl",
+        "inheritance": "CSSRule"
+      },
+      "name": "CSSMarginRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSMarginRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSMarginRule.name Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssmarginrule.attributes.name",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"name\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssmarginrule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSMarginRule.name",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSMarginRule.style Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssmarginrule.attributes.style",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SameObject",
+          "PutForwards={\"type\":\"identifier\",\"value\":\"cssText\"}"
+        ],
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"style\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSStyleDeclaration\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SameObject\",\"rhs\":null,\"arguments\":[]},{\"type\":\"extended-attribute\",\"name\":\"PutForwards\",\"rhs\":{\"type\":\"identifier\",\"value\":\"cssText\"},\"arguments\":[]}],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssmarginrule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSMarginRule.style",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSMarginRule has CSSRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssmarginrule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSRule"
+      },
+      "name": "CSSMarginRule inherits CSSRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssmarginrule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSMarginRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSNamespaceRule from cssom.idl.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssnamespacerule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "cssom.idl",
+        "inheritance": "CSSRule"
+      },
+      "name": "CSSNamespaceRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSNamespaceRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSNamespaceRule.namespaceURI Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssnamespacerule.attributes.namespaceuri",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"namespaceURI\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "namespaceURI",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssnamespacerule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSNamespaceRule.namespaceURI",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSNamespaceRule.prefix Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssnamespacerule.attributes.prefix",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"prefix\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "prefix",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssnamespacerule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSNamespaceRule.prefix",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSNamespaceRule has CSSRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssnamespacerule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSRule"
+      },
+      "name": "CSSNamespaceRule inherits CSSRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssnamespacerule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSNamespaceRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSPageDescriptors from cssom.idl.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.csspagedescriptors",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "cssom.idl",
+        "inheritance": "CSSStyleDeclaration"
+      },
+      "name": "CSSPageDescriptors",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSPageDescriptors",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPageDescriptors.bleed Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.csspagedescriptors.attributes.bleed",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"bleed\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "bleed",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.csspagedescriptors",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSPageDescriptors.bleed",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPageDescriptors.margin Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.csspagedescriptors.attributes.margin",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"margin\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "margin",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.csspagedescriptors",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSPageDescriptors.margin",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPageDescriptors.margin-bottom Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.csspagedescriptors.attributes.margin-bottom",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"margin-bottom\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "margin-bottom",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.csspagedescriptors",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSPageDescriptors.margin-bottom",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPageDescriptors.margin-left Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.csspagedescriptors.attributes.margin-left",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"margin-left\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "margin-left",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.csspagedescriptors",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSPageDescriptors.margin-left",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPageDescriptors.margin-right Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.csspagedescriptors.attributes.margin-right",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"margin-right\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "margin-right",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.csspagedescriptors",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSPageDescriptors.margin-right",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPageDescriptors.margin-top Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.csspagedescriptors.attributes.margin-top",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"margin-top\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "margin-top",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.csspagedescriptors",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSPageDescriptors.margin-top",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPageDescriptors.marginBottom Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.csspagedescriptors.attributes.marginbottom",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"marginBottom\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "marginBottom",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.csspagedescriptors",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSPageDescriptors.marginBottom",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPageDescriptors.marginLeft Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.csspagedescriptors.attributes.marginleft",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"marginLeft\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "marginLeft",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.csspagedescriptors",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSPageDescriptors.marginLeft",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPageDescriptors.marginRight Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.csspagedescriptors.attributes.marginright",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"marginRight\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "marginRight",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.csspagedescriptors",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSPageDescriptors.marginRight",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPageDescriptors.marginTop Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.csspagedescriptors.attributes.margintop",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"marginTop\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "marginTop",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.csspagedescriptors",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSPageDescriptors.marginTop",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPageDescriptors.marks Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.csspagedescriptors.attributes.marks",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"marks\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "marks",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.csspagedescriptors",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSPageDescriptors.marks",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPageDescriptors.page-orientation Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.csspagedescriptors.attributes.page-orientation",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"page-orientation\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "page-orientation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.csspagedescriptors",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSPageDescriptors.page-orientation",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPageDescriptors.pageOrientation Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.csspagedescriptors.attributes.pageorientation",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"pageOrientation\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "pageOrientation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.csspagedescriptors",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSPageDescriptors.pageOrientation",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPageDescriptors.size Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.csspagedescriptors.attributes.size",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"size\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.csspagedescriptors",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSPageDescriptors.size",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPageDescriptors has CSSStyleDeclaration as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.csspagedescriptors.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSStyleDeclaration"
+      },
+      "name": "CSSPageDescriptors inherits CSSStyleDeclaration",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.csspagedescriptors",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSPageDescriptors",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSPageRule from cssom.idl.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.csspagerule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "cssom.idl",
+        "inheritance": "CSSGroupingRule"
+      },
+      "name": "CSSPageRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSPageRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPageRule.selectorText Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.csspagerule.attributes.selectortext",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"selectorText\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "selectorText",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.csspagerule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSPageRule.selectorText",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPageRule.style Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.csspagerule.attributes.style",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SameObject",
+          "PutForwards={\"type\":\"identifier\",\"value\":\"cssText\"}"
+        ],
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"style\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSPageDescriptors\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SameObject\",\"rhs\":null,\"arguments\":[]},{\"type\":\"extended-attribute\",\"name\":\"PutForwards\",\"rhs\":{\"type\":\"identifier\",\"value\":\"cssText\"},\"arguments\":[]}],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.csspagerule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSPageRule.style",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPageRule has CSSGroupingRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.csspagerule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSGroupingRule"
+      },
+      "name": "CSSPageRule inherits CSSGroupingRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.csspagerule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSPageRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSRule from cssom.idl.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssrule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "cssom.idl"
+      },
+      "name": "CSSRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSRule.cssText Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssrule.attributes.csstext",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"cssText\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "cssText",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssrule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSRule.cssText",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSRule.parentRule Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssrule.attributes.parentrule",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"parentRule\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"CSSRule\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "parentRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssrule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSRule.parentRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSRule.parentStyleSheet Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssrule.attributes.parentstylesheet",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"parentStyleSheet\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"CSSStyleSheet\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "parentStyleSheet",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssrule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSRule.parentStyleSheet",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSRule.type Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssrule.attributes.type",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"type\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned short\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "type",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssrule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSRule.type",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSRule.CHARSET_RULE Web IDL const.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssrule.constants.charset_rule",
+      "kind": "const",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"const\",\"name\":\"CHARSET_RULE\",\"idlType\":{\"type\":\"const-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned short\"},\"extAttrs\":[],\"value\":{\"type\":\"number\",\"value\":\"2\"}}"
+      },
+      "name": "CHARSET_RULE",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssrule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSRule.CHARSET_RULE",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSRule.FONT_FACE_RULE Web IDL const.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssrule.constants.font_face_rule",
+      "kind": "const",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"const\",\"name\":\"FONT_FACE_RULE\",\"idlType\":{\"type\":\"const-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned short\"},\"extAttrs\":[],\"value\":{\"type\":\"number\",\"value\":\"5\"}}"
+      },
+      "name": "FONT_FACE_RULE",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssrule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSRule.FONT_FACE_RULE",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSRule.IMPORT_RULE Web IDL const.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssrule.constants.import_rule",
+      "kind": "const",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"const\",\"name\":\"IMPORT_RULE\",\"idlType\":{\"type\":\"const-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned short\"},\"extAttrs\":[],\"value\":{\"type\":\"number\",\"value\":\"3\"}}"
+      },
+      "name": "IMPORT_RULE",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssrule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSRule.IMPORT_RULE",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSRule.MARGIN_RULE Web IDL const.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssrule.constants.margin_rule",
+      "kind": "const",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"const\",\"name\":\"MARGIN_RULE\",\"idlType\":{\"type\":\"const-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned short\"},\"extAttrs\":[],\"value\":{\"type\":\"number\",\"value\":\"9\"}}"
+      },
+      "name": "MARGIN_RULE",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssrule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSRule.MARGIN_RULE",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSRule.MEDIA_RULE Web IDL const.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssrule.constants.media_rule",
+      "kind": "const",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"const\",\"name\":\"MEDIA_RULE\",\"idlType\":{\"type\":\"const-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned short\"},\"extAttrs\":[],\"value\":{\"type\":\"number\",\"value\":\"4\"}}"
+      },
+      "name": "MEDIA_RULE",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssrule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSRule.MEDIA_RULE",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSRule.NAMESPACE_RULE Web IDL const.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssrule.constants.namespace_rule",
+      "kind": "const",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"const\",\"name\":\"NAMESPACE_RULE\",\"idlType\":{\"type\":\"const-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned short\"},\"extAttrs\":[],\"value\":{\"type\":\"number\",\"value\":\"10\"}}"
+      },
+      "name": "NAMESPACE_RULE",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssrule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSRule.NAMESPACE_RULE",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSRule.PAGE_RULE Web IDL const.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssrule.constants.page_rule",
+      "kind": "const",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"const\",\"name\":\"PAGE_RULE\",\"idlType\":{\"type\":\"const-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned short\"},\"extAttrs\":[],\"value\":{\"type\":\"number\",\"value\":\"6\"}}"
+      },
+      "name": "PAGE_RULE",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssrule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSRule.PAGE_RULE",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSRule.STYLE_RULE Web IDL const.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssrule.constants.style_rule",
+      "kind": "const",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"const\",\"name\":\"STYLE_RULE\",\"idlType\":{\"type\":\"const-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned short\"},\"extAttrs\":[],\"value\":{\"type\":\"number\",\"value\":\"1\"}}"
+      },
+      "name": "STYLE_RULE",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssrule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSRule.STYLE_RULE",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSRuleList from cssom.idl.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssrulelist",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "cssom.idl"
+      },
+      "name": "CSSRuleList",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSRuleList",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSRuleList.length Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssrulelist.attributes.length",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"length\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "length",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssrulelist",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSRuleList.length",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSRuleList.item Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssrulelist.methods.item",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"item\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"CSSRule\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"index\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"getter\"}",
+        "special": "getter"
+      },
+      "name": "item",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssrulelist",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSRuleList.item",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSStyleDeclaration from cssom.idl.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstyledeclaration",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "cssom.idl"
+      },
+      "name": "CSSStyleDeclaration",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleDeclaration",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStyleDeclaration.cssText Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstyledeclaration.attributes.csstext",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "CEReactions"
+        ],
+        "idlSource": "cssom.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"cssText\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"CEReactions\",\"rhs\":null,\"arguments\":[]}],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "cssText",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssstyledeclaration",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleDeclaration.cssText",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStyleDeclaration.length Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstyledeclaration.attributes.length",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"length\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "length",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssstyledeclaration",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleDeclaration.length",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStyleDeclaration.parentRule Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstyledeclaration.attributes.parentrule",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"parentRule\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"CSSRule\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "parentRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssstyledeclaration",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleDeclaration.parentRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStyleDeclaration.getPropertyPriority Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstyledeclaration.methods.getpropertypriority",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"getPropertyPriority\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"property\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "getPropertyPriority",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssstyledeclaration",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleDeclaration.getPropertyPriority",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStyleDeclaration.getPropertyValue Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstyledeclaration.methods.getpropertyvalue",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"getPropertyValue\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"property\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "getPropertyValue",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssstyledeclaration",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleDeclaration.getPropertyValue",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStyleDeclaration.item Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstyledeclaration.methods.item",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"item\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"index\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"getter\"}",
+        "special": "getter"
+      },
+      "name": "item",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssstyledeclaration",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleDeclaration.item",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStyleDeclaration.removeProperty Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstyledeclaration.methods.removeproperty",
+      "kind": "operation",
+      "metadata": {
+        "extendedAttributes": [
+          "CEReactions"
+        ],
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"removeProperty\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"property\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"CEReactions\",\"rhs\":null,\"arguments\":[]}],\"special\":\"\"}"
+      },
+      "name": "removeProperty",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssstyledeclaration",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleDeclaration.removeProperty",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStyleDeclaration.setProperty Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstyledeclaration.methods.setproperty",
+      "kind": "operation",
+      "metadata": {
+        "extendedAttributes": [
+          "CEReactions"
+        ],
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"setProperty\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"property\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"value\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"priority\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":{\"type\":\"string\",\"value\":\"\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"CEReactions\",\"rhs\":null,\"arguments\":[]}],\"special\":\"\"}"
+      },
+      "name": "setProperty",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssstyledeclaration",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleDeclaration.setProperty",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSStyleProperties from cssom.idl.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstyleproperties",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "cssom.idl",
+        "inheritance": "CSSStyleDeclaration"
+      },
+      "name": "CSSStyleProperties",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleProperties",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStyleProperties.cssFloat Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstyleproperties.attributes.cssfloat",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "CEReactions"
+        ],
+        "idlSource": "cssom.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"cssFloat\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"CEReactions\",\"rhs\":null,\"arguments\":[]}],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "cssFloat",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssstyleproperties",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleProperties.cssFloat",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStyleProperties has CSSStyleDeclaration as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstyleproperties.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSStyleDeclaration"
+      },
+      "name": "CSSStyleProperties inherits CSSStyleDeclaration",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssstyleproperties",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleProperties",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSStyleRule from cssom.idl.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstylerule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "cssom.idl",
+        "inheritance": "CSSGroupingRule"
+      },
+      "name": "CSSStyleRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStyleRule.selectorText Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstylerule.attributes.selectortext",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"selectorText\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "selectorText",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssstylerule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleRule.selectorText",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStyleRule.style Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstylerule.attributes.style",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SameObject",
+          "PutForwards={\"type\":\"identifier\",\"value\":\"cssText\"}"
+        ],
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"style\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSStyleProperties\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SameObject\",\"rhs\":null,\"arguments\":[]},{\"type\":\"extended-attribute\",\"name\":\"PutForwards\",\"rhs\":{\"type\":\"identifier\",\"value\":\"cssText\"},\"arguments\":[]}],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssstylerule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleRule.style",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStyleRule has CSSGroupingRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstylerule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSGroupingRule"
+      },
+      "name": "CSSStyleRule inherits CSSGroupingRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssstylerule",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSStyleSheet from cssom.idl.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstylesheet",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "cssom.idl",
+        "inheritance": "StyleSheet"
+      },
+      "name": "CSSStyleSheet",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleSheet",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSStyleSheet from cssom.idl.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstylesheet--14bb6aa4",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "cssom.idl"
+      },
+      "name": "CSSStyleSheet",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleSheet",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStyleSheet.rules Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstylesheet--14bb6aa4.attributes.rules",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SameObject"
+        ],
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"rules\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSRuleList\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SameObject\",\"rhs\":null,\"arguments\":[]}],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "rules",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssstylesheet--14bb6aa4",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleSheet.rules",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStyleSheet.addRule Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstylesheet--14bb6aa4.methods.addrule",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"addRule\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"selector\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":{\"type\":\"string\",\"value\":\"undefined\"},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"style\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":{\"type\":\"string\",\"value\":\"undefined\"},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"index\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"default\":null,\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "addRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssstylesheet--14bb6aa4",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleSheet.addRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStyleSheet.removeRule Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstylesheet--14bb6aa4.methods.removerule",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"removeRule\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"index\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "removeRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssstylesheet--14bb6aa4",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleSheet.removeRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStyleSheet.cssRules Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstylesheet.attributes.cssrules",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SameObject"
+        ],
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"cssRules\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSRuleList\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SameObject\",\"rhs\":null,\"arguments\":[]}],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "cssRules",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssstylesheet",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleSheet.cssRules",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStyleSheet.ownerRule Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstylesheet.attributes.ownerrule",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"ownerRule\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"CSSRule\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "ownerRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssstylesheet",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleSheet.ownerRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStyleSheet.constructor Web IDL constructor.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstylesheet.constructors.constructor",
+      "kind": "constructor",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"constructor\",\"arguments\":[{\"type\":\"argument\",\"name\":\"options\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSStyleSheetInit\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[]}"
+      },
+      "name": "constructor",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssstylesheet",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleSheet.constructor",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStyleSheet has StyleSheet as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstylesheet.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "StyleSheet"
+      },
+      "name": "CSSStyleSheet inherits StyleSheet",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssstylesheet",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleSheet",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStyleSheet.deleteRule Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstylesheet.methods.deleterule",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"deleteRule\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"index\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "deleteRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssstylesheet",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleSheet.deleteRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStyleSheet.insertRule Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstylesheet.methods.insertrule",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"insertRule\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"rule\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"index\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "insertRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssstylesheet",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleSheet.insertRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStyleSheet.replace Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstylesheet.methods.replace",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"replace\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"Promise\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSStyleSheet\"}]},\"arguments\":[{\"type\":\"argument\",\"name\":\"text\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"USVString\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "replace",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssstylesheet",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleSheet.replace",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStyleSheet.replaceSync Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.cssstylesheet.methods.replacesync",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"replaceSync\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"text\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"USVString\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "replaceSync",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.cssstylesheet",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSSStyleSheet.replaceSync",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface MediaList from cssom.idl.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.medialist",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "cssom.idl"
+      },
+      "name": "MediaList",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:MediaList",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "MediaList.length Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.medialist.attributes.length",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"length\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "length",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.medialist",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:MediaList.length",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "MediaList.mediaText Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.medialist.attributes.mediatext",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"mediaText\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"stringifier\",\"readonly\":false}",
+        "special": "stringifier"
+      },
+      "name": "mediaText",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.medialist",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:MediaList.mediaText",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "MediaList.appendMedium Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.medialist.methods.appendmedium",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"appendMedium\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"medium\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "appendMedium",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.medialist",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:MediaList.appendMedium",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "MediaList.deleteMedium Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.medialist.methods.deletemedium",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"deleteMedium\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"medium\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "deleteMedium",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.medialist",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:MediaList.deleteMedium",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "MediaList.item Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.medialist.methods.item",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"item\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"CSSOMString\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"index\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"getter\"}",
+        "special": "getter"
+      },
+      "name": "item",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.medialist",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:MediaList.item",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface StyleSheet from cssom.idl.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.stylesheet",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "cssom.idl"
+      },
+      "name": "StyleSheet",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:StyleSheet",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "StyleSheet.disabled Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.stylesheet.attributes.disabled",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"disabled\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "disabled",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.stylesheet",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:StyleSheet.disabled",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "StyleSheet.href Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.stylesheet.attributes.href",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"href\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"USVString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "href",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.stylesheet",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:StyleSheet.href",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "StyleSheet.media Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.stylesheet.attributes.media",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SameObject",
+          "PutForwards={\"type\":\"identifier\",\"value\":\"mediaText\"}"
+        ],
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"media\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"MediaList\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SameObject\",\"rhs\":null,\"arguments\":[]},{\"type\":\"extended-attribute\",\"name\":\"PutForwards\",\"rhs\":{\"type\":\"identifier\",\"value\":\"mediaText\"},\"arguments\":[]}],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "media",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.stylesheet",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:StyleSheet.media",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "StyleSheet.ownerNode Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.stylesheet.attributes.ownernode",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"ownerNode\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":true,\"idlType\":[{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"Element\"},{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"ProcessingInstruction\"}]},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "ownerNode",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.stylesheet",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:StyleSheet.ownerNode",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "StyleSheet.parentStyleSheet Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.stylesheet.attributes.parentstylesheet",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"parentStyleSheet\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"CSSStyleSheet\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "parentStyleSheet",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.stylesheet",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:StyleSheet.parentStyleSheet",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "StyleSheet.title Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.stylesheet.attributes.title",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"title\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"DOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "title",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.stylesheet",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:StyleSheet.title",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "StyleSheet.type Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.stylesheet.attributes.type",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"type\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "type",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.stylesheet",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:StyleSheet.type",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface StyleSheetList from cssom.idl.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.stylesheetlist",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "cssom.idl"
+      },
+      "name": "StyleSheetList",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:StyleSheetList",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "StyleSheetList.length Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.stylesheetlist.attributes.length",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"length\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "length",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.stylesheetlist",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:StyleSheetList.length",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "StyleSheetList.item Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.stylesheetlist.methods.item",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"item\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"CSSStyleSheet\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"index\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"getter\"}",
+        "special": "getter"
+      },
+      "name": "item",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.stylesheetlist",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:StyleSheetList.item",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface Window from cssom.idl.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.window",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "cssom.idl"
+      },
+      "name": "Window",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:Window",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "Window.getComputedStyle Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.cssom.interfaces.window.methods.getcomputedstyle",
+      "kind": "operation",
+      "metadata": {
+        "extendedAttributes": [
+          "NewObject"
+        ],
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"getComputedStyle\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSStyleProperties\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"elt\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"Element\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"pseudoElt\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":null,\"optional\":true,\"variadic\":false}],\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"NewObject\",\"rhs\":null,\"arguments\":[]}],\"special\":\"\"}"
+      },
+      "name": "getComputedStyle",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.interfaces.window",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:Window.getComputedStyle",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface mixin DocumentOrShadowRoot from cssom.idl.",
+      "domain": "css",
+      "id": "css.cssom.cssom.mixins.documentorshadowroot",
+      "kind": "interface mixin",
+      "metadata": {
+        "idlSource": "cssom.idl"
+      },
+      "name": "DocumentOrShadowRoot",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:DocumentOrShadowRoot",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "DocumentOrShadowRoot.adoptedStyleSheets Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.mixins.documentorshadowroot.attributes.adoptedstylesheets",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"adoptedStyleSheets\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"ObservableArray\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSStyleSheet\"}]},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "adoptedStyleSheets",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.mixins.documentorshadowroot",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:DocumentOrShadowRoot.adoptedStyleSheets",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "DocumentOrShadowRoot.styleSheets Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.mixins.documentorshadowroot.attributes.stylesheets",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SameObject"
+        ],
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"styleSheets\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"StyleSheetList\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SameObject\",\"rhs\":null,\"arguments\":[]}],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "styleSheets",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.mixins.documentorshadowroot",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:DocumentOrShadowRoot.styleSheets",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface mixin ElementCSSInlineStyle from cssom.idl.",
+      "domain": "css",
+      "id": "css.cssom.cssom.mixins.elementcssinlinestyle",
+      "kind": "interface mixin",
+      "metadata": {
+        "idlSource": "cssom.idl"
+      },
+      "name": "ElementCSSInlineStyle",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:ElementCSSInlineStyle",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "ElementCSSInlineStyle.style Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.mixins.elementcssinlinestyle.attributes.style",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SameObject",
+          "PutForwards={\"type\":\"identifier\",\"value\":\"cssText\"}"
+        ],
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"style\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSStyleProperties\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SameObject\",\"rhs\":null,\"arguments\":[]},{\"type\":\"extended-attribute\",\"name\":\"PutForwards\",\"rhs\":{\"type\":\"identifier\",\"value\":\"cssText\"},\"arguments\":[]}],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.mixins.elementcssinlinestyle",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:ElementCSSInlineStyle.style",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface mixin LinkStyle from cssom.idl.",
+      "domain": "css",
+      "id": "css.cssom.cssom.mixins.linkstyle",
+      "kind": "interface mixin",
+      "metadata": {
+        "idlSource": "cssom.idl"
+      },
+      "name": "LinkStyle",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:LinkStyle",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "LinkStyle.sheet Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.cssom.mixins.linkstyle.attributes.sheet",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"sheet\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"CSSStyleSheet\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "sheet",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.mixins.linkstyle",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:LinkStyle.sheet",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "namespace CSS from cssom.idl.",
+      "domain": "css",
+      "id": "css.cssom.cssom.namespaces.css",
+      "kind": "namespace",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "cssom.idl"
+      },
+      "name": "CSS",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSS",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSS.escape Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.cssom.namespaces.css.methods.escape",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "cssom.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"escape\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"ident\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "escape",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.cssom.namespaces.css",
+      "spec": {
+        "anchor": "webref/idl/cssom.idl#WebIDL:CSS.escape",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/cssom.json"
+}

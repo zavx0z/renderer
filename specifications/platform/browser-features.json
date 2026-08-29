@@ -1,0 +1,529 @@
+{
+  "entries": [
+    {
+      "description": "Browser composition animation frame coalescing capability.",
+      "domain": "browser",
+      "id": "browser.features.animation-frame-coalescing",
+      "kind": "browser-host",
+      "name": "animation frame coalescing",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#animation-frame-coalescing",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition beforeinput input capability.",
+      "domain": "browser",
+      "id": "browser.features.beforeinput-input",
+      "kind": "browser-host",
+      "name": "beforeinput input",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#beforeinput-input",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition camera gestures capability.",
+      "domain": "browser",
+      "id": "browser.features.camera-gestures",
+      "kind": "browser-host",
+      "name": "camera gestures",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#camera-gestures",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition cancellation rollback capability.",
+      "domain": "browser",
+      "id": "browser.features.cancellation-rollback",
+      "kind": "browser-host",
+      "name": "cancellation rollback",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#cancellation-rollback",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition canvas lifecycle capability.",
+      "domain": "browser",
+      "id": "browser.features.canvas-lifecycle",
+      "kind": "browser-host",
+      "name": "canvas lifecycle",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#canvas-lifecycle",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition capture capability.",
+      "domain": "browser",
+      "id": "browser.features.capture",
+      "kind": "browser-host",
+      "name": "capture",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#capture",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition cleanup capability.",
+      "domain": "browser",
+      "id": "browser.features.cleanup",
+      "kind": "browser-host",
+      "name": "cleanup",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#cleanup",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition clipboard proxy capability.",
+      "domain": "browser",
+      "id": "browser.features.clipboard-proxy",
+      "kind": "browser-host",
+      "name": "clipboard proxy",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#clipboard-proxy",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition composition ime capability.",
+      "domain": "browser",
+      "id": "browser.features.composition-ime",
+      "kind": "browser-host",
+      "name": "composition ime",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#composition-ime",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition device pixel ratio capability.",
+      "domain": "browser",
+      "id": "browser.features.device-pixel-ratio",
+      "kind": "browser-host",
+      "name": "device pixel ratio",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#device-pixel-ratio",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition document plane capability.",
+      "domain": "browser",
+      "id": "browser.features.document-plane",
+      "kind": "browser-host",
+      "name": "document plane",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#document-plane",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition error boundaries capability.",
+      "domain": "browser",
+      "id": "browser.features.error-boundaries",
+      "kind": "browser-host",
+      "name": "error boundaries",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#error-boundaries",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition keyboard capability.",
+      "domain": "browser",
+      "id": "browser.features.keyboard",
+      "kind": "browser-host",
+      "name": "keyboard",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#keyboard",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition lifecycle boundaries capability.",
+      "domain": "browser",
+      "id": "browser.features.lifecycle-boundaries",
+      "kind": "browser-host",
+      "name": "lifecycle boundaries",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#lifecycle-boundaries",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition multiple planes capability.",
+      "domain": "browser",
+      "id": "browser.features.multiple-planes",
+      "kind": "browser-host",
+      "name": "multiple planes",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#multiple-planes",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition native browser evidence capability.",
+      "domain": "browser",
+      "id": "browser.features.native-browser-evidence",
+      "kind": "browser-host",
+      "name": "native browser evidence",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#native-browser-evidence",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition number input proxy capability.",
+      "domain": "browser",
+      "id": "browser.features.number-input-proxy",
+      "kind": "browser-host",
+      "name": "number input proxy",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#number-input-proxy",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition overlays capability.",
+      "domain": "browser",
+      "id": "browser.features.overlays",
+      "kind": "browser-host",
+      "name": "overlays",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#overlays",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition pointer capture capability.",
+      "domain": "browser",
+      "id": "browser.features.pointer-capture",
+      "kind": "browser-host",
+      "name": "pointer capture",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#pointer-capture",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition pointer mapping capability.",
+      "domain": "browser",
+      "id": "browser.features.pointer-mapping",
+      "kind": "browser-host",
+      "name": "pointer mapping",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#pointer-mapping",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition resize capability.",
+      "domain": "browser",
+      "id": "browser.features.resize",
+      "kind": "browser-host",
+      "name": "resize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#resize",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition same document input identity capability.",
+      "domain": "browser",
+      "id": "browser.features.same-document-input-identity",
+      "kind": "browser-host",
+      "name": "same document input identity",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#same-document-input-identity",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition select picker capability.",
+      "domain": "browser",
+      "id": "browser.features.select-picker",
+      "kind": "browser-host",
+      "name": "select picker",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#select-picker",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition selection synchronization capability.",
+      "domain": "browser",
+      "id": "browser.features.selection-synchronization",
+      "kind": "browser-host",
+      "name": "selection synchronization",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#selection-synchronization",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition semantic pointer events capability.",
+      "domain": "browser",
+      "id": "browser.features.semantic-pointer-events",
+      "kind": "browser-host",
+      "name": "semantic pointer events",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#semantic-pointer-events",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition text input proxy capability.",
+      "domain": "browser",
+      "id": "browser.features.text-input-proxy",
+      "kind": "browser-host",
+      "name": "text input proxy",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#text-input-proxy",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition textarea proxy capability.",
+      "domain": "browser",
+      "id": "browser.features.textarea-proxy",
+      "kind": "browser-host",
+      "name": "textarea proxy",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#textarea-proxy",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition viewport capability.",
+      "domain": "browser",
+      "id": "browser.features.viewport",
+      "kind": "browser-host",
+      "name": "viewport",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#viewport",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Browser composition wheel capability.",
+      "domain": "browser",
+      "id": "browser.features.wheel",
+      "kind": "browser-host",
+      "name": "wheel",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#wheel",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "platform/browser-features.json"
+}

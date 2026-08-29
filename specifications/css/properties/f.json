@@ -1,0 +1,1972 @@
+{
+  "entries": [
+    {
+      "domain": "css",
+      "id": "css.properties.field-sizing",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "elements with default preferred size",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "fixed",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "field-sizing",
+          "fieldSizing"
+        ],
+        "syntax": "fixed | content"
+      },
+      "name": "field-sizing",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-forms-1/#propdef-field-sizing",
+        "profile": "standard",
+        "source": "css:css-forms-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.fill",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "shapes and text content elements",
+        "computedValue": "as specified, but with <color> values computed and <url> values made absolute",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "black",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "fill"
+        ],
+        "syntax": "<paint>"
+      },
+      "name": "fill",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/painting.html#FillProperty",
+        "profile": "standard",
+        "source": "css:svgwg",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.fill-break",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes?",
+        "initial": "bounding-box",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "fill-break",
+          "fillBreak"
+        ],
+        "syntax": "bounding-box | slice | clone"
+      },
+      "name": "fill-break",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/fill-stroke-3/#propdef-fill-break",
+        "profile": "standard",
+        "source": "css:fill-stroke-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.fill-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "text and SVG shapes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the computed color",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "currentcolor",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "fill-color",
+          "fillColor"
+        ],
+        "syntax": "<color>"
+      },
+      "name": "fill-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/fill-stroke-3/#propdef-fill-color",
+        "profile": "standard",
+        "source": "css:fill-stroke-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.fill-image",
+      "kind": "property",
+      "metadata": {
+        "animationType": "repeatable list",
+        "appliesTo": "text and SVG shapes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified, with any <image> computed",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "none",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "fill-image",
+          "fillImage"
+        ],
+        "syntax": "<paint>#"
+      },
+      "name": "fill-image",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/fill-stroke-3/#propdef-fill-image",
+        "profile": "standard",
+        "source": "css:fill-stroke-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.fill-opacity",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "text and SVG shapes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the specified value converted to a <number>, clamped to the range [0,1]",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "1",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "fill-opacity",
+          "fillOpacity"
+        ],
+        "syntax": "<'opacity'>"
+      },
+      "name": "fill-opacity",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/fill-stroke-3/#propdef-fill-opacity",
+        "profile": "standard",
+        "source": "css:fill-stroke-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.fill-origin",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "match-parent",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "fill-origin",
+          "fillOrigin"
+        ],
+        "syntax": "match-parent | fill-box | stroke-box | content-box | padding-box | border-box"
+      },
+      "name": "fill-origin",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/fill-stroke-3/#propdef-fill-origin",
+        "profile": "standard",
+        "source": "css:fill-stroke-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.fill-position",
+      "kind": "property",
+      "metadata": {
+        "animationType": "repeatable list",
+        "appliesTo": "text and SVG shapes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "A list, each item consisting of: a pair of offsets (horizontal and vertical) from the top left origin each given as a combination of an absolute length and a percentage",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "0% 0%",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "fill-position",
+          "fillPosition"
+        ],
+        "syntax": "<position>#"
+      },
+      "name": "fill-position",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/fill-stroke-3/#propdef-fill-position",
+        "profile": "standard",
+        "source": "css:fill-stroke-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.fill-repeat",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "text and SVG shapes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "A list, each item consisting of: two keywords, one per dimension",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "repeat",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "fill-repeat",
+          "fillRepeat"
+        ],
+        "syntax": "<repeat-style>#"
+      },
+      "name": "fill-repeat",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/fill-stroke-3/#propdef-fill-repeat",
+        "profile": "standard",
+        "source": "css:fill-stroke-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.fill-rule",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "SVG shapes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "nonzero",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "fill-rule",
+          "fillRule"
+        ],
+        "syntax": "nonzero | evenodd"
+      },
+      "name": "fill-rule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/fill-stroke-3/#propdef-fill-rule",
+        "profile": "standard",
+        "source": "css:fill-stroke-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.fill-size",
+      "kind": "property",
+      "metadata": {
+        "animationType": "repeatable list",
+        "appliesTo": "text and SVG shapes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified, but with lengths made absolute and omitted auto keywords filled in",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "fill-size",
+          "fillSize"
+        ],
+        "syntax": "<bg-size>#"
+      },
+      "name": "fill-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/fill-stroke-3/#propdef-fill-size",
+        "profile": "standard",
+        "source": "css:fill-stroke-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.filter",
+      "kind": "property",
+      "metadata": {
+        "animationType": "See prose in Animation of Filters.",
+        "appliesTo": "All elements. In SVG, it applies to container elements without the defs element, all graphics elements and the use element.",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "filter"
+        ],
+        "syntax": "none | <filter-value-list>"
+      },
+      "name": "filter",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/filter-effects-1/#propdef-filter",
+        "profile": "standard",
+        "source": "css:filter-effects-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.flex",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "flex items",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0 1 auto",
+        "longhands": [
+          "flex-grow",
+          "flex-shrink",
+          "flex-basis"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "flex"
+        ],
+        "syntax": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]"
+      },
+      "name": "flex",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-flexbox-2/#propdef-flex",
+        "profile": "standard",
+        "source": "css:css-flexbox-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.flex-basis",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "flex items",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword or a computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "relative to the flex container’s inner main size",
+        "styleDeclaration": [
+          "flex-basis",
+          "flexBasis"
+        ],
+        "syntax": "content | <'width'>"
+      },
+      "name": "flex-basis",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-flexbox-2/#propdef-flex-basis",
+        "profile": "standard",
+        "source": "css:css-flexbox-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.flex-direction",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "flex containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "row",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "flex-direction",
+          "flexDirection"
+        ],
+        "syntax": "row | row-reverse | column | column-reverse"
+      },
+      "name": "flex-direction",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-flexbox-2/#propdef-flex-direction",
+        "profile": "standard",
+        "source": "css:css-flexbox-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.flex-flow",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "flex-direction",
+          "flex-wrap"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "flex-flow",
+          "flexFlow"
+        ],
+        "syntax": "<'flex-direction'> || <'flex-wrap'>"
+      },
+      "name": "flex-flow",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-flexbox-2/#propdef-flex-flow",
+        "profile": "standard",
+        "source": "css:css-flexbox-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.flex-grow",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "flex items",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified number",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "flex-grow",
+          "flexGrow"
+        ],
+        "syntax": "<number [0,∞]>"
+      },
+      "name": "flex-grow",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-flexbox-2/#propdef-flex-grow",
+        "profile": "standard",
+        "source": "css:css-flexbox-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.flex-line-count",
+      "kind": "property",
+      "metadata": {
+        "animationType": "as integer",
+        "appliesTo": "multi-line flex containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the specified integer, computed",
+        "extended": [],
+        "inherited": "no",
+        "initial": "1",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "flex-line-count",
+          "flexLineCount"
+        ],
+        "syntax": "<integer [1,∞]>"
+      },
+      "name": "flex-line-count",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-flexbox-2/#propdef-flex-line-count",
+        "profile": "standard",
+        "source": "css:css-flexbox-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.flex-shrink",
+      "kind": "property",
+      "metadata": {
+        "animationType": "number",
+        "appliesTo": "flex items",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "1",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "flex-shrink",
+          "flexShrink"
+        ],
+        "syntax": "<number [0,∞]>"
+      },
+      "name": "flex-shrink",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-flexbox-2/#propdef-flex-shrink",
+        "profile": "standard",
+        "source": "css:css-flexbox-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.flex-wrap",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "flex containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "nowrap",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "flex-wrap",
+          "flexWrap"
+        ],
+        "syntax": "nowrap | [ wrap | wrap-reverse ] || balance"
+      },
+      "name": "flex-wrap",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-flexbox-2/#propdef-flex-wrap",
+        "profile": "standard",
+        "source": "css:css-flexbox-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.float",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements.",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [
+          "https://drafts.csswg.org/css-gcpm-3/"
+        ],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "float"
+        ],
+        "syntax": "block-start | block-end | inline-start | inline-end | snap-block | <snap-block()> | snap-inline | <snap-inline()> | left | right | top | bottom | none | footnote"
+      },
+      "name": "float",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-floats-3/#propdef-float",
+        "profile": "standard",
+        "source": "css:css-page-floats-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.float-defer",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "floats",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword or integer",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "float-defer",
+          "floatDefer"
+        ],
+        "syntax": "<integer> | last | none"
+      },
+      "name": "float-defer",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-floats-3/#propdef-float-defer",
+        "profile": "standard",
+        "source": "css:css-page-floats-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.float-offset",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "floats",
+        "canonicalOrder": "per grammar",
+        "computedValue": "computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "percentages": "see prose",
+        "styleDeclaration": [
+          "float-offset",
+          "floatOffset"
+        ],
+        "syntax": "<length-percentage>"
+      },
+      "name": "float-offset",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-floats-3/#propdef-float-offset",
+        "profile": "standard",
+        "source": "css:css-page-floats-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.float-reference",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements.",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "inline",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "float-reference",
+          "floatReference"
+        ],
+        "syntax": "inline | column | region | page"
+      },
+      "name": "float-reference",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-floats-3/#propdef-float-reference",
+        "profile": "standard",
+        "source": "css:css-page-floats-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.flood-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "feFlood and feDropShadow elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "black",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "flood-color",
+          "floodColor"
+        ],
+        "syntax": "<color>"
+      },
+      "name": "flood-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/filter-effects-1/#propdef-flood-color",
+        "profile": "standard",
+        "source": "css:filter-effects-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.flood-opacity",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "feFlood and feDropShadow elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the specified value converted to a number, clamped to the range [0,1]",
+        "extended": [],
+        "inherited": "no",
+        "initial": "1",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "flood-opacity",
+          "floodOpacity"
+        ],
+        "syntax": "<'opacity'>"
+      },
+      "name": "flood-opacity",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/filter-effects-1/#propdef-flood-opacity",
+        "profile": "standard",
+        "source": "css:filter-effects-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.flow-from",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "Non-replaced block containers. This might be expanded in future versions of the specification to allow other types of containers to receive flow content.",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "flow-from",
+          "flowFrom"
+        ],
+        "syntax": "<custom-ident> | none"
+      },
+      "name": "flow-from",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-regions-1/#propdef-flow-from",
+        "profile": "standard",
+        "source": "css:css-regions-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.flow-into",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "All elements, but not pseudo-elements such as ::first-line, ::first-letter, ::before or ::after.",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "flow-into",
+          "flowInto"
+        ],
+        "syntax": "none | <custom-ident> [element | content]?"
+      },
+      "name": "flow-into",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-regions-1/#propdef-flow-into",
+        "profile": "standard",
+        "source": "css:css-regions-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.flow-tolerance",
+      "kind": "property",
+      "metadata": {
+        "animationType": "as length",
+        "appliesTo": "grid lanes containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "a computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "relative to the grid-axis content box size of the grid lanes container",
+        "styleDeclaration": [
+          "flow-tolerance",
+          "flowTolerance"
+        ],
+        "syntax": "normal | <length-percentage [0,∞]> | infinite"
+      },
+      "name": "flow-tolerance",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-grid-3/#propdef-flow-tolerance",
+        "profile": "standard",
+        "source": "css:css-grid-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.font",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "see individual properties",
+        "longhands": [
+          "font-style",
+          "font-variant",
+          "font-weight",
+          "font-stretch",
+          "font-size",
+          "line-height",
+          "font-family"
+        ],
+        "percentages": "see individual properties",
+        "resetLonghands": [
+          "font-feature-settings",
+          "font-kerning",
+          "font-language-override",
+          "font-optical-sizing",
+          "font-size-adjust",
+          "font-variation-settings"
+        ],
+        "styleDeclaration": [
+          "font"
+        ],
+        "syntax": "[ [ <'font-style'> || <font-variant-css2> || <'font-weight'> || <font-width-css3> ]? <'font-size'> [ / <'line-height'> ]? <'font-family'># ] | <system-font-family-name>"
+      },
+      "name": "font",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#propdef-font",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.font-family",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item a string and/or <generic-font-family> keywords",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "depends on user agent",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "font-family",
+          "fontFamily"
+        ],
+        "syntax": "[ <font-family-name> | <generic-font-family> ]#"
+      },
+      "name": "font-family",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#propdef-font-family",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.font-feature-settings",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "font-feature-settings",
+          "fontFeatureSettings"
+        ],
+        "syntax": "normal | <feature-tag-value>#"
+      },
+      "name": "font-feature-settings",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#propdef-font-feature-settings",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.font-kerning",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "font-kerning",
+          "fontKerning"
+        ],
+        "syntax": "auto | normal | none"
+      },
+      "name": "font-kerning",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#propdef-font-kerning",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.font-language-override",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified string or the keyword none",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "font-language-override",
+          "fontLanguageOverride"
+        ],
+        "syntax": "normal | <string>"
+      },
+      "name": "font-language-override",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#propdef-font-language-override",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.font-optical-sizing",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "font-optical-sizing",
+          "fontOpticalSizing"
+        ],
+        "syntax": "auto | none"
+      },
+      "name": "font-optical-sizing",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#propdef-font-optical-sizing",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.font-palette",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword, identifier or <palette-mix()> function. <palette-mix()> must be simplified to a single keyword or identifier if resulting palette is equivalent.",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "N/a",
+        "styleDeclaration": [
+          "font-palette",
+          "fontPalette"
+        ],
+        "syntax": "normal | light | dark | <palette-identifier> | <palette-mix()>"
+      },
+      "name": "font-palette",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#propdef-font-palette",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.font-size",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "an absolute length",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "medium",
+        "percentages": "refer to parent element’s font size",
+        "styleDeclaration": [
+          "font-size",
+          "fontSize"
+        ],
+        "syntax": "<absolute-size> | <relative-size> | <length-percentage [0,∞]> | math"
+      },
+      "name": "font-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#propdef-font-size",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.font-size-adjust",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete if the keywords differ, otherwise by computed value type",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword none, or a pair of a metric keyword and a <number>",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "font-size-adjust",
+          "fontSizeAdjust"
+        ],
+        "syntax": "none | [ ex-height | cap-height | ch-width | ic-width | ic-height ]? [ from-font | <number [0,∞]> ]"
+      },
+      "name": "font-size-adjust",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-5/#propdef-font-size-adjust",
+        "profile": "standard",
+        "source": "css:css-fonts-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.font-stretch",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "font-width",
+        "styleDeclaration": [
+          "font-stretch",
+          "fontStretch"
+        ],
+        "syntax": "normal | <percentage [0,∞]> | ultra-condensed | extra-condensed | condensed | semi-condensed | semi-expanded | expanded | extra-expanded | ultra-expanded"
+      },
+      "name": "font-stretch",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#propdef-font-stretch",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.font-style",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type; normal animates as oblique 0deg",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword specified, plus angle in degrees if specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "font-style",
+          "fontStyle"
+        ],
+        "syntax": "normal | italic | left | right | oblique <angle [-90deg,90deg]>?"
+      },
+      "name": "font-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#propdef-font-style",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.font-synthesis",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword(s)",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "weight style small-caps position",
+        "longhands": [
+          "font-synthesis-weight",
+          "font-synthesis-style",
+          "font-synthesis-small-caps"
+        ],
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "font-synthesis",
+          "fontSynthesis"
+        ],
+        "syntax": "none | [ weight || style || small-caps || position]"
+      },
+      "name": "font-synthesis",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#propdef-font-synthesis",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.font-synthesis-position",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "font-synthesis-position",
+          "fontSynthesisPosition"
+        ],
+        "syntax": "auto | none"
+      },
+      "name": "font-synthesis-position",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#propdef-font-synthesis-position",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.font-synthesis-small-caps",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "font-synthesis-small-caps",
+          "fontSynthesisSmallCaps"
+        ],
+        "syntax": "auto | none"
+      },
+      "name": "font-synthesis-small-caps",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#propdef-font-synthesis-small-caps",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.font-synthesis-style",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "font-synthesis-style",
+          "fontSynthesisStyle"
+        ],
+        "syntax": "auto | none | oblique-only"
+      },
+      "name": "font-synthesis-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#propdef-font-synthesis-style",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.font-synthesis-weight",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "font-synthesis-weight",
+          "fontSynthesisWeight"
+        ],
+        "syntax": "auto | none"
+      },
+      "name": "font-synthesis-weight",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#propdef-font-synthesis-weight",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.font-variant",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "longhands": [
+          "font-variant-ligatures",
+          "font-variant-caps",
+          "font-variant-alternates",
+          "font-variant-numeric",
+          "font-variant-east-asian",
+          "font-variant-position",
+          "font-variant-emoji"
+        ],
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "font-variant",
+          "fontVariant"
+        ],
+        "syntax": "normal | none | [ [ <common-lig-values> || <discretionary-lig-values> || <historical-lig-values> || <contextual-alt-values> ] || [ small-caps | all-small-caps | petite-caps | all-petite-caps | unicase | titling-caps ] || [ stylistic(<font-feature-value-name>) || historical-forms || styleset(<font-feature-value-name>#) || character-variant(<font-feature-value-name>#) || swash(<font-feature-value-name>) || ornaments(<font-feature-value-name>) || annotation(<font-feature-value-name>) ] || [ <numeric-figure-values> || <numeric-spacing-values> || <numeric-fraction-values> || ordinal || slashed-zero ] || [ <east-asian-variant-values> || <east-asian-width-values> || ruby ] || [ sub | super ] || [ text | emoji | unicode ] ]"
+      },
+      "name": "font-variant",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#propdef-font-variant",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.font-variant-alternates",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "font-variant-alternates",
+          "fontVariantAlternates"
+        ],
+        "syntax": "normal | [ stylistic(<font-feature-value-name>) || historical-forms || styleset(<font-feature-value-name>#) || character-variant(<font-feature-value-name>#) || swash(<font-feature-value-name>) || ornaments(<font-feature-value-name>) || annotation(<font-feature-value-name>) ]"
+      },
+      "name": "font-variant-alternates",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-alternates",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.font-variant-caps",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "font-variant-caps",
+          "fontVariantCaps"
+        ],
+        "syntax": "normal | small-caps | all-small-caps | petite-caps | all-petite-caps | unicase | titling-caps"
+      },
+      "name": "font-variant-caps",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-caps",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.font-variant-east-asian",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "font-variant-east-asian",
+          "fontVariantEastAsian"
+        ],
+        "syntax": "normal | [ <east-asian-variant-values> || <east-asian-width-values> || ruby ]"
+      },
+      "name": "font-variant-east-asian",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-east-asian",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.font-variant-emoji",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "N/a",
+        "styleDeclaration": [
+          "font-variant-emoji",
+          "fontVariantEmoji"
+        ],
+        "syntax": "normal | text | emoji | unicode"
+      },
+      "name": "font-variant-emoji",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-emoji",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.font-variant-ligatures",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "font-variant-ligatures",
+          "fontVariantLigatures"
+        ],
+        "syntax": "normal | none | [ <common-lig-values> || <discretionary-lig-values> || <historical-lig-values> || <contextual-alt-values> ]"
+      },
+      "name": "font-variant-ligatures",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-ligatures",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.font-variant-numeric",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "font-variant-numeric",
+          "fontVariantNumeric"
+        ],
+        "syntax": "normal | [ <numeric-figure-values> || <numeric-spacing-values> || <numeric-fraction-values> || ordinal || slashed-zero ]"
+      },
+      "name": "font-variant-numeric",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-numeric",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.font-variant-position",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "font-variant-position",
+          "fontVariantPosition"
+        ],
+        "syntax": "normal | sub | super"
+      },
+      "name": "font-variant-position",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#propdef-font-variant-position",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.font-variation-settings",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see prose",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword normal or a list, each item a string paired with a number",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "font-variation-settings",
+          "fontVariationSettings"
+        ],
+        "syntax": "normal | [ <opentype-tag> <number> ]#"
+      },
+      "name": "font-variation-settings",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#propdef-font-variation-settings",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.font-weight",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "a number, see below",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "font-weight",
+          "fontWeight"
+        ],
+        "syntax": "<font-weight-absolute> | bolder | lighter"
+      },
+      "name": "font-weight",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#propdef-font-weight",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.font-width",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "a percentage, see below",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "Not resolved",
+        "styleDeclaration": [
+          "font-width",
+          "fontWidth"
+        ],
+        "syntax": "normal | <percentage [0,∞]> | ultra-condensed | extra-condensed | condensed | semi-condensed | semi-expanded | expanded | extra-expanded | ultra-expanded"
+      },
+      "name": "font-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#propdef-font-width",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.footnote-display",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "block",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "footnote-display",
+          "footnoteDisplay"
+        ],
+        "syntax": "block | inline | compact"
+      },
+      "name": "footnote-display",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gcpm-3/#propdef-footnote-display",
+        "profile": "standard",
+        "source": "css:css-gcpm-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.footnote-policy",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "footnote-policy",
+          "footnotePolicy"
+        ],
+        "syntax": "auto | line | block"
+      },
+      "name": "footnote-policy",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gcpm-3/#propdef-footnote-policy",
+        "profile": "standard",
+        "source": "css:css-gcpm-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.forced-color-adjust",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements and text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "forced-color-adjust",
+          "forcedColorAdjust"
+        ],
+        "syntax": "auto | none | preserve-parent-color"
+      },
+      "name": "forced-color-adjust",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-color-adjust-1/#propdef-forced-color-adjust",
+        "profile": "standard",
+        "source": "css:css-color-adjust-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.frame-sizing",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "replaced elements (but see below for details)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "frame-sizing",
+          "frameSizing"
+        ],
+        "syntax": "auto | content-width | content-height | content-block-size | content-inline-size"
+      },
+      "name": "frame-sizing",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-sizing-4/#propdef-frame-sizing",
+        "profile": "standard",
+        "source": "css:css-sizing-4",
+        "version": "8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/properties/f.json"
+}

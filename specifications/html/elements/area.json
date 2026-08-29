@@ -1,0 +1,353 @@
+{
+  "entries": [
+    {
+      "description": "Hyperlink or dead area on an image map",
+      "domain": "html",
+      "id": "html.elements.area",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; phrasing",
+        "children": "empty",
+        "interface": "HTMLAreaElement",
+        "parents": "phrasing*"
+      },
+      "name": "area",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/image-maps.html#the-area-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <area> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.area.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "area",
+        "interface": "HTMLAreaElement"
+      },
+      "name": "area implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.area",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <area> element activation and default action.",
+      "domain": "html",
+      "id": "html.elements.area.activation-behavior",
+      "kind": "activation-behavior",
+      "metadata": {
+        "element": "area",
+        "interface": "HTMLAreaElement"
+      },
+      "name": "area activation and default action",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.area",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/image-maps.html#the-area-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "alt content attribute on <area>.",
+      "domain": "html",
+      "id": "html.elements.area.attributes.alt",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "area",
+        "interface": "HTMLAreaElement"
+      },
+      "name": "alt",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.area",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/image-maps.html#attr-area-alt",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "coords content attribute on <area>.",
+      "domain": "html",
+      "id": "html.elements.area.attributes.coords",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "area",
+        "interface": "HTMLAreaElement"
+      },
+      "name": "coords",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.area",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/image-maps.html#attr-area-coords",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "download content attribute on <area>.",
+      "domain": "html",
+      "id": "html.elements.area.attributes.download",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "area",
+        "interface": "HTMLAreaElement"
+      },
+      "name": "download",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.area",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/links.html#attr-hyperlink-download",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "href content attribute on <area>.",
+      "domain": "html",
+      "id": "html.elements.area.attributes.href",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "area",
+        "interface": "HTMLAreaElement"
+      },
+      "name": "href",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.area",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/links.html#attr-hyperlink-href",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "ping content attribute on <area>.",
+      "domain": "html",
+      "id": "html.elements.area.attributes.ping",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "area",
+        "interface": "HTMLAreaElement"
+      },
+      "name": "ping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.area",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/links.html#ping",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "referrerpolicy content attribute on <area>.",
+      "domain": "html",
+      "id": "html.elements.area.attributes.referrerpolicy",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "area",
+        "interface": "HTMLAreaElement"
+      },
+      "name": "referrerpolicy",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.area",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/links.html#attr-hyperlink-referrerpolicy",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "rel content attribute on <area>.",
+      "domain": "html",
+      "id": "html.elements.area.attributes.rel",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "area",
+        "interface": "HTMLAreaElement"
+      },
+      "name": "rel",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.area",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/links.html#attr-hyperlink-rel",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "shape content attribute on <area>.",
+      "domain": "html",
+      "id": "html.elements.area.attributes.shape",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "area",
+        "interface": "HTMLAreaElement"
+      },
+      "name": "shape",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.area",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/image-maps.html#attr-area-shape",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "target content attribute on <area>.",
+      "domain": "html",
+      "id": "html.elements.area.attributes.target",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "area",
+        "interface": "HTMLAreaElement"
+      },
+      "name": "target",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.area",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/links.html#attr-hyperlink-target",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <area> element content categories.",
+      "domain": "html",
+      "id": "html.elements.area.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "area",
+        "interface": "HTMLAreaElement"
+      },
+      "name": "area content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.area",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/image-maps.html#the-area-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <area> element content model.",
+      "domain": "html",
+      "id": "html.elements.area.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "area",
+        "interface": "HTMLAreaElement"
+      },
+      "name": "area content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.area",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/image-maps.html#the-area-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <area> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.area.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "area",
+        "interface": "HTMLAreaElement"
+      },
+      "name": "area interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.area",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/image-maps.html#the-area-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/area.json"
+}

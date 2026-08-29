@@ -1,0 +1,427 @@
+{
+  "entries": [
+    {
+      "description": "react public export unstable_useCacheRefresh in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.hooks.react.unstable_usecacherefresh",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "unstable_useCacheRefresh",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.unstable_useCacheRefresh",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export use in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.hooks.react.use",
+      "kind": "hook",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "use",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.use",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export useActionState in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.hooks.react.useactionstate",
+      "kind": "hook",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "useActionState",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.useActionState",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export useCallback in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.hooks.react.usecallback",
+      "kind": "hook",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "useCallback",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.useCallback",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export useContext in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.hooks.react.usecontext",
+      "kind": "hook",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "useContext",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.useContext",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export useDebugValue in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.hooks.react.usedebugvalue",
+      "kind": "hook",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "useDebugValue",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.useDebugValue",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export useDeferredValue in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.hooks.react.usedeferredvalue",
+      "kind": "hook",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "useDeferredValue",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.useDeferredValue",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export useEffect in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.hooks.react.useeffect",
+      "kind": "hook",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "useEffect",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.useEffect",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export useEffectEvent in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.hooks.react.useeffectevent",
+      "kind": "hook",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "useEffectEvent",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.useEffectEvent",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export useId in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.hooks.react.useid",
+      "kind": "hook",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "useId",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.useId",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export useImperativeHandle in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.hooks.react.useimperativehandle",
+      "kind": "hook",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "useImperativeHandle",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.useImperativeHandle",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export useInsertionEffect in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.hooks.react.useinsertioneffect",
+      "kind": "hook",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "useInsertionEffect",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.useInsertionEffect",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export useLayoutEffect in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.hooks.react.uselayouteffect",
+      "kind": "hook",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "useLayoutEffect",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.useLayoutEffect",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export useMemo in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.hooks.react.usememo",
+      "kind": "hook",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "useMemo",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.useMemo",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export useOptimistic in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.hooks.react.useoptimistic",
+      "kind": "hook",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "useOptimistic",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.useOptimistic",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export useReducer in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.hooks.react.usereducer",
+      "kind": "hook",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "useReducer",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.useReducer",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export useRef in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.hooks.react.useref",
+      "kind": "hook",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "useRef",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.useRef",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export useState in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.hooks.react.usestate",
+      "kind": "hook",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "useState",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.useState",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export useSyncExternalStore in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.hooks.react.usesyncexternalstore",
+      "kind": "hook",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "useSyncExternalStore",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.useSyncExternalStore",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export useTransition in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.hooks.react.usetransition",
+      "kind": "hook",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "useTransition",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.useTransition",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "react-19.2/hooks.json"
+}

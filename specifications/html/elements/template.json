@@ -1,0 +1,284 @@
+{
+  "entries": [
+    {
+      "description": "Template",
+      "domain": "html",
+      "id": "html.elements.template",
+      "kind": "element",
+      "metadata": {
+        "categories": "metadata; flow; phrasing; script-supporting",
+        "children": "empty",
+        "interface": "HTMLTemplateElement",
+        "parents": "metadata; phrasing; script-supporting; colgroup*"
+      },
+      "name": "template",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/scripting.html#the-template-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <template> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.template.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "template",
+        "interface": "HTMLTemplateElement"
+      },
+      "name": "template implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.template",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "for content attribute on <template>.",
+      "domain": "html",
+      "id": "html.elements.template.attributes.for",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "template",
+        "interface": "HTMLTemplateElement"
+      },
+      "name": "for",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.template",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/scripting.html#attr-template-for",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "shadowrootclonable content attribute on <template>.",
+      "domain": "html",
+      "id": "html.elements.template.attributes.shadowrootclonable",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "template",
+        "interface": "HTMLTemplateElement"
+      },
+      "name": "shadowrootclonable",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.template",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/scripting.html#attr-template-shadowrootclonable",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "shadowrootcustomelementregistry content attribute on <template>.",
+      "domain": "html",
+      "id": "html.elements.template.attributes.shadowrootcustomelementregistry",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "template",
+        "interface": "HTMLTemplateElement"
+      },
+      "name": "shadowrootcustomelementregistry",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.template",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/scripting.html#attr-template-shadowrootcustomelementregistry",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "shadowrootdelegatesfocus content attribute on <template>.",
+      "domain": "html",
+      "id": "html.elements.template.attributes.shadowrootdelegatesfocus",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "template",
+        "interface": "HTMLTemplateElement"
+      },
+      "name": "shadowrootdelegatesfocus",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.template",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/scripting.html#attr-template-shadowrootdelegatesfocus",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "shadowrootmode content attribute on <template>.",
+      "domain": "html",
+      "id": "html.elements.template.attributes.shadowrootmode",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "template",
+        "interface": "HTMLTemplateElement"
+      },
+      "name": "shadowrootmode",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.template",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/scripting.html#attr-template-shadowrootmode",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "shadowrootserializable content attribute on <template>.",
+      "domain": "html",
+      "id": "html.elements.template.attributes.shadowrootserializable",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "template",
+        "interface": "HTMLTemplateElement"
+      },
+      "name": "shadowrootserializable",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.template",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/scripting.html#attr-template-shadowrootserializable",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "shadowrootslotassignment content attribute on <template>.",
+      "domain": "html",
+      "id": "html.elements.template.attributes.shadowrootslotassignment",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "template",
+        "interface": "HTMLTemplateElement"
+      },
+      "name": "shadowrootslotassignment",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.template",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/scripting.html#attr-template-shadowrootslotassignment",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <template> element content categories.",
+      "domain": "html",
+      "id": "html.elements.template.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "template",
+        "interface": "HTMLTemplateElement"
+      },
+      "name": "template content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.template",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/scripting.html#the-template-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <template> element content model.",
+      "domain": "html",
+      "id": "html.elements.template.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "template",
+        "interface": "HTMLTemplateElement"
+      },
+      "name": "template content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.template",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/scripting.html#the-template-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <template> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.template.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "template",
+        "interface": "HTMLTemplateElement"
+      },
+      "name": "template interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.template",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/scripting.html#the-template-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/template.json"
+}

@@ -1,0 +1,461 @@
+{
+  "entries": [
+    {
+      "description": "dictionary HighlightHitResult from css-highlight-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-highlight-api.dictionaries.highlighthitresult",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "css-highlight-api.idl"
+      },
+      "name": "HighlightHitResult",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-highlight-api.idl#WebIDL:HighlightHitResult",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "HighlightHitResult.highlight Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-highlight-api.dictionaries.highlighthitresult.fields.highlight",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-highlight-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"highlight\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"Highlight\"},\"default\":null,\"required\":false}"
+      },
+      "name": "highlight",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-highlight-api.dictionaries.highlighthitresult",
+      "spec": {
+        "anchor": "webref/idl/css-highlight-api.idl#WebIDL:HighlightHitResult.highlight",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "HighlightHitResult.ranges Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-highlight-api.dictionaries.highlighthitresult.fields.ranges",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-highlight-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"ranges\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"AbstractRange\"}]},\"default\":null,\"required\":false}"
+      },
+      "name": "ranges",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-highlight-api.dictionaries.highlighthitresult",
+      "spec": {
+        "anchor": "webref/idl/css-highlight-api.idl#WebIDL:HighlightHitResult.ranges",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "dictionary HighlightsFromPointOptions from css-highlight-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-highlight-api.dictionaries.highlightsfrompointoptions",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "css-highlight-api.idl"
+      },
+      "name": "HighlightsFromPointOptions",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-highlight-api.idl#WebIDL:HighlightsFromPointOptions",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "HighlightsFromPointOptions.shadowRoots Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-highlight-api.dictionaries.highlightsfrompointoptions.fields.shadowroots",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-highlight-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"shadowRoots\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"ShadowRoot\"}]},\"default\":{\"type\":\"sequence\",\"value\":[]},\"required\":false}"
+      },
+      "name": "shadowRoots",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-highlight-api.dictionaries.highlightsfrompointoptions",
+      "spec": {
+        "anchor": "webref/idl/css-highlight-api.idl#WebIDL:HighlightsFromPointOptions.shadowRoots",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "enum HighlightType from css-highlight-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-highlight-api.enums.highlighttype",
+      "kind": "enum",
+      "metadata": {
+        "idlSource": "css-highlight-api.idl"
+      },
+      "name": "HighlightType",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-highlight-api.idl#WebIDL:HighlightType",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "HighlightType enum value grammar-error.",
+      "domain": "css",
+      "id": "css.cssom.css-highlight-api.enums.highlighttype.values.grammar-error",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "grammar-error"
+      },
+      "name": "grammar-error",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-highlight-api.enums.highlighttype",
+      "spec": {
+        "anchor": "webref/idl/css-highlight-api.idl#WebIDL:HighlightType",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "HighlightType enum value highlight.",
+      "domain": "css",
+      "id": "css.cssom.css-highlight-api.enums.highlighttype.values.highlight",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "highlight"
+      },
+      "name": "highlight",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-highlight-api.enums.highlighttype",
+      "spec": {
+        "anchor": "webref/idl/css-highlight-api.idl#WebIDL:HighlightType",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "HighlightType enum value spelling-error.",
+      "domain": "css",
+      "id": "css.cssom.css-highlight-api.enums.highlighttype.values.spelling-error",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "spelling-error"
+      },
+      "name": "spelling-error",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-highlight-api.enums.highlighttype",
+      "spec": {
+        "anchor": "webref/idl/css-highlight-api.idl#WebIDL:HighlightType",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface Highlight from css-highlight-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-highlight-api.interfaces.highlight",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-highlight-api.idl"
+      },
+      "name": "Highlight",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-highlight-api.idl#WebIDL:Highlight",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "Highlight.priority Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-highlight-api.interfaces.highlight.attributes.priority",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-highlight-api.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"priority\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "priority",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-highlight-api.interfaces.highlight",
+      "spec": {
+        "anchor": "webref/idl/css-highlight-api.idl#WebIDL:Highlight.priority",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "Highlight.type Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-highlight-api.interfaces.highlight.attributes.type",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-highlight-api.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"type\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"HighlightType\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "type",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-highlight-api.interfaces.highlight",
+      "spec": {
+        "anchor": "webref/idl/css-highlight-api.idl#WebIDL:Highlight.type",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "Highlight.constructor Web IDL constructor.",
+      "domain": "css",
+      "id": "css.cssom.css-highlight-api.interfaces.highlight.constructors.constructor",
+      "kind": "constructor",
+      "metadata": {
+        "idlSource": "css-highlight-api.idl",
+        "signature": "{\"type\":\"constructor\",\"arguments\":[{\"type\":\"argument\",\"name\":\"initialRanges\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"AbstractRange\"},\"default\":null,\"optional\":false,\"variadic\":true}],\"extAttrs\":[]}"
+      },
+      "name": "constructor",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-highlight-api.interfaces.highlight",
+      "spec": {
+        "anchor": "webref/idl/css-highlight-api.idl#WebIDL:Highlight.constructor",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "Highlight.setlike-db1a07e4 Web IDL setlike.",
+      "domain": "css",
+      "id": "css.cssom.css-highlight-api.interfaces.highlight.setlike.setlike-db1a07e4",
+      "kind": "setlike",
+      "metadata": {
+        "idlSource": "css-highlight-api.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"setlike\",\"idlType\":[{\"type\":null,\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"AbstractRange\"}],\"arguments\":[],\"extAttrs\":[],\"readonly\":false,\"async\":false}"
+      },
+      "name": "setlike-db1a07e4",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-highlight-api.interfaces.highlight",
+      "spec": {
+        "anchor": "webref/idl/css-highlight-api.idl#WebIDL:Highlight.setlike-db1a07e4",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface HighlightRegistry from css-highlight-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-highlight-api.interfaces.highlightregistry",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-highlight-api.idl"
+      },
+      "name": "HighlightRegistry",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-highlight-api.idl#WebIDL:HighlightRegistry",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface HighlightRegistry from css-highlight-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-highlight-api.interfaces.highlightregistry--2f126036",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "css-highlight-api.idl"
+      },
+      "name": "HighlightRegistry",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-highlight-api.idl#WebIDL:HighlightRegistry",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "HighlightRegistry.highlightsFromPoint Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-highlight-api.interfaces.highlightregistry--2f126036.methods.highlightsfrompoint",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-highlight-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"highlightsFromPoint\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"HighlightHitResult\"}]},\"arguments\":[{\"type\":\"argument\",\"name\":\"x\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"float\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"y\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"float\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"options\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"HighlightsFromPointOptions\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "highlightsFromPoint",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-highlight-api.interfaces.highlightregistry--2f126036",
+      "spec": {
+        "anchor": "webref/idl/css-highlight-api.idl#WebIDL:HighlightRegistry.highlightsFromPoint",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "HighlightRegistry.maplike-b66c740a Web IDL maplike.",
+      "domain": "css",
+      "id": "css.cssom.css-highlight-api.interfaces.highlightregistry.maplike.maplike-b66c740a",
+      "kind": "maplike",
+      "metadata": {
+        "idlSource": "css-highlight-api.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"maplike\",\"idlType\":[{\"type\":null,\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},{\"type\":null,\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"Highlight\"}],\"arguments\":[],\"extAttrs\":[],\"readonly\":false,\"async\":false}"
+      },
+      "name": "maplike-b66c740a",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-highlight-api.interfaces.highlightregistry",
+      "spec": {
+        "anchor": "webref/idl/css-highlight-api.idl#WebIDL:HighlightRegistry.maplike-b66c740a",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "namespace CSS from css-highlight-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-highlight-api.namespaces.css",
+      "kind": "namespace",
+      "metadata": {
+        "idlSource": "css-highlight-api.idl"
+      },
+      "name": "CSS",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-highlight-api.idl#WebIDL:CSS",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSS.highlights Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-highlight-api.namespaces.css.attributes.highlights",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-highlight-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"highlights\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"HighlightRegistry\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "highlights",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-highlight-api.namespaces.css",
+      "spec": {
+        "anchor": "webref/idl/css-highlight-api.idl#WebIDL:CSS.highlights",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-highlight-api.json"
+}

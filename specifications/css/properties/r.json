@@ -1,0 +1,1482 @@
+{
+  "entries": [
+    {
+      "domain": "css",
+      "id": "css.properties.r",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "‘circle’ element",
+        "computedValue": "an absolute length or percentage",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "media": "visual",
+        "percentages": "refer to the normalized diagonal of the current SVG viewport (see Units)",
+        "styleDeclaration": [
+          "r"
+        ],
+        "syntax": "<length-percentage>"
+      },
+      "name": "r",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/geometry.html#RProperty",
+        "profile": "standard",
+        "source": "css:svgwg",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.reading-flow",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "block, flex and grid containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "reading-flow",
+          "readingFlow"
+        ],
+        "syntax": "normal | source-order | flex-visual | flex-flow | grid-rows | grid-columns | grid-order"
+      },
+      "name": "reading-flow",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-display-4/#propdef-reading-flow",
+        "profile": "standard",
+        "source": "css:css-display-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.reading-order",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "Direct block-level, grid item, or flex item children of a reading flow container.",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified integer",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "reading-order",
+          "readingOrder"
+        ],
+        "syntax": "<integer>"
+      },
+      "name": "reading-order",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-display-4/#propdef-reading-order",
+        "profile": "standard",
+        "source": "css:css-display-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.region-fragment",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "CSS Regions",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "region-fragment",
+          "regionFragment"
+        ],
+        "syntax": "auto | break"
+      },
+      "name": "region-fragment",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-regions-1/#propdef-region-fragment",
+        "profile": "standard",
+        "source": "css:css-regions-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.resize",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "elements that are scroll containers and optionally replaced elements such as images, videos, and iframes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "resize"
+        ],
+        "syntax": "none | both | horizontal | vertical | block | inline"
+      },
+      "name": "resize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-ui-4/#propdef-resize",
+        "profile": "standard",
+        "source": "css:css-ui-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.rest",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "see individual properties",
+        "longhands": [
+          "rest-before",
+          "rest-after"
+        ],
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "rest"
+        ],
+        "syntax": "<'rest-before'> <'rest-after'>?"
+      },
+      "name": "rest",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-speech-1/#propdef-rest",
+        "profile": "standard",
+        "source": "css:css-speech-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.rest-after",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "rest-after",
+          "restAfter"
+        ],
+        "syntax": "<time [0s,∞]> | none | x-weak | weak | medium | strong | x-strong"
+      },
+      "name": "rest-after",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-speech-1/#propdef-rest-after",
+        "profile": "standard",
+        "source": "css:css-speech-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.rest-before",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "rest-before",
+          "restBefore"
+        ],
+        "syntax": "<time [0s,∞]> | none | x-weak | weak | medium | strong | x-strong"
+      },
+      "name": "rest-before",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-speech-1/#propdef-rest-before",
+        "profile": "standard",
+        "source": "css:css-speech-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.right",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "positioned elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword auto or a computed <length-percentage> value",
+        "extended": [
+          "https://drafts.csswg.org/css-anchor-position-1/"
+        ],
+        "inherited": "no",
+        "initial": "auto",
+        "logicalPropertyGroup": "inset",
+        "percentages": "refer to size of containing block; see prose",
+        "styleDeclaration": [
+          "right"
+        ],
+        "syntax": "auto | <length-percentage> | <anchor()> | <anchor-size()>"
+      },
+      "name": "right",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-position-3/#propdef-right",
+        "profile": "standard",
+        "source": "css:css-position-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.rotate",
+      "kind": "property",
+      "metadata": {
+        "animationType": "as SLERP, but see below for none",
+        "appliesTo": "transformable elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword none, or an <angle> with an axis consisting of a list of three <number>s",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "rotate"
+        ],
+        "syntax": "none | <angle> | [ x | y | z | <number>{3} ] && <angle>"
+      },
+      "name": "rotate",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-transforms-2/#propdef-rotate",
+        "profile": "standard",
+        "source": "css:css-transforms-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.row-gap",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "multi-column containers, flex containers, grid containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword, else a computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "see § 2.3 Percentages In gap Properties",
+        "styleDeclaration": [
+          "row-gap",
+          "rowGap"
+        ],
+        "syntax": "normal | <length-percentage [0,∞]> | <line-width>"
+      },
+      "name": "row-gap",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-row-gap",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.row-rule",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "row-rule-width",
+          "row-rule-style",
+          "row-rule-color"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "row-rule",
+          "rowRule"
+        ],
+        "syntax": "<gap-rule-list> | <gap-auto-rule-list>"
+      },
+      "name": "row-rule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-row-rule",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.row-rule-break",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "grid containers, flex containers, multicol containers, and grid lanes containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "row-rule-break",
+          "rowRuleBreak"
+        ],
+        "syntax": "none | normal | intersection"
+      },
+      "name": "row-rule-break",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-break",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.row-rule-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "repeatable list, see § 4.7 Interpolation of list values.",
+        "appliesTo": "grid containers, flex containers, multicol containers, and grid lanes containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "currentcolor",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "row-rule-color",
+          "rowRuleColor"
+        ],
+        "syntax": "<line-color-list> | <auto-line-color-list>"
+      },
+      "name": "row-rule-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-color",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.row-rule-inset",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "Same as column-rule-inset-cap, column-rule-inset-junction, row-rule-inset-cap, and row-rule-inset-junction",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "row-rule-inset-cap-start",
+          "row-rule-inset-cap-end",
+          "row-rule-inset-junction-start",
+          "row-rule-inset-junction-end"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "row-rule-inset",
+          "rowRuleInset"
+        ],
+        "syntax": "<'column-rule-inset-cap'> [ / <'column-rule-inset-junction'> ]?"
+      },
+      "name": "row-rule-inset",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-inset",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.row-rule-inset-cap",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "Same as column-rule-inset-cap-start, column-rule-inset-cap-end, column-rule-inset-junction-start, column-rule-inset-junction-end, row-rule-inset-cap-start, row-rule-inset-cap-end, row-rule-inset-junction-start, and row-rule-inset-junction-end",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "row-rule-inset-cap-start",
+          "row-rule-inset-cap-end"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "row-rule-inset-cap",
+          "rowRuleInsetCap"
+        ],
+        "syntax": "<inset-value> <inset-value>?"
+      },
+      "name": "row-rule-inset-cap",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-inset-cap",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.row-rule-inset-cap-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "grid containers, flex containers, multicol containers, and grid lanes containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "percentages": "refer to the crossing gap width",
+        "styleDeclaration": [
+          "row-rule-inset-cap-end",
+          "rowRuleInsetCapEnd"
+        ],
+        "syntax": "<inset-value>"
+      },
+      "name": "row-rule-inset-cap-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-inset-cap-end",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.row-rule-inset-cap-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "grid containers, flex containers, multicol containers, and grid lanes containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "percentages": "refer to the crossing gap width",
+        "styleDeclaration": [
+          "row-rule-inset-cap-start",
+          "rowRuleInsetCapStart"
+        ],
+        "syntax": "<inset-value>"
+      },
+      "name": "row-rule-inset-cap-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-inset-cap-start",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.row-rule-inset-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "Same as column-rule-inset-cap-start, column-rule-inset-junction-start, column-rule-inset-cap-end, column-rule-inset-junction-end, row-rule-inset-cap-start, row-rule-inset-junction-start, row-rule-inset-cap-end, and row-rule-inset-junction-end",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "row-rule-inset-cap-end",
+          "row-rule-inset-junction-end"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "row-rule-inset-end",
+          "rowRuleInsetEnd"
+        ],
+        "syntax": "<inset-value>"
+      },
+      "name": "row-rule-inset-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-inset-end",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.row-rule-inset-junction",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "Same as column-rule-inset-cap-start, column-rule-inset-cap-end, column-rule-inset-junction-start, column-rule-inset-junction-end, row-rule-inset-cap-start, row-rule-inset-cap-end, row-rule-inset-junction-start, and row-rule-inset-junction-end",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "row-rule-inset-junction-start",
+          "row-rule-inset-junction-end"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "row-rule-inset-junction",
+          "rowRuleInsetJunction"
+        ],
+        "syntax": "<inset-value> <inset-value>?"
+      },
+      "name": "row-rule-inset-junction",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-inset-junction",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.row-rule-inset-junction-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "grid containers, flex containers, multicol containers, and grid lanes containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "percentages": "refer to the crossing gap width",
+        "styleDeclaration": [
+          "row-rule-inset-junction-end",
+          "rowRuleInsetJunctionEnd"
+        ],
+        "syntax": "<inset-value>"
+      },
+      "name": "row-rule-inset-junction-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-inset-junction-end",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.row-rule-inset-junction-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "grid containers, flex containers, multicol containers, and grid lanes containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "percentages": "refer to the crossing gap width",
+        "styleDeclaration": [
+          "row-rule-inset-junction-start",
+          "rowRuleInsetJunctionStart"
+        ],
+        "syntax": "<inset-value>"
+      },
+      "name": "row-rule-inset-junction-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-inset-junction-start",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.row-rule-inset-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "Same as column-rule-inset-cap-start, column-rule-inset-junction-start, column-rule-inset-cap-end, column-rule-inset-junction-end, row-rule-inset-cap-start, row-rule-inset-junction-start, row-rule-inset-cap-end, and row-rule-inset-junction-end",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "row-rule-inset-cap-start",
+          "row-rule-inset-junction-start"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "row-rule-inset-start",
+          "rowRuleInsetStart"
+        ],
+        "syntax": "<inset-value>"
+      },
+      "name": "row-rule-inset-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-inset-start",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.row-rule-style",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "grid containers, flex containers, multicol containers, and grid lanes containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "row-rule-style",
+          "rowRuleStyle"
+        ],
+        "syntax": "<line-style-list> | <auto-line-style-list>"
+      },
+      "name": "row-rule-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-style",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.row-rule-visibility-items",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "grid containers and multicol containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "row-rule-visibility-items",
+          "rowRuleVisibilityItems"
+        ],
+        "syntax": "all | around | between | normal"
+      },
+      "name": "row-rule-visibility-items",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-visibility-items",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.row-rule-width",
+      "kind": "property",
+      "metadata": {
+        "animationType": "repeatable list, see § 4.7 Interpolation of list values.",
+        "appliesTo": "grid containers, flex containers, multicol containers, and grid lanes containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list of absolute lengths, snapped as a border width",
+        "extended": [],
+        "inherited": "no",
+        "initial": "medium",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "row-rule-width",
+          "rowRuleWidth"
+        ],
+        "syntax": "<line-width-list> | <auto-line-width-list>"
+      },
+      "name": "row-rule-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-row-rule-width",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.ruby-align",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "ruby bases, ruby annotations, ruby base containers, ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "space-around",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "ruby-align",
+          "rubyAlign"
+        ],
+        "syntax": "start | center | space-between | space-around"
+      },
+      "name": "ruby-align",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-ruby-1/#propdef-ruby-align",
+        "profile": "standard",
+        "source": "css:css-ruby-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.ruby-merge",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "interlinear ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "separate",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "ruby-merge",
+          "rubyMerge"
+        ],
+        "syntax": "separate | merge | auto"
+      },
+      "name": "ruby-merge",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-ruby-1/#propdef-ruby-merge",
+        "profile": "standard",
+        "source": "css:css-ruby-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.ruby-overhang",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "ruby-overhang",
+          "rubyOverhang"
+        ],
+        "syntax": "auto | spaces"
+      },
+      "name": "ruby-overhang",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-ruby-1/#propdef-ruby-overhang",
+        "profile": "standard",
+        "source": "css:css-ruby-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.ruby-position",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "alternate",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "ruby-position",
+          "rubyPosition"
+        ],
+        "syntax": "[ alternate || [ over | under ] ] | inter-character"
+      },
+      "name": "ruby-position",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-ruby-1/#propdef-ruby-position",
+        "profile": "standard",
+        "source": "css:css-ruby-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.rule",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "Same as column-rule and row-rule",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "see individual properties",
+        "longhands": [
+          "column-rule",
+          "row-rule"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "rule"
+        ],
+        "syntax": "<'column-rule'>"
+      },
+      "name": "rule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-rule",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.rule-break",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "Same as column-rule-break and row-rule-break",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "column-rule-break",
+          "row-rule-break"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "rule-break",
+          "ruleBreak"
+        ],
+        "syntax": "<'column-rule-break'>"
+      },
+      "name": "rule-break",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-rule-break",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.rule-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "Same as column-rule-color and row-rule-color",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "see individual properties",
+        "longhands": [
+          "column-rule-color",
+          "row-rule-color"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "rule-color",
+          "ruleColor"
+        ],
+        "syntax": "<'column-rule-color'>"
+      },
+      "name": "rule-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-rule-color",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.rule-inset",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "Same as column-rule-inset and row-rule-inset",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "column-rule-inset",
+          "row-rule-inset"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "rule-inset",
+          "ruleInset"
+        ],
+        "syntax": "<'column-rule-inset'>"
+      },
+      "name": "rule-inset",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-rule-inset",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.rule-inset-cap",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "Same as column-rule-inset-cap and row-rule-inset-cap",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "column-rule-inset-cap"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "rule-inset-cap",
+          "ruleInsetCap"
+        ],
+        "syntax": "<'column-rule-inset-cap'>"
+      },
+      "name": "rule-inset-cap",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-rule-inset-cap",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.rule-inset-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "Same as column-rule-inset-end and row-rule-inset-end",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "column-rule-inset-end",
+          "row-rule-inset-end"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "rule-inset-end",
+          "ruleInsetEnd"
+        ],
+        "syntax": "<'column-rule-inset-end'>"
+      },
+      "name": "rule-inset-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-rule-inset-end",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.rule-inset-junction",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "Same as column-rule-inset-junction and row-rule-inset-junction",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "column-rule-inset-junction"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "rule-inset-junction",
+          "ruleInsetJunction"
+        ],
+        "syntax": "<'column-rule-inset-junction'>"
+      },
+      "name": "rule-inset-junction",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-rule-inset-junction",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.rule-inset-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "Same as column-rule-inset-start and row-rule-inset-start",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "column-rule-inset-start",
+          "row-rule-inset-start"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "rule-inset-start",
+          "ruleInsetStart"
+        ],
+        "syntax": "<'column-rule-inset-start'>"
+      },
+      "name": "rule-inset-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-rule-inset-start",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.rule-overlap",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "grid containers, flex containers, and grid lanes containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "row-over-column",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "rule-overlap",
+          "ruleOverlap"
+        ],
+        "syntax": "row-over-column | column-over-row"
+      },
+      "name": "rule-overlap",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-rule-overlap",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.rule-style",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "Same as column-rule-style and row-rule-style",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "see individual properties",
+        "longhands": [
+          "column-rule-style",
+          "row-rule-style"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "rule-style",
+          "ruleStyle"
+        ],
+        "syntax": "<'column-rule-style'>"
+      },
+      "name": "rule-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-rule-style",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.rule-visibility-items",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "Same as column-rule-visibility-items and row-rule-visibility-items",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "column-rule-visibility-items"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "rule-visibility-items",
+          "ruleVisibilityItems"
+        ],
+        "syntax": "<'column-rule-visibility-items'>"
+      },
+      "name": "rule-visibility-items",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-rule-visibility-items",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.rule-width",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "Same as column-rule-width and row-rule-width",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "see individual properties",
+        "longhands": [
+          "column-rule-width",
+          "row-rule-width"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "rule-width",
+          "ruleWidth"
+        ],
+        "syntax": "<'column-rule-width'>"
+      },
+      "name": "rule-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-rule-width",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.rx",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "‘ellipse’, ‘rect’ elements",
+        "computedValue": "an absolute length or percentage",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "media": "visual",
+        "percentages": "refer to the width of the current SVG viewport (see Units)",
+        "styleDeclaration": [
+          "rx"
+        ],
+        "syntax": "<length-percentage> | auto"
+      },
+      "name": "rx",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/geometry.html#RxProperty",
+        "profile": "standard",
+        "source": "css:svgwg",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.ry",
+      "kind": "property",
+      "metadata": {
+        "animatableType": "by computed value",
+        "appliesTo": "‘ellipse’, ‘rect’",
+        "computedValue": "an absolute length or percentage",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "media": "visual",
+        "percentages": "refer to the height of the current SVG viewport (see Units)",
+        "styleDeclaration": [
+          "ry"
+        ],
+        "syntax": "<length-percentage> | auto"
+      },
+      "name": "ry",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/geometry.html#RyProperty",
+        "profile": "standard",
+        "source": "css:svgwg",
+        "version": "8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/properties/r.json"
+}

@@ -1,0 +1,169 @@
+{
+  "entries": [
+    {
+      "description": "Dialog box or window",
+      "domain": "html",
+      "id": "html.elements.dialog",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow",
+        "children": "flow",
+        "interface": "HTMLDialogElement",
+        "parents": "flow"
+      },
+      "name": "dialog",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <dialog> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.dialog.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "dialog",
+        "interface": "HTMLDialogElement"
+      },
+      "name": "dialog implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.dialog",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <dialog> element activation and default action.",
+      "domain": "html",
+      "id": "html.elements.dialog.activation-behavior",
+      "kind": "activation-behavior",
+      "metadata": {
+        "element": "dialog",
+        "interface": "HTMLDialogElement"
+      },
+      "name": "dialog activation and default action",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.dialog",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "open content attribute on <dialog>.",
+      "domain": "html",
+      "id": "html.elements.dialog.attributes.open",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "dialog",
+        "interface": "HTMLDialogElement"
+      },
+      "name": "open",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.dialog",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/interactive-elements.html#attr-dialog-open",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <dialog> element content categories.",
+      "domain": "html",
+      "id": "html.elements.dialog.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "dialog",
+        "interface": "HTMLDialogElement"
+      },
+      "name": "dialog content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.dialog",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <dialog> element content model.",
+      "domain": "html",
+      "id": "html.elements.dialog.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "dialog",
+        "interface": "HTMLDialogElement"
+      },
+      "name": "dialog content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.dialog",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <dialog> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.dialog.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "dialog",
+        "interface": "HTMLDialogElement"
+      },
+      "name": "dialog interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.dialog",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-dialog-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/dialog.json"
+}

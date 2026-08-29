@@ -1,0 +1,196 @@
+{
+  "entries": [
+    {
+      "description": "react public export act in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.apis.react.act",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "act",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.act",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export cache in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.apis.react.cache",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "cache",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.cache",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export cacheSignal in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.apis.react.cachesignal",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "cacheSignal",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.cacheSignal",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export captureOwnerStack in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.apis.react.captureownerstack",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "captureOwnerStack",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.captureOwnerStack",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export createContext in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.apis.react.createcontext",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "createContext",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.createContext",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export lazy in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.apis.react.lazy",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "lazy",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.lazy",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export memo in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.apis.react.memo",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "memo",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.memo",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export startTransition in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.apis.react.starttransition",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "startTransition",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.startTransition",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export version in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.apis.react.version",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "version",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.version",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "react-19.2/apis.json"
+}

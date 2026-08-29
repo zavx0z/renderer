@@ -1,0 +1,493 @@
+{
+  "entries": [
+    {
+      "description": "Retained WebGPU backend automatic rect instancing capability.",
+      "domain": "webgpu",
+      "id": "webgpu.features.automatic-rect-instancing",
+      "kind": "webgpu-backend",
+      "name": "automatic rect instancing",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "renderer-webgpu-contract#automatic-rect-instancing",
+        "profile": "project-contract",
+        "source": "renderer-webgpu-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Retained WebGPU backend borders capability.",
+      "domain": "webgpu",
+      "id": "webgpu.features.borders",
+      "kind": "webgpu-backend",
+      "name": "borders",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "renderer-webgpu-contract#borders",
+        "profile": "project-contract",
+        "source": "renderer-webgpu-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Retained WebGPU backend cleanup capability.",
+      "domain": "webgpu",
+      "id": "webgpu.features.cleanup",
+      "kind": "webgpu-backend",
+      "name": "cleanup",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "renderer-webgpu-contract#cleanup",
+        "profile": "project-contract",
+        "source": "renderer-webgpu-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Retained WebGPU backend clipping capability.",
+      "domain": "webgpu",
+      "id": "webgpu.features.clipping",
+      "kind": "webgpu-backend",
+      "name": "clipping",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "renderer-webgpu-contract#clipping",
+        "profile": "project-contract",
+        "source": "renderer-webgpu-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Retained WebGPU backend colors capability.",
+      "domain": "webgpu",
+      "id": "webgpu.features.colors",
+      "kind": "webgpu-backend",
+      "name": "colors",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "renderer-webgpu-contract#colors",
+        "profile": "project-contract",
+        "source": "renderer-webgpu-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Retained WebGPU backend device pixel evidence capability.",
+      "domain": "webgpu",
+      "id": "webgpu.features.device-pixel-evidence",
+      "kind": "webgpu-backend",
+      "name": "device pixel evidence",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "renderer-webgpu-contract#device-pixel-evidence",
+        "profile": "project-contract",
+        "source": "renderer-webgpu-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Retained WebGPU backend diagnostics capability.",
+      "domain": "webgpu",
+      "id": "webgpu.features.diagnostics",
+      "kind": "webgpu-backend",
+      "name": "diagnostics",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "renderer-webgpu-contract#diagnostics",
+        "profile": "project-contract",
+        "source": "renderer-webgpu-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Retained WebGPU backend document plane capability.",
+      "domain": "webgpu",
+      "id": "webgpu.features.document-plane",
+      "kind": "webgpu-backend",
+      "name": "document plane",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "renderer-webgpu-contract#document-plane",
+        "profile": "project-contract",
+        "source": "renderer-webgpu-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Retained WebGPU backend frame validation capability.",
+      "domain": "webgpu",
+      "id": "webgpu.features.frame-validation",
+      "kind": "webgpu-backend",
+      "name": "frame validation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "renderer-webgpu-contract#frame-validation",
+        "profile": "project-contract",
+        "source": "renderer-webgpu-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Retained WebGPU backend geometry invalidation capability.",
+      "domain": "webgpu",
+      "id": "webgpu.features.geometry-invalidation",
+      "kind": "webgpu-backend",
+      "name": "geometry invalidation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "renderer-webgpu-contract#geometry-invalidation",
+        "profile": "project-contract",
+        "source": "renderer-webgpu-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Retained WebGPU backend image capability.",
+      "domain": "webgpu",
+      "id": "webgpu.features.image",
+      "kind": "webgpu-backend",
+      "name": "image",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "renderer-webgpu-contract#image",
+        "profile": "project-contract",
+        "source": "renderer-webgpu-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Retained WebGPU backend overlap law capability.",
+      "domain": "webgpu",
+      "id": "webgpu.features.overlap-law",
+      "kind": "webgpu-backend",
+      "name": "overlap law",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "renderer-webgpu-contract#overlap-law",
+        "profile": "project-contract",
+        "source": "renderer-webgpu-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Retained WebGPU backend paint order capability.",
+      "domain": "webgpu",
+      "id": "webgpu.features.paint-order",
+      "kind": "webgpu-backend",
+      "name": "paint order",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "renderer-webgpu-contract#paint-order",
+        "profile": "project-contract",
+        "source": "renderer-webgpu-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Retained WebGPU backend partial record uploads capability.",
+      "domain": "webgpu",
+      "id": "webgpu.features.partial-record-uploads",
+      "kind": "webgpu-backend",
+      "name": "partial record uploads",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "renderer-webgpu-contract#partial-record-uploads",
+        "profile": "project-contract",
+        "source": "renderer-webgpu-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Retained WebGPU backend radii capability.",
+      "domain": "webgpu",
+      "id": "webgpu.features.radii",
+      "kind": "webgpu-backend",
+      "name": "radii",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "renderer-webgpu-contract#radii",
+        "profile": "project-contract",
+        "source": "renderer-webgpu-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Retained WebGPU backend rect capability.",
+      "domain": "webgpu",
+      "id": "webgpu.features.rect",
+      "kind": "webgpu-backend",
+      "name": "rect",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "renderer-webgpu-contract#rect",
+        "profile": "project-contract",
+        "source": "renderer-webgpu-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Retained WebGPU backend resource lifetime capability.",
+      "domain": "webgpu",
+      "id": "webgpu.features.resource-lifetime",
+      "kind": "webgpu-backend",
+      "name": "resource lifetime",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "renderer-webgpu-contract#resource-lifetime",
+        "profile": "project-contract",
+        "source": "renderer-webgpu-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Retained WebGPU backend run barriers capability.",
+      "domain": "webgpu",
+      "id": "webgpu.features.run-barriers",
+      "kind": "webgpu-backend",
+      "name": "run barriers",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "renderer-webgpu-contract#run-barriers",
+        "profile": "project-contract",
+        "source": "renderer-webgpu-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Retained WebGPU backend scalar retained path capability.",
+      "domain": "webgpu",
+      "id": "webgpu.features.scalar-retained-path",
+      "kind": "webgpu-backend",
+      "name": "scalar retained path",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "renderer-webgpu-contract#scalar-retained-path",
+        "profile": "project-contract",
+        "source": "renderer-webgpu-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Retained WebGPU backend screen overlay capability.",
+      "domain": "webgpu",
+      "id": "webgpu.features.screen-overlay",
+      "kind": "webgpu-backend",
+      "name": "screen overlay",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "renderer-webgpu-contract#screen-overlay",
+        "profile": "project-contract",
+        "source": "renderer-webgpu-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Retained WebGPU backend shadows capability.",
+      "domain": "webgpu",
+      "id": "webgpu.features.shadows",
+      "kind": "webgpu-backend",
+      "name": "shadows",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "renderer-webgpu-contract#shadows",
+        "profile": "project-contract",
+        "source": "renderer-webgpu-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Retained WebGPU backend stable slots capability.",
+      "domain": "webgpu",
+      "id": "webgpu.features.stable-slots",
+      "kind": "webgpu-backend",
+      "name": "stable slots",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "renderer-webgpu-contract#stable-slots",
+        "profile": "project-contract",
+        "source": "renderer-webgpu-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Retained WebGPU backend text capability.",
+      "domain": "webgpu",
+      "id": "webgpu.features.text",
+      "kind": "webgpu-backend",
+      "name": "text",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "renderer-webgpu-contract#text",
+        "profile": "project-contract",
+        "source": "renderer-webgpu-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Retained WebGPU backend texture readiness capability.",
+      "domain": "webgpu",
+      "id": "webgpu.features.texture-readiness",
+      "kind": "webgpu-backend",
+      "name": "texture readiness",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "renderer-webgpu-contract#texture-readiness",
+        "profile": "project-contract",
+        "source": "renderer-webgpu-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Retained WebGPU backend transforms capability.",
+      "domain": "webgpu",
+      "id": "webgpu.features.transforms",
+      "kind": "webgpu-backend",
+      "name": "transforms",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "renderer-webgpu-contract#transforms",
+        "profile": "project-contract",
+        "source": "renderer-webgpu-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Retained WebGPU backend unsupported combinations capability.",
+      "domain": "webgpu",
+      "id": "webgpu.features.unsupported-combinations",
+      "kind": "webgpu-backend",
+      "name": "unsupported combinations",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "renderer-webgpu-contract#unsupported-combinations",
+        "profile": "project-contract",
+        "source": "renderer-webgpu-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "Retained WebGPU backend vector path capability.",
+      "domain": "webgpu",
+      "id": "webgpu.features.vector-path",
+      "kind": "webgpu-backend",
+      "name": "vector path",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "renderer-webgpu-contract#vector-path",
+        "profile": "project-contract",
+        "source": "renderer-webgpu-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "platform/webgpu-features.json"
+}

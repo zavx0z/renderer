@@ -1,0 +1,169 @@
+{
+  "entries": [
+    {
+      "description": "Caption for a form control",
+      "domain": "html",
+      "id": "html.elements.label",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; phrasing; interactive; palpable",
+        "children": "phrasing*",
+        "interface": "HTMLLabelElement",
+        "parents": "phrasing"
+      },
+      "name": "label",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/forms.html#the-label-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <label> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.label.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "label",
+        "interface": "HTMLLabelElement"
+      },
+      "name": "label implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.label",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <label> element activation and default action.",
+      "domain": "html",
+      "id": "html.elements.label.activation-behavior",
+      "kind": "activation-behavior",
+      "metadata": {
+        "element": "label",
+        "interface": "HTMLLabelElement"
+      },
+      "name": "label activation and default action",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.label",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/forms.html#the-label-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "for content attribute on <label>.",
+      "domain": "html",
+      "id": "html.elements.label.attributes.for",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "label",
+        "interface": "HTMLLabelElement"
+      },
+      "name": "for",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.label",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/forms.html#attr-label-for",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <label> element content categories.",
+      "domain": "html",
+      "id": "html.elements.label.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "label",
+        "interface": "HTMLLabelElement"
+      },
+      "name": "label content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.label",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/forms.html#the-label-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <label> element content model.",
+      "domain": "html",
+      "id": "html.elements.label.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "label",
+        "interface": "HTMLLabelElement"
+      },
+      "name": "label content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.label",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/forms.html#the-label-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <label> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.label.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "label",
+        "interface": "HTMLLabelElement"
+      },
+      "name": "label interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.label",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/forms.html#the-label-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/label.json"
+}

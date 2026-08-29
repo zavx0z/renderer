@@ -1,0 +1,331 @@
+{
+  "entries": [
+    {
+      "description": "Array child reconciliation.",
+      "domain": "tsx",
+      "id": "tsx.tagged-html.arrays",
+      "kind": "tagged-html",
+      "name": "arrays",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#arrays",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Static and dynamic attributes.",
+      "domain": "tsx",
+      "id": "tsx.tagged-html.attributes",
+      "kind": "tagged-html",
+      "name": "attributes",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#attributes",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Boolean, nullish, and removal semantics.",
+      "domain": "tsx",
+      "id": "tsx.tagged-html.boolean-remove-semantics",
+      "kind": "tagged-html",
+      "name": "boolean remove semantics",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#boolean-remove-semantics",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "HTML comments.",
+      "domain": "tsx",
+      "id": "tsx.tagged-html.comments",
+      "kind": "tagged-html",
+      "name": "comments",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#comments",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Listener and mounted region disposal.",
+      "domain": "tsx",
+      "id": "tsx.tagged-html.disposal",
+      "kind": "tagged-html",
+      "name": "disposal",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#disposal",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Doctype and declaration parsing.",
+      "domain": "tsx",
+      "id": "tsx.tagged-html.doctypes",
+      "kind": "tagged-html",
+      "name": "doctypes",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#doctypes",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Dynamic tag names.",
+      "domain": "tsx",
+      "id": "tsx.tagged-html.dynamic-tags",
+      "kind": "tagged-html",
+      "name": "dynamic tags",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#dynamic-tags",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Dynamic primitive and object values.",
+      "domain": "tsx",
+      "id": "tsx.tagged-html.dynamic-values",
+      "kind": "tagged-html",
+      "name": "dynamic values",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#dynamic-values",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Dynamic event listener binding and disposal.",
+      "domain": "tsx",
+      "id": "tsx.tagged-html.events",
+      "kind": "tagged-html",
+      "name": "events",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#events",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Failed update rollback without partial DOM mutation.",
+      "domain": "tsx",
+      "id": "tsx.tagged-html.failure-rollback",
+      "kind": "tagged-html",
+      "name": "failure rollback",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#failure-rollback",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Keyed child movement and identity.",
+      "domain": "tsx",
+      "id": "tsx.tagged-html.keyed-behavior",
+      "kind": "tagged-html",
+      "name": "keyed behavior",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#keyed-behavior",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Namespace-qualified element construction.",
+      "domain": "tsx",
+      "id": "tsx.tagged-html.namespace-tags",
+      "kind": "tagged-html",
+      "name": "namespace tags",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#namespace-tags",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Nested template identity and bounded replacement.",
+      "domain": "tsx",
+      "id": "tsx.tagged-html.nested-templates",
+      "kind": "tagged-html",
+      "name": "nested templates",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#nested-templates",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Surviving positional child identity.",
+      "domain": "tsx",
+      "id": "tsx.tagged-html.positional-reconciliation",
+      "kind": "tagged-html",
+      "name": "positional reconciliation",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#positional-reconciliation",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "script/style/textarea/title raw-text parsing.",
+      "domain": "tsx",
+      "id": "tsx.tagged-html.raw-text-elements",
+      "kind": "tagged-html",
+      "name": "raw text elements",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#raw-text-elements",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Dynamic strings remain text/attribute data and cannot inject markup.",
+      "domain": "tsx",
+      "id": "tsx.tagged-html.security-injection",
+      "kind": "tagged-html",
+      "name": "security injection",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#security-injection",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Static element names.",
+      "domain": "tsx",
+      "id": "tsx.tagged-html.static-element-names",
+      "kind": "tagged-html",
+      "name": "static element names",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#static-element-names",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "One observable mutation transaction per mount/update/dispose.",
+      "domain": "tsx",
+      "id": "tsx.tagged-html.transaction-boundaries",
+      "kind": "tagged-html",
+      "name": "transaction boundaries",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#transaction-boundaries",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "tsx/tagged-html.json"
+}

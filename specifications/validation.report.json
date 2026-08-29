@@ -1,0 +1,116 @@
+{
+  "brokenEvidencePaths": 0,
+  "brokenOwnerPackageIds": 0,
+  "duplicateCapabilityIds": 0,
+  "generatorVersion": "1.0.0",
+  "inventoryFiles": 214,
+  "mappedEntries": 8687,
+  "missing": 0,
+  "schemaErrors": 0,
+  "schemaVersion": 1,
+  "sourceArtifacts": 75,
+  "specEntries": 8687,
+  "statistics": {
+    "browser": {
+      "implemented": 10,
+      "mappedEntries": 56,
+      "missing": 0,
+      "not-applicable": 0,
+      "partial": 20,
+      "specEntries": 56,
+      "unsupported": 4,
+      "unverified": 22
+    },
+    "css": {
+      "implemented": 0,
+      "mappedEntries": 3032,
+      "missing": 0,
+      "not-applicable": 0,
+      "partial": 171,
+      "specEntries": 3032,
+      "unsupported": 2861,
+      "unverified": 0
+    },
+    "devtools": {
+      "implemented": 13,
+      "mappedEntries": 31,
+      "missing": 0,
+      "not-applicable": 0,
+      "partial": 0,
+      "specEntries": 31,
+      "unsupported": 5,
+      "unverified": 13
+    },
+    "dom": {
+      "implemented": 69,
+      "mappedEntries": 1196,
+      "missing": 0,
+      "not-applicable": 0,
+      "partial": 242,
+      "specEntries": 1196,
+      "unsupported": 713,
+      "unverified": 172
+    },
+    "engine": {
+      "implemented": 12,
+      "mappedEntries": 145,
+      "missing": 0,
+      "not-applicable": 0,
+      "partial": 33,
+      "specEntries": 145,
+      "unsupported": 6,
+      "unverified": 94
+    },
+    "html": {
+      "implemented": 0,
+      "mappedEntries": 3729,
+      "missing": 0,
+      "not-applicable": 787,
+      "partial": 995,
+      "specEntries": 3729,
+      "unsupported": 1947,
+      "unverified": 0
+    },
+    "react": {
+      "implemented": 28,
+      "mappedEntries": 217,
+      "missing": 0,
+      "not-applicable": 35,
+      "partial": 50,
+      "specEntries": 217,
+      "unsupported": 70,
+      "unverified": 34
+    },
+    "renderer": {
+      "implemented": 2,
+      "mappedEntries": 92,
+      "missing": 0,
+      "not-applicable": 0,
+      "partial": 41,
+      "specEntries": 92,
+      "unsupported": 4,
+      "unverified": 45
+    },
+    "tsx": {
+      "implemented": 66,
+      "mappedEntries": 152,
+      "missing": 0,
+      "not-applicable": 0,
+      "partial": 22,
+      "specEntries": 152,
+      "unsupported": 28,
+      "unverified": 36
+    },
+    "webgpu": {
+      "implemented": 18,
+      "mappedEntries": 37,
+      "missing": 0,
+      "not-applicable": 0,
+      "partial": 11,
+      "specEntries": 37,
+      "unsupported": 1,
+      "unverified": 7
+    }
+  },
+  "unknownSupportIds": 0
+}

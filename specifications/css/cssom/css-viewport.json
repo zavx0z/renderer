@@ -1,0 +1,104 @@
+{
+  "entries": [
+    {
+      "description": "interface Viewport from css-viewport.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-viewport.interfaces.viewport",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-viewport.idl"
+      },
+      "name": "Viewport",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-viewport.idl#WebIDL:Viewport",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "Viewport.segments Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-viewport.interfaces.viewport.attributes.segments",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-viewport.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"segments\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"FrozenArray\",\"nullable\":true,\"union\":false,\"idlType\":[{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMRect\"}]},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "segments",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-viewport.interfaces.viewport",
+      "spec": {
+        "anchor": "webref/idl/css-viewport.idl#WebIDL:Viewport.segments",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface Window from css-viewport.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-viewport.interfaces.window",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "css-viewport.idl"
+      },
+      "name": "Window",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-viewport.idl#WebIDL:Window",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "Window.viewport Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-viewport.interfaces.window.attributes.viewport",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SameObject",
+          "Replaceable"
+        ],
+        "idlSource": "css-viewport.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"viewport\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"Viewport\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SameObject\",\"rhs\":null,\"arguments\":[]},{\"type\":\"extended-attribute\",\"name\":\"Replaceable\",\"rhs\":null,\"arguments\":[]}],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "viewport",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-viewport.interfaces.window",
+      "spec": {
+        "anchor": "webref/idl/css-viewport.idl#WebIDL:Window.viewport",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-viewport.json"
+}

@@ -1,0 +1,1669 @@
+{
+  "entries": [
+    {
+      "domain": "css",
+      "id": "css.properties.margin",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements except internal table elements, ruby base containers, and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "margin-top",
+          "margin-right",
+          "margin-bottom",
+          "margin-left"
+        ],
+        "percentages": "refer to logical width of containing block",
+        "styleDeclaration": [
+          "margin"
+        ],
+        "syntax": "<'margin-top'>{1,4}"
+      },
+      "name": "margin",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-box-4/#propdef-margin",
+        "profile": "standard",
+        "source": "css:css-box-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.margin-block",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "margin-block-start",
+          "margin-block-end"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "margin-block",
+          "marginBlock"
+        ],
+        "syntax": "<'margin-top'>{1,2}"
+      },
+      "name": "margin-block",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-logical-1/#propdef-margin-block",
+        "profile": "standard",
+        "source": "css:css-logical-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.margin-block-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "Same as margin-top",
+        "canonicalOrder": "per grammar",
+        "computedValue": "Same as corresponding margin-* properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "margin",
+        "percentages": "As for the corresponding physical property",
+        "styleDeclaration": [
+          "margin-block-end",
+          "marginBlockEnd"
+        ],
+        "syntax": "<'margin-top'>"
+      },
+      "name": "margin-block-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-logical-1/#propdef-margin-block-end",
+        "profile": "standard",
+        "source": "css:css-logical-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.margin-block-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "Same as margin-top",
+        "canonicalOrder": "per grammar",
+        "computedValue": "Same as corresponding margin-* properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "margin",
+        "percentages": "As for the corresponding physical property",
+        "styleDeclaration": [
+          "margin-block-start",
+          "marginBlockStart"
+        ],
+        "syntax": "<'margin-top'>"
+      },
+      "name": "margin-block-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-logical-1/#propdef-margin-block-start",
+        "profile": "standard",
+        "source": "css:css-logical-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.margin-bottom",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements except internal table elements, ruby base containers, and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword auto or a computed <length-percentage> value",
+        "extended": [
+          "https://drafts.csswg.org/css-anchor-position-1/"
+        ],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "margin",
+        "percentages": "refer to logical width of containing block",
+        "styleDeclaration": [
+          "margin-bottom",
+          "marginBottom"
+        ],
+        "syntax": "<length-percentage> | auto | <anchor-size()>"
+      },
+      "name": "margin-bottom",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-box-4/#propdef-margin-bottom",
+        "profile": "standard",
+        "source": "css:css-box-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.margin-break",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "margin-break",
+          "marginBreak"
+        ],
+        "syntax": "auto | keep | discard"
+      },
+      "name": "margin-break",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-break-4/#propdef-margin-break",
+        "profile": "standard",
+        "source": "css:css-break-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.margin-inline",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "margin-inline-start",
+          "margin-inline-end"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "margin-inline",
+          "marginInline"
+        ],
+        "syntax": "<'margin-top'>{1,2}"
+      },
+      "name": "margin-inline",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-logical-1/#propdef-margin-inline",
+        "profile": "standard",
+        "source": "css:css-logical-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.margin-inline-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "Same as margin-top",
+        "canonicalOrder": "per grammar",
+        "computedValue": "Same as corresponding margin-* properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "margin",
+        "percentages": "As for the corresponding physical property",
+        "styleDeclaration": [
+          "margin-inline-end",
+          "marginInlineEnd"
+        ],
+        "syntax": "<'margin-top'>"
+      },
+      "name": "margin-inline-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-logical-1/#propdef-margin-inline-end",
+        "profile": "standard",
+        "source": "css:css-logical-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.margin-inline-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "Same as margin-top",
+        "canonicalOrder": "per grammar",
+        "computedValue": "Same as corresponding margin-* properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "margin",
+        "percentages": "As for the corresponding physical property",
+        "styleDeclaration": [
+          "margin-inline-start",
+          "marginInlineStart"
+        ],
+        "syntax": "<'margin-top'>"
+      },
+      "name": "margin-inline-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-logical-1/#propdef-margin-inline-start",
+        "profile": "standard",
+        "source": "css:css-logical-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.margin-left",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements except internal table elements, ruby base containers, and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword auto or a computed <length-percentage> value",
+        "extended": [
+          "https://drafts.csswg.org/css-anchor-position-1/"
+        ],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "margin",
+        "percentages": "refer to logical width of containing block",
+        "styleDeclaration": [
+          "margin-left",
+          "marginLeft"
+        ],
+        "syntax": "<length-percentage> | auto | <anchor-size()>"
+      },
+      "name": "margin-left",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-box-4/#propdef-margin-left",
+        "profile": "standard",
+        "source": "css:css-box-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.margin-right",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements except internal table elements, ruby base containers, and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword auto or a computed <length-percentage> value",
+        "extended": [
+          "https://drafts.csswg.org/css-anchor-position-1/"
+        ],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "margin",
+        "percentages": "refer to logical width of containing block",
+        "styleDeclaration": [
+          "margin-right",
+          "marginRight"
+        ],
+        "syntax": "<length-percentage> | auto | <anchor-size()>"
+      },
+      "name": "margin-right",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-box-4/#propdef-margin-right",
+        "profile": "standard",
+        "source": "css:css-box-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.margin-top",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements except internal table elements, ruby base containers, and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword auto or a computed <length-percentage> value",
+        "extended": [
+          "https://drafts.csswg.org/css-anchor-position-1/"
+        ],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "margin",
+        "percentages": "refer to logical width of containing block",
+        "styleDeclaration": [
+          "margin-top",
+          "marginTop"
+        ],
+        "syntax": "<length-percentage> | auto | <anchor-size()>"
+      },
+      "name": "margin-top",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-box-4/#propdef-margin-top",
+        "profile": "standard",
+        "source": "css:css-box-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.margin-trim",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block containers, multi-column containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "a set of zero to two keywords indicating which sides to trim",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "margin-trim",
+          "marginTrim"
+        ],
+        "syntax": "none | block | [ block-start || block-end ]"
+      },
+      "name": "margin-trim",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-box-4/#propdef-margin-trim",
+        "profile": "standard",
+        "source": "css:css-box-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.marker",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "shapes",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "not defined for shorthand properties",
+        "longhands": [
+          "marker-start",
+          "marker-mid",
+          "marker-end"
+        ],
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "marker"
+        ],
+        "syntax": "none | <marker-ref>"
+      },
+      "name": "marker",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/painting.html#MarkerProperty",
+        "profile": "standard",
+        "source": "css:svgwg",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.marker-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "shapes",
+        "computedValue": "as specified, but with <url> values (that are part of a <marker-ref>) made absolute",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "none",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "marker-end",
+          "markerEnd"
+        ],
+        "syntax": "none | <marker-ref>"
+      },
+      "name": "marker-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/painting.html#MarkerEndProperty",
+        "profile": "standard",
+        "source": "css:svgwg",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.marker-mid",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "shapes",
+        "computedValue": "as specified, but with <url> values (that are part of a <marker-ref>) made absolute",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "none",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "marker-mid",
+          "markerMid"
+        ],
+        "syntax": "none | <marker-ref>"
+      },
+      "name": "marker-mid",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/painting.html#MarkerMidProperty",
+        "profile": "standard",
+        "source": "css:svgwg",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.marker-side",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "list items",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "match-self",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "marker-side",
+          "markerSide"
+        ],
+        "syntax": "match-self | match-parent"
+      },
+      "name": "marker-side",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-lists-3/#propdef-marker-side",
+        "profile": "standard",
+        "source": "css:css-lists-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.marker-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "shapes",
+        "computedValue": "as specified, but with <url> values (that are part of a <marker-ref>) made absolute",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "none",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "marker-start",
+          "markerStart"
+        ],
+        "syntax": "none | <marker-ref>"
+      },
+      "name": "marker-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/painting.html#MarkerStartProperty",
+        "profile": "standard",
+        "source": "css:svgwg",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.mask",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "All elements. In SVG, it applies to container elements excluding the defs element, all graphics elements and the use element",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "see individual properties",
+        "longhands": [
+          "mask-image",
+          "mask-position",
+          "mask-size",
+          "mask-repeat",
+          "mask-origin",
+          "mask-clip",
+          "mask-composite",
+          "mask-mode"
+        ],
+        "media": "visual",
+        "percentages": "see individual properties",
+        "resetLonghands": [
+          "mask-border"
+        ],
+        "styleDeclaration": [
+          "mask"
+        ],
+        "syntax": "<mask-layer>#"
+      },
+      "name": "mask",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-masking-1/#propdef-mask",
+        "profile": "standard",
+        "source": "css:css-masking-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.mask-border",
+      "kind": "property",
+      "metadata": {
+        "animationType": "See individual properties",
+        "appliesTo": "See individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "See individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "See individual properties",
+        "longhands": [
+          "mask-border-source",
+          "mask-border-slice",
+          "mask-border-width",
+          "mask-border-outset",
+          "mask-border-repeat",
+          "mask-border-mode"
+        ],
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "mask-border",
+          "maskBorder"
+        ],
+        "syntax": "<'mask-border-source'> || <'mask-border-slice'> [ / <'mask-border-width'>? [ / <'mask-border-outset'> ]? ]? || <'mask-border-repeat'> || <'mask-border-mode'>"
+      },
+      "name": "mask-border",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-masking-1/#propdef-mask-border",
+        "profile": "standard",
+        "source": "css:css-masking-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.mask-border-mode",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "All elements. In SVG, it applies to container elements excluding the defs element, all graphics elements and the use element",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "alpha",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "mask-border-mode",
+          "maskBorderMode"
+        ],
+        "syntax": "luminance | alpha"
+      },
+      "name": "mask-border-mode",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-masking-1/#propdef-mask-border-mode",
+        "profile": "standard",
+        "source": "css:css-masking-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.mask-border-outset",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "All elements. In SVG, it applies to container elements excluding the defs element, all graphics elements and the use element",
+        "canonicalOrder": "per grammar",
+        "computedValue": "all <length>s made absolute, otherwise as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "mask-border-outset",
+          "maskBorderOutset"
+        ],
+        "syntax": "<'border-image-outset'>"
+      },
+      "name": "mask-border-outset",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-masking-1/#propdef-mask-border-outset",
+        "profile": "standard",
+        "source": "css:css-masking-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.mask-border-repeat",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "All elements. In SVG, it applies to container elements excluding the defs element, all graphics elements and the use element",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "stretch",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "mask-border-repeat",
+          "maskBorderRepeat"
+        ],
+        "syntax": "<'border-image-repeat'>"
+      },
+      "name": "mask-border-repeat",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-masking-1/#propdef-mask-border-repeat",
+        "profile": "standard",
+        "source": "css:css-masking-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.mask-border-slice",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "All elements. In SVG, it applies to container elements excluding the defs element, all graphics elements and the use element",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "media": "visual",
+        "percentages": "refer to size of the mask border image",
+        "styleDeclaration": [
+          "mask-border-slice",
+          "maskBorderSlice"
+        ],
+        "syntax": "<'border-image-slice'>"
+      },
+      "name": "mask-border-slice",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-masking-1/#propdef-mask-border-slice",
+        "profile": "standard",
+        "source": "css:css-masking-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.mask-border-source",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "All elements. In SVG, it applies to container elements excluding the defs element, all graphics elements and the use element",
+        "canonicalOrder": "per grammar",
+        "computedValue": "they keyword none or the computed <image>",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "mask-border-source",
+          "maskBorderSource"
+        ],
+        "syntax": "<'border-image-source'>"
+      },
+      "name": "mask-border-source",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-masking-1/#propdef-mask-border-source",
+        "profile": "standard",
+        "source": "css:css-masking-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.mask-border-width",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "All elements. In SVG, it applies to container elements excluding the defs element, all graphics elements and the use element",
+        "canonicalOrder": "per grammar",
+        "computedValue": "all <length>s made absolute, otherwise as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "media": "visual",
+        "percentages": "relative to width/height of the mask border image area",
+        "styleDeclaration": [
+          "mask-border-width",
+          "maskBorderWidth"
+        ],
+        "syntax": "<'border-image-width'>"
+      },
+      "name": "mask-border-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-masking-1/#propdef-mask-border-width",
+        "profile": "standard",
+        "source": "css:css-masking-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.mask-clip",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "All elements. In SVG, it applies to container elements excluding the defs element, all graphics elements and the use element",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item the keyword as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "border-box",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "mask-clip",
+          "maskClip"
+        ],
+        "syntax": "[ <coord-box> | no-clip ]#"
+      },
+      "name": "mask-clip",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-masking-1/#propdef-mask-clip",
+        "profile": "standard",
+        "source": "css:css-masking-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.mask-composite",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "All elements. In SVG, it applies to container elements without the defs element and all graphics elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item the keyword as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "add",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "mask-composite",
+          "maskComposite"
+        ],
+        "syntax": "<compositing-operator>#"
+      },
+      "name": "mask-composite",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-masking-1/#propdef-mask-composite",
+        "profile": "standard",
+        "source": "css:css-masking-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.mask-image",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "All elements. In SVG, it applies to container elements excluding the defs element, all graphics elements and the use element",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item the keyword none, a computed <image>, or a computed <url>",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "mask-image",
+          "maskImage"
+        ],
+        "syntax": "<mask-reference>#"
+      },
+      "name": "mask-image",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-masking-1/#propdef-mask-image",
+        "profile": "standard",
+        "source": "css:css-masking-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.mask-mode",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "All elements. In SVG, it applies to container elements excluding the defs element, all graphics elements and the use element",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item the keyword as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "match-source",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "mask-mode",
+          "maskMode"
+        ],
+        "syntax": "<masking-mode>#"
+      },
+      "name": "mask-mode",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-masking-1/#propdef-mask-mode",
+        "profile": "standard",
+        "source": "css:css-masking-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.mask-origin",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "All elements. In SVG, it applies to container elements excluding the defs element, all graphics elements and the use element",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item the keyword as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "border-box",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "mask-origin",
+          "maskOrigin"
+        ],
+        "syntax": "<coord-box>#"
+      },
+      "name": "mask-origin",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-masking-1/#propdef-mask-origin",
+        "profile": "standard",
+        "source": "css:css-masking-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.mask-position",
+      "kind": "property",
+      "metadata": {
+        "animationType": "repeatable list",
+        "appliesTo": "All elements. In SVG, it applies to container elements excluding the defs element, all graphics elements and the use element",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item consists of two keywords representing the origin and two offsets from that origin, each given as an absolute length (if given a <length>), otherwise as a percentage.",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0% 0%",
+        "media": "visual",
+        "percentages": "refer to size of mask painting area minus size of mask layer image; see text background-position [CSS3BG]",
+        "styleDeclaration": [
+          "mask-position",
+          "maskPosition"
+        ],
+        "syntax": "<position>#"
+      },
+      "name": "mask-position",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-masking-1/#propdef-mask-position",
+        "profile": "standard",
+        "source": "css:css-masking-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.mask-repeat",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "All elements. In SVG, it applies to container elements excluding the defs element, all graphics elements and the use element",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item a pair of keywords, one per dimension",
+        "extended": [],
+        "inherited": "no",
+        "initial": "repeat",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "mask-repeat",
+          "maskRepeat"
+        ],
+        "syntax": "<repeat-style>#"
+      },
+      "name": "mask-repeat",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-masking-1/#propdef-mask-repeat",
+        "profile": "standard",
+        "source": "css:css-masking-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.mask-size",
+      "kind": "property",
+      "metadata": {
+        "animationType": "repeatable list",
+        "appliesTo": "All elements. In SVG, it applies to container elements excluding the defs element, all graphics elements and the use element",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item as specified, but with lengths made absolute",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "mask-size",
+          "maskSize"
+        ],
+        "syntax": "<bg-size>#"
+      },
+      "name": "mask-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-masking-1/#propdef-mask-size",
+        "profile": "standard",
+        "source": "css:css-masking-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.mask-type",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "mask elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "luminance",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "mask-type",
+          "maskType"
+        ],
+        "syntax": "luminance | alpha"
+      },
+      "name": "mask-type",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-masking-1/#propdef-mask-type",
+        "profile": "standard",
+        "source": "css:css-masking-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.math-depth",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "All elements",
+        "canonicalOrder": "n/a",
+        "computedValue": "an integer, see below",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "0",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "math-depth",
+          "mathDepth"
+        ],
+        "syntax": "auto-add | add(<integer>) | <integer>"
+      },
+      "name": "math-depth",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/mathml-core/#propdef-math-depth",
+        "profile": "standard",
+        "source": "css:mathml-core",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.math-shift",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "All elements",
+        "canonicalOrder": "n/a",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "math-shift",
+          "mathShift"
+        ],
+        "syntax": "normal | compact"
+      },
+      "name": "math-shift",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/mathml-core/#propdef-math-shift",
+        "profile": "standard",
+        "source": "css:mathml-core",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.math-style",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "All elements",
+        "canonicalOrder": "n/a",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "math-style",
+          "mathStyle"
+        ],
+        "syntax": "normal | compact"
+      },
+      "name": "math-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/mathml-core/#propdef-math-style",
+        "profile": "standard",
+        "source": "css:mathml-core",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.max-block-size",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "same as height and width",
+        "canonicalOrder": "per grammar",
+        "computedValue": "Same as max-height, max-width",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "logicalPropertyGroup": "max-size",
+        "percentages": "As for the corresponding physical property",
+        "styleDeclaration": [
+          "max-block-size",
+          "maxBlockSize"
+        ],
+        "syntax": "<'max-width'>"
+      },
+      "name": "max-block-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-logical-1/#propdef-max-block-size",
+        "profile": "standard",
+        "source": "css:css-logical-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.max-height",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value, recursing into fit-content()",
+        "appliesTo": "all elements that accept width or height",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified, with <length-percentage> values computed",
+        "extended": [
+          "https://drafts.csswg.org/css-anchor-position-1/",
+          "https://drafts.csswg.org/css-sizing-4/"
+        ],
+        "inherited": "no",
+        "initial": "none",
+        "logicalPropertyGroup": "max-size",
+        "percentages": "relative to width/height of containing block",
+        "styleDeclaration": [
+          "max-height",
+          "maxHeight"
+        ],
+        "syntax": "none | <length-percentage [0,∞]> | min-content | max-content | fit-content(<length-percentage [0,∞]>) | <calc-size()> | <anchor-size()> | stretch | fit-content | contain"
+      },
+      "name": "max-height",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-sizing-3/#propdef-max-height",
+        "profile": "standard",
+        "source": "css:css-sizing-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.max-inline-size",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "same as height and width",
+        "canonicalOrder": "per grammar",
+        "computedValue": "Same as max-height, max-width",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "logicalPropertyGroup": "max-size",
+        "percentages": "As for the corresponding physical property",
+        "styleDeclaration": [
+          "max-inline-size",
+          "maxInlineSize"
+        ],
+        "syntax": "<'max-width'>"
+      },
+      "name": "max-inline-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-logical-1/#propdef-max-inline-size",
+        "profile": "standard",
+        "source": "css:css-logical-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.max-lines",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "block containers which are also either line-clamp containers or fragmentation containers that capture region breaks",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword none or an integer",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "max-lines",
+          "maxLines"
+        ],
+        "syntax": "none | <integer [1,∞]>"
+      },
+      "name": "max-lines",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-4/#propdef-max-lines",
+        "profile": "standard",
+        "source": "css:css-overflow-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.max-width",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value, recursing into fit-content()",
+        "appliesTo": "all elements that accept width or height",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified, with <length-percentage> values computed",
+        "extended": [
+          "https://drafts.csswg.org/css-anchor-position-1/",
+          "https://drafts.csswg.org/css-sizing-4/"
+        ],
+        "inherited": "no",
+        "initial": "none",
+        "logicalPropertyGroup": "max-size",
+        "percentages": "relative to width/height of containing block",
+        "styleDeclaration": [
+          "max-width",
+          "maxWidth"
+        ],
+        "syntax": "none | <length-percentage [0,∞]> | min-content | max-content | fit-content(<length-percentage [0,∞]>) | <calc-size()> | <anchor-size()> | stretch | fit-content | contain"
+      },
+      "name": "max-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-sizing-3/#propdef-max-width",
+        "profile": "standard",
+        "source": "css:css-sizing-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.min-block-size",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "same as height and width",
+        "canonicalOrder": "per grammar",
+        "computedValue": "Same as min-height, min-width",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "min-size",
+        "percentages": "As for the corresponding physical property",
+        "styleDeclaration": [
+          "min-block-size",
+          "minBlockSize"
+        ],
+        "syntax": "<'min-width'>"
+      },
+      "name": "min-block-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-logical-1/#propdef-min-block-size",
+        "profile": "standard",
+        "source": "css:css-logical-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.min-height",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value, recursing into fit-content()",
+        "appliesTo": "all elements that accept width or height",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified, with <length-percentage> values computed",
+        "extended": [
+          "https://drafts.csswg.org/css-anchor-position-1/",
+          "https://drafts.csswg.org/css-sizing-4/"
+        ],
+        "inherited": "no",
+        "initial": "auto",
+        "logicalPropertyGroup": "min-size",
+        "percentages": "relative to width/height of containing block",
+        "styleDeclaration": [
+          "min-height",
+          "minHeight"
+        ],
+        "syntax": "auto | <length-percentage [0,∞]> | min-content | max-content | fit-content(<length-percentage [0,∞]>) | <calc-size()> | <anchor-size()> | stretch | fit-content | contain"
+      },
+      "name": "min-height",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-sizing-3/#propdef-min-height",
+        "profile": "standard",
+        "source": "css:css-sizing-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.min-inline-size",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "same as height and width",
+        "canonicalOrder": "per grammar",
+        "computedValue": "Same as min-height, min-width",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "min-size",
+        "percentages": "As for the corresponding physical property",
+        "styleDeclaration": [
+          "min-inline-size",
+          "minInlineSize"
+        ],
+        "syntax": "<'min-width'>"
+      },
+      "name": "min-inline-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-logical-1/#propdef-min-inline-size",
+        "profile": "standard",
+        "source": "css:css-logical-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.min-intrinsic-sizing",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements except inline boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "legacy",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "min-intrinsic-sizing",
+          "minIntrinsicSizing"
+        ],
+        "syntax": "legacy | zero-if-scroll || zero-if-extrinsic"
+      },
+      "name": "min-intrinsic-sizing",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-sizing-4/#propdef-min-intrinsic-sizing",
+        "profile": "standard",
+        "source": "css:css-sizing-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.min-width",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value, recursing into fit-content()",
+        "appliesTo": "all elements that accept width or height",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified, with <length-percentage> values computed",
+        "extended": [
+          "https://drafts.csswg.org/css-anchor-position-1/",
+          "https://drafts.csswg.org/css-sizing-4/"
+        ],
+        "inherited": "no",
+        "initial": "auto",
+        "logicalPropertyGroup": "min-size",
+        "percentages": "relative to width/height of containing block",
+        "styleDeclaration": [
+          "min-width",
+          "minWidth"
+        ],
+        "syntax": "auto | <length-percentage [0,∞]> | min-content | max-content | fit-content(<length-percentage [0,∞]>) | <calc-size()> | <anchor-size()> | stretch | fit-content | contain"
+      },
+      "name": "min-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-sizing-3/#propdef-min-width",
+        "profile": "standard",
+        "source": "css:css-sizing-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.mix-blend-mode",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "All elements. In SVG, it applies to container elements, graphics elements and graphics referencing elements. [SVG11]",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "mix-blend-mode",
+          "mixBlendMode"
+        ],
+        "syntax": "<blend-mode> | plus-lighter"
+      },
+      "name": "mix-blend-mode",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/compositing-2/#propdef-mix-blend-mode",
+        "profile": "standard",
+        "source": "css:compositing-2",
+        "version": "8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/properties/m.json"
+}

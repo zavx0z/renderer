@@ -1,0 +1,307 @@
+{
+  "entries": [
+    {
+      "description": "dictionary PropertyDefinition from css-properties-values-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-properties-values-api.dictionaries.propertydefinition",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "css-properties-values-api.idl"
+      },
+      "name": "PropertyDefinition",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-properties-values-api.idl#WebIDL:PropertyDefinition",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "PropertyDefinition.inherits Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-properties-values-api.dictionaries.propertydefinition.fields.inherits",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-properties-values-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"inherits\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":true},\"required\":false}"
+      },
+      "name": "inherits",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-properties-values-api.dictionaries.propertydefinition",
+      "spec": {
+        "anchor": "webref/idl/css-properties-values-api.idl#WebIDL:PropertyDefinition.inherits",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "PropertyDefinition.initialValue Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-properties-values-api.dictionaries.propertydefinition.fields.initialvalue",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-properties-values-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"initialValue\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"required\":false}"
+      },
+      "name": "initialValue",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-properties-values-api.dictionaries.propertydefinition",
+      "spec": {
+        "anchor": "webref/idl/css-properties-values-api.idl#WebIDL:PropertyDefinition.initialValue",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "PropertyDefinition.name Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-properties-values-api.dictionaries.propertydefinition.fields.name",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-properties-values-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"name\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"required\":true}"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-properties-values-api.dictionaries.propertydefinition",
+      "spec": {
+        "anchor": "webref/idl/css-properties-values-api.idl#WebIDL:PropertyDefinition.name",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "PropertyDefinition.syntax Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-properties-values-api.dictionaries.propertydefinition.fields.syntax",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-properties-values-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"syntax\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":{\"type\":\"string\",\"value\":\"*\"},\"required\":false}"
+      },
+      "name": "syntax",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-properties-values-api.dictionaries.propertydefinition",
+      "spec": {
+        "anchor": "webref/idl/css-properties-values-api.idl#WebIDL:PropertyDefinition.syntax",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSPropertyRule from css-properties-values-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-properties-values-api.interfaces.csspropertyrule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-properties-values-api.idl",
+        "inheritance": "CSSRule"
+      },
+      "name": "CSSPropertyRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-properties-values-api.idl#WebIDL:CSSPropertyRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPropertyRule.inherits Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-properties-values-api.interfaces.csspropertyrule.attributes.inherits",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-properties-values-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"inherits\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "inherits",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-properties-values-api.interfaces.csspropertyrule",
+      "spec": {
+        "anchor": "webref/idl/css-properties-values-api.idl#WebIDL:CSSPropertyRule.inherits",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPropertyRule.initialValue Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-properties-values-api.interfaces.csspropertyrule.attributes.initialvalue",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-properties-values-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"initialValue\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "initialValue",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-properties-values-api.interfaces.csspropertyrule",
+      "spec": {
+        "anchor": "webref/idl/css-properties-values-api.idl#WebIDL:CSSPropertyRule.initialValue",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPropertyRule.name Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-properties-values-api.interfaces.csspropertyrule.attributes.name",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-properties-values-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"name\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-properties-values-api.interfaces.csspropertyrule",
+      "spec": {
+        "anchor": "webref/idl/css-properties-values-api.idl#WebIDL:CSSPropertyRule.name",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPropertyRule.syntax Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-properties-values-api.interfaces.csspropertyrule.attributes.syntax",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-properties-values-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"syntax\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "syntax",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-properties-values-api.interfaces.csspropertyrule",
+      "spec": {
+        "anchor": "webref/idl/css-properties-values-api.idl#WebIDL:CSSPropertyRule.syntax",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPropertyRule has CSSRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-properties-values-api.interfaces.csspropertyrule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSRule"
+      },
+      "name": "CSSPropertyRule inherits CSSRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-properties-values-api.interfaces.csspropertyrule",
+      "spec": {
+        "anchor": "webref/idl/css-properties-values-api.idl#WebIDL:CSSPropertyRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "namespace CSS from css-properties-values-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-properties-values-api.namespaces.css",
+      "kind": "namespace",
+      "metadata": {
+        "idlSource": "css-properties-values-api.idl"
+      },
+      "name": "CSS",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-properties-values-api.idl#WebIDL:CSS",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSS.registerProperty Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-properties-values-api.namespaces.css.methods.registerproperty",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-properties-values-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"registerProperty\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"definition\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"PropertyDefinition\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "registerProperty",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-properties-values-api.namespaces.css",
+      "spec": {
+        "anchor": "webref/idl/css-properties-values-api.idl#WebIDL:CSS.registerProperty",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-properties-values-api.json"
+}

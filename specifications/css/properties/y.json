@@ -1,0 +1,38 @@
+{
+  "entries": [
+    {
+      "domain": "css",
+      "id": "css.properties.y",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "‘svg’, ‘rect’, ‘image’, ‘foreignObject’ elements",
+        "computedValue": "an absolute length or percentage",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "media": "visual",
+        "percentages": "refer to the height of the current SVG viewport (see Units)",
+        "styleDeclaration": [
+          "y"
+        ],
+        "syntax": "<length-percentage>"
+      },
+      "name": "y",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/geometry.html#YProperty",
+        "profile": "standard",
+        "source": "css:svgwg",
+        "version": "8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/properties/y.json"
+}

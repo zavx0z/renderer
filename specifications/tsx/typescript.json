@@ -1,0 +1,295 @@
+{
+  "entries": [
+    {
+      "description": "Angle-bracket type assertions are rejected in .tsx files.",
+      "domain": "tsx",
+      "id": "tsx.typescript.angle-bracket-assertion-rejection",
+      "kind": "behavior",
+      "name": "angle bracket assertion rejection",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "typescript-jsx#angle-bracket-assertion-rejection",
+        "profile": "reference",
+        "source": "typescript-jsx",
+        "version": "TypeScript 7.0.2"
+      }
+    },
+    {
+      "description": "JSX attributes are checked against intrinsic or component props.",
+      "domain": "tsx",
+      "id": "tsx.typescript.attribute-type-checking",
+      "kind": "behavior",
+      "name": "attribute type checking",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "typescript-jsx#attribute-type-checking",
+        "profile": "reference",
+        "source": "typescript-jsx",
+        "version": "TypeScript 7.0.2"
+      }
+    },
+    {
+      "description": "react-jsx emit imports jsx/jsxs/Fragment from jsx-runtime.",
+      "domain": "tsx",
+      "id": "tsx.typescript.automatic-runtime",
+      "kind": "behavior",
+      "name": "automatic runtime",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "typescript-jsx#automatic-runtime",
+        "profile": "reference",
+        "source": "typescript-jsx",
+        "version": "TypeScript 7.0.2"
+      }
+    },
+    {
+      "description": "JSX children are checked through ElementChildrenAttribute and props.",
+      "domain": "tsx",
+      "id": "tsx.typescript.children-type-checking",
+      "kind": "behavior",
+      "name": "children type checking",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "typescript-jsx#children-type-checking",
+        "profile": "reference",
+        "source": "typescript-jsx",
+        "version": "TypeScript 7.0.2"
+      }
+    },
+    {
+      "description": "Classic JSX emit calls the configured JSX factory.",
+      "domain": "tsx",
+      "id": "tsx.typescript.classic-runtime",
+      "kind": "behavior",
+      "name": "classic runtime",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "typescript-jsx#classic-runtime",
+        "profile": "reference",
+        "source": "typescript-jsx",
+        "version": "TypeScript 7.0.2"
+      }
+    },
+    {
+      "description": "react-jsxdev emit imports jsxDEV/Fragment from jsx-dev-runtime.",
+      "domain": "tsx",
+      "id": "tsx.typescript.development-runtime",
+      "kind": "behavior",
+      "name": "development runtime",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "typescript-jsx#development-runtime",
+        "profile": "reference",
+        "source": "typescript-jsx",
+        "version": "TypeScript 7.0.2"
+      }
+    },
+    {
+      "description": "JavaScript expressions may appear in JSX children.",
+      "domain": "tsx",
+      "id": "tsx.typescript.expression-children",
+      "kind": "behavior",
+      "name": "expression children",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "typescript-jsx#expression-children",
+        "profile": "reference",
+        "source": "typescript-jsx",
+        "version": "TypeScript 7.0.2"
+      }
+    },
+    {
+      "description": "JSX fragment syntax is supported by TypeScript emit modes.",
+      "domain": "tsx",
+      "id": "tsx.typescript.fragments",
+      "kind": "behavior",
+      "name": "fragments",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "typescript-jsx#fragments",
+        "profile": "reference",
+        "source": "typescript-jsx",
+        "version": "TypeScript 7.0.2"
+      }
+    },
+    {
+      "description": "Generic value-based components participate in JSX type inference.",
+      "domain": "tsx",
+      "id": "tsx.typescript.generic-components",
+      "kind": "behavior",
+      "name": "generic components",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "typescript-jsx#generic-components",
+        "profile": "reference",
+        "source": "typescript-jsx",
+        "version": "TypeScript 7.0.2"
+      }
+    },
+    {
+      "description": "Lowercase JSX names resolve through JSX.IntrinsicElements.",
+      "domain": "tsx",
+      "id": "tsx.typescript.intrinsic-elements",
+      "kind": "behavior",
+      "name": "intrinsic elements",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "typescript-jsx#intrinsic-elements",
+        "profile": "reference",
+        "source": "typescript-jsx",
+        "version": "TypeScript 7.0.2"
+      }
+    },
+    {
+      "description": "JSX namespace controls element, attributes, children, and component typing.",
+      "domain": "tsx",
+      "id": "tsx.typescript.jsx-namespace",
+      "kind": "behavior",
+      "name": "jsx namespace",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "typescript-jsx#jsx-namespace",
+        "profile": "reference",
+        "source": "typescript-jsx",
+        "version": "TypeScript 7.0.2"
+      }
+    },
+    {
+      "description": "JSX namespaced element and attribute syntax model.",
+      "domain": "tsx",
+      "id": "tsx.typescript.namespaced-names",
+      "kind": "behavior",
+      "name": "namespaced names",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "typescript-jsx#namespaced-names",
+        "profile": "reference",
+        "source": "typescript-jsx",
+        "version": "TypeScript 7.0.2"
+      }
+    },
+    {
+      "description": "Compiler output can map generated code to authored TSX locations.",
+      "domain": "tsx",
+      "id": "tsx.typescript.source-maps",
+      "kind": "behavior",
+      "name": "source maps",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "typescript-jsx#source-maps",
+        "profile": "reference",
+        "source": "typescript-jsx",
+        "version": "TypeScript 7.0.2"
+      }
+    },
+    {
+      "description": "JSX supports spread attributes in the syntax and typing model.",
+      "domain": "tsx",
+      "id": "tsx.typescript.spread-attributes",
+      "kind": "behavior",
+      "name": "spread attributes",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "typescript-jsx#spread-attributes",
+        "profile": "reference",
+        "source": "typescript-jsx",
+        "version": "TypeScript 7.0.2"
+      }
+    },
+    {
+      "description": ".tsx files accept JSX grammar when the jsx compiler option is enabled.",
+      "domain": "tsx",
+      "id": "tsx.typescript.tsx-file-syntax",
+      "kind": "behavior",
+      "name": "tsx file syntax",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "typescript-jsx#tsx-file-syntax",
+        "profile": "reference",
+        "source": "typescript-jsx",
+        "version": "TypeScript 7.0.2"
+      }
+    },
+    {
+      "description": "Uppercase JSX names resolve as value-based component expressions.",
+      "domain": "tsx",
+      "id": "tsx.typescript.value-elements",
+      "kind": "behavior",
+      "name": "value elements",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "typescript-jsx#value-elements",
+        "profile": "reference",
+        "source": "typescript-jsx",
+        "version": "TypeScript 7.0.2"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "tsx/typescript.json"
+}

@@ -1,0 +1,1131 @@
+{
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "sources": [
+    {
+      "canonicalUrl": "https://github.com/ajv-validator/ajv",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "e396b19907b89b8e53b855668477dbd9d4efd80041f10f638f65df92de9251bf"
+      },
+      "generatorVersion": "1.0.0",
+      "id": "ajv-dist",
+      "integrity": "sha512-KzJwANMzTTR/RERGnkx+bHzmxIfMTPMMv7+cH1d6Lx9UQ7BZyhiieq4hnO5lRuBWOtYTUL8hyWs7RJYI/45Rtg==",
+      "retrieval": {
+        "artifacts": [
+          {
+            "bytes": 258819,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "9ab4f6dd9a653a211d68b7a1d658ff921e923d6d73a7cf9a8dac1dc616d4e63e"
+            },
+            "path": "tooling/ajv2020.cjs",
+            "url": "https://registry.npmjs.org/ajv-dist/-/ajv-dist-8.17.1.tgz"
+          }
+        ],
+        "method": "HTTPS GET npm tarball; verified SRI; extracted listed files"
+      },
+      "title": "Ajv JSON Schema 2020 validator bundle used by audit tooling",
+      "type": "audit-tool",
+      "updatedAt": "2026-08-29T00:38:58.364Z",
+      "version": "8.17.1"
+    },
+    {
+      "canonicalUrl": "https://w3c.github.io/html-aria/",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "930aa8b4c885e0d90484971bfb2f7b7817c96da37b26bcd0b77e93f34bff3184"
+      },
+      "generatorVersion": "1.0.0",
+      "id": "aria-in-html",
+      "retrieval": {
+        "artifacts": [
+          {
+            "bytes": 214211,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "930aa8b4c885e0d90484971bfb2f7b7817c96da37b26bcd0b77e93f34bff3184"
+            },
+            "path": "normative/aria-in-html.html",
+            "url": "https://w3c.github.io/html-aria/"
+          }
+        ],
+        "method": "HTTPS GET"
+      },
+      "title": "ARIA in HTML",
+      "type": "standard",
+      "updatedAt": "2026-08-29T00:38:58.364Z",
+      "version": "snapshot 2026-08-29"
+    },
+    {
+      "canonicalUrl": "https://w3c.github.io/clipboard-apis/",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "6a674b601830d5c1bf1da5c5d1207e93bb9f2ee24e510fddf67dab5e83c55bab"
+      },
+      "generatorVersion": "1.0.0",
+      "id": "clipboard-apis",
+      "retrieval": {
+        "artifacts": [
+          {
+            "bytes": 540823,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "6a674b601830d5c1bf1da5c5d1207e93bb9f2ee24e510fddf67dab5e83c55bab"
+            },
+            "path": "normative/clipboard-apis.html",
+            "url": "https://w3c.github.io/clipboard-apis/"
+          }
+        ],
+        "method": "HTTPS GET"
+      },
+      "title": "W3C Clipboard API and events",
+      "type": "standard",
+      "updatedAt": "2026-08-29T00:38:58.364Z",
+      "version": "snapshot 2026-08-29"
+    },
+    {
+      "canonicalUrl": "https://www.w3.org/TR/2025/NOTE-css-2025-20250918/",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "cb69f0c0754b80c438521def32cf2a6851fa8ac3cc612d2b7bfaaf49afb35f59"
+      },
+      "generatorVersion": "1.0.0",
+      "id": "css-snapshot-2025",
+      "retrieval": {
+        "artifacts": [
+          {
+            "bytes": 463803,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "cb69f0c0754b80c438521def32cf2a6851fa8ac3cc612d2b7bfaaf49afb35f59"
+            },
+            "path": "normative/css-snapshot-2025.html",
+            "url": "https://www.w3.org/TR/2025/NOTE-css-2025-20250918/"
+          }
+        ],
+        "method": "HTTPS GET"
+      },
+      "title": "CSS Snapshot 2025",
+      "type": "standard",
+      "updatedAt": "2026-08-29T00:38:58.364Z",
+      "version": "W3C Group Note 2025-09-18"
+    },
+    {
+      "canonicalUrl": "https://drafts.csswg.org/cssom-view/",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "671fec981f893aa6d9f5e8a0e914ab1553e640d16e4cd139d71b075b630c5367"
+      },
+      "generatorVersion": "1.0.0",
+      "id": "cssom-view",
+      "retrieval": {
+        "artifacts": [
+          {
+            "bytes": 1176831,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "671fec981f893aa6d9f5e8a0e914ab1553e640d16e4cd139d71b075b630c5367"
+            },
+            "path": "normative/cssom-view.html",
+            "url": "https://drafts.csswg.org/cssom-view/"
+          }
+        ],
+        "method": "HTTPS GET"
+      },
+      "title": "CSSOM View Module",
+      "type": "standard",
+      "updatedAt": "2026-08-29T00:38:58.364Z",
+      "version": "snapshot 2026-08-29"
+    },
+    {
+      "canonicalUrl": "https://w3c.github.io/html-aam/",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "a564cfeaed7719d62005d2340097d3b64c0920e38b7b1dde26996493d2333391"
+      },
+      "generatorVersion": "1.0.0",
+      "id": "html-aam",
+      "retrieval": {
+        "artifacts": [
+          {
+            "bytes": 1055151,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "a564cfeaed7719d62005d2340097d3b64c0920e38b7b1dde26996493d2333391"
+            },
+            "path": "normative/html-aam.html",
+            "url": "https://w3c.github.io/html-aam/"
+          }
+        ],
+        "method": "HTTPS GET"
+      },
+      "title": "HTML Accessibility API Mappings",
+      "type": "standard",
+      "updatedAt": "2026-08-29T00:38:58.364Z",
+      "version": "snapshot 2026-08-29"
+    },
+    {
+      "canonicalUrl": "https://w3c.github.io/input-events/",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "b4fa680c5f7bda910795de408fae9ea426cb0ba222e6d47de67da9261b511ab7"
+      },
+      "generatorVersion": "1.0.0",
+      "id": "input-events",
+      "retrieval": {
+        "artifacts": [
+          {
+            "bytes": 61783,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "b4fa680c5f7bda910795de408fae9ea426cb0ba222e6d47de67da9261b511ab7"
+            },
+            "path": "normative/input-events.html",
+            "url": "https://w3c.github.io/input-events/"
+          }
+        ],
+        "method": "HTTPS GET"
+      },
+      "title": "W3C Input Events",
+      "type": "standard",
+      "updatedAt": "2026-08-29T00:38:58.364Z",
+      "version": "snapshot 2026-08-29"
+    },
+    {
+      "canonicalUrl": "https://w3c.github.io/pointerevents/",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "7a16859b4bcc899e95fa8bf3376ed6b7bc8347108791b26d618bc69162cbb25f"
+      },
+      "generatorVersion": "1.0.0",
+      "id": "pointer-events",
+      "retrieval": {
+        "artifacts": [
+          {
+            "bytes": 273594,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "7a16859b4bcc899e95fa8bf3376ed6b7bc8347108791b26d618bc69162cbb25f"
+            },
+            "path": "normative/pointer-events.html",
+            "url": "https://w3c.github.io/pointerevents/"
+          }
+        ],
+        "method": "HTTPS GET"
+      },
+      "title": "W3C Pointer Events",
+      "type": "standard",
+      "updatedAt": "2026-08-29T00:38:58.364Z",
+      "version": "snapshot 2026-08-29"
+    },
+    {
+      "canonicalUrl": "https://github.com/facebook/react/releases/tag/v19.2.0",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "4de5ae8fd4773b2356f95a22e58cb154a161c35376aef7c006490fb964556d66"
+      },
+      "generatorVersion": "1.0.0",
+      "id": "react-19.2",
+      "integrity": "sha512-tmbWg6W31tQLeB5cdIBOicJDJRR2KzXsV7uSK9iNfLWQ5bIZfxuPEHp7M8wiHyHnn0DD1i7w3Zmin0FtkrwoCQ==",
+      "retrieval": {
+        "artifacts": [
+          {
+            "bytes": 1167,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "97db3429843bf0c3cd24155f0ef9a33da39f8956d699f379fc6d665b52e39c30"
+            },
+            "path": "reference/react-19.2-exports.json",
+            "url": "https://registry.npmjs.org/react/-/react-19.2.0.tgz"
+          }
+        ],
+        "method": "HTTPS GET npm tarball; extract public exports from development entrypoints"
+      },
+      "title": "React 19.2 package public export surface",
+      "type": "reference-package",
+      "updatedAt": "2026-08-29T00:38:58.364Z",
+      "version": "19.2.0 tag ae74234eae6ebd62f19190731278e20bc1c37d51"
+    },
+    {
+      "canonicalUrl": "https://react.dev/reference/react",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "fbcf4ba77f4223b7ace63d26fdb8549d720a84619f2b823260a19545451c88d6"
+      },
+      "generatorVersion": "1.0.0",
+      "id": "react-docs-19.2",
+      "retrieval": {
+        "artifacts": [
+          {
+            "bytes": 233303,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "6b9bd4846c169145fda33013ec9f68287a29303c6f6fcac9290719d234f83b28"
+            },
+            "path": "reference/react-docs/versions-fe818cc4.html",
+            "url": "https://react.dev/versions"
+          },
+          {
+            "bytes": 161923,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "3137c381ea36fe0b1601ae6052724c49f375f914ffe1051df7a59c6e31b59067"
+            },
+            "path": "reference/react-docs/react-2d498f66.html",
+            "url": "https://react.dev/reference/react"
+          },
+          {
+            "bytes": 183074,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "2431c58f2b35f7b8a0ad093b4f6b075248bab22cd6c0f56cf698af1dbc85d991"
+            },
+            "path": "reference/react-docs/hooks-40d1d49f.html",
+            "url": "https://react.dev/reference/react/hooks"
+          },
+          {
+            "bytes": 149089,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "4375b24c669000dbed36499dba217d0c2375ea2ac66f006c1080b46b1196e97d"
+            },
+            "path": "reference/react-docs/components-9755e1d1.html",
+            "url": "https://react.dev/reference/react/components"
+          },
+          {
+            "bytes": 160592,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "83c75b4fbee6d54be0d5f88dec63e3e464382ed561898a4518abc5bbf5cdccb4"
+            },
+            "path": "reference/react-docs/apis-3b449011.html",
+            "url": "https://react.dev/reference/react/apis"
+          },
+          {
+            "bytes": 159566,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "225f2edbd48a7c45975b91994420ecddd2c1aefeac62dcdd0956426325fe05cc"
+            },
+            "path": "reference/react-docs/legacy-9c6d63ec.html",
+            "url": "https://react.dev/reference/react/legacy"
+          },
+          {
+            "bytes": 160122,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "12babd5ea42ba2b8603d3786a8f652344420acb471328de062739862ff4a6f62"
+            },
+            "path": "reference/react-docs/rules-917a5218.html",
+            "url": "https://react.dev/reference/rules"
+          },
+          {
+            "bytes": 170914,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "8f8a7e7466746bc6c702e2addb5b5e5982e7ae40c5a3759a29eacb9804ed272e"
+            },
+            "path": "reference/react-docs/react-dom-aba48f1a.html",
+            "url": "https://react.dev/reference/react-dom"
+          },
+          {
+            "bytes": 147944,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "83e936c68ecc31d229b55154c49fdc88eb110249c367d8e1a924fb5b2dca268d"
+            },
+            "path": "reference/react-docs/client-f3ea4786.html",
+            "url": "https://react.dev/reference/react-dom/client"
+          },
+          {
+            "bytes": 159072,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "89f3d039a18884fd692c205b64380e3eb2a7210b46c21cf6c9f8c7c0b316dfa6"
+            },
+            "path": "reference/react-docs/server-ccf7849c.html",
+            "url": "https://react.dev/reference/react-dom/server"
+          },
+          {
+            "bytes": 159462,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "6edca7fbd0e0ffa883742de69cf5387f4210d21026beb7c7e7fe0050fb8f2290"
+            },
+            "path": "reference/react-docs/static-afc883c6.html",
+            "url": "https://react.dev/reference/react-dom/static"
+          }
+        ],
+        "method": "HTTPS GET official reference indexes"
+      },
+      "title": "Official React 19.2 reference documentation",
+      "type": "reference",
+      "updatedAt": "2026-08-29T00:38:58.364Z",
+      "version": "19.2 docs at react.dev, snapshot 2026-08-29"
+    },
+    {
+      "canonicalUrl": "https://github.com/facebook/react/releases/tag/v19.2.0",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "6c47e801364162210540ccee8bc5d813e032ae361ba4e2be72102e76093ecf5b"
+      },
+      "generatorVersion": "1.0.0",
+      "id": "react-dom-19.2",
+      "integrity": "sha512-UlbRu4cAiGaIewkPyiRGJk0imDN2T3JjieT6spoL2UeSf5od4n5LB/mQ4ejmxhCFT1tYe8IvaFulzynWovsEFQ==",
+      "retrieval": {
+        "artifacts": [
+          {
+            "bytes": 904,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "0b08b2b026b968bde34168b1e7d916ccb5e83363c1f5380cdb0552209ff83d31"
+            },
+            "path": "reference/react-dom-19.2-exports.json",
+            "url": "https://registry.npmjs.org/react-dom/-/react-dom-19.2.0.tgz"
+          }
+        ],
+        "method": "HTTPS GET npm tarball; extract public exports from development entrypoints"
+      },
+      "title": "React DOM 19.2 package public export surface",
+      "type": "reference-package",
+      "updatedAt": "2026-08-29T00:38:58.364Z",
+      "version": "19.2.0 tag ae74234eae6ebd62f19190731278e20bc1c37d51"
+    },
+    {
+      "canonicalUrl": "https://w3c.github.io/selection-api/",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "df3286e45e9bf412b19819a6134bb63f7c1221f40bbed061e8d8a93cbff7ffc9"
+      },
+      "generatorVersion": "1.0.0",
+      "id": "selection-api",
+      "retrieval": {
+        "artifacts": [
+          {
+            "bytes": 48924,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "df3286e45e9bf412b19819a6134bb63f7c1221f40bbed061e8d8a93cbff7ffc9"
+            },
+            "path": "normative/selection-api.html",
+            "url": "https://w3c.github.io/selection-api/"
+          }
+        ],
+        "method": "HTTPS GET"
+      },
+      "title": "W3C Selection API",
+      "type": "standard",
+      "updatedAt": "2026-08-29T00:38:58.364Z",
+      "version": "snapshot 2026-08-29"
+    },
+    {
+      "canonicalUrl": "https://github.com/microsoft/TypeScript/tree/v7.0.2",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "da2513f4b95176d6dde8b51aab7afe8a927656c9d277369793f77f7e59371c08"
+      },
+      "generatorVersion": "1.0.0",
+      "id": "typescript-7.0.2",
+      "integrity": "sha512-8FYau96o3NKOhbjKi/qNvG/W5jhzxkbdm5sj9AbZ/5T5sWqn3hJgLfGx27sRKZWTvyzCP8dLRBTf5tBTSRVUNA==",
+      "retrieval": {
+        "artifacts": [
+          {
+            "bytes": 3087,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "3722b30210616a13a3213ded11575ba6b2dbab10c32a5ef67afca8513e27017e"
+            },
+            "path": "reference/typescript-7.0.2-package.json",
+            "url": "https://registry.npmjs.org/typescript/-/typescript-7.0.2.tgz"
+          }
+        ],
+        "method": "HTTPS GET npm tarball; verified SRI; extracted listed files"
+      },
+      "title": "TypeScript compiler package used by the workspace",
+      "type": "reference-package",
+      "updatedAt": "2026-08-29T00:38:58.364Z",
+      "version": "7.0.2 tag 1e4744d68260a7cb91b62b12edc3f6a2187faaf1"
+    },
+    {
+      "canonicalUrl": "https://www.typescriptlang.org/docs/handbook/jsx.html",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "d2143be239ce9e6fd019766f75a5bf1f30391189989dfea0bdc72462df14fd6c"
+      },
+      "generatorVersion": "1.0.0",
+      "id": "typescript-jsx",
+      "retrieval": {
+        "artifacts": [
+          {
+            "bytes": 267193,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "d2143be239ce9e6fd019766f75a5bf1f30391189989dfea0bdc72462df14fd6c"
+            },
+            "path": "reference/typescript-jsx.html",
+            "url": "https://www.typescriptlang.org/docs/handbook/jsx.html"
+          }
+        ],
+        "method": "HTTPS GET"
+      },
+      "title": "TypeScript JSX syntax and typing model",
+      "type": "documentation",
+      "updatedAt": "2026-08-29T00:38:58.364Z",
+      "version": "TypeScript 7.0.2, docs snapshot 2026-08-29"
+    },
+    {
+      "canonicalUrl": "https://w3c.github.io/uievents/",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "d8936ca21033eddb313818fc102fc24bc329c7b0fedf66a542f9430f08a7dc9c"
+      },
+      "generatorVersion": "1.0.0",
+      "id": "ui-events",
+      "retrieval": {
+        "artifacts": [
+          {
+            "bytes": 919628,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "d8936ca21033eddb313818fc102fc24bc329c7b0fedf66a542f9430f08a7dc9c"
+            },
+            "path": "normative/ui-events.html",
+            "url": "https://w3c.github.io/uievents/"
+          }
+        ],
+        "method": "HTTPS GET"
+      },
+      "title": "W3C UI Events",
+      "type": "standard",
+      "updatedAt": "2026-08-29T00:38:58.364Z",
+      "version": "snapshot 2026-08-29"
+    },
+    {
+      "canonicalUrl": "https://gpuweb.github.io/gpuweb/",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "1901cd5a6f67da3a9f868f07c7cb64c68c05bec7fed674b27c741729e61d8e8c"
+      },
+      "generatorVersion": "1.0.0",
+      "id": "webgpu-standard",
+      "retrieval": {
+        "artifacts": [
+          {
+            "bytes": 4514446,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "1901cd5a6f67da3a9f868f07c7cb64c68c05bec7fed674b27c741729e61d8e8c"
+            },
+            "path": "normative/webgpu.html",
+            "url": "https://gpuweb.github.io/gpuweb/"
+          }
+        ],
+        "method": "HTTPS GET"
+      },
+      "title": "WebGPU Standard",
+      "type": "standard",
+      "updatedAt": "2026-08-29T00:38:58.364Z",
+      "version": "snapshot 2026-08-29"
+    },
+    {
+      "canonicalUrl": "https://github.com/w3c/webidl2.js",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "4d55f20a3bdd9724b5040ac2eff10c1120ccb96a3eabda8cfe58e3abe08d9648"
+      },
+      "generatorVersion": "1.0.0",
+      "id": "webidl2",
+      "integrity": "sha512-fxOigKkIem1iAgQ9t4cFOP+kWEA8y6Be/uh50FpJh0FijoeeT/VMrOyJzNLUgjy0rGMEcHeReKDCqj0g9dIe9A==",
+      "retrieval": {
+        "artifacts": [
+          {
+            "bytes": 44230,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "b1639fcc7da3f5aa378702d75719ed8dfca49a72b1a415b6af8c9d03dfdf6cdd"
+            },
+            "path": "tooling/webidl2.mjs",
+            "url": "https://registry.npmjs.org/webidl2/-/webidl2-24.5.0.tgz"
+          }
+        ],
+        "method": "HTTPS GET npm tarball; verified SRI; extracted listed files"
+      },
+      "title": "WebIDL2 parser used by the audit generator",
+      "type": "audit-tool",
+      "updatedAt": "2026-08-29T00:38:58.364Z",
+      "version": "24.5.0"
+    },
+    {
+      "canonicalUrl": "https://github.com/w3c/webref/tree/curated/ed/css",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "a1a9047858d9319e7a19c2cfb10c78117a92d43d28a5bfbaa222cdb9272bf881"
+      },
+      "generatorVersion": "1.0.0",
+      "id": "webref-css",
+      "integrity": "sha512-iQZOkW9TqVz7p3qnEyv0KsutpXmPh8Ey9oJKHLeo//kn4mrrdG+XLBhmx4IoSWSazlVyK5NTp/FqsvV3U1yc9w==",
+      "retrieval": {
+        "artifacts": [
+          {
+            "bytes": 810927,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "b26a0501c6ee972ca343d2f91be620aaef0c719ec5602a2a70f317fd22135d75"
+            },
+            "path": "webref/css.json",
+            "url": "https://registry.npmjs.org/@webref/css/-/css-8.7.3.tgz"
+          }
+        ],
+        "method": "HTTPS GET npm tarball; verified SRI; extracted listed files"
+      },
+      "title": "W3C WebRef curated CSS inventory",
+      "type": "machine-inventory",
+      "updatedAt": "2026-08-29T00:38:58.364Z",
+      "version": "8.7.3"
+    },
+    {
+      "canonicalUrl": "https://github.com/w3c/webref/tree/curated/ed/elements",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "387ec65a7b0a886963fa364f4d01ebd3b269cdfedd9fd639830f584bdb2223f8"
+      },
+      "generatorVersion": "1.0.0",
+      "id": "webref-elements",
+      "integrity": "sha512-EWxcb3d2mkRU0zCfIX8no6xoywnUX3+Pxqhtt4xKwcb+vG4tQUlMZMd3THLH8M1Peg/5ssVRvlMEl/N5sHiFXw==",
+      "retrieval": {
+        "artifacts": [
+          {
+            "bytes": 23758,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "56030c8bb725c6009e17ca85ef729aa4cecb9f51926a9ef870f36c5ecb37dfd0"
+            },
+            "path": "webref/elements/html.json",
+            "url": "https://registry.npmjs.org/@webref/elements/-/elements-2.8.0.tgz"
+          }
+        ],
+        "method": "HTTPS GET npm tarball; verified SRI; extracted listed files"
+      },
+      "title": "W3C WebRef curated HTML element inventory",
+      "type": "machine-inventory",
+      "updatedAt": "2026-08-29T00:38:58.364Z",
+      "version": "2.8.0"
+    },
+    {
+      "canonicalUrl": "https://github.com/w3c/webref/tree/curated/ed/events",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "7adb98142c81283cb6d0dab924c5871938a98dc62447e0b520abc142f0701f02"
+      },
+      "generatorVersion": "1.0.0",
+      "id": "webref-events",
+      "integrity": "sha512-oosECyL5oKs7pTRaNJpvSdiMaLrWHlBiyWVbUS2WIsDEgL3Ula4rktAjhgZ916NVq6fgXaRSzQ5QDjeNdbhtDQ==",
+      "retrieval": {
+        "artifacts": [
+          {
+            "bytes": 183240,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "1b032e8cdb071d26c1e024efc801b1ca478f475a5f93f6e49d13175a4355a3e7"
+            },
+            "path": "webref/events/events.json",
+            "url": "https://registry.npmjs.org/@webref/events/-/events-1.25.0.tgz"
+          }
+        ],
+        "method": "HTTPS GET npm tarball; verified SRI; extracted listed files"
+      },
+      "title": "W3C WebRef curated event inventory",
+      "type": "machine-inventory",
+      "updatedAt": "2026-08-29T00:38:58.364Z",
+      "version": "1.25.0"
+    },
+    {
+      "canonicalUrl": "https://github.com/w3c/webref/tree/curated/ed/idl",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "0ef2bc72b2a50f9a61dd4e7f45a427d4b384ad89dfa29a07e75d717d55599883"
+      },
+      "generatorVersion": "1.0.0",
+      "id": "webref-idl",
+      "integrity": "sha512-Pb/NhQs3BgbLf1rNhOGMc5xoSqPaaR4Jw8RceBw3gIE8aDQkjTHwD9+KuAH1imFxU0mMubdXOcj1GEkJMwRLGQ==",
+      "retrieval": {
+        "artifacts": [
+          {
+            "bytes": 23558,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "129fac34c83e2f643ac4d0380c0b4b62bd8916dbfc80c1140c4724f43d7f8c91"
+            },
+            "path": "webref/idl/dom.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 4731,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "928b9ba3244788b5ba82bdb3a1c429af87b0c712ca8c99bd265fe9f67740645e"
+            },
+            "path": "webref/idl/uievents.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 4703,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "51a62d76a9f2bd543e05138cd214f180a7411494fd2cfee1496b1b31ab1d60d8"
+            },
+            "path": "webref/idl/pointerevents.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 451,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "b79993d1f33746475d57491d41709cce520ef6f889256ab26c03b587b1c3c71a"
+            },
+            "path": "webref/idl/input-events.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 1858,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "1500d82b7f72f52c6a5658fe06123ba15e035e5a0d38f138f567362275c1b61c"
+            },
+            "path": "webref/idl/selection-api.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 2043,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "b73e6e06f4701661eb3c2b4346d256c62b13a643a07723d5687989bf003b10c9"
+            },
+            "path": "webref/idl/clipboard-apis.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 7258,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "81c16b819a355bba5d5f0f49f9c642ce74ef5deaf221f9cf9580b6412627c1ab"
+            },
+            "path": "webref/idl/cssom-view.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 6302,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "41d65d4ffbdf129a2659f2a6aaafa4f9cc1657d180c990190e8dc38cd0d06542"
+            },
+            "path": "webref/idl/cssom.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 3130,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "673fe61e87a9685537da432d733354787da65317405c60eb6b39afd7805e44a9"
+            },
+            "path": "webref/idl/css-anchor-position.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 1259,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "b195f0bd5958172af61929471740f72821bae10fdb7804a598102994ebf463bc"
+            },
+            "path": "webref/idl/css-animation-worklet.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 502,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "373cf01aab3c9bc92cff7ae89c3e7052ac9039ab0ab7fa4bd38e70254bf6b912"
+            },
+            "path": "webref/idl/css-animations-2.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 1544,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "737b5ba09ee4b6a43fa1d1b4fcea15d9bb75e0fa183657ee8e244e78205c156d"
+            },
+            "path": "webref/idl/css-animations.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 372,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "65fd8b36d9052e25d81bbf3400684329b014eb40c66da87240e135eb579b67bc"
+            },
+            "path": "webref/idl/css-cascade-6.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 457,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "0ea5bed826c255a775531d80f407b042f7124c3da07b0046475687376e080a89"
+            },
+            "path": "webref/idl/css-cascade.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 445,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "3837fe5435e4b391479e091a8209d34781c0ab708d9ce917408a070bb446a81f"
+            },
+            "path": "webref/idl/css-color-5.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 671,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "c52b6349f2ac6d8592f5e05d710f4d6247ad703289b92effb8f8b8a1ef6c729b"
+            },
+            "path": "webref/idl/css-conditional-5.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 843,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "9cbaa508b4e2da41904e9f935020a6528184d9f2796672493e4c4d8c36c220ac"
+            },
+            "path": "webref/idl/css-conditional.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 530,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "04698478e42323ffc54ba6ad49a4f12657e1c6602302867f96395231ed71ac6e"
+            },
+            "path": "webref/idl/css-contain.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 730,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "cbc1bee2e2b07fa58547ca3eac3ee0f736dff25bfb75172af553a3b9b991969a"
+            },
+            "path": "webref/idl/css-counter-styles.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 4024,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "35d3a8c3d08569014e5e6f0f9fc247f8e19ec05bd7176ea20b38f5c520da4ba1"
+            },
+            "path": "webref/idl/css-font-loading.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 3206,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "78490b443d790882b4d88839616c9afbe2f66556299b23f18ca2656304a94313"
+            },
+            "path": "webref/idl/css-fonts-5.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 1264,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "9fe3d8e4e849843294c20b64e0a6f358cb8627ed42c8798e6aa2e6322dd9aacb"
+            },
+            "path": "webref/idl/css-fonts.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 985,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "720b26c17d58902c5ba70e49827c570e715c919818fd485179395caf6fe052ee"
+            },
+            "path": "webref/idl/css-highlight-api.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 290,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "2fc338f7444b85f83462919cd34d33e4a3f5f561e316d2a91b90045e9e2f23fa"
+            },
+            "path": "webref/idl/css-images-4.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 3912,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "67f5d2bff64410a8cccbcc0aff59bde70d8d5ac958b3684b8e815317e3c5cfdb"
+            },
+            "path": "webref/idl/css-layout-api.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 746,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "48a5bf91a320ccaed7598e3742ce9d5852ed90629387c4716720b6b2e628672b"
+            },
+            "path": "webref/idl/css-masking.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 1458,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "4ce063d45eb61154479fb24d999003fbec4b6b6e8b29372d6882ac31f7fab9e0"
+            },
+            "path": "webref/idl/css-mixins.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 1292,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "0775da85fe4d53d3c4674b62ece2dabdbb51ca55ec55f5a4197cc7d7432f036d"
+            },
+            "path": "webref/idl/css-nav.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 356,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "1badc5b04ec0ed16dbaa8a7e8af9d71a63211bc43d05e4777d5bde9ccd3961e3"
+            },
+            "path": "webref/idl/css-nesting.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 1368,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "e98659148eca12d9ebeadd98c9ac35630c2b24b53f789fc0b39b88d168a486ba"
+            },
+            "path": "webref/idl/css-paint-api.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 2753,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "35dfcb3c50d54d52f9e0302bd062827acdc194605b08bb0ebd4e667d3063b4c5"
+            },
+            "path": "webref/idl/css-parser-api.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 738,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "1d281d9543ba2db4b01c65997d94f87800b48fb0e394b64f333c37edf2ccc798"
+            },
+            "path": "webref/idl/css-properties-values-api.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 584,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "36c71e3223bdb7e9a1510bab4f80d35c794e7c0a9e79be1b5ba0d1d3e5400822"
+            },
+            "path": "webref/idl/css-pseudo.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 816,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "0d92f33ab1a48539ecb1f7037823850490d6dcb190e94b71217da44edcfab12c"
+            },
+            "path": "webref/idl/css-regions.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 657,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "2809aacd5c8215b27f9c2c043b56421231f50bf0f0693e5c272e350341dd25bf"
+            },
+            "path": "webref/idl/css-scroll-snap-2.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 312,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "1fd0595bfa437b1a9b87b70341f1183abec7a0caf6cee845e5416037d623a899"
+            },
+            "path": "webref/idl/css-shadow.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 272,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "1f53b90a2abd4893173147998f5e7a2f7b08097d6e4a0b0e63314f397fb50419"
+            },
+            "path": "webref/idl/css-sizing-4.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 586,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "420044bb4aa02d794fd70317a0e831e48abe5cc96a1f2f15533ae9004eaf1e79"
+            },
+            "path": "webref/idl/css-transitions-2.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 870,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "c4c73cf9002354f9a474a0859697c3c6a46518b92084e7940c0af3ab5abbcd6d"
+            },
+            "path": "webref/idl/css-transitions.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 13895,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "63c16428974d058d18f3bfc82738fb519b70249ddcfcea365ffaec24e24c0ab1"
+            },
+            "path": "webref/idl/css-typed-om.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 1514,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "6487cab53a8a20c966c7f4534e9ed5dffe6a20128d96753a309a553d089895f2"
+            },
+            "path": "webref/idl/css-view-transitions.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 400,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "bbeebf4912cb397178b001312e794b222e3d5e415f468dae0654f8c3a62e76e5"
+            },
+            "path": "webref/idl/css-viewport.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          },
+          {
+            "bytes": 107151,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "f392aff93cb5920fc0933ef1da9c3c89fc5009afa8e946707529e82880d3f5c0"
+            },
+            "path": "webref/idl/html.idl",
+            "url": "https://registry.npmjs.org/@webref/idl/-/idl-3.83.0.tgz"
+          }
+        ],
+        "method": "HTTPS GET npm tarball; verified SRI; extracted listed files"
+      },
+      "title": "W3C WebRef curated Web IDL inventory",
+      "type": "machine-inventory",
+      "updatedAt": "2026-08-29T00:38:58.364Z",
+      "version": "3.83.0"
+    },
+    {
+      "canonicalUrl": "https://dom.spec.whatwg.org/",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "d98c6542f35f2aa976cfbf037f8cd1f556c09a704700f19a0a163100935098ff"
+      },
+      "generatorVersion": "1.0.0",
+      "id": "whatwg-dom",
+      "retrieval": {
+        "artifacts": [
+          {
+            "bytes": 476405,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "d98c6542f35f2aa976cfbf037f8cd1f556c09a704700f19a0a163100935098ff"
+            },
+            "path": "normative/whatwg-dom.bs",
+            "url": "https://raw.githubusercontent.com/whatwg/dom/a2331a45360129e8645ef7e0a04740241b6e3726/dom.bs"
+          }
+        ],
+        "method": "HTTPS GET"
+      },
+      "title": "WHATWG DOM Standard source",
+      "type": "standard",
+      "updatedAt": "2026-08-29T00:38:58.364Z",
+      "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+    },
+    {
+      "canonicalUrl": "https://html.spec.whatwg.org/multipage/",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "bdab11bc868c100386b9641bca0666debd730791d9ac48f1e45c784c17e789d5"
+      },
+      "generatorVersion": "1.0.0",
+      "id": "whatwg-html",
+      "retrieval": {
+        "artifacts": [
+          {
+            "bytes": 7905870,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "bdab11bc868c100386b9641bca0666debd730791d9ac48f1e45c784c17e789d5"
+            },
+            "url": "https://raw.githubusercontent.com/whatwg/html/4aa7694b585e4d551a11cfe6dece823105fdf0a8/source"
+          }
+        ],
+        "method": "HTTPS GET"
+      },
+      "title": "WHATWG HTML Living Standard source",
+      "type": "standard",
+      "updatedAt": "2026-08-29T00:38:58.364Z",
+      "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+    },
+    {
+      "canonicalUrl": "https://html.spec.whatwg.org/dev/indices.html",
+      "digest": {
+        "algorithm": "sha256",
+        "value": "dbc639cacc0d333c937e02ab2edce7ec6d60b775be6d26438707a713d6fa033c"
+      },
+      "generatorVersion": "1.0.0",
+      "id": "whatwg-html-index",
+      "retrieval": {
+        "artifacts": [
+          {
+            "bytes": 442206,
+            "digest": {
+              "algorithm": "sha256",
+              "value": "dbc639cacc0d333c937e02ab2edce7ec6d60b775be6d26438707a713d6fa033c"
+            },
+            "path": "normative/html-indices.html",
+            "url": "https://html.spec.whatwg.org/dev/indices.html"
+          }
+        ],
+        "method": "HTTPS GET failed; reused prior pinned artifact (Failed to fetch https://html.spec.whatwg.org/dev/indices.html after 3 attempts)"
+      },
+      "title": "WHATWG HTML element and attribute index",
+      "type": "standard",
+      "updatedAt": "2026-08-29T00:38:58.364Z",
+      "version": "Living Standard 2026-08-28"
+    }
+  ],
+  "updatedAt": "2026-08-29T00:38:58.364Z"
+}

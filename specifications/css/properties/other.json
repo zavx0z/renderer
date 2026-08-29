@@ -1,0 +1,1994 @@
+{
+  "entries": [
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-align-content",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "align-content",
+        "styleDeclaration": [
+          "-webkit-align-content",
+          "WebkitAlignContent",
+          "webkitAlignContent"
+        ],
+        "syntax": "normal | <baseline-position> | <content-distribution> | <overflow-position>? <content-position>"
+      },
+      "name": "-webkit-align-content",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-align-content",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-align-items",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "align-items",
+        "styleDeclaration": [
+          "-webkit-align-items",
+          "WebkitAlignItems",
+          "webkitAlignItems"
+        ],
+        "syntax": "normal | stretch | <baseline-position> | <overflow-position>? <self-position>"
+      },
+      "name": "-webkit-align-items",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-align-items",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-align-self",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "align-self",
+        "styleDeclaration": [
+          "-webkit-align-self",
+          "WebkitAlignSelf",
+          "webkitAlignSelf"
+        ],
+        "syntax": "auto | <overflow-position>? [ normal | <self-position> ]| stretch | <baseline-position>"
+      },
+      "name": "-webkit-align-self",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-align-self",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-animation",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "animation",
+        "longhands": [
+          "animation-name",
+          "animation-duration",
+          "animation-timing-function",
+          "animation-delay",
+          "animation-iteration-count",
+          "animation-direction",
+          "animation-fill-mode",
+          "animation-play-state",
+          "animation-timeline"
+        ],
+        "resetLonghands": [
+          "animation-range",
+          "animation-trigger"
+        ],
+        "styleDeclaration": [
+          "-webkit-animation",
+          "WebkitAnimation",
+          "webkitAnimation"
+        ],
+        "syntax": "<single-animation>#"
+      },
+      "name": "-webkit-animation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-animation",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-animation-delay",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "animation-delay",
+        "styleDeclaration": [
+          "-webkit-animation-delay",
+          "WebkitAnimationDelay",
+          "webkitAnimationDelay"
+        ],
+        "syntax": "<time>#"
+      },
+      "name": "-webkit-animation-delay",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-animation-delay",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-animation-direction",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "animation-direction",
+        "styleDeclaration": [
+          "-webkit-animation-direction",
+          "WebkitAnimationDirection",
+          "webkitAnimationDirection"
+        ],
+        "syntax": "<single-animation-direction>#"
+      },
+      "name": "-webkit-animation-direction",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-animation-direction",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-animation-duration",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "animation-duration",
+        "styleDeclaration": [
+          "-webkit-animation-duration",
+          "WebkitAnimationDuration",
+          "webkitAnimationDuration"
+        ],
+        "syntax": "<time [0s,∞]>#"
+      },
+      "name": "-webkit-animation-duration",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-animation-duration",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-animation-fill-mode",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "animation-fill-mode",
+        "styleDeclaration": [
+          "-webkit-animation-fill-mode",
+          "WebkitAnimationFillMode",
+          "webkitAnimationFillMode"
+        ],
+        "syntax": "<single-animation-fill-mode>#"
+      },
+      "name": "-webkit-animation-fill-mode",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-animation-fill-mode",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-animation-iteration-count",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "animation-iteration-count",
+        "styleDeclaration": [
+          "-webkit-animation-iteration-count",
+          "WebkitAnimationIterationCount",
+          "webkitAnimationIterationCount"
+        ],
+        "syntax": "<single-animation-iteration-count>#"
+      },
+      "name": "-webkit-animation-iteration-count",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-animation-iteration-count",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-animation-name",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "animation-name",
+        "styleDeclaration": [
+          "-webkit-animation-name",
+          "WebkitAnimationName",
+          "webkitAnimationName"
+        ],
+        "syntax": "[ none | <keyframes-name> ]#"
+      },
+      "name": "-webkit-animation-name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-animation-name",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-animation-play-state",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "animation-play-state",
+        "styleDeclaration": [
+          "-webkit-animation-play-state",
+          "WebkitAnimationPlayState",
+          "webkitAnimationPlayState"
+        ],
+        "syntax": "<single-animation-play-state>#"
+      },
+      "name": "-webkit-animation-play-state",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-animation-play-state",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-animation-timing-function",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "animation-timing-function",
+        "styleDeclaration": [
+          "-webkit-animation-timing-function",
+          "WebkitAnimationTimingFunction",
+          "webkitAnimationTimingFunction"
+        ],
+        "syntax": "<easing-function>#"
+      },
+      "name": "-webkit-animation-timing-function",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-animation-timing-function",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-appearance",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "appearance",
+        "styleDeclaration": [
+          "-webkit-appearance",
+          "WebkitAppearance",
+          "webkitAppearance"
+        ],
+        "syntax": "none | auto | base | base-select | <compat-auto> | <compat-special>"
+      },
+      "name": "-webkit-appearance",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-ui-4/#propdef--webkit-appearance",
+        "profile": "standard",
+        "source": "css:css-ui-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-backface-visibility",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "backface-visibility",
+        "styleDeclaration": [
+          "-webkit-backface-visibility",
+          "WebkitBackfaceVisibility",
+          "webkitBackfaceVisibility"
+        ],
+        "syntax": "visible | hidden"
+      },
+      "name": "-webkit-backface-visibility",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-backface-visibility",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-background-clip",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "background-clip",
+        "styleDeclaration": [
+          "-webkit-background-clip",
+          "WebkitBackgroundClip",
+          "webkitBackgroundClip"
+        ],
+        "syntax": "<visual-box>#"
+      },
+      "name": "-webkit-background-clip",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-background-clip",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-background-origin",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "background-origin",
+        "styleDeclaration": [
+          "-webkit-background-origin",
+          "WebkitBackgroundOrigin",
+          "webkitBackgroundOrigin"
+        ],
+        "syntax": "<visual-box>#"
+      },
+      "name": "-webkit-background-origin",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-background-origin",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-background-size",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "background-size",
+        "styleDeclaration": [
+          "-webkit-background-size",
+          "WebkitBackgroundSize",
+          "webkitBackgroundSize"
+        ],
+        "syntax": "<bg-size>#"
+      },
+      "name": "-webkit-background-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-background-size",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-border-bottom-left-radius",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "border-bottom-left-radius",
+        "styleDeclaration": [
+          "-webkit-border-bottom-left-radius",
+          "WebkitBorderBottomLeftRadius",
+          "webkitBorderBottomLeftRadius"
+        ],
+        "syntax": "<border-radius>"
+      },
+      "name": "-webkit-border-bottom-left-radius",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-border-bottom-left-radius",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-border-bottom-right-radius",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "border-bottom-right-radius",
+        "styleDeclaration": [
+          "-webkit-border-bottom-right-radius",
+          "WebkitBorderBottomRightRadius",
+          "webkitBorderBottomRightRadius"
+        ],
+        "syntax": "<border-radius>"
+      },
+      "name": "-webkit-border-bottom-right-radius",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-border-bottom-right-radius",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-border-radius",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "border-radius",
+        "longhands": [
+          "border-top-left-radius",
+          "border-top-right-radius",
+          "border-bottom-right-radius",
+          "border-bottom-left-radius"
+        ],
+        "styleDeclaration": [
+          "-webkit-border-radius",
+          "WebkitBorderRadius",
+          "webkitBorderRadius"
+        ],
+        "syntax": "<length-percentage [0,∞]>{1,4} [ / <length-percentage [0,∞]>{1,4} ]?"
+      },
+      "name": "-webkit-border-radius",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-border-radius",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-border-top-left-radius",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "border-top-left-radius",
+        "styleDeclaration": [
+          "-webkit-border-top-left-radius",
+          "WebkitBorderTopLeftRadius",
+          "webkitBorderTopLeftRadius"
+        ],
+        "syntax": "<border-radius>"
+      },
+      "name": "-webkit-border-top-left-radius",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-border-top-left-radius",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-border-top-right-radius",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "border-top-right-radius",
+        "styleDeclaration": [
+          "-webkit-border-top-right-radius",
+          "WebkitBorderTopRightRadius",
+          "webkitBorderTopRightRadius"
+        ],
+        "syntax": "<border-radius>"
+      },
+      "name": "-webkit-border-top-right-radius",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-border-top-right-radius",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-box-align",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "styleDeclaration": [
+          "-webkit-box-align",
+          "WebkitBoxAlign",
+          "webkitBoxAlign"
+        ]
+      },
+      "name": "-webkit-box-align",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-box-align",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-box-flex",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "styleDeclaration": [
+          "-webkit-box-flex",
+          "WebkitBoxFlex",
+          "webkitBoxFlex"
+        ]
+      },
+      "name": "-webkit-box-flex",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-box-flex",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-box-ordinal-group",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "styleDeclaration": [
+          "-webkit-box-ordinal-group",
+          "WebkitBoxOrdinalGroup",
+          "webkitBoxOrdinalGroup"
+        ]
+      },
+      "name": "-webkit-box-ordinal-group",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-box-ordinal-group",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-box-orient",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "styleDeclaration": [
+          "-webkit-box-orient",
+          "WebkitBoxOrient",
+          "webkitBoxOrient"
+        ]
+      },
+      "name": "-webkit-box-orient",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-box-orient",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-box-pack",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "styleDeclaration": [
+          "-webkit-box-pack",
+          "WebkitBoxPack",
+          "webkitBoxPack"
+        ]
+      },
+      "name": "-webkit-box-pack",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-box-pack",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-box-shadow",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "box-shadow",
+        "longhands": [
+          "box-shadow-color",
+          "box-shadow-offset",
+          "box-shadow-blur",
+          "box-shadow-spread",
+          "box-shadow-position"
+        ],
+        "styleDeclaration": [
+          "-webkit-box-shadow",
+          "WebkitBoxShadow",
+          "webkitBoxShadow"
+        ],
+        "syntax": "<spread-shadow>#"
+      },
+      "name": "-webkit-box-shadow",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-box-shadow",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-box-sizing",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "box-sizing",
+        "styleDeclaration": [
+          "-webkit-box-sizing",
+          "WebkitBoxSizing",
+          "webkitBoxSizing"
+        ],
+        "syntax": "content-box | border-box"
+      },
+      "name": "-webkit-box-sizing",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-box-sizing",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-filter",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "filter",
+        "styleDeclaration": [
+          "-webkit-filter",
+          "WebkitFilter",
+          "webkitFilter"
+        ],
+        "syntax": "none | <filter-value-list>"
+      },
+      "name": "-webkit-filter",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-filter",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-flex",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "flex",
+        "longhands": [
+          "flex-grow",
+          "flex-shrink",
+          "flex-basis"
+        ],
+        "styleDeclaration": [
+          "-webkit-flex",
+          "WebkitFlex",
+          "webkitFlex"
+        ],
+        "syntax": "none | [ <'flex-grow'> <'flex-shrink'>? || <'flex-basis'> ]"
+      },
+      "name": "-webkit-flex",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-flex-propdef",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-flex-basis",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "flex-basis",
+        "styleDeclaration": [
+          "-webkit-flex-basis",
+          "WebkitFlexBasis",
+          "webkitFlexBasis"
+        ],
+        "syntax": "content | <'width'>"
+      },
+      "name": "-webkit-flex-basis",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-flex-basis",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-flex-direction",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "flex-direction",
+        "styleDeclaration": [
+          "-webkit-flex-direction",
+          "WebkitFlexDirection",
+          "webkitFlexDirection"
+        ],
+        "syntax": "row | row-reverse | column | column-reverse"
+      },
+      "name": "-webkit-flex-direction",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-flex-direction",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-flex-flow",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "flex-flow",
+        "longhands": [
+          "flex-direction",
+          "flex-wrap"
+        ],
+        "styleDeclaration": [
+          "-webkit-flex-flow",
+          "WebkitFlexFlow",
+          "webkitFlexFlow"
+        ],
+        "syntax": "<'flex-direction'> || <'flex-wrap'>"
+      },
+      "name": "-webkit-flex-flow",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-flex-flow",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-flex-grow",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "flex-grow",
+        "styleDeclaration": [
+          "-webkit-flex-grow",
+          "WebkitFlexGrow",
+          "webkitFlexGrow"
+        ],
+        "syntax": "<number [0,∞]>"
+      },
+      "name": "-webkit-flex-grow",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-flex-grow",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-flex-shrink",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "flex-shrink",
+        "styleDeclaration": [
+          "-webkit-flex-shrink",
+          "WebkitFlexShrink",
+          "webkitFlexShrink"
+        ],
+        "syntax": "<number [0,∞]>"
+      },
+      "name": "-webkit-flex-shrink",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-flex-shrink",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-flex-wrap",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "flex-wrap",
+        "styleDeclaration": [
+          "-webkit-flex-wrap",
+          "WebkitFlexWrap",
+          "webkitFlexWrap"
+        ],
+        "syntax": "nowrap | [ wrap | wrap-reverse ] || balance"
+      },
+      "name": "-webkit-flex-wrap",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-flex-wrap",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-justify-content",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "justify-content",
+        "styleDeclaration": [
+          "-webkit-justify-content",
+          "WebkitJustifyContent",
+          "webkitJustifyContent"
+        ],
+        "syntax": "normal | <content-distribution> | <overflow-position>? [ <content-position> | left | right ]"
+      },
+      "name": "-webkit-justify-content",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-justify-content",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-line-clamp",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "none",
+        "longhands": [
+          "max-lines",
+          "block-ellipsis",
+          "continue"
+        ],
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "-webkit-line-clamp",
+          "WebkitLineClamp",
+          "webkitLineClamp"
+        ],
+        "syntax": "none | <integer [1,∞]>"
+      },
+      "name": "-webkit-line-clamp",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-4/#propdef--webkit-line-clamp",
+        "profile": "standard",
+        "source": "css:css-overflow-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-mask",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "mask",
+        "longhands": [
+          "mask-image",
+          "mask-position",
+          "mask-size",
+          "mask-repeat",
+          "mask-origin",
+          "mask-clip",
+          "mask-composite",
+          "mask-mode"
+        ],
+        "resetLonghands": [
+          "mask-border"
+        ],
+        "styleDeclaration": [
+          "-webkit-mask",
+          "WebkitMask",
+          "webkitMask"
+        ],
+        "syntax": "<mask-layer>#"
+      },
+      "name": "-webkit-mask",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-mask",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-mask-box-image",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "mask-border",
+        "longhands": [
+          "mask-border-source",
+          "mask-border-slice",
+          "mask-border-width",
+          "mask-border-outset",
+          "mask-border-repeat",
+          "mask-border-mode"
+        ],
+        "styleDeclaration": [
+          "-webkit-mask-box-image",
+          "WebkitMaskBoxImage",
+          "webkitMaskBoxImage"
+        ],
+        "syntax": "<'mask-border-source'> || <'mask-border-slice'> [ / <'mask-border-width'>? [ / <'mask-border-outset'> ]? ]? || <'mask-border-repeat'> || <'mask-border-mode'>"
+      },
+      "name": "-webkit-mask-box-image",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-mask-box-image",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-mask-box-image-outset",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "mask-border-outset",
+        "styleDeclaration": [
+          "-webkit-mask-box-image-outset",
+          "WebkitMaskBoxImageOutset",
+          "webkitMaskBoxImageOutset"
+        ],
+        "syntax": "<'border-image-outset'>"
+      },
+      "name": "-webkit-mask-box-image-outset",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-mask-box-image-outset",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-mask-box-image-repeat",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "mask-border-repeat",
+        "styleDeclaration": [
+          "-webkit-mask-box-image-repeat",
+          "WebkitMaskBoxImageRepeat",
+          "webkitMaskBoxImageRepeat"
+        ],
+        "syntax": "<'border-image-repeat'>"
+      },
+      "name": "-webkit-mask-box-image-repeat",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-mask-box-image-repeat",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-mask-box-image-slice",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "mask-border-slice",
+        "styleDeclaration": [
+          "-webkit-mask-box-image-slice",
+          "WebkitMaskBoxImageSlice",
+          "webkitMaskBoxImageSlice"
+        ],
+        "syntax": "<'border-image-slice'>"
+      },
+      "name": "-webkit-mask-box-image-slice",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-mask-box-image-slice",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-mask-box-image-source",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "mask-border-source",
+        "styleDeclaration": [
+          "-webkit-mask-box-image-source",
+          "WebkitMaskBoxImageSource",
+          "webkitMaskBoxImageSource"
+        ],
+        "syntax": "<'border-image-source'>"
+      },
+      "name": "-webkit-mask-box-image-source",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-mask-box-image-source",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-mask-box-image-width",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "mask-border-width",
+        "styleDeclaration": [
+          "-webkit-mask-box-image-width",
+          "WebkitMaskBoxImageWidth",
+          "webkitMaskBoxImageWidth"
+        ],
+        "syntax": "<'border-image-width'>"
+      },
+      "name": "-webkit-mask-box-image-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-mask-box-image-width",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-mask-clip",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "mask-clip",
+        "styleDeclaration": [
+          "-webkit-mask-clip",
+          "WebkitMaskClip",
+          "webkitMaskClip"
+        ],
+        "syntax": "[ <coord-box> | no-clip ]#"
+      },
+      "name": "-webkit-mask-clip",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-mask-clip",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-mask-composite",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "mask-composite",
+        "styleDeclaration": [
+          "-webkit-mask-composite",
+          "WebkitMaskComposite",
+          "webkitMaskComposite"
+        ],
+        "syntax": "<compositing-operator>#"
+      },
+      "name": "-webkit-mask-composite",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-mask-composite",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-mask-image",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "mask-image",
+        "styleDeclaration": [
+          "-webkit-mask-image",
+          "WebkitMaskImage",
+          "webkitMaskImage"
+        ],
+        "syntax": "<mask-reference>#"
+      },
+      "name": "-webkit-mask-image",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-mask-image",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-mask-origin",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "mask-origin",
+        "styleDeclaration": [
+          "-webkit-mask-origin",
+          "WebkitMaskOrigin",
+          "webkitMaskOrigin"
+        ],
+        "syntax": "<coord-box>#"
+      },
+      "name": "-webkit-mask-origin",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-mask-origin",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-mask-position",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "mask-position",
+        "styleDeclaration": [
+          "-webkit-mask-position",
+          "WebkitMaskPosition",
+          "webkitMaskPosition"
+        ],
+        "syntax": "<position>#"
+      },
+      "name": "-webkit-mask-position",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-mask-position",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-mask-repeat",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "mask-repeat",
+        "styleDeclaration": [
+          "-webkit-mask-repeat",
+          "WebkitMaskRepeat",
+          "webkitMaskRepeat"
+        ],
+        "syntax": "<repeat-style>#"
+      },
+      "name": "-webkit-mask-repeat",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-mask-repeat",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-mask-size",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "mask-size",
+        "styleDeclaration": [
+          "-webkit-mask-size",
+          "WebkitMaskSize",
+          "webkitMaskSize"
+        ],
+        "syntax": "<bg-size>#"
+      },
+      "name": "-webkit-mask-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-mask-size",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-order",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "order",
+        "styleDeclaration": [
+          "-webkit-order",
+          "WebkitOrder",
+          "webkitOrder"
+        ],
+        "syntax": "<integer>"
+      },
+      "name": "-webkit-order",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-order",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-perspective",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "perspective",
+        "styleDeclaration": [
+          "-webkit-perspective",
+          "WebkitPerspective",
+          "webkitPerspective"
+        ],
+        "syntax": "none | <length [0,∞]>"
+      },
+      "name": "-webkit-perspective",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-perspective",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-perspective-origin",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "perspective-origin",
+        "styleDeclaration": [
+          "-webkit-perspective-origin",
+          "WebkitPerspectiveOrigin",
+          "webkitPerspectiveOrigin"
+        ],
+        "syntax": "<position>"
+      },
+      "name": "-webkit-perspective-origin",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-perspective-origin",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-text-fill-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "an RGBA color",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "currentcolor",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "-webkit-text-fill-color",
+          "WebkitTextFillColor",
+          "webkitTextFillColor"
+        ],
+        "syntax": "<color>"
+      },
+      "name": "-webkit-text-fill-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-text-fill-color",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-text-size-adjust",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "text-size-adjust",
+        "styleDeclaration": [
+          "-webkit-text-size-adjust",
+          "WebkitTextSizeAdjust",
+          "webkitTextSizeAdjust"
+        ],
+        "syntax": "auto | none | <percentage [0,∞]>"
+      },
+      "name": "-webkit-text-size-adjust",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-text-size-adjust",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-text-stroke",
+      "kind": "property",
+      "metadata": {
+        "animationType": "See individual properties",
+        "appliesTo": "See individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "See individual properties",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "See individual properties",
+        "longhands": [
+          "-webkit-text-stroke-width",
+          "-webkit-text-stroke-color"
+        ],
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "-webkit-text-stroke",
+          "WebkitTextStroke",
+          "webkitTextStroke"
+        ],
+        "syntax": "<line-width> || <color>"
+      },
+      "name": "-webkit-text-stroke",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-text-stroke",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-text-stroke-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "an RGBA color",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "currentcolor",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "-webkit-text-stroke-color",
+          "WebkitTextStrokeColor",
+          "webkitTextStrokeColor"
+        ],
+        "syntax": "<color>"
+      },
+      "name": "-webkit-text-stroke-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-text-stroke-color",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-text-stroke-width",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "absolute length",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "0",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "-webkit-text-stroke-width",
+          "WebkitTextStrokeWidth",
+          "webkitTextStrokeWidth"
+        ],
+        "syntax": "<line-width>"
+      },
+      "name": "-webkit-text-stroke-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-text-stroke-width",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-transform",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "transform",
+        "styleDeclaration": [
+          "-webkit-transform",
+          "WebkitTransform",
+          "webkitTransform"
+        ],
+        "syntax": "none | <transform-list>"
+      },
+      "name": "-webkit-transform",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-transform",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-transform-origin",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "transform-origin",
+        "styleDeclaration": [
+          "-webkit-transform-origin",
+          "WebkitTransformOrigin",
+          "webkitTransformOrigin"
+        ],
+        "syntax": "[ left | center | right | top | bottom | <length-percentage> ] | [ left | center | right | <length-percentage> ] [ top | center | bottom | <length-percentage> ] <length>? | [ [ center | left | right ] && [ center | top | bottom ] ] <length>?"
+      },
+      "name": "-webkit-transform-origin",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-transform-origin",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-transform-style",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "transform-style",
+        "styleDeclaration": [
+          "-webkit-transform-style",
+          "WebkitTransformStyle",
+          "webkitTransformStyle"
+        ],
+        "syntax": "flat | preserve-3d"
+      },
+      "name": "-webkit-transform-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-transform-style",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-transition",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "transition",
+        "longhands": [
+          "transition-property",
+          "transition-duration",
+          "transition-timing-function",
+          "transition-delay",
+          "transition-behavior"
+        ],
+        "styleDeclaration": [
+          "-webkit-transition",
+          "WebkitTransition",
+          "webkitTransition"
+        ],
+        "syntax": "<single-transition>#"
+      },
+      "name": "-webkit-transition",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-transition",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-transition-delay",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "transition-delay",
+        "styleDeclaration": [
+          "-webkit-transition-delay",
+          "WebkitTransitionDelay",
+          "webkitTransitionDelay"
+        ],
+        "syntax": "<time>#"
+      },
+      "name": "-webkit-transition-delay",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-transition-delay",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-transition-duration",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "transition-duration",
+        "styleDeclaration": [
+          "-webkit-transition-duration",
+          "WebkitTransitionDuration",
+          "webkitTransitionDuration"
+        ],
+        "syntax": "<time [0s,∞]>#"
+      },
+      "name": "-webkit-transition-duration",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-transition-duration",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-transition-property",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "transition-property",
+        "styleDeclaration": [
+          "-webkit-transition-property",
+          "WebkitTransitionProperty",
+          "webkitTransitionProperty"
+        ],
+        "syntax": "none | <single-transition-property>#"
+      },
+      "name": "-webkit-transition-property",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-transition-property",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-transition-timing-function",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "transition-timing-function",
+        "styleDeclaration": [
+          "-webkit-transition-timing-function",
+          "WebkitTransitionTimingFunction",
+          "webkitTransitionTimingFunction"
+        ],
+        "syntax": "<easing-function>#"
+      },
+      "name": "-webkit-transition-timing-function",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef--webkit-transition-timing-function",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vendor-webkit-user-select",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "styleDeclaration": [
+          "-webkit-user-select",
+          "WebkitUserSelect",
+          "webkitUserSelect"
+        ],
+        "syntax": "auto | text | none | contain | all"
+      },
+      "name": "-webkit-user-select",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-ui-4/#propdef--webkit-user-select",
+        "profile": "standard",
+        "source": "css:css-ui-4",
+        "version": "8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/properties/other.json"
+}

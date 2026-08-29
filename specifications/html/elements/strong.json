@@ -1,0 +1,123 @@
+{
+  "entries": [
+    {
+      "description": "Importance",
+      "domain": "html",
+      "id": "html.elements.strong",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; phrasing; palpable",
+        "children": "phrasing",
+        "interface": "HTMLElement",
+        "parents": "phrasing"
+      },
+      "name": "strong",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-strong-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <strong> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.strong.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "strong",
+        "interface": "HTMLElement"
+      },
+      "name": "strong implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.strong",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <strong> element content categories.",
+      "domain": "html",
+      "id": "html.elements.strong.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "strong",
+        "interface": "HTMLElement"
+      },
+      "name": "strong content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.strong",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-strong-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <strong> element content model.",
+      "domain": "html",
+      "id": "html.elements.strong.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "strong",
+        "interface": "HTMLElement"
+      },
+      "name": "strong content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.strong",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-strong-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <strong> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.strong.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "strong",
+        "interface": "HTMLElement"
+      },
+      "name": "strong interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.strong",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-strong-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/strong.json"
+}

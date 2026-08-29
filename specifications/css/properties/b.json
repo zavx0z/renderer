@@ -1,0 +1,4373 @@
+{
+  "entries": [
+    {
+      "domain": "css",
+      "id": "css.properties.backdrop-filter",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see prose in Filter Effects 1 § 14. Animation of Filters.",
+        "appliesTo": "All elements. In SVG, it applies to container elements without the defs element and all graphics elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "backdrop-filter",
+          "backdropFilter"
+        ],
+        "syntax": "none | <filter-value-list>"
+      },
+      "name": "backdrop-filter",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/filter-effects-2/#propdef-backdrop-filter",
+        "profile": "standard",
+        "source": "css:filter-effects-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.backface-visibility",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "transformable elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "visible",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "backface-visibility",
+          "backfaceVisibility"
+        ],
+        "syntax": "visible | hidden"
+      },
+      "name": "backface-visibility",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-transforms-2/#propdef-backface-visibility",
+        "profile": "standard",
+        "source": "css:css-transforms-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.background",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "see individual properties",
+        "longhands": [
+          "background-image",
+          "background-position",
+          "background-size",
+          "background-repeat",
+          "background-attachment",
+          "background-origin",
+          "background-clip",
+          "background-color"
+        ],
+        "percentages": "see individual properties",
+        "resetLonghands": [
+          "background-blend-mode"
+        ],
+        "styleDeclaration": [
+          "background"
+        ],
+        "syntax": "<bg-layer>#? , <final-bg-layer>"
+      },
+      "name": "background",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-backgrounds-4/#propdef-background",
+        "profile": "standard",
+        "source": "css:css-backgrounds-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.background-attachment",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item the keyword as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "scroll",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "background-attachment",
+          "backgroundAttachment"
+        ],
+        "syntax": "<attachment>#"
+      },
+      "name": "background-attachment",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-backgrounds-4/#propdef-background-attachment",
+        "profile": "standard",
+        "source": "css:css-backgrounds-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.background-blend-mode",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "All HTML elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "background-blend-mode",
+          "backgroundBlendMode"
+        ],
+        "syntax": "<'mix-blend-mode'>#"
+      },
+      "name": "background-blend-mode",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/compositing-2/#propdef-background-blend-mode",
+        "profile": "standard",
+        "source": "css:compositing-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.background-clip",
+      "kind": "property",
+      "metadata": {
+        "animationType": "repeatable list",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "border-box",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "background-clip",
+          "backgroundClip"
+        ],
+        "syntax": "<bg-clip>#"
+      },
+      "name": "background-clip",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-backgrounds-4/#propdef-background-clip",
+        "profile": "standard",
+        "source": "css:css-backgrounds-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.background-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "computed color",
+        "extended": [],
+        "inherited": "no",
+        "initial": "transparent",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "background-color",
+          "backgroundColor"
+        ],
+        "syntax": "<color>"
+      },
+      "name": "background-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-backgrounds-4/#propdef-background-color",
+        "profile": "standard",
+        "source": "css:css-backgrounds-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.background-image",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item either an <image> or the keyword none",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "background-image",
+          "backgroundImage"
+        ],
+        "syntax": "<bg-image>#"
+      },
+      "name": "background-image",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-backgrounds-4/#propdef-background-image",
+        "profile": "standard",
+        "source": "css:css-backgrounds-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.background-origin",
+      "kind": "property",
+      "metadata": {
+        "animationType": "repeatable list",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item a keyword as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "padding-box",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "background-origin",
+          "backgroundOrigin"
+        ],
+        "syntax": "<visual-box>#"
+      },
+      "name": "background-origin",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-backgrounds-4/#propdef-background-origin",
+        "profile": "standard",
+        "source": "css:css-backgrounds-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.background-position",
+      "kind": "property",
+      "metadata": {
+        "animationType": "repeatable list",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "a list, each item a pair of offsets (horizontal and vertical) from the top left origin, each offset given as a computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0% 0%",
+        "longhands": [
+          "background-position-x",
+          "background-position-y"
+        ],
+        "percentages": "refer to size of background positioning area minus size of background image; see text",
+        "styleDeclaration": [
+          "background-position",
+          "backgroundPosition"
+        ],
+        "syntax": "<bg-position>#"
+      },
+      "name": "background-position",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-backgrounds-4/#propdef-background-position",
+        "profile": "standard",
+        "source": "css:css-backgrounds-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.background-position-block",
+      "kind": "property",
+      "metadata": {
+        "animationType": "repeatable list",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "A list, each item consisting of: an offset given as a computed <length-percentage> value, plus an origin keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0%",
+        "logicalPropertyGroup": "background-position",
+        "percentages": "refer to size of background positioning area minus size of background image",
+        "styleDeclaration": [
+          "background-position-block",
+          "backgroundPositionBlock"
+        ],
+        "syntax": "[ center | [ [ start | end ]? <length-percentage>? ]! ]#"
+      },
+      "name": "background-position-block",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-backgrounds-4/#propdef-background-position-block",
+        "profile": "standard",
+        "source": "css:css-backgrounds-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.background-position-inline",
+      "kind": "property",
+      "metadata": {
+        "animationType": "repeatable list",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "A list, each item consisting of: an offset given as a computed <length-percentage> value, plus an origin keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0%",
+        "logicalPropertyGroup": "background-position",
+        "percentages": "refer to inline-size of background positioning area minus inline-size of background image",
+        "styleDeclaration": [
+          "background-position-inline",
+          "backgroundPositionInline"
+        ],
+        "syntax": "[ center | [ [ start | end ]? <length-percentage>? ]! ]#"
+      },
+      "name": "background-position-inline",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-backgrounds-4/#propdef-background-position-inline",
+        "profile": "standard",
+        "source": "css:css-backgrounds-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.background-position-x",
+      "kind": "property",
+      "metadata": {
+        "animationType": "repeatable list",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "A list, each item consisting of: an offset given as a computed <length-percentage> value, plus an origin keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0%",
+        "logicalPropertyGroup": "background-position",
+        "percentages": "refer to width of background positioning area minus width of background image",
+        "styleDeclaration": [
+          "background-position-x",
+          "backgroundPositionX"
+        ],
+        "syntax": "[ center | [ [ left | right | x-start | x-end ]? <length-percentage>? ]! ]#"
+      },
+      "name": "background-position-x",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-backgrounds-4/#propdef-background-position-x",
+        "profile": "standard",
+        "source": "css:css-backgrounds-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.background-position-y",
+      "kind": "property",
+      "metadata": {
+        "animationType": "repeatable list",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "A list, each item consisting of: an offset given as a computed <length-percentage> value, plus an origin keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0%",
+        "logicalPropertyGroup": "background-position",
+        "percentages": "refer to height of background positioning area minus height of background image",
+        "styleDeclaration": [
+          "background-position-y",
+          "backgroundPositionY"
+        ],
+        "syntax": "[ center | [ [ top | bottom | y-start | y-end ]? <length-percentage>? ]! ]#"
+      },
+      "name": "background-position-y",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-backgrounds-4/#propdef-background-position-y",
+        "profile": "standard",
+        "source": "css:css-backgrounds-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.background-repeat",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item a pair of keywords, one per dimension",
+        "extended": [],
+        "inherited": "no",
+        "initial": "repeat",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "background-repeat",
+          "backgroundRepeat"
+        ],
+        "syntax": "<repeat-style>#"
+      },
+      "name": "background-repeat",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-backgrounds-4/#propdef-background-repeat",
+        "profile": "standard",
+        "source": "css:css-backgrounds-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.background-repeat-block",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "repeat",
+        "logicalPropertyGroup": "background-repeat",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "background-repeat-block",
+          "backgroundRepeatBlock"
+        ],
+        "syntax": "<repetition>#"
+      },
+      "name": "background-repeat-block",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-backgrounds-4/#propdef-background-repeat-block",
+        "profile": "standard",
+        "source": "css:css-backgrounds-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.background-repeat-inline",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "repeat",
+        "logicalPropertyGroup": "background-repeat",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "background-repeat-inline",
+          "backgroundRepeatInline"
+        ],
+        "syntax": "<repetition>#"
+      },
+      "name": "background-repeat-inline",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-backgrounds-4/#propdef-background-repeat-inline",
+        "profile": "standard",
+        "source": "css:css-backgrounds-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.background-repeat-x",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "repeat",
+        "logicalPropertyGroup": "background-repeat",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "background-repeat-x",
+          "backgroundRepeatX"
+        ],
+        "syntax": "<repetition>#"
+      },
+      "name": "background-repeat-x",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-backgrounds-4/#propdef-background-repeat-x",
+        "profile": "standard",
+        "source": "css:css-backgrounds-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.background-repeat-y",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "repeat",
+        "logicalPropertyGroup": "background-repeat",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "background-repeat-y",
+          "backgroundRepeatY"
+        ],
+        "syntax": "<repetition>#"
+      },
+      "name": "background-repeat-y",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-backgrounds-4/#propdef-background-repeat-y",
+        "profile": "standard",
+        "source": "css:css-backgrounds-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.background-size",
+      "kind": "property",
+      "metadata": {
+        "animationType": "repeatable list",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item a pair of sizes (one per axis) each represented as either a keyword or a computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "see text",
+        "styleDeclaration": [
+          "background-size",
+          "backgroundSize"
+        ],
+        "syntax": "<bg-size>#"
+      },
+      "name": "background-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-backgrounds-4/#propdef-background-size",
+        "profile": "standard",
+        "source": "css:css-backgrounds-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.background-tbd",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "see individual properties",
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "background-tbd",
+          "backgroundTbd"
+        ],
+        "syntax": "<bg-layer>#"
+      },
+      "name": "background-tbd",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-backgrounds-4/#propdef-background-tbd",
+        "profile": "standard",
+        "source": "css:css-backgrounds-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.baseline-shift",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "inline-level boxes and SVG text content elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the specified keyword or a computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "percentages": "refer to the used value of line-height",
+        "styleDeclaration": [
+          "baseline-shift",
+          "baselineShift"
+        ],
+        "syntax": "<length-percentage> | sub | super | top | center | bottom"
+      },
+      "name": "baseline-shift",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-inline-3/#propdef-baseline-shift",
+        "profile": "standard",
+        "source": "css:css-inline-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.baseline-source",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "inline-level boxes that establish an independent formatting context",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "baseline-source",
+          "baselineSource"
+        ],
+        "syntax": "auto | first | last"
+      },
+      "name": "baseline-source",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-inline-3/#propdef-baseline-source",
+        "profile": "standard",
+        "source": "css:css-inline-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.block-ellipsis",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "no-ellipsis",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "block-ellipsis",
+          "blockEllipsis"
+        ],
+        "syntax": "no-ellipsis | auto | <string>"
+      },
+      "name": "block-ellipsis",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-4/#propdef-block-ellipsis",
+        "profile": "standard",
+        "source": "css:css-overflow-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.block-size",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "Same as height and width",
+        "canonicalOrder": "per grammar",
+        "computedValue": "Same as height, width",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "logicalPropertyGroup": "size",
+        "percentages": "As for the corresponding physical property",
+        "styleDeclaration": [
+          "block-size",
+          "blockSize"
+        ],
+        "syntax": "<'width'>"
+      },
+      "name": "block-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-logical-1/#propdef-block-size",
+        "profile": "standard",
+        "source": "css:css-logical-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.block-step",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "block-level boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "see individual properties",
+        "longhands": [
+          "block-step-size",
+          "block-step-insert",
+          "block-step-align",
+          "block-step-round"
+        ],
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "block-step",
+          "blockStep"
+        ],
+        "syntax": "<'block-step-size'> || <'block-step-insert'> || <'block-step-align'> || <'block-step-round'>"
+      },
+      "name": "block-step",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-rhythm-1/#propdef-block-step",
+        "profile": "standard",
+        "source": "css:css-rhythm-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.block-step-align",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block-level boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "block-step-align",
+          "blockStepAlign"
+        ],
+        "syntax": "auto | center | start | end"
+      },
+      "name": "block-step-align",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-rhythm-1/#propdef-block-step-align",
+        "profile": "standard",
+        "source": "css:css-rhythm-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.block-step-insert",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block-level boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "margin-box",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "block-step-insert",
+          "blockStepInsert"
+        ],
+        "syntax": "margin-box | padding-box | content-box"
+      },
+      "name": "block-step-insert",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-rhythm-1/#propdef-block-step-insert",
+        "profile": "standard",
+        "source": "css:css-rhythm-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.block-step-round",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block-level boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "up",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "block-step-round",
+          "blockStepRound"
+        ],
+        "syntax": "up | down | nearest"
+      },
+      "name": "block-step-round",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-rhythm-1/#propdef-block-step-round",
+        "profile": "standard",
+        "source": "css:css-rhythm-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.block-step-size",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "block-level boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword or absolute length",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "block-step-size",
+          "blockStepSize"
+        ],
+        "syntax": "none | <length [0,∞]>"
+      },
+      "name": "block-step-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-rhythm-1/#propdef-block-step-size",
+        "profile": "standard",
+        "source": "css:css-rhythm-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.bookmark-label",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "content(text)",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "bookmark-label",
+          "bookmarkLabel"
+        ],
+        "syntax": "<content-list>"
+      },
+      "name": "bookmark-label",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-content-3/#propdef-bookmark-label",
+        "profile": "standard",
+        "source": "css:css-content-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.bookmark-level",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword none or the specified integer",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "bookmark-level",
+          "bookmarkLevel"
+        ],
+        "syntax": "none | <integer [1,∞]>"
+      },
+      "name": "bookmark-level",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-content-3/#propdef-bookmark-level",
+        "profile": "standard",
+        "source": "css:css-content-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.bookmark-state",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block-level elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "open",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "bookmark-state",
+          "bookmarkState"
+        ],
+        "syntax": "open | closed"
+      },
+      "name": "bookmark-state",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-content-3/#propdef-bookmark-state",
+        "profile": "standard",
+        "source": "css:css-content-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "border-width",
+          "border-style",
+          "border-color"
+        ],
+        "percentages": "see individual properties",
+        "resetLonghands": [
+          "border-image"
+        ],
+        "styleDeclaration": [
+          "border"
+        ],
+        "syntax": "<line-width> || <line-style> || <color>"
+      },
+      "name": "border",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-block",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "border-block-start",
+          "border-block-end"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "border-block",
+          "borderBlock"
+        ],
+        "syntax": "<'border-block-start'>"
+      },
+      "name": "border-block",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-block",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-block-clip",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "border-block-start-clip",
+          "border-block-end-clip"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "border-block-clip",
+          "borderBlockClip"
+        ],
+        "syntax": "<'border-top-clip'>"
+      },
+      "name": "border-block-clip",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-block-clip",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-block-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "border-block-start-color",
+          "border-block-end-color"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "border-block-color",
+          "borderBlockColor"
+        ],
+        "syntax": "<'border-top-color'>{1,2}"
+      },
+      "name": "border-block-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-block-color",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-block-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "See individual properties",
+        "longhands": [
+          "border-block-end-width",
+          "border-block-end-style",
+          "border-block-end-color"
+        ],
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-block-end",
+          "borderBlockEnd"
+        ],
+        "syntax": "<line-width> || <line-style> || <color>"
+      },
+      "name": "border-block-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-block-end",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-block-end-clip",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "none, or a list consisting of absolute lengths, or percentages as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "logicalPropertyGroup": "border-clip",
+        "percentages": "refer to length of border-edge side",
+        "styleDeclaration": [
+          "border-block-end-clip",
+          "borderBlockEndClip"
+        ],
+        "syntax": "none | [ <length-percentage [0,∞]> | <flex> ]+"
+      },
+      "name": "border-block-end-clip",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-block-end-clip",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-block-end-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see prose",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the computed color and/or a one-dimensional image function",
+        "extended": [],
+        "inherited": "no",
+        "initial": "currentcolor",
+        "logicalPropertyGroup": "border-color",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-block-end-color",
+          "borderBlockEndColor"
+        ],
+        "syntax": "<color> | <image-1D>"
+      },
+      "name": "border-block-end-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-block-end-color",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-block-end-radius",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "border-end-start-radius",
+          "border-end-end-radius"
+        ],
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "border-block-end-radius",
+          "borderBlockEndRadius"
+        ],
+        "syntax": "<length-percentage [0,∞]>{1,2} [ / <length-percentage [0,∞]>{1,2} ]?"
+      },
+      "name": "border-block-end-radius",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-block-end-radius",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-block-end-style",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "logicalPropertyGroup": "border-style",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-block-end-style",
+          "borderBlockEndStyle"
+        ],
+        "syntax": "<line-style>"
+      },
+      "name": "border-block-end-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-block-end-style",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-block-end-width",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "absolute length, snapped as a border width",
+        "extended": [],
+        "inherited": "no",
+        "initial": "medium",
+        "logicalPropertyGroup": "border-width",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-block-end-width",
+          "borderBlockEndWidth"
+        ],
+        "syntax": "<line-width>"
+      },
+      "name": "border-block-end-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-block-end-width",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-block-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "See individual properties",
+        "longhands": [
+          "border-block-start-width",
+          "border-block-start-style",
+          "border-block-start-color"
+        ],
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-block-start",
+          "borderBlockStart"
+        ],
+        "syntax": "<line-width> || <line-style> || <color>"
+      },
+      "name": "border-block-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-block-start",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-block-start-clip",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "none, or a list consisting of absolute lengths, or percentages as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "logicalPropertyGroup": "border-clip",
+        "percentages": "refer to length of border-edge side",
+        "styleDeclaration": [
+          "border-block-start-clip",
+          "borderBlockStartClip"
+        ],
+        "syntax": "none | [ <length-percentage [0,∞]> | <flex> ]+"
+      },
+      "name": "border-block-start-clip",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-block-start-clip",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-block-start-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see prose",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the computed color and/or a one-dimensional image function",
+        "extended": [],
+        "inherited": "no",
+        "initial": "currentcolor",
+        "logicalPropertyGroup": "border-color",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-block-start-color",
+          "borderBlockStartColor"
+        ],
+        "syntax": "<color> | <image-1D>"
+      },
+      "name": "border-block-start-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-block-start-color",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-block-start-radius",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "border-start-start-radius",
+          "border-start-end-radius"
+        ],
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "border-block-start-radius",
+          "borderBlockStartRadius"
+        ],
+        "syntax": "<length-percentage [0,∞]>{1,2} [ / <length-percentage [0,∞]>{1,2} ]?"
+      },
+      "name": "border-block-start-radius",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-block-start-radius",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-block-start-style",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "logicalPropertyGroup": "border-style",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-block-start-style",
+          "borderBlockStartStyle"
+        ],
+        "syntax": "<line-style>"
+      },
+      "name": "border-block-start-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-block-start-style",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-block-start-width",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "absolute length, snapped as a border width",
+        "extended": [],
+        "inherited": "no",
+        "initial": "medium",
+        "logicalPropertyGroup": "border-width",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-block-start-width",
+          "borderBlockStartWidth"
+        ],
+        "syntax": "<line-width>"
+      },
+      "name": "border-block-start-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-block-start-width",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-block-style",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "border-block-start-style",
+          "border-block-end-style"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "border-block-style",
+          "borderBlockStyle"
+        ],
+        "syntax": "<'border-top-style'>{1,2}"
+      },
+      "name": "border-block-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-block-style",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-block-width",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "border-block-start-width",
+          "border-block-end-width"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "border-block-width",
+          "borderBlockWidth"
+        ],
+        "syntax": "<'border-top-width'>{1,2}"
+      },
+      "name": "border-block-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-block-width",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-bottom",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "See individual properties",
+        "longhands": [
+          "border-bottom-width",
+          "border-bottom-style",
+          "border-bottom-color"
+        ],
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-bottom",
+          "borderBottom"
+        ],
+        "syntax": "<line-width> || <line-style> || <color>"
+      },
+      "name": "border-bottom",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-bottom",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-bottom-clip",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "none, or a list consisting of absolute lengths, or percentages as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "logicalPropertyGroup": "border-clip",
+        "percentages": "refer to length of border-edge side",
+        "styleDeclaration": [
+          "border-bottom-clip",
+          "borderBottomClip"
+        ],
+        "syntax": "none | [ <length-percentage [0,∞]> | <flex> ]+"
+      },
+      "name": "border-bottom-clip",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-clip",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-bottom-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see prose",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the computed color and/or a one-dimensional image function",
+        "extended": [],
+        "inherited": "no",
+        "initial": "currentcolor",
+        "logicalPropertyGroup": "border-color",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-bottom-color",
+          "borderBottomColor"
+        ],
+        "syntax": "<color> | <image-1D>"
+      },
+      "name": "border-bottom-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-color",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-bottom-left-radius",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "pair of computed <length-percentage> values",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "border-radius",
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "border-bottom-left-radius",
+          "borderBottomLeftRadius"
+        ],
+        "syntax": "<border-radius>"
+      },
+      "name": "border-bottom-left-radius",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-left-radius",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-bottom-radius",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "border-bottom-left-radius",
+          "border-bottom-right-radius"
+        ],
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "border-bottom-radius",
+          "borderBottomRadius"
+        ],
+        "syntax": "<length-percentage [0,∞]>{1,2} [ / <length-percentage [0,∞]>{1,2} ]?"
+      },
+      "name": "border-bottom-radius",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-radius",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-bottom-right-radius",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "pair of computed <length-percentage> values",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "border-radius",
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "border-bottom-right-radius",
+          "borderBottomRightRadius"
+        ],
+        "syntax": "<border-radius>"
+      },
+      "name": "border-bottom-right-radius",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-right-radius",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-bottom-style",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "logicalPropertyGroup": "border-style",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-bottom-style",
+          "borderBottomStyle"
+        ],
+        "syntax": "<line-style>"
+      },
+      "name": "border-bottom-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-style",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-bottom-width",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "absolute length, snapped as a border width",
+        "extended": [],
+        "inherited": "no",
+        "initial": "medium",
+        "logicalPropertyGroup": "border-width",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-bottom-width",
+          "borderBottomWidth"
+        ],
+        "syntax": "<line-width>"
+      },
+      "name": "border-bottom-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-bottom-width",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-boundary",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "border-boundary",
+          "borderBoundary"
+        ],
+        "syntax": "none | parent | display"
+      },
+      "name": "border-boundary",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-round-display-1/#propdef-border-boundary",
+        "profile": "standard",
+        "source": "css:css-round-display-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-clip",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "border-top-clip",
+          "border-right-clip",
+          "border-bottom-clip",
+          "border-left-clip"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "border-clip",
+          "borderClip"
+        ],
+        "syntax": "<'border-top-clip'>"
+      },
+      "name": "border-clip",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-clip",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-collapse",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "table grid boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "separate",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "border-collapse",
+          "borderCollapse"
+        ],
+        "syntax": "separate | collapse"
+      },
+      "name": "border-collapse",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-tables-3/#propdef-border-collapse",
+        "profile": "standard",
+        "source": "css:css-tables-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "border-top-color",
+          "border-right-color",
+          "border-bottom-color",
+          "border-left-color"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "border-color",
+          "borderColor"
+        ],
+        "syntax": "[ <color> | <image-1D> ]{1,4}"
+      },
+      "name": "border-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-color",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-end-end-radius",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "pair of computed <length-percentage> values",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "border-radius",
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "border-end-end-radius",
+          "borderEndEndRadius"
+        ],
+        "syntax": "<border-radius>"
+      },
+      "name": "border-end-end-radius",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-end-end-radius",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-end-start-radius",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "pair of computed <length-percentage> values",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "border-radius",
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "border-end-start-radius",
+          "borderEndStartRadius"
+        ],
+        "syntax": "<border-radius>"
+      },
+      "name": "border-end-start-radius",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-end-start-radius",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-image",
+      "kind": "property",
+      "metadata": {
+        "animationType": "See individual properties",
+        "appliesTo": "See individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "See individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "See individual properties",
+        "longhands": [
+          "border-image-source",
+          "border-image-slice",
+          "border-image-width",
+          "border-image-outset",
+          "border-image-repeat"
+        ],
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-image",
+          "borderImage"
+        ],
+        "syntax": "<'border-image-source'> || <'border-image-slice'> [ / <'border-image-width'> | / <'border-image-width'>? / <'border-image-outset'> ]? || <'border-image-repeat'>"
+      },
+      "name": "border-image",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-image",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-image-outset",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "All elements, except internal table elements when border-collapse is collapse",
+        "canonicalOrder": "per grammar",
+        "computedValue": "four values, each a number or absolute length",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-image-outset",
+          "borderImageOutset"
+        ],
+        "syntax": "[ <length [0,∞]> | <number [0,∞]> ]{1,4}"
+      },
+      "name": "border-image-outset",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-image-outset",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-image-repeat",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "All elements, except internal table elements when border-collapse is collapse",
+        "canonicalOrder": "per grammar",
+        "computedValue": "two keywords, one per axis",
+        "extended": [],
+        "inherited": "no",
+        "initial": "stretch",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-image-repeat",
+          "borderImageRepeat"
+        ],
+        "syntax": "[ stretch | repeat | round | space ]{1,2}"
+      },
+      "name": "border-image-repeat",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-image-repeat",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-image-slice",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "All elements, except internal table elements when border-collapse is collapse",
+        "canonicalOrder": "per grammar",
+        "computedValue": "four values, each either a number or percentage; plus a fill keyword if specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "100%",
+        "percentages": "refer to size of the border image",
+        "styleDeclaration": [
+          "border-image-slice",
+          "borderImageSlice"
+        ],
+        "syntax": "[<number [0,∞]> | <percentage [0,∞]>]{1,4} && fill?"
+      },
+      "name": "border-image-slice",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-image-slice",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-image-source",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "All elements, except internal table elements when border-collapse is collapse",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword none or the computed <image>",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-image-source",
+          "borderImageSource"
+        ],
+        "syntax": "none | <image>"
+      },
+      "name": "border-image-source",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-image-source",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-image-width",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "All elements, except internal table elements when border-collapse is collapse",
+        "canonicalOrder": "per grammar",
+        "computedValue": "four values, each either a number, the keyword auto, or a computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "1",
+        "percentages": "Relative to width/height of the border image area",
+        "styleDeclaration": [
+          "border-image-width",
+          "borderImageWidth"
+        ],
+        "syntax": "[ <length-percentage [0,∞]> | <number [0,∞]> | auto ]{1,4}"
+      },
+      "name": "border-image-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-image-width",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-inline",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "border-inline-start",
+          "border-inline-end"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "border-inline",
+          "borderInline"
+        ],
+        "syntax": "<'border-block-start'>"
+      },
+      "name": "border-inline",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-inline",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-inline-clip",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "border-inline-start-clip",
+          "border-inline-end-clip"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "border-inline-clip",
+          "borderInlineClip"
+        ],
+        "syntax": "<'border-top-clip'>"
+      },
+      "name": "border-inline-clip",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-inline-clip",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-inline-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "border-inline-start-color",
+          "border-inline-end-color"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "border-inline-color",
+          "borderInlineColor"
+        ],
+        "syntax": "<'border-top-color'>{1,2}"
+      },
+      "name": "border-inline-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-inline-color",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-inline-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "See individual properties",
+        "longhands": [
+          "border-inline-end-width",
+          "border-inline-end-style",
+          "border-inline-end-color"
+        ],
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-inline-end",
+          "borderInlineEnd"
+        ],
+        "syntax": "<line-width> || <line-style> || <color>"
+      },
+      "name": "border-inline-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-inline-end",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-inline-end-clip",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "none, or a list consisting of absolute lengths, or percentages as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "logicalPropertyGroup": "border-clip",
+        "percentages": "refer to length of border-edge side",
+        "styleDeclaration": [
+          "border-inline-end-clip",
+          "borderInlineEndClip"
+        ],
+        "syntax": "none | [ <length-percentage [0,∞]> | <flex> ]+"
+      },
+      "name": "border-inline-end-clip",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-inline-end-clip",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-inline-end-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see prose",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the computed color and/or a one-dimensional image function",
+        "extended": [],
+        "inherited": "no",
+        "initial": "currentcolor",
+        "logicalPropertyGroup": "border-color",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-inline-end-color",
+          "borderInlineEndColor"
+        ],
+        "syntax": "<color> | <image-1D>"
+      },
+      "name": "border-inline-end-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-inline-end-color",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-inline-end-radius",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "border-start-end-radius",
+          "border-end-end-radius"
+        ],
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "border-inline-end-radius",
+          "borderInlineEndRadius"
+        ],
+        "syntax": "<length-percentage [0,∞]>{1,2} [ / <length-percentage [0,∞]>{1,2} ]?"
+      },
+      "name": "border-inline-end-radius",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-inline-end-radius",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-inline-end-style",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "logicalPropertyGroup": "border-style",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-inline-end-style",
+          "borderInlineEndStyle"
+        ],
+        "syntax": "<line-style>"
+      },
+      "name": "border-inline-end-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-inline-end-style",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-inline-end-width",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "absolute length, snapped as a border width",
+        "extended": [],
+        "inherited": "no",
+        "initial": "medium",
+        "logicalPropertyGroup": "border-width",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-inline-end-width",
+          "borderInlineEndWidth"
+        ],
+        "syntax": "<line-width>"
+      },
+      "name": "border-inline-end-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-inline-end-width",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-inline-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "See individual properties",
+        "longhands": [
+          "border-inline-start-width",
+          "border-inline-start-style",
+          "border-inline-start-color"
+        ],
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-inline-start",
+          "borderInlineStart"
+        ],
+        "syntax": "<line-width> || <line-style> || <color>"
+      },
+      "name": "border-inline-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-inline-start",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-inline-start-clip",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "none, or a list consisting of absolute lengths, or percentages as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "logicalPropertyGroup": "border-clip",
+        "percentages": "refer to length of border-edge side",
+        "styleDeclaration": [
+          "border-inline-start-clip",
+          "borderInlineStartClip"
+        ],
+        "syntax": "none | [ <length-percentage [0,∞]> | <flex> ]+"
+      },
+      "name": "border-inline-start-clip",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-inline-start-clip",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-inline-start-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see prose",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the computed color and/or a one-dimensional image function",
+        "extended": [],
+        "inherited": "no",
+        "initial": "currentcolor",
+        "logicalPropertyGroup": "border-color",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-inline-start-color",
+          "borderInlineStartColor"
+        ],
+        "syntax": "<color> | <image-1D>"
+      },
+      "name": "border-inline-start-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-inline-start-color",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-inline-start-radius",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "border-start-start-radius",
+          "border-end-start-radius"
+        ],
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "border-inline-start-radius",
+          "borderInlineStartRadius"
+        ],
+        "syntax": "<length-percentage [0,∞]>{1,2} [ / <length-percentage [0,∞]>{1,2} ]?"
+      },
+      "name": "border-inline-start-radius",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-inline-start-radius",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-inline-start-style",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "logicalPropertyGroup": "border-style",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-inline-start-style",
+          "borderInlineStartStyle"
+        ],
+        "syntax": "<line-style>"
+      },
+      "name": "border-inline-start-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-inline-start-style",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-inline-start-width",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "absolute length, snapped as a border width",
+        "extended": [],
+        "inherited": "no",
+        "initial": "medium",
+        "logicalPropertyGroup": "border-width",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-inline-start-width",
+          "borderInlineStartWidth"
+        ],
+        "syntax": "<line-width>"
+      },
+      "name": "border-inline-start-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-inline-start-width",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-inline-style",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "border-inline-start-style",
+          "border-inline-end-style"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "border-inline-style",
+          "borderInlineStyle"
+        ],
+        "syntax": "<'border-top-style'>{1,2}"
+      },
+      "name": "border-inline-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-inline-style",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-inline-width",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "border-inline-start-width",
+          "border-inline-end-width"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "border-inline-width",
+          "borderInlineWidth"
+        ],
+        "syntax": "<'border-top-width'>{1,2}"
+      },
+      "name": "border-inline-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-inline-width",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-left",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "See individual properties",
+        "longhands": [
+          "border-left-width",
+          "border-left-style",
+          "border-left-color"
+        ],
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-left",
+          "borderLeft"
+        ],
+        "syntax": "<line-width> || <line-style> || <color>"
+      },
+      "name": "border-left",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-left",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-left-clip",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "none, or a list consisting of absolute lengths, or percentages as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "logicalPropertyGroup": "border-clip",
+        "percentages": "refer to length of border-edge side",
+        "styleDeclaration": [
+          "border-left-clip",
+          "borderLeftClip"
+        ],
+        "syntax": "none | [ <length-percentage [0,∞]> | <flex> ]+"
+      },
+      "name": "border-left-clip",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-left-clip",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-left-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see prose",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the computed color and/or a one-dimensional image function",
+        "extended": [],
+        "inherited": "no",
+        "initial": "currentcolor",
+        "logicalPropertyGroup": "border-color",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-left-color",
+          "borderLeftColor"
+        ],
+        "syntax": "<color> | <image-1D>"
+      },
+      "name": "border-left-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-left-color",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-left-radius",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "border-top-left-radius",
+          "border-bottom-left-radius"
+        ],
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "border-left-radius",
+          "borderLeftRadius"
+        ],
+        "syntax": "<length-percentage [0,∞]>{1,2} [ / <length-percentage [0,∞]>{1,2} ]?"
+      },
+      "name": "border-left-radius",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-left-radius",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-left-style",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "logicalPropertyGroup": "border-style",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-left-style",
+          "borderLeftStyle"
+        ],
+        "syntax": "<line-style>"
+      },
+      "name": "border-left-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-left-style",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-left-width",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "absolute length, snapped as a border width",
+        "extended": [],
+        "inherited": "no",
+        "initial": "medium",
+        "logicalPropertyGroup": "border-width",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-left-width",
+          "borderLeftWidth"
+        ],
+        "syntax": "<line-width>"
+      },
+      "name": "border-left-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-left-width",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-limit",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements, except table element when border-collapse is collapse",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "all",
+        "percentages": "relative to border-box",
+        "styleDeclaration": [
+          "border-limit",
+          "borderLimit"
+        ],
+        "syntax": "all | [ sides | corners ] <length-percentage [0,∞]>? | [ top | right | bottom | left ] <length-percentage [0,∞]>"
+      },
+      "name": "border-limit",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-limit",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-radius",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "border-top-left-radius",
+          "border-top-right-radius",
+          "border-bottom-right-radius",
+          "border-bottom-left-radius"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "border-radius",
+          "borderRadius"
+        ],
+        "syntax": "<length-percentage [0,∞]>{1,4} [ / <length-percentage [0,∞]>{1,4} ]?"
+      },
+      "name": "border-radius",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-radius",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-right",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "See individual properties",
+        "longhands": [
+          "border-right-width",
+          "border-right-style",
+          "border-right-color"
+        ],
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-right",
+          "borderRight"
+        ],
+        "syntax": "<line-width> || <line-style> || <color>"
+      },
+      "name": "border-right",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-right",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-right-clip",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "none, or a list consisting of absolute lengths, or percentages as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "logicalPropertyGroup": "border-clip",
+        "percentages": "refer to length of border-edge side",
+        "styleDeclaration": [
+          "border-right-clip",
+          "borderRightClip"
+        ],
+        "syntax": "none | [ <length-percentage [0,∞]> | <flex> ]+"
+      },
+      "name": "border-right-clip",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-right-clip",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-right-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see prose",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the computed color and/or a one-dimensional image function",
+        "extended": [],
+        "inherited": "no",
+        "initial": "currentcolor",
+        "logicalPropertyGroup": "border-color",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-right-color",
+          "borderRightColor"
+        ],
+        "syntax": "<color> | <image-1D>"
+      },
+      "name": "border-right-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-right-color",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-right-radius",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "border-top-right-radius",
+          "border-bottom-right-radius"
+        ],
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "border-right-radius",
+          "borderRightRadius"
+        ],
+        "syntax": "<length-percentage [0,∞]>{1,2} [ / <length-percentage [0,∞]>{1,2} ]?"
+      },
+      "name": "border-right-radius",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-right-radius",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-right-style",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "logicalPropertyGroup": "border-style",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-right-style",
+          "borderRightStyle"
+        ],
+        "syntax": "<line-style>"
+      },
+      "name": "border-right-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-right-style",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-right-width",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "absolute length, snapped as a border width",
+        "extended": [],
+        "inherited": "no",
+        "initial": "medium",
+        "logicalPropertyGroup": "border-width",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-right-width",
+          "borderRightWidth"
+        ],
+        "syntax": "<line-width>"
+      },
+      "name": "border-right-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-right-width",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-shape",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item a computed color",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "see prose",
+        "styleDeclaration": [
+          "border-shape",
+          "borderShape"
+        ],
+        "syntax": "none | [ <basic-shape> <geometry-box>?]{1,2}"
+      },
+      "name": "border-shape",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-shape",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-spacing",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "table grid boxes when border-collapse is separate",
+        "canonicalOrder": "per grammar",
+        "computedValue": "two absolute lengths",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "0px 0px",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "border-spacing",
+          "borderSpacing"
+        ],
+        "syntax": "<length [0,∞]>{1,2}"
+      },
+      "name": "border-spacing",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-tables-3/#propdef-border-spacing",
+        "profile": "standard",
+        "source": "css:css-tables-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-start-end-radius",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "pair of computed <length-percentage> values",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "border-radius",
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "border-start-end-radius",
+          "borderStartEndRadius"
+        ],
+        "syntax": "<border-radius>"
+      },
+      "name": "border-start-end-radius",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-start-end-radius",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-start-start-radius",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "pair of computed <length-percentage> values",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "border-radius",
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "border-start-start-radius",
+          "borderStartStartRadius"
+        ],
+        "syntax": "<border-radius>"
+      },
+      "name": "border-start-start-radius",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-start-start-radius",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-style",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "border-top-style",
+          "border-right-style",
+          "border-bottom-style",
+          "border-left-style"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "border-style",
+          "borderStyle"
+        ],
+        "syntax": "<'border-top-style'>{1,4}"
+      },
+      "name": "border-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-style",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-top",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "See individual properties",
+        "longhands": [
+          "border-top-width",
+          "border-top-style",
+          "border-top-color"
+        ],
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-top",
+          "borderTop"
+        ],
+        "syntax": "<line-width> || <line-style> || <color>"
+      },
+      "name": "border-top",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-top",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-top-clip",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "none, or a list consisting of absolute lengths, or percentages as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "logicalPropertyGroup": "border-clip",
+        "percentages": "refer to length of border-edge side",
+        "styleDeclaration": [
+          "border-top-clip",
+          "borderTopClip"
+        ],
+        "syntax": "none | [ <length-percentage [0,∞]> | <flex> ]+"
+      },
+      "name": "border-top-clip",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-top-clip",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-top-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see prose",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the computed color and/or a one-dimensional image function",
+        "extended": [],
+        "inherited": "no",
+        "initial": "currentcolor",
+        "logicalPropertyGroup": "border-color",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-top-color",
+          "borderTopColor"
+        ],
+        "syntax": "<color> | <image-1D>"
+      },
+      "name": "border-top-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-top-color",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-top-left-radius",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "pair of computed <length-percentage> values",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "border-radius",
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "border-top-left-radius",
+          "borderTopLeftRadius"
+        ],
+        "syntax": "<border-radius>"
+      },
+      "name": "border-top-left-radius",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-top-left-radius",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-top-radius",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "border-top-left-radius",
+          "border-top-right-radius"
+        ],
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "border-top-radius",
+          "borderTopRadius"
+        ],
+        "syntax": "<length-percentage [0,∞]>{1,2} [ / <length-percentage [0,∞]>{1,2} ]?"
+      },
+      "name": "border-top-radius",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-top-radius",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-top-right-radius",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "pair of computed <length-percentage> values",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "border-radius",
+        "percentages": "Refer to corresponding dimension of the border box.",
+        "styleDeclaration": [
+          "border-top-right-radius",
+          "borderTopRightRadius"
+        ],
+        "syntax": "<border-radius>"
+      },
+      "name": "border-top-right-radius",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-top-right-radius",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-top-style",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "logicalPropertyGroup": "border-style",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-top-style",
+          "borderTopStyle"
+        ],
+        "syntax": "<line-style>"
+      },
+      "name": "border-top-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-top-style",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-top-width",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements except ruby base containers and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "absolute length, snapped as a border width",
+        "extended": [],
+        "inherited": "no",
+        "initial": "medium",
+        "logicalPropertyGroup": "border-width",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "border-top-width",
+          "borderTopWidth"
+        ],
+        "syntax": "<line-width>"
+      },
+      "name": "border-top-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-top-width",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.border-width",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "border-top-width",
+          "border-right-width",
+          "border-bottom-width",
+          "border-left-width"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "border-width",
+          "borderWidth"
+        ],
+        "syntax": "<'border-top-width'>{1,4}"
+      },
+      "name": "border-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-border-width",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.bottom",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "positioned elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword auto or a computed <length-percentage> value",
+        "extended": [
+          "https://drafts.csswg.org/css-anchor-position-1/"
+        ],
+        "inherited": "no",
+        "initial": "auto",
+        "logicalPropertyGroup": "inset",
+        "percentages": "refer to size of containing block; see prose",
+        "styleDeclaration": [
+          "bottom"
+        ],
+        "syntax": "auto | <length-percentage> | <anchor()> | <anchor-size()>"
+      },
+      "name": "bottom",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-position-3/#propdef-bottom",
+        "profile": "standard",
+        "source": "css:css-position-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.box-decoration-break",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "slice",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "box-decoration-break",
+          "boxDecorationBreak"
+        ],
+        "syntax": "slice | clone"
+      },
+      "name": "box-decoration-break",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-break-4/#propdef-box-decoration-break",
+        "profile": "standard",
+        "source": "css:css-break-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.box-shadow",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "longhands": [
+          "box-shadow-color",
+          "box-shadow-offset",
+          "box-shadow-blur",
+          "box-shadow-spread",
+          "box-shadow-position"
+        ],
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "box-shadow",
+          "boxShadow"
+        ],
+        "syntax": "<spread-shadow>#"
+      },
+      "name": "box-shadow",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-box-shadow",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.box-shadow-blur",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item a <length>",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "box-shadow-blur",
+          "boxShadowBlur"
+        ],
+        "syntax": "<length [0,∞]>#"
+      },
+      "name": "box-shadow-blur",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-box-shadow-blur",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.box-shadow-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item a computed color",
+        "extended": [],
+        "inherited": "no",
+        "initial": "currentcolor",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "box-shadow-color",
+          "boxShadowColor"
+        ],
+        "syntax": "<color>#"
+      },
+      "name": "box-shadow-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-box-shadow-color",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.box-shadow-offset",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value, treating none as 0 0 when interpolated with non-none values.",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item either none or a pair of offsets (horizontal and vertical) from the element‘s box",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "box-shadow-offset",
+          "boxShadowOffset"
+        ],
+        "syntax": "[ none | <length>{1,2} ]#"
+      },
+      "name": "box-shadow-offset",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-box-shadow-offset",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.box-shadow-position",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item one of the keywords",
+        "extended": [],
+        "inherited": "no",
+        "initial": "outset",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "box-shadow-position",
+          "boxShadowPosition"
+        ],
+        "syntax": "[ outset | inset ]#"
+      },
+      "name": "box-shadow-position",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-box-shadow-position",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.box-shadow-spread",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item a <length>",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "box-shadow-spread",
+          "boxShadowSpread"
+        ],
+        "syntax": "<length>#"
+      },
+      "name": "box-shadow-spread",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-borders-4/#propdef-box-shadow-spread",
+        "profile": "standard",
+        "source": "css:css-borders-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.box-sizing",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements that accept width or height",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "content-box",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "box-sizing",
+          "boxSizing"
+        ],
+        "syntax": "content-box | border-box"
+      },
+      "name": "box-sizing",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-sizing-3/#propdef-box-sizing",
+        "profile": "standard",
+        "source": "css:css-sizing-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.box-snap",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block-level boxes and internal table elements except table cells",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "box-snap",
+          "boxSnap"
+        ],
+        "syntax": "none | block-start | block-end | center | baseline | last-baseline"
+      },
+      "name": "box-snap",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-line-grid-1/#propdef-box-snap",
+        "profile": "standard",
+        "source": "css:css-line-grid-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.break-after",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block-level boxes, grid items, flex items, table row groups, table rows (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "break-after",
+          "breakAfter"
+        ],
+        "syntax": "auto | avoid | always | all | avoid-page | page | left | right | recto | verso | avoid-column | column | avoid-region | region"
+      },
+      "name": "break-after",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-break-4/#propdef-break-after",
+        "profile": "standard",
+        "source": "css:css-break-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.break-before",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block-level boxes, grid items, flex items, table row groups, table rows (but see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "break-before",
+          "breakBefore"
+        ],
+        "syntax": "auto | avoid | always | all | avoid-page | page | left | right | recto | verso | avoid-column | column | avoid-region | region"
+      },
+      "name": "break-before",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-break-4/#propdef-break-before",
+        "profile": "standard",
+        "source": "css:css-break-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.break-inside",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements except inline-level boxes, internal ruby boxes, table column boxes, table column group boxes, absolutely-positioned boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "break-inside",
+          "breakInside"
+        ],
+        "syntax": "auto | avoid | avoid-page | avoid-column | avoid-region"
+      },
+      "name": "break-inside",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-break-4/#propdef-break-inside",
+        "profile": "standard",
+        "source": "css:css-break-4",
+        "version": "8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/properties/b.json"
+}

@@ -1,0 +1,379 @@
+{
+  "entries": [
+    {
+      "description": "dictionary TransitionEventInit from css-transitions.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-transitions.dictionaries.transitioneventinit",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "css-transitions.idl",
+        "inheritance": "EventInit"
+      },
+      "name": "TransitionEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-transitions.idl#WebIDL:TransitionEventInit",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "TransitionEventInit.elapsedTime Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-transitions.dictionaries.transitioneventinit.fields.elapsedtime",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-transitions.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"elapsedTime\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"default\":{\"type\":\"number\",\"value\":\"0.0\"},\"required\":false}"
+      },
+      "name": "elapsedTime",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-transitions.dictionaries.transitioneventinit",
+      "spec": {
+        "anchor": "webref/idl/css-transitions.idl#WebIDL:TransitionEventInit.elapsedTime",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "TransitionEventInit.propertyName Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-transitions.dictionaries.transitioneventinit.fields.propertyname",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-transitions.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"propertyName\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":{\"type\":\"string\",\"value\":\"\"},\"required\":false}"
+      },
+      "name": "propertyName",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-transitions.dictionaries.transitioneventinit",
+      "spec": {
+        "anchor": "webref/idl/css-transitions.idl#WebIDL:TransitionEventInit.propertyName",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "TransitionEventInit.pseudoElement Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-transitions.dictionaries.transitioneventinit.fields.pseudoelement",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-transitions.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"pseudoElement\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":{\"type\":\"string\",\"value\":\"\"},\"required\":false}"
+      },
+      "name": "pseudoElement",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-transitions.dictionaries.transitioneventinit",
+      "spec": {
+        "anchor": "webref/idl/css-transitions.idl#WebIDL:TransitionEventInit.pseudoElement",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "TransitionEventInit has EventInit as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-transitions.dictionaries.transitioneventinit.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "EventInit"
+      },
+      "name": "TransitionEventInit inherits EventInit",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-transitions.dictionaries.transitioneventinit",
+      "spec": {
+        "anchor": "webref/idl/css-transitions.idl#WebIDL:TransitionEventInit",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface TransitionEvent from css-transitions.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-transitions.interfaces.transitionevent",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-transitions.idl",
+        "inheritance": "Event"
+      },
+      "name": "TransitionEvent",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-transitions.idl#WebIDL:TransitionEvent",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "TransitionEvent.elapsedTime Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-transitions.interfaces.transitionevent.attributes.elapsedtime",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-transitions.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"elapsedTime\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "elapsedTime",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-transitions.interfaces.transitionevent",
+      "spec": {
+        "anchor": "webref/idl/css-transitions.idl#WebIDL:TransitionEvent.elapsedTime",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "TransitionEvent.propertyName Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-transitions.interfaces.transitionevent.attributes.propertyname",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-transitions.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"propertyName\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "propertyName",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-transitions.interfaces.transitionevent",
+      "spec": {
+        "anchor": "webref/idl/css-transitions.idl#WebIDL:TransitionEvent.propertyName",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "TransitionEvent.pseudoElement Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-transitions.interfaces.transitionevent.attributes.pseudoelement",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-transitions.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"pseudoElement\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "pseudoElement",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-transitions.interfaces.transitionevent",
+      "spec": {
+        "anchor": "webref/idl/css-transitions.idl#WebIDL:TransitionEvent.pseudoElement",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "TransitionEvent.constructor Web IDL constructor.",
+      "domain": "css",
+      "id": "css.cssom.css-transitions.interfaces.transitionevent.constructors.constructor",
+      "kind": "constructor",
+      "metadata": {
+        "idlSource": "css-transitions.idl",
+        "signature": "{\"type\":\"constructor\",\"arguments\":[{\"type\":\"argument\",\"name\":\"type\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"transitionEventInitDict\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"TransitionEventInit\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[]}"
+      },
+      "name": "constructor",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-transitions.interfaces.transitionevent",
+      "spec": {
+        "anchor": "webref/idl/css-transitions.idl#WebIDL:TransitionEvent.constructor",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "TransitionEvent has Event as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-transitions.interfaces.transitionevent.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "Event"
+      },
+      "name": "TransitionEvent inherits Event",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-transitions.interfaces.transitionevent",
+      "spec": {
+        "anchor": "webref/idl/css-transitions.idl#WebIDL:TransitionEvent",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface mixin GlobalEventHandlers from css-transitions.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-transitions.mixins.globaleventhandlers",
+      "kind": "interface mixin",
+      "metadata": {
+        "idlSource": "css-transitions.idl"
+      },
+      "name": "GlobalEventHandlers",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-transitions.idl#WebIDL:GlobalEventHandlers",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "GlobalEventHandlers.ontransitioncancel Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-transitions.mixins.globaleventhandlers.attributes.ontransitioncancel",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-transitions.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"ontransitioncancel\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"EventHandler\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "ontransitioncancel",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-transitions.mixins.globaleventhandlers",
+      "spec": {
+        "anchor": "webref/idl/css-transitions.idl#WebIDL:GlobalEventHandlers.ontransitioncancel",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "GlobalEventHandlers.ontransitionend Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-transitions.mixins.globaleventhandlers.attributes.ontransitionend",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-transitions.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"ontransitionend\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"EventHandler\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "ontransitionend",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-transitions.mixins.globaleventhandlers",
+      "spec": {
+        "anchor": "webref/idl/css-transitions.idl#WebIDL:GlobalEventHandlers.ontransitionend",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "GlobalEventHandlers.ontransitionrun Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-transitions.mixins.globaleventhandlers.attributes.ontransitionrun",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-transitions.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"ontransitionrun\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"EventHandler\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "ontransitionrun",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-transitions.mixins.globaleventhandlers",
+      "spec": {
+        "anchor": "webref/idl/css-transitions.idl#WebIDL:GlobalEventHandlers.ontransitionrun",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "GlobalEventHandlers.ontransitionstart Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-transitions.mixins.globaleventhandlers.attributes.ontransitionstart",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-transitions.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"ontransitionstart\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"EventHandler\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "ontransitionstart",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-transitions.mixins.globaleventhandlers",
+      "spec": {
+        "anchor": "webref/idl/css-transitions.idl#WebIDL:GlobalEventHandlers.ontransitionstart",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-transitions.json"
+}

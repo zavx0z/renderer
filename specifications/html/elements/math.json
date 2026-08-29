@@ -1,0 +1,123 @@
+{
+  "entries": [
+    {
+      "description": "MathML root",
+      "domain": "html",
+      "id": "html.elements.math",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; phrasing; embedded; palpable",
+        "children": "per [MATHML]",
+        "interface": "Element",
+        "parents": "phrasing"
+      },
+      "name": "math",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/mathml-core/#the-top-level-math-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <math> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.math.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "math",
+        "interface": "Element"
+      },
+      "name": "math implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.math",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <math> element content categories.",
+      "domain": "html",
+      "id": "html.elements.math.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "math",
+        "interface": "Element"
+      },
+      "name": "math content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.math",
+      "spec": {
+        "anchor": "https://w3c.github.io/mathml-core/#the-top-level-math-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <math> element content model.",
+      "domain": "html",
+      "id": "html.elements.math.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "math",
+        "interface": "Element"
+      },
+      "name": "math content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.math",
+      "spec": {
+        "anchor": "https://w3c.github.io/mathml-core/#the-top-level-math-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <math> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.math.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "math",
+        "interface": "Element"
+      },
+      "name": "math interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.math",
+      "spec": {
+        "anchor": "https://w3c.github.io/mathml-core/#the-top-level-math-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/math.json"
+}

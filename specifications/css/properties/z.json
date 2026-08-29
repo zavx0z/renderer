@@ -1,0 +1,72 @@
+{
+  "entries": [
+    {
+      "domain": "css",
+      "id": "css.properties.z-index",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "positioned elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "z-index",
+          "zIndex"
+        ],
+        "syntax": "auto | <integer> | inherit"
+      },
+      "name": "z-index",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css2/#propdef-z-index",
+        "profile": "standard",
+        "source": "css:css2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.zoom",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all <length> property values of all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified, but with <percentage> converted to the equivalent <number>",
+        "extended": [],
+        "inherited": "no",
+        "initial": "1",
+        "media": "visual",
+        "percentages": "Converted to <number>",
+        "styleDeclaration": [
+          "zoom"
+        ],
+        "syntax": "<number [0,∞]> | <percentage [0,∞]>"
+      },
+      "name": "zoom",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-viewport/#propdef-zoom",
+        "profile": "standard",
+        "source": "css:css-viewport",
+        "version": "8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/properties/z.json"
+}

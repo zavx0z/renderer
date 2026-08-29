@@ -1,0 +1,2391 @@
+{
+  "entries": [
+    {
+      "domain": "css",
+      "id": "css.properties.scale",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value, but see below for none",
+        "appliesTo": "transformable elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword none, or a list of 3 <number>s",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "scale"
+        ],
+        "syntax": "none | [ <number> | <percentage> ]{1,3}"
+      },
+      "name": "scale",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-transforms-2/#propdef-scale",
+        "profile": "standard",
+        "source": "css:css-transforms-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-axis-lock",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "scroll container elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "scroll-axis-lock",
+          "scrollAxisLock"
+        ],
+        "syntax": "auto | none"
+      },
+      "name": "scroll-axis-lock",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-5/#propdef-scroll-axis-lock",
+        "profile": "standard",
+        "source": "css:css-overflow-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-behavior",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "scroll containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "scroll-behavior",
+          "scrollBehavior"
+        ],
+        "syntax": "auto | smooth"
+      },
+      "name": "scroll-behavior",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-3/#propdef-scroll-behavior",
+        "profile": "standard",
+        "source": "css:css-overflow-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-initial-target",
+      "kind": "property",
+      "metadata": {
+        "animationType": "none",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "scroll-initial-target",
+          "scrollInitialTarget"
+        ],
+        "syntax": "none | nearest"
+      },
+      "name": "scroll-initial-target",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-2/#propdef-scroll-initial-target",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-margin",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "per side, an absolute length",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "scroll-margin-top",
+          "scroll-margin-right",
+          "scroll-margin-bottom",
+          "scroll-margin-left"
+        ],
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "scroll-margin",
+          "scrollMargin"
+        ],
+        "syntax": "<length>{1,4}"
+      },
+      "name": "scroll-margin",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-margin-block",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "scroll-margin-block-start",
+          "scroll-margin-block-end"
+        ],
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "scroll-margin-block",
+          "scrollMarginBlock"
+        ],
+        "syntax": "<length>{1,2}"
+      },
+      "name": "scroll-margin-block",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-block",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-margin-block-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "absolute length",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "scroll-margin",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "scroll-margin-block-end",
+          "scrollMarginBlockEnd"
+        ],
+        "syntax": "<length>"
+      },
+      "name": "scroll-margin-block-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-block-end",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-margin-block-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "absolute length",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "scroll-margin",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "scroll-margin-block-start",
+          "scrollMarginBlockStart"
+        ],
+        "syntax": "<length>"
+      },
+      "name": "scroll-margin-block-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-block-start",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-margin-bottom",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "absolute length",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "scroll-margin",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "scroll-margin-bottom",
+          "scrollMarginBottom"
+        ],
+        "syntax": "<length>"
+      },
+      "name": "scroll-margin-bottom",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-bottom",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-margin-inline",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "scroll-margin-inline-start",
+          "scroll-margin-inline-end"
+        ],
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "scroll-margin-inline",
+          "scrollMarginInline"
+        ],
+        "syntax": "<length>{1,2}"
+      },
+      "name": "scroll-margin-inline",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-inline",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-margin-inline-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "absolute length",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "scroll-margin",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "scroll-margin-inline-end",
+          "scrollMarginInlineEnd"
+        ],
+        "syntax": "<length>"
+      },
+      "name": "scroll-margin-inline-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-inline-end",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-margin-inline-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "absolute length",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "scroll-margin",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "scroll-margin-inline-start",
+          "scrollMarginInlineStart"
+        ],
+        "syntax": "<length>"
+      },
+      "name": "scroll-margin-inline-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-inline-start",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-margin-left",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "absolute length",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "scroll-margin",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "scroll-margin-left",
+          "scrollMarginLeft"
+        ],
+        "syntax": "<length>"
+      },
+      "name": "scroll-margin-left",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-left",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-margin-right",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "absolute length",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "scroll-margin",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "scroll-margin-right",
+          "scrollMarginRight"
+        ],
+        "syntax": "<length>"
+      },
+      "name": "scroll-margin-right",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-right",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-margin-top",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "absolute length",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "scroll-margin",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "scroll-margin-top",
+          "scrollMarginTop"
+        ],
+        "syntax": "<length>"
+      },
+      "name": "scroll-margin-top",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-margin-top",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-marker-group",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "scroll containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword(s)",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "scroll-marker-group",
+          "scrollMarkerGroup"
+        ],
+        "syntax": "none | [ [ before | after ] || [ links | tabs ] ]"
+      },
+      "name": "scroll-marker-group",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-5/#propdef-scroll-marker-group",
+        "profile": "standard",
+        "source": "css:css-overflow-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-padding",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "scroll containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "per side, either the keyword auto or a computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "longhands": [
+          "scroll-padding-top",
+          "scroll-padding-right",
+          "scroll-padding-bottom",
+          "scroll-padding-left"
+        ],
+        "percentages": "relative to the corresponding dimension of the scroll container’s scrollport",
+        "styleDeclaration": [
+          "scroll-padding",
+          "scrollPadding"
+        ],
+        "syntax": "[ auto | <length-percentage [0,∞]> ]{1,4}"
+      },
+      "name": "scroll-padding",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-padding-block",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "scroll containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "longhands": [
+          "scroll-padding-block-start",
+          "scroll-padding-block-end"
+        ],
+        "percentages": "relative to the scroll container’s scrollport",
+        "styleDeclaration": [
+          "scroll-padding-block",
+          "scrollPaddingBlock"
+        ],
+        "syntax": "[ auto | <length-percentage [0,∞]> ]{1,2}"
+      },
+      "name": "scroll-padding-block",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-block",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-padding-block-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "scroll containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword auto or a computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "logicalPropertyGroup": "scroll-padding",
+        "percentages": "relative to the scroll container’s scrollport",
+        "styleDeclaration": [
+          "scroll-padding-block-end",
+          "scrollPaddingBlockEnd"
+        ],
+        "syntax": "auto | <length-percentage [0,∞]>"
+      },
+      "name": "scroll-padding-block-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-block-end",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-padding-block-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "scroll containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword auto or a computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "logicalPropertyGroup": "scroll-padding",
+        "percentages": "relative to the scroll container’s scrollport",
+        "styleDeclaration": [
+          "scroll-padding-block-start",
+          "scrollPaddingBlockStart"
+        ],
+        "syntax": "auto | <length-percentage [0,∞]>"
+      },
+      "name": "scroll-padding-block-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-block-start",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-padding-bottom",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "scroll containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword auto or a computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "logicalPropertyGroup": "scroll-padding",
+        "percentages": "relative to the scroll container’s scrollport",
+        "styleDeclaration": [
+          "scroll-padding-bottom",
+          "scrollPaddingBottom"
+        ],
+        "syntax": "auto | <length-percentage [0,∞]>"
+      },
+      "name": "scroll-padding-bottom",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-bottom",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-padding-inline",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "scroll containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "longhands": [
+          "scroll-padding-inline-start",
+          "scroll-padding-inline-end"
+        ],
+        "percentages": "relative to the scroll container’s scrollport",
+        "styleDeclaration": [
+          "scroll-padding-inline",
+          "scrollPaddingInline"
+        ],
+        "syntax": "[ auto | <length-percentage [0,∞]> ]{1,2}"
+      },
+      "name": "scroll-padding-inline",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-inline",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-padding-inline-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "scroll containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword auto or a computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "logicalPropertyGroup": "scroll-padding",
+        "percentages": "relative to the scroll container’s scrollport",
+        "styleDeclaration": [
+          "scroll-padding-inline-end",
+          "scrollPaddingInlineEnd"
+        ],
+        "syntax": "auto | <length-percentage [0,∞]>"
+      },
+      "name": "scroll-padding-inline-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-inline-end",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-padding-inline-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "scroll containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword auto or a computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "logicalPropertyGroup": "scroll-padding",
+        "percentages": "relative to the scroll container’s scrollport",
+        "styleDeclaration": [
+          "scroll-padding-inline-start",
+          "scrollPaddingInlineStart"
+        ],
+        "syntax": "auto | <length-percentage [0,∞]>"
+      },
+      "name": "scroll-padding-inline-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-inline-start",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-padding-left",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "scroll containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword auto or a computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "logicalPropertyGroup": "scroll-padding",
+        "percentages": "relative to the scroll container’s scrollport",
+        "styleDeclaration": [
+          "scroll-padding-left",
+          "scrollPaddingLeft"
+        ],
+        "syntax": "auto | <length-percentage [0,∞]>"
+      },
+      "name": "scroll-padding-left",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-left",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-padding-right",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "scroll containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword auto or a computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "logicalPropertyGroup": "scroll-padding",
+        "percentages": "relative to the scroll container’s scrollport",
+        "styleDeclaration": [
+          "scroll-padding-right",
+          "scrollPaddingRight"
+        ],
+        "syntax": "auto | <length-percentage [0,∞]>"
+      },
+      "name": "scroll-padding-right",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-right",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-padding-top",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "scroll containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword auto or a computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "logicalPropertyGroup": "scroll-padding",
+        "percentages": "relative to the scroll container’s scrollport",
+        "styleDeclaration": [
+          "scroll-padding-top",
+          "scrollPaddingTop"
+        ],
+        "syntax": "auto | <length-percentage [0,∞]>"
+      },
+      "name": "scroll-padding-top",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-padding-top",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-snap-align",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "two keywords",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "scroll-snap-align",
+          "scrollSnapAlign"
+        ],
+        "syntax": "[ none | start | end | center ]{1,2}"
+      },
+      "name": "scroll-snap-align",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-snap-align",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-snap-stop",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "scroll-snap-stop",
+          "scrollSnapStop"
+        ],
+        "syntax": "normal | always"
+      },
+      "name": "scroll-snap-stop",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-snap-stop",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-snap-type",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword(s)",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "scroll-snap-type",
+          "scrollSnapType"
+        ],
+        "syntax": "none | [ x | y | block | inline | both ] [ mandatory | proximity ]?"
+      },
+      "name": "scroll-snap-type",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scroll-snap-1/#propdef-scroll-snap-type",
+        "profile": "standard",
+        "source": "css:css-scroll-snap-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-target-group",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "scroll-target-group",
+          "scrollTargetGroup"
+        ],
+        "syntax": "none | auto"
+      },
+      "name": "scroll-target-group",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-5/#propdef-scroll-target-group",
+        "profile": "standard",
+        "source": "css:css-overflow-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-timeline",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "see individual properties",
+        "longhands": [
+          "scroll-timeline-name",
+          "scroll-timeline-axis"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "scroll-timeline",
+          "scrollTimeline"
+        ],
+        "syntax": "[ <'scroll-timeline-name'> <'scroll-timeline-axis'>? ]#"
+      },
+      "name": "scroll-timeline",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/scroll-animations-1/#propdef-scroll-timeline",
+        "profile": "standard",
+        "source": "css:scroll-animations-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-timeline-axis",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "a list of the keywords specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "block",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "scroll-timeline-axis",
+          "scrollTimelineAxis"
+        ],
+        "syntax": "[ block | inline | x | y ]#"
+      },
+      "name": "scroll-timeline-axis",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/scroll-animations-1/#propdef-scroll-timeline-axis",
+        "profile": "standard",
+        "source": "css:scroll-animations-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scroll-timeline-name",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item either a CSS identifier or the keyword none",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "scroll-timeline-name",
+          "scrollTimelineName"
+        ],
+        "syntax": "[ none | <dashed-ident> ]#"
+      },
+      "name": "scroll-timeline-name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/scroll-animations-1/#propdef-scroll-timeline-name",
+        "profile": "standard",
+        "source": "css:scroll-animations-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scrollbar-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "scroll containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword or two computed colors",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "scrollbar-color",
+          "scrollbarColor"
+        ],
+        "syntax": "auto | <color>{2}"
+      },
+      "name": "scrollbar-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scrollbars-1/#propdef-scrollbar-color",
+        "profile": "standard",
+        "source": "css:css-scrollbars-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scrollbar-gutter",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "scroll containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword(s)",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "scrollbar-gutter",
+          "scrollbarGutter"
+        ],
+        "syntax": "auto | stable && both-edges?"
+      },
+      "name": "scrollbar-gutter",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-3/#propdef-scrollbar-gutter",
+        "profile": "standard",
+        "source": "css:css-overflow-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.scrollbar-width",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "scroll containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "scrollbar-width",
+          "scrollbarWidth"
+        ],
+        "syntax": "auto | thin | none"
+      },
+      "name": "scrollbar-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-scrollbars-1/#propdef-scrollbar-width",
+        "profile": "standard",
+        "source": "css:css-scrollbars-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.shape-image-threshold",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "floats",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified number, clamped to the range [0,1]",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "shape-image-threshold",
+          "shapeImageThreshold"
+        ],
+        "syntax": "<opacity-value>"
+      },
+      "name": "shape-image-threshold",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-shapes-1/#propdef-shape-image-threshold",
+        "profile": "standard",
+        "source": "css:css-shapes-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.shape-inside",
+      "kind": "property",
+      "metadata": {
+        "animationType": "as defined for <basic-shape>, otherwise discrete",
+        "appliesTo": "block-level elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "computed lengths for <basic-shape>, the absolute URL for <url>, otherwise as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "shape-inside",
+          "shapeInside"
+        ],
+        "syntax": "auto | outside-shape | [ <basic-shape> || shape-box ] | <image> | display"
+      },
+      "name": "shape-inside",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-shapes-2/#propdef-shape-inside",
+        "profile": "standard",
+        "source": "css:css-shapes-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.shape-margin",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "floats and initial letter boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "percentages": "refer to the inline size of the containing block",
+        "styleDeclaration": [
+          "shape-margin",
+          "shapeMargin"
+        ],
+        "syntax": "<length-percentage [0,∞]>"
+      },
+      "name": "shape-margin",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-shapes-1/#propdef-shape-margin",
+        "profile": "standard",
+        "source": "css:css-shapes-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.shape-outside",
+      "kind": "property",
+      "metadata": {
+        "animationType": "as defined for <basic-shape>, otherwise discrete",
+        "appliesTo": "floats and initial letter boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as defined for <basic-shape> (with <shape-box> following, if supplied); else the computed <image>; else the keyword as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "shape-outside",
+          "shapeOutside"
+        ],
+        "syntax": "none | [ <basic-shape> || <shape-box> ] | <image>"
+      },
+      "name": "shape-outside",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-shapes-1/#propdef-shape-outside",
+        "profile": "standard",
+        "source": "css:css-shapes-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.shape-padding",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "block-level elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "percentages": "refer to the inline size of the containing block",
+        "styleDeclaration": [
+          "shape-padding",
+          "shapePadding"
+        ],
+        "syntax": "<length-percentage [0,∞]>"
+      },
+      "name": "shape-padding",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-shapes-2/#propdef-shape-padding",
+        "profile": "standard",
+        "source": "css:css-shapes-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.shape-rendering",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "shapes",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "shape-rendering",
+          "shapeRendering"
+        ],
+        "syntax": "auto | optimizeSpeed | crispEdges | geometricPrecision"
+      },
+      "name": "shape-rendering",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/painting.html#ShapeRenderingProperty",
+        "profile": "standard",
+        "source": "css:svgwg",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.slider-orientation",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "slider-orientation",
+          "sliderOrientation"
+        ],
+        "syntax": "auto | left-to-right | right-to-left | top-to-bottom | bottom-to-top"
+      },
+      "name": "slider-orientation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-forms-1/#propdef-slider-orientation",
+        "profile": "standard",
+        "source": "css:css-forms-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.spatial-navigation-action",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "scroll containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "spatial-navigation-action",
+          "spatialNavigationAction"
+        ],
+        "syntax": "auto | focus | scroll"
+      },
+      "name": "spatial-navigation-action",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-spatial-nav-1/#propdef-spatial-navigation-action",
+        "profile": "standard",
+        "source": "css:css-spatial-nav-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.spatial-navigation-contain",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "spatial-navigation-contain",
+          "spatialNavigationContain"
+        ],
+        "syntax": "auto | contain"
+      },
+      "name": "spatial-navigation-contain",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-spatial-nav-1/#propdef-spatial-navigation-contain",
+        "profile": "standard",
+        "source": "css:css-spatial-nav-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.spatial-navigation-function",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "spatial navigation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "spatial-navigation-function",
+          "spatialNavigationFunction"
+        ],
+        "syntax": "normal | grid"
+      },
+      "name": "spatial-navigation-function",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-spatial-nav-1/#propdef-spatial-navigation-function",
+        "profile": "standard",
+        "source": "css:css-spatial-nav-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.speak",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "speak"
+        ],
+        "syntax": "auto | never | always"
+      },
+      "name": "speak",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-speech-1/#propdef-speak",
+        "profile": "standard",
+        "source": "css:css-speech-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.speak-as",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "speak-as",
+          "speakAs"
+        ],
+        "syntax": "normal | spell-out || digits || [ literal-punctuation | no-punctuation ]"
+      },
+      "name": "speak-as",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-speech-1/#propdef-speak-as",
+        "profile": "standard",
+        "source": "css:css-speech-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.stop-color",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "styleDeclaration": [
+          "stop-color",
+          "stopColor"
+        ],
+        "syntax": "<'color'>"
+      },
+      "name": "stop-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/pservers.html#StopColorProperty",
+        "profile": "standard",
+        "source": "css:svgwg",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.stop-opacity",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "styleDeclaration": [
+          "stop-opacity",
+          "stopOpacity"
+        ],
+        "syntax": "<'opacity'>"
+      },
+      "name": "stop-opacity",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/pservers.html#StopOpacityProperty",
+        "profile": "standard",
+        "source": "css:svgwg",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.string-set",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements, but not pseudo-elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword none or a list, each item an identifier paired with a list of string values",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "string-set",
+          "stringSet"
+        ],
+        "syntax": "none | [ <custom-ident> <string>+ ]#"
+      },
+      "name": "string-set",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-content-3/#propdef-string-set",
+        "profile": "standard",
+        "source": "css:css-content-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.stroke",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "shapes and text content elements",
+        "computedValue": "as specified, but with <color> values computed and <url> values made absolute",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "none",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "stroke"
+        ],
+        "syntax": "<paint>"
+      },
+      "name": "stroke",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/painting.html#StrokeProperty",
+        "profile": "standard",
+        "source": "css:svgwg",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.stroke-align",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "text and SVG shapes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "center",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "stroke-align",
+          "strokeAlign"
+        ],
+        "syntax": "center | inset | outset"
+      },
+      "name": "stroke-align",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-align",
+        "profile": "standard",
+        "source": "css:fill-stroke-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.stroke-alignment",
+      "kind": "property",
+      "metadata": {
+        "animatable": "yes",
+        "appliesTo": "shapes and text content elements",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "center",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "stroke-alignment",
+          "strokeAlignment"
+        ],
+        "syntax": "center | inner | outer"
+      },
+      "name": "stroke-alignment",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://svgwg.org/specs/strokes/#StrokeAlignmentProperty",
+        "profile": "standard",
+        "source": "css:specs",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.stroke-break",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "?",
+        "initial": "bounding-box",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "stroke-break",
+          "strokeBreak"
+        ],
+        "syntax": "bounding-box | slice | clone"
+      },
+      "name": "stroke-break",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-break",
+        "profile": "standard",
+        "source": "css:fill-stroke-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.stroke-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "text and SVG shapes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the computed color",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "transparent",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "stroke-color",
+          "strokeColor"
+        ],
+        "syntax": "<color>#"
+      },
+      "name": "stroke-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-color",
+        "profile": "standard",
+        "source": "css:fill-stroke-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.stroke-dash-corner",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value if <length>, otherwise discrete",
+        "appliesTo": "text and SVG shapes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified value, with lengths made absolute",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "none",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "stroke-dash-corner",
+          "strokeDashCorner"
+        ],
+        "syntax": "none | <length>"
+      },
+      "name": "stroke-dash-corner",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-dash-corner",
+        "profile": "standard",
+        "source": "css:fill-stroke-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.stroke-dash-justify",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "text and SVG shapes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified value, with lengths made absolute",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "none",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "stroke-dash-justify",
+          "strokeDashJustify"
+        ],
+        "syntax": "none | [ stretch | compress ] || [ dashes || gaps ]"
+      },
+      "name": "stroke-dash-justify",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-dash-justify",
+        "profile": "standard",
+        "source": "css:fill-stroke-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.stroke-dashadjust",
+      "kind": "property",
+      "metadata": {
+        "animatable": "yes",
+        "appliesTo": "shapes and text content elements",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "none",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "stroke-dashadjust",
+          "strokeDashadjust"
+        ],
+        "syntax": "none | [stretch | compress] [dashes | gaps]?"
+      },
+      "name": "stroke-dashadjust",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://svgwg.org/specs/strokes/#StrokeDashadjustProperty",
+        "profile": "standard",
+        "source": "css:specs",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.stroke-dasharray",
+      "kind": "property",
+      "metadata": {
+        "animationType": "repeatable list",
+        "appliesTo": "text and SVG shapes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "none",
+        "media": "visual",
+        "percentages": "relative to the scaled viewport size",
+        "styleDeclaration": [
+          "stroke-dasharray",
+          "strokeDasharray"
+        ],
+        "syntax": "none | [<length-percentage> | <number>]+#"
+      },
+      "name": "stroke-dasharray",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-dasharray",
+        "profile": "standard",
+        "source": "css:fill-stroke-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.stroke-dashcorner",
+      "kind": "property",
+      "metadata": {
+        "animatable": "yes",
+        "appliesTo": "shapes and text content elements",
+        "computedValue": "absolute length or keyword specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "none",
+        "media": "visual",
+        "percentages": "refer to the size of the current viewport (see Units)",
+        "styleDeclaration": [
+          "stroke-dashcorner",
+          "strokeDashcorner"
+        ],
+        "syntax": "none | <length>"
+      },
+      "name": "stroke-dashcorner",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://svgwg.org/specs/strokes/#StrokeDashcornerProperty",
+        "profile": "standard",
+        "source": "css:specs",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.stroke-dashoffset",
+      "kind": "property",
+      "metadata": {
+        "animationType": "repeatable list",
+        "appliesTo": "text and SVG shapes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "0",
+        "media": "visual",
+        "percentages": "relative to the scaled viewport size",
+        "styleDeclaration": [
+          "stroke-dashoffset",
+          "strokeDashoffset"
+        ],
+        "syntax": "<length-percentage> | <number>"
+      },
+      "name": "stroke-dashoffset",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-dashoffset",
+        "profile": "standard",
+        "source": "css:fill-stroke-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.stroke-image",
+      "kind": "property",
+      "metadata": {
+        "animationType": "repeatable list",
+        "appliesTo": "text and SVG shapes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified, with any <image> computed",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "none",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "stroke-image",
+          "strokeImage"
+        ],
+        "syntax": "<paint>#"
+      },
+      "name": "stroke-image",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-image",
+        "profile": "standard",
+        "source": "css:fill-stroke-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.stroke-linecap",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "text and SVG shapes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "butt",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "stroke-linecap",
+          "strokeLinecap"
+        ],
+        "syntax": "butt | round | square"
+      },
+      "name": "stroke-linecap",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-linecap",
+        "profile": "standard",
+        "source": "css:fill-stroke-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.stroke-linejoin",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "text and SVG shapes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "miter",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "stroke-linejoin",
+          "strokeLinejoin"
+        ],
+        "syntax": "[ crop | arcs | miter ] || [ bevel | round | fallback ]"
+      },
+      "name": "stroke-linejoin",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-linejoin",
+        "profile": "standard",
+        "source": "css:fill-stroke-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.stroke-miterlimit",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "text and SVG shapes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "a number",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "4",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "stroke-miterlimit",
+          "strokeMiterlimit"
+        ],
+        "syntax": "<number>"
+      },
+      "name": "stroke-miterlimit",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-miterlimit",
+        "profile": "standard",
+        "source": "css:fill-stroke-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.stroke-opacity",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "text and SVG shapes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the specified value converted to a <number>, clamped to the range [0,1]",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "1",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "stroke-opacity",
+          "strokeOpacity"
+        ],
+        "syntax": "<'opacity'>"
+      },
+      "name": "stroke-opacity",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-opacity",
+        "profile": "standard",
+        "source": "css:fill-stroke-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.stroke-origin",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "match-parent",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "stroke-origin",
+          "strokeOrigin"
+        ],
+        "syntax": "match-parent | fill-box | stroke-box | content-box | padding-box | border-box"
+      },
+      "name": "stroke-origin",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-origin",
+        "profile": "standard",
+        "source": "css:fill-stroke-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.stroke-position",
+      "kind": "property",
+      "metadata": {
+        "animationType": "repeatable list",
+        "appliesTo": "text and SVG shapes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "A list, each item consisting of: a pair of offsets (horizontal and vertical) from the top left origin each given as a combination of an absolute length and a percentage",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "0% 0%",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "stroke-position",
+          "strokePosition"
+        ],
+        "syntax": "<position>#"
+      },
+      "name": "stroke-position",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-position",
+        "profile": "standard",
+        "source": "css:fill-stroke-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.stroke-repeat",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "text and SVG shapes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "A list, each item consisting of: two keywords, one per dimension",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "repeat",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "stroke-repeat",
+          "strokeRepeat"
+        ],
+        "syntax": "<repeat-style>#"
+      },
+      "name": "stroke-repeat",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-repeat",
+        "profile": "standard",
+        "source": "css:fill-stroke-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.stroke-size",
+      "kind": "property",
+      "metadata": {
+        "animationType": "repeatable list",
+        "appliesTo": "text and SVG shapes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified, but with lengths made absolute and omitted auto keywords filled in",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "stroke-size",
+          "strokeSize"
+        ],
+        "syntax": "<bg-size>#"
+      },
+      "name": "stroke-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-size",
+        "profile": "standard",
+        "source": "css:fill-stroke-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.stroke-width",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "text and SVG shapes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the absolute length, or percentage",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "1px",
+        "media": "visual",
+        "percentages": "relative to the scaled viewport size",
+        "styleDeclaration": [
+          "stroke-width",
+          "strokeWidth"
+        ],
+        "syntax": "[ <length-percentage> | <line-width> | <number> ]#"
+      },
+      "name": "stroke-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/fill-stroke-3/#propdef-stroke-width",
+        "profile": "standard",
+        "source": "css:fill-stroke-3",
+        "version": "8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/properties/s.json"
+}

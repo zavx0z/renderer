@@ -1,0 +1,123 @@
+{
+  "entries": [
+    {
+      "description": "Association list consisting of zero or more name-value groups",
+      "domain": "html",
+      "id": "html.elements.dl",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; palpable",
+        "children": "dt*; dd*; div*; script-supporting elements",
+        "interface": "HTMLDListElement",
+        "parents": "flow"
+      },
+      "name": "dl",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <dl> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.dl.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "dl",
+        "interface": "HTMLDListElement"
+      },
+      "name": "dl implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.dl",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <dl> element content categories.",
+      "domain": "html",
+      "id": "html.elements.dl.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "dl",
+        "interface": "HTMLDListElement"
+      },
+      "name": "dl content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.dl",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <dl> element content model.",
+      "domain": "html",
+      "id": "html.elements.dl.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "dl",
+        "interface": "HTMLDListElement"
+      },
+      "name": "dl content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.dl",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <dl> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.dl.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "dl",
+        "interface": "HTMLDListElement"
+      },
+      "name": "dl interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.dl",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/dl.json"
+}

@@ -1,0 +1,764 @@
+{
+  "entries": [
+    {
+      "domain": "css",
+      "id": "css.properties.image-animation",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "declarative images",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "image-animation",
+          "imageAnimation"
+        ],
+        "syntax": "normal | paused | stopped | running"
+      },
+      "name": "image-animation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-image-animation-1/#propdef-image-animation",
+        "profile": "standard",
+        "source": "css:css-image-animation-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.image-orientation",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the specified keyword, or an <angle>, rounded and normalized (see text), plus optionally a flip keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "from-image",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "image-orientation",
+          "imageOrientation"
+        ],
+        "syntax": "from-image | none | [ <angle> || flip ]"
+      },
+      "name": "image-orientation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-images-3/#propdef-image-orientation",
+        "profile": "standard",
+        "source": "css:css-images-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.image-rendering",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "image-rendering",
+          "imageRendering"
+        ],
+        "syntax": "auto | smooth | high-quality | pixelated | crisp-edges"
+      },
+      "name": "image-rendering",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-images-3/#propdef-image-rendering",
+        "profile": "standard",
+        "source": "css:css-images-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.image-resolution",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword(s) and/or <resolution> (possibly adjusted for snap, see below)",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "1dppx",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "image-resolution",
+          "imageResolution"
+        ],
+        "syntax": "[ from-image || <resolution> ] && snap?"
+      },
+      "name": "image-resolution",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-images-4/#propdef-image-resolution",
+        "profile": "standard",
+        "source": "css:css-images-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.initial-letter",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "certain inline-level boxes and ::first-letter and inside ::marker boxes (see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword normal or a number paired with an integer",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "initial-letter",
+          "initialLetter"
+        ],
+        "syntax": "normal | <number [1,∞]> <integer [1,∞]> | <number [1,∞]> && [ drop | raise ]?"
+      },
+      "name": "initial-letter",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-inline-3/#propdef-initial-letter",
+        "profile": "standard",
+        "source": "css:css-inline-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.initial-letter-align",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "certain inline-level boxes and ::first-letter and inside ::marker boxes (see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword(s)",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "alphabetic",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "initial-letter-align",
+          "initialLetterAlign"
+        ],
+        "syntax": "[ border-box? [ alphabetic | ideographic | hanging | leading ]? ]!"
+      },
+      "name": "initial-letter-align",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-inline-3/#propdef-initial-letter-align",
+        "profile": "standard",
+        "source": "css:css-inline-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.initial-letter-wrap",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "certain inline-level boxes and ::first-letter and inside ::marker boxes (see prose)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword or computed <length-percentage> value",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "none",
+        "percentages": "relative to logical width of (last fragment of) initial letter",
+        "styleDeclaration": [
+          "initial-letter-wrap",
+          "initialLetterWrap"
+        ],
+        "syntax": "none | first | all | grid | <length-percentage>"
+      },
+      "name": "initial-letter-wrap",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-inline-3/#propdef-initial-letter-wrap",
+        "profile": "standard",
+        "source": "css:css-inline-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.inline-size",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "Same as height and width",
+        "canonicalOrder": "per grammar",
+        "computedValue": "Same as height, width",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "logicalPropertyGroup": "size",
+        "percentages": "As for the corresponding physical property",
+        "styleDeclaration": [
+          "inline-size",
+          "inlineSize"
+        ],
+        "syntax": "<'width'>"
+      },
+      "name": "inline-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-logical-1/#propdef-inline-size",
+        "profile": "standard",
+        "source": "css:css-logical-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.inline-sizing",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "inline boxes, but not ruby container boxes nor internal ruby boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "inline-sizing",
+          "inlineSizing"
+        ],
+        "syntax": "normal | stretch"
+      },
+      "name": "inline-sizing",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-inline-3/#propdef-inline-sizing",
+        "profile": "standard",
+        "source": "css:css-inline-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.input-security",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "sensitive text inputs",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "input-security",
+          "inputSecurity"
+        ],
+        "syntax": "auto | none"
+      },
+      "name": "input-security",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-forms-1/#propdef-input-security",
+        "profile": "standard",
+        "source": "css:css-forms-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.inset",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "positioned elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "longhands": [
+          "top",
+          "right",
+          "bottom",
+          "left"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "inset"
+        ],
+        "syntax": "<'top'>{1,4}"
+      },
+      "name": "inset",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-position-3/#propdef-inset",
+        "profile": "standard",
+        "source": "css:css-position-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.inset-block",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "positioned elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "longhands": [
+          "inset-block-start",
+          "inset-block-end"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "inset-block",
+          "insetBlock"
+        ],
+        "syntax": "<'top'>{1,2}"
+      },
+      "name": "inset-block",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-position-3/#propdef-inset-block",
+        "profile": "standard",
+        "source": "css:css-position-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.inset-block-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "positioned elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword auto or a computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "logicalPropertyGroup": "inset",
+        "percentages": "refer to size of containing block; see prose",
+        "styleDeclaration": [
+          "inset-block-end",
+          "insetBlockEnd"
+        ],
+        "syntax": "auto | <length-percentage>"
+      },
+      "name": "inset-block-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-position-3/#propdef-inset-block-end",
+        "profile": "standard",
+        "source": "css:css-position-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.inset-block-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "positioned elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword auto or a computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "logicalPropertyGroup": "inset",
+        "percentages": "refer to size of containing block; see prose",
+        "styleDeclaration": [
+          "inset-block-start",
+          "insetBlockStart"
+        ],
+        "syntax": "auto | <length-percentage>"
+      },
+      "name": "inset-block-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-position-3/#propdef-inset-block-start",
+        "profile": "standard",
+        "source": "css:css-position-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.inset-inline",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "positioned elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "longhands": [
+          "inset-inline-start",
+          "inset-inline-end"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "inset-inline",
+          "insetInline"
+        ],
+        "syntax": "<'top'>{1,2}"
+      },
+      "name": "inset-inline",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-position-3/#propdef-inset-inline",
+        "profile": "standard",
+        "source": "css:css-position-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.inset-inline-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "positioned elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword auto or a computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "logicalPropertyGroup": "inset",
+        "percentages": "refer to size of containing block; see prose",
+        "styleDeclaration": [
+          "inset-inline-end",
+          "insetInlineEnd"
+        ],
+        "syntax": "auto | <length-percentage>"
+      },
+      "name": "inset-inline-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-position-3/#propdef-inset-inline-end",
+        "profile": "standard",
+        "source": "css:css-position-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.inset-inline-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "positioned elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword auto or a computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "logicalPropertyGroup": "inset",
+        "percentages": "refer to size of containing block; see prose",
+        "styleDeclaration": [
+          "inset-inline-start",
+          "insetInlineStart"
+        ],
+        "syntax": "auto | <length-percentage>"
+      },
+      "name": "inset-inline-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-position-3/#propdef-inset-inline-start",
+        "profile": "standard",
+        "source": "css:css-position-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.interactivity",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "interactivity"
+        ],
+        "syntax": "auto | inert"
+      },
+      "name": "interactivity",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-ui-4/#propdef-interactivity",
+        "profile": "standard",
+        "source": "css:css-ui-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.interest-delay",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "interest-delay-start",
+          "interest-delay-end"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "interest-delay",
+          "interestDelay"
+        ],
+        "syntax": "<'interest-delay-start'>{1,2}"
+      },
+      "name": "interest-delay",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-ui-4/#propdef-interest-delay",
+        "profile": "standard",
+        "source": "css:css-ui-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.interest-delay-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword normal or a computed time",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "interest-delay-end",
+          "interestDelayEnd"
+        ],
+        "syntax": "normal | <time>"
+      },
+      "name": "interest-delay-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-ui-4/#propdef-interest-delay-end",
+        "profile": "standard",
+        "source": "css:css-ui-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.interest-delay-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword normal or a computed time",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "interest-delay-start",
+          "interestDelayStart"
+        ],
+        "syntax": "normal | <time>"
+      },
+      "name": "interest-delay-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-ui-4/#propdef-interest-delay-start",
+        "profile": "standard",
+        "source": "css:css-ui-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.interpolate-size",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "numeric-only",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "interpolate-size",
+          "interpolateSize"
+        ],
+        "syntax": "numeric-only | allow-keywords"
+      },
+      "name": "interpolate-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-values-5/#propdef-interpolate-size",
+        "profile": "standard",
+        "source": "css:css-values-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.isolation",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "All elements. In SVG, it applies to container elements, graphics elements and graphics referencing elements. [SVG11]",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "isolation"
+        ],
+        "syntax": "<isolation-mode>"
+      },
+      "name": "isolation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/compositing-2/#propdef-isolation",
+        "profile": "standard",
+        "source": "css:compositing-2",
+        "version": "8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/properties/i.json"
+}

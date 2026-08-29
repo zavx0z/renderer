@@ -1,0 +1,238 @@
+{
+  "entries": [
+    {
+      "description": "Timed text track",
+      "domain": "html",
+      "id": "html.elements.track",
+      "kind": "element",
+      "metadata": {
+        "categories": "none",
+        "children": "empty",
+        "interface": "HTMLTrackElement",
+        "parents": "audio; video"
+      },
+      "name": "track",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#the-track-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <track> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.track.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "track",
+        "interface": "HTMLTrackElement"
+      },
+      "name": "track implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.track",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "default content attribute on <track>.",
+      "domain": "html",
+      "id": "html.elements.track.attributes.default",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "track",
+        "interface": "HTMLTrackElement"
+      },
+      "name": "default",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.track",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-track-default",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "kind content attribute on <track>.",
+      "domain": "html",
+      "id": "html.elements.track.attributes.kind",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "track",
+        "interface": "HTMLTrackElement"
+      },
+      "name": "kind",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.track",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-track-kind",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "label content attribute on <track>.",
+      "domain": "html",
+      "id": "html.elements.track.attributes.label",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "track",
+        "interface": "HTMLTrackElement"
+      },
+      "name": "label",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.track",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-track-label",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "src content attribute on <track>.",
+      "domain": "html",
+      "id": "html.elements.track.attributes.src",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "track",
+        "interface": "HTMLTrackElement"
+      },
+      "name": "src",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.track",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-track-src",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "srclang content attribute on <track>.",
+      "domain": "html",
+      "id": "html.elements.track.attributes.srclang",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "track",
+        "interface": "HTMLTrackElement"
+      },
+      "name": "srclang",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.track",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-track-srclang",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <track> element content categories.",
+      "domain": "html",
+      "id": "html.elements.track.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "track",
+        "interface": "HTMLTrackElement"
+      },
+      "name": "track content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.track",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#the-track-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <track> element content model.",
+      "domain": "html",
+      "id": "html.elements.track.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "track",
+        "interface": "HTMLTrackElement"
+      },
+      "name": "track content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.track",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#the-track-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <track> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.track.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "track",
+        "interface": "HTMLTrackElement"
+      },
+      "name": "track interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.track",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#the-track-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/track.json"
+}

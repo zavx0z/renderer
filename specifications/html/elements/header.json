@@ -1,0 +1,123 @@
+{
+  "entries": [
+    {
+      "description": "Introductory or navigational aids for a page or section",
+      "domain": "html",
+      "id": "html.elements.header",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; palpable",
+        "children": "flow*",
+        "interface": "HTMLElement",
+        "parents": "flow"
+      },
+      "name": "header",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/sections.html#the-header-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <header> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.header.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "header",
+        "interface": "HTMLElement"
+      },
+      "name": "header implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.header",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <header> element content categories.",
+      "domain": "html",
+      "id": "html.elements.header.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "header",
+        "interface": "HTMLElement"
+      },
+      "name": "header content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.header",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/sections.html#the-header-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <header> element content model.",
+      "domain": "html",
+      "id": "html.elements.header.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "header",
+        "interface": "HTMLElement"
+      },
+      "name": "header content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.header",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/sections.html#the-header-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <header> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.header.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "header",
+        "interface": "HTMLElement"
+      },
+      "name": "header interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.header",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/sections.html#the-header-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/header.json"
+}

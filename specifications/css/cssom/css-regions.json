@@ -1,0 +1,377 @@
+{
+  "entries": [
+    {
+      "description": "includes Element-includes-Region from css-regions.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-regions.includes.element-includes-region",
+      "kind": "includes",
+      "metadata": {
+        "idlSource": "css-regions.idl"
+      },
+      "name": "Element-includes-Region",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-regions.idl#WebIDL:Element-includes-Region",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface Document from css-regions.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-regions.interfaces.document",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "css-regions.idl"
+      },
+      "name": "Document",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-regions.idl#WebIDL:Document",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "Document.namedFlows Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-regions.interfaces.document.attributes.namedflows",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-regions.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"namedFlows\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"NamedFlowMap\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "namedFlows",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-regions.interfaces.document",
+      "spec": {
+        "anchor": "webref/idl/css-regions.idl#WebIDL:Document.namedFlows",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface NamedFlow from css-regions.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-regions.interfaces.namedflow",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-regions.idl",
+        "inheritance": "EventTarget"
+      },
+      "name": "NamedFlow",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-regions.idl#WebIDL:NamedFlow",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "NamedFlow.firstEmptyRegionIndex Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-regions.interfaces.namedflow.attributes.firstemptyregionindex",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-regions.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"firstEmptyRegionIndex\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"short\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "firstEmptyRegionIndex",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-regions.interfaces.namedflow",
+      "spec": {
+        "anchor": "webref/idl/css-regions.idl#WebIDL:NamedFlow.firstEmptyRegionIndex",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "NamedFlow.name Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-regions.interfaces.namedflow.attributes.name",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-regions.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"name\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-regions.interfaces.namedflow",
+      "spec": {
+        "anchor": "webref/idl/css-regions.idl#WebIDL:NamedFlow.name",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "NamedFlow.overset Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-regions.interfaces.namedflow.attributes.overset",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-regions.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"overset\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "overset",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-regions.interfaces.namedflow",
+      "spec": {
+        "anchor": "webref/idl/css-regions.idl#WebIDL:NamedFlow.overset",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "NamedFlow has EventTarget as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-regions.interfaces.namedflow.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "EventTarget"
+      },
+      "name": "NamedFlow inherits EventTarget",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-regions.interfaces.namedflow",
+      "spec": {
+        "anchor": "webref/idl/css-regions.idl#WebIDL:NamedFlow",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "NamedFlow.getContent Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-regions.interfaces.namedflow.methods.getcontent",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-regions.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"getContent\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"Node\"}]},\"arguments\":[],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "getContent",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-regions.interfaces.namedflow",
+      "spec": {
+        "anchor": "webref/idl/css-regions.idl#WebIDL:NamedFlow.getContent",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "NamedFlow.getRegions Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-regions.interfaces.namedflow.methods.getregions",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-regions.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"getRegions\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"Element\"}]},\"arguments\":[],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "getRegions",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-regions.interfaces.namedflow",
+      "spec": {
+        "anchor": "webref/idl/css-regions.idl#WebIDL:NamedFlow.getRegions",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "NamedFlow.getRegionsByContent Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-regions.interfaces.namedflow.methods.getregionsbycontent",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-regions.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"getRegionsByContent\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"Element\"}]},\"arguments\":[{\"type\":\"argument\",\"name\":\"node\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"Node\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "getRegionsByContent",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-regions.interfaces.namedflow",
+      "spec": {
+        "anchor": "webref/idl/css-regions.idl#WebIDL:NamedFlow.getRegionsByContent",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface NamedFlowMap from css-regions.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-regions.interfaces.namedflowmap",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-regions.idl"
+      },
+      "name": "NamedFlowMap",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-regions.idl#WebIDL:NamedFlowMap",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "NamedFlowMap.maplike-241f28d0 Web IDL maplike.",
+      "domain": "css",
+      "id": "css.cssom.css-regions.interfaces.namedflowmap.maplike.maplike-241f28d0",
+      "kind": "maplike",
+      "metadata": {
+        "idlSource": "css-regions.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"maplike\",\"idlType\":[{\"type\":null,\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},{\"type\":null,\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"NamedFlow\"}],\"arguments\":[],\"extAttrs\":[],\"readonly\":false,\"async\":false}"
+      },
+      "name": "maplike-241f28d0",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-regions.interfaces.namedflowmap",
+      "spec": {
+        "anchor": "webref/idl/css-regions.idl#WebIDL:NamedFlowMap.maplike-241f28d0",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface mixin Region from css-regions.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-regions.mixins.region",
+      "kind": "interface mixin",
+      "metadata": {
+        "idlSource": "css-regions.idl"
+      },
+      "name": "Region",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-regions.idl#WebIDL:Region",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "Region.regionOverset Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-regions.mixins.region.attributes.regionoverset",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-regions.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"regionOverset\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "regionOverset",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-regions.mixins.region",
+      "spec": {
+        "anchor": "webref/idl/css-regions.idl#WebIDL:Region.regionOverset",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "Region.getRegionFlowRanges Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-regions.mixins.region.methods.getregionflowranges",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-regions.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"getRegionFlowRanges\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":true,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"Range\"}]},\"arguments\":[],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "getRegionFlowRanges",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-regions.mixins.region",
+      "spec": {
+        "anchor": "webref/idl/css-regions.idl#WebIDL:Region.getRegionFlowRanges",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-regions.json"
+}

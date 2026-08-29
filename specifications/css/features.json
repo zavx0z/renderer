@@ -1,0 +1,1465 @@
+{
+  "entries": [
+    {
+      "description": "CSS animations semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.animations",
+      "kind": "css-algorithm",
+      "name": "animations",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#animations",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS at rules semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.at-rules",
+      "kind": "css-algorithm",
+      "name": "at rules",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#at-rules",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS backgrounds semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.backgrounds",
+      "kind": "css-algorithm",
+      "name": "backgrounds",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#backgrounds",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS block layout semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.block-layout",
+      "kind": "css-algorithm",
+      "name": "block layout",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#block-layout",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS borders semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.borders",
+      "kind": "css-algorithm",
+      "name": "borders",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#borders",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS box model semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.box-model",
+      "kind": "css-algorithm",
+      "name": "box model",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#box-model",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS cascade semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.cascade",
+      "kind": "css-algorithm",
+      "name": "cascade",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#cascade",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS cascade layers semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.cascade-layers",
+      "kind": "css-algorithm",
+      "name": "cascade layers",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#cascade-layers",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS cascade order semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.cascade-order",
+      "kind": "css-algorithm",
+      "name": "cascade order",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#cascade-order",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS cascade origins semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.cascade-origins",
+      "kind": "css-algorithm",
+      "name": "cascade origins",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#cascade-origins",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS clipping semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.clipping",
+      "kind": "css-algorithm",
+      "name": "clipping",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#clipping",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS colors semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.colors",
+      "kind": "css-algorithm",
+      "name": "colors",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#colors",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS combinators semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.combinators",
+      "kind": "css-algorithm",
+      "name": "combinators",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#combinators",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS component values semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.component-values",
+      "kind": "css-algorithm",
+      "name": "component values",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#component-values",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS computed values semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.computed-values",
+      "kind": "css-algorithm",
+      "name": "computed values",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#computed-values",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS container queries semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.container-queries",
+      "kind": "css-algorithm",
+      "name": "container queries",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#container-queries",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS containment semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.containment",
+      "kind": "css-algorithm",
+      "name": "containment",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#containment",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS counters semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.counters",
+      "kind": "css-algorithm",
+      "name": "counters",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#counters",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS cssom semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.cssom",
+      "kind": "css-algorithm",
+      "name": "cssom",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#cssom",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS custom properties semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.custom-properties",
+      "kind": "css-algorithm",
+      "name": "custom properties",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#custom-properties",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS data types semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.data-types",
+      "kind": "css-algorithm",
+      "name": "data types",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#data-types",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS declarations semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.declarations",
+      "kind": "css-algorithm",
+      "name": "declarations",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#declarations",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS descriptors semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.descriptors",
+      "kind": "css-algorithm",
+      "name": "descriptors",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#descriptors",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS display list projection semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.display-list-projection",
+      "kind": "css-algorithm",
+      "name": "display list projection",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#display-list-projection",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS filters semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.filters",
+      "kind": "css-algorithm",
+      "name": "filters",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#filters",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS flex layout semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.flex-layout",
+      "kind": "css-algorithm",
+      "name": "flex layout",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#flex-layout",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS floats semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.floats",
+      "kind": "css-algorithm",
+      "name": "floats",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#floats",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS fonts semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.fonts",
+      "kind": "css-algorithm",
+      "name": "fonts",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#fonts",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS fragmentation semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.fragmentation",
+      "kind": "css-algorithm",
+      "name": "fragmentation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#fragmentation",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS functions semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.functions",
+      "kind": "css-algorithm",
+      "name": "functions",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#functions",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS generated content semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.generated-content",
+      "kind": "css-algorithm",
+      "name": "generated content",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#generated-content",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS grid layout semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.grid-layout",
+      "kind": "css-algorithm",
+      "name": "grid layout",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#grid-layout",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS hit test projection semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.hit-test-projection",
+      "kind": "css-algorithm",
+      "name": "hit test projection",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#hit-test-projection",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS images semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.images",
+      "kind": "css-algorithm",
+      "name": "images",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#images",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS inheritance semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.inheritance",
+      "kind": "css-algorithm",
+      "name": "inheritance",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#inheritance",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS initial semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.initial",
+      "kind": "css-algorithm",
+      "name": "initial",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#initial",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS inline layout semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.inline-layout",
+      "kind": "css-algorithm",
+      "name": "inline layout",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#inline-layout",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS line breaking semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.line-breaking",
+      "kind": "css-algorithm",
+      "name": "line breaking",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#line-breaking",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS logical properties semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.logical-properties",
+      "kind": "css-algorithm",
+      "name": "logical properties",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#logical-properties",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS longhands semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.longhands",
+      "kind": "css-algorithm",
+      "name": "longhands",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#longhands",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS masks semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.masks",
+      "kind": "css-algorithm",
+      "name": "masks",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#masks",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS media queries semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.media-queries",
+      "kind": "css-algorithm",
+      "name": "media queries",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#media-queries",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS multicol semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.multicol",
+      "kind": "css-algorithm",
+      "name": "multicol",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#multicol",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS nesting semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.nesting",
+      "kind": "css-algorithm",
+      "name": "nesting",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#nesting",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS object fit semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.object-fit",
+      "kind": "css-algorithm",
+      "name": "object fit",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#object-fit",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS object position semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.object-position",
+      "kind": "css-algorithm",
+      "name": "object position",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#object-position",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS opacity semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.opacity",
+      "kind": "css-algorithm",
+      "name": "opacity",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#opacity",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS overflow semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.overflow",
+      "kind": "css-algorithm",
+      "name": "overflow",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#overflow",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS positioning semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.positioning",
+      "kind": "css-algorithm",
+      "name": "positioning",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#positioning",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS pseudo classes semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.pseudo-classes",
+      "kind": "css-algorithm",
+      "name": "pseudo classes",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#pseudo-classes",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS pseudo elements semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.pseudo-elements",
+      "kind": "css-algorithm",
+      "name": "pseudo elements",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#pseudo-elements",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS radii semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.radii",
+      "kind": "css-algorithm",
+      "name": "radii",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#radii",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS replaced content semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.replaced-content",
+      "kind": "css-algorithm",
+      "name": "replaced content",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#replaced-content",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS revert semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.revert",
+      "kind": "css-algorithm",
+      "name": "revert",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#revert",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS revert layer semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.revert-layer",
+      "kind": "css-algorithm",
+      "name": "revert layer",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#revert-layer",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS scope semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.scope",
+      "kind": "css-algorithm",
+      "name": "scope",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#scope",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS scrollbars semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.scrollbars",
+      "kind": "css-algorithm",
+      "name": "scrollbars",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#scrollbars",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS scrolling semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.scrolling",
+      "kind": "css-algorithm",
+      "name": "scrolling",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#scrolling",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS selectors semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.selectors",
+      "kind": "css-algorithm",
+      "name": "selectors",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#selectors",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS shadows semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.shadows",
+      "kind": "css-algorithm",
+      "name": "shadows",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#shadows",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS shorthands semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.shorthands",
+      "kind": "css-algorithm",
+      "name": "shorthands",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#shorthands",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS sizing semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.sizing",
+      "kind": "css-algorithm",
+      "name": "sizing",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#sizing",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS specificity semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.specificity",
+      "kind": "css-algorithm",
+      "name": "specificity",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#specificity",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS stacking contexts semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.stacking-contexts",
+      "kind": "css-algorithm",
+      "name": "stacking contexts",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#stacking-contexts",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS supports queries semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.supports-queries",
+      "kind": "css-algorithm",
+      "name": "supports queries",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#supports-queries",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS syntax semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.syntax",
+      "kind": "css-algorithm",
+      "name": "syntax",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#syntax",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS table layout semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.table-layout",
+      "kind": "css-algorithm",
+      "name": "table layout",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#table-layout",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS text semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.text",
+      "kind": "css-algorithm",
+      "name": "text",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#text",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS text overflow semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.text-overflow",
+      "kind": "css-algorithm",
+      "name": "text overflow",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#text-overflow",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS tokenization semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.tokenization",
+      "kind": "css-algorithm",
+      "name": "tokenization",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#tokenization",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS transform origins semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.transform-origins",
+      "kind": "css-algorithm",
+      "name": "transform origins",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#transform-origins",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS transforms semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.transforms",
+      "kind": "css-algorithm",
+      "name": "transforms",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#transforms",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS transitions semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.transitions",
+      "kind": "css-algorithm",
+      "name": "transitions",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#transitions",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS units semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.units",
+      "kind": "css-algorithm",
+      "name": "units",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#units",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS unset semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.unset",
+      "kind": "css-algorithm",
+      "name": "unset",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#unset",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS used values semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.used-values",
+      "kind": "css-algorithm",
+      "name": "used values",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#used-values",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS webgpu transport semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.webgpu-transport",
+      "kind": "css-algorithm",
+      "name": "webgpu transport",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#webgpu-transport",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS white space semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.white-space",
+      "kind": "css-algorithm",
+      "name": "white space",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#white-space",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS wrapping semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.wrapping",
+      "kind": "css-algorithm",
+      "name": "wrapping",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#wrapping",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS writing modes semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.writing-modes",
+      "kind": "css-algorithm",
+      "name": "writing modes",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#writing-modes",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    },
+    {
+      "description": "CSS z index semantics from the pinned CSS profile.",
+      "domain": "css",
+      "id": "css.features.z-index",
+      "kind": "css-algorithm",
+      "name": "z index",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "css-snapshot-2025#z-index",
+        "profile": "standard",
+        "source": "css-snapshot-2025",
+        "version": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/features.json"
+}

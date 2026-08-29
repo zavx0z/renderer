@@ -1,0 +1,169 @@
+{
+  "entries": [
+    {
+      "description": "Scriptable bitmap canvas",
+      "domain": "html",
+      "id": "html.elements.canvas",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; phrasing; embedded; palpable",
+        "children": "transparent",
+        "interface": "HTMLCanvasElement",
+        "parents": "phrasing"
+      },
+      "name": "canvas",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/canvas.html#canvas",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <canvas> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.canvas.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "canvas",
+        "interface": "HTMLCanvasElement"
+      },
+      "name": "canvas implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.canvas",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "height content attribute on <canvas>.",
+      "domain": "html",
+      "id": "html.elements.canvas.attributes.height",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "canvas",
+        "interface": "HTMLCanvasElement"
+      },
+      "name": "height",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.canvas",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/canvas.html#attr-canvas-height",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "width content attribute on <canvas>.",
+      "domain": "html",
+      "id": "html.elements.canvas.attributes.width",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "canvas",
+        "interface": "HTMLCanvasElement"
+      },
+      "name": "width",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.canvas",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/canvas.html#attr-canvas-width",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <canvas> element content categories.",
+      "domain": "html",
+      "id": "html.elements.canvas.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "canvas",
+        "interface": "HTMLCanvasElement"
+      },
+      "name": "canvas content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.canvas",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/canvas.html#canvas",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <canvas> element content model.",
+      "domain": "html",
+      "id": "html.elements.canvas.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "canvas",
+        "interface": "HTMLCanvasElement"
+      },
+      "name": "canvas content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.canvas",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/canvas.html#canvas",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <canvas> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.canvas.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "canvas",
+        "interface": "HTMLCanvasElement"
+      },
+      "name": "canvas interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.canvas",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/canvas.html#canvas",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/canvas.json"
+}

@@ -1,0 +1,123 @@
+{
+  "entries": [
+    {
+      "description": "Contact information for a page or article element",
+      "domain": "html",
+      "id": "html.elements.address",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; palpable",
+        "children": "flow*",
+        "interface": "HTMLElement",
+        "parents": "flow"
+      },
+      "name": "address",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/sections.html#the-address-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <address> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.address.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "address",
+        "interface": "HTMLElement"
+      },
+      "name": "address implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.address",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <address> element content categories.",
+      "domain": "html",
+      "id": "html.elements.address.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "address",
+        "interface": "HTMLElement"
+      },
+      "name": "address content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.address",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/sections.html#the-address-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <address> element content model.",
+      "domain": "html",
+      "id": "html.elements.address.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "address",
+        "interface": "HTMLElement"
+      },
+      "name": "address content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.address",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/sections.html#the-address-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <address> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.address.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "address",
+        "interface": "HTMLElement"
+      },
+      "name": "address interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.address",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/sections.html#the-address-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/address.json"
+}

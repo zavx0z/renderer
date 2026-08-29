@@ -1,0 +1,385 @@
+{
+  "entries": [
+    {
+      "description": "callback AnimatorInstanceConstructor from css-animation-worklet.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-animation-worklet.callbacks.animatorinstanceconstructor",
+      "kind": "callback",
+      "metadata": {
+        "idlSource": "css-animation-worklet.idl"
+      },
+      "name": "AnimatorInstanceConstructor",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-animation-worklet.idl#WebIDL:AnimatorInstanceConstructor",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface AnimationWorkletGlobalScope from css-animation-worklet.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-animation-worklet.interfaces.animationworkletglobalscope",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Global={\"type\":\"identifier-list\",\"value\":[{\"value\":\"Worklet\"},{\"value\":\"AnimationWorklet\"}]}",
+          "Exposed={\"type\":\"identifier\",\"value\":\"AnimationWorklet\"}"
+        ],
+        "idlSource": "css-animation-worklet.idl",
+        "inheritance": "WorkletGlobalScope"
+      },
+      "name": "AnimationWorkletGlobalScope",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-animation-worklet.idl#WebIDL:AnimationWorkletGlobalScope",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "AnimationWorkletGlobalScope has WorkletGlobalScope as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-animation-worklet.interfaces.animationworkletglobalscope.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "WorkletGlobalScope"
+      },
+      "name": "AnimationWorkletGlobalScope inherits WorkletGlobalScope",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animation-worklet.interfaces.animationworkletglobalscope",
+      "spec": {
+        "anchor": "webref/idl/css-animation-worklet.idl#WebIDL:AnimationWorkletGlobalScope",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "AnimationWorkletGlobalScope.registerAnimator Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-animation-worklet.interfaces.animationworkletglobalscope.methods.registeranimator",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-animation-worklet.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"registerAnimator\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"name\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"animatorCtor\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"AnimatorInstanceConstructor\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "registerAnimator",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animation-worklet.interfaces.animationworkletglobalscope",
+      "spec": {
+        "anchor": "webref/idl/css-animation-worklet.idl#WebIDL:AnimationWorkletGlobalScope.registerAnimator",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface WorkletAnimation from css-animation-worklet.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-animation-worklet.interfaces.workletanimation",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-animation-worklet.idl",
+        "inheritance": "Animation"
+      },
+      "name": "WorkletAnimation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-animation-worklet.idl#WebIDL:WorkletAnimation",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "WorkletAnimation.animatorName Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-animation-worklet.interfaces.workletanimation.attributes.animatorname",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-animation-worklet.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"animatorName\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "animatorName",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animation-worklet.interfaces.workletanimation",
+      "spec": {
+        "anchor": "webref/idl/css-animation-worklet.idl#WebIDL:WorkletAnimation.animatorName",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "WorkletAnimation.constructor Web IDL constructor.",
+      "domain": "css",
+      "id": "css.cssom.css-animation-worklet.interfaces.workletanimation.constructors.constructor",
+      "kind": "constructor",
+      "metadata": {
+        "idlSource": "css-animation-worklet.idl",
+        "signature": "{\"type\":\"constructor\",\"arguments\":[{\"type\":\"argument\",\"name\":\"animatorName\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"effects\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":true,\"idlType\":[{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"AnimationEffect\"},{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"AnimationEffect\"}]}]},\"default\":{\"type\":\"null\"},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"timeline\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"AnimationTimeline\"},\"default\":null,\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"options\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"any\"},\"default\":null,\"optional\":true,\"variadic\":false}],\"extAttrs\":[]}"
+      },
+      "name": "constructor",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animation-worklet.interfaces.workletanimation",
+      "spec": {
+        "anchor": "webref/idl/css-animation-worklet.idl#WebIDL:WorkletAnimation.constructor",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "WorkletAnimation has Animation as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-animation-worklet.interfaces.workletanimation.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "Animation"
+      },
+      "name": "WorkletAnimation inherits Animation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animation-worklet.interfaces.workletanimation",
+      "spec": {
+        "anchor": "webref/idl/css-animation-worklet.idl#WebIDL:WorkletAnimation",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface WorkletAnimationEffect from css-animation-worklet.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-animation-worklet.interfaces.workletanimationeffect",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"AnimationWorklet\"}"
+        ],
+        "idlSource": "css-animation-worklet.idl"
+      },
+      "name": "WorkletAnimationEffect",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-animation-worklet.idl#WebIDL:WorkletAnimationEffect",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "WorkletAnimationEffect.localTime Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-animation-worklet.interfaces.workletanimationeffect.attributes.localtime",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-animation-worklet.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"localTime\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "localTime",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animation-worklet.interfaces.workletanimationeffect",
+      "spec": {
+        "anchor": "webref/idl/css-animation-worklet.idl#WebIDL:WorkletAnimationEffect.localTime",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "WorkletAnimationEffect.getComputedTiming Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-animation-worklet.interfaces.workletanimationeffect.methods.getcomputedtiming",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-animation-worklet.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"getComputedTiming\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"ComputedEffectTiming\"},\"arguments\":[],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "getComputedTiming",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animation-worklet.interfaces.workletanimationeffect",
+      "spec": {
+        "anchor": "webref/idl/css-animation-worklet.idl#WebIDL:WorkletAnimationEffect.getComputedTiming",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "WorkletAnimationEffect.getTiming Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-animation-worklet.interfaces.workletanimationeffect.methods.gettiming",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-animation-worklet.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"getTiming\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"EffectTiming\"},\"arguments\":[],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "getTiming",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animation-worklet.interfaces.workletanimationeffect",
+      "spec": {
+        "anchor": "webref/idl/css-animation-worklet.idl#WebIDL:WorkletAnimationEffect.getTiming",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface WorkletGroupEffect from css-animation-worklet.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-animation-worklet.interfaces.workletgroupeffect",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"AnimationWorklet\"}"
+        ],
+        "idlSource": "css-animation-worklet.idl"
+      },
+      "name": "WorkletGroupEffect",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-animation-worklet.idl#WebIDL:WorkletGroupEffect",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "WorkletGroupEffect.getChildren Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-animation-worklet.interfaces.workletgroupeffect.methods.getchildren",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-animation-worklet.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"getChildren\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"WorkletAnimationEffect\"}]},\"arguments\":[],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "getChildren",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animation-worklet.interfaces.workletgroupeffect",
+      "spec": {
+        "anchor": "webref/idl/css-animation-worklet.idl#WebIDL:WorkletGroupEffect.getChildren",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "namespace CSS from css-animation-worklet.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-animation-worklet.namespaces.css",
+      "kind": "namespace",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-animation-worklet.idl"
+      },
+      "name": "CSS",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-animation-worklet.idl#WebIDL:CSS",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSS.animationWorklet Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-animation-worklet.namespaces.css.attributes.animationworklet",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SameObject"
+        ],
+        "idlSource": "css-animation-worklet.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"animationWorklet\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"Worklet\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SameObject\",\"rhs\":null,\"arguments\":[]}],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "animationWorklet",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animation-worklet.namespaces.css",
+      "spec": {
+        "anchor": "webref/idl/css-animation-worklet.idl#WebIDL:CSS.animationWorklet",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-animation-worklet.json"
+}

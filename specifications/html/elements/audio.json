@@ -1,0 +1,330 @@
+{
+  "entries": [
+    {
+      "description": "Audio player",
+      "domain": "html",
+      "id": "html.elements.audio",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; phrasing; embedded; interactive; palpable*",
+        "children": "source*; track*; transparent*",
+        "interface": "HTMLAudioElement",
+        "parents": "phrasing"
+      },
+      "name": "audio",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#audio",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <audio> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.audio.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "audio",
+        "interface": "HTMLAudioElement"
+      },
+      "name": "audio implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.audio",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <audio> element activation and default action.",
+      "domain": "html",
+      "id": "html.elements.audio.activation-behavior",
+      "kind": "activation-behavior",
+      "metadata": {
+        "element": "audio",
+        "interface": "HTMLAudioElement"
+      },
+      "name": "audio activation and default action",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.audio",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#audio",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "autoplay content attribute on <audio>.",
+      "domain": "html",
+      "id": "html.elements.audio.attributes.autoplay",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "audio",
+        "interface": "HTMLAudioElement"
+      },
+      "name": "autoplay",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.audio",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-media-autoplay",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "controls content attribute on <audio>.",
+      "domain": "html",
+      "id": "html.elements.audio.attributes.controls",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "audio",
+        "interface": "HTMLAudioElement"
+      },
+      "name": "controls",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.audio",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-media-controls",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "crossorigin content attribute on <audio>.",
+      "domain": "html",
+      "id": "html.elements.audio.attributes.crossorigin",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "audio",
+        "interface": "HTMLAudioElement"
+      },
+      "name": "crossorigin",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.audio",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-media-crossorigin",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "loading content attribute on <audio>.",
+      "domain": "html",
+      "id": "html.elements.audio.attributes.loading",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "audio",
+        "interface": "HTMLAudioElement"
+      },
+      "name": "loading",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.audio",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-media-loading",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "loop content attribute on <audio>.",
+      "domain": "html",
+      "id": "html.elements.audio.attributes.loop",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "audio",
+        "interface": "HTMLAudioElement"
+      },
+      "name": "loop",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.audio",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-media-loop",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "muted content attribute on <audio>.",
+      "domain": "html",
+      "id": "html.elements.audio.attributes.muted",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "audio",
+        "interface": "HTMLAudioElement"
+      },
+      "name": "muted",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.audio",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-media-muted",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "preload content attribute on <audio>.",
+      "domain": "html",
+      "id": "html.elements.audio.attributes.preload",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "audio",
+        "interface": "HTMLAudioElement"
+      },
+      "name": "preload",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.audio",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-media-preload",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "src content attribute on <audio>.",
+      "domain": "html",
+      "id": "html.elements.audio.attributes.src",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "audio",
+        "interface": "HTMLAudioElement"
+      },
+      "name": "src",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.audio",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-media-src",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <audio> element content categories.",
+      "domain": "html",
+      "id": "html.elements.audio.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "audio",
+        "interface": "HTMLAudioElement"
+      },
+      "name": "audio content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.audio",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#audio",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <audio> element content model.",
+      "domain": "html",
+      "id": "html.elements.audio.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "audio",
+        "interface": "HTMLAudioElement"
+      },
+      "name": "audio content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.audio",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#audio",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <audio> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.audio.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "audio",
+        "interface": "HTMLAudioElement"
+      },
+      "name": "audio interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.audio",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#audio",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/audio.json"
+}

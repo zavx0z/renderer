@@ -1,0 +1,537 @@
+{
+  "entries": [
+    {
+      "description": "Document body",
+      "domain": "html",
+      "id": "html.elements.body",
+      "kind": "element",
+      "metadata": {
+        "categories": "none",
+        "children": "flow",
+        "interface": "HTMLBodyElement",
+        "parents": "html"
+      },
+      "name": "body",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/sections.html#the-body-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <body> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.body.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "body",
+        "interface": "HTMLBodyElement"
+      },
+      "name": "body implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.body",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "onafterprint content attribute on <body>.",
+      "domain": "html",
+      "id": "html.elements.body.attributes.onafterprint",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "body",
+        "interface": "HTMLBodyElement"
+      },
+      "name": "onafterprint",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.body",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/webappapis.html#handler-window-onafterprint",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "onbeforeprint content attribute on <body>.",
+      "domain": "html",
+      "id": "html.elements.body.attributes.onbeforeprint",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "body",
+        "interface": "HTMLBodyElement"
+      },
+      "name": "onbeforeprint",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.body",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/webappapis.html#handler-window-onbeforeprint",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "onbeforeunload content attribute on <body>.",
+      "domain": "html",
+      "id": "html.elements.body.attributes.onbeforeunload",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "body",
+        "interface": "HTMLBodyElement"
+      },
+      "name": "onbeforeunload",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.body",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/webappapis.html#handler-window-onbeforeunload",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "onhashchange content attribute on <body>.",
+      "domain": "html",
+      "id": "html.elements.body.attributes.onhashchange",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "body",
+        "interface": "HTMLBodyElement"
+      },
+      "name": "onhashchange",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.body",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/webappapis.html#handler-window-onhashchange",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "onlanguagechange content attribute on <body>.",
+      "domain": "html",
+      "id": "html.elements.body.attributes.onlanguagechange",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "body",
+        "interface": "HTMLBodyElement"
+      },
+      "name": "onlanguagechange",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.body",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/webappapis.html#handler-window-onlanguagechange",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "onmessage content attribute on <body>.",
+      "domain": "html",
+      "id": "html.elements.body.attributes.onmessage",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "body",
+        "interface": "HTMLBodyElement"
+      },
+      "name": "onmessage",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.body",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/webappapis.html#handler-window-onmessage",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "onmessageerror content attribute on <body>.",
+      "domain": "html",
+      "id": "html.elements.body.attributes.onmessageerror",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "body",
+        "interface": "HTMLBodyElement"
+      },
+      "name": "onmessageerror",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.body",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/webappapis.html#handler-window-onmessageerror",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "onoffline content attribute on <body>.",
+      "domain": "html",
+      "id": "html.elements.body.attributes.onoffline",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "body",
+        "interface": "HTMLBodyElement"
+      },
+      "name": "onoffline",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.body",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/webappapis.html#handler-window-onoffline",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "ononline content attribute on <body>.",
+      "domain": "html",
+      "id": "html.elements.body.attributes.ononline",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "body",
+        "interface": "HTMLBodyElement"
+      },
+      "name": "ononline",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.body",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/webappapis.html#handler-window-ononline",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "onpagehide content attribute on <body>.",
+      "domain": "html",
+      "id": "html.elements.body.attributes.onpagehide",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "body",
+        "interface": "HTMLBodyElement"
+      },
+      "name": "onpagehide",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.body",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/webappapis.html#handler-window-onpagehide",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "onpagereveal content attribute on <body>.",
+      "domain": "html",
+      "id": "html.elements.body.attributes.onpagereveal",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "body",
+        "interface": "HTMLBodyElement"
+      },
+      "name": "onpagereveal",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.body",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/webappapis.html#handler-window-onpagereveal",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "onpageshow content attribute on <body>.",
+      "domain": "html",
+      "id": "html.elements.body.attributes.onpageshow",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "body",
+        "interface": "HTMLBodyElement"
+      },
+      "name": "onpageshow",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.body",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/webappapis.html#handler-window-onpageshow",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "onpageswap content attribute on <body>.",
+      "domain": "html",
+      "id": "html.elements.body.attributes.onpageswap",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "body",
+        "interface": "HTMLBodyElement"
+      },
+      "name": "onpageswap",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.body",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/webappapis.html#handler-window-onpageswap",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "onpopstate content attribute on <body>.",
+      "domain": "html",
+      "id": "html.elements.body.attributes.onpopstate",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "body",
+        "interface": "HTMLBodyElement"
+      },
+      "name": "onpopstate",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.body",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/webappapis.html#handler-window-onpopstate",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "onrejectionhandled content attribute on <body>.",
+      "domain": "html",
+      "id": "html.elements.body.attributes.onrejectionhandled",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "body",
+        "interface": "HTMLBodyElement"
+      },
+      "name": "onrejectionhandled",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.body",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/webappapis.html#handler-window-onrejectionhandled",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "onstorage content attribute on <body>.",
+      "domain": "html",
+      "id": "html.elements.body.attributes.onstorage",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "body",
+        "interface": "HTMLBodyElement"
+      },
+      "name": "onstorage",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.body",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/webappapis.html#handler-window-onstorage",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "onunhandledrejection content attribute on <body>.",
+      "domain": "html",
+      "id": "html.elements.body.attributes.onunhandledrejection",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "body",
+        "interface": "HTMLBodyElement"
+      },
+      "name": "onunhandledrejection",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.body",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/webappapis.html#handler-window-onunhandledrejection",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "onunload content attribute on <body>.",
+      "domain": "html",
+      "id": "html.elements.body.attributes.onunload",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "body",
+        "interface": "HTMLBodyElement"
+      },
+      "name": "onunload",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.body",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/webappapis.html#handler-window-onunload",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <body> element content categories.",
+      "domain": "html",
+      "id": "html.elements.body.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "body",
+        "interface": "HTMLBodyElement"
+      },
+      "name": "body content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.body",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/sections.html#the-body-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <body> element content model.",
+      "domain": "html",
+      "id": "html.elements.body.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "body",
+        "interface": "HTMLBodyElement"
+      },
+      "name": "body content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.body",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/sections.html#the-body-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <body> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.body.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "body",
+        "interface": "HTMLBodyElement"
+      },
+      "name": "body interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.body",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/sections.html#the-body-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/body.json"
+}

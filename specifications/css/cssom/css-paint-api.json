@@ -1,0 +1,521 @@
+{
+  "entries": [
+    {
+      "description": "dictionary PaintRenderingContext2DSettings from css-paint-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-paint-api.dictionaries.paintrenderingcontext2dsettings",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "css-paint-api.idl"
+      },
+      "name": "PaintRenderingContext2DSettings",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-paint-api.idl#WebIDL:PaintRenderingContext2DSettings",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "PaintRenderingContext2DSettings.alpha Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-paint-api.dictionaries.paintrenderingcontext2dsettings.fields.alpha",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-paint-api.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"alpha\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":true},\"required\":false}"
+      },
+      "name": "alpha",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-paint-api.dictionaries.paintrenderingcontext2dsettings",
+      "spec": {
+        "anchor": "webref/idl/css-paint-api.idl#WebIDL:PaintRenderingContext2DSettings.alpha",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "includes PaintRenderingContext2D-includes-CanvasCompositing from css-paint-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-paint-api.includes.paintrenderingcontext2d-includes-canvascompositing",
+      "kind": "includes",
+      "metadata": {
+        "idlSource": "css-paint-api.idl"
+      },
+      "name": "PaintRenderingContext2D-includes-CanvasCompositing",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-paint-api.idl#WebIDL:PaintRenderingContext2D-includes-CanvasCompositing",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "includes PaintRenderingContext2D-includes-CanvasDrawImage from css-paint-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-paint-api.includes.paintrenderingcontext2d-includes-canvasdrawimage",
+      "kind": "includes",
+      "metadata": {
+        "idlSource": "css-paint-api.idl"
+      },
+      "name": "PaintRenderingContext2D-includes-CanvasDrawImage",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-paint-api.idl#WebIDL:PaintRenderingContext2D-includes-CanvasDrawImage",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "includes PaintRenderingContext2D-includes-CanvasDrawPath from css-paint-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-paint-api.includes.paintrenderingcontext2d-includes-canvasdrawpath",
+      "kind": "includes",
+      "metadata": {
+        "idlSource": "css-paint-api.idl"
+      },
+      "name": "PaintRenderingContext2D-includes-CanvasDrawPath",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-paint-api.idl#WebIDL:PaintRenderingContext2D-includes-CanvasDrawPath",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "includes PaintRenderingContext2D-includes-CanvasFillStrokeStyles from css-paint-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-paint-api.includes.paintrenderingcontext2d-includes-canvasfillstrokestyles",
+      "kind": "includes",
+      "metadata": {
+        "idlSource": "css-paint-api.idl"
+      },
+      "name": "PaintRenderingContext2D-includes-CanvasFillStrokeStyles",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-paint-api.idl#WebIDL:PaintRenderingContext2D-includes-CanvasFillStrokeStyles",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "includes PaintRenderingContext2D-includes-CanvasImageSmoothing from css-paint-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-paint-api.includes.paintrenderingcontext2d-includes-canvasimagesmoothing",
+      "kind": "includes",
+      "metadata": {
+        "idlSource": "css-paint-api.idl"
+      },
+      "name": "PaintRenderingContext2D-includes-CanvasImageSmoothing",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-paint-api.idl#WebIDL:PaintRenderingContext2D-includes-CanvasImageSmoothing",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "includes PaintRenderingContext2D-includes-CanvasPath from css-paint-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-paint-api.includes.paintrenderingcontext2d-includes-canvaspath",
+      "kind": "includes",
+      "metadata": {
+        "idlSource": "css-paint-api.idl"
+      },
+      "name": "PaintRenderingContext2D-includes-CanvasPath",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-paint-api.idl#WebIDL:PaintRenderingContext2D-includes-CanvasPath",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "includes PaintRenderingContext2D-includes-CanvasPathDrawingStyles from css-paint-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-paint-api.includes.paintrenderingcontext2d-includes-canvaspathdrawingstyles",
+      "kind": "includes",
+      "metadata": {
+        "idlSource": "css-paint-api.idl"
+      },
+      "name": "PaintRenderingContext2D-includes-CanvasPathDrawingStyles",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-paint-api.idl#WebIDL:PaintRenderingContext2D-includes-CanvasPathDrawingStyles",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "includes PaintRenderingContext2D-includes-CanvasRect from css-paint-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-paint-api.includes.paintrenderingcontext2d-includes-canvasrect",
+      "kind": "includes",
+      "metadata": {
+        "idlSource": "css-paint-api.idl"
+      },
+      "name": "PaintRenderingContext2D-includes-CanvasRect",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-paint-api.idl#WebIDL:PaintRenderingContext2D-includes-CanvasRect",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "includes PaintRenderingContext2D-includes-CanvasShadowStyles from css-paint-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-paint-api.includes.paintrenderingcontext2d-includes-canvasshadowstyles",
+      "kind": "includes",
+      "metadata": {
+        "idlSource": "css-paint-api.idl"
+      },
+      "name": "PaintRenderingContext2D-includes-CanvasShadowStyles",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-paint-api.idl#WebIDL:PaintRenderingContext2D-includes-CanvasShadowStyles",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "includes PaintRenderingContext2D-includes-CanvasState from css-paint-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-paint-api.includes.paintrenderingcontext2d-includes-canvasstate",
+      "kind": "includes",
+      "metadata": {
+        "idlSource": "css-paint-api.idl"
+      },
+      "name": "PaintRenderingContext2D-includes-CanvasState",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-paint-api.idl#WebIDL:PaintRenderingContext2D-includes-CanvasState",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "includes PaintRenderingContext2D-includes-CanvasTransform from css-paint-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-paint-api.includes.paintrenderingcontext2d-includes-canvastransform",
+      "kind": "includes",
+      "metadata": {
+        "idlSource": "css-paint-api.idl"
+      },
+      "name": "PaintRenderingContext2D-includes-CanvasTransform",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-paint-api.idl#WebIDL:PaintRenderingContext2D-includes-CanvasTransform",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface PaintRenderingContext2D from css-paint-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-paint-api.interfaces.paintrenderingcontext2d",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"PaintWorklet\"}"
+        ],
+        "idlSource": "css-paint-api.idl"
+      },
+      "name": "PaintRenderingContext2D",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-paint-api.idl#WebIDL:PaintRenderingContext2D",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface PaintSize from css-paint-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-paint-api.interfaces.paintsize",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"PaintWorklet\"}"
+        ],
+        "idlSource": "css-paint-api.idl"
+      },
+      "name": "PaintSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-paint-api.idl#WebIDL:PaintSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "PaintSize.height Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-paint-api.interfaces.paintsize.attributes.height",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-paint-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"height\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "height",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-paint-api.interfaces.paintsize",
+      "spec": {
+        "anchor": "webref/idl/css-paint-api.idl#WebIDL:PaintSize.height",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "PaintSize.width Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-paint-api.interfaces.paintsize.attributes.width",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-paint-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"width\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-paint-api.interfaces.paintsize",
+      "spec": {
+        "anchor": "webref/idl/css-paint-api.idl#WebIDL:PaintSize.width",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface PaintWorkletGlobalScope from css-paint-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-paint-api.interfaces.paintworkletglobalscope",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Global={\"type\":\"identifier-list\",\"value\":[{\"value\":\"Worklet\"},{\"value\":\"PaintWorklet\"}]}",
+          "Exposed={\"type\":\"identifier\",\"value\":\"PaintWorklet\"}"
+        ],
+        "idlSource": "css-paint-api.idl",
+        "inheritance": "WorkletGlobalScope"
+      },
+      "name": "PaintWorkletGlobalScope",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-paint-api.idl#WebIDL:PaintWorkletGlobalScope",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "PaintWorkletGlobalScope.devicePixelRatio Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-paint-api.interfaces.paintworkletglobalscope.attributes.devicepixelratio",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-paint-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"devicePixelRatio\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unrestricted double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "devicePixelRatio",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-paint-api.interfaces.paintworkletglobalscope",
+      "spec": {
+        "anchor": "webref/idl/css-paint-api.idl#WebIDL:PaintWorkletGlobalScope.devicePixelRatio",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "PaintWorkletGlobalScope has WorkletGlobalScope as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-paint-api.interfaces.paintworkletglobalscope.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "WorkletGlobalScope"
+      },
+      "name": "PaintWorkletGlobalScope inherits WorkletGlobalScope",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-paint-api.interfaces.paintworkletglobalscope",
+      "spec": {
+        "anchor": "webref/idl/css-paint-api.idl#WebIDL:PaintWorkletGlobalScope",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "PaintWorkletGlobalScope.registerPaint Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-paint-api.interfaces.paintworkletglobalscope.methods.registerpaint",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-paint-api.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"registerPaint\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"name\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"paintCtor\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"VoidFunction\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "registerPaint",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-paint-api.interfaces.paintworkletglobalscope",
+      "spec": {
+        "anchor": "webref/idl/css-paint-api.idl#WebIDL:PaintWorkletGlobalScope.registerPaint",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "namespace CSS from css-paint-api.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-paint-api.namespaces.css",
+      "kind": "namespace",
+      "metadata": {
+        "idlSource": "css-paint-api.idl"
+      },
+      "name": "CSS",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-paint-api.idl#WebIDL:CSS",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSS.paintWorklet Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-paint-api.namespaces.css.attributes.paintworklet",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SameObject"
+        ],
+        "idlSource": "css-paint-api.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"paintWorklet\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"Worklet\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SameObject\",\"rhs\":null,\"arguments\":[]}],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "paintWorklet",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-paint-api.namespaces.css",
+      "spec": {
+        "anchor": "webref/idl/css-paint-api.idl#WebIDL:CSS.paintWorklet",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-paint-api.json"
+}

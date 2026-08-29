@@ -1,0 +1,123 @@
+{
+  "entries": [
+    {
+      "description": "Footer for a page or section",
+      "domain": "html",
+      "id": "html.elements.footer",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; palpable",
+        "children": "flow*",
+        "interface": "HTMLElement",
+        "parents": "flow"
+      },
+      "name": "footer",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/sections.html#the-footer-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <footer> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.footer.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "footer",
+        "interface": "HTMLElement"
+      },
+      "name": "footer implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.footer",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <footer> element content categories.",
+      "domain": "html",
+      "id": "html.elements.footer.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "footer",
+        "interface": "HTMLElement"
+      },
+      "name": "footer content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.footer",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/sections.html#the-footer-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <footer> element content model.",
+      "domain": "html",
+      "id": "html.elements.footer.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "footer",
+        "interface": "HTMLElement"
+      },
+      "name": "footer content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.footer",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/sections.html#the-footer-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <footer> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.footer.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "footer",
+        "interface": "HTMLElement"
+      },
+      "name": "footer interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.footer",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/sections.html#the-footer-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/footer.json"
+}

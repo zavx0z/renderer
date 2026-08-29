@@ -1,0 +1,330 @@
+{
+  "entries": [
+    {
+      "description": "User-submittable form",
+      "domain": "html",
+      "id": "html.elements.form",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; palpable",
+        "children": "flow*",
+        "interface": "HTMLFormElement",
+        "parents": "flow"
+      },
+      "name": "form",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/forms.html#the-form-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <form> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.form.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "form",
+        "interface": "HTMLFormElement"
+      },
+      "name": "form implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.form",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "accept-charset content attribute on <form>.",
+      "domain": "html",
+      "id": "html.elements.form.attributes.accept-charset",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "form",
+        "interface": "HTMLFormElement"
+      },
+      "name": "accept-charset",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.form",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/forms.html#attr-form-accept-charset",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "action content attribute on <form>.",
+      "domain": "html",
+      "id": "html.elements.form.attributes.action",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "form",
+        "interface": "HTMLFormElement"
+      },
+      "name": "action",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.form",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fs-action",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "autocomplete content attribute on <form>.",
+      "domain": "html",
+      "id": "html.elements.form.attributes.autocomplete",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "form",
+        "interface": "HTMLFormElement"
+      },
+      "name": "autocomplete",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.form",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/forms.html#attr-form-autocomplete",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "enctype content attribute on <form>.",
+      "domain": "html",
+      "id": "html.elements.form.attributes.enctype",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "form",
+        "interface": "HTMLFormElement"
+      },
+      "name": "enctype",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.form",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fs-enctype",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "method content attribute on <form>.",
+      "domain": "html",
+      "id": "html.elements.form.attributes.method",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "form",
+        "interface": "HTMLFormElement"
+      },
+      "name": "method",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.form",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fs-method",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "name content attribute on <form>.",
+      "domain": "html",
+      "id": "html.elements.form.attributes.name",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "form",
+        "interface": "HTMLFormElement"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.form",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/forms.html#attr-form-name",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "novalidate content attribute on <form>.",
+      "domain": "html",
+      "id": "html.elements.form.attributes.novalidate",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "form",
+        "interface": "HTMLFormElement"
+      },
+      "name": "novalidate",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.form",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fs-novalidate",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "rel content attribute on <form>.",
+      "domain": "html",
+      "id": "html.elements.form.attributes.rel",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "form",
+        "interface": "HTMLFormElement"
+      },
+      "name": "rel",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.form",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/forms.html#attr-form-rel",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "target content attribute on <form>.",
+      "domain": "html",
+      "id": "html.elements.form.attributes.target",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "form",
+        "interface": "HTMLFormElement"
+      },
+      "name": "target",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.form",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fs-target",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <form> element content categories.",
+      "domain": "html",
+      "id": "html.elements.form.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "form",
+        "interface": "HTMLFormElement"
+      },
+      "name": "form content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.form",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/forms.html#the-form-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <form> element content model.",
+      "domain": "html",
+      "id": "html.elements.form.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "form",
+        "interface": "HTMLFormElement"
+      },
+      "name": "form content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.form",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/forms.html#the-form-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <form> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.form.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "form",
+        "interface": "HTMLFormElement"
+      },
+      "name": "form interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.form",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/forms.html#the-form-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/form.json"
+}

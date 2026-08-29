@@ -1,0 +1,123 @@
+{
+  "entries": [
+    {
+      "description": "Caption for fieldset",
+      "domain": "html",
+      "id": "html.elements.legend",
+      "kind": "element",
+      "metadata": {
+        "categories": "none",
+        "children": "phrasing*; heading content",
+        "interface": "HTMLLegendElement",
+        "parents": "fieldset; optgroup"
+      },
+      "name": "legend",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-legend-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <legend> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.legend.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "legend",
+        "interface": "HTMLLegendElement"
+      },
+      "name": "legend implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.legend",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <legend> element content categories.",
+      "domain": "html",
+      "id": "html.elements.legend.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "legend",
+        "interface": "HTMLLegendElement"
+      },
+      "name": "legend content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.legend",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-legend-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <legend> element content model.",
+      "domain": "html",
+      "id": "html.elements.legend.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "legend",
+        "interface": "HTMLLegendElement"
+      },
+      "name": "legend content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.legend",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-legend-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <legend> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.legend.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "legend",
+        "interface": "HTMLLegendElement"
+      },
+      "name": "legend interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.legend",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-legend-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/legend.json"
+}

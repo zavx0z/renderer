@@ -1,0 +1,82 @@
+{
+  "entries": [
+    {
+      "description": "interface CSSNestedDeclarations from css-nesting.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-nesting.interfaces.cssnesteddeclarations",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-nesting.idl",
+        "inheritance": "CSSRule"
+      },
+      "name": "CSSNestedDeclarations",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-nesting.idl#WebIDL:CSSNestedDeclarations",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSNestedDeclarations.style Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-nesting.interfaces.cssnesteddeclarations.attributes.style",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SameObject",
+          "PutForwards={\"type\":\"identifier\",\"value\":\"cssText\"}"
+        ],
+        "idlSource": "css-nesting.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"style\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSStyleProperties\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SameObject\",\"rhs\":null,\"arguments\":[]},{\"type\":\"extended-attribute\",\"name\":\"PutForwards\",\"rhs\":{\"type\":\"identifier\",\"value\":\"cssText\"},\"arguments\":[]}],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-nesting.interfaces.cssnesteddeclarations",
+      "spec": {
+        "anchor": "webref/idl/css-nesting.idl#WebIDL:CSSNestedDeclarations.style",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSNestedDeclarations has CSSRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-nesting.interfaces.cssnesteddeclarations.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSRule"
+      },
+      "name": "CSSNestedDeclarations inherits CSSRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-nesting.interfaces.cssnesteddeclarations",
+      "spec": {
+        "anchor": "webref/idl/css-nesting.idl#WebIDL:CSSNestedDeclarations",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-nesting.json"
+}

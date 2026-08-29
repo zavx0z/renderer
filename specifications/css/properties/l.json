@@ -1,0 +1,532 @@
+{
+  "entries": [
+    {
+      "domain": "css",
+      "id": "css.properties.left",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "positioned elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword auto or a computed <length-percentage> value",
+        "extended": [
+          "https://drafts.csswg.org/css-anchor-position-1/"
+        ],
+        "inherited": "no",
+        "initial": "auto",
+        "logicalPropertyGroup": "inset",
+        "percentages": "refer to size of containing block; see prose",
+        "styleDeclaration": [
+          "left"
+        ],
+        "syntax": "auto | <length-percentage> | <anchor()> | <anchor-size()>"
+      },
+      "name": "left",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-position-3/#propdef-left",
+        "profile": "standard",
+        "source": "css:css-position-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.letter-spacing",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "inline boxes and text",
+        "canonicalOrder": "n/a",
+        "computedValue": "an absolute length and/or a percentage",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "relative to used font-size",
+        "styleDeclaration": [
+          "letter-spacing",
+          "letterSpacing"
+        ],
+        "syntax": "normal | <length-percentage>"
+      },
+      "name": "letter-spacing",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-letter-spacing",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.lighting-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "feDiffuseLighting and feSpecularLighting elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "white",
+        "media": "visual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "lighting-color",
+          "lightingColor"
+        ],
+        "syntax": "<color>"
+      },
+      "name": "lighting-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/filter-effects-1/#propdef-lighting-color",
+        "profile": "standard",
+        "source": "css:filter-effects-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.line-break",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "text",
+        "canonicalOrder": "n/a",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "line-break",
+          "lineBreak"
+        ],
+        "syntax": "auto | loose | normal | strict | anywhere"
+      },
+      "name": "line-break",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-line-break",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.line-clamp",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "none",
+        "longhands": [
+          "max-lines",
+          "block-ellipsis",
+          "continue"
+        ],
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "line-clamp",
+          "lineClamp"
+        ],
+        "syntax": "none | [<integer [1,∞]> || <'block-ellipsis'>] -webkit-legacy?"
+      },
+      "name": "line-clamp",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-4/#propdef-line-clamp",
+        "profile": "standard",
+        "source": "css:css-overflow-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.line-fit-edge",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "inline boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "leading",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "line-fit-edge",
+          "lineFitEdge"
+        ],
+        "syntax": "leading | <text-edge>"
+      },
+      "name": "line-fit-edge",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-inline-3/#propdef-line-fit-edge",
+        "profile": "standard",
+        "source": "css:css-inline-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.line-grid",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block, flex and grid containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "match-parent",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "line-grid",
+          "lineGrid"
+        ],
+        "syntax": "match-parent | create"
+      },
+      "name": "line-grid",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-line-grid-1/#propdef-line-grid",
+        "profile": "standard",
+        "source": "css:css-line-grid-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.line-height",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "non-replaced inline boxes and SVG text content elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the specified keyword, a number, or a computed <length> value",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "computed relative to 1em",
+        "styleDeclaration": [
+          "line-height",
+          "lineHeight"
+        ],
+        "syntax": "normal | <number [0,∞]> | <length-percentage [0,∞]>"
+      },
+      "name": "line-height",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-inline-3/#propdef-line-height",
+        "profile": "standard",
+        "source": "css:css-inline-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.line-height-step",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "block containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "absolute length",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "0",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "line-height-step",
+          "lineHeightStep"
+        ],
+        "syntax": "<length [0,∞]>"
+      },
+      "name": "line-height-step",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-rhythm-1/#propdef-line-height-step",
+        "profile": "standard",
+        "source": "css:css-rhythm-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.line-padding",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "inline boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "absolute length",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "0",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "line-padding",
+          "linePadding"
+        ],
+        "syntax": "<length>"
+      },
+      "name": "line-padding",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-line-padding",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.line-snap",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block container elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "line-snap",
+          "lineSnap"
+        ],
+        "syntax": "none | baseline | contain"
+      },
+      "name": "line-snap",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-line-grid-1/#propdef-line-snap",
+        "profile": "standard",
+        "source": "css:css-line-grid-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.link-parameters",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements and pseudo-elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "link-parameters",
+          "linkParameters"
+        ],
+        "syntax": "none | <param()>#"
+      },
+      "name": "link-parameters",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-link-params-1/#propdef-link-parameters",
+        "profile": "standard",
+        "source": "css:css-link-params-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.list-style",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "list items",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "list-style-type",
+          "list-style-position",
+          "list-style-image"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "list-style",
+          "listStyle"
+        ],
+        "syntax": "<'list-style-position'> || <'list-style-image'> || <'list-style-type'>"
+      },
+      "name": "list-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-lists-3/#propdef-list-style",
+        "profile": "standard",
+        "source": "css:css-lists-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.list-style-image",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "list items",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword noneor the computed <image>",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "list-style-image",
+          "listStyleImage"
+        ],
+        "syntax": "<image> | none"
+      },
+      "name": "list-style-image",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-lists-3/#propdef-list-style-image",
+        "profile": "standard",
+        "source": "css:css-lists-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.list-style-position",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "list items",
+        "canonicalOrder": "per grammar",
+        "computedValue": "keyword, but see prose",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "outside",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "list-style-position",
+          "listStylePosition"
+        ],
+        "syntax": "inside | outside"
+      },
+      "name": "list-style-position",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-lists-3/#propdef-list-style-position",
+        "profile": "standard",
+        "source": "css:css-lists-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.list-style-type",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "list items",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "disc",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "list-style-type",
+          "listStyleType"
+        ],
+        "syntax": "<counter-style> | <string> | none"
+      },
+      "name": "list-style-type",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-lists-3/#propdef-list-style-type",
+        "profile": "standard",
+        "source": "css:css-lists-3",
+        "version": "8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/properties/l.json"
+}

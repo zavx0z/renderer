@@ -1,0 +1,265 @@
+{
+  "entries": [
+    {
+      "domain": "css",
+      "id": "css.properties.hanging-punctuation",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword(s)",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "hanging-punctuation",
+          "hangingPunctuation"
+        ],
+        "syntax": "none | [ first || [ force-end | allow-end ] || last ]"
+      },
+      "name": "hanging-punctuation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-hanging-punctuation",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.height",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type, recursing into fit-content()",
+        "appliesTo": "all elements except non-replaced inlines",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified, with <length-percentage> values computed",
+        "extended": [
+          "https://drafts.csswg.org/css-anchor-position-1/",
+          "https://drafts.csswg.org/css-sizing-4/"
+        ],
+        "inherited": "no",
+        "initial": "auto",
+        "logicalPropertyGroup": "size",
+        "percentages": "relative to width/height of containing block",
+        "styleDeclaration": [
+          "height"
+        ],
+        "syntax": "auto | <length-percentage [0,∞]> | min-content | max-content | fit-content(<length-percentage [0,∞]>) | <calc-size()> | <anchor-size()> | stretch | fit-content | contain"
+      },
+      "name": "height",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-sizing-3/#propdef-height",
+        "profile": "standard",
+        "source": "css:css-sizing-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.hyphenate-character",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "hyphenate-character",
+          "hyphenateCharacter"
+        ],
+        "syntax": "auto | <string>"
+      },
+      "name": "hyphenate-character",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-hyphenate-character",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.hyphenate-limit-chars",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "three values, each either the auto keyword or an integer",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "hyphenate-limit-chars",
+          "hyphenateLimitChars"
+        ],
+        "syntax": "[ auto | <integer [0,∞]> ]{1,3}"
+      },
+      "name": "hyphenate-limit-chars",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-hyphenate-limit-chars",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.hyphenate-limit-last",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "hyphenate-limit-last",
+          "hyphenateLimitLast"
+        ],
+        "syntax": "none | always | column | page | spread"
+      },
+      "name": "hyphenate-limit-last",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-hyphenate-limit-last",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.hyphenate-limit-lines",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "block containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword or integer",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "no-limit",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "hyphenate-limit-lines",
+          "hyphenateLimitLines"
+        ],
+        "syntax": "no-limit | <integer [0,∞]>"
+      },
+      "name": "hyphenate-limit-lines",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-hyphenate-limit-lines",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.hyphenate-limit-zone",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "block containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "computed <length-percentage> value",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "0",
+        "percentages": "refers to length of the line box",
+        "styleDeclaration": [
+          "hyphenate-limit-zone",
+          "hyphenateLimitZone"
+        ],
+        "syntax": "<length-percentage>"
+      },
+      "name": "hyphenate-limit-zone",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-hyphenate-limit-zone",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.hyphens",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "text",
+        "canonicalOrder": "n/a",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "manual",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "hyphens"
+        ],
+        "syntax": "none | manual | auto"
+      },
+      "name": "hyphens",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-hyphens",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/properties/h.json"
+}

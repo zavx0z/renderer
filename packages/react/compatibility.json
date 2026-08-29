@@ -1,39 +1,768 @@
 {
-  "package": "@zavx0z/react",
-  "reference": "React 19.2 hook names",
+  "capabilities": {
+    "react.apis.react.act": {
+      "conformance": "none",
+      "limitation": "The React 19.2 public reference API is not implemented by @zavx0z/react.",
+      "status": "unsupported"
+    },
+    "react.apis.react.cache": {
+      "conformance": "none",
+      "limitation": "The React 19.2 public reference API is not implemented by @zavx0z/react.",
+      "status": "unsupported"
+    },
+    "react.apis.react.cachesignal": {
+      "conformance": "none",
+      "limitation": "The React 19.2 public reference API is not implemented by @zavx0z/react.",
+      "status": "unsupported"
+    },
+    "react.apis.react.captureownerstack": {
+      "conformance": "none",
+      "limitation": "The React 19.2 public reference API is not implemented by @zavx0z/react.",
+      "status": "unsupported"
+    },
+    "react.apis.react.createcontext": {
+      "conformance": "adapted",
+      "limitation": "Implemented as a compiled runtime adaptation, not an npm React implementation.",
+      "status": "partial"
+    },
+    "react.apis.react.lazy": {
+      "conformance": "none",
+      "limitation": "The React 19.2 public reference API is not implemented by @zavx0z/react.",
+      "status": "unsupported"
+    },
+    "react.apis.react.memo": {
+      "conformance": "adapted",
+      "limitation": "Implemented as a compiled runtime adaptation, not an npm React implementation.",
+      "status": "partial"
+    },
+    "react.apis.react.starttransition": {
+      "conformance": "none",
+      "limitation": "The React 19.2 public reference API is not implemented by @zavx0z/react.",
+      "status": "unsupported"
+    },
+    "react.apis.react.version": {
+      "conformance": "none",
+      "limitation": "The React 19.2 public reference API is not implemented by @zavx0z/react.",
+      "status": "unsupported"
+    },
+    "react.compiler-runtime.react-compiler-runtime.c": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.components.react.activity": {
+      "conformance": "none",
+      "limitation": "The React 19.2 public reference API is not implemented by @zavx0z/react.",
+      "status": "unsupported"
+    },
+    "react.components.react.fragment": {
+      "conformance": "none",
+      "limitation": "The React 19.2 public reference API is not implemented by @zavx0z/react.",
+      "status": "unsupported"
+    },
+    "react.components.react.profiler": {
+      "conformance": "none",
+      "limitation": "The React 19.2 public reference API is not implemented by @zavx0z/react.",
+      "status": "unsupported"
+    },
+    "react.components.react.strictmode": {
+      "conformance": "none",
+      "limitation": "The React 19.2 public reference API is not implemented by @zavx0z/react.",
+      "status": "unsupported"
+    },
+    "react.components.react.suspense": {
+      "conformance": "none",
+      "limitation": "The React 19.2 public reference API is not implemented by @zavx0z/react.",
+      "status": "unsupported"
+    },
+    "react.directives.use-client": {
+      "conformance": "none",
+      "limitation": "The React 19.2 public reference API is not implemented by @zavx0z/react.",
+      "status": "unsupported"
+    },
+    "react.directives.use-memo": {
+      "conformance": "none",
+      "limitation": "The React 19.2 public reference API is not implemented by @zavx0z/react.",
+      "status": "unsupported"
+    },
+    "react.directives.use-no-memo": {
+      "conformance": "none",
+      "limitation": "The React 19.2 public reference API is not implemented by @zavx0z/react.",
+      "status": "unsupported"
+    },
+    "react.directives.use-server": {
+      "conformance": "none",
+      "limitation": "The React 19.2 public reference API is not implemented by @zavx0z/react.",
+      "status": "unsupported"
+    },
+    "react.hooks.react.unstable_usecacherefresh": {
+      "conformance": "none",
+      "limitation": "The reference hook is absent or exported only as an explicit UnsupportedReactFeatureError path.",
+      "status": "unsupported"
+    },
+    "react.hooks.react.use": {
+      "conformance": "none",
+      "limitation": "The reference hook is absent or exported only as an explicit UnsupportedReactFeatureError path.",
+      "status": "unsupported"
+    },
+    "react.hooks.react.useactionstate": {
+      "conformance": "none",
+      "limitation": "The reference hook is absent or exported only as an explicit UnsupportedReactFeatureError path.",
+      "status": "unsupported"
+    },
+    "react.hooks.react.usecallback": {
+      "conformance": "adapted",
+      "limitation": "Slot/order/identity behavior is implemented in a synchronous compiled runtime without Fiber, concurrency, StrictMode replay, or server semantics.",
+      "status": "partial"
+    },
+    "react.hooks.react.usecontext": {
+      "conformance": "adapted",
+      "limitation": "Slot/order/identity behavior is implemented in a synchronous compiled runtime without Fiber, concurrency, StrictMode replay, or server semantics.",
+      "status": "partial"
+    },
+    "react.hooks.react.usedebugvalue": {
+      "conformance": "adapted",
+      "limitation": "Debug values are retained, but no inspection integration exposes them.",
+      "status": "partial"
+    },
+    "react.hooks.react.usedeferredvalue": {
+      "conformance": "none",
+      "limitation": "The reference hook is absent or exported only as an explicit UnsupportedReactFeatureError path.",
+      "status": "unsupported"
+    },
+    "react.hooks.react.useeffect": {
+      "conformance": "adapted",
+      "limitation": "Commit ordering is bounded and synchronous; passive effects are not browser-after-paint and StrictMode replay is absent.",
+      "status": "partial"
+    },
+    "react.hooks.react.useeffectevent": {
+      "conformance": "adapted",
+      "limitation": "Slot/order/identity behavior is implemented in a synchronous compiled runtime without Fiber, concurrency, StrictMode replay, or server semantics.",
+      "status": "partial"
+    },
+    "react.hooks.react.useid": {
+      "conformance": "adapted",
+      "limitation": "Slot/order/identity behavior is implemented in a synchronous compiled runtime without Fiber, concurrency, StrictMode replay, or server semantics.",
+      "status": "partial"
+    },
+    "react.hooks.react.useimperativehandle": {
+      "conformance": "adapted",
+      "limitation": "Slot/order/identity behavior is implemented in a synchronous compiled runtime without Fiber, concurrency, StrictMode replay, or server semantics.",
+      "status": "partial"
+    },
+    "react.hooks.react.useinsertioneffect": {
+      "conformance": "adapted",
+      "limitation": "Commit ordering is bounded and synchronous; passive effects are not browser-after-paint and StrictMode replay is absent.",
+      "status": "partial"
+    },
+    "react.hooks.react.uselayouteffect": {
+      "conformance": "adapted",
+      "limitation": "Commit ordering is bounded and synchronous; passive effects are not browser-after-paint and StrictMode replay is absent.",
+      "status": "partial"
+    },
+    "react.hooks.react.usememo": {
+      "conformance": "adapted",
+      "limitation": "Slot/order/identity behavior is implemented in a synchronous compiled runtime without Fiber, concurrency, StrictMode replay, or server semantics.",
+      "status": "partial"
+    },
+    "react.hooks.react.useoptimistic": {
+      "conformance": "none",
+      "limitation": "The reference hook is absent or exported only as an explicit UnsupportedReactFeatureError path.",
+      "status": "unsupported"
+    },
+    "react.hooks.react.usereducer": {
+      "conformance": "adapted",
+      "limitation": "Slot/order/identity behavior is implemented in a synchronous compiled runtime without Fiber, concurrency, StrictMode replay, or server semantics.",
+      "status": "partial"
+    },
+    "react.hooks.react.useref": {
+      "conformance": "adapted",
+      "limitation": "Slot/order/identity behavior is implemented in a synchronous compiled runtime without Fiber, concurrency, StrictMode replay, or server semantics.",
+      "status": "partial"
+    },
+    "react.hooks.react.usestate": {
+      "conformance": "adapted",
+      "limitation": "Slot/order/identity behavior is implemented in a synchronous compiled runtime without Fiber, concurrency, StrictMode replay, or server semantics.",
+      "status": "partial"
+    },
+    "react.hooks.react.usesyncexternalstore": {
+      "conformance": "adapted",
+      "limitation": "Client subscription identity is implemented, but getServerSnapshot/SSR behavior is not.",
+      "status": "partial"
+    },
+    "react.hooks.react.usetransition": {
+      "conformance": "none",
+      "limitation": "The reference hook is absent or exported only as an explicit UnsupportedReactFeatureError path.",
+      "status": "unsupported"
+    },
+    "react.jsx-runtime.react-jsx-dev-runtime.fragment": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.jsx-runtime.react-jsx-dev-runtime.jsxdev": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.jsx-runtime.react-jsx-runtime.fragment": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.jsx-runtime.react-jsx-runtime.jsx": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.jsx-runtime.react-jsx-runtime.jsxs": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.legacy.react.children": {
+      "conformance": "none",
+      "limitation": "The React 19.2 public reference API is not implemented by @zavx0z/react.",
+      "status": "unsupported"
+    },
+    "react.legacy.react.cloneelement": {
+      "conformance": "none",
+      "limitation": "The React 19.2 public reference API is not implemented by @zavx0z/react.",
+      "status": "unsupported"
+    },
+    "react.legacy.react.component": {
+      "conformance": "none",
+      "limitation": "The React 19.2 public reference API is not implemented by @zavx0z/react.",
+      "status": "unsupported"
+    },
+    "react.legacy.react.createelement": {
+      "conformance": "none",
+      "limitation": "The React 19.2 public reference API is not implemented by @zavx0z/react.",
+      "status": "unsupported"
+    },
+    "react.legacy.react.createref": {
+      "conformance": "none",
+      "limitation": "The React 19.2 public reference API is not implemented by @zavx0z/react.",
+      "status": "unsupported"
+    },
+    "react.legacy.react.forwardref": {
+      "conformance": "none",
+      "limitation": "The React 19.2 public reference API is not implemented by @zavx0z/react.",
+      "status": "unsupported"
+    },
+    "react.legacy.react.isvalidelement": {
+      "conformance": "none",
+      "limitation": "The React 19.2 public reference API is not implemented by @zavx0z/react.",
+      "status": "unsupported"
+    },
+    "react.legacy.react.purecomponent": {
+      "conformance": "none",
+      "limitation": "The React 19.2 public reference API is not implemented by @zavx0z/react.",
+      "status": "unsupported"
+    },
+    "react.react-dom.react-dom-client.createroot": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom-client.hydrateroot": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom-client.version": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom-server.rendertopipeablestream": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom-server.rendertoreadablestream": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom-server.rendertostaticmarkup": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom-server.rendertostring": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom-server.resume": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom-server.resumetopipeablestream": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom-server.version": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom-static.prerender": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom-static.prerendertonodestream": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom-static.resumeandprerender": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom-static.resumeandprerendertonodestream": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom-static.version": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom-test-utils.act": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom.createportal": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom.flushsync": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom.preconnect": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom.prefetchdns": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom.preinit": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom.preinitmodule": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom.preload": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom.preloadmodule": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom.requestformreset": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom.unstable_batchedupdates": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom.useformstate": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom.useformstatus": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.react-dom.react-dom.version": {
+      "conformance": "none",
+      "limitation": null,
+      "status": "not-applicable"
+    },
+    "react.semantics.architecture-fiber": {
+      "conformance": "extension",
+      "limitation": null,
+      "status": "implemented"
+    },
+    "react.semantics.architecture-npm-react-dependency": {
+      "conformance": "extension",
+      "limitation": null,
+      "status": "implemented"
+    },
+    "react.semantics.architecture-react-dom-host": {
+      "conformance": "extension",
+      "limitation": null,
+      "status": "implemented"
+    },
+    "react.semantics.architecture-react-package-alias": {
+      "conformance": "extension",
+      "limitation": null,
+      "status": "implemented"
+    },
+    "react.semantics.architecture-virtual-dom": {
+      "conformance": "extension",
+      "limitation": null,
+      "status": "implemented"
+    },
+    "react.semantics.batching": {
+      "conformance": "adapted",
+      "limitation": "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM.",
+      "status": "partial"
+    },
+    "react.semantics.browser-execution": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.browser-execution-evidence": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.browser-target-build": {
+      "conformance": "adapted",
+      "limitation": "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM.",
+      "status": "partial"
+    },
+    "react.semantics.callback-refs": {
+      "conformance": "adapted",
+      "limitation": "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM.",
+      "status": "partial"
+    },
+    "react.semantics.children": {
+      "conformance": "adapted",
+      "limitation": "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM.",
+      "status": "partial"
+    },
+    "react.semantics.children-api": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.class-components": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.cleanup": {
+      "conformance": "adapted",
+      "limitation": "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM.",
+      "status": "partial"
+    },
+    "react.semantics.clone-element": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.commit-phases": {
+      "conformance": "adapted",
+      "limitation": "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM.",
+      "status": "partial"
+    },
+    "react.semantics.compiler-export": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.component-identity": {
+      "conformance": "adapted",
+      "limitation": "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM.",
+      "status": "partial"
+    },
+    "react.semantics.concurrency": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.conditional-ranges": {
+      "conformance": "adapted",
+      "limitation": "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM.",
+      "status": "partial"
+    },
+    "react.semantics.context": {
+      "conformance": "adapted",
+      "limitation": "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM.",
+      "status": "partial"
+    },
+    "react.semantics.context-consumer": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.create-element": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.create-root": {
+      "conformance": "adapted",
+      "limitation": "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM.",
+      "status": "partial"
+    },
+    "react.semantics.custom-hooks": {
+      "conformance": "adapted",
+      "limitation": "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM.",
+      "status": "partial"
+    },
+    "react.semantics.debug-value-inspection": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.default-props": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.directives-actions": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.effect-event-callsite-validation": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.error-boundaries": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.failed-render-isolation": {
+      "conformance": "adapted",
+      "limitation": "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM.",
+      "status": "partial"
+    },
+    "react.semantics.forward-ref": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.fragments": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.function-components": {
+      "conformance": "adapted",
+      "limitation": "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM.",
+      "status": "partial"
+    },
+    "react.semantics.governed-react-imports": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.gpu-instancing": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.hydration": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.is-valid-element": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.jsx-context-provider": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.keys": {
+      "conformance": "adapted",
+      "limitation": "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM.",
+      "status": "partial"
+    },
+    "react.semantics.lazy": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.low-level-context-providers": {
+      "conformance": "adapted",
+      "limitation": "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM.",
+      "status": "partial"
+    },
+    "react.semantics.memo": {
+      "conformance": "adapted",
+      "limitation": "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM.",
+      "status": "partial"
+    },
+    "react.semantics.nested-components": {
+      "conformance": "adapted",
+      "limitation": "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM.",
+      "status": "partial"
+    },
+    "react.semantics.object-refs": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.passive-paint-scheduling": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.portals": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.props": {
+      "conformance": "adapted",
+      "limitation": "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM.",
+      "status": "partial"
+    },
+    "react.semantics.render-phase-updates": {
+      "conformance": "adapted",
+      "limitation": "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM.",
+      "status": "partial"
+    },
+    "react.semantics.render-update": {
+      "conformance": "adapted",
+      "limitation": "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM.",
+      "status": "partial"
+    },
+    "react.semantics.scheduling": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.server-components": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.server-external-store-snapshots": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.server-rendering": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.source-maps": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.static-template-identity": {
+      "conformance": "adapted",
+      "limitation": "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM.",
+      "status": "partial"
+    },
+    "react.semantics.strict-mode": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.strict-mode-effect-replay": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.strict-mode-replay": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.suspense": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.template-compiler-abi": {
+      "conformance": "adapted",
+      "limitation": "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM.",
+      "status": "partial"
+    },
+    "react.semantics.template-compiler-integration": {
+      "conformance": "adapted",
+      "limitation": "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM.",
+      "status": "partial"
+    },
+    "react.semantics.transitions": {
+      "conformance": "none",
+      "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
+      "status": "unsupported"
+    },
+    "react.semantics.tsx-authoring": {
+      "conformance": "adapted",
+      "limitation": "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM.",
+      "status": "partial"
+    },
+    "react.semantics.unmount": {
+      "conformance": "adapted",
+      "limitation": "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM.",
+      "status": "partial"
+    }
+  },
   "compilerOwner": "@zavx0z/template",
-  "runtimeModel": "compiled-static-template",
-  "reactPackageAlias": false,
-  "fiber": false,
-  "virtualDom": false,
+  "featureCount": 146,
   "features": {
-    "createRoot": "supported",
-    "functionComponents": "supported",
-    "nestedComponents": "supported",
-    "memo": "supported",
-    "keyedCollections": "supported",
+    "browserExecution": "unsupported",
+    "browserTargetBuild": "supported",
+    "compilerExport": "unsupported",
     "conditionalRanges": "supported",
-    "customHooks": "supported",
     "contextConsumer": "unsupported",
-    "jsxContextProvider": "unsupported",
-    "lowLevelContextProviders": "supported",
+    "createRoot": "supported",
+    "customHooks": "supported",
     "debugValueInspection": "unsupported",
     "effectEventCallsiteValidation": "unsupported",
+    "functionComponents": "supported",
     "governedReactImports": "unsupported",
-    "templateCompilerAbi": "supported",
-    "templateCompilerIntegration": "supported",
-    "compilerExport": "unsupported",
-    "tsxAuthoring": "supported",
-    "browserTargetBuild": "supported",
-    "browserExecution": "unsupported",
     "gpuInstancing": "unsupported",
+    "jsxContextProvider": "unsupported",
+    "keyedCollections": "supported",
+    "lowLevelContextProviders": "supported",
+    "memo": "supported",
+    "nestedComponents": "supported",
     "passivePaintScheduling": "unsupported",
     "serverExternalStoreSnapshots": "unsupported",
     "sourceMaps": "unsupported",
     "staticTemplateIdentity": "supported",
-    "strictModeEffectReplay": "unsupported"
+    "strictModeEffectReplay": "unsupported",
+    "templateCompilerAbi": "supported",
+    "templateCompilerIntegration": "supported",
+    "tsxAuthoring": "supported"
   },
+  "fiber": false,
   "hooks": {
+    "unstable_useCacheRefresh": "unsupported",
     "use": "unsupported",
     "useActionState": "unsupported",
     "useCallback": "supported",
@@ -53,5 +782,22 @@
     "useState": "supported",
     "useSyncExternalStore": "supported",
     "useTransition": "unsupported"
-  }
+  },
+  "npmReactDependency": false,
+  "package": "@zavx0z/react",
+  "reactDomHost": false,
+  "reactPackageAlias": false,
+  "reference": "React 19.2 complete reference profile",
+  "runtimeModel": "compiled-static-template",
+  "statistics": {
+    "implemented": 28,
+    "mappedEntries": 217,
+    "missing": 0,
+    "not-applicable": 35,
+    "partial": 50,
+    "specEntries": 217,
+    "unsupported": 70,
+    "unverified": 34
+  },
+  "virtualDom": false
 }

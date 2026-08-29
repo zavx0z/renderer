@@ -1,0 +1,238 @@
+{
+  "entries": [
+    {
+      "description": "Text metadata",
+      "domain": "html",
+      "id": "html.elements.meta",
+      "kind": "element",
+      "metadata": {
+        "categories": "metadata; flow*; phrasing*",
+        "children": "empty",
+        "interface": "HTMLMetaElement",
+        "parents": "head; noscript*; phrasing*"
+      },
+      "name": "meta",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/semantics.html#meta",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <meta> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.meta.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "meta",
+        "interface": "HTMLMetaElement"
+      },
+      "name": "meta implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.meta",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "charset content attribute on <meta>.",
+      "domain": "html",
+      "id": "html.elements.meta.attributes.charset",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "meta",
+        "interface": "HTMLMetaElement"
+      },
+      "name": "charset",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.meta",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/semantics.html#attr-meta-charset",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "content content attribute on <meta>.",
+      "domain": "html",
+      "id": "html.elements.meta.attributes.content",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "meta",
+        "interface": "HTMLMetaElement"
+      },
+      "name": "content",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.meta",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/semantics.html#attr-meta-content",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "http-equiv content attribute on <meta>.",
+      "domain": "html",
+      "id": "html.elements.meta.attributes.http-equiv",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "meta",
+        "interface": "HTMLMetaElement"
+      },
+      "name": "http-equiv",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.meta",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/semantics.html#attr-meta-http-equiv",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "media content attribute on <meta>.",
+      "domain": "html",
+      "id": "html.elements.meta.attributes.media",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "meta",
+        "interface": "HTMLMetaElement"
+      },
+      "name": "media",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.meta",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/semantics.html#attr-meta-media",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "name content attribute on <meta>.",
+      "domain": "html",
+      "id": "html.elements.meta.attributes.name",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "meta",
+        "interface": "HTMLMetaElement"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.meta",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/semantics.html#attr-meta-name",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <meta> element content categories.",
+      "domain": "html",
+      "id": "html.elements.meta.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "meta",
+        "interface": "HTMLMetaElement"
+      },
+      "name": "meta content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.meta",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/semantics.html#meta",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <meta> element content model.",
+      "domain": "html",
+      "id": "html.elements.meta.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "meta",
+        "interface": "HTMLMetaElement"
+      },
+      "name": "meta content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.meta",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/semantics.html#meta",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <meta> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.meta.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "meta",
+        "interface": "HTMLMetaElement"
+      },
+      "name": "meta interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.meta",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/semantics.html#meta",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/meta.json"
+}

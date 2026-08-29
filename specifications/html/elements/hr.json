@@ -1,0 +1,123 @@
+{
+  "entries": [
+    {
+      "description": "Thematic break",
+      "domain": "html",
+      "id": "html.elements.hr",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow",
+        "children": "empty",
+        "interface": "HTMLHRElement",
+        "parents": "flow; select"
+      },
+      "name": "hr",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-hr-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <hr> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.hr.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "hr",
+        "interface": "HTMLHRElement"
+      },
+      "name": "hr implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.hr",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <hr> element content categories.",
+      "domain": "html",
+      "id": "html.elements.hr.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "hr",
+        "interface": "HTMLHRElement"
+      },
+      "name": "hr content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.hr",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-hr-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <hr> element content model.",
+      "domain": "html",
+      "id": "html.elements.hr.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "hr",
+        "interface": "HTMLHRElement"
+      },
+      "name": "hr content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.hr",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-hr-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <hr> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.hr.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "hr",
+        "interface": "HTMLHRElement"
+      },
+      "name": "hr interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.hr",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-hr-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/hr.json"
+}

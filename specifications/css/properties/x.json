@@ -1,0 +1,38 @@
+{
+  "entries": [
+    {
+      "domain": "css",
+      "id": "css.properties.x",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "‘svg’, ‘rect’, ‘image’, ‘foreignObject’ elements",
+        "computedValue": "an absolute length or percentage",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "media": "visual",
+        "percentages": "refer to the width of the current SVG viewport (see Units)",
+        "styleDeclaration": [
+          "x"
+        ],
+        "syntax": "<length-percentage>"
+      },
+      "name": "x",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/geometry.html#XProperty",
+        "profile": "standard",
+        "source": "css:svgwg",
+        "version": "8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/properties/x.json"
+}

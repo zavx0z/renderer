@@ -1,0 +1,234 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zavx0z.dev/schemas/platform-capability-v1.json",
+  "title": "Platform capability record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "domain",
+    "kind",
+    "name",
+    "spec",
+    "status",
+    "conformance",
+    "owner",
+    "limitations",
+    "evidence",
+    "consumers",
+    "blockedBy",
+    "blocks",
+    "lastVerified"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "domain": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "kind": {
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1
+    },
+    "parent": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "spec": {
+      "$ref": "#/$defs/spec"
+    },
+    "ownerHint": {
+      "$ref": "#/$defs/owner"
+    },
+    "metadata": {
+      "type": "object"
+    },
+    "status": {
+      "$ref": "#/$defs/status"
+    },
+    "conformance": {
+      "enum": ["exact", "adapted", "extension", "none", "unknown"]
+    },
+    "owner": {
+      "$ref": "#/$defs/owner"
+    },
+    "stages": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "$ref": "#/$defs/status"
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "reason": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/evidence"
+      }
+    },
+    "consumers": {
+      "$ref": "#/$defs/idList"
+    },
+    "blockedBy": {
+      "$ref": "#/$defs/idList"
+    },
+    "blocks": {
+      "$ref": "#/$defs/idList"
+    },
+    "lastVerified": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["revision", "date"],
+      "properties": {
+        "revision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "date": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "not-applicable"
+          }
+        },
+        "required": ["status"]
+      },
+      "then": {
+        "required": ["reason"]
+      }
+    }
+  ],
+  "$defs": {
+    "status": {
+      "enum": ["implemented", "partial", "unsupported", "not-applicable", "unverified"]
+    },
+    "spec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "version", "anchor"],
+      "properties": {
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "anchor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "profile": {
+          "enum": ["standard", "reference", "project-contract"]
+        }
+      }
+    },
+    "owner": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repository", "package", "stage"],
+      "properties": {
+        "repository": {
+          "type": "string",
+          "minLength": 1
+        },
+        "package": {
+          "type": "string",
+          "minLength": 1
+        },
+        "stage": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "repository", "revision", "path", "proves", "doesNotProve"],
+      "properties": {
+        "type": {
+          "enum": [
+            "implementation",
+            "unit-test",
+            "integration-test",
+            "browser-e2e",
+            "visual-evidence",
+            "benchmark",
+            "requirement",
+            "external-spec",
+            "consumer-usage",
+            "negative-test"
+          ]
+        },
+        "repository": {
+          "type": "string",
+          "minLength": 1
+        },
+        "revision": {
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "symbol": {
+          "type": "string",
+          "minLength": 1
+        },
+        "lines": {
+          "type": "string",
+          "pattern": "^[0-9]+(?:-[0-9]+)?$"
+        },
+        "proves": {
+          "type": "string",
+          "minLength": 1
+        },
+        "doesNotProve": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "idList": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    }
+  }
+}

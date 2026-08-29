@@ -1,0 +1,123 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zavx0z.dev/schemas/platform-capability-gap-v1.json",
+  "title": "Platform capability gap",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "capability",
+    "reportedBy",
+    "expected",
+    "actual",
+    "minimalReproduction",
+    "suspectedOwner",
+    "severity"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string",
+      "pattern": "^gap\\.[a-z0-9][a-z0-9._-]*$"
+    },
+    "capability": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]*$"
+    },
+    "reportedBy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repository", "package", "subject", "scenario"],
+      "properties": {
+        "repository": {
+          "type": "string",
+          "minLength": 1
+        },
+        "package": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subject": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scenario": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "expected": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reference", "behavior"],
+      "properties": {
+        "reference": {
+          "type": "string",
+          "minLength": 1
+        },
+        "behavior": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "actual": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["behavior", "evidence"],
+      "properties": {
+        "behavior": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "platform-capability-v1.json#/$defs/evidence"
+          }
+        }
+      }
+    },
+    "minimalReproduction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "test"],
+      "properties": {
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "test": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "suspectedOwner": {
+      "$ref": "platform-capability-v1.json#/$defs/owner"
+    },
+    "severity": {
+      "enum": ["P0", "P1", "P2", "P3", "P4"]
+    },
+    "dependencies": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "forbiddenLocalWorkarounds": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    }
+  }
+}

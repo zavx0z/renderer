@@ -1,0 +1,359 @@
+{
+  "entries": [
+    {
+      "description": "interface CSSConditionRule from css-conditional.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-conditional.interfaces.cssconditionrule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-conditional.idl",
+        "inheritance": "CSSGroupingRule"
+      },
+      "name": "CSSConditionRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-conditional.idl#WebIDL:CSSConditionRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSConditionRule.conditionText Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-conditional.interfaces.cssconditionrule.attributes.conditiontext",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-conditional.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"conditionText\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "conditionText",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-conditional.interfaces.cssconditionrule",
+      "spec": {
+        "anchor": "webref/idl/css-conditional.idl#WebIDL:CSSConditionRule.conditionText",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSConditionRule has CSSGroupingRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-conditional.interfaces.cssconditionrule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSGroupingRule"
+      },
+      "name": "CSSConditionRule inherits CSSGroupingRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-conditional.interfaces.cssconditionrule",
+      "spec": {
+        "anchor": "webref/idl/css-conditional.idl#WebIDL:CSSConditionRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSMediaRule from css-conditional.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-conditional.interfaces.cssmediarule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-conditional.idl",
+        "inheritance": "CSSConditionRule"
+      },
+      "name": "CSSMediaRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-conditional.idl#WebIDL:CSSMediaRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSMediaRule.matches Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-conditional.interfaces.cssmediarule.attributes.matches",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-conditional.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"matches\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "matches",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-conditional.interfaces.cssmediarule",
+      "spec": {
+        "anchor": "webref/idl/css-conditional.idl#WebIDL:CSSMediaRule.matches",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSMediaRule.media Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-conditional.interfaces.cssmediarule.attributes.media",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SameObject",
+          "PutForwards={\"type\":\"identifier\",\"value\":\"mediaText\"}"
+        ],
+        "idlSource": "css-conditional.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"media\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"MediaList\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SameObject\",\"rhs\":null,\"arguments\":[]},{\"type\":\"extended-attribute\",\"name\":\"PutForwards\",\"rhs\":{\"type\":\"identifier\",\"value\":\"mediaText\"},\"arguments\":[]}],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "media",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-conditional.interfaces.cssmediarule",
+      "spec": {
+        "anchor": "webref/idl/css-conditional.idl#WebIDL:CSSMediaRule.media",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSMediaRule has CSSConditionRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-conditional.interfaces.cssmediarule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSConditionRule"
+      },
+      "name": "CSSMediaRule inherits CSSConditionRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-conditional.interfaces.cssmediarule",
+      "spec": {
+        "anchor": "webref/idl/css-conditional.idl#WebIDL:CSSMediaRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSRule from css-conditional.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-conditional.interfaces.cssrule",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "css-conditional.idl"
+      },
+      "name": "CSSRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-conditional.idl#WebIDL:CSSRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSRule.SUPPORTS_RULE Web IDL const.",
+      "domain": "css",
+      "id": "css.cssom.css-conditional.interfaces.cssrule.constants.supports_rule",
+      "kind": "const",
+      "metadata": {
+        "idlSource": "css-conditional.idl",
+        "signature": "{\"type\":\"const\",\"name\":\"SUPPORTS_RULE\",\"idlType\":{\"type\":\"const-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned short\"},\"extAttrs\":[],\"value\":{\"type\":\"number\",\"value\":\"12\"}}"
+      },
+      "name": "SUPPORTS_RULE",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-conditional.interfaces.cssrule",
+      "spec": {
+        "anchor": "webref/idl/css-conditional.idl#WebIDL:CSSRule.SUPPORTS_RULE",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSSupportsRule from css-conditional.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-conditional.interfaces.csssupportsrule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-conditional.idl",
+        "inheritance": "CSSConditionRule"
+      },
+      "name": "CSSSupportsRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-conditional.idl#WebIDL:CSSSupportsRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSSupportsRule.matches Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-conditional.interfaces.csssupportsrule.attributes.matches",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-conditional.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"matches\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "matches",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-conditional.interfaces.csssupportsrule",
+      "spec": {
+        "anchor": "webref/idl/css-conditional.idl#WebIDL:CSSSupportsRule.matches",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSSupportsRule has CSSConditionRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-conditional.interfaces.csssupportsrule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSConditionRule"
+      },
+      "name": "CSSSupportsRule inherits CSSConditionRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-conditional.interfaces.csssupportsrule",
+      "spec": {
+        "anchor": "webref/idl/css-conditional.idl#WebIDL:CSSSupportsRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "namespace CSS from css-conditional.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-conditional.namespaces.css",
+      "kind": "namespace",
+      "metadata": {
+        "idlSource": "css-conditional.idl"
+      },
+      "name": "CSS",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-conditional.idl#WebIDL:CSS",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSS.supports Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-conditional.namespaces.css.methods.supports",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-conditional.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"supports\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"property\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"value\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "supports",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-conditional.namespaces.css",
+      "spec": {
+        "anchor": "webref/idl/css-conditional.idl#WebIDL:CSS.supports",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSS.supports Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-conditional.namespaces.css.methods.supports--5932b48d",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-conditional.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"supports\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"conditionText\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "supports",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-conditional.namespaces.css",
+      "spec": {
+        "anchor": "webref/idl/css-conditional.idl#WebIDL:CSS.supports",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-conditional.json"
+}

@@ -1,0 +1,394 @@
+{
+  "entries": [
+    {
+      "description": "@zavx0z/dom-devtools package export ..",
+      "domain": "devtools",
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root",
+      "kind": "package-export-path",
+      "metadata": {
+        "package": "@zavx0z/dom-devtools",
+        "sourceTarget": "src/index.ts",
+        "target": "./src/index.ts"
+      },
+      "name": ".",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "spec": {
+        "anchor": "./src/index.ts",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-devtools-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/dom-devtools public runtime export createDomInspector.",
+      "domain": "devtools",
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.createdominspector",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 1,
+        "path": "renderer:packages/devtools/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": false
+      },
+      "name": "createDomInspector",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "parent": "platform.at-zavx0z-dom-devtools.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/devtools/src/index.ts#L1",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-devtools-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/dom-devtools public type export CreateDomInspectorOptions.",
+      "domain": "devtools",
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.createdominspectoroptions",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 2,
+        "path": "renderer:packages/devtools/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "CreateDomInspectorOptions",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "parent": "platform.at-zavx0z-dom-devtools.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/devtools/src/index.ts#L2",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-devtools-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/dom-devtools public type export DomInspector.",
+      "domain": "devtools",
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.dominspector",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 2,
+        "path": "renderer:packages/devtools/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DomInspector",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "parent": "platform.at-zavx0z-dom-devtools.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/devtools/src/index.ts#L2",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-devtools-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/dom-devtools public type export DomInspectorAttribute.",
+      "domain": "devtools",
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.dominspectorattribute",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 2,
+        "path": "renderer:packages/devtools/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DomInspectorAttribute",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "parent": "platform.at-zavx0z-dom-devtools.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/devtools/src/index.ts#L2",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-devtools-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/dom-devtools public type export DomInspectorBox.",
+      "domain": "devtools",
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.dominspectorbox",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 2,
+        "path": "renderer:packages/devtools/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DomInspectorBox",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "parent": "platform.at-zavx0z-dom-devtools.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/devtools/src/index.ts#L2",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-devtools-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/dom-devtools public type export DomInspectorChange.",
+      "domain": "devtools",
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.dominspectorchange",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 2,
+        "path": "renderer:packages/devtools/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DomInspectorChange",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "parent": "platform.at-zavx0z-dom-devtools.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/devtools/src/index.ts#L2",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-devtools-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/dom-devtools public type export DomInspectorDisplay.",
+      "domain": "devtools",
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.dominspectordisplay",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 2,
+        "path": "renderer:packages/devtools/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DomInspectorDisplay",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "parent": "platform.at-zavx0z-dom-devtools.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/devtools/src/index.ts#L2",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-devtools-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/dom-devtools public type export DomInspectorHit.",
+      "domain": "devtools",
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.dominspectorhit",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 2,
+        "path": "renderer:packages/devtools/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DomInspectorHit",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "parent": "platform.at-zavx0z-dom-devtools.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/devtools/src/index.ts#L2",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-devtools-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/dom-devtools public type export DomInspectorHTMLElementState.",
+      "domain": "devtools",
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.dominspectorhtmlelementstate",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 2,
+        "path": "renderer:packages/devtools/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DomInspectorHTMLElementState",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "parent": "platform.at-zavx0z-dom-devtools.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/devtools/src/index.ts#L2",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-devtools-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/dom-devtools public type export DomInspectorInputState.",
+      "domain": "devtools",
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.dominspectorinputstate",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 2,
+        "path": "renderer:packages/devtools/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DomInspectorInputState",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "parent": "platform.at-zavx0z-dom-devtools.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/devtools/src/index.ts#L2",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-devtools-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/dom-devtools public type export DomInspectorLiveState.",
+      "domain": "devtools",
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.dominspectorlivestate",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 2,
+        "path": "renderer:packages/devtools/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DomInspectorLiveState",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "parent": "platform.at-zavx0z-dom-devtools.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/devtools/src/index.ts#L2",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-devtools-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/dom-devtools public type export DomInspectorNode.",
+      "domain": "devtools",
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.dominspectornode",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 2,
+        "path": "renderer:packages/devtools/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DomInspectorNode",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "parent": "platform.at-zavx0z-dom-devtools.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/devtools/src/index.ts#L2",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-devtools-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/dom-devtools public type export DomInspectorSnapshot.",
+      "domain": "devtools",
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.dominspectorsnapshot",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 2,
+        "path": "renderer:packages/devtools/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DomInspectorSnapshot",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "parent": "platform.at-zavx0z-dom-devtools.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/devtools/src/index.ts#L2",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-devtools-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/dom-devtools public type export DomInspectorSubscriber.",
+      "domain": "devtools",
+      "id": "platform.at-zavx0z-dom-devtools.export-paths.root.symbols.dominspectorsubscriber",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 2,
+        "path": "renderer:packages/devtools/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DomInspectorSubscriber",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "parent": "platform.at-zavx0z-dom-devtools.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/devtools/src/index.ts#L2",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-devtools-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "platform/devtools-exports.json"
+}

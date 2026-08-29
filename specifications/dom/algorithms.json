@@ -1,0 +1,673 @@
+{
+  "entries": [
+    {
+      "description": "Attribute creation, replacement, removal, order, and observable identity.",
+      "domain": "dom",
+      "id": "dom.algorithms.attribute-storage",
+      "kind": "behavior",
+      "name": "attribute storage",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#attribute-storage",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "ChildNode before/after/replaceWith/remove algorithms.",
+      "domain": "dom",
+      "id": "dom.algorithms.child-node-mixins",
+      "kind": "behavior",
+      "name": "child node mixins",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#child-node-mixins",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "Custom element registry, definition, upgrade, lifecycle callbacks, and reactions.",
+      "domain": "dom",
+      "id": "dom.algorithms.custom-elements",
+      "kind": "behavior",
+      "name": "custom elements",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#custom-elements",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "Insert a fragment's children rather than the fragment itself.",
+      "domain": "dom",
+      "id": "dom.algorithms.document-fragment-splicing",
+      "kind": "behavior",
+      "name": "document fragment splicing",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#document-fragment-splicing",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "ElementInternals form, state, shadow, and accessibility surface.",
+      "domain": "dom",
+      "id": "dom.algorithms.element-internals",
+      "kind": "behavior",
+      "name": "element internals",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#element-internals",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "Invoke bubbling listeners from target parent toward root.",
+      "domain": "dom",
+      "id": "dom.algorithms.event-bubble-phase",
+      "kind": "behavior",
+      "name": "event bubble phase",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#event-bubble-phase",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "Cancelable events, preventDefault, passive behavior, and dispatch return value.",
+      "domain": "dom",
+      "id": "dom.algorithms.event-cancellation",
+      "kind": "behavior",
+      "name": "event cancellation",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#event-cancellation",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "Invoke capture listeners from root toward target.",
+      "domain": "dom",
+      "id": "dom.algorithms.event-capture-phase",
+      "kind": "behavior",
+      "name": "event capture phase",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#event-capture-phase",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "Construct the exact event path through semantic ancestors.",
+      "domain": "dom",
+      "id": "dom.algorithms.event-dispatch-path",
+      "kind": "behavior",
+      "name": "event dispatch path",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#event-dispatch-path",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "EventTarget listener registration, removal, identity, once, capture, and passive options.",
+      "domain": "dom",
+      "id": "dom.algorithms.event-listener-registration",
+      "kind": "behavior",
+      "name": "event listener registration",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#event-listener-registration",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "stopPropagation and stopImmediatePropagation semantics.",
+      "domain": "dom",
+      "id": "dom.algorithms.event-propagation-stop",
+      "kind": "behavior",
+      "name": "event propagation stop",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#event-propagation-stop",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "Invoke target listeners with observable target/currentTarget/phase.",
+      "domain": "dom",
+      "id": "dom.algorithms.event-target-phase",
+      "kind": "behavior",
+      "name": "event target phase",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#event-target-phase",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "Focusable area ownership, activeElement, focus/blur, and focus event sequence.",
+      "domain": "dom",
+      "id": "dom.algorithms.focus",
+      "kind": "behavior",
+      "name": "focus",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#focus",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "Interface objects, constructors, prototype identity, and illegal construction rules.",
+      "domain": "dom",
+      "id": "dom.algorithms.interface-object-construction",
+      "kind": "behavior",
+      "name": "interface object construction",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#interface-object-construction",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "Live NodeList and HTMLCollection identity and update behavior.",
+      "domain": "dom",
+      "id": "dom.algorithms.live-collections",
+      "kind": "behavior",
+      "name": "live collections",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#live-collections",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "MutationObserver queues, transient observers, record coalescing, and microtask delivery.",
+      "domain": "dom",
+      "id": "dom.algorithms.mutation-observer",
+      "kind": "behavior",
+      "name": "mutation observer",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#mutation-observer",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "Namespace-aware elements, attributes, lookup, and qualified names.",
+      "domain": "dom",
+      "id": "dom.algorithms.namespaces",
+      "kind": "behavior",
+      "name": "namespaces",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#namespaces",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "Adopt cross-Document subtrees and update ownerDocument recursively.",
+      "domain": "dom",
+      "id": "dom.algorithms.node-adoption",
+      "kind": "behavior",
+      "name": "node adoption",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#node-adoption",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "Clone and import nodes with the specified depth and ownership semantics.",
+      "domain": "dom",
+      "id": "dom.algorithms.node-clone-import",
+      "kind": "behavior",
+      "name": "node clone import",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#node-clone-import",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "Compute isConnected from the current Document tree.",
+      "domain": "dom",
+      "id": "dom.algorithms.node-connected-state",
+      "kind": "behavior",
+      "name": "node connected state",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#node-connected-state",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "Merge adjacent Text nodes and remove empty Text nodes.",
+      "domain": "dom",
+      "id": "dom.algorithms.node-normalize",
+      "kind": "behavior",
+      "name": "node normalize",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#node-normalize",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "A Document owns one observable semantic node tree and one identity per Node.",
+      "domain": "dom",
+      "id": "dom.algorithms.one-semantic-tree",
+      "kind": "behavior",
+      "name": "one semantic tree",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#one-semantic-tree",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "ParentNode query and mutation algorithms.",
+      "domain": "dom",
+      "id": "dom.algorithms.parent-node-mixins",
+      "kind": "behavior",
+      "name": "parent node mixins",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#parent-node-mixins",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "DOM parsing entrypoints and fragment parsing ownership.",
+      "domain": "dom",
+      "id": "dom.algorithms.parsing-boundary",
+      "kind": "behavior",
+      "name": "parsing boundary",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#parsing-boundary",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "Pointer capture ownership, pending override, got/lost events, and release.",
+      "domain": "dom",
+      "id": "dom.algorithms.pointer-capture",
+      "kind": "behavior",
+      "name": "pointer capture",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#pointer-capture",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "Range boundary points, mutation adjustment, extraction, cloning, and geometry boundary.",
+      "domain": "dom",
+      "id": "dom.algorithms.range-boundaries",
+      "kind": "behavior",
+      "name": "range boundaries",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#range-boundaries",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "Document selection identity, ranges, direction, and mutation behavior.",
+      "domain": "dom",
+      "id": "dom.algorithms.selection",
+      "kind": "behavior",
+      "name": "selection",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#selection",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "Selectors API matching, closest, querySelector, and querySelectorAll.",
+      "domain": "dom",
+      "id": "dom.algorithms.selectors",
+      "kind": "behavior",
+      "name": "selectors",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#selectors",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "DOM and HTML serialization entrypoints.",
+      "domain": "dom",
+      "id": "dom.algorithms.serialization-boundary",
+      "kind": "behavior",
+      "name": "serialization boundary",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#serialization-boundary",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "ShadowRoot creation, encapsulated tree identity, and composed-tree behavior.",
+      "domain": "dom",
+      "id": "dom.algorithms.shadow-tree",
+      "kind": "behavior",
+      "name": "shadow tree",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#shadow-tree",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "Slot assignment, flattening, slotchange, and assigned node APIs.",
+      "domain": "dom",
+      "id": "dom.algorithms.slot-assignment",
+      "kind": "behavior",
+      "name": "slot assignment",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#slot-assignment",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "Read and replace textContent across Node kinds.",
+      "domain": "dom",
+      "id": "dom.algorithms.text-content",
+      "kind": "behavior",
+      "name": "text content",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#text-content",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "Insert nodes while preserving parent, sibling, ownership, and mutation observability.",
+      "domain": "dom",
+      "id": "dom.algorithms.tree-insert",
+      "kind": "behavior",
+      "name": "tree insert",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#tree-insert",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "Reject tree insertions that violate hierarchy and cycle invariants.",
+      "domain": "dom",
+      "id": "dom.algorithms.tree-pre-insertion-validity",
+      "kind": "behavior",
+      "name": "tree pre insertion validity",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#tree-pre-insertion-validity",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "Remove a node and update observable tree relations and connected state.",
+      "domain": "dom",
+      "id": "dom.algorithms.tree-remove",
+      "kind": "behavior",
+      "name": "tree remove",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#tree-remove",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "Replace one or more children atomically according to DOM rules.",
+      "domain": "dom",
+      "id": "dom.algorithms.tree-replace",
+      "kind": "behavior",
+      "name": "tree replace",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#tree-replace",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "NodeIterator and TreeWalker traversal with filters.",
+      "domain": "dom",
+      "id": "dom.algorithms.tree-traversal",
+      "kind": "behavior",
+      "name": "tree traversal",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-dom#tree-traversal",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "dom/algorithms.json"
+}

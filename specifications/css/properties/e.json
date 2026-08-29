@@ -1,0 +1,135 @@
+{
+  "entries": [
+    {
+      "domain": "css",
+      "id": "css.properties.empty-cells",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "table-cell boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "show",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "empty-cells",
+          "emptyCells"
+        ],
+        "syntax": "show | hide"
+      },
+      "name": "empty-cells",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-tables-3/#propdef-empty-cells",
+        "profile": "standard",
+        "source": "css:css-tables-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.event-trigger",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "event-trigger",
+          "eventTrigger"
+        ],
+        "syntax": "none | [ <'event-trigger-name'> <'event-trigger-source'> ]#"
+      },
+      "name": "event-trigger",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/animation-triggers-1/#propdef-event-trigger",
+        "profile": "standard",
+        "source": "css:animation-triggers-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.event-trigger-name",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "event-trigger-name",
+          "eventTriggerName"
+        ],
+        "syntax": "none | <dashed-ident>#"
+      },
+      "name": "event-trigger-name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/animation-triggers-1/#propdef-event-trigger-name",
+        "profile": "standard",
+        "source": "css:animation-triggers-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.event-trigger-source",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "event-trigger-source",
+          "eventTriggerSource"
+        ],
+        "syntax": "[ none | <event-trigger-event>+ [ / <event-trigger-event>+ ]? ]#"
+      },
+      "name": "event-trigger-source",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/animation-triggers-1/#propdef-event-trigger-source",
+        "profile": "standard",
+        "source": "css:animation-triggers-1",
+        "version": "8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/properties/e.json"
+}

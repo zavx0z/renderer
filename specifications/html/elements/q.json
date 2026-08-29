@@ -1,0 +1,146 @@
+{
+  "entries": [
+    {
+      "description": "Quotation",
+      "domain": "html",
+      "id": "html.elements.q",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; phrasing; palpable",
+        "children": "phrasing",
+        "interface": "HTMLQuoteElement",
+        "parents": "phrasing"
+      },
+      "name": "q",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-q-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <q> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.q.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "q",
+        "interface": "HTMLQuoteElement"
+      },
+      "name": "q implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.q",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "cite content attribute on <q>.",
+      "domain": "html",
+      "id": "html.elements.q.attributes.cite",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "q",
+        "interface": "HTMLQuoteElement"
+      },
+      "name": "cite",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.q",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/text-level-semantics.html#attr-q-cite",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <q> element content categories.",
+      "domain": "html",
+      "id": "html.elements.q.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "q",
+        "interface": "HTMLQuoteElement"
+      },
+      "name": "q content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.q",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-q-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <q> element content model.",
+      "domain": "html",
+      "id": "html.elements.q.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "q",
+        "interface": "HTMLQuoteElement"
+      },
+      "name": "q content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.q",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-q-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <q> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.q.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "q",
+        "interface": "HTMLQuoteElement"
+      },
+      "name": "q interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.q",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-q-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/q.json"
+}

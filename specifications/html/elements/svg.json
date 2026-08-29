@@ -1,0 +1,123 @@
+{
+  "entries": [
+    {
+      "description": "SVG root",
+      "domain": "html",
+      "id": "html.elements.svg",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; phrasing; embedded; palpable",
+        "children": "per [SVG]",
+        "interface": "SVGSVGElement",
+        "parents": "phrasing"
+      },
+      "name": "svg",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/struct.html#elementdef-svg",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <svg> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.svg.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "svg",
+        "interface": "SVGSVGElement"
+      },
+      "name": "svg implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.svg",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <svg> element content categories.",
+      "domain": "html",
+      "id": "html.elements.svg.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "svg",
+        "interface": "SVGSVGElement"
+      },
+      "name": "svg content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.svg",
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/struct.html#elementdef-svg",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <svg> element content model.",
+      "domain": "html",
+      "id": "html.elements.svg.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "svg",
+        "interface": "SVGSVGElement"
+      },
+      "name": "svg content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.svg",
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/struct.html#elementdef-svg",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <svg> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.svg.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "svg",
+        "interface": "SVGSVGElement"
+      },
+      "name": "svg interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.svg",
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/struct.html#elementdef-svg",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/svg.json"
+}

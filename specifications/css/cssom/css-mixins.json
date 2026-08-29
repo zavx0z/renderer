@@ -1,0 +1,761 @@
+{
+  "entries": [
+    {
+      "description": "dictionary FunctionParameter from css-mixins.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.dictionaries.functionparameter",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "css-mixins.idl"
+      },
+      "name": "FunctionParameter",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:FunctionParameter",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FunctionParameter.defaultValue Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.dictionaries.functionparameter.fields.defaultvalue",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-mixins.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"defaultValue\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":null,\"required\":false}"
+      },
+      "name": "defaultValue",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-mixins.dictionaries.functionparameter",
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:FunctionParameter.defaultValue",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FunctionParameter.name Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.dictionaries.functionparameter.fields.name",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-mixins.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"name\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":null,\"required\":true}"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-mixins.dictionaries.functionparameter",
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:FunctionParameter.name",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FunctionParameter.type Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.dictionaries.functionparameter.fields.type",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-mixins.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"type\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":null,\"required\":true}"
+      },
+      "name": "type",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-mixins.dictionaries.functionparameter",
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:FunctionParameter.type",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSApplyBlockRule from css-mixins.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.cssapplyblockrule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-mixins.idl",
+        "inheritance": "CSSGroupingRule"
+      },
+      "name": "CSSApplyBlockRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSApplyBlockRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSApplyBlockRule.name Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.cssapplyblockrule.attributes.name",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-mixins.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"name\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-mixins.interfaces.cssapplyblockrule",
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSApplyBlockRule.name",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSApplyBlockRule has CSSGroupingRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.cssapplyblockrule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSGroupingRule"
+      },
+      "name": "CSSApplyBlockRule inherits CSSGroupingRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-mixins.interfaces.cssapplyblockrule",
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSApplyBlockRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSApplyBlockRule.getArguments Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.cssapplyblockrule.methods.getarguments",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-mixins.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"getArguments\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"}]},\"arguments\":[],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "getArguments",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-mixins.interfaces.cssapplyblockrule",
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSApplyBlockRule.getArguments",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSApplyStatementRule from css-mixins.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.cssapplystatementrule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-mixins.idl",
+        "inheritance": "CSSRule"
+      },
+      "name": "CSSApplyStatementRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSApplyStatementRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSApplyStatementRule.name Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.cssapplystatementrule.attributes.name",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-mixins.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"name\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-mixins.interfaces.cssapplystatementrule",
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSApplyStatementRule.name",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSApplyStatementRule has CSSRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.cssapplystatementrule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSRule"
+      },
+      "name": "CSSApplyStatementRule inherits CSSRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-mixins.interfaces.cssapplystatementrule",
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSApplyStatementRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSApplyStatementRule.getArguments Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.cssapplystatementrule.methods.getarguments",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-mixins.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"getArguments\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"}]},\"arguments\":[],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "getArguments",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-mixins.interfaces.cssapplystatementrule",
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSApplyStatementRule.getArguments",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSContentsBlockRule from css-mixins.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.csscontentsblockrule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-mixins.idl",
+        "inheritance": "CSSGroupingRule"
+      },
+      "name": "CSSContentsBlockRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSContentsBlockRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSContentsBlockRule has CSSGroupingRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.csscontentsblockrule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSGroupingRule"
+      },
+      "name": "CSSContentsBlockRule inherits CSSGroupingRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-mixins.interfaces.csscontentsblockrule",
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSContentsBlockRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSContentsStatementRule from css-mixins.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.csscontentsstatementrule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-mixins.idl",
+        "inheritance": "CSSRule"
+      },
+      "name": "CSSContentsStatementRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSContentsStatementRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSContentsStatementRule has CSSRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.csscontentsstatementrule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSRule"
+      },
+      "name": "CSSContentsStatementRule inherits CSSRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-mixins.interfaces.csscontentsstatementrule",
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSContentsStatementRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSFunctionDeclarations from css-mixins.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.cssfunctiondeclarations",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-mixins.idl",
+        "inheritance": "CSSRule"
+      },
+      "name": "CSSFunctionDeclarations",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSFunctionDeclarations",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFunctionDeclarations.style Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.cssfunctiondeclarations.attributes.style",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SameObject",
+          "PutForwards={\"type\":\"identifier\",\"value\":\"cssText\"}"
+        ],
+        "idlSource": "css-mixins.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"style\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSFunctionDescriptors\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SameObject\",\"rhs\":null,\"arguments\":[]},{\"type\":\"extended-attribute\",\"name\":\"PutForwards\",\"rhs\":{\"type\":\"identifier\",\"value\":\"cssText\"},\"arguments\":[]}],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-mixins.interfaces.cssfunctiondeclarations",
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSFunctionDeclarations.style",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFunctionDeclarations has CSSRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.cssfunctiondeclarations.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSRule"
+      },
+      "name": "CSSFunctionDeclarations inherits CSSRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-mixins.interfaces.cssfunctiondeclarations",
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSFunctionDeclarations",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSFunctionDescriptors from css-mixins.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.cssfunctiondescriptors",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-mixins.idl",
+        "inheritance": "CSSStyleDeclaration"
+      },
+      "name": "CSSFunctionDescriptors",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSFunctionDescriptors",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFunctionDescriptors.result Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.cssfunctiondescriptors.attributes.result",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-mixins.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"result\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"LegacyNullToEmptyString\",\"rhs\":null,\"arguments\":[]}],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "result",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-mixins.interfaces.cssfunctiondescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSFunctionDescriptors.result",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFunctionDescriptors has CSSStyleDeclaration as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.cssfunctiondescriptors.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSStyleDeclaration"
+      },
+      "name": "CSSFunctionDescriptors inherits CSSStyleDeclaration",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-mixins.interfaces.cssfunctiondescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSFunctionDescriptors",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSFunctionRule from css-mixins.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.cssfunctionrule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-mixins.idl",
+        "inheritance": "CSSGroupingRule"
+      },
+      "name": "CSSFunctionRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSFunctionRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFunctionRule.name Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.cssfunctionrule.attributes.name",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-mixins.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"name\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-mixins.interfaces.cssfunctionrule",
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSFunctionRule.name",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFunctionRule.returnType Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.cssfunctionrule.attributes.returntype",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-mixins.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"returnType\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "returnType",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-mixins.interfaces.cssfunctionrule",
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSFunctionRule.returnType",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFunctionRule has CSSGroupingRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.cssfunctionrule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSGroupingRule"
+      },
+      "name": "CSSFunctionRule inherits CSSGroupingRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-mixins.interfaces.cssfunctionrule",
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSFunctionRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFunctionRule.getParameters Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.cssfunctionrule.methods.getparameters",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-mixins.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"getParameters\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"FunctionParameter\"}]},\"arguments\":[],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "getParameters",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-mixins.interfaces.cssfunctionrule",
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSFunctionRule.getParameters",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSMixinRule from css-mixins.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.cssmixinrule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-mixins.idl",
+        "inheritance": "CSSGroupingRule"
+      },
+      "name": "CSSMixinRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSMixinRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSMixinRule.contents Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.cssmixinrule.attributes.contents",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-mixins.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"contents\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "contents",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-mixins.interfaces.cssmixinrule",
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSMixinRule.contents",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSMixinRule.name Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.cssmixinrule.attributes.name",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-mixins.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"name\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-mixins.interfaces.cssmixinrule",
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSMixinRule.name",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSMixinRule has CSSGroupingRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.cssmixinrule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSGroupingRule"
+      },
+      "name": "CSSMixinRule inherits CSSGroupingRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-mixins.interfaces.cssmixinrule",
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSMixinRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSMixinRule.getParameters Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-mixins.interfaces.cssmixinrule.methods.getparameters",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-mixins.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"getParameters\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"FunctionParameter\"}]},\"arguments\":[],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "getParameters",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-mixins.interfaces.cssmixinrule",
+      "spec": {
+        "anchor": "webref/idl/css-mixins.idl#WebIDL:CSSMixinRule.getParameters",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-mixins.json"
+}

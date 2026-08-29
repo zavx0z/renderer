@@ -1,0 +1,3551 @@
+{
+  "entries": [
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-annotation",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "for": [
+          "@font-feature-values"
+        ],
+        "syntax": "@annotation { <declaration-list> }"
+      },
+      "name": "@annotation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#at-ruledef-font-feature-values-annotation",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-apply",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@apply [ <dashed-ident> | <dashed-function> ] [ { <declaration-list> } ]?;"
+      },
+      "name": "@apply",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-mixins-1/#at-ruledef-apply",
+        "profile": "standard",
+        "source": "css:css-mixins-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-bottom-center",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@bottom-center { <declaration-list> };"
+      },
+      "name": "@bottom-center",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-3/#at-ruledef-bottom-center",
+        "profile": "standard",
+        "source": "css:css-page-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-bottom-left",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@bottom-left { <declaration-list> };"
+      },
+      "name": "@bottom-left",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-3/#at-ruledef-bottom-left",
+        "profile": "standard",
+        "source": "css:css-page-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-bottom-left-corner",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@bottom-left-corner { <declaration-list> };"
+      },
+      "name": "@bottom-left-corner",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-3/#at-ruledef-bottom-left-corner",
+        "profile": "standard",
+        "source": "css:css-page-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-bottom-right",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@bottom-right { <declaration-list> };"
+      },
+      "name": "@bottom-right",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-3/#at-ruledef-bottom-right",
+        "profile": "standard",
+        "source": "css:css-page-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-bottom-right-corner",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@bottom-right-corner { <declaration-list> };"
+      },
+      "name": "@bottom-right-corner",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-3/#at-ruledef-bottom-right-corner",
+        "profile": "standard",
+        "source": "css:css-page-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-character-variant",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "for": [
+          "@font-feature-values"
+        ],
+        "syntax": "@character-variant { <declaration-list> }"
+      },
+      "name": "@character-variant",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#at-ruledef-font-feature-values-character-variant",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "However, there is no actual at-rule named @charset. When a stylesheet is actually parsed, any occurrences of an @charset rule must be treated as an unrecognized rule, and thus dropped as invalid when the stylesheet is grammar-checked.",
+      "domain": "css",
+      "id": "css.at-rules.at-charset",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": []
+      },
+      "name": "@charset",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-syntax-3/#at-ruledef-charset",
+        "profile": "standard",
+        "source": "css:css-syntax-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The @color-profile rule defines and names a color profile which can later be used in the color() function to specify a color.",
+      "domain": "css",
+      "id": "css.at-rules.at-color-profile",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@color-profile [<dashed-ident> | device-cmyk] { <declaration-list> }"
+      },
+      "name": "@color-profile",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-color-5/#at-ruledef-profile",
+        "profile": "standard",
+        "source": "css:css-color-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-color-profile.descriptors.components",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@color-profile",
+        "initial": "n/a",
+        "syntax": "<ident>#"
+      },
+      "name": "components",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-color-profile",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-color-5/#descdef-color-profile-components",
+        "profile": "standard",
+        "source": "css:css-color-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-color-profile.descriptors.rendering-intent",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@color-profile",
+        "initial": "relative-colorimetric",
+        "syntax": "relative-colorimetric | absolute-colorimetric | perceptual | saturation"
+      },
+      "name": "rendering-intent",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-color-profile",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-color-5/#descdef-color-profile-rendering-intent",
+        "profile": "standard",
+        "source": "css:css-color-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-color-profile.descriptors.src",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@color-profile",
+        "initial": "n/a",
+        "syntax": "<url>"
+      },
+      "name": "src",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-color-profile",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-color-5/#descdef-color-profile-src",
+        "profile": "standard",
+        "source": "css:css-color-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The @container rule is a conditional group rule whose condition contains a container query, which is a boolean combination of container size queries and/or container style queries. Style declarations within the @container rule are filtered by its condition to only match when the container query is true for their element’s query container.",
+      "domain": "css",
+      "id": "css.at-rules.at-container",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@container <container-condition># { <rule-list> }"
+      },
+      "name": "@container",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-conditional-5/#at-ruledef-container",
+        "profile": "standard",
+        "source": "css:css-conditional-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-container.descriptors.aspect-ratio",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@container",
+        "syntax": "<ratio>",
+        "type": "range"
+      },
+      "name": "aspect-ratio",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-container",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-conditional-5/#descdef-container-aspect-ratio",
+        "profile": "standard",
+        "source": "css:css-conditional-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-container.descriptors.block-size",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@container",
+        "syntax": "<length>",
+        "type": "range"
+      },
+      "name": "block-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-container",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-conditional-5/#descdef-container-block-size",
+        "profile": "standard",
+        "source": "css:css-conditional-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-container.descriptors.fallback",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@container",
+        "syntax": "none | [ [<dashed-ident> || <try-tactic>] | <position-area-query> ]",
+        "type": "discrete"
+      },
+      "name": "fallback",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-container",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-anchor-position-2/#descdef-container-fallback",
+        "profile": "standard",
+        "source": "css:css-anchor-position-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-container.descriptors.height",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@container",
+        "syntax": "<length>",
+        "type": "range"
+      },
+      "name": "height",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-container",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-conditional-5/#descdef-container-height",
+        "profile": "standard",
+        "source": "css:css-conditional-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-container.descriptors.inline-size",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@container",
+        "syntax": "<length>",
+        "type": "range"
+      },
+      "name": "inline-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-container",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-conditional-5/#descdef-container-inline-size",
+        "profile": "standard",
+        "source": "css:css-conditional-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-container.descriptors.orientation",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@container",
+        "syntax": "portrait | landscape",
+        "type": "discrete"
+      },
+      "name": "orientation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-container",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-conditional-5/#descdef-container-orientation",
+        "profile": "standard",
+        "source": "css:css-conditional-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-container.descriptors.scrollable",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@container",
+        "syntax": "none | top | right | bottom | left | block-start | inline-start | block-end | inline-end | x | y | block | inline",
+        "type": "discrete"
+      },
+      "name": "scrollable",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-container",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-conditional-5/#descdef-container-scrollable",
+        "profile": "standard",
+        "source": "css:css-conditional-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-container.descriptors.scrolled",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@container",
+        "syntax": "none | top | right | bottom | left | block-start | inline-start | block-end | inline-end | x | y | block | inline",
+        "type": "discrete"
+      },
+      "name": "scrolled",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-container",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-conditional-5/#descdef-container-scrolled",
+        "profile": "standard",
+        "source": "css:css-conditional-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-container.descriptors.snapped",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@container",
+        "syntax": "none | x | y | block | inline | both",
+        "type": "discrete"
+      },
+      "name": "snapped",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-container",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-conditional-5/#descdef-container-snapped",
+        "profile": "standard",
+        "source": "css:css-conditional-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-container.descriptors.stuck",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@container",
+        "syntax": "none | top | right | bottom | left | block-start | inline-start | block-end | inline-end",
+        "type": "discrete"
+      },
+      "name": "stuck",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-container",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-conditional-5/#descdef-container-stuck",
+        "profile": "standard",
+        "source": "css:css-conditional-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-container.descriptors.width",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@container",
+        "syntax": "<length>",
+        "type": "range"
+      },
+      "name": "width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-container",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-conditional-5/#descdef-container-width",
+        "profile": "standard",
+        "source": "css:css-conditional-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-contents",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@contents [ { <declaration-list> } ]?"
+      },
+      "name": "@contents",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-mixins-1/#at-ruledef-contents",
+        "profile": "standard",
+        "source": "css:css-mixins-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The @counter-style rule allows authors to define a custom counter style. The components of a counter style are specified by descriptors in the @counter-style rule. The algorithm is specified implicitly by a combination of the system, symbols, and additive-symbols properties.",
+      "domain": "css",
+      "id": "css.at-rules.at-counter-style",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@counter-style <counter-style-name> { <declaration-list> }"
+      },
+      "name": "@counter-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-counter-styles-3/#at-ruledef-counter-style",
+        "profile": "standard",
+        "source": "css:css-counter-styles-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-counter-style.descriptors.additive-symbols",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@counter-style",
+        "initial": "n/a",
+        "syntax": "[ <integer [0,∞]> && <symbol> ]#"
+      },
+      "name": "additive-symbols",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-counter-style",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-counter-styles-3/#descdef-counter-style-additive-symbols",
+        "profile": "standard",
+        "source": "css:css-counter-styles-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-counter-style.descriptors.fallback",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@counter-style",
+        "initial": "decimal",
+        "syntax": "<counter-style-name>"
+      },
+      "name": "fallback",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-counter-style",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-counter-styles-3/#descdef-counter-style-fallback",
+        "profile": "standard",
+        "source": "css:css-counter-styles-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-counter-style.descriptors.negative",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@counter-style",
+        "initial": "\"-\"",
+        "syntax": "<symbol> <symbol>?"
+      },
+      "name": "negative",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-counter-style",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-counter-styles-3/#descdef-counter-style-negative",
+        "profile": "standard",
+        "source": "css:css-counter-styles-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-counter-style.descriptors.pad",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@counter-style",
+        "initial": "0 \"\"",
+        "syntax": "<integer [0,∞]> && <symbol>"
+      },
+      "name": "pad",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-counter-style",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-counter-styles-3/#descdef-counter-style-pad",
+        "profile": "standard",
+        "source": "css:css-counter-styles-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-counter-style.descriptors.prefix",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@counter-style",
+        "initial": "\"\"",
+        "syntax": "<symbol>"
+      },
+      "name": "prefix",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-counter-style",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-counter-styles-3/#descdef-counter-style-prefix",
+        "profile": "standard",
+        "source": "css:css-counter-styles-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-counter-style.descriptors.range",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@counter-style",
+        "initial": "auto",
+        "syntax": "[ [ <integer> | infinite ]{2} ]# | auto"
+      },
+      "name": "range",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-counter-style",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-counter-styles-3/#descdef-counter-style-range",
+        "profile": "standard",
+        "source": "css:css-counter-styles-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-counter-style.descriptors.speak-as",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@counter-style",
+        "initial": "auto",
+        "syntax": "auto | bullets | numbers | words | spell-out | <counter-style-name>"
+      },
+      "name": "speak-as",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-counter-style",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-counter-styles-3/#descdef-counter-style-speak-as",
+        "profile": "standard",
+        "source": "css:css-counter-styles-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-counter-style.descriptors.suffix",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@counter-style",
+        "initial": "\". \"",
+        "syntax": "<symbol>"
+      },
+      "name": "suffix",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-counter-style",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-counter-styles-3/#descdef-counter-style-suffix",
+        "profile": "standard",
+        "source": "css:css-counter-styles-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-counter-style.descriptors.symbols",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@counter-style",
+        "initial": "n/a",
+        "syntax": "<symbol>+"
+      },
+      "name": "symbols",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-counter-style",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-counter-styles-3/#descdef-counter-style-symbols",
+        "profile": "standard",
+        "source": "css:css-counter-styles-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-counter-style.descriptors.system",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@counter-style",
+        "initial": "symbolic",
+        "syntax": "cyclic | numeric | alphabetic | symbolic | additive | [fixed <integer>?] | [ extends <counter-style-name> ]"
+      },
+      "name": "system",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-counter-style",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-counter-styles-3/#descdef-counter-style-system",
+        "profile": "standard",
+        "source": "css:css-counter-styles-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-custom-media",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@custom-media <extension-name> [ <media-query-list> | true | false ] ;"
+      },
+      "name": "@custom-media",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#at-ruledef-custom-media",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-custom-selector",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@custom-selector <custom-selector> <selector-list> ;"
+      },
+      "name": "@custom-selector",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-extensions-1/#at-ruledef-custom-selector",
+        "profile": "standard",
+        "source": "css:css-extensions-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The @else rule is a conditional group rule used to form conditional rule chains, which associate multiple conditional group rules and guarantee that only the first one that matches will evaluate its condition as true. It is defined as:",
+      "domain": "css",
+      "id": "css.at-rules.at-else",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@else <boolean-condition>? { <rule-list> }"
+      },
+      "name": "@else",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-conditional-5/#at-ruledef-else",
+        "profile": "standard",
+        "source": "css:css-conditional-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-font-face",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@font-face { <declaration-list> }"
+      },
+      "name": "@font-face",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#at-font-face-rule",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-font-face.descriptors.ascent-override",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@font-face",
+        "initial": "normal",
+        "syntax": "[ normal | <percentage [0,∞]> ]{1,2}"
+      },
+      "name": "ascent-override",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-font-face",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-5/#descdef-font-face-ascent-override",
+        "profile": "standard",
+        "source": "css:css-fonts-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-font-face.descriptors.descent-override",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@font-face",
+        "initial": "normal",
+        "syntax": "[ normal | <percentage [0,∞]> ]{1,2}"
+      },
+      "name": "descent-override",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-font-face",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-5/#descdef-font-face-descent-override",
+        "profile": "standard",
+        "source": "css:css-fonts-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-font-face.descriptors.font-display",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@font-face",
+        "initial": "auto",
+        "syntax": "auto | block | swap | fallback | optional"
+      },
+      "name": "font-display",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-font-face",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#descdef-font-face-font-display",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-font-face.descriptors.font-family",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@font-face",
+        "initial": "N/A",
+        "syntax": "<font-family-name>"
+      },
+      "name": "font-family",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-font-face",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#descdef-font-face-font-family",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-font-face.descriptors.font-feature-settings",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@font-face",
+        "initial": "normal",
+        "syntax": "normal | <feature-tag-value>#"
+      },
+      "name": "font-feature-settings",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-font-face",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#descdef-font-face-font-feature-settings",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-font-face.descriptors.font-language-override",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@font-face",
+        "initial": "normal",
+        "syntax": "normal | <string>"
+      },
+      "name": "font-language-override",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-font-face",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#descdef-font-face-font-language-override",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-font-face.descriptors.font-named-instance",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@font-face",
+        "initial": "auto",
+        "syntax": "auto | <string>"
+      },
+      "name": "font-named-instance",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-font-face",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#descdef-font-face-font-named-instance",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-font-face.descriptors.font-size",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@font-face",
+        "initial": "auto",
+        "syntax": "auto | [<number>]{1,2}"
+      },
+      "name": "font-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-font-face",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-5/#descdef-font-face-font-size",
+        "profile": "standard",
+        "source": "css:css-fonts-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-font-face.descriptors.font-style",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@font-face",
+        "initial": "auto",
+        "syntax": "auto | normal | italic | left | right | oblique [ <angle [-90deg,90deg]>{1,2} ]?"
+      },
+      "name": "font-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-font-face",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#descdef-font-face-font-style",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-font-face.descriptors.font-variation-settings",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@font-face",
+        "initial": "normal",
+        "syntax": "normal | [ <string> <number>]#"
+      },
+      "name": "font-variation-settings",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-font-face",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#descdef-font-face-font-variation-settings",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-font-face.descriptors.font-weight",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@font-face",
+        "initial": "auto",
+        "syntax": "auto | <font-weight-absolute>{1,2}"
+      },
+      "name": "font-weight",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-font-face",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#descdef-font-face-font-weight",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-font-face.descriptors.font-width",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@font-face",
+        "initial": "auto",
+        "syntax": "auto | <'font-width'>{1,2}"
+      },
+      "name": "font-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-font-face",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#descdef-font-face-font-width",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-font-face.descriptors.line-gap-override",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@font-face",
+        "initial": "normal",
+        "syntax": "[ normal | <percentage [0,∞]> ]{1,2}"
+      },
+      "name": "line-gap-override",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-font-face",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-5/#descdef-font-face-line-gap-override",
+        "profile": "standard",
+        "source": "css:css-fonts-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-font-face.descriptors.size-adjust",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@font-face",
+        "initial": "100%",
+        "syntax": "<percentage [0,∞]>"
+      },
+      "name": "size-adjust",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-font-face",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-5/#descdef-font-face-size-adjust",
+        "profile": "standard",
+        "source": "css:css-fonts-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-font-face.descriptors.src",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@font-face",
+        "initial": "N/A",
+        "syntax": "<font-src-list>"
+      },
+      "name": "src",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-font-face",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#descdef-font-face-src",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-font-face.descriptors.subscript-position-override",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@font-face",
+        "initial": "normal",
+        "syntax": "[ normal | from-font | <percentage> ]{1,2}"
+      },
+      "name": "subscript-position-override",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-font-face",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-5/#descdef-font-face-subscript-position-override",
+        "profile": "standard",
+        "source": "css:css-fonts-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-font-face.descriptors.subscript-size-override",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@font-face",
+        "initial": "normal",
+        "syntax": "[ normal | from-font | <percentage [0,∞]> ]{1,2}"
+      },
+      "name": "subscript-size-override",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-font-face",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-5/#descdef-font-face-subscript-size-override",
+        "profile": "standard",
+        "source": "css:css-fonts-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-font-face.descriptors.superscript-position-override",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@font-face",
+        "initial": "normal",
+        "syntax": "[ normal | from-font | <percentage> ]{1,2}"
+      },
+      "name": "superscript-position-override",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-font-face",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-5/#descdef-font-face-superscript-position-override",
+        "profile": "standard",
+        "source": "css:css-fonts-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-font-face.descriptors.superscript-size-override",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@font-face",
+        "initial": "normal",
+        "syntax": "[ normal | from-font | <percentage [0,∞]> ]{1,2}"
+      },
+      "name": "superscript-size-override",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-font-face",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-5/#descdef-font-face-superscript-size-override",
+        "profile": "standard",
+        "source": "css:css-fonts-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-font-face.descriptors.unicode-range",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@font-face",
+        "initial": "U+0-10FFFF",
+        "syntax": "<unicode-range-token>#"
+      },
+      "name": "unicode-range",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-font-face",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#descdef-font-face-unicode-range",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-font-feature-values",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@font-feature-values <font-family-name># { <declaration-rule-list> }"
+      },
+      "name": "@font-feature-values",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#at-ruledef-font-feature-values",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-font-feature-values.descriptors.font-display",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@font-feature-values",
+        "initial": "auto",
+        "syntax": "auto | block | swap | fallback | optional"
+      },
+      "name": "font-display",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-font-feature-values",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#descdef-font-feature-values-font-display",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The @font-palette-values rule defines a color palette and associates that color palette with a specific font. This allows a web author to select arbitrary <color>s to use inside a color font rather than being limited to the preexisting palettes inside font files.",
+      "domain": "css",
+      "id": "css.at-rules.at-font-palette-values",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@font-palette-values <dashed-ident> { <declaration-list> }"
+      },
+      "name": "@font-palette-values",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#at-ruledef-font-palette-values",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-font-palette-values.descriptors.base-palette",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@font-palette-values",
+        "initial": "N/A",
+        "syntax": "light | dark | <integer [0,∞]>"
+      },
+      "name": "base-palette",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-font-palette-values",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#descdef-font-palette-values-base-palette",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-font-palette-values.descriptors.font-family",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@font-palette-values",
+        "initial": "N/A",
+        "syntax": "<font-family-name>#"
+      },
+      "name": "font-family",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-font-palette-values",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#descdef-font-palette-values-font-family",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-font-palette-values.descriptors.override-colors",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@font-palette-values",
+        "initial": "N/A",
+        "syntax": "[ <integer [0,∞]> <color> ]#"
+      },
+      "name": "override-colors",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-font-palette-values",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#descdef-font-palette-values-override-colors",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-function",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@function <function-token> <function-parameter>#? ) [ returns <css-type> ]? { <declaration-rule-list> }"
+      },
+      "name": "@function",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-mixins-1/#at-ruledef-function",
+        "profile": "standard",
+        "source": "css:css-mixins-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-function.descriptors.result",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@function",
+        "initial": "n/a (see prose)",
+        "syntax": "<declaration-value>?"
+      },
+      "name": "result",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-function",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-mixins-1/#descdef-function-result",
+        "profile": "standard",
+        "source": "css:css-mixins-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-historical-forms",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "for": [
+          "@font-feature-values"
+        ],
+        "syntax": "@historical-forms { <declaration-list> }"
+      },
+      "name": "@historical-forms",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#at-ruledef-font-feature-values-historical-forms",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The @import rule allows users to import style rules from other style sheets. If an @import rule refers to a valid stylesheet, user agents must treat the contents of the stylesheet as if they were written in place of the @import rule, with two exceptions:",
+      "domain": "css",
+      "id": "css.at-rules.at-import",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@import [ <url> | <string> ] [[ layer | layer( <layer-name> ) ] || [ scope | scope( <scope-start> | <scope-boundaries> ) ] || <supports-import-condition>]? <media-import-condition> ;"
+      },
+      "name": "@import",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-cascade-6/#at-ruledef-import",
+        "profile": "standard",
+        "source": "css:css-cascade-6",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "Keyframes are specified using the @keyframes at-rule, defined as follows:",
+      "domain": "css",
+      "id": "css.at-rules.at-keyframes",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@keyframes <keyframes-name> { <qualified-rule-list> }"
+      },
+      "name": "@keyframes",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-animations-1/#at-ruledef-keyframes",
+        "profile": "standard",
+        "source": "css:css-animations-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The @layer rule declares a cascade layer, with the option to assign style rules.",
+      "domain": "css",
+      "id": "css.at-rules.at-layer",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@layer <layer-name>? { <rule-list> } | @layer <layer-name>#;"
+      },
+      "name": "@layer",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-cascade-5/#at-ruledef-layer",
+        "profile": "standard",
+        "source": "css:css-cascade-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-left-bottom",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@left-bottom { <declaration-list> };"
+      },
+      "name": "@left-bottom",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-3/#at-ruledef-left-bottom",
+        "profile": "standard",
+        "source": "css:css-page-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-left-middle",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@left-middle { <declaration-list> };"
+      },
+      "name": "@left-middle",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-3/#at-ruledef-left-middle",
+        "profile": "standard",
+        "source": "css:css-page-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-left-top",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@left-top { <declaration-list> };"
+      },
+      "name": "@left-top",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-3/#at-ruledef-left-top",
+        "profile": "standard",
+        "source": "css:css-page-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The @location rule is an at-rule that associates an author-defined name with a URL pattern. This name can be referenced in @navigation rules and in :link-to() pseudo-classes.",
+      "domain": "css",
+      "id": "css.at-rules.at-location",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "<location-rule>"
+      },
+      "name": "@location",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-navigation-1/#at-ruledef-location",
+        "profile": "standard",
+        "source": "css:css-navigation-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The @media rule is a conditional group rule whose condition is a media query. Its syntax is:",
+      "domain": "css",
+      "id": "css.at-rules.at-media",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@media <media-query-list> { <rule-list> }"
+      },
+      "name": "@media",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-conditional-3/#at-ruledef-media",
+        "profile": "standard",
+        "source": "css:css-conditional-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.any-hover",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "none | hover",
+        "type": "discrete"
+      },
+      "name": "any-hover",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-any-hover",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.any-pointer",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "none | coarse | fine",
+        "type": "discrete"
+      },
+      "name": "any-pointer",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-any-pointer",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.aspect-ratio",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "<ratio>",
+        "type": "range"
+      },
+      "name": "aspect-ratio",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-aspect-ratio",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.color",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "<integer>",
+        "type": "range"
+      },
+      "name": "color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-color",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.color-gamut",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "srgb | p3 | rec2020",
+        "type": "discrete"
+      },
+      "name": "color-gamut",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-color-gamut",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.color-index",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "<integer>",
+        "type": "range"
+      },
+      "name": "color-index",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-color-index",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.device-aspect-ratio",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "<ratio>",
+        "type": "range"
+      },
+      "name": "device-aspect-ratio",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-device-aspect-ratio",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.device-height",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "<length>",
+        "type": "range"
+      },
+      "name": "device-height",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-device-height",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.device-width",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "<length>",
+        "type": "range"
+      },
+      "name": "device-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-device-width",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.display-mode",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "fullscreen | standalone | minimal-ui | browser | picture-in-picture",
+        "type": "discrete"
+      },
+      "name": "display-mode",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-display-mode",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.display-state",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "normal | minimized | maximized | fullscreen",
+        "type": "discrete"
+      },
+      "name": "display-state",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://w3c.github.io/window-management/#descdef-media-display-state",
+        "profile": "standard",
+        "source": "css:window-management",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.dynamic-range",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "standard | high",
+        "type": "discrete"
+      },
+      "name": "dynamic-range",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-dynamic-range",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.environment-blending",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "opaque | additive | subtractive",
+        "type": "discrete"
+      },
+      "name": "environment-blending",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-environment-blending",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.forced-colors",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "none | active",
+        "type": "discrete"
+      },
+      "name": "forced-colors",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-forced-colors",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.grid",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "<mq-boolean>",
+        "type": "discrete"
+      },
+      "name": "grid",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-grid",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.height",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "<length>",
+        "type": "range"
+      },
+      "name": "height",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-height",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.horizontal-viewport-segments",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "<integer>",
+        "type": "range"
+      },
+      "name": "horizontal-viewport-segments",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-horizontal-viewport-segments",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.hover",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "none | hover",
+        "type": "discrete"
+      },
+      "name": "hover",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-hover",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.inverted-colors",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "none | inverted",
+        "type": "discrete"
+      },
+      "name": "inverted-colors",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-inverted-colors",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.monochrome",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "<integer>",
+        "type": "range"
+      },
+      "name": "monochrome",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-monochrome",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.nav-controls",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "none | back",
+        "type": "discrete"
+      },
+      "name": "nav-controls",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-nav-controls",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.orientation",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "portrait | landscape",
+        "type": "discrete"
+      },
+      "name": "orientation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-orientation",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.overflow-block",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "none | scroll | paged",
+        "type": "discrete"
+      },
+      "name": "overflow-block",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-overflow-block",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.overflow-inline",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "none | scroll",
+        "type": "discrete"
+      },
+      "name": "overflow-inline",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-overflow-inline",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.pointer",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "none | coarse | fine",
+        "type": "discrete"
+      },
+      "name": "pointer",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-pointer",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.prefers-color-scheme",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "light | dark",
+        "type": "discrete"
+      },
+      "name": "prefers-color-scheme",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-prefers-color-scheme",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.prefers-contrast",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "no-preference | less | more | custom",
+        "type": "discrete"
+      },
+      "name": "prefers-contrast",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-prefers-contrast",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.prefers-reduced-data",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "no-preference | reduce",
+        "type": "discrete"
+      },
+      "name": "prefers-reduced-data",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-prefers-reduced-data",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.prefers-reduced-motion",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "no-preference | reduce",
+        "type": "discrete"
+      },
+      "name": "prefers-reduced-motion",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-prefers-reduced-motion",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.prefers-reduced-transparency",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "no-preference | reduce",
+        "type": "discrete"
+      },
+      "name": "prefers-reduced-transparency",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-prefers-reduced-transparency",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.resizable",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "true | false",
+        "type": "discrete"
+      },
+      "name": "resizable",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://w3c.github.io/window-management/#descdef-media-resizable",
+        "profile": "standard",
+        "source": "css:window-management",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.resolution",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "<resolution> | infinite",
+        "type": "range"
+      },
+      "name": "resolution",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-resolution",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.scan",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "interlace | progressive",
+        "type": "discrete"
+      },
+      "name": "scan",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-scan",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.scripting",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "none | initial-only | enabled",
+        "type": "discrete"
+      },
+      "name": "scripting",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-scripting",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.shape",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "rect | round",
+        "type": "discrete"
+      },
+      "name": "shape",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-round-display-1/#descdef-media-shape",
+        "profile": "standard",
+        "source": "css:css-round-display-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.ua-color-scheme",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "light | dark",
+        "type": "discrete"
+      },
+      "name": "ua-color-scheme",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-ua-color-scheme",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.update",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "none | slow | fast",
+        "type": "discrete"
+      },
+      "name": "update",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-update",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.vendor-webkit-device-pixel-ratio",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "<number>",
+        "type": "range"
+      },
+      "name": "-webkit-device-pixel-ratio",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#descdef-media--webkit-device-pixel-ratio",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.vendor-webkit-transform-3d",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "<mq-boolean>",
+        "type": "discrete"
+      },
+      "name": "-webkit-transform-3d",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#descdef-media--webkit-transform-3d",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.vertical-viewport-segments",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "<integer>",
+        "type": "range"
+      },
+      "name": "vertical-viewport-segments",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-vertical-viewport-segments",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.video-color-gamut",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "srgb | p3 | rec2020",
+        "type": "discrete"
+      },
+      "name": "video-color-gamut",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-video-color-gamut",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.video-dynamic-range",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "standard | high",
+        "type": "discrete"
+      },
+      "name": "video-dynamic-range",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-video-dynamic-range",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-media.descriptors.width",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@media",
+        "syntax": "<length>",
+        "type": "range"
+      },
+      "name": "width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-media",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/mediaqueries-5/#descdef-media-width",
+        "profile": "standard",
+        "source": "css:mediaqueries-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-mixin",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@mixin [<function-token> <function-parameter>#? ) | <ident-token> ] { <block-contents> }"
+      },
+      "name": "@mixin",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-mixins-1/#at-ruledef-mixin",
+        "profile": "standard",
+        "source": "css:css-mixins-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The @namespace at-rule declares a namespace prefix and associates it with a given namespace name (a string). This namespace prefix can then be used in namespace-qualified names such as the CSS qualified names defined below.",
+      "domain": "css",
+      "id": "css.at-rules.at-namespace",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@namespace <namespace-prefix>? [ <string> | <url> ] ;"
+      },
+      "name": "@namespace",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-namespaces-3/#at-ruledef-namespace",
+        "profile": "standard",
+        "source": "css:css-namespaces-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The @navigation rule is a conditional group rule whose condition tests characteristics of the current URL or of the state of navigation between two URLs. These queries are called navigation queries.",
+      "domain": "css",
+      "id": "css.at-rules.at-navigation",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@navigation <navigation-condition> { <rule-list> }"
+      },
+      "name": "@navigation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-navigation-1/#at-ruledef-navigation",
+        "profile": "standard",
+        "source": "css:css-navigation-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-ornaments",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "for": [
+          "@font-feature-values"
+        ],
+        "syntax": "@ornaments { <declaration-list> }"
+      },
+      "name": "@ornaments",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#at-ruledef-font-feature-values-ornaments",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "Authors can specify various aspects of a page box, such as its dimensions, orientation, and margins, within an @page rule. @page rules are allowed wherever rule-sets are allowed. An @page rule consists of the keyword @page, an optional comma-separated list of page selectors and a block of declarations (said to be in the page context). An @page rule can also contain other at-rules, interleaved between declarations. The current level of this specification only allows margin at-rules inside @page.",
+      "domain": "css",
+      "id": "css.at-rules.at-page",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@page <page-selector-list>? { <declaration-rule-list> }"
+      },
+      "name": "@page",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-3/#at-ruledef-page",
+        "profile": "standard",
+        "source": "css:css-page-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-page.descriptors.bleed",
+      "kind": "descriptor",
+      "metadata": {
+        "computedValue": "as specified",
+        "for": "@page",
+        "initial": "auto",
+        "syntax": "auto | <length>"
+      },
+      "name": "bleed",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-page",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-3/#descdef-page-bleed",
+        "profile": "standard",
+        "source": "css:css-page-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-page.descriptors.marks",
+      "kind": "descriptor",
+      "metadata": {
+        "computedValue": "as specified",
+        "for": "@page",
+        "initial": "none",
+        "syntax": "none | [ crop || cross ]"
+      },
+      "name": "marks",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-page",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-3/#descdef-page-marks",
+        "profile": "standard",
+        "source": "css:css-page-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-page.descriptors.page-margin-safety",
+      "kind": "descriptor",
+      "metadata": {
+        "computedValue": "as specified",
+        "for": "@page",
+        "initial": "auto",
+        "syntax": "none | clamp | add"
+      },
+      "name": "page-margin-safety",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-page",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-3/#descdef-page-page-margin-safety",
+        "profile": "standard",
+        "source": "css:css-page-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-page.descriptors.page-orientation",
+      "kind": "descriptor",
+      "metadata": {
+        "computedValue": "as specified",
+        "for": "@page",
+        "initial": "upright",
+        "syntax": "upright | rotate-left | rotate-right"
+      },
+      "name": "page-orientation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-page",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-3/#descdef-page-page-orientation",
+        "profile": "standard",
+        "source": "css:css-page-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-page.descriptors.size",
+      "kind": "descriptor",
+      "metadata": {
+        "computedValue": "specified value, with <length>s made absolute.",
+        "for": "@page",
+        "initial": "auto",
+        "syntax": "<length [0,∞]>{1,2} | auto | [ <page-size> || [ portrait | landscape ] ]"
+      },
+      "name": "size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-page",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-3/#descdef-page-size",
+        "profile": "standard",
+        "source": "css:css-page-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The @position-try rule defines a position option with a given name, specifying one or more sets of positioning properties that can be applied to a box via position-try-fallbacks.",
+      "domain": "css",
+      "id": "css.at-rules.at-position-try",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@position-try <dashed-ident> { <declaration-list> }"
+      },
+      "name": "@position-try",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-anchor-position-1/#at-ruledef-position-try",
+        "profile": "standard",
+        "source": "css:css-anchor-position-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-private",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@private { <declaration-rule-list> }"
+      },
+      "name": "@private",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-mixins-1/#private",
+        "profile": "standard",
+        "source": "css:css-mixins-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-property",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@property <custom-property-name># { <declaration-list> }"
+      },
+      "name": "@property",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.css-houdini.org/css-properties-values-api-1/#at-ruledef-property",
+        "profile": "standard",
+        "source": "css:css-properties-values-api-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-property.descriptors.inherits",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@property",
+        "initial": "true",
+        "syntax": "true | false"
+      },
+      "name": "inherits",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-property",
+      "spec": {
+        "anchor": "https://drafts.css-houdini.org/css-properties-values-api-1/#descdef-property-inherits",
+        "profile": "standard",
+        "source": "css:css-properties-values-api-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-property.descriptors.initial-value",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@property",
+        "initial": "the guaranteed-invalid value",
+        "syntax": "<declaration-value>?"
+      },
+      "name": "initial-value",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-property",
+      "spec": {
+        "anchor": "https://drafts.css-houdini.org/css-properties-values-api-1/#descdef-property-initial-value",
+        "profile": "standard",
+        "source": "css:css-properties-values-api-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-property.descriptors.syntax",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@property",
+        "initial": "\"*\"",
+        "syntax": "<string>"
+      },
+      "name": "syntax",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-property",
+      "spec": {
+        "anchor": "https://drafts.css-houdini.org/css-properties-values-api-1/#descdef-property-syntax",
+        "profile": "standard",
+        "source": "css:css-properties-values-api-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-right-bottom",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@right-bottom { <declaration-list> };"
+      },
+      "name": "@right-bottom",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-3/#at-ruledef-right-bottom",
+        "profile": "standard",
+        "source": "css:css-page-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-right-middle",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@right-middle { <declaration-list> };"
+      },
+      "name": "@right-middle",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-3/#at-ruledef-right-middle",
+        "profile": "standard",
+        "source": "css:css-page-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-right-top",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@right-top { <declaration-list> };"
+      },
+      "name": "@right-top",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-3/#at-ruledef-right-top",
+        "profile": "standard",
+        "source": "css:css-page-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "Scoped styles are described in CSS using the @scope block at-rule, which declares a scoping root and optional scoping limits associated with a set of style rules.",
+      "domain": "css",
+      "id": "css.at-rules.at-scope",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@scope <scope-boundaries>? { <block-contents> }"
+      },
+      "name": "@scope",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-cascade-6/#at-ruledef-scope",
+        "profile": "standard",
+        "source": "css:css-cascade-6",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The @starting-style rule is a grouping rule. The style rules inside it are used to establish styles to transition from, if the previous style change event did not establish a before-change style for the element whose styles are being computed.",
+      "domain": "css",
+      "id": "css.at-rules.at-starting-style",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": []
+      },
+      "name": "@starting-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-transitions-2/#at-ruledef-starting-style",
+        "profile": "standard",
+        "source": "css:css-transitions-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-styleset",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "for": [
+          "@font-feature-values"
+        ],
+        "syntax": "@styleset { <declaration-list> }"
+      },
+      "name": "@styleset",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#at-ruledef-font-feature-values-styleset",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-stylistic",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "for": [
+          "@font-feature-values"
+        ],
+        "syntax": "@stylistic { <declaration-list> }"
+      },
+      "name": "@stylistic",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#at-ruledef-font-feature-values-stylistic",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The @supports rule is a conditional group rule whose condition tests whether the user agent supports CSS property:value pairs. Authors can use it to write style sheets that use new features when available but degrade gracefully when those features are not supported. These queries are called CSS feature queries or (colloquially) supports queries.",
+      "domain": "css",
+      "id": "css.at-rules.at-supports",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@supports <supports-condition> { <rule-list> }"
+      },
+      "name": "@supports",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-conditional-3/#at-ruledef-supports",
+        "profile": "standard",
+        "source": "css:css-conditional-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The @supports-condition at-rule is a conditional group rule that allows authors to define and name a supports query for later reuse, creating a named supports condition. This enables complex or frequently-used feature queries to be referenced by name, improving maintainability and readability.",
+      "domain": "css",
+      "id": "css.at-rules.at-supports-condition",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@supports-condition <supports-condition-name> { <block-contents> }"
+      },
+      "name": "@supports-condition",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-conditional-5/#at-ruledef-supports-condition",
+        "profile": "standard",
+        "source": "css:css-conditional-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-swash",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "for": [
+          "@font-feature-values"
+        ],
+        "syntax": "@swash { <declaration-list> }"
+      },
+      "name": "@swash",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-fonts-4/#at-ruledef-font-feature-values-swash",
+        "profile": "standard",
+        "source": "css:css-fonts-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-top-center",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@top-center { <declaration-list> };"
+      },
+      "name": "@top-center",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-3/#at-ruledef-top-center",
+        "profile": "standard",
+        "source": "css:css-page-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-top-left",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@top-left { <declaration-list> };"
+      },
+      "name": "@top-left",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-3/#at-ruledef-top-left",
+        "profile": "standard",
+        "source": "css:css-page-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-top-left-corner",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@top-left-corner { <declaration-list> };"
+      },
+      "name": "@top-left-corner",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-3/#at-ruledef-top-left-corner",
+        "profile": "standard",
+        "source": "css:css-page-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-top-right",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@top-right { <declaration-list> };"
+      },
+      "name": "@top-right",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-3/#at-ruledef-top-right",
+        "profile": "standard",
+        "source": "css:css-page-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-top-right-corner",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@top-right-corner { <declaration-list> };"
+      },
+      "name": "@top-right-corner",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-3/#at-ruledef-top-right-corner",
+        "profile": "standard",
+        "source": "css:css-page-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-view-transition",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@view-transition { <declaration-list> }"
+      },
+      "name": "@view-transition",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-view-transitions-2/#at-view-transition-rule",
+        "profile": "standard",
+        "source": "css:css-view-transitions-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-view-transition.descriptors.navigation",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@view-transition",
+        "initial": "none",
+        "syntax": "auto | none"
+      },
+      "name": "navigation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-view-transition",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-view-transitions-2/#descdef-view-transition-navigation",
+        "profile": "standard",
+        "source": "css:css-view-transitions-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-view-transition.descriptors.types",
+      "kind": "descriptor",
+      "metadata": {
+        "for": "@view-transition",
+        "initial": "none",
+        "syntax": "none | <view-transition-type>+"
+      },
+      "name": "types",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.at-rules.at-view-transition",
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-view-transitions-2/#descdef-view-transition-types",
+        "profile": "standard",
+        "source": "css:css-view-transitions-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.at-rules.at-webkit-keyframes",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": []
+      },
+      "name": "@-webkit-keyframes",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#at-ruledef--webkit-keyframes",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "description": "The @when at-rule is a conditional group rule that generalizes the individual conditional group rules such as @media and @supports. It is defined as:",
+      "domain": "css",
+      "id": "css.at-rules.at-when",
+      "kind": "at-rule",
+      "metadata": {
+        "extended": [],
+        "syntax": "@when <boolean-condition> { <rule-list> }"
+      },
+      "name": "@when",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-conditional-5/#at-ruledef-when",
+        "profile": "standard",
+        "source": "css:css-conditional-5",
+        "version": "8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/at-rules.json"
+}

@@ -1,0 +1,123 @@
+{
+  "entries": [
+    {
+      "description": "List",
+      "domain": "html",
+      "id": "html.elements.ul",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; palpable*",
+        "children": "li; script-supporting elements",
+        "interface": "HTMLUListElement",
+        "parents": "flow"
+      },
+      "name": "ul",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-ul-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <ul> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.ul.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "ul",
+        "interface": "HTMLUListElement"
+      },
+      "name": "ul implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.ul",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <ul> element content categories.",
+      "domain": "html",
+      "id": "html.elements.ul.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "ul",
+        "interface": "HTMLUListElement"
+      },
+      "name": "ul content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.ul",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-ul-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <ul> element content model.",
+      "domain": "html",
+      "id": "html.elements.ul.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "ul",
+        "interface": "HTMLUListElement"
+      },
+      "name": "ul content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.ul",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-ul-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <ul> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.ul.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "ul",
+        "interface": "HTMLUListElement"
+      },
+      "name": "ul interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.ul",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-ul-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/ul.json"
+}

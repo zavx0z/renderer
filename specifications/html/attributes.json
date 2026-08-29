@@ -1,0 +1,3738 @@
+{
+  "entries": [
+    {
+      "description": "Alternative label to use for the header cell when referencing the cell in other contexts",
+      "domain": "html",
+      "id": "html.attributes.abbr",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "th"
+        ],
+        "global": false,
+        "value": "Text*"
+      },
+      "name": "abbr",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/tables.html#attr-th-abbr",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Hint for expected file type in file upload controls",
+      "domain": "html",
+      "id": "html.attributes.accept",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "input"
+        ],
+        "global": false,
+        "value": "Set of comma-separated tokens* consisting of valid MIME type strings with no parameters or audio/*, video/*, or image/*"
+      },
+      "name": "accept",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/input.html#attr-input-accept",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Character encodings to use for form submission",
+      "domain": "html",
+      "id": "html.attributes.accept-charset",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "form"
+        ],
+        "global": false,
+        "value": "ASCII case-insensitive match for \"UTF-8\""
+      },
+      "name": "accept-charset",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/forms.html#attr-form-accept-charset",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Keyboard shortcut to activate or focus element",
+      "domain": "html",
+      "id": "html.attributes.accesskey",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "Ordered set of unique space-separated tokens, none of which are identical to another, each consisting of one code point in length"
+      },
+      "name": "accesskey",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/interaction.html#the-accesskey-attribute",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "URL to use for form submission",
+      "domain": "html",
+      "id": "html.attributes.action",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "form"
+        ],
+        "global": false,
+        "value": "Valid non-empty URL potentially surrounded by spaces"
+      },
+      "name": "action",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fs-action",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Permissions policy to be applied to the iframe's contents",
+      "domain": "html",
+      "id": "html.attributes.allow",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "iframe"
+        ],
+        "global": false,
+        "value": "Serialized permissions policy"
+      },
+      "name": "allow",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/iframe-embed-object.html#attr-iframe-allow",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Whether to allow the iframe's contents to use requestFullscreen()",
+      "domain": "html",
+      "id": "html.attributes.allowfullscreen",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "iframe"
+        ],
+        "global": false,
+        "value": "Boolean attribute"
+      },
+      "name": "allowfullscreen",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/iframe-embed-object.html#attr-iframe-allowfullscreen",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Allow the color's alpha component to be set",
+      "domain": "html",
+      "id": "html.attributes.alpha",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "input"
+        ],
+        "global": false,
+        "value": "Boolean attribute"
+      },
+      "name": "alpha",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/input.html#attr-input-alpha",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Replacement text for use when images are not available",
+      "domain": "html",
+      "id": "html.attributes.alt",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "area",
+          "img",
+          "input"
+        ],
+        "global": false,
+        "value": "Text*"
+      },
+      "name": "alt",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/image-maps.html#attr-area-alt",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "ARIA state and property content attributes allowed by ARIA in HTML.",
+      "domain": "html",
+      "id": "html.attributes.aria-wildcard",
+      "kind": "global-attribute-family",
+      "metadata": {
+        "global": true
+      },
+      "name": "aria-*",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aria/#docconformance",
+        "profile": "standard",
+        "source": "aria-in-html",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Destination for a preload request (for rel=\"preload\" and rel=\"modulepreload\")",
+      "domain": "html",
+      "id": "html.attributes.as",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "link"
+        ],
+        "global": false,
+        "value": "Preload destination, for rel=\"preload\"; module preload destination, for rel=\"modulepreload\""
+      },
+      "name": "as",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/semantics.html#attr-link-as",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Execute script when available, without blocking while fetching",
+      "domain": "html",
+      "id": "html.attributes.async",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "script"
+        ],
+        "global": false,
+        "value": "Boolean attribute"
+      },
+      "name": "async",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/scripting.html#attr-script-async",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Recommended autocapitalization behavior (for supported input methods)",
+      "domain": "html",
+      "id": "html.attributes.autocapitalize",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "\"on\"; \"off\"; \"none\"; \"sentences\"; \"words\"; \"characters\""
+      },
+      "name": "autocapitalize",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/interaction.html#attr-autocapitalize",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Hint for form autofill feature",
+      "domain": "html",
+      "id": "html.attributes.autocomplete",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "form",
+          "input",
+          "select",
+          "textarea"
+        ],
+        "global": false,
+        "value": "Autofill field name and related tokens*"
+      },
+      "name": "autocomplete",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fe-autocomplete",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Recommended autocorrection behavior (for supported input methods)",
+      "domain": "html",
+      "id": "html.attributes.autocorrect",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "\"on\"; \"off\"; the empty string"
+      },
+      "name": "autocorrect",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/interaction.html#attr-autocorrect",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Automatically focus the element when the page is loaded",
+      "domain": "html",
+      "id": "html.attributes.autofocus",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "Boolean attribute"
+      },
+      "name": "autofocus",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/interaction.html#attr-fe-autofocus",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Hint that the media resource can be started automatically when the page is loaded",
+      "domain": "html",
+      "id": "html.attributes.autoplay",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "audio",
+          "video"
+        ],
+        "global": false,
+        "value": "Boolean attribute"
+      },
+      "name": "autoplay",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-media-autoplay",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Whether the element is potentially render-blocking",
+      "domain": "html",
+      "id": "html.attributes.blocking",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "link",
+          "script",
+          "style"
+        ],
+        "global": false,
+        "value": "Unordered set of unique space-separated tokens*"
+      },
+      "name": "blocking",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/semantics.html#attr-link-blocking",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Character encoding declaration",
+      "domain": "html",
+      "id": "html.attributes.charset",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "meta"
+        ],
+        "global": false,
+        "value": "\"utf-8\""
+      },
+      "name": "charset",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/semantics.html#attr-meta-charset",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Whether the control is checked",
+      "domain": "html",
+      "id": "html.attributes.checked",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "input"
+        ],
+        "global": false,
+        "value": "Boolean attribute"
+      },
+      "name": "checked",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/input.html#attr-input-checked",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Link to the source of the quotation or more information about the edit",
+      "domain": "html",
+      "id": "html.attributes.cite",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "blockquote",
+          "del",
+          "ins",
+          "q"
+        ],
+        "global": false,
+        "value": "Valid URL potentially surrounded by spaces"
+      },
+      "name": "cite",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/grouping-content.html#attr-blockquote-cite",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Classes to which the element belongs",
+      "domain": "html",
+      "id": "html.attributes.class",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "Set of space-separated tokens"
+      },
+      "name": "class",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/dom.html#classes",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Which user actions will close the dialog",
+      "domain": "html",
+      "id": "html.attributes.closedby",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "dialog"
+        ],
+        "global": false,
+        "value": "\"any\"; \"closerequest\"; \"none\";"
+      },
+      "name": "closedby",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/interactive-elements.html#attr-dialog-closedby",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Color to use when customizing a site's icon (for rel=\"mask-icon\")",
+      "domain": "html",
+      "id": "html.attributes.color",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "link"
+        ],
+        "global": false,
+        "value": "CSS &lt;color>"
+      },
+      "name": "color",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/semantics.html#attr-link-color",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The color space of the serialized color",
+      "domain": "html",
+      "id": "html.attributes.colorspace",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "input"
+        ],
+        "global": false,
+        "value": "\"limited-srgb\"; \"display-p3\""
+      },
+      "name": "colorspace",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/input.html#attr-input-colorspace",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Maximum number of characters per line",
+      "domain": "html",
+      "id": "html.attributes.cols",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "textarea"
+        ],
+        "global": false,
+        "value": "Valid non-negative integer greater than zero"
+      },
+      "name": "cols",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-textarea-cols",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Number of columns that the cell is to span",
+      "domain": "html",
+      "id": "html.attributes.colspan",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "td",
+          "th"
+        ],
+        "global": false,
+        "value": "Valid non-negative integer greater than zero"
+      },
+      "name": "colspan",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/tables.html#attr-tdth-colspan",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Indicates to the targeted element which action to take.",
+      "domain": "html",
+      "id": "html.attributes.command",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "button"
+        ],
+        "global": false,
+        "value": "\"toggle-popover\"; \"show-popover\"; \"hide-popover\"; \"close\"; \"request-close\"; \"show-modal\"; a custom command keyword"
+      },
+      "name": "command",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-button-command",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Targets another element to be invoked.",
+      "domain": "html",
+      "id": "html.attributes.commandfor",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "button"
+        ],
+        "global": false,
+        "value": "ID*"
+      },
+      "name": "commandfor",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-button-commandfor",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Value of the element",
+      "domain": "html",
+      "id": "html.attributes.content",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "meta"
+        ],
+        "global": false,
+        "value": "Text*"
+      },
+      "name": "content",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/semantics.html#attr-meta-content",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Whether the element is editable",
+      "domain": "html",
+      "id": "html.attributes.contenteditable",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "\"true\"; \"false\"; \"plaintext-only\"; the empty string"
+      },
+      "name": "contenteditable",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/interaction.html#attr-contenteditable",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Show user agent controls",
+      "domain": "html",
+      "id": "html.attributes.controls",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "audio",
+          "video",
+          "img"
+        ],
+        "global": false,
+        "value": "Boolean attribute"
+      },
+      "name": "controls",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-media-controls",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Coordinates for the shape to be created in an image map",
+      "domain": "html",
+      "id": "html.attributes.coords",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "area"
+        ],
+        "global": false,
+        "value": "Valid list of floating-point numbers*"
+      },
+      "name": "coords",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/image-maps.html#attr-area-coords",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "How the element handles crossorigin requests",
+      "domain": "html",
+      "id": "html.attributes.crossorigin",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "audio",
+          "img",
+          "link",
+          "script",
+          "video"
+        ],
+        "global": false,
+        "value": "\"anonymous\"; \"use-credentials\"; the empty string"
+      },
+      "name": "crossorigin",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-media-crossorigin",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Address of the resource",
+      "domain": "html",
+      "id": "html.attributes.data",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "object"
+        ],
+        "global": false,
+        "value": "Valid non-empty URL potentially surrounded by spaces"
+      },
+      "name": "data",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/iframe-embed-object.html#attr-object-data",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Custom data attributes and dataset reflection boundary.",
+      "domain": "html",
+      "id": "html.attributes.data-wildcard",
+      "kind": "global-attribute-family",
+      "metadata": {
+        "global": true
+      },
+      "name": "data-*",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Machine-readable value",
+      "domain": "html",
+      "id": "html.attributes.datetime",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "del",
+          "ins",
+          "time"
+        ],
+        "global": false,
+        "value": "Valid month string, valid date string, valid yearless date string, valid time string, valid local date and time string, valid time-zone offset string, valid global date and time string, valid week string, valid non-negative integer, or valid duration string"
+      },
+      "name": "datetime",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/text-level-semantics.html#attr-time-datetime",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Decoding hint to use when processing this image for presentation",
+      "domain": "html",
+      "id": "html.attributes.decoding",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "img"
+        ],
+        "global": false,
+        "value": "\"sync\"; \"async\"; \"auto\""
+      },
+      "name": "decoding",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/embedded-content.html#attr-img-decoding",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Enable the track if no other text track is more suitable",
+      "domain": "html",
+      "id": "html.attributes.default",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "track"
+        ],
+        "global": false,
+        "value": "Boolean attribute"
+      },
+      "name": "default",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-track-default",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Defer script execution",
+      "domain": "html",
+      "id": "html.attributes.defer",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "script"
+        ],
+        "global": false,
+        "value": "Boolean attribute"
+      },
+      "name": "defer",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/scripting.html#attr-script-defer",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The text directionality of the element",
+      "domain": "html",
+      "id": "html.attributes.dir",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "bdo"
+        ],
+        "global": false,
+        "value": "\"ltr\"; \"rtl\""
+      },
+      "name": "dir",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/text-level-semantics.html#the-bdo-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Name of form control to use for sending the element's directionality in form submission",
+      "domain": "html",
+      "id": "html.attributes.dirname",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "input",
+          "textarea"
+        ],
+        "global": false,
+        "value": "Text*"
+      },
+      "name": "dirname",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fe-dirname",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Whether the link is disabled",
+      "domain": "html",
+      "id": "html.attributes.disabled",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "button",
+          "fieldset",
+          "input",
+          "link",
+          "optgroup",
+          "option",
+          "select",
+          "textarea"
+        ],
+        "global": false,
+        "value": "Boolean attribute"
+      },
+      "name": "disabled",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/semantics.html#attr-link-disabled",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Whether to download the resource instead of navigating to it, and its filename if so",
+      "domain": "html",
+      "id": "html.attributes.download",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "a",
+          "area"
+        ],
+        "global": false,
+        "value": "Text"
+      },
+      "name": "download",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/links.html#attr-hyperlink-download",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Whether the element is draggable",
+      "domain": "html",
+      "id": "html.attributes.draggable",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "\"true\"; \"false\""
+      },
+      "name": "draggable",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/dnd.html#attr-draggable",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Entry list encoding type to use for form submission",
+      "domain": "html",
+      "id": "html.attributes.enctype",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "form"
+        ],
+        "global": false,
+        "value": "\"application/x-www-form-urlencoded\"; \"multipart/form-data\"; \"text/plain\""
+      },
+      "name": "enctype",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fs-enctype",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Hint for selecting an enter key action",
+      "domain": "html",
+      "id": "html.attributes.enterkeyhint",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "\"enter\"; \"done\"; \"go\"; \"next\"; \"previous\"; \"search\"; \"send\""
+      },
+      "name": "enterkeyhint",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/interaction.html#attr-enterkeyhint",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Sets the priority for fetches initiated by the element",
+      "domain": "html",
+      "id": "html.attributes.fetchpriority",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "img",
+          "link",
+          "script"
+        ],
+        "global": false,
+        "value": "\"auto\"; \"high\"; \"low\""
+      },
+      "name": "fetchpriority",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/embedded-content.html#attr-img-fetchpriority",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Updates existing content",
+      "domain": "html",
+      "id": "html.attributes.for",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "label",
+          "output",
+          "template"
+        ],
+        "global": false,
+        "value": "Text"
+      },
+      "name": "for",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/scripting.html#attr-template-for",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Associates the element with a form element",
+      "domain": "html",
+      "id": "html.attributes.form",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "button",
+          "fieldset",
+          "input",
+          "object",
+          "output",
+          "select",
+          "textarea"
+        ],
+        "global": false,
+        "value": "ID*"
+      },
+      "name": "form",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fae-form",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "URL to use for form submission",
+      "domain": "html",
+      "id": "html.attributes.formaction",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "button",
+          "input"
+        ],
+        "global": false,
+        "value": "Valid non-empty URL potentially surrounded by spaces"
+      },
+      "name": "formaction",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fs-formaction",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Entry list encoding type to use for form submission",
+      "domain": "html",
+      "id": "html.attributes.formenctype",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "button",
+          "input"
+        ],
+        "global": false,
+        "value": "\"application/x-www-form-urlencoded\"; \"multipart/form-data\"; \"text/plain\""
+      },
+      "name": "formenctype",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fs-formenctype",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Variant to use for form submission",
+      "domain": "html",
+      "id": "html.attributes.formmethod",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "button",
+          "input"
+        ],
+        "global": false,
+        "value": "\"get\"; \"post\"; \"dialog\""
+      },
+      "name": "formmethod",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fs-formmethod",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Bypass form control validation for form submission",
+      "domain": "html",
+      "id": "html.attributes.formnovalidate",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "button",
+          "input"
+        ],
+        "global": false,
+        "value": "Boolean attribute"
+      },
+      "name": "formnovalidate",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fs-formnovalidate",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Navigable for form submission",
+      "domain": "html",
+      "id": "html.attributes.formtarget",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "button",
+          "input"
+        ],
+        "global": false,
+        "value": "Valid navigable target name or keyword"
+      },
+      "name": "formtarget",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fs-formtarget",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The header cells for this cell",
+      "domain": "html",
+      "id": "html.attributes.headers",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "td",
+          "th"
+        ],
+        "global": false,
+        "value": "Unordered set of unique space-separated tokens consisting of IDs*"
+      },
+      "name": "headers",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/tables.html#attr-tdth-headers",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Offsets heading levels for descendants",
+      "domain": "html",
+      "id": "html.attributes.headingoffset",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "Valid non-negative integer between 0 and 8"
+      },
+      "name": "headingoffset",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/interaction.html#attr-tabindex",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Prevents a heading offset computation from traversing beyond the element with the attribute",
+      "domain": "html",
+      "id": "html.attributes.headingreset",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "Boolean attribute"
+      },
+      "name": "headingreset",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/interaction.html#attr-tabindex",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Vertical dimension",
+      "domain": "html",
+      "id": "html.attributes.height",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "canvas",
+          "embed",
+          "iframe",
+          "img",
+          "input",
+          "object",
+          "source",
+          "picture",
+          "video"
+        ],
+        "global": false,
+        "value": "Valid non-negative integer"
+      },
+      "name": "height",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/canvas.html#attr-canvas-height",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Whether the element is relevant",
+      "domain": "html",
+      "id": "html.attributes.hidden",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "\"until-found\"; \"hidden\"; the empty string"
+      },
+      "name": "hidden",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/interaction.html#attr-hidden",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Low limit of high range",
+      "domain": "html",
+      "id": "html.attributes.high",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "meter"
+        ],
+        "global": false,
+        "value": "Valid floating-point number*"
+      },
+      "name": "high",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-meter-high",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Document base URL",
+      "domain": "html",
+      "id": "html.attributes.href",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "a",
+          "area",
+          "base",
+          "link"
+        ],
+        "global": false,
+        "value": "Valid URL potentially surrounded by spaces"
+      },
+      "name": "href",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/semantics.html#attr-base-href",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Language of the linked resource",
+      "domain": "html",
+      "id": "html.attributes.hreflang",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "a",
+          "link"
+        ],
+        "global": false,
+        "value": "Valid BCP 47 language tag"
+      },
+      "name": "hreflang",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/links.html#attr-hyperlink-hreflang",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Pragma directive",
+      "domain": "html",
+      "id": "html.attributes.http-equiv",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "meta"
+        ],
+        "global": false,
+        "value": "\"content-type\"; \"default-style\"; \"refresh\"; \"x-ua-compatible\"; \"content-security-policy\""
+      },
+      "name": "http-equiv",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/semantics.html#attr-meta-http-equiv",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The element's ID",
+      "domain": "html",
+      "id": "html.attributes.id",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "Text*"
+      },
+      "name": "id",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/dom.html#the-id-attribute",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Image sizes for different page layouts (for rel=\"preload\")",
+      "domain": "html",
+      "id": "html.attributes.imagesizes",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "link"
+        ],
+        "global": false,
+        "value": "Valid source size list"
+      },
+      "name": "imagesizes",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/semantics.html#attr-link-imagesizes",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Images to use in different situations, e.g., high-resolution displays, small monitors, etc. (for rel=\"preload\")",
+      "domain": "html",
+      "id": "html.attributes.imagesrcset",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "link"
+        ],
+        "global": false,
+        "value": "Comma-separated list of image candidate strings"
+      },
+      "name": "imagesrcset",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/semantics.html#attr-link-imagesrcset",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Whether the element is inert.",
+      "domain": "html",
+      "id": "html.attributes.inert",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "Boolean attribute"
+      },
+      "name": "inert",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/interaction.html#the-inert-attribute",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Hint for selecting an input modality",
+      "domain": "html",
+      "id": "html.attributes.inputmode",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "\"none\"; \"text\"; \"tel\"; \"email\"; \"url\"; \"numeric\"; \"decimal\"; \"search\""
+      },
+      "name": "inputmode",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/interaction.html#attr-inputmode",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Integrity metadata used in Subresource Integrity checks [SRI]",
+      "domain": "html",
+      "id": "html.attributes.integrity",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "link",
+          "script"
+        ],
+        "global": false,
+        "value": "Text"
+      },
+      "name": "integrity",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/semantics.html#attr-link-integrity",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Creates a customized built-in element",
+      "domain": "html",
+      "id": "html.attributes.is",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "Valid custom element name of a defined customized built-in element"
+      },
+      "name": "is",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/custom-elements.html#attr-is",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Whether the image is a server-side image map",
+      "domain": "html",
+      "id": "html.attributes.ismap",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "img"
+        ],
+        "global": false,
+        "value": "Boolean attribute"
+      },
+      "name": "ismap",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/embedded-content.html#attr-img-ismap",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Global identifier for a microdata item",
+      "domain": "html",
+      "id": "html.attributes.itemid",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "Valid URL potentially surrounded by spaces"
+      },
+      "name": "itemid",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/microdata.html#attr-itemid",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Property names of a microdata item",
+      "domain": "html",
+      "id": "html.attributes.itemprop",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "Unordered set of unique space-separated tokens consisting of valid absolute URLs, defined property names, or text*"
+      },
+      "name": "itemprop",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/microdata.html#names:-the-itemprop-attribute",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Referenced elements",
+      "domain": "html",
+      "id": "html.attributes.itemref",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "Unordered set of unique space-separated tokens consisting of IDs*"
+      },
+      "name": "itemref",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/microdata.html#attr-itemref",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Introduces a microdata item",
+      "domain": "html",
+      "id": "html.attributes.itemscope",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "Boolean attribute"
+      },
+      "name": "itemscope",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/microdata.html#attr-itemscope",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Item types of a microdata item",
+      "domain": "html",
+      "id": "html.attributes.itemtype",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "Unordered set of unique space-separated tokens consisting of valid absolute URLs*"
+      },
+      "name": "itemtype",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/microdata.html#attr-itemtype",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The type of text track",
+      "domain": "html",
+      "id": "html.attributes.kind",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "track"
+        ],
+        "global": false,
+        "value": "\"subtitles\"; \"captions\"; \"descriptions\"; \"chapters\"; \"metadata\""
+      },
+      "name": "kind",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-track-kind",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "User-visible label",
+      "domain": "html",
+      "id": "html.attributes.label",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "optgroup",
+          "option",
+          "track"
+        ],
+        "global": false,
+        "value": "Text"
+      },
+      "name": "label",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-optgroup-label",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Language of the element",
+      "domain": "html",
+      "id": "html.attributes.lang",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "Valid BCP 47 language tag or the empty string"
+      },
+      "name": "lang",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/dom.html#attr-lang",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "List of autocomplete options",
+      "domain": "html",
+      "id": "html.attributes.list",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "input"
+        ],
+        "global": false,
+        "value": "ID*"
+      },
+      "name": "list",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/input.html#attr-input-list",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Used when determining loading deferral",
+      "domain": "html",
+      "id": "html.attributes.loading",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "iframe",
+          "img",
+          "audio",
+          "video"
+        ],
+        "global": false,
+        "value": "\"lazy\"; \"eager\""
+      },
+      "name": "loading",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/iframe-embed-object.html#attr-iframe-loading",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Whether to loop the media resource",
+      "domain": "html",
+      "id": "html.attributes.loop",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "audio",
+          "video"
+        ],
+        "global": false,
+        "value": "Boolean attribute"
+      },
+      "name": "loop",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-media-loop",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "High limit of low range",
+      "domain": "html",
+      "id": "html.attributes.low",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "meter"
+        ],
+        "global": false,
+        "value": "Valid floating-point number*"
+      },
+      "name": "low",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-meter-low",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Upper bound of range",
+      "domain": "html",
+      "id": "html.attributes.max",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "input",
+          "meter",
+          "progress"
+        ],
+        "global": false,
+        "value": "Valid floating-point number*"
+      },
+      "name": "max",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-meter-max",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Maximum length of value",
+      "domain": "html",
+      "id": "html.attributes.maxlength",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "input",
+          "textarea"
+        ],
+        "global": false,
+        "value": "Valid non-negative integer"
+      },
+      "name": "maxlength",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/input.html#attr-input-maxlength",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Applicable media",
+      "domain": "html",
+      "id": "html.attributes.media",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "link",
+          "meta",
+          "source",
+          "style"
+        ],
+        "global": false,
+        "value": "Valid media query list"
+      },
+      "name": "media",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/semantics.html#attr-link-media",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Variant to use for form submission",
+      "domain": "html",
+      "id": "html.attributes.method",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "form"
+        ],
+        "global": false,
+        "value": "\"get\"; \"post\"; \"dialog\""
+      },
+      "name": "method",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fs-method",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Lower bound of range",
+      "domain": "html",
+      "id": "html.attributes.min",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "input",
+          "meter"
+        ],
+        "global": false,
+        "value": "Valid floating-point number*"
+      },
+      "name": "min",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-meter-min",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Minimum length of value",
+      "domain": "html",
+      "id": "html.attributes.minlength",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "input",
+          "textarea"
+        ],
+        "global": false,
+        "value": "Valid non-negative integer"
+      },
+      "name": "minlength",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/input.html#attr-input-minlength",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Whether to allow multiple values",
+      "domain": "html",
+      "id": "html.attributes.multiple",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "input",
+          "select"
+        ],
+        "global": false,
+        "value": "Boolean attribute"
+      },
+      "name": "multiple",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/input.html#attr-input-multiple",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Whether to mute the media resource by default",
+      "domain": "html",
+      "id": "html.attributes.muted",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "audio",
+          "video"
+        ],
+        "global": false,
+        "value": "Boolean attribute"
+      },
+      "name": "muted",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-media-muted",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Name of shadow tree slot",
+      "domain": "html",
+      "id": "html.attributes.name",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "button",
+          "details",
+          "fieldset",
+          "form",
+          "iframe",
+          "input",
+          "map",
+          "meta",
+          "object",
+          "output",
+          "select",
+          "slot",
+          "textarea"
+        ],
+        "global": false,
+        "value": "Text"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/scripting.html#attr-slot-name",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Prevents execution in user agents that support module scripts",
+      "domain": "html",
+      "id": "html.attributes.nomodule",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "script"
+        ],
+        "global": false,
+        "value": "Boolean attribute"
+      },
+      "name": "nomodule",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/scripting.html#attr-script-nomodule",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Cryptographic nonce used in Content Security Policy checks [CSP]",
+      "domain": "html",
+      "id": "html.attributes.nonce",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "Text"
+      },
+      "name": "nonce",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/urls-and-fetching.html#attr-nonce",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Bypass form control validation for form submission",
+      "domain": "html",
+      "id": "html.attributes.novalidate",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "form"
+        ],
+        "global": false,
+        "value": "Boolean attribute"
+      },
+      "name": "novalidate",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fs-novalidate",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Whether the dialog box is showing",
+      "domain": "html",
+      "id": "html.attributes.open",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "details",
+          "dialog"
+        ],
+        "global": false,
+        "value": "Boolean attribute"
+      },
+      "name": "open",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/interactive-elements.html#attr-dialog-open",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Optimum value in gauge",
+      "domain": "html",
+      "id": "html.attributes.optimum",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "meter"
+        ],
+        "global": false,
+        "value": "Valid floating-point number*"
+      },
+      "name": "optimum",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-meter-optimum",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Pattern to be matched by the form control's value",
+      "domain": "html",
+      "id": "html.attributes.pattern",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "input"
+        ],
+        "global": false,
+        "value": "Regular expression matching the JavaScript Pattern production"
+      },
+      "name": "pattern",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/input.html#attr-input-pattern",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "URLs to ping",
+      "domain": "html",
+      "id": "html.attributes.ping",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "a",
+          "area"
+        ],
+        "global": false,
+        "value": "Set of space-separated tokens consisting of valid non-empty URLs"
+      },
+      "name": "ping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/links.html#ping",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "User-visible label to be placed within the form control",
+      "domain": "html",
+      "id": "html.attributes.placeholder",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "input",
+          "textarea"
+        ],
+        "global": false,
+        "value": "Text*"
+      },
+      "name": "placeholder",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/input.html#attr-input-placeholder",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Encourage the user agent to display video content within the element's playback area",
+      "domain": "html",
+      "id": "html.attributes.playsinline",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "video"
+        ],
+        "global": false,
+        "value": "Boolean attribute"
+      },
+      "name": "playsinline",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-video-playsinline",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Makes the element a popover element",
+      "domain": "html",
+      "id": "html.attributes.popover",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "\"auto\"; \"manual\"; \"hint\"; the empty string"
+      },
+      "name": "popover",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/popover.html#attr-popover",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Targets a popover element to toggle, show, or hide",
+      "domain": "html",
+      "id": "html.attributes.popovertarget",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "button",
+          "input"
+        ],
+        "global": false,
+        "value": "ID*"
+      },
+      "name": "popovertarget",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/popover.html#attr-popovertarget",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Indicates whether a targeted popover element is to be toggled, shown, or hidden",
+      "domain": "html",
+      "id": "html.attributes.popovertargetaction",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "button",
+          "input"
+        ],
+        "global": false,
+        "value": "\"toggle\"; \"show\"; \"hide\""
+      },
+      "name": "popovertargetaction",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/popover.html#attr-popovertargetaction",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Poster frame to show prior to video playback",
+      "domain": "html",
+      "id": "html.attributes.poster",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "video"
+        ],
+        "global": false,
+        "value": "Valid non-empty URL potentially surrounded by spaces"
+      },
+      "name": "poster",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-video-poster",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Hints how much buffering the media resource will likely need",
+      "domain": "html",
+      "id": "html.attributes.preload",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "audio",
+          "video"
+        ],
+        "global": false,
+        "value": "\"none\"; \"metadata\"; \"auto\"; the empty string"
+      },
+      "name": "preload",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-media-preload",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Affects willValidate, plus any behavior added by the custom element author",
+      "domain": "html",
+      "id": "html.attributes.readonly",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "input",
+          "textarea"
+        ],
+        "global": false,
+        "value": "Boolean attribute"
+      },
+      "name": "readonly",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/custom-elements.html#attr-face-readonly",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Referrer policy for fetches initiated by the element",
+      "domain": "html",
+      "id": "html.attributes.referrerpolicy",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "a",
+          "area",
+          "iframe",
+          "img",
+          "link",
+          "script"
+        ],
+        "global": false,
+        "value": "Referrer policy"
+      },
+      "name": "referrerpolicy",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/links.html#attr-hyperlink-referrerpolicy",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Relationship between the document containing the hyperlink and the destination resource",
+      "domain": "html",
+      "id": "html.attributes.rel",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "a",
+          "area",
+          "link"
+        ],
+        "global": false,
+        "value": "Unordered set of unique space-separated tokens*"
+      },
+      "name": "rel",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/semantics.html#attr-link-rel",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Whether the control is required for form submission",
+      "domain": "html",
+      "id": "html.attributes.required",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "input",
+          "select",
+          "textarea"
+        ],
+        "global": false,
+        "value": "Boolean attribute"
+      },
+      "name": "required",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/input.html#attr-input-required",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Number the list backwards",
+      "domain": "html",
+      "id": "html.attributes.reversed",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "ol"
+        ],
+        "global": false,
+        "value": "Boolean attribute"
+      },
+      "name": "reversed",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/grouping-content.html#attr-ol-reversed",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Number of lines to show",
+      "domain": "html",
+      "id": "html.attributes.rows",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "textarea"
+        ],
+        "global": false,
+        "value": "Valid non-negative integer greater than zero"
+      },
+      "name": "rows",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-textarea-rows",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Number of rows that the cell is to span",
+      "domain": "html",
+      "id": "html.attributes.rowspan",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "td",
+          "th"
+        ],
+        "global": false,
+        "value": "Valid non-negative integer"
+      },
+      "name": "rowspan",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/tables.html#attr-tdth-rowspan",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Security rules for nested content",
+      "domain": "html",
+      "id": "html.attributes.sandbox",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "iframe"
+        ],
+        "global": false,
+        "value": "Unordered set of unique space-separated tokens, ASCII case-insensitive, consisting of \"allow-downloads\"\"allow-forms\"\"allow-modals\"\"allow-orientation-lock\"\"allow-pointer-lock\"\"allow-popups\"\"allow-popups-to-escape-sandbox\"\"allow-presentation\"\"allow-same-origin\"\"allow-scripts\"\"allow-top-navigation\"\"allow-top-navigation-by-user-activation\"\"allow-top-navigation-to-custom-protocols\""
+      },
+      "name": "sandbox",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/iframe-embed-object.html#attr-iframe-sandbox",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Specifies which cells the header cell applies to",
+      "domain": "html",
+      "id": "html.attributes.scope",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "th"
+        ],
+        "global": false,
+        "value": "\"row\"; \"col\"; \"rowgroup\"; \"colgroup\""
+      },
+      "name": "scope",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/tables.html#attr-th-scope",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Whether the option is selected by default",
+      "domain": "html",
+      "id": "html.attributes.selected",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "option"
+        ],
+        "global": false,
+        "value": "Boolean attribute"
+      },
+      "name": "selected",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-option-selected",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Sets clonable on a declarative shadow root",
+      "domain": "html",
+      "id": "html.attributes.shadowrootclonable",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "template"
+        ],
+        "global": false,
+        "value": "Boolean attribute"
+      },
+      "name": "shadowrootclonable",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/scripting.html#attr-template-shadowrootclonable",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Enables declarative shadow roots to indicate they will use a custom element registry",
+      "domain": "html",
+      "id": "html.attributes.shadowrootcustomelementregistry",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "template"
+        ],
+        "global": false,
+        "value": "Boolean attribute"
+      },
+      "name": "shadowrootcustomelementregistry",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/scripting.html#attr-template-shadowrootcustomelementregistry",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Sets delegates focus on a declarative shadow root",
+      "domain": "html",
+      "id": "html.attributes.shadowrootdelegatesfocus",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "template"
+        ],
+        "global": false,
+        "value": "Boolean attribute"
+      },
+      "name": "shadowrootdelegatesfocus",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/scripting.html#attr-template-shadowrootdelegatesfocus",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Enables streaming declarative shadow roots",
+      "domain": "html",
+      "id": "html.attributes.shadowrootmode",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "template"
+        ],
+        "global": false,
+        "value": "\"open\"; \"closed\""
+      },
+      "name": "shadowrootmode",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/scripting.html#attr-template-shadowrootmode",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Sets serializable on a declarative shadow root",
+      "domain": "html",
+      "id": "html.attributes.shadowrootserializable",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "template"
+        ],
+        "global": false,
+        "value": "Boolean attribute"
+      },
+      "name": "shadowrootserializable",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/scripting.html#attr-template-shadowrootserializable",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Sets slot assignment on a declarative shadow root",
+      "domain": "html",
+      "id": "html.attributes.shadowrootslotassignment",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "template"
+        ],
+        "global": false,
+        "value": "\"named\"; \"manual\""
+      },
+      "name": "shadowrootslotassignment",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/scripting.html#attr-template-shadowrootslotassignment",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The kind of shape to be created in an image map",
+      "domain": "html",
+      "id": "html.attributes.shape",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "area"
+        ],
+        "global": false,
+        "value": "\"circle\"; \"default\"; \"poly\"; \"rect\""
+      },
+      "name": "shape",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/image-maps.html#attr-area-shape",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Size of the control",
+      "domain": "html",
+      "id": "html.attributes.size",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "input",
+          "select"
+        ],
+        "global": false,
+        "value": "Valid non-negative integer greater than zero"
+      },
+      "name": "size",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/input.html#attr-input-size",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Image sizes for different page layouts",
+      "domain": "html",
+      "id": "html.attributes.sizes",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "img",
+          "link",
+          "source"
+        ],
+        "global": false,
+        "value": "Valid source size list"
+      },
+      "name": "sizes",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/embedded-content.html#attr-img-sizes",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The element's desired slot",
+      "domain": "html",
+      "id": "html.attributes.slot",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "Text"
+      },
+      "name": "slot",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/dom.html#the-id-attribute",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Number of columns spanned by the element",
+      "domain": "html",
+      "id": "html.attributes.span",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "col",
+          "colgroup"
+        ],
+        "global": false,
+        "value": "Valid non-negative integer greater than zero"
+      },
+      "name": "span",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/tables.html#attr-col-span",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Whether the element is to have its spelling and grammar checked",
+      "domain": "html",
+      "id": "html.attributes.spellcheck",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "\"true\"; \"false\"; the empty string"
+      },
+      "name": "spellcheck",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/interaction.html#attr-spellcheck",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Address of the resource",
+      "domain": "html",
+      "id": "html.attributes.src",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "audio",
+          "embed",
+          "iframe",
+          "img",
+          "input",
+          "script",
+          "source",
+          "video",
+          "audio",
+          "track",
+          "video"
+        ],
+        "global": false,
+        "value": "Valid non-empty URL potentially surrounded by spaces"
+      },
+      "name": "src",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-media-src",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "A document to render in the iframe",
+      "domain": "html",
+      "id": "html.attributes.srcdoc",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "iframe"
+        ],
+        "global": false,
+        "value": "The source of an iframe srcdoc document*"
+      },
+      "name": "srcdoc",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/iframe-embed-object.html#attr-iframe-srcdoc",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Language of the text track",
+      "domain": "html",
+      "id": "html.attributes.srclang",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "track"
+        ],
+        "global": false,
+        "value": "Valid BCP 47 language tag"
+      },
+      "name": "srclang",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-track-srclang",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Images to use in different situations, e.g., high-resolution displays, small monitors, etc.",
+      "domain": "html",
+      "id": "html.attributes.srcset",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "img",
+          "source"
+        ],
+        "global": false,
+        "value": "Comma-separated list of image candidate strings"
+      },
+      "name": "srcset",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/embedded-content.html#attr-img-srcset",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Starting value of the list",
+      "domain": "html",
+      "id": "html.attributes.start",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "ol"
+        ],
+        "global": false,
+        "value": "Valid integer"
+      },
+      "name": "start",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/grouping-content.html#attr-ol-start",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Granularity to be matched by the form control's value",
+      "domain": "html",
+      "id": "html.attributes.step",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "input"
+        ],
+        "global": false,
+        "value": "Valid floating-point number greater than zero, or \"any\""
+      },
+      "name": "step",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/input.html#attr-input-step",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Presentational and formatting instructions",
+      "domain": "html",
+      "id": "html.attributes.style",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "CSS declarations*"
+      },
+      "name": "style",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/dom.html#attr-style",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Whether the element is focusable and sequentially focusable, and the relative order of the element for the purposes of sequential focus navigation",
+      "domain": "html",
+      "id": "html.attributes.tabindex",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "Valid integer"
+      },
+      "name": "tabindex",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/interaction.html#attr-tabindex",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Navigable for form submission",
+      "domain": "html",
+      "id": "html.attributes.target",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "a",
+          "area",
+          "base",
+          "form"
+        ],
+        "global": false,
+        "value": "Valid navigable target name or keyword"
+      },
+      "name": "target",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fs-target",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "CSS style sheet set name",
+      "domain": "html",
+      "id": "html.attributes.title",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "abbr",
+          "dfn",
+          "input",
+          "link",
+          "style"
+        ],
+        "global": false,
+        "value": "Text"
+      },
+      "name": "title",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/semantics.html#attr-link-title",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Whether the element is to be translated when the page is localized",
+      "domain": "html",
+      "id": "html.attributes.translate",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "\"yes\"; \"no\"; the empty string"
+      },
+      "name": "translate",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/dom.html#attr-translate",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Type of script",
+      "domain": "html",
+      "id": "html.attributes.type",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "a",
+          "button",
+          "embed",
+          "input",
+          "link",
+          "object",
+          "ol",
+          "script",
+          "source"
+        ],
+        "global": false,
+        "value": "\"module\"; \"importmap\"; \"speculationrules\"; a valid MIME type string that is not a JavaScript MIME type essence match"
+      },
+      "name": "type",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/scripting.html#attr-script-type",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Name of image map to use",
+      "domain": "html",
+      "id": "html.attributes.usemap",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "img"
+        ],
+        "global": false,
+        "value": "Valid hash-name reference*"
+      },
+      "name": "usemap",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/image-maps.html#attr-hyperlink-usemap",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Current value of the element",
+      "domain": "html",
+      "id": "html.attributes.value",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "button",
+          "data",
+          "input",
+          "li",
+          "meter",
+          "option",
+          "progress"
+        ],
+        "global": false,
+        "value": "Valid floating-point number"
+      },
+      "name": "value",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-meter-value",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Horizontal dimension",
+      "domain": "html",
+      "id": "html.attributes.width",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "canvas",
+          "embed",
+          "iframe",
+          "img",
+          "input",
+          "object",
+          "source",
+          "picture",
+          "video"
+        ],
+        "global": false,
+        "value": "Valid non-negative integer"
+      },
+      "name": "width",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/canvas.html#attr-canvas-width",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "How the value of the form control is to be wrapped for form submission",
+      "domain": "html",
+      "id": "html.attributes.wrap",
+      "kind": "attribute",
+      "metadata": {
+        "elements": [
+          "textarea"
+        ],
+        "global": false,
+        "value": "\"soft\"; \"hard\""
+      },
+      "name": "wrap",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-textarea-wrap",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Whether the element can offer writing suggestions or not.",
+      "domain": "html",
+      "id": "html.attributes.writingsuggestions",
+      "kind": "global-attribute",
+      "metadata": {
+        "elements": [],
+        "global": true,
+        "value": "\"true\"; \"false\"; the empty string"
+      },
+      "name": "writingsuggestions",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/interaction.html#attr-writingsuggestions",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/attributes.json"
+}

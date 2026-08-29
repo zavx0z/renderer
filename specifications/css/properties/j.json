@@ -1,0 +1,105 @@
+{
+  "entries": [
+    {
+      "domain": "css",
+      "id": "css.properties.justify-content",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "multicol containers, flex containers, and grid containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword(s)",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "justify-content",
+          "justifyContent"
+        ],
+        "syntax": "normal | <content-distribution> | <overflow-position>? [ <content-position> | left | right ]"
+      },
+      "name": "justify-content",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-align-3/#propdef-justify-content",
+        "profile": "standard",
+        "source": "css:css-align-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.justify-items",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword(s), except for legacy (see prose)",
+        "extended": [],
+        "inherited": "no",
+        "initial": "legacy",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "justify-items",
+          "justifyItems"
+        ],
+        "syntax": "normal | stretch | <baseline-position> | <overflow-position>? [ <self-position> | left | right ] | legacy | legacy && [ left | right | center ]"
+      },
+      "name": "justify-items",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-align-3/#propdef-justify-items",
+        "profile": "standard",
+        "source": "css:css-align-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.justify-self",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block-level boxes, absolutely-positioned boxes, and grid items",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword(s)",
+        "extended": [
+          "https://drafts.csswg.org/css-anchor-position-1/#propdef-justify-self"
+        ],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "justify-self",
+          "justifySelf"
+        ],
+        "syntax": "auto | <overflow-position>? [ normal | <self-position> | left | right ] | stretch | <baseline-position> | anchor-center"
+      },
+      "name": "justify-self",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-align-3/#propdef-justify-self",
+        "profile": "standard",
+        "source": "css:css-align-3",
+        "version": "8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/properties/j.json"
+}

@@ -1,0 +1,943 @@
+{
+  "entries": [
+    {
+      "description": "Template compiler support boundary for arrays.",
+      "domain": "tsx",
+      "id": "tsx.compiler.arrays",
+      "kind": "tsx-compiler",
+      "name": "arrays",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#arrays",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for arrow component rejection.",
+      "domain": "tsx",
+      "id": "tsx.compiler.arrow-component-rejection",
+      "kind": "tsx-compiler",
+      "name": "arrow component rejection",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#arrow-component-rejection",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for async component rejection.",
+      "domain": "tsx",
+      "id": "tsx.compiler.async-component-rejection",
+      "kind": "tsx-compiler",
+      "name": "async component rejection",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#async-component-rejection",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for binding range validation.",
+      "domain": "tsx",
+      "id": "tsx.compiler.binding-range-validation",
+      "kind": "tsx-compiler",
+      "name": "binding range validation",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#binding-range-validation",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for binding realm validation.",
+      "domain": "tsx",
+      "id": "tsx.compiler.binding-realm-validation",
+      "kind": "tsx-compiler",
+      "name": "binding realm validation",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#binding-realm-validation",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for browser target build.",
+      "domain": "tsx",
+      "id": "tsx.compiler.browser-target-build",
+      "kind": "tsx-compiler",
+      "name": "browser target build",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#browser-target-build",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for callback refs.",
+      "domain": "tsx",
+      "id": "tsx.compiler.callback-refs",
+      "kind": "tsx-compiler",
+      "name": "callback refs",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#callback-refs",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for children.",
+      "domain": "tsx",
+      "id": "tsx.compiler.children",
+      "kind": "tsx-compiler",
+      "name": "children",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#children",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for class.",
+      "domain": "tsx",
+      "id": "tsx.compiler.class",
+      "kind": "tsx-compiler",
+      "name": "class",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#class",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for class name.",
+      "domain": "tsx",
+      "id": "tsx.compiler.class-name",
+      "kind": "tsx-compiler",
+      "name": "class name",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#class-name",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for compiler diagnostics.",
+      "domain": "tsx",
+      "id": "tsx.compiler.compiler-diagnostics",
+      "kind": "tsx-compiler",
+      "name": "compiler diagnostics",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#compiler-diagnostics",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for component children.",
+      "domain": "tsx",
+      "id": "tsx.compiler.component-children",
+      "kind": "tsx-compiler",
+      "name": "component children",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#component-children",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for component escape rejection.",
+      "domain": "tsx",
+      "id": "tsx.compiler.component-escape-rejection",
+      "kind": "tsx-compiler",
+      "name": "component escape rejection",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#component-escape-rejection",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for conditional branches.",
+      "domain": "tsx",
+      "id": "tsx.compiler.conditional-branches",
+      "kind": "tsx-compiler",
+      "name": "conditional branches",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#conditional-branches",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for custom hooks.",
+      "domain": "tsx",
+      "id": "tsx.compiler.custom-hooks",
+      "kind": "tsx-compiler",
+      "name": "custom hooks",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#custom-hooks",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for dangerously set inner html rejection.",
+      "domain": "tsx",
+      "id": "tsx.compiler.dangerously-set-inner-html-rejection",
+      "kind": "tsx-compiler",
+      "name": "dangerously set inner html rejection",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#dangerously-set-inner-html-rejection",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for dependency invalidation.",
+      "domain": "tsx",
+      "id": "tsx.compiler.dependency-invalidation",
+      "kind": "tsx-compiler",
+      "name": "dependency invalidation",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#dependency-invalidation",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for destructured receivers.",
+      "domain": "tsx",
+      "id": "tsx.compiler.destructured-receivers",
+      "kind": "tsx-compiler",
+      "name": "destructured receivers",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#destructured-receivers",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for dynamic import rejection.",
+      "domain": "tsx",
+      "id": "tsx.compiler.dynamic-import-rejection",
+      "kind": "tsx-compiler",
+      "name": "dynamic import rejection",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#dynamic-import-rejection",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for dynamic tags.",
+      "domain": "tsx",
+      "id": "tsx.compiler.dynamic-tags",
+      "kind": "tsx-compiler",
+      "name": "dynamic tags",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#dynamic-tags",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for early return rejection.",
+      "domain": "tsx",
+      "id": "tsx.compiler.early-return-rejection",
+      "kind": "tsx-compiler",
+      "name": "early return rejection",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#early-return-rejection",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for event bindings.",
+      "domain": "tsx",
+      "id": "tsx.compiler.event-bindings",
+      "kind": "tsx-compiler",
+      "name": "event bindings",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#event-bindings",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for event capture bindings.",
+      "domain": "tsx",
+      "id": "tsx.compiler.event-capture-bindings",
+      "kind": "tsx-compiler",
+      "name": "event capture bindings",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#event-capture-bindings",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for explicit children prop.",
+      "domain": "tsx",
+      "id": "tsx.compiler.explicit-children-prop",
+      "kind": "tsx-compiler",
+      "name": "explicit children prop",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#explicit-children-prop",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for fixed slot abi.",
+      "domain": "tsx",
+      "id": "tsx.compiler.fixed-slot-abi",
+      "kind": "tsx-compiler",
+      "name": "fixed slot abi",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#fixed-slot-abi",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for fragments.",
+      "domain": "tsx",
+      "id": "tsx.compiler.fragments",
+      "kind": "tsx-compiler",
+      "name": "fragments",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#fragments",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for function components.",
+      "domain": "tsx",
+      "id": "tsx.compiler.function-components",
+      "kind": "tsx-compiler",
+      "name": "function components",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#function-components",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for generic components.",
+      "domain": "tsx",
+      "id": "tsx.compiler.generic-components",
+      "kind": "tsx-compiler",
+      "name": "generic components",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#generic-components",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for hook order validation.",
+      "domain": "tsx",
+      "id": "tsx.compiler.hook-order-validation",
+      "kind": "tsx-compiler",
+      "name": "hook order validation",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#hook-order-validation",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for intrinsic elements.",
+      "domain": "tsx",
+      "id": "tsx.compiler.intrinsic-elements",
+      "kind": "tsx-compiler",
+      "name": "intrinsic elements",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#intrinsic-elements",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for keyed component map.",
+      "domain": "tsx",
+      "id": "tsx.compiler.keyed-component-map",
+      "kind": "tsx-compiler",
+      "name": "keyed component map",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#keyed-component-map",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for keys.",
+      "domain": "tsx",
+      "id": "tsx.compiler.keys",
+      "kind": "tsx-compiler",
+      "name": "keys",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#keys",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for map.",
+      "domain": "tsx",
+      "id": "tsx.compiler.map",
+      "kind": "tsx-compiler",
+      "name": "map",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#map",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for memo components.",
+      "domain": "tsx",
+      "id": "tsx.compiler.memo-components",
+      "kind": "tsx-compiler",
+      "name": "memo components",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#memo-components",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for multiple keyed children.",
+      "domain": "tsx",
+      "id": "tsx.compiler.multiple-keyed-children",
+      "kind": "tsx-compiler",
+      "name": "multiple keyed children",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#multiple-keyed-children",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for namespace tags.",
+      "domain": "tsx",
+      "id": "tsx.compiler.namespace-tags",
+      "kind": "tsx-compiler",
+      "name": "namespace tags",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#namespace-tags",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for nested components.",
+      "domain": "tsx",
+      "id": "tsx.compiler.nested-components",
+      "kind": "tsx-compiler",
+      "name": "nested components",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#nested-components",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for object refs.",
+      "domain": "tsx",
+      "id": "tsx.compiler.object-refs",
+      "kind": "tsx-compiler",
+      "name": "object refs",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#object-refs",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for primitive children.",
+      "domain": "tsx",
+      "id": "tsx.compiler.primitive-children",
+      "kind": "tsx-compiler",
+      "name": "primitive children",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#primitive-children",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for property bindings.",
+      "domain": "tsx",
+      "id": "tsx.compiler.property-bindings",
+      "kind": "tsx-compiler",
+      "name": "property bindings",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#property-bindings",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for props.",
+      "domain": "tsx",
+      "id": "tsx.compiler.props",
+      "kind": "tsx-compiler",
+      "name": "props",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#props",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for react import rejection.",
+      "domain": "tsx",
+      "id": "tsx.compiler.react-import-rejection",
+      "kind": "tsx-compiler",
+      "name": "react import rejection",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#react-import-rejection",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for refs.",
+      "domain": "tsx",
+      "id": "tsx.compiler.refs",
+      "kind": "tsx-compiler",
+      "name": "refs",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#refs",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for root render.",
+      "domain": "tsx",
+      "id": "tsx.compiler.root-render",
+      "kind": "tsx-compiler",
+      "name": "root render",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#root-render",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for runtime jsx fail closed.",
+      "domain": "tsx",
+      "id": "tsx.compiler.runtime-jsx-fail-closed",
+      "kind": "tsx-compiler",
+      "name": "runtime jsx fail closed",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#runtime-jsx-fail-closed",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for same parent anchor validation.",
+      "domain": "tsx",
+      "id": "tsx.compiler.same-parent-anchor-validation",
+      "kind": "tsx-compiler",
+      "name": "same parent anchor validation",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#same-parent-anchor-validation",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for semantic diagnostics.",
+      "domain": "tsx",
+      "id": "tsx.compiler.semantic-diagnostics",
+      "kind": "tsx-compiler",
+      "name": "semantic diagnostics",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#semantic-diagnostics",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for source maps.",
+      "domain": "tsx",
+      "id": "tsx.compiler.source-maps",
+      "kind": "tsx-compiler",
+      "name": "source maps",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#source-maps",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for source roots.",
+      "domain": "tsx",
+      "id": "tsx.compiler.source-roots",
+      "kind": "tsx-compiler",
+      "name": "source roots",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#source-roots",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for spreads.",
+      "domain": "tsx",
+      "id": "tsx.compiler.spreads",
+      "kind": "tsx-compiler",
+      "name": "spreads",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#spreads",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for style bindings.",
+      "domain": "tsx",
+      "id": "tsx.compiler.style-bindings",
+      "kind": "tsx-compiler",
+      "name": "style bindings",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#style-bindings",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "Template compiler support boundary for symbol resolution.",
+      "domain": "tsx",
+      "id": "tsx.compiler.symbol-resolution",
+      "kind": "tsx-compiler",
+      "name": "symbol resolution",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "spec": {
+        "anchor": "template-contract#symbol-resolution",
+        "profile": "project-contract",
+        "source": "template-contract",
+        "version": "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "tsx/compiler.json"
+}

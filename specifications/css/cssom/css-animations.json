@@ -1,0 +1,757 @@
+{
+  "entries": [
+    {
+      "description": "dictionary AnimationEventInit from css-animations.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.dictionaries.animationeventinit",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "css-animations.idl",
+        "inheritance": "EventInit"
+      },
+      "name": "AnimationEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:AnimationEventInit",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "AnimationEventInit.animationName Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.dictionaries.animationeventinit.fields.animationname",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-animations.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"animationName\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":{\"type\":\"string\",\"value\":\"\"},\"required\":false}"
+      },
+      "name": "animationName",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations.dictionaries.animationeventinit",
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:AnimationEventInit.animationName",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "AnimationEventInit.elapsedTime Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.dictionaries.animationeventinit.fields.elapsedtime",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-animations.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"elapsedTime\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"default\":{\"type\":\"number\",\"value\":\"0.0\"},\"required\":false}"
+      },
+      "name": "elapsedTime",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations.dictionaries.animationeventinit",
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:AnimationEventInit.elapsedTime",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "AnimationEventInit.pseudoElement Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.dictionaries.animationeventinit.fields.pseudoelement",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-animations.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"pseudoElement\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":{\"type\":\"string\",\"value\":\"\"},\"required\":false}"
+      },
+      "name": "pseudoElement",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations.dictionaries.animationeventinit",
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:AnimationEventInit.pseudoElement",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "AnimationEventInit has EventInit as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.dictionaries.animationeventinit.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "EventInit"
+      },
+      "name": "AnimationEventInit inherits EventInit",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations.dictionaries.animationeventinit",
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:AnimationEventInit",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface AnimationEvent from css-animations.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.interfaces.animationevent",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-animations.idl",
+        "inheritance": "Event"
+      },
+      "name": "AnimationEvent",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:AnimationEvent",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "AnimationEvent.animationName Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.interfaces.animationevent.attributes.animationname",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-animations.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"animationName\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "animationName",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations.interfaces.animationevent",
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:AnimationEvent.animationName",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "AnimationEvent.elapsedTime Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.interfaces.animationevent.attributes.elapsedtime",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-animations.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"elapsedTime\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "elapsedTime",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations.interfaces.animationevent",
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:AnimationEvent.elapsedTime",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "AnimationEvent.pseudoElement Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.interfaces.animationevent.attributes.pseudoelement",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-animations.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"pseudoElement\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "pseudoElement",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations.interfaces.animationevent",
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:AnimationEvent.pseudoElement",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "AnimationEvent.constructor Web IDL constructor.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.interfaces.animationevent.constructors.constructor",
+      "kind": "constructor",
+      "metadata": {
+        "idlSource": "css-animations.idl",
+        "signature": "{\"type\":\"constructor\",\"arguments\":[{\"type\":\"argument\",\"name\":\"type\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"animationEventInitDict\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"AnimationEventInit\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[]}"
+      },
+      "name": "constructor",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations.interfaces.animationevent",
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:AnimationEvent.constructor",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "AnimationEvent has Event as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.interfaces.animationevent.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "Event"
+      },
+      "name": "AnimationEvent inherits Event",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations.interfaces.animationevent",
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:AnimationEvent",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSKeyframeRule from css-animations.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.interfaces.csskeyframerule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-animations.idl",
+        "inheritance": "CSSRule"
+      },
+      "name": "CSSKeyframeRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:CSSKeyframeRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSKeyframeRule.keyText Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.interfaces.csskeyframerule.attributes.keytext",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-animations.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"keyText\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "keyText",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations.interfaces.csskeyframerule",
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:CSSKeyframeRule.keyText",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSKeyframeRule.style Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.interfaces.csskeyframerule.attributes.style",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SameObject",
+          "PutForwards={\"type\":\"identifier\",\"value\":\"cssText\"}"
+        ],
+        "idlSource": "css-animations.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"style\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSStyleProperties\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SameObject\",\"rhs\":null,\"arguments\":[]},{\"type\":\"extended-attribute\",\"name\":\"PutForwards\",\"rhs\":{\"type\":\"identifier\",\"value\":\"cssText\"},\"arguments\":[]}],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations.interfaces.csskeyframerule",
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:CSSKeyframeRule.style",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSKeyframeRule has CSSRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.interfaces.csskeyframerule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSRule"
+      },
+      "name": "CSSKeyframeRule inherits CSSRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations.interfaces.csskeyframerule",
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:CSSKeyframeRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSKeyframesRule from css-animations.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.interfaces.csskeyframesrule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-animations.idl",
+        "inheritance": "CSSRule"
+      },
+      "name": "CSSKeyframesRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:CSSKeyframesRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSKeyframesRule.cssRules Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.interfaces.csskeyframesrule.attributes.cssrules",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-animations.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"cssRules\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSRuleList\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "cssRules",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations.interfaces.csskeyframesrule",
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:CSSKeyframesRule.cssRules",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSKeyframesRule.length Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.interfaces.csskeyframesrule.attributes.length",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-animations.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"length\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "length",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations.interfaces.csskeyframesrule",
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:CSSKeyframesRule.length",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSKeyframesRule.name Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.interfaces.csskeyframesrule.attributes.name",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-animations.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"name\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations.interfaces.csskeyframesrule",
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:CSSKeyframesRule.name",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSKeyframesRule has CSSRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.interfaces.csskeyframesrule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSRule"
+      },
+      "name": "CSSKeyframesRule inherits CSSRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations.interfaces.csskeyframesrule",
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:CSSKeyframesRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSKeyframesRule.appendRule Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.interfaces.csskeyframesrule.methods.appendrule",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-animations.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"appendRule\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"rule\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "appendRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations.interfaces.csskeyframesrule",
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:CSSKeyframesRule.appendRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSKeyframesRule.deleteRule Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.interfaces.csskeyframesrule.methods.deleterule",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-animations.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"deleteRule\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"select\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "deleteRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations.interfaces.csskeyframesrule",
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:CSSKeyframesRule.deleteRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSKeyframesRule.findRule Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.interfaces.csskeyframesrule.methods.findrule",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-animations.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"findRule\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"CSSKeyframeRule\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"select\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "findRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations.interfaces.csskeyframesrule",
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:CSSKeyframesRule.findRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSKeyframesRule.getter Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.interfaces.csskeyframesrule.methods.getter",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-animations.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSKeyframeRule\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"index\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"getter\"}",
+        "special": "getter"
+      },
+      "name": "getter",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations.interfaces.csskeyframesrule",
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:CSSKeyframesRule.getter",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSRule from css-animations.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.interfaces.cssrule",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "css-animations.idl"
+      },
+      "name": "CSSRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:CSSRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSRule.KEYFRAME_RULE Web IDL const.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.interfaces.cssrule.constants.keyframe_rule",
+      "kind": "const",
+      "metadata": {
+        "idlSource": "css-animations.idl",
+        "signature": "{\"type\":\"const\",\"name\":\"KEYFRAME_RULE\",\"idlType\":{\"type\":\"const-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned short\"},\"extAttrs\":[],\"value\":{\"type\":\"number\",\"value\":\"8\"}}"
+      },
+      "name": "KEYFRAME_RULE",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations.interfaces.cssrule",
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:CSSRule.KEYFRAME_RULE",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSRule.KEYFRAMES_RULE Web IDL const.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.interfaces.cssrule.constants.keyframes_rule",
+      "kind": "const",
+      "metadata": {
+        "idlSource": "css-animations.idl",
+        "signature": "{\"type\":\"const\",\"name\":\"KEYFRAMES_RULE\",\"idlType\":{\"type\":\"const-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned short\"},\"extAttrs\":[],\"value\":{\"type\":\"number\",\"value\":\"7\"}}"
+      },
+      "name": "KEYFRAMES_RULE",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations.interfaces.cssrule",
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:CSSRule.KEYFRAMES_RULE",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface mixin GlobalEventHandlers from css-animations.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.mixins.globaleventhandlers",
+      "kind": "interface mixin",
+      "metadata": {
+        "idlSource": "css-animations.idl"
+      },
+      "name": "GlobalEventHandlers",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:GlobalEventHandlers",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "GlobalEventHandlers.onanimationcancel Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.mixins.globaleventhandlers.attributes.onanimationcancel",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-animations.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"onanimationcancel\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"EventHandler\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "onanimationcancel",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations.mixins.globaleventhandlers",
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:GlobalEventHandlers.onanimationcancel",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "GlobalEventHandlers.onanimationend Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.mixins.globaleventhandlers.attributes.onanimationend",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-animations.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"onanimationend\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"EventHandler\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "onanimationend",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations.mixins.globaleventhandlers",
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:GlobalEventHandlers.onanimationend",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "GlobalEventHandlers.onanimationiteration Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.mixins.globaleventhandlers.attributes.onanimationiteration",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-animations.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"onanimationiteration\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"EventHandler\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "onanimationiteration",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations.mixins.globaleventhandlers",
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:GlobalEventHandlers.onanimationiteration",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "GlobalEventHandlers.onanimationstart Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-animations.mixins.globaleventhandlers.attributes.onanimationstart",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-animations.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"onanimationstart\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"EventHandler\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "onanimationstart",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations.mixins.globaleventhandlers",
+      "spec": {
+        "anchor": "webref/idl/css-animations.idl#WebIDL:GlobalEventHandlers.onanimationstart",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-animations.json"
+}

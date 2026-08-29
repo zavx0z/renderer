@@ -1,0 +1,673 @@
+{
+  "entries": [
+    {
+      "description": "Engine analytical ui materials capability.",
+      "domain": "engine",
+      "id": "engine.features.analytical-ui-materials",
+      "kind": "engine-contract",
+      "name": "analytical ui materials",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#analytical-ui-materials",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine animation capability.",
+      "domain": "engine",
+      "id": "engine.features.animation",
+      "kind": "engine-contract",
+      "name": "animation",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#animation",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine browser document boundary capability.",
+      "domain": "engine",
+      "id": "engine.features.browser-document-boundary",
+      "kind": "engine-contract",
+      "name": "browser document boundary",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#browser-document-boundary",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine buffer attributes capability.",
+      "domain": "engine",
+      "id": "engine.features.buffer-attributes",
+      "kind": "engine-contract",
+      "name": "buffer attributes",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#buffer-attributes",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine capture readback capability.",
+      "domain": "engine",
+      "id": "engine.features.capture-readback",
+      "kind": "engine-contract",
+      "name": "capture readback",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#capture-readback",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine clip surface unification capability.",
+      "domain": "engine",
+      "id": "engine.features.clip-surface-unification",
+      "kind": "engine-contract",
+      "name": "clip surface unification",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#clip-surface-unification",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine clipping capability.",
+      "domain": "engine",
+      "id": "engine.features.clipping",
+      "kind": "engine-contract",
+      "name": "clipping",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#clipping",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine culling capability.",
+      "domain": "engine",
+      "id": "engine.features.culling",
+      "kind": "engine-contract",
+      "name": "culling",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#culling",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine device loss capability.",
+      "domain": "engine",
+      "id": "engine.features.device-loss",
+      "kind": "engine-contract",
+      "name": "device loss",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#device-loss",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine dirty intervals capability.",
+      "domain": "engine",
+      "id": "engine.features.dirty-intervals",
+      "kind": "engine-contract",
+      "name": "dirty intervals",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#dirty-intervals",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine dom css ownership boundary capability.",
+      "domain": "engine",
+      "id": "engine.features.dom-css-ownership-boundary",
+      "kind": "engine-contract",
+      "name": "dom css ownership boundary",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#dom-css-ownership-boundary",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine draw range views capability.",
+      "domain": "engine",
+      "id": "engine.features.draw-range-views",
+      "kind": "engine-contract",
+      "name": "draw range views",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#draw-range-views",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine font loading capability.",
+      "domain": "engine",
+      "id": "engine.features.font-loading",
+      "kind": "engine-contract",
+      "name": "font loading",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#font-loading",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine geometry capability.",
+      "domain": "engine",
+      "id": "engine.features.geometry",
+      "kind": "engine-contract",
+      "name": "geometry",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#geometry",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine gltf capability.",
+      "domain": "engine",
+      "id": "engine.features.gltf",
+      "kind": "engine-contract",
+      "name": "gltf",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#gltf",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine glyph cache identity capability.",
+      "domain": "engine",
+      "id": "engine.features.glyph-cache-identity",
+      "kind": "engine-contract",
+      "name": "glyph cache identity",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#glyph-cache-identity",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine gpu device evidence capability.",
+      "domain": "engine",
+      "id": "engine.features.gpu-device-evidence",
+      "kind": "engine-contract",
+      "name": "gpu device evidence",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#gpu-device-evidence",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine index buffer format capability.",
+      "domain": "engine",
+      "id": "engine.features.index-buffer-format",
+      "kind": "engine-contract",
+      "name": "index buffer format",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#index-buffer-format",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine instance layer capability.",
+      "domain": "engine",
+      "id": "engine.features.instance-layer",
+      "kind": "engine-contract",
+      "name": "instance layer",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#instance-layer",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine instanced rounded rectangles capability.",
+      "domain": "engine",
+      "id": "engine.features.instanced-rounded-rectangles",
+      "kind": "engine-contract",
+      "name": "instanced rounded rectangles",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#instanced-rounded-rectangles",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine legacy ui display flag capability.",
+      "domain": "engine",
+      "id": "engine.features.legacy-ui-display-flag",
+      "kind": "engine-contract",
+      "name": "legacy ui display flag",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#legacy-ui-display-flag",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine loaders capability.",
+      "domain": "engine",
+      "id": "engine.features.loaders",
+      "kind": "engine-contract",
+      "name": "loaders",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#loaders",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine material groups capability.",
+      "domain": "engine",
+      "id": "engine.features.material-groups",
+      "kind": "engine-contract",
+      "name": "material groups",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#material-groups",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine materials capability.",
+      "domain": "engine",
+      "id": "engine.features.materials",
+      "kind": "engine-contract",
+      "name": "materials",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#materials",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine public math capability.",
+      "domain": "engine",
+      "id": "engine.features.public-math",
+      "kind": "engine-contract",
+      "name": "public math",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#public-math",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine ray casting capability.",
+      "domain": "engine",
+      "id": "engine.features.ray-casting",
+      "kind": "engine-contract",
+      "name": "ray casting",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#ray-casting",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine renderer disposal capability.",
+      "domain": "engine",
+      "id": "engine.features.renderer-disposal",
+      "kind": "engine-contract",
+      "name": "renderer disposal",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#renderer-disposal",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine resource lifetime capability.",
+      "domain": "engine",
+      "id": "engine.features.resource-lifetime",
+      "kind": "engine-contract",
+      "name": "resource lifetime",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#resource-lifetime",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine scene graph capability.",
+      "domain": "engine",
+      "id": "engine.features.scene-graph",
+      "kind": "engine-contract",
+      "name": "scene graph",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#scene-graph",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine space capability.",
+      "domain": "engine",
+      "id": "engine.features.space",
+      "kind": "engine-contract",
+      "name": "space",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#space",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine text capability.",
+      "domain": "engine",
+      "id": "engine.features.text",
+      "kind": "engine-contract",
+      "name": "text",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#text",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine texture device identity capability.",
+      "domain": "engine",
+      "id": "engine.features.texture-device-identity",
+      "kind": "engine-contract",
+      "name": "texture device identity",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#texture-device-identity",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine texture image loading capability.",
+      "domain": "engine",
+      "id": "engine.features.texture-image-loading",
+      "kind": "engine-contract",
+      "name": "texture image loading",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#texture-image-loading",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine transforms capability.",
+      "domain": "engine",
+      "id": "engine.features.transforms",
+      "kind": "engine-contract",
+      "name": "transforms",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#transforms",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine view point capability.",
+      "domain": "engine",
+      "id": "engine.features.view-point",
+      "kind": "engine-contract",
+      "name": "view point",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#view-point",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine webgpu pipelines capability.",
+      "domain": "engine",
+      "id": "engine.features.webgpu-pipelines",
+      "kind": "engine-contract",
+      "name": "webgpu pipelines",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#webgpu-pipelines",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "Engine world transform update capability.",
+      "domain": "engine",
+      "id": "engine.features.world-transform-update",
+      "kind": "engine-contract",
+      "name": "world transform update",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#world-transform-update",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "platform/engine-features.json"
+}

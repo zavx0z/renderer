@@ -1,0 +1,192 @@
+{
+  "entries": [
+    {
+      "description": "Table cell",
+      "domain": "html",
+      "id": "html.elements.td",
+      "kind": "element",
+      "metadata": {
+        "categories": "none",
+        "children": "flow",
+        "interface": "HTMLTableCellElement",
+        "parents": "tr"
+      },
+      "name": "td",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/tables.html#the-td-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <td> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.td.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "td",
+        "interface": "HTMLTableCellElement"
+      },
+      "name": "td implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.td",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "colspan content attribute on <td>.",
+      "domain": "html",
+      "id": "html.elements.td.attributes.colspan",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "td",
+        "interface": "HTMLTableCellElement"
+      },
+      "name": "colspan",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.td",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/tables.html#attr-tdth-colspan",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "headers content attribute on <td>.",
+      "domain": "html",
+      "id": "html.elements.td.attributes.headers",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "td",
+        "interface": "HTMLTableCellElement"
+      },
+      "name": "headers",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.td",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/tables.html#attr-tdth-headers",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "rowspan content attribute on <td>.",
+      "domain": "html",
+      "id": "html.elements.td.attributes.rowspan",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "td",
+        "interface": "HTMLTableCellElement"
+      },
+      "name": "rowspan",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.td",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/tables.html#attr-tdth-rowspan",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <td> element content categories.",
+      "domain": "html",
+      "id": "html.elements.td.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "td",
+        "interface": "HTMLTableCellElement"
+      },
+      "name": "td content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.td",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/tables.html#the-td-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <td> element content model.",
+      "domain": "html",
+      "id": "html.elements.td.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "td",
+        "interface": "HTMLTableCellElement"
+      },
+      "name": "td content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.td",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/tables.html#the-td-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <td> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.td.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "td",
+        "interface": "HTMLTableCellElement"
+      },
+      "name": "td interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.td",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/tables.html#the-td-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/td.json"
+}

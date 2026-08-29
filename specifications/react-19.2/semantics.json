@@ -1,0 +1,1177 @@
+{
+  "entries": [
+    {
+      "description": "Whether Fiber is present.",
+      "domain": "react",
+      "id": "react.semantics.architecture-fiber",
+      "kind": "reference-semantics",
+      "name": "architecture fiber",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#architecture-fiber",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Whether npm react is a dependency.",
+      "domain": "react",
+      "id": "react.semantics.architecture-npm-react-dependency",
+      "kind": "reference-semantics",
+      "name": "architecture npm react dependency",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#architecture-npm-react-dependency",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Whether react-dom owns host rendering.",
+      "domain": "react",
+      "id": "react.semantics.architecture-react-dom-host",
+      "kind": "reference-semantics",
+      "name": "architecture react dom host",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#architecture-react-dom-host",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Whether @zavx0z/react is the npm react package or alias.",
+      "domain": "react",
+      "id": "react.semantics.architecture-react-package-alias",
+      "kind": "reference-semantics",
+      "name": "architecture react package alias",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#architecture-react-package-alias",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Whether a persistent virtual DOM is present.",
+      "domain": "react",
+      "id": "react.semantics.architecture-virtual-dom",
+      "kind": "reference-semantics",
+      "name": "architecture virtual dom",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#architecture-virtual-dom",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Batch updates and observable commit boundaries.",
+      "domain": "react",
+      "id": "react.semantics.batching",
+      "kind": "reference-semantics",
+      "name": "batching",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#batching",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Actual browser execution acceptance.",
+      "domain": "react",
+      "id": "react.semantics.browser-execution",
+      "kind": "reference-semantics",
+      "name": "browser execution",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#browser-execution",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Execution in an actual browser host, distinct from bundle generation.",
+      "domain": "react",
+      "id": "react.semantics.browser-execution-evidence",
+      "kind": "reference-semantics",
+      "name": "browser execution evidence",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#browser-execution-evidence",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Browser-target bundle generation.",
+      "domain": "react",
+      "id": "react.semantics.browser-target-build",
+      "kind": "reference-semantics",
+      "name": "browser target build",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#browser-target-build",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Callback ref attach, detach, and cleanup semantics.",
+      "domain": "react",
+      "id": "react.semantics.callback-refs",
+      "kind": "reference-semantics",
+      "name": "callback refs",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#callback-refs",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Opaque children model and component children delivery.",
+      "domain": "react",
+      "id": "react.semantics.children",
+      "kind": "reference-semantics",
+      "name": "children",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#children",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Children map, forEach, count, only, and toArray APIs.",
+      "domain": "react",
+      "id": "react.semantics.children-api",
+      "kind": "reference-semantics",
+      "name": "children api",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#children-api",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Class component construction, lifecycle, state, and error semantics.",
+      "domain": "react",
+      "id": "react.semantics.class-components",
+      "kind": "reference-semantics",
+      "name": "class components",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#class-components",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Effect/ref/subscription cleanup ordering.",
+      "domain": "react",
+      "id": "react.semantics.cleanup",
+      "kind": "reference-semantics",
+      "name": "cleanup",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#cleanup",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "React element clone API.",
+      "domain": "react",
+      "id": "react.semantics.clone-element",
+      "kind": "reference-semantics",
+      "name": "clone element",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#clone-element",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Insertion, mutation, layout, and passive commit phase ordering.",
+      "domain": "react",
+      "id": "react.semantics.commit-phases",
+      "kind": "reference-semantics",
+      "name": "commit phases",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#commit-phases",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Whether compiler APIs are exported by @zavx0z/react.",
+      "domain": "react",
+      "id": "react.semantics.compiler-export",
+      "kind": "reference-semantics",
+      "name": "compiler export",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#compiler-export",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Component identity follows type, parent position, and key.",
+      "domain": "react",
+      "id": "react.semantics.component-identity",
+      "kind": "reference-semantics",
+      "name": "component identity",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#component-identity",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Interruptible and concurrent rendering reference behavior.",
+      "domain": "react",
+      "id": "react.semantics.concurrency",
+      "kind": "reference-semantics",
+      "name": "concurrency",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#concurrency",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Compiled conditional child ranges.",
+      "domain": "react",
+      "id": "react.semantics.conditional-ranges",
+      "kind": "reference-semantics",
+      "name": "conditional ranges",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#conditional-ranges",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Context creation, provider lookup, consumer reads, and update propagation.",
+      "domain": "react",
+      "id": "react.semantics.context",
+      "kind": "reference-semantics",
+      "name": "context",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#context",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "JSX Context.Consumer compatibility surface.",
+      "domain": "react",
+      "id": "react.semantics.context-consumer",
+      "kind": "reference-semantics",
+      "name": "context consumer",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#context-consumer",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "React element creation API.",
+      "domain": "react",
+      "id": "react.semantics.create-element",
+      "kind": "reference-semantics",
+      "name": "create element",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#create-element",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Client root construction and ownership.",
+      "domain": "react",
+      "id": "react.semantics.create-root",
+      "kind": "reference-semantics",
+      "name": "create root",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#create-root",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Governed custom hooks in compiled components.",
+      "domain": "react",
+      "id": "react.semantics.custom-hooks",
+      "kind": "reference-semantics",
+      "name": "custom hooks",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#custom-hooks",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Inspection exposure for useDebugValue.",
+      "domain": "react",
+      "id": "react.semantics.debug-value-inspection",
+      "kind": "reference-semantics",
+      "name": "debug value inspection",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#debug-value-inspection",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Default props compatibility behavior.",
+      "domain": "react",
+      "id": "react.semantics.default-props",
+      "kind": "reference-semantics",
+      "name": "default props",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#default-props",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "React directives, actions, and form action model.",
+      "domain": "react",
+      "id": "react.semantics.directives-actions",
+      "kind": "reference-semantics",
+      "name": "directives actions",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#directives-actions",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Reference callsite restrictions for Effect Events.",
+      "domain": "react",
+      "id": "react.semantics.effect-event-callsite-validation",
+      "kind": "reference-semantics",
+      "name": "effect event callsite validation",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#effect-event-callsite-validation",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Render/lifecycle error isolation by class boundaries.",
+      "domain": "react",
+      "id": "react.semantics.error-boundaries",
+      "kind": "reference-semantics",
+      "name": "error boundaries",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#error-boundaries",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Failed render rollback without partial host mutation.",
+      "domain": "react",
+      "id": "react.semantics.failed-render-isolation",
+      "kind": "reference-semantics",
+      "name": "failed render isolation",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#failed-render-isolation",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Ref forwarding compatibility API.",
+      "domain": "react",
+      "id": "react.semantics.forward-ref",
+      "kind": "reference-semantics",
+      "name": "forward ref",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#forward-ref",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Fragment grouping without an extra host node.",
+      "domain": "react",
+      "id": "react.semantics.fragments",
+      "kind": "reference-semantics",
+      "name": "fragments",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#fragments",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Function component invocation, props, identity, and update semantics.",
+      "domain": "react",
+      "id": "react.semantics.function-components",
+      "kind": "reference-semantics",
+      "name": "function components",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#function-components",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Whether authored npm React imports are admitted by the compiler.",
+      "domain": "react",
+      "id": "react.semantics.governed-react-imports",
+      "kind": "reference-semantics",
+      "name": "governed react imports",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#governed-react-imports",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Whether GPU instancing is part of the @zavx0z/react compatibility contract.",
+      "domain": "react",
+      "id": "react.semantics.gpu-instancing",
+      "kind": "reference-semantics",
+      "name": "gpu instancing",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#gpu-instancing",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Attach to server-rendered host content with mismatch behavior.",
+      "domain": "react",
+      "id": "react.semantics.hydration",
+      "kind": "reference-semantics",
+      "name": "hydration",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#hydration",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "React element identity predicate.",
+      "domain": "react",
+      "id": "react.semantics.is-valid-element",
+      "kind": "reference-semantics",
+      "name": "is valid element",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#is-valid-element",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "JSX context provider compatibility surface.",
+      "domain": "react",
+      "id": "react.semantics.jsx-context-provider",
+      "kind": "reference-semantics",
+      "name": "jsx context provider",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#jsx-context-provider",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Keyed identity and reconciliation behavior.",
+      "domain": "react",
+      "id": "react.semantics.keys",
+      "kind": "reference-semantics",
+      "name": "keys",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#keys",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Lazy component loading and suspension behavior.",
+      "domain": "react",
+      "id": "react.semantics.lazy",
+      "kind": "reference-semantics",
+      "name": "lazy",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#lazy",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Project low-level provideContext composition API.",
+      "domain": "react",
+      "id": "react.semantics.low-level-context-providers",
+      "kind": "reference-semantics",
+      "name": "low level context providers",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#low-level-context-providers",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Memoized component comparison and bailout.",
+      "domain": "react",
+      "id": "react.semantics.memo",
+      "kind": "reference-semantics",
+      "name": "memo",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#memo",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Nested component ownership and independent lifecycle.",
+      "domain": "react",
+      "id": "react.semantics.nested-components",
+      "kind": "reference-semantics",
+      "name": "nested components",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#nested-components",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Object ref current mutation semantics.",
+      "domain": "react",
+      "id": "react.semantics.object-refs",
+      "kind": "reference-semantics",
+      "name": "object refs",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#object-refs",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "React-like passive effect scheduling after browser paint.",
+      "domain": "react",
+      "id": "react.semantics.passive-paint-scheduling",
+      "kind": "reference-semantics",
+      "name": "passive paint scheduling",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#passive-paint-scheduling",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Portal ownership and event semantics across host containers.",
+      "domain": "react",
+      "id": "react.semantics.portals",
+      "kind": "reference-semantics",
+      "name": "portals",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#portals",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Props delivery and immutability model.",
+      "domain": "react",
+      "id": "react.semantics.props",
+      "kind": "reference-semantics",
+      "name": "props",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#props",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Render-phase update limits and restart semantics.",
+      "domain": "react",
+      "id": "react.semantics.render-phase-updates",
+      "kind": "reference-semantics",
+      "name": "render phase updates",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#render-phase-updates",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Root render and update scheduling.",
+      "domain": "react",
+      "id": "react.semantics.render-update",
+      "kind": "reference-semantics",
+      "name": "render update",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#render-update",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Priority and scheduler behavior.",
+      "domain": "react",
+      "id": "react.semantics.scheduling",
+      "kind": "reference-semantics",
+      "name": "scheduling",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#scheduling",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "React Server Component reference model.",
+      "domain": "react",
+      "id": "react.semantics.server-components",
+      "kind": "reference-semantics",
+      "name": "server components",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#server-components",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Server snapshot behavior for useSyncExternalStore.",
+      "domain": "react",
+      "id": "react.semantics.server-external-store-snapshots",
+      "kind": "reference-semantics",
+      "name": "server external store snapshots",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#server-external-store-snapshots",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Server rendering and streaming APIs.",
+      "domain": "react",
+      "id": "react.semantics.server-rendering",
+      "kind": "reference-semantics",
+      "name": "server rendering",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#server-rendering",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Authored TSX source maps through the Template compiler.",
+      "domain": "react",
+      "id": "react.semantics.source-maps",
+      "kind": "reference-semantics",
+      "name": "source maps",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#source-maps",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Stable compiled static template identity.",
+      "domain": "react",
+      "id": "react.semantics.static-template-identity",
+      "kind": "reference-semantics",
+      "name": "static template identity",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#static-template-identity",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "StrictMode development checks and replay behavior.",
+      "domain": "react",
+      "id": "react.semantics.strict-mode",
+      "kind": "reference-semantics",
+      "name": "strict mode",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#strict-mode",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "StrictMode development effect replay.",
+      "domain": "react",
+      "id": "react.semantics.strict-mode-effect-replay",
+      "kind": "reference-semantics",
+      "name": "strict mode effect replay",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#strict-mode-effect-replay",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Development replay of render and effects.",
+      "domain": "react",
+      "id": "react.semantics.strict-mode-replay",
+      "kind": "reference-semantics",
+      "name": "strict mode replay",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#strict-mode-replay",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Suspension boundary fallback and reveal behavior.",
+      "domain": "react",
+      "id": "react.semantics.suspense",
+      "kind": "reference-semantics",
+      "name": "suspense",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#suspense",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Fixed-slot Template compiler ABI integration.",
+      "domain": "react",
+      "id": "react.semantics.template-compiler-abi",
+      "kind": "reference-semantics",
+      "name": "template compiler abi",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#template-compiler-abi",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "End-to-end compiled Template to @zavx0z/react host integration.",
+      "domain": "react",
+      "id": "react.semantics.template-compiler-integration",
+      "kind": "reference-semantics",
+      "name": "template compiler integration",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#template-compiler-integration",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Transition scheduling and pending state.",
+      "domain": "react",
+      "id": "react.semantics.transitions",
+      "kind": "reference-semantics",
+      "name": "transitions",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#transitions",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Governed TSX authoring profile.",
+      "domain": "react",
+      "id": "react.semantics.tsx-authoring",
+      "kind": "reference-semantics",
+      "name": "tsx authoring",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#tsx-authoring",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
+      "description": "Root teardown, cleanup, and host removal.",
+      "domain": "react",
+      "id": "react.semantics.unmount",
+      "kind": "reference-semantics",
+      "name": "unmount",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#unmount",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "react-19.2/semantics.json"
+}

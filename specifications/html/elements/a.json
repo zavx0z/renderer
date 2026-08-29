@@ -1,0 +1,330 @@
+{
+  "entries": [
+    {
+      "description": "Hyperlink",
+      "domain": "html",
+      "id": "html.elements.a",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; phrasing*; interactive; palpable",
+        "children": "transparent*",
+        "interface": "HTMLAnchorElement",
+        "parents": "phrasing"
+      },
+      "name": "a",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <a> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.a.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "a",
+        "interface": "HTMLAnchorElement"
+      },
+      "name": "a implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.a",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <a> element activation and default action.",
+      "domain": "html",
+      "id": "html.elements.a.activation-behavior",
+      "kind": "activation-behavior",
+      "metadata": {
+        "element": "a",
+        "interface": "HTMLAnchorElement"
+      },
+      "name": "a activation and default action",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.a",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "download content attribute on <a>.",
+      "domain": "html",
+      "id": "html.elements.a.attributes.download",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "a",
+        "interface": "HTMLAnchorElement"
+      },
+      "name": "download",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.a",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/links.html#attr-hyperlink-download",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "href content attribute on <a>.",
+      "domain": "html",
+      "id": "html.elements.a.attributes.href",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "a",
+        "interface": "HTMLAnchorElement"
+      },
+      "name": "href",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.a",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/links.html#attr-hyperlink-href",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "hreflang content attribute on <a>.",
+      "domain": "html",
+      "id": "html.elements.a.attributes.hreflang",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "a",
+        "interface": "HTMLAnchorElement"
+      },
+      "name": "hreflang",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.a",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/links.html#attr-hyperlink-hreflang",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "ping content attribute on <a>.",
+      "domain": "html",
+      "id": "html.elements.a.attributes.ping",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "a",
+        "interface": "HTMLAnchorElement"
+      },
+      "name": "ping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.a",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/links.html#ping",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "referrerpolicy content attribute on <a>.",
+      "domain": "html",
+      "id": "html.elements.a.attributes.referrerpolicy",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "a",
+        "interface": "HTMLAnchorElement"
+      },
+      "name": "referrerpolicy",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.a",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/links.html#attr-hyperlink-referrerpolicy",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "rel content attribute on <a>.",
+      "domain": "html",
+      "id": "html.elements.a.attributes.rel",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "a",
+        "interface": "HTMLAnchorElement"
+      },
+      "name": "rel",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.a",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/links.html#attr-hyperlink-rel",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "target content attribute on <a>.",
+      "domain": "html",
+      "id": "html.elements.a.attributes.target",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "a",
+        "interface": "HTMLAnchorElement"
+      },
+      "name": "target",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.a",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/links.html#attr-hyperlink-target",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "type content attribute on <a>.",
+      "domain": "html",
+      "id": "html.elements.a.attributes.type",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "a",
+        "interface": "HTMLAnchorElement"
+      },
+      "name": "type",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.a",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/links.html#attr-hyperlink-type",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <a> element content categories.",
+      "domain": "html",
+      "id": "html.elements.a.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "a",
+        "interface": "HTMLAnchorElement"
+      },
+      "name": "a content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.a",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <a> element content model.",
+      "domain": "html",
+      "id": "html.elements.a.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "a",
+        "interface": "HTMLAnchorElement"
+      },
+      "name": "a content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.a",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <a> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.a.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "a",
+        "interface": "HTMLAnchorElement"
+      },
+      "name": "a interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.a",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/a.json"
+}

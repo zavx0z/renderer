@@ -1,0 +1,71 @@
+{
+  "entries": [
+    {
+      "domain": "css",
+      "id": "css.properties.unicode-bidi",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements, but see prose",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "unicode-bidi",
+          "unicodeBidi"
+        ],
+        "syntax": "normal | embed | isolate | bidi-override | isolate-override | plaintext"
+      },
+      "name": "unicode-bidi",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-writing-modes-4/#propdef-unicode-bidi",
+        "profile": "standard",
+        "source": "css:css-writing-modes-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.user-select",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements, and optionally to the ::before and ::after pseudo-elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "user-select",
+          "userSelect"
+        ],
+        "syntax": "auto | text | none | contain | all"
+      },
+      "name": "user-select",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-ui-4/#propdef-user-select",
+        "profile": "standard",
+        "source": "css:css-ui-4",
+        "version": "8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/properties/u.json"
+}

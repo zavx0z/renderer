@@ -1,0 +1,192 @@
+{
+  "entries": [
+    {
+      "description": "Calculated output value",
+      "domain": "html",
+      "id": "html.elements.output",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; phrasing; listed; labelable; resettable; form-associated; palpable",
+        "children": "phrasing",
+        "interface": "HTMLOutputElement",
+        "parents": "phrasing"
+      },
+      "name": "output",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-output-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <output> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.output.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "output",
+        "interface": "HTMLOutputElement"
+      },
+      "name": "output implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.output",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "for content attribute on <output>.",
+      "domain": "html",
+      "id": "html.elements.output.attributes.for",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "output",
+        "interface": "HTMLOutputElement"
+      },
+      "name": "for",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.output",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-output-for",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "form content attribute on <output>.",
+      "domain": "html",
+      "id": "html.elements.output.attributes.form",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "output",
+        "interface": "HTMLOutputElement"
+      },
+      "name": "form",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.output",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fae-form",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "name content attribute on <output>.",
+      "domain": "html",
+      "id": "html.elements.output.attributes.name",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "output",
+        "interface": "HTMLOutputElement"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.output",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fe-name",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <output> element content categories.",
+      "domain": "html",
+      "id": "html.elements.output.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "output",
+        "interface": "HTMLOutputElement"
+      },
+      "name": "output content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.output",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-output-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <output> element content model.",
+      "domain": "html",
+      "id": "html.elements.output.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "output",
+        "interface": "HTMLOutputElement"
+      },
+      "name": "output content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.output",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-output-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <output> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.output.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "output",
+        "interface": "HTMLOutputElement"
+      },
+      "name": "output interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.output",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-output-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/output.json"
+}

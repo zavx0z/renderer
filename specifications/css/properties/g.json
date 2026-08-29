@@ -1,0 +1,662 @@
+{
+  "entries": [
+    {
+      "domain": "css",
+      "id": "css.properties.gap",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "multi-column containers, flex containers, grid containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "see individual properties",
+        "longhands": [
+          "row-gap",
+          "column-gap"
+        ],
+        "percentages": "refer to corresponding dimension of the content area",
+        "styleDeclaration": [
+          "gap"
+        ],
+        "syntax": "<'row-gap'> <'column-gap'>?"
+      },
+      "name": "gap",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-gap",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.glyph-orientation-vertical",
+      "kind": "property",
+      "metadata": {
+        "animationType": "n/a",
+        "appliesTo": "n/a",
+        "canonicalOrder": "n/a",
+        "computedValue": "n/a",
+        "extended": [],
+        "inherited": "n/a",
+        "initial": "n/a",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "glyph-orientation-vertical",
+          "glyphOrientationVertical"
+        ],
+        "syntax": "auto | 0deg | 90deg | 0 | 90"
+      },
+      "name": "glyph-orientation-vertical",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-writing-modes-4/#propdef-glyph-orientation-vertical",
+        "profile": "standard",
+        "source": "css:css-writing-modes-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.grid",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "grid containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "none",
+        "longhands": [
+          "grid-template-rows",
+          "grid-template-columns",
+          "grid-template-areas",
+          "grid-auto-rows",
+          "grid-auto-columns",
+          "grid-auto-flow"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "grid"
+        ],
+        "syntax": "<'grid-template'> | <'grid-template-rows'> / [ auto-flow && dense? ] <'grid-auto-columns'>? | [ auto-flow && dense? ] <'grid-auto-rows'>? / <'grid-template-columns'>"
+      },
+      "name": "grid",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-grid-2/#propdef-grid",
+        "profile": "standard",
+        "source": "css:css-grid-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.grid-area",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "grid items and absolutely-positioned boxes whose containing block is a grid container",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "longhands": [
+          "grid-row-start",
+          "grid-column-start",
+          "grid-row-end",
+          "grid-column-end"
+        ],
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "grid-area",
+          "gridArea"
+        ],
+        "syntax": "<grid-line> [ / <grid-line> ]{0,3}"
+      },
+      "name": "grid-area",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-grid-2/#propdef-grid-area",
+        "profile": "standard",
+        "source": "css:css-grid-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.grid-auto-columns",
+      "kind": "property",
+      "metadata": {
+        "animationType": "if the list lengths match, by computed value type per item; discrete otherwise",
+        "appliesTo": "grid containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see Track Sizing",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "see Track Sizing",
+        "styleDeclaration": [
+          "grid-auto-columns",
+          "gridAutoColumns"
+        ],
+        "syntax": "<track-size>+"
+      },
+      "name": "grid-auto-columns",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-grid-2/#propdef-grid-auto-columns",
+        "profile": "standard",
+        "source": "css:css-grid-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.grid-auto-flow",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "grid containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword(s)",
+        "extended": [],
+        "inherited": "no",
+        "initial": "row",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "grid-auto-flow",
+          "gridAutoFlow"
+        ],
+        "syntax": "[ row | column ] || dense"
+      },
+      "name": "grid-auto-flow",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-grid-2/#propdef-grid-auto-flow",
+        "profile": "standard",
+        "source": "css:css-grid-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.grid-auto-rows",
+      "kind": "property",
+      "metadata": {
+        "animationType": "if the list lengths match, by computed value type per item; discrete otherwise",
+        "appliesTo": "grid containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see Track Sizing",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "see Track Sizing",
+        "styleDeclaration": [
+          "grid-auto-rows",
+          "gridAutoRows"
+        ],
+        "syntax": "<track-size>+"
+      },
+      "name": "grid-auto-rows",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-grid-2/#propdef-grid-auto-rows",
+        "profile": "standard",
+        "source": "css:css-grid-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.grid-column",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "grid items and absolutely-positioned boxes whose containing block is a grid container",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "longhands": [
+          "grid-column-start",
+          "grid-column-end"
+        ],
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "grid-column",
+          "gridColumn"
+        ],
+        "syntax": "<grid-line> [ / <grid-line> ]?"
+      },
+      "name": "grid-column",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-grid-2/#propdef-grid-column",
+        "profile": "standard",
+        "source": "css:css-grid-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.grid-column-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "grid items and absolutely-positioned boxes whose containing block is a grid container",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword, identifier, and/or integer",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "grid-column-end",
+          "gridColumnEnd"
+        ],
+        "syntax": "<grid-line>"
+      },
+      "name": "grid-column-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-grid-2/#propdef-grid-column-end",
+        "profile": "standard",
+        "source": "css:css-grid-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.grid-column-gap",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "column-gap",
+        "styleDeclaration": [
+          "grid-column-gap",
+          "gridColumnGap"
+        ],
+        "syntax": "normal | <length-percentage [0,∞]> | <line-width>"
+      },
+      "name": "grid-column-gap",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-grid-column-gap",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.grid-column-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "grid items and absolutely-positioned boxes whose containing block is a grid container",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword, identifier, and/or integer",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "grid-column-start",
+          "gridColumnStart"
+        ],
+        "syntax": "<grid-line>"
+      },
+      "name": "grid-column-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-grid-2/#propdef-grid-column-start",
+        "profile": "standard",
+        "source": "css:css-grid-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.grid-gap",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "gap",
+        "longhands": [
+          "row-gap",
+          "column-gap"
+        ],
+        "styleDeclaration": [
+          "grid-gap",
+          "gridGap"
+        ],
+        "syntax": "<'row-gap'> <'column-gap'>?"
+      },
+      "name": "grid-gap",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-grid-gap",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.grid-row",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "grid items and absolutely-positioned boxes whose containing block is a grid container",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "longhands": [
+          "grid-row-start",
+          "grid-row-end"
+        ],
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "grid-row",
+          "gridRow"
+        ],
+        "syntax": "<grid-line> [ / <grid-line> ]?"
+      },
+      "name": "grid-row",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-grid-2/#propdef-grid-row",
+        "profile": "standard",
+        "source": "css:css-grid-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.grid-row-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "grid items and absolutely-positioned boxes whose containing block is a grid container",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword, identifier, and/or integer",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "grid-row-end",
+          "gridRowEnd"
+        ],
+        "syntax": "<grid-line>"
+      },
+      "name": "grid-row-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-grid-2/#propdef-grid-row-end",
+        "profile": "standard",
+        "source": "css:css-grid-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.grid-row-gap",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "row-gap",
+        "styleDeclaration": [
+          "grid-row-gap",
+          "gridRowGap"
+        ],
+        "syntax": "normal | <length-percentage [0,∞]> | <line-width>"
+      },
+      "name": "grid-row-gap",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-gaps-1/#propdef-grid-row-gap",
+        "profile": "standard",
+        "source": "css:css-gaps-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.grid-row-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "grid items and absolutely-positioned boxes whose containing block is a grid container",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword, identifier, and/or integer",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "grid-row-start",
+          "gridRowStart"
+        ],
+        "syntax": "<grid-line>"
+      },
+      "name": "grid-row-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-grid-2/#propdef-grid-row-start",
+        "profile": "standard",
+        "source": "css:css-grid-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.grid-template",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "grid containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "none",
+        "longhands": [
+          "grid-template-rows",
+          "grid-template-columns",
+          "grid-template-areas"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "grid-template",
+          "gridTemplate"
+        ],
+        "syntax": "none | [ <'grid-template-rows'> / <'grid-template-columns'> ] | [ <line-names>? <string> <track-size>? <line-names>? ]+ [ / <explicit-track-list> ]?"
+      },
+      "name": "grid-template",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-grid-2/#propdef-grid-template",
+        "profile": "standard",
+        "source": "css:css-grid-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.grid-template-areas",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "grid containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword none or a list of string values",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "grid-template-areas",
+          "gridTemplateAreas"
+        ],
+        "syntax": "none | <string>+"
+      },
+      "name": "grid-template-areas",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-grid-2/#propdef-grid-template-areas",
+        "profile": "standard",
+        "source": "css:css-grid-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.grid-template-columns",
+      "kind": "property",
+      "metadata": {
+        "animationType": "if the list lengths match, by computed value type per item in the computed track list (see § 7.2.5 Computed Value of a Track Listing and § 7.2.3.3 Interpolation/Combination of repeat()); discrete otherwise",
+        "appliesTo": "grid containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword none or a computed track list",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "refer to corresponding dimension of the content area",
+        "styleDeclaration": [
+          "grid-template-columns",
+          "gridTemplateColumns"
+        ],
+        "syntax": "none | <track-list> | <auto-track-list> | subgrid <line-name-list>?"
+      },
+      "name": "grid-template-columns",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-grid-2/#propdef-grid-template-columns",
+        "profile": "standard",
+        "source": "css:css-grid-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.grid-template-rows",
+      "kind": "property",
+      "metadata": {
+        "animationType": "if the list lengths match, by computed value type per item in the computed track list (see § 7.2.5 Computed Value of a Track Listing and § 7.2.3.3 Interpolation/Combination of repeat()); discrete otherwise",
+        "appliesTo": "grid containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword none or a computed track list",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "refer to corresponding dimension of the content area",
+        "styleDeclaration": [
+          "grid-template-rows",
+          "gridTemplateRows"
+        ],
+        "syntax": "none | <track-list> | <auto-track-list> | subgrid <line-name-list>?"
+      },
+      "name": "grid-template-rows",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-grid-2/#propdef-grid-template-rows",
+        "profile": "standard",
+        "source": "css:css-grid-2",
+        "version": "8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/properties/g.json"
+}

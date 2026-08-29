@@ -1,0 +1,624 @@
+{
+  "entries": [
+    {
+      "domain": "css",
+      "id": "css.properties.vector-effect",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "graphics elements and ‘use’",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "vector-effect",
+          "vectorEffect"
+        ],
+        "syntax": "none | non-scaling-stroke | non-scaling-size | non-rotation | fixed-position"
+      },
+      "name": "vector-effect",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/coords.html#VectorEffectProperty",
+        "profile": "standard",
+        "source": "css:svgwg",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.vertical-align",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "baseline",
+        "longhands": [
+          "alignment-baseline",
+          "baseline-shift",
+          "baseline-source"
+        ],
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "vertical-align",
+          "verticalAlign"
+        ],
+        "syntax": "[ first | last] || <'alignment-baseline'> || <'baseline-shift'>"
+      },
+      "name": "vertical-align",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-inline-3/#propdef-vertical-align",
+        "profile": "standard",
+        "source": "css:css-inline-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.view-timeline",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "view-timeline-name",
+          "view-timeline-axis"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "view-timeline",
+          "viewTimeline"
+        ],
+        "syntax": "[ <'view-timeline-name'> [ <'view-timeline-axis'> || <'view-timeline-inset'> ]? ]#"
+      },
+      "name": "view-timeline",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/scroll-animations-1/#propdef-view-timeline",
+        "profile": "standard",
+        "source": "css:scroll-animations-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.view-timeline-axis",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "a list of the keywords specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "block",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "view-timeline-axis",
+          "viewTimelineAxis"
+        ],
+        "syntax": "[ block | inline | x | y ]#"
+      },
+      "name": "view-timeline-axis",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/scroll-animations-1/#propdef-view-timeline-axis",
+        "profile": "standard",
+        "source": "css:scroll-animations-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.view-timeline-inset",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "a list consisting of two-value pairs representing the start and end insets each as either the keyword auto or a computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "relative to the corresponding dimension of the relevant scrollport",
+        "styleDeclaration": [
+          "view-timeline-inset",
+          "viewTimelineInset"
+        ],
+        "syntax": "[ [ auto | <length-percentage> ]{1,2} ]#"
+      },
+      "name": "view-timeline-inset",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/scroll-animations-1/#propdef-view-timeline-inset",
+        "profile": "standard",
+        "source": "css:scroll-animations-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.view-timeline-name",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item either a CSS identifier or the keyword none",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "view-timeline-name",
+          "viewTimelineName"
+        ],
+        "syntax": "[ none | <dashed-ident> ]#"
+      },
+      "name": "view-timeline-name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/scroll-animations-1/#propdef-view-timeline-name",
+        "profile": "standard",
+        "source": "css:scroll-animations-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.view-transition-class",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "view-transition-class",
+          "viewTransitionClass"
+        ],
+        "syntax": "none | <custom-ident>+"
+      },
+      "name": "view-transition-class",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-view-transitions-2/#propdef-view-transition-class",
+        "profile": "standard",
+        "source": "css:css-view-transitions-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.view-transition-group",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "view-transition-group",
+          "viewTransitionGroup"
+        ],
+        "syntax": "normal | contain | nearest | <custom-ident>"
+      },
+      "name": "view-transition-group",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-view-transitions-2/#propdef-view-transition-group",
+        "profile": "standard",
+        "source": "css:css-view-transitions-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.view-transition-name",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "view-transition-name",
+          "viewTransitionName"
+        ],
+        "syntax": "none | <custom-ident>"
+      },
+      "name": "view-transition-name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-view-transitions-2/#propdef-view-transition-name",
+        "profile": "standard",
+        "source": "css:css-view-transitions-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.view-transition-scope",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "view-transition-scope",
+          "viewTransitionScope"
+        ],
+        "syntax": "none | all"
+      },
+      "name": "view-transition-scope",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-view-transitions-2/#propdef-view-transition-scope",
+        "profile": "standard",
+        "source": "css:css-view-transitions-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.visibility",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "visible",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "visibility"
+        ],
+        "syntax": "visible | hidden | force-hidden | collapse"
+      },
+      "name": "visibility",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-display-4/#propdef-visibility",
+        "profile": "standard",
+        "source": "css:css-display-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.voice-balance",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the specified value resolved to a <number> between -100 and 100 (inclusive)",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "center",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "voice-balance",
+          "voiceBalance"
+        ],
+        "syntax": "<number> | left | center | right | leftwards | rightwards"
+      },
+      "name": "voice-balance",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-speech-1/#propdef-voice-balance",
+        "profile": "standard",
+        "source": "css:css-speech-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.voice-duration",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "voice-duration",
+          "voiceDuration"
+        ],
+        "syntax": "auto | <time [0s,∞]>"
+      },
+      "name": "voice-duration",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-speech-1/#propdef-voice-duration",
+        "profile": "standard",
+        "source": "css:css-speech-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.voice-family",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "implementation-dependent",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "voice-family",
+          "voiceFamily"
+        ],
+        "syntax": "[ <voice-family-name> | <generic-voice> ]# | preserve"
+      },
+      "name": "voice-family",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-speech-1/#propdef-voice-family",
+        "profile": "standard",
+        "source": "css:css-speech-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.voice-pitch",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "one of the predefined pitch keywords if only the keyword is specified by itself, otherwise an absolute frequency calculated by converting the keyword value (if any) to a fixed frequency based on the current voice-family and by applying the specified relative offset (if any)",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "medium",
+        "percentages": "refer to inherited value",
+        "styleDeclaration": [
+          "voice-pitch",
+          "voicePitch"
+        ],
+        "syntax": "<frequency [0Hz,∞]> && absolute | [ [ x-low | low | medium | high | x-high ] || [ <frequency [0Hz,∞]> | <semitones> | <percentage> ] ]"
+      },
+      "name": "voice-pitch",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-speech-1/#propdef-voice-pitch",
+        "profile": "standard",
+        "source": "css:css-speech-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.voice-range",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "one of the predefined pitch keywords if only the keyword is specified by itself, otherwise an absolute frequency calculated by converting the keyword value (if any) to a fixed frequency based on the current voice-family and by applying the specified relative offset (if any)",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "medium",
+        "percentages": "refer to inherited value",
+        "styleDeclaration": [
+          "voice-range",
+          "voiceRange"
+        ],
+        "syntax": "<frequency [0Hz,∞]> && absolute | [ [ x-low | low | medium | high | x-high ] || [ <frequency [0Hz,∞]> | <semitones> | <percentage> ] ]"
+      },
+      "name": "voice-range",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-speech-1/#propdef-voice-range",
+        "profile": "standard",
+        "source": "css:css-speech-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.voice-rate",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "a keyword value, and optionally also a percentage relative to the keyword (if not 100%)",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "refer to default value",
+        "styleDeclaration": [
+          "voice-rate",
+          "voiceRate"
+        ],
+        "syntax": "[ normal | x-slow | slow | medium | fast | x-fast ] || <percentage [0,∞]>"
+      },
+      "name": "voice-rate",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-speech-1/#propdef-voice-rate",
+        "profile": "standard",
+        "source": "css:css-speech-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.voice-stress",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "voice-stress",
+          "voiceStress"
+        ],
+        "syntax": "normal | strong | moderate | none | reduced"
+      },
+      "name": "voice-stress",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-speech-1/#propdef-voice-stress",
+        "profile": "standard",
+        "source": "css:css-speech-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.voice-volume",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "silent, or a keyword value and optionally also a decibel offset (if not zero)",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "medium",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "voice-volume",
+          "voiceVolume"
+        ],
+        "syntax": "silent | [ [ x-soft | soft | medium | loud | x-loud ] || <decibel> ]"
+      },
+      "name": "voice-volume",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-speech-1/#propdef-voice-volume",
+        "profile": "standard",
+        "source": "css:css-speech-1",
+        "version": "8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/properties/v.json"
+}

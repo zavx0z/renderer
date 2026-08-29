@@ -1,5 +1,11 @@
 # Compiled component support
 
+This prose explains the project contract. Exact React 19.2 reference coverage,
+owner status and evidence live in generated `packages/react/support.json`,
+`packages/react/compatibility.json` and the repository
+`capabilities.index.json`; the reference profile does not make this package an
+npm React alias.
+
 This is the `@zavx0z/react` authoring/runtime foundation specialized for
 `@zavx0z/dom`. It is not React compatibility.
 

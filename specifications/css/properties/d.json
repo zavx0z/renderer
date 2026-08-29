@@ -1,0 +1,167 @@
+{
+  "entries": [
+    {
+      "domain": "css",
+      "id": "css.properties.d",
+      "kind": "property",
+      "metadata": {
+        "animationType": "See prose",
+        "appliesTo": "‘path’",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "d"
+        ],
+        "syntax": "none | <string>"
+      },
+      "name": "d",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/paths.html#DProperty",
+        "profile": "standard",
+        "source": "css:svgwg",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.direction",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "n/a",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "ltr",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "direction"
+        ],
+        "syntax": "ltr | rtl"
+      },
+      "name": "direction",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-writing-modes-4/#propdef-direction",
+        "profile": "standard",
+        "source": "css:css-writing-modes-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.display",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see § 2.9 Animating and Interpolating display",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "a pair of keywords representing the inner and outer display types plus optional list-item flag, or a <display-internal> or <display-box> keyword; see prose in a variety of specs for computation rules",
+        "extended": [
+          "https://drafts.csswg.org/css-grid-3/",
+          "https://w3c.github.io/mathml-core/"
+        ],
+        "inherited": "no",
+        "initial": "inline",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "display"
+        ],
+        "syntax": "[ <display-outside> || <display-inside> ] | <display-listitem> | <display-internal> | <display-box> | <display-legacy> | grid-lanes | inline-grid-lanes | <display-outside> || [ <display-inside> | math ]"
+      },
+      "name": "display",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-display-4/#propdef-display",
+        "profile": "standard",
+        "source": "css:css-display-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.dominant-baseline",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block containers, inline boxes, table rows, grid containers, flex containers, and SVG text content elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "dominant-baseline",
+          "dominantBaseline"
+        ],
+        "syntax": "auto | <baseline-metric>"
+      },
+      "name": "dominant-baseline",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-inline-3/#propdef-dominant-baseline",
+        "profile": "standard",
+        "source": "css:css-inline-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.dynamic-range-limit",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by dynamic-range-limit-mix()",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see Computed Value for dynamic-range-limit",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "no-limit",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "dynamic-range-limit",
+          "dynamicRangeLimit"
+        ],
+        "syntax": "standard | no-limit | constrained | <dynamic-range-limit-mix()>"
+      },
+      "name": "dynamic-range-limit",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-color-hdr-1/#propdef-dynamic-range-limit",
+        "profile": "standard",
+        "source": "css:css-color-hdr-1",
+        "version": "8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/properties/d.json"
+}

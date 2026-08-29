@@ -1,0 +1,2233 @@
+{
+  "entries": [
+    {
+      "domain": "css",
+      "id": "css.properties.tab-size",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "text",
+        "canonicalOrder": "n/a",
+        "computedValue": "the specified number or absolute length",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "8",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "tab-size",
+          "tabSize"
+        ],
+        "syntax": "<number [0,∞]> | <length [0,∞]>"
+      },
+      "name": "tab-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-tab-size",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.table-layout",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "table grid boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "table-layout",
+          "tableLayout"
+        ],
+        "syntax": "auto | fixed"
+      },
+      "name": "table-layout",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-tables-3/#propdef-table-layout",
+        "profile": "standard",
+        "source": "css:css-tables-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-align",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block containers",
+        "canonicalOrder": "n/a",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "start",
+        "longhands": [
+          "text-align-all",
+          "text-align-last"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "text-align",
+          "textAlign"
+        ],
+        "syntax": "start | end | left | right | center | <string> | justify | match-parent | justify-all"
+      },
+      "name": "text-align",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-text-align",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-align-all",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block containers",
+        "canonicalOrder": "n/a",
+        "computedValue": "keyword as specified, except for match-parent which computes as defined above",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "start",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "text-align-all",
+          "textAlignAll"
+        ],
+        "syntax": "start | end | left | right | center | <string> | justify | match-parent"
+      },
+      "name": "text-align-all",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-text-align-all",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-align-last",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block containers",
+        "canonicalOrder": "n/a",
+        "computedValue": "keyword as specified, except for match-parent which computes as defined above",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "text-align-last",
+          "textAlignLast"
+        ],
+        "syntax": "auto | start | end | left | right | center | justify | match-parent"
+      },
+      "name": "text-align-last",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-text-align-last",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-anchor",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "text content elements",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "start",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "text-anchor",
+          "textAnchor"
+        ],
+        "syntax": "start | middle | end"
+      },
+      "name": "text-anchor",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/text.html#TextAnchorProperty",
+        "profile": "standard",
+        "source": "css:svgwg",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-autospace",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword(s)",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "text-autospace",
+          "textAutospace"
+        ],
+        "syntax": "normal | <autospace> | auto"
+      },
+      "name": "text-autospace",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-text-autospace",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-box",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block containers, multi-column containers, and inline boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "text-box",
+          "textBox"
+        ],
+        "syntax": "normal | <'text-box-trim'> || <'text-box-edge'>"
+      },
+      "name": "text-box",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-inline-3/#propdef-text-box",
+        "profile": "standard",
+        "source": "css:css-inline-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-box-edge",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block containers and inline boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "text-box-edge",
+          "textBoxEdge"
+        ],
+        "syntax": "auto | <text-edge>"
+      },
+      "name": "text-box-edge",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-inline-3/#propdef-text-box-edge",
+        "profile": "standard",
+        "source": "css:css-inline-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-box-trim",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block containers, multi-column containers, and inline boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "text-box-trim",
+          "textBoxTrim"
+        ],
+        "syntax": "none | trim-start | trim-end | trim-both"
+      },
+      "name": "text-box-trim",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-inline-3/#propdef-text-box-trim",
+        "profile": "standard",
+        "source": "css:css-inline-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-combine-upright",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "inline boxes and text",
+        "canonicalOrder": "n/a",
+        "computedValue": "specified keyword, plus integer if digits",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "text-combine-upright",
+          "textCombineUpright"
+        ],
+        "syntax": "none | all | [ digits <integer [2,4]>? ]"
+      },
+      "name": "text-combine-upright",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-writing-modes-4/#propdef-text-combine-upright",
+        "profile": "standard",
+        "source": "css:css-writing-modes-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-decoration",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "text-decoration-line",
+          "text-decoration-thickness",
+          "text-decoration-style",
+          "text-decoration-color"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "text-decoration",
+          "textDecoration"
+        ],
+        "syntax": "<'text-decoration-line'> || <'text-decoration-thickness'> || <'text-decoration-style'> || <'text-decoration-color'>"
+      },
+      "name": "text-decoration",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration",
+        "profile": "standard",
+        "source": "css:css-text-decor-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-decoration-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "computed color",
+        "extended": [],
+        "inherited": "no",
+        "initial": "currentcolor",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "text-decoration-color",
+          "textDecorationColor"
+        ],
+        "syntax": "<color>"
+      },
+      "name": "text-decoration-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-color",
+        "profile": "standard",
+        "source": "css:css-text-decor-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-decoration-inset",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword or absolute length",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "percentages": "Depending on the value of box-decoration-break, either refer to the inline size of the decorating box or of each individual box fragment",
+        "styleDeclaration": [
+          "text-decoration-inset",
+          "textDecorationInset"
+        ],
+        "syntax": "<length-percentage>{1,2} | auto"
+      },
+      "name": "text-decoration-inset",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-inset",
+        "profile": "standard",
+        "source": "css:css-text-decor-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-decoration-line",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword(s)",
+        "extended": [],
+        "inherited": "no (but see prose, above)",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "text-decoration-line",
+          "textDecorationLine"
+        ],
+        "syntax": "none | [ underline || overline || line-through || blink ] | spelling-error | grammar-error"
+      },
+      "name": "text-decoration-line",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-line",
+        "profile": "standard",
+        "source": "css:css-text-decor-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-decoration-skip",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "See individual properties",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "See individual properties",
+        "longhands": [
+          "text-decoration-skip-self",
+          "text-decoration-skip-box",
+          "text-decoration-skip-spaces",
+          "text-decoration-skip-ink"
+        ],
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "text-decoration-skip",
+          "textDecorationSkip"
+        ],
+        "syntax": "none | auto"
+      },
+      "name": "text-decoration-skip",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip",
+        "profile": "standard",
+        "source": "css:css-text-decor-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-decoration-skip-box",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword(s)",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "text-decoration-skip-box",
+          "textDecorationSkipBox"
+        ],
+        "syntax": "none | all"
+      },
+      "name": "text-decoration-skip-box",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip-box",
+        "profile": "standard",
+        "source": "css:css-text-decor-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-decoration-skip-ink",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "text-decoration-skip-ink",
+          "textDecorationSkipInk"
+        ],
+        "syntax": "auto | none | all"
+      },
+      "name": "text-decoration-skip-ink",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip-ink",
+        "profile": "standard",
+        "source": "css:css-text-decor-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-decoration-skip-self",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword(s) except for skip-all, see below",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "text-decoration-skip-self",
+          "textDecorationSkipSelf"
+        ],
+        "syntax": "auto | skip-all | [ skip-underline || skip-overline || skip-line-through ] | no-skip"
+      },
+      "name": "text-decoration-skip-self",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip-self",
+        "profile": "standard",
+        "source": "css:css-text-decor-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-decoration-skip-spaces",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword(s)",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "start end",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "text-decoration-skip-spaces",
+          "textDecorationSkipSpaces"
+        ],
+        "syntax": "none | all | [ start || end ]"
+      },
+      "name": "text-decoration-skip-spaces",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-skip-spaces",
+        "profile": "standard",
+        "source": "css:css-text-decor-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-decoration-style",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "solid",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "text-decoration-style",
+          "textDecorationStyle"
+        ],
+        "syntax": "solid | double | dotted | dashed | wavy"
+      },
+      "name": "text-decoration-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-style",
+        "profile": "standard",
+        "source": "css:css-text-decor-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-decoration-thickness",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified, with <length-percentage> values computed",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "text-decoration-thickness",
+          "textDecorationThickness"
+        ],
+        "syntax": "auto | from-font | <length-percentage> | <line-width>"
+      },
+      "name": "text-decoration-thickness",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-decoration-thickness",
+        "profile": "standard",
+        "source": "css:css-text-decor-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-emphasis",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "text-emphasis-style",
+          "text-emphasis-color"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "text-emphasis",
+          "textEmphasis"
+        ],
+        "syntax": "<'text-emphasis-style'> || <'text-emphasis-color'>"
+      },
+      "name": "text-emphasis",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis",
+        "profile": "standard",
+        "source": "css:css-text-decor-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-emphasis-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "computed color",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "currentcolor",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "text-emphasis-color",
+          "textEmphasisColor"
+        ],
+        "syntax": "<color>"
+      },
+      "name": "text-emphasis-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis-color",
+        "profile": "standard",
+        "source": "css:css-text-decor-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-emphasis-position",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword(s)",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "over right",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "text-emphasis-position",
+          "textEmphasisPosition"
+        ],
+        "syntax": "[ over | under ] && [ right | left ]?"
+      },
+      "name": "text-emphasis-position",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis-position",
+        "profile": "standard",
+        "source": "css:css-text-decor-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-emphasis-skip",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword(s)",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "spaces punctuation",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "text-emphasis-skip",
+          "textEmphasisSkip"
+        ],
+        "syntax": "spaces || punctuation || symbols || narrow"
+      },
+      "name": "text-emphasis-skip",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis-skip",
+        "profile": "standard",
+        "source": "css:css-text-decor-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-emphasis-style",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword none, a pair of keywords representing the shape and fill, or a string",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "text-emphasis-style",
+          "textEmphasisStyle"
+        ],
+        "syntax": "none | [ [ filled | open ] || [ dot | circle | double-circle | triangle | sesame ] ] | <string>"
+      },
+      "name": "text-emphasis-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-emphasis-style",
+        "profile": "standard",
+        "source": "css:css-text-decor-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-fit",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keywords or computed <percentage> value",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "text-fit",
+          "textFit"
+        ],
+        "syntax": "[ none | grow | shrink ] [consistent | per-line | per-line-all]? <percentage>?"
+      },
+      "name": "text-fit",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-5/#propdef-text-fit",
+        "profile": "standard",
+        "source": "css:css-text-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-group-align",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "text-group-align",
+          "textGroupAlign"
+        ],
+        "syntax": "none | start | end | left | right | center"
+      },
+      "name": "text-group-align",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-text-group-align",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-indent",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "block containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "computed <length-percentage> value, plus any specified keywords",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "0",
+        "percentages": "refers to block container’s own inline-axis inner size",
+        "styleDeclaration": [
+          "text-indent",
+          "textIndent"
+        ],
+        "syntax": "[ <length-percentage> ] && hanging? && each-line?"
+      },
+      "name": "text-indent",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-text-indent",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-justify",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "text",
+        "canonicalOrder": "n/a",
+        "computedValue": "specified keyword (except for the distribute legacy value)",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "text-justify",
+          "textJustify"
+        ],
+        "syntax": "[ auto | none | inter-word | inter-character | ruby ] || no-compress"
+      },
+      "name": "text-justify",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-text-justify",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-orientation",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements except table row groups, rows, column groups, and columns; and text",
+        "canonicalOrder": "n/a",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "mixed",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "text-orientation",
+          "textOrientation"
+        ],
+        "syntax": "mixed | upright | sideways"
+      },
+      "name": "text-orientation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-writing-modes-4/#propdef-text-orientation",
+        "profile": "standard",
+        "source": "css:css-writing-modes-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-overflow",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "block containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified, with lengths made absolute",
+        "extended": [],
+        "inherited": "no",
+        "initial": "clip",
+        "percentages": "refer to the width of the line box",
+        "styleDeclaration": [
+          "text-overflow",
+          "textOverflow"
+        ],
+        "syntax": "[ clip | ellipsis | <string> | fade | <fade()> ]{1,2}"
+      },
+      "name": "text-overflow",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-overflow-4/#propdef-text-overflow",
+        "profile": "standard",
+        "source": "css:css-overflow-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-rendering",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "‘text’",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "text-rendering",
+          "textRendering"
+        ],
+        "syntax": "auto | optimizeSpeed | optimizeLegibility | geometricPrecision"
+      },
+      "name": "text-rendering",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/painting.html#TextRenderingProperty",
+        "profile": "standard",
+        "source": "css:svgwg",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-shadow",
+      "kind": "property",
+      "metadata": {
+        "animationType": "as shadow list",
+        "appliesTo": "text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "either the keyword none or a list, each item consisting of four absolute lengths plus a computed color and optionally also an inset keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "text-shadow",
+          "textShadow"
+        ],
+        "syntax": "none | <shadow>#"
+      },
+      "name": "text-shadow",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-shadow",
+        "profile": "standard",
+        "source": "css:css-text-decor-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-size-adjust",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements",
+        "canonicalOrder": "N/A",
+        "computedValue": "specified keyword or percentage",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "see below",
+        "styleDeclaration": [
+          "text-size-adjust",
+          "textSizeAdjust"
+        ],
+        "syntax": "auto | none | <percentage [0,∞]>"
+      },
+      "name": "text-size-adjust",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-size-adjust-1/#propdef-text-size-adjust",
+        "profile": "standard",
+        "source": "css:css-size-adjust-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-spacing",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword(s)",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "see individual properties",
+        "longhands": [
+          "text-spacing-trim",
+          "text-autospace"
+        ],
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "text-spacing",
+          "textSpacing"
+        ],
+        "syntax": "none | auto | <spacing-trim> || <autospace>"
+      },
+      "name": "text-spacing",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-text-spacing",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-spacing-trim",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword(s)",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "text-spacing-trim",
+          "textSpacingTrim"
+        ],
+        "syntax": "<spacing-trim> | auto"
+      },
+      "name": "text-spacing-trim",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-text-spacing-trim",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-transform",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "text",
+        "canonicalOrder": "n/a",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "text-transform",
+          "textTransform"
+        ],
+        "syntax": "none | [capitalize | uppercase | lowercase ] || full-width || full-size-kana | math-auto"
+      },
+      "name": "text-transform",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-text-transform",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-underline-offset",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified, with <length-percentage> values computed",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "text-underline-offset",
+          "textUnderlineOffset"
+        ],
+        "syntax": "auto | <length-percentage>"
+      },
+      "name": "text-underline-offset",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-underline-offset",
+        "profile": "standard",
+        "source": "css:css-text-decor-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-underline-position",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword(s)",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "text-underline-position",
+          "textUnderlinePosition"
+        ],
+        "syntax": "auto | [ from-font | under ] || [ left | right ]"
+      },
+      "name": "text-underline-position",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-decor-4/#propdef-text-underline-position",
+        "profile": "standard",
+        "source": "css:css-text-decor-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-wrap",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "wrap",
+        "longhands": [
+          "text-wrap-mode",
+          "text-wrap-style"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "text-wrap",
+          "textWrap"
+        ],
+        "syntax": "<'text-wrap-mode'> || <'text-wrap-style'>"
+      },
+      "name": "text-wrap",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-text-wrap",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-wrap-mode",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "wrap",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "text-wrap-mode",
+          "textWrapMode"
+        ],
+        "syntax": "wrap | nowrap"
+      },
+      "name": "text-wrap-mode",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-text-wrap-mode",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.text-wrap-style",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block containers hat establish an inline formatting context",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "text-wrap-style",
+          "textWrapStyle"
+        ],
+        "syntax": "auto | balance | stable | pretty | avoid-short-last-line"
+      },
+      "name": "text-wrap-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-text-wrap-style",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.timeline-scope",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword none, the keyword all, or a list of CSS identifiers",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "timeline-scope",
+          "timelineScope"
+        ],
+        "syntax": "none | all | <dashed-ident>#"
+      },
+      "name": "timeline-scope",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/scroll-animations-1/#propdef-timeline-scope",
+        "profile": "standard",
+        "source": "css:scroll-animations-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.timeline-trigger",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "timeline-trigger-name",
+          "timeline-trigger-source",
+          "timeline-trigger-activation-range",
+          "timeline-trigger-active-range"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "timeline-trigger",
+          "timelineTrigger"
+        ],
+        "syntax": "none | [ <'timeline-trigger-name'> <'timeline-trigger-source'> <'timeline-trigger-activation-range'> [ / <'timeline-trigger-active-range'> ]? ]#"
+      },
+      "name": "timeline-trigger",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger",
+        "profile": "standard",
+        "source": "css:animation-triggers-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.timeline-trigger-activation-range",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "timeline-trigger-activation-range-start",
+          "timeline-trigger-activation-range-end"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "timeline-trigger-activation-range",
+          "timelineTriggerActivationRange"
+        ],
+        "syntax": "[ <'timeline-trigger-activation-range-start'> <'timeline-trigger-activation-range-end'>? ]#"
+      },
+      "name": "timeline-trigger-activation-range",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-activation-range",
+        "profile": "standard",
+        "source": "css:animation-triggers-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.timeline-trigger-activation-range-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item either the keyword normal or a timeline range and progress percentage",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "relative to the specified named timeline range if one was specified, else to the entire timeline",
+        "styleDeclaration": [
+          "timeline-trigger-activation-range-end",
+          "timelineTriggerActivationRangeEnd"
+        ],
+        "syntax": "[ normal | <length-percentage> | <timeline-range-name> <length-percentage>? ]#"
+      },
+      "name": "timeline-trigger-activation-range-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-activation-range-end",
+        "profile": "standard",
+        "source": "css:animation-triggers-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.timeline-trigger-activation-range-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item either the keyword normal or a timeline range and progress percentage",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "relative to the specified named timeline range if one was specified, else to the entire timeline",
+        "styleDeclaration": [
+          "timeline-trigger-activation-range-start",
+          "timelineTriggerActivationRangeStart"
+        ],
+        "syntax": "[ normal | <length-percentage> | <timeline-range-name> <length-percentage>? ]#"
+      },
+      "name": "timeline-trigger-activation-range-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-activation-range-start",
+        "profile": "standard",
+        "source": "css:animation-triggers-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.timeline-trigger-active-range",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "timeline-trigger-active-range-start",
+          "timeline-trigger-active-range-end"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "timeline-trigger-active-range",
+          "timelineTriggerActiveRange"
+        ],
+        "syntax": "[ <'timeline-trigger-active-range-start'> <'timeline-trigger-active-range-end'>? ]#"
+      },
+      "name": "timeline-trigger-active-range",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-active-range",
+        "profile": "standard",
+        "source": "css:animation-triggers-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.timeline-trigger-active-range-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item either the keyword normal or a timeline range and progress percentage",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "relative to the specified named timeline range if one was specified, else to the entire timeline",
+        "styleDeclaration": [
+          "timeline-trigger-active-range-end",
+          "timelineTriggerActiveRangeEnd"
+        ],
+        "syntax": "[ auto | normal | <length-percentage> | <timeline-range-name> <length-percentage>? ]#"
+      },
+      "name": "timeline-trigger-active-range-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-active-range-end",
+        "profile": "standard",
+        "source": "css:animation-triggers-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.timeline-trigger-active-range-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item either the keyword normal or a timeline range and progress percentage",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "relative to the specified named timeline range if one was specified, else to the entire timeline",
+        "styleDeclaration": [
+          "timeline-trigger-active-range-start",
+          "timelineTriggerActiveRangeStart"
+        ],
+        "syntax": "[ auto | normal | <length-percentage> | <timeline-range-name> <length-percentage>? ]#"
+      },
+      "name": "timeline-trigger-active-range-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-active-range-start",
+        "profile": "standard",
+        "source": "css:animation-triggers-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.timeline-trigger-name",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "timeline-trigger-name",
+          "timelineTriggerName"
+        ],
+        "syntax": "none | <dashed-ident>#"
+      },
+      "name": "timeline-trigger-name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-name",
+        "profile": "standard",
+        "source": "css:animation-triggers-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.timeline-trigger-source",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item either the keyword none, the keyword auto, a case-sensitive css identifier, a computed scroll() function, or a computed view() function",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "timeline-trigger-source",
+          "timelineTriggerSource"
+        ],
+        "syntax": "<single-animation-timeline>#"
+      },
+      "name": "timeline-trigger-source",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/animation-triggers-1/#propdef-timeline-trigger-source",
+        "profile": "standard",
+        "source": "css:animation-triggers-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.top",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "positioned elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword auto or a computed <length-percentage> value",
+        "extended": [
+          "https://drafts.csswg.org/css-anchor-position-1/"
+        ],
+        "inherited": "no",
+        "initial": "auto",
+        "logicalPropertyGroup": "inset",
+        "percentages": "refer to size of containing block; see prose",
+        "styleDeclaration": [
+          "top"
+        ],
+        "syntax": "auto | <length-percentage> | <anchor()> | <anchor-size()>"
+      },
+      "name": "top",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-position-3/#propdef-top",
+        "profile": "standard",
+        "source": "css:css-position-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.touch-action",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements except: non-replaced inline elements, table rows, row groups, table columns, and column groups.",
+        "canonicalOrder": "per grammar",
+        "computedValue": "Same as specified value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "touch-action",
+          "touchAction"
+        ],
+        "syntax": "auto | none | [ [ pan-x | pan-left | pan-right ] || [ pan-y | pan-up | pan-down ] || pinch-zoom ] | manipulation"
+      },
+      "name": "touch-action",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://compat.spec.whatwg.org/#propdef-touch-action",
+        "profile": "standard",
+        "source": "webref-css",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.transform",
+      "kind": "property",
+      "metadata": {
+        "animationType": "transform list, see interpolation rules",
+        "appliesTo": "transformable elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified, but with lengths made absolute",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "refer to the size of reference box",
+        "styleDeclaration": [
+          "transform"
+        ],
+        "syntax": "none | <transform-list>"
+      },
+      "name": "transform",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-transforms-1/#propdef-transform",
+        "profile": "standard",
+        "source": "css:css-transforms-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.transform-box",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "transformable elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "view-box",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "transform-box",
+          "transformBox"
+        ],
+        "syntax": "content-box | border-box | fill-box | stroke-box | view-box"
+      },
+      "name": "transform-box",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-transforms-1/#propdef-transform-box",
+        "profile": "standard",
+        "source": "css:css-transforms-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.transform-origin",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "transformable elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see background-position",
+        "extended": [],
+        "inherited": "no",
+        "initial": "50% 50%",
+        "percentages": "refer to the size of reference box",
+        "styleDeclaration": [
+          "transform-origin",
+          "transformOrigin"
+        ],
+        "syntax": "[ left | center | right | top | bottom | <length-percentage> ] | [ left | center | right | <length-percentage> ] [ top | center | bottom | <length-percentage> ] <length>? | [ [ center | left | right ] && [ center | top | bottom ] ] <length>?"
+      },
+      "name": "transform-origin",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-transforms-1/#propdef-transform-origin",
+        "profile": "standard",
+        "source": "css:css-transforms-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.transform-style",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "transformable elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "flat",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "transform-style",
+          "transformStyle"
+        ],
+        "syntax": "flat | preserve-3d",
+        "usedValue": "flat if a grouping property is present, specified keyword otherwise"
+      },
+      "name": "transform-style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-transforms-2/#propdef-transform-style",
+        "profile": "standard",
+        "source": "css:css-transforms-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.transition",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "see individual properties",
+        "longhands": [
+          "transition-property",
+          "transition-duration",
+          "transition-timing-function",
+          "transition-delay",
+          "transition-behavior"
+        ],
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "transition"
+        ],
+        "syntax": "<single-transition>#"
+      },
+      "name": "transition",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-transitions-1/#propdef-transition",
+        "profile": "standard",
+        "source": "css:css-transitions-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.transition-behavior",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "All elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "transition-behavior",
+          "transitionBehavior"
+        ],
+        "syntax": "<transition-behavior-value>#"
+      },
+      "name": "transition-behavior",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-transitions-2/#propdef-transition-behavior",
+        "profile": "standard",
+        "source": "css:css-transitions-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.transition-delay",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item a duration",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0s",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "transition-delay",
+          "transitionDelay"
+        ],
+        "syntax": "<time>#"
+      },
+      "name": "transition-delay",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-transitions-1/#propdef-transition-delay",
+        "profile": "standard",
+        "source": "css:css-transitions-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.transition-duration",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item a duration",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0s",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "transition-duration",
+          "transitionDuration"
+        ],
+        "syntax": "<time [0s,∞]>#"
+      },
+      "name": "transition-duration",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-transitions-1/#propdef-transition-duration",
+        "profile": "standard",
+        "source": "css:css-transitions-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.transition-property",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword none else a list of identifiers",
+        "extended": [],
+        "inherited": "no",
+        "initial": "all",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "transition-property",
+          "transitionProperty"
+        ],
+        "syntax": "none | <single-transition-property>#"
+      },
+      "name": "transition-property",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-transitions-1/#propdef-transition-property",
+        "profile": "standard",
+        "source": "css:css-transitions-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.transition-timing-function",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "ease",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "transition-timing-function",
+          "transitionTimingFunction"
+        ],
+        "syntax": "<easing-function>#"
+      },
+      "name": "transition-timing-function",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-transitions-1/#propdef-transition-timing-function",
+        "profile": "standard",
+        "source": "css:css-transitions-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.translate",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value, but see below for none",
+        "appliesTo": "transformable elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword none or a pair of computed <length-percentage> values and an absolute length",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "relative to the width of the reference box (for the first value) or the height (for the second value)",
+        "styleDeclaration": [
+          "translate"
+        ],
+        "syntax": "none | <length-percentage> [ <length-percentage> <length>? ]?"
+      },
+      "name": "translate",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-transforms-2/#propdef-translate",
+        "profile": "standard",
+        "source": "css:css-transforms-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.trigger-scope",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "trigger-scope",
+          "triggerScope"
+        ],
+        "syntax": "none | all | <dashed-ident>#"
+      },
+      "name": "trigger-scope",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/animation-triggers-1/#propdef-trigger-scope",
+        "profile": "standard",
+        "source": "css:animation-triggers-1",
+        "version": "8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/properties/t.json"
+}

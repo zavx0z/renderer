@@ -1,0 +1,123 @@
+{
+  "entries": [
+    {
+      "description": "Table caption",
+      "domain": "html",
+      "id": "html.elements.caption",
+      "kind": "element",
+      "metadata": {
+        "categories": "none",
+        "children": "flow*",
+        "interface": "HTMLTableCaptionElement",
+        "parents": "table"
+      },
+      "name": "caption",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/tables.html#the-caption-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <caption> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.caption.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "caption",
+        "interface": "HTMLTableCaptionElement"
+      },
+      "name": "caption implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.caption",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <caption> element content categories.",
+      "domain": "html",
+      "id": "html.elements.caption.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "caption",
+        "interface": "HTMLTableCaptionElement"
+      },
+      "name": "caption content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.caption",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/tables.html#the-caption-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <caption> element content model.",
+      "domain": "html",
+      "id": "html.elements.caption.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "caption",
+        "interface": "HTMLTableCaptionElement"
+      },
+      "name": "caption content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.caption",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/tables.html#the-caption-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <caption> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.caption.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "caption",
+        "interface": "HTMLTableCaptionElement"
+      },
+      "name": "caption interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.caption",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/tables.html#the-caption-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/caption.json"
+}

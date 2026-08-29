@@ -1,0 +1,150 @@
+{
+  "entries": [
+    {
+      "description": "interface CSSColorProfileRule from css-color-5.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-color-5.interfaces.csscolorprofilerule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-color-5.idl",
+        "inheritance": "CSSRule"
+      },
+      "name": "CSSColorProfileRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-color-5.idl#WebIDL:CSSColorProfileRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSColorProfileRule.components Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-color-5.interfaces.csscolorprofilerule.attributes.components",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-color-5.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"components\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "components",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-color-5.interfaces.csscolorprofilerule",
+      "spec": {
+        "anchor": "webref/idl/css-color-5.idl#WebIDL:CSSColorProfileRule.components",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSColorProfileRule.name Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-color-5.interfaces.csscolorprofilerule.attributes.name",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-color-5.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"name\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-color-5.interfaces.csscolorprofilerule",
+      "spec": {
+        "anchor": "webref/idl/css-color-5.idl#WebIDL:CSSColorProfileRule.name",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSColorProfileRule.renderingIntent Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-color-5.interfaces.csscolorprofilerule.attributes.renderingintent",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-color-5.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"renderingIntent\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "renderingIntent",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-color-5.interfaces.csscolorprofilerule",
+      "spec": {
+        "anchor": "webref/idl/css-color-5.idl#WebIDL:CSSColorProfileRule.renderingIntent",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSColorProfileRule.src Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-color-5.interfaces.csscolorprofilerule.attributes.src",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-color-5.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"src\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "src",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-color-5.interfaces.csscolorprofilerule",
+      "spec": {
+        "anchor": "webref/idl/css-color-5.idl#WebIDL:CSSColorProfileRule.src",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSColorProfileRule has CSSRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-color-5.interfaces.csscolorprofilerule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSRule"
+      },
+      "name": "CSSColorProfileRule inherits CSSRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-color-5.interfaces.csscolorprofilerule",
+      "spec": {
+        "anchor": "webref/idl/css-color-5.idl#WebIDL:CSSColorProfileRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-color-5.json"
+}

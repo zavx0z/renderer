@@ -1,0 +1,1833 @@
+{
+  "entries": [
+    {
+      "description": "interface CSSPositionTryDescriptors from css-anchor-position.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-anchor-position.idl",
+        "inheritance": "CSSStyleDeclaration"
+      },
+      "name": "CSSPositionTryDescriptors",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.align-self Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.align-self",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"align-self\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "align-self",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.align-self",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.alignSelf Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.alignself",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"alignSelf\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "alignSelf",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.alignSelf",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.block-size Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.block-size",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"block-size\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "block-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.block-size",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.blockSize Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.blocksize",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"blockSize\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "blockSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.blockSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.bottom Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.bottom",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"bottom\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "bottom",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.bottom",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.height Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.height",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"height\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "height",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.height",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.inline-size Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.inline-size",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"inline-size\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "inline-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.inline-size",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.inlineSize Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.inlinesize",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"inlineSize\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "inlineSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.inlineSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.inset Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.inset",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"inset\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "inset",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.inset",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.inset-block Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.inset-block",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"inset-block\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "inset-block",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.inset-block",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.inset-block-end Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.inset-block-end",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"inset-block-end\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "inset-block-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.inset-block-end",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.inset-block-start Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.inset-block-start",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"inset-block-start\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "inset-block-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.inset-block-start",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.inset-inline Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.inset-inline",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"inset-inline\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "inset-inline",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.inset-inline",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.inset-inline-end Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.inset-inline-end",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"inset-inline-end\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "inset-inline-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.inset-inline-end",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.inset-inline-start Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.inset-inline-start",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"inset-inline-start\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "inset-inline-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.inset-inline-start",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.insetBlock Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.insetblock",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"insetBlock\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "insetBlock",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.insetBlock",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.insetBlockEnd Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.insetblockend",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"insetBlockEnd\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "insetBlockEnd",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.insetBlockEnd",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.insetBlockStart Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.insetblockstart",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"insetBlockStart\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "insetBlockStart",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.insetBlockStart",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.insetInline Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.insetinline",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"insetInline\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "insetInline",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.insetInline",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.insetInlineEnd Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.insetinlineend",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"insetInlineEnd\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "insetInlineEnd",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.insetInlineEnd",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.insetInlineStart Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.insetinlinestart",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"insetInlineStart\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "insetInlineStart",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.insetInlineStart",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.justify-self Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.justify-self",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"justify-self\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "justify-self",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.justify-self",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.justifySelf Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.justifyself",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"justifySelf\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "justifySelf",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.justifySelf",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.left Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.left",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"left\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "left",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.left",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.margin Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.margin",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"margin\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "margin",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.margin",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.margin-block Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.margin-block",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"margin-block\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "margin-block",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.margin-block",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.margin-block-end Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.margin-block-end",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"margin-block-end\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "margin-block-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.margin-block-end",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.margin-block-start Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.margin-block-start",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"margin-block-start\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "margin-block-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.margin-block-start",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.margin-bottom Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.margin-bottom",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"margin-bottom\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "margin-bottom",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.margin-bottom",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.margin-inline Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.margin-inline",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"margin-inline\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "margin-inline",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.margin-inline",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.margin-inline-end Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.margin-inline-end",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"margin-inline-end\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "margin-inline-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.margin-inline-end",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.margin-inline-start Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.margin-inline-start",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"margin-inline-start\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "margin-inline-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.margin-inline-start",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.margin-left Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.margin-left",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"margin-left\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "margin-left",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.margin-left",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.margin-right Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.margin-right",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"margin-right\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "margin-right",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.margin-right",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.margin-top Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.margin-top",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"margin-top\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "margin-top",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.margin-top",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.marginBlock Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.marginblock",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"marginBlock\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "marginBlock",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.marginBlock",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.marginBlockEnd Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.marginblockend",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"marginBlockEnd\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "marginBlockEnd",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.marginBlockEnd",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.marginBlockStart Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.marginblockstart",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"marginBlockStart\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "marginBlockStart",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.marginBlockStart",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.marginBottom Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.marginbottom",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"marginBottom\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "marginBottom",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.marginBottom",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.marginInline Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.margininline",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"marginInline\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "marginInline",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.marginInline",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.marginInlineEnd Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.margininlineend",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"marginInlineEnd\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "marginInlineEnd",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.marginInlineEnd",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.marginInlineStart Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.margininlinestart",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"marginInlineStart\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "marginInlineStart",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.marginInlineStart",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.marginLeft Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.marginleft",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"marginLeft\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "marginLeft",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.marginLeft",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.marginRight Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.marginright",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"marginRight\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "marginRight",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.marginRight",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.marginTop Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.margintop",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"marginTop\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "marginTop",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.marginTop",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.max-block-size Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.max-block-size",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"max-block-size\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "max-block-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.max-block-size",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.max-height Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.max-height",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"max-height\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "max-height",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.max-height",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.max-inline-size Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.max-inline-size",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"max-inline-size\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "max-inline-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.max-inline-size",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.max-width Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.max-width",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"max-width\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "max-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.max-width",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.maxBlockSize Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.maxblocksize",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"maxBlockSize\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "maxBlockSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.maxBlockSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.maxHeight Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.maxheight",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"maxHeight\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "maxHeight",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.maxHeight",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.maxInlineSize Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.maxinlinesize",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"maxInlineSize\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "maxInlineSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.maxInlineSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.maxWidth Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.maxwidth",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"maxWidth\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "maxWidth",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.maxWidth",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.min-block-size Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.min-block-size",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"min-block-size\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "min-block-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.min-block-size",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.min-height Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.min-height",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"min-height\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "min-height",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.min-height",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.min-inline-size Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.min-inline-size",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"min-inline-size\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "min-inline-size",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.min-inline-size",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.min-width Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.min-width",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"min-width\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "min-width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.min-width",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.minBlockSize Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.minblocksize",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"minBlockSize\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "minBlockSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.minBlockSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.minHeight Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.minheight",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"minHeight\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "minHeight",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.minHeight",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.minInlineSize Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.mininlinesize",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"minInlineSize\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "minInlineSize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.minInlineSize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.minWidth Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.minwidth",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"minWidth\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "minWidth",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.minWidth",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.place-self Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.place-self",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"place-self\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "place-self",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.place-self",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.placeSelf Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.placeself",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"placeSelf\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "placeSelf",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.placeSelf",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.position-anchor Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.position-anchor",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"position-anchor\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "position-anchor",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.position-anchor",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.position-area Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.position-area",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"position-area\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "position-area",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.position-area",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.positionAnchor Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.positionanchor",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"positionAnchor\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "positionAnchor",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.positionAnchor",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.positionArea Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.positionarea",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"positionArea\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "positionArea",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.positionArea",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.right Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.right",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"right\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "right",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.right",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.top Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.top",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"top\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "top",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.top",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors.width Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.attributes.width",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"width\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors.width",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryDescriptors has CSSStyleDeclaration as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSStyleDeclaration"
+      },
+      "name": "CSSPositionTryDescriptors inherits CSSStyleDeclaration",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontrydescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryDescriptors",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSPositionTryRule from css-anchor-position.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontryrule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-anchor-position.idl",
+        "inheritance": "CSSRule"
+      },
+      "name": "CSSPositionTryRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryRule.name Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontryrule.attributes.name",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-anchor-position.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"name\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontryrule",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryRule.name",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryRule.style Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontryrule.attributes.style",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SameObject",
+          "PutForwards={\"type\":\"identifier\",\"value\":\"cssText\"}"
+        ],
+        "idlSource": "css-anchor-position.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"style\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSPositionTryDescriptors\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SameObject\",\"rhs\":null,\"arguments\":[]},{\"type\":\"extended-attribute\",\"name\":\"PutForwards\",\"rhs\":{\"type\":\"identifier\",\"value\":\"cssText\"},\"arguments\":[]}],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontryrule",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryRule.style",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSPositionTryRule has CSSRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-anchor-position.interfaces.csspositiontryrule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSRule"
+      },
+      "name": "CSSPositionTryRule inherits CSSRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-anchor-position.interfaces.csspositiontryrule",
+      "spec": {
+        "anchor": "webref/idl/css-anchor-position.idl#WebIDL:CSSPositionTryRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-anchor-position.json"
+}

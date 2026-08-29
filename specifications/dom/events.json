@@ -1,0 +1,1832 @@
+{
+  "entries": [
+    {
+      "description": "abort event using Event.",
+      "domain": "dom",
+      "id": "dom.events.abort",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "target": "AbortSignal"
+          }
+        ]
+      },
+      "name": "abort",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://dom.spec.whatwg.org/#eventdef-abortsignal-abort",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "abort event using Event.",
+      "domain": "dom",
+      "id": "dom.events.abort--137fae88",
+      "kind": "event",
+      "metadata": {
+        "cancelable": false,
+        "interface": "Event",
+        "targets": [
+          {
+            "target": "Window"
+          },
+          {
+            "bubbles": false,
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "abort",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#abort",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "auxclick event using PointerEvent.",
+      "domain": "dom",
+      "id": "dom.events.auxclick",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "PointerEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "auxclick",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#dfn-auxclick",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "beforeinput event using InputEvent.",
+      "domain": "dom",
+      "id": "dom.events.beforeinput",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "InputEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "beforeinput",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#beforeinput",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "blur event using FocusEvent.",
+      "domain": "dom",
+      "id": "dom.events.blur",
+      "kind": "event",
+      "metadata": {
+        "cancelable": false,
+        "interface": "FocusEvent",
+        "targets": [
+          {
+            "target": "Window"
+          },
+          {
+            "bubbles": false,
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "blur",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#blur",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "click event using PointerEvent.",
+      "domain": "dom",
+      "id": "dom.events.click",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "extendedIn": [
+          {
+            "href": "https://html.spec.whatwg.org/multipage/indices.html#events-2%3Aevent-click",
+            "spec": "html"
+          }
+        ],
+        "interface": "PointerEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "click",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#dfn-click",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "compositionend event using CompositionEvent.",
+      "domain": "dom",
+      "id": "dom.events.compositionend",
+      "kind": "event",
+      "metadata": {
+        "cancelable": false,
+        "extendedIn": [
+          {
+            "href": "https://w3c.github.io/edit-context/#update-the-editcontext",
+            "spec": "edit-context"
+          }
+        ],
+        "interface": "CompositionEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Element"
+          },
+          {
+            "target": "EditContext"
+          }
+        ]
+      },
+      "name": "compositionend",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#compositionend",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "compositionstart event using CompositionEvent.",
+      "domain": "dom",
+      "id": "dom.events.compositionstart",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "extendedIn": [
+          {
+            "href": "https://w3c.github.io/edit-context/#update-the-editcontext",
+            "spec": "edit-context"
+          }
+        ],
+        "interface": "CompositionEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Element"
+          },
+          {
+            "target": "EditContext"
+          }
+        ]
+      },
+      "name": "compositionstart",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#compositionstart",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "compositionupdate event using CompositionEvent.",
+      "domain": "dom",
+      "id": "dom.events.compositionupdate",
+      "kind": "event",
+      "metadata": {
+        "cancelable": false,
+        "interface": "CompositionEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "compositionupdate",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#compositionupdate",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "contextmenu event using PointerEvent.",
+      "domain": "dom",
+      "id": "dom.events.contextmenu",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "PointerEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "contextmenu",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#dfn-contextmenu",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "dblclick event using MouseEvent.",
+      "domain": "dom",
+      "id": "dom.events.dblclick",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "MouseEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "dblclick",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#dfn-dblclick",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "DOMActivate event using UIEvent.",
+      "domain": "dom",
+      "id": "dom.events.domactivate",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "UIEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "DOMActivate",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#domactivate",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "DOMFocusIn event using FocusEvent.",
+      "domain": "dom",
+      "id": "dom.events.domfocusin",
+      "kind": "event",
+      "metadata": {
+        "cancelable": false,
+        "interface": "FocusEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "DOMFocusIn",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#domfocusin",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "DOMFocusOut event using FocusEvent.",
+      "domain": "dom",
+      "id": "dom.events.domfocusout",
+      "kind": "event",
+      "metadata": {
+        "cancelable": false,
+        "interface": "FocusEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "DOMFocusOut",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#domfocusout",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "error event using Event.",
+      "domain": "dom",
+      "id": "dom.events.error",
+      "kind": "event",
+      "metadata": {
+        "cancelable": false,
+        "interface": "Event",
+        "targets": [
+          {
+            "target": "Window"
+          },
+          {
+            "bubbles": false,
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "error",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#error",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "focus event using FocusEvent.",
+      "domain": "dom",
+      "id": "dom.events.focus",
+      "kind": "event",
+      "metadata": {
+        "cancelable": false,
+        "interface": "FocusEvent",
+        "targets": [
+          {
+            "target": "Window"
+          },
+          {
+            "bubbles": false,
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "focus",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#focus",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "focusin event using FocusEvent.",
+      "domain": "dom",
+      "id": "dom.events.focusin",
+      "kind": "event",
+      "metadata": {
+        "cancelable": false,
+        "interface": "FocusEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "focusin",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#focusin",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "focusout event using FocusEvent.",
+      "domain": "dom",
+      "id": "dom.events.focusout",
+      "kind": "event",
+      "metadata": {
+        "cancelable": false,
+        "interface": "FocusEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "focusout",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#focusout",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "gotpointercapture event using PointerEvent.",
+      "domain": "dom",
+      "id": "dom.events.gotpointercapture",
+      "kind": "event",
+      "metadata": {
+        "cancelable": false,
+        "interface": "PointerEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "MathMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "SVGElement"
+          }
+        ]
+      },
+      "name": "gotpointercapture",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#dfn-gotpointercapture",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "input event using InputEvent.",
+      "domain": "dom",
+      "id": "dom.events.input",
+      "kind": "event",
+      "metadata": {
+        "cancelable": false,
+        "extendedIn": [
+          {
+            "href": "https://html.spec.whatwg.org/multipage/indices.html#events-2%3Aevent-input-2",
+            "spec": "html"
+          }
+        ],
+        "interface": "InputEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "input",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#input",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "keydown event using KeyboardEvent.",
+      "domain": "dom",
+      "id": "dom.events.keydown",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "KeyboardEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "keydown",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#keydown",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "keypress event using KeyboardEvent.",
+      "domain": "dom",
+      "id": "dom.events.keypress",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "KeyboardEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "keypress",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#keypress",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "keyup event using KeyboardEvent.",
+      "domain": "dom",
+      "id": "dom.events.keyup",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "KeyboardEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "keyup",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#keyup",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "load event using Event.",
+      "domain": "dom",
+      "id": "dom.events.load",
+      "kind": "event",
+      "metadata": {
+        "cancelable": false,
+        "interface": "Event",
+        "targets": [
+          {
+            "target": "Window"
+          },
+          {
+            "bubbles": false,
+            "target": "Document"
+          },
+          {
+            "bubbles": false,
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "load",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#load",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "lostpointercapture event using PointerEvent.",
+      "domain": "dom",
+      "id": "dom.events.lostpointercapture",
+      "kind": "event",
+      "metadata": {
+        "cancelable": false,
+        "interface": "PointerEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "MathMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "SVGElement"
+          }
+        ]
+      },
+      "name": "lostpointercapture",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#dfn-lostpointercapture",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "mousedown event using MouseEvent.",
+      "domain": "dom",
+      "id": "dom.events.mousedown",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "MouseEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "mousedown",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#dfn-mousedown",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "mouseenter event using MouseEvent.",
+      "domain": "dom",
+      "id": "dom.events.mouseenter",
+      "kind": "event",
+      "metadata": {
+        "cancelable": false,
+        "interface": "MouseEvent",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "mouseenter",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#dfn-mouseenter",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "mouseleave event using MouseEvent.",
+      "domain": "dom",
+      "id": "dom.events.mouseleave",
+      "kind": "event",
+      "metadata": {
+        "cancelable": false,
+        "interface": "MouseEvent",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "mouseleave",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#dfn-mouseleave",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "mousemove event using MouseEvent.",
+      "domain": "dom",
+      "id": "dom.events.mousemove",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "MouseEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "mousemove",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#dfn-mousemove",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "mouseout event using MouseEvent.",
+      "domain": "dom",
+      "id": "dom.events.mouseout",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "MouseEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "mouseout",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#dfn-mouseout",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "mouseover event using MouseEvent.",
+      "domain": "dom",
+      "id": "dom.events.mouseover",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "MouseEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "mouseover",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#dfn-mouseover",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "mouseup event using MouseEvent.",
+      "domain": "dom",
+      "id": "dom.events.mouseup",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "MouseEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "mouseup",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#dfn-mouseup",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "pointercancel event using PointerEvent.",
+      "domain": "dom",
+      "id": "dom.events.pointercancel",
+      "kind": "event",
+      "metadata": {
+        "cancelable": false,
+        "extendedIn": [
+          {
+            "href": "https://html.spec.whatwg.org/multipage/indices.html#events-2%3Aevent-pointercancel",
+            "spec": "html"
+          }
+        ],
+        "interface": "PointerEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "MathMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "SVGElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Text"
+          }
+        ]
+      },
+      "name": "pointercancel",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#dfn-pointercancel",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "pointerdown event using PointerEvent.",
+      "domain": "dom",
+      "id": "dom.events.pointerdown",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "PointerEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "MathMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "SVGElement"
+          }
+        ]
+      },
+      "name": "pointerdown",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#dfn-pointerdown",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "pointerenter event using PointerEvent.",
+      "domain": "dom",
+      "id": "dom.events.pointerenter",
+      "kind": "event",
+      "metadata": {
+        "cancelable": false,
+        "interface": "PointerEvent",
+        "targets": [
+          {
+            "target": "Window"
+          },
+          {
+            "bubbles": false,
+            "target": "Document"
+          },
+          {
+            "bubbles": false,
+            "target": "HTMLElement"
+          },
+          {
+            "bubbles": false,
+            "target": "MathMLElement"
+          },
+          {
+            "bubbles": false,
+            "target": "SVGElement"
+          }
+        ]
+      },
+      "name": "pointerenter",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#dfn-pointerenter",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "pointerleave event using PointerEvent.",
+      "domain": "dom",
+      "id": "dom.events.pointerleave",
+      "kind": "event",
+      "metadata": {
+        "cancelable": false,
+        "interface": "PointerEvent",
+        "targets": [
+          {
+            "target": "Window"
+          },
+          {
+            "bubbles": false,
+            "target": "Document"
+          },
+          {
+            "bubbles": false,
+            "target": "HTMLElement"
+          },
+          {
+            "bubbles": false,
+            "target": "MathMLElement"
+          },
+          {
+            "bubbles": false,
+            "target": "SVGElement"
+          }
+        ]
+      },
+      "name": "pointerleave",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#dfn-pointerleave",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "pointermove event using PointerEvent.",
+      "domain": "dom",
+      "id": "dom.events.pointermove",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "PointerEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "MathMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "SVGElement"
+          }
+        ]
+      },
+      "name": "pointermove",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#dfn-pointermove",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "pointerout event using PointerEvent.",
+      "domain": "dom",
+      "id": "dom.events.pointerout",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "PointerEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "MathMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "SVGElement"
+          }
+        ]
+      },
+      "name": "pointerout",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#dfn-pointerout",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "pointerover event using PointerEvent.",
+      "domain": "dom",
+      "id": "dom.events.pointerover",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "PointerEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "MathMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "SVGElement"
+          }
+        ]
+      },
+      "name": "pointerover",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#dfn-pointerover",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "pointerrawupdate event using PointerEvent.",
+      "domain": "dom",
+      "id": "dom.events.pointerrawupdate",
+      "kind": "event",
+      "metadata": {
+        "cancelable": false,
+        "interface": "PointerEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "MathMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "SVGElement"
+          }
+        ]
+      },
+      "name": "pointerrawupdate",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#dfn-pointerrawupdate",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "pointerup event using PointerEvent.",
+      "domain": "dom",
+      "id": "dom.events.pointerup",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "PointerEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "MathMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "SVGElement"
+          }
+        ]
+      },
+      "name": "pointerup",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#dfn-pointerup",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "select event using Event.",
+      "domain": "dom",
+      "id": "dom.events.select",
+      "kind": "event",
+      "metadata": {
+        "cancelable": false,
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "select",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#select",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "selectionchange event using Event.",
+      "domain": "dom",
+      "id": "dom.events.selectionchange",
+      "kind": "event",
+      "metadata": {
+        "cancelable": false,
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "MathMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "SVGElement"
+          }
+        ]
+      },
+      "name": "selectionchange",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#firing-selectionchange-event",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "selectstart event using Event.",
+      "domain": "dom",
+      "id": "dom.events.selectstart",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "MathMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "SVGElement"
+          }
+        ]
+      },
+      "name": "selectstart",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/selection-api/#selectstart-event",
+        "profile": "standard",
+        "source": "selection-api",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "slotchange event using Event.",
+      "domain": "dom",
+      "id": "dom.events.slotchange",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLSlotElement"
+          }
+        ]
+      },
+      "name": "slotchange",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://dom.spec.whatwg.org/#eventdef-htmlslotelement-slotchange",
+        "profile": "standard",
+        "source": "whatwg-dom",
+        "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
+      }
+    },
+    {
+      "description": "textInput event using TextEvent.",
+      "domain": "dom",
+      "id": "dom.events.textinput",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "TextEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "textInput",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#textinput",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "unload event using Event.",
+      "domain": "dom",
+      "id": "dom.events.unload",
+      "kind": "event",
+      "metadata": {
+        "cancelable": false,
+        "interface": "Event",
+        "targets": [
+          {
+            "target": "Window"
+          },
+          {
+            "bubbles": false,
+            "target": "Document"
+          },
+          {
+            "bubbles": false,
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "unload",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#unload",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "wheel event using WheelEvent.",
+      "domain": "dom",
+      "id": "dom.events.wheel",
+      "kind": "event",
+      "metadata": {
+        "cancelable": false,
+        "interface": "WheelEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Element"
+          }
+        ]
+      },
+      "name": "wheel",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/pointerevents/#dfn-wheel",
+        "profile": "standard",
+        "source": "pointer-events",
+        "version": "snapshot 2026-08-29"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "dom/events.json"
+}

@@ -1,0 +1,422 @@
+{
+  "entries": [
+    {
+      "description": "Video player",
+      "domain": "html",
+      "id": "html.elements.video",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; phrasing; embedded; interactive; palpable",
+        "children": "source*; track*; transparent*",
+        "interface": "HTMLVideoElement",
+        "parents": "phrasing"
+      },
+      "name": "video",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#video",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <video> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.video.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "video",
+        "interface": "HTMLVideoElement"
+      },
+      "name": "video implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.video",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <video> element activation and default action.",
+      "domain": "html",
+      "id": "html.elements.video.activation-behavior",
+      "kind": "activation-behavior",
+      "metadata": {
+        "element": "video",
+        "interface": "HTMLVideoElement"
+      },
+      "name": "video activation and default action",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.video",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#video",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "autoplay content attribute on <video>.",
+      "domain": "html",
+      "id": "html.elements.video.attributes.autoplay",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "video",
+        "interface": "HTMLVideoElement"
+      },
+      "name": "autoplay",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.video",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-media-autoplay",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "controls content attribute on <video>.",
+      "domain": "html",
+      "id": "html.elements.video.attributes.controls",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "video",
+        "interface": "HTMLVideoElement"
+      },
+      "name": "controls",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.video",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-media-controls",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "crossorigin content attribute on <video>.",
+      "domain": "html",
+      "id": "html.elements.video.attributes.crossorigin",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "video",
+        "interface": "HTMLVideoElement"
+      },
+      "name": "crossorigin",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.video",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-media-crossorigin",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "height content attribute on <video>.",
+      "domain": "html",
+      "id": "html.elements.video.attributes.height",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "video",
+        "interface": "HTMLVideoElement"
+      },
+      "name": "height",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.video",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/embedded-content-other.html#attr-dim-height",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "loading content attribute on <video>.",
+      "domain": "html",
+      "id": "html.elements.video.attributes.loading",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "video",
+        "interface": "HTMLVideoElement"
+      },
+      "name": "loading",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.video",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-media-loading",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "loop content attribute on <video>.",
+      "domain": "html",
+      "id": "html.elements.video.attributes.loop",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "video",
+        "interface": "HTMLVideoElement"
+      },
+      "name": "loop",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.video",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-media-loop",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "muted content attribute on <video>.",
+      "domain": "html",
+      "id": "html.elements.video.attributes.muted",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "video",
+        "interface": "HTMLVideoElement"
+      },
+      "name": "muted",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.video",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-media-muted",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "playsinline content attribute on <video>.",
+      "domain": "html",
+      "id": "html.elements.video.attributes.playsinline",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "video",
+        "interface": "HTMLVideoElement"
+      },
+      "name": "playsinline",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.video",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-video-playsinline",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "poster content attribute on <video>.",
+      "domain": "html",
+      "id": "html.elements.video.attributes.poster",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "video",
+        "interface": "HTMLVideoElement"
+      },
+      "name": "poster",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.video",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-video-poster",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "preload content attribute on <video>.",
+      "domain": "html",
+      "id": "html.elements.video.attributes.preload",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "video",
+        "interface": "HTMLVideoElement"
+      },
+      "name": "preload",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.video",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-media-preload",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "src content attribute on <video>.",
+      "domain": "html",
+      "id": "html.elements.video.attributes.src",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "video",
+        "interface": "HTMLVideoElement"
+      },
+      "name": "src",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.video",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/media.html#attr-media-src",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "width content attribute on <video>.",
+      "domain": "html",
+      "id": "html.elements.video.attributes.width",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "video",
+        "interface": "HTMLVideoElement"
+      },
+      "name": "width",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.video",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/embedded-content-other.html#attr-dim-width",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <video> element content categories.",
+      "domain": "html",
+      "id": "html.elements.video.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "video",
+        "interface": "HTMLVideoElement"
+      },
+      "name": "video content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.video",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#video",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <video> element content model.",
+      "domain": "html",
+      "id": "html.elements.video.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "video",
+        "interface": "HTMLVideoElement"
+      },
+      "name": "video content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.video",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#video",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <video> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.video.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "video",
+        "interface": "HTMLVideoElement"
+      },
+      "name": "video interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.video",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#video",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/video.json"
+}

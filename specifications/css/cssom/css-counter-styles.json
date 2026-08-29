@@ -1,0 +1,362 @@
+{
+  "entries": [
+    {
+      "description": "interface CSSCounterStyleRule from css-counter-styles.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-counter-styles.interfaces.csscounterstylerule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-counter-styles.idl",
+        "inheritance": "CSSRule"
+      },
+      "name": "CSSCounterStyleRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-counter-styles.idl#WebIDL:CSSCounterStyleRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSCounterStyleRule.additiveSymbols Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-counter-styles.interfaces.csscounterstylerule.attributes.additivesymbols",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-counter-styles.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"additiveSymbols\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "additiveSymbols",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-counter-styles.interfaces.csscounterstylerule",
+      "spec": {
+        "anchor": "webref/idl/css-counter-styles.idl#WebIDL:CSSCounterStyleRule.additiveSymbols",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSCounterStyleRule.fallback Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-counter-styles.interfaces.csscounterstylerule.attributes.fallback",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-counter-styles.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"fallback\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "fallback",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-counter-styles.interfaces.csscounterstylerule",
+      "spec": {
+        "anchor": "webref/idl/css-counter-styles.idl#WebIDL:CSSCounterStyleRule.fallback",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSCounterStyleRule.name Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-counter-styles.interfaces.csscounterstylerule.attributes.name",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-counter-styles.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"name\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-counter-styles.interfaces.csscounterstylerule",
+      "spec": {
+        "anchor": "webref/idl/css-counter-styles.idl#WebIDL:CSSCounterStyleRule.name",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSCounterStyleRule.negative Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-counter-styles.interfaces.csscounterstylerule.attributes.negative",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-counter-styles.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"negative\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "negative",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-counter-styles.interfaces.csscounterstylerule",
+      "spec": {
+        "anchor": "webref/idl/css-counter-styles.idl#WebIDL:CSSCounterStyleRule.negative",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSCounterStyleRule.pad Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-counter-styles.interfaces.csscounterstylerule.attributes.pad",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-counter-styles.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"pad\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "pad",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-counter-styles.interfaces.csscounterstylerule",
+      "spec": {
+        "anchor": "webref/idl/css-counter-styles.idl#WebIDL:CSSCounterStyleRule.pad",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSCounterStyleRule.prefix Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-counter-styles.interfaces.csscounterstylerule.attributes.prefix",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-counter-styles.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"prefix\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "prefix",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-counter-styles.interfaces.csscounterstylerule",
+      "spec": {
+        "anchor": "webref/idl/css-counter-styles.idl#WebIDL:CSSCounterStyleRule.prefix",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSCounterStyleRule.range Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-counter-styles.interfaces.csscounterstylerule.attributes.range",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-counter-styles.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"range\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "range",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-counter-styles.interfaces.csscounterstylerule",
+      "spec": {
+        "anchor": "webref/idl/css-counter-styles.idl#WebIDL:CSSCounterStyleRule.range",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSCounterStyleRule.speakAs Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-counter-styles.interfaces.csscounterstylerule.attributes.speakas",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-counter-styles.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"speakAs\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "speakAs",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-counter-styles.interfaces.csscounterstylerule",
+      "spec": {
+        "anchor": "webref/idl/css-counter-styles.idl#WebIDL:CSSCounterStyleRule.speakAs",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSCounterStyleRule.suffix Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-counter-styles.interfaces.csscounterstylerule.attributes.suffix",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-counter-styles.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"suffix\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "suffix",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-counter-styles.interfaces.csscounterstylerule",
+      "spec": {
+        "anchor": "webref/idl/css-counter-styles.idl#WebIDL:CSSCounterStyleRule.suffix",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSCounterStyleRule.symbols Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-counter-styles.interfaces.csscounterstylerule.attributes.symbols",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-counter-styles.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"symbols\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "symbols",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-counter-styles.interfaces.csscounterstylerule",
+      "spec": {
+        "anchor": "webref/idl/css-counter-styles.idl#WebIDL:CSSCounterStyleRule.symbols",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSCounterStyleRule.system Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-counter-styles.interfaces.csscounterstylerule.attributes.system",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-counter-styles.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"system\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "system",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-counter-styles.interfaces.csscounterstylerule",
+      "spec": {
+        "anchor": "webref/idl/css-counter-styles.idl#WebIDL:CSSCounterStyleRule.system",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSCounterStyleRule has CSSRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-counter-styles.interfaces.csscounterstylerule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSRule"
+      },
+      "name": "CSSCounterStyleRule inherits CSSRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-counter-styles.interfaces.csscounterstylerule",
+      "spec": {
+        "anchor": "webref/idl/css-counter-styles.idl#WebIDL:CSSCounterStyleRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSRule from css-counter-styles.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-counter-styles.interfaces.cssrule",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "css-counter-styles.idl"
+      },
+      "name": "CSSRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-counter-styles.idl#WebIDL:CSSRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSRule.COUNTER_STYLE_RULE Web IDL const.",
+      "domain": "css",
+      "id": "css.cssom.css-counter-styles.interfaces.cssrule.constants.counter_style_rule",
+      "kind": "const",
+      "metadata": {
+        "idlSource": "css-counter-styles.idl",
+        "signature": "{\"type\":\"const\",\"name\":\"COUNTER_STYLE_RULE\",\"idlType\":{\"type\":\"const-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned short\"},\"extAttrs\":[],\"value\":{\"type\":\"number\",\"value\":\"11\"}}"
+      },
+      "name": "COUNTER_STYLE_RULE",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-counter-styles.interfaces.cssrule",
+      "spec": {
+        "anchor": "webref/idl/css-counter-styles.idl#WebIDL:CSSRule.COUNTER_STYLE_RULE",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-counter-styles.json"
+}

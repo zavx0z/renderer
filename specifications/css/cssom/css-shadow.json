@@ -1,0 +1,56 @@
+{
+  "entries": [
+    {
+      "description": "interface Element from css-shadow.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-shadow.interfaces.element",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "css-shadow.idl"
+      },
+      "name": "Element",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-shadow.idl#WebIDL:Element",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "Element.part Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-shadow.interfaces.element.attributes.part",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SameObject",
+          "PutForwards={\"type\":\"identifier\",\"value\":\"value\"}"
+        ],
+        "idlSource": "css-shadow.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"part\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMTokenList\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SameObject\",\"rhs\":null,\"arguments\":[]},{\"type\":\"extended-attribute\",\"name\":\"PutForwards\",\"rhs\":{\"type\":\"identifier\",\"value\":\"value\"},\"arguments\":[]}],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "part",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-shadow.interfaces.element",
+      "spec": {
+        "anchor": "webref/idl/css-shadow.idl#WebIDL:Element.part",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-shadow.json"
+}

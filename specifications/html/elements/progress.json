@@ -1,0 +1,169 @@
+{
+  "entries": [
+    {
+      "description": "Progress bar",
+      "domain": "html",
+      "id": "html.elements.progress",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; phrasing; labelable; palpable",
+        "children": "phrasing*",
+        "interface": "HTMLProgressElement",
+        "parents": "phrasing"
+      },
+      "name": "progress",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-progress-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <progress> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.progress.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "progress",
+        "interface": "HTMLProgressElement"
+      },
+      "name": "progress implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.progress",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "max content attribute on <progress>.",
+      "domain": "html",
+      "id": "html.elements.progress.attributes.max",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "progress",
+        "interface": "HTMLProgressElement"
+      },
+      "name": "max",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.progress",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-progress-max",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "value content attribute on <progress>.",
+      "domain": "html",
+      "id": "html.elements.progress.attributes.value",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "progress",
+        "interface": "HTMLProgressElement"
+      },
+      "name": "value",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.progress",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-progress-value",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <progress> element content categories.",
+      "domain": "html",
+      "id": "html.elements.progress.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "progress",
+        "interface": "HTMLProgressElement"
+      },
+      "name": "progress content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.progress",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-progress-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <progress> element content model.",
+      "domain": "html",
+      "id": "html.elements.progress.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "progress",
+        "interface": "HTMLProgressElement"
+      },
+      "name": "progress content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.progress",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-progress-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <progress> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.progress.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "progress",
+        "interface": "HTMLProgressElement"
+      },
+      "name": "progress interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.progress",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-progress-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/progress.json"
+}

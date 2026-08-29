@@ -1,0 +1,146 @@
+{
+  "entries": [
+    {
+      "description": "Machine-readable equivalent of date- or time-related data",
+      "domain": "html",
+      "id": "html.elements.time",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; phrasing; palpable",
+        "children": "phrasing",
+        "interface": "HTMLTimeElement",
+        "parents": "phrasing"
+      },
+      "name": "time",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-time-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <time> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.time.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "time",
+        "interface": "HTMLTimeElement"
+      },
+      "name": "time implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.time",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "datetime content attribute on <time>.",
+      "domain": "html",
+      "id": "html.elements.time.attributes.datetime",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "time",
+        "interface": "HTMLTimeElement"
+      },
+      "name": "datetime",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.time",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/text-level-semantics.html#attr-time-datetime",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <time> element content categories.",
+      "domain": "html",
+      "id": "html.elements.time.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "time",
+        "interface": "HTMLTimeElement"
+      },
+      "name": "time content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.time",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-time-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <time> element content model.",
+      "domain": "html",
+      "id": "html.elements.time.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "time",
+        "interface": "HTMLTimeElement"
+      },
+      "name": "time content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.time",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-time-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <time> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.time.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "time",
+        "interface": "HTMLTimeElement"
+      },
+      "name": "time interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.time",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-time-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/time.json"
+}

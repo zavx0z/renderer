@@ -1,0 +1,168 @@
+{
+  "entries": [
+    {
+      "description": "dictionary ContentVisibilityAutoStateChangeEventInit from css-contain.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-contain.dictionaries.contentvisibilityautostatechangeeventinit",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "css-contain.idl",
+        "inheritance": "EventInit"
+      },
+      "name": "ContentVisibilityAutoStateChangeEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-contain.idl#WebIDL:ContentVisibilityAutoStateChangeEventInit",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "ContentVisibilityAutoStateChangeEventInit.skipped Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-contain.dictionaries.contentvisibilityautostatechangeeventinit.fields.skipped",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-contain.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"skipped\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"required\":false}"
+      },
+      "name": "skipped",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-contain.dictionaries.contentvisibilityautostatechangeeventinit",
+      "spec": {
+        "anchor": "webref/idl/css-contain.idl#WebIDL:ContentVisibilityAutoStateChangeEventInit.skipped",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "ContentVisibilityAutoStateChangeEventInit has EventInit as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-contain.dictionaries.contentvisibilityautostatechangeeventinit.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "EventInit"
+      },
+      "name": "ContentVisibilityAutoStateChangeEventInit inherits EventInit",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-contain.dictionaries.contentvisibilityautostatechangeeventinit",
+      "spec": {
+        "anchor": "webref/idl/css-contain.idl#WebIDL:ContentVisibilityAutoStateChangeEventInit",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface ContentVisibilityAutoStateChangeEvent from css-contain.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-contain.interfaces.contentvisibilityautostatechangeevent",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-contain.idl",
+        "inheritance": "Event"
+      },
+      "name": "ContentVisibilityAutoStateChangeEvent",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-contain.idl#WebIDL:ContentVisibilityAutoStateChangeEvent",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "ContentVisibilityAutoStateChangeEvent.skipped Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-contain.interfaces.contentvisibilityautostatechangeevent.attributes.skipped",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-contain.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"skipped\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "skipped",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-contain.interfaces.contentvisibilityautostatechangeevent",
+      "spec": {
+        "anchor": "webref/idl/css-contain.idl#WebIDL:ContentVisibilityAutoStateChangeEvent.skipped",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "ContentVisibilityAutoStateChangeEvent.constructor Web IDL constructor.",
+      "domain": "css",
+      "id": "css.cssom.css-contain.interfaces.contentvisibilityautostatechangeevent.constructors.constructor",
+      "kind": "constructor",
+      "metadata": {
+        "idlSource": "css-contain.idl",
+        "signature": "{\"type\":\"constructor\",\"arguments\":[{\"type\":\"argument\",\"name\":\"type\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"eventInitDict\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"ContentVisibilityAutoStateChangeEventInit\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[]}"
+      },
+      "name": "constructor",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-contain.interfaces.contentvisibilityautostatechangeevent",
+      "spec": {
+        "anchor": "webref/idl/css-contain.idl#WebIDL:ContentVisibilityAutoStateChangeEvent.constructor",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "ContentVisibilityAutoStateChangeEvent has Event as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-contain.interfaces.contentvisibilityautostatechangeevent.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "Event"
+      },
+      "name": "ContentVisibilityAutoStateChangeEvent inherits Event",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-contain.interfaces.contentvisibilityautostatechangeevent",
+      "spec": {
+        "anchor": "webref/idl/css-contain.idl#WebIDL:ContentVisibilityAutoStateChangeEvent",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-contain.json"
+}

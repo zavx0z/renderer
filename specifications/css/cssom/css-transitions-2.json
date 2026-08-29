@@ -1,0 +1,217 @@
+{
+  "entries": [
+    {
+      "description": "dictionary TransitionEventInit from css-transitions-2.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-transitions-2.dictionaries.transitioneventinit",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "css-transitions-2.idl"
+      },
+      "name": "TransitionEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-transitions-2.idl#WebIDL:TransitionEventInit",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "TransitionEventInit.animation Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-transitions-2.dictionaries.transitioneventinit.fields.animation",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-transitions-2.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"animation\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"CSSTransition\"},\"default\":{\"type\":\"null\"},\"required\":false}"
+      },
+      "name": "animation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-transitions-2.dictionaries.transitioneventinit",
+      "spec": {
+        "anchor": "webref/idl/css-transitions-2.idl#WebIDL:TransitionEventInit.animation",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSStartingStyleRule from css-transitions-2.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-transitions-2.interfaces.cssstartingstylerule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-transitions-2.idl",
+        "inheritance": "CSSGroupingRule"
+      },
+      "name": "CSSStartingStyleRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-transitions-2.idl#WebIDL:CSSStartingStyleRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSStartingStyleRule has CSSGroupingRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-transitions-2.interfaces.cssstartingstylerule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSGroupingRule"
+      },
+      "name": "CSSStartingStyleRule inherits CSSGroupingRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-transitions-2.interfaces.cssstartingstylerule",
+      "spec": {
+        "anchor": "webref/idl/css-transitions-2.idl#WebIDL:CSSStartingStyleRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSTransition from css-transitions-2.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-transitions-2.interfaces.csstransition",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-transitions-2.idl",
+        "inheritance": "Animation"
+      },
+      "name": "CSSTransition",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-transitions-2.idl#WebIDL:CSSTransition",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSTransition.transitionProperty Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-transitions-2.interfaces.csstransition.attributes.transitionproperty",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-transitions-2.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"transitionProperty\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "transitionProperty",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-transitions-2.interfaces.csstransition",
+      "spec": {
+        "anchor": "webref/idl/css-transitions-2.idl#WebIDL:CSSTransition.transitionProperty",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSTransition has Animation as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-transitions-2.interfaces.csstransition.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "Animation"
+      },
+      "name": "CSSTransition inherits Animation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-transitions-2.interfaces.csstransition",
+      "spec": {
+        "anchor": "webref/idl/css-transitions-2.idl#WebIDL:CSSTransition",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface TransitionEvent from css-transitions-2.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-transitions-2.interfaces.transitionevent",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-transitions-2.idl"
+      },
+      "name": "TransitionEvent",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-transitions-2.idl#WebIDL:TransitionEvent",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "TransitionEvent.animation Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-transitions-2.interfaces.transitionevent.attributes.animation",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-transitions-2.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"animation\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"CSSTransition\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "animation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-transitions-2.interfaces.transitionevent",
+      "spec": {
+        "anchor": "webref/idl/css-transitions-2.idl#WebIDL:TransitionEvent.animation",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-transitions-2.json"
+}

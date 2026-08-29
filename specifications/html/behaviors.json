@@ -1,0 +1,1087 @@
+{
+  "entries": [
+    {
+      "description": "Implicit roles, allowed ARIA, accessible names/states, and platform mappings.",
+      "domain": "html",
+      "id": "html.behaviors.accessibility-semantics",
+      "kind": "behavior",
+      "name": "accessibility semantics",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#accessibility-semantics",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Legacy pre-activation, activation, and canceled activation behavior.",
+      "domain": "html",
+      "id": "html.behaviors.activation-behavior",
+      "kind": "behavior",
+      "name": "activation behavior",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#activation-behavior",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Content attributes reflect through the matching IDL properties with specified coercion.",
+      "domain": "html",
+      "id": "html.behaviors.attribute-property-reflection",
+      "kind": "behavior",
+      "name": "attribute property reflection",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#attribute-property-reflection",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Button type, disabledness, command, submit, and reset activation semantics.",
+      "domain": "html",
+      "id": "html.behaviors.button",
+      "kind": "behavior",
+      "name": "button",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#button",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Canvas bitmap, contexts, dimensions, serialization, and transfer semantics.",
+      "domain": "html",
+      "id": "html.behaviors.canvas",
+      "kind": "behavior",
+      "name": "canvas",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#canvas",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Clipboard events and async clipboard integration at editing and input boundaries.",
+      "domain": "html",
+      "id": "html.behaviors.clipboard",
+      "kind": "behavior",
+      "name": "clipboard",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#clipboard",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "ValidityState, validation messages, willValidate, checkValidity, and reportValidity.",
+      "domain": "html",
+      "id": "html.behaviors.constraint-validation",
+      "kind": "behavior",
+      "name": "constraint validation",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#constraint-validation",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Element categories are represented where they affect observable behavior.",
+      "domain": "html",
+      "id": "html.behaviors.content-categories",
+      "kind": "behavior",
+      "name": "content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#content-categories",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Element content-model constraints and parser/DOM effects.",
+      "domain": "html",
+      "id": "html.behaviors.content-model",
+      "kind": "behavior",
+      "name": "content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#content-model",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Trusted activation and input events run the element's specified default action.",
+      "domain": "html",
+      "id": "html.behaviors.default-actions",
+      "kind": "behavior",
+      "name": "default actions",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#default-actions",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Details disclosure state, summary activation, exclusivity, and toggle events.",
+      "domain": "html",
+      "id": "html.behaviors.details-summary",
+      "kind": "behavior",
+      "name": "details summary",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#details-summary",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Dialog modal/nonmodal state, top layer, focus, close request, and events.",
+      "domain": "html",
+      "id": "html.behaviors.dialog",
+      "kind": "behavior",
+      "name": "dialog",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#dialog",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Direct and inherited disabledness suppresses activation and focus as specified.",
+      "domain": "html",
+      "id": "html.behaviors.disabledness",
+      "kind": "behavior",
+      "name": "disabledness",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#disabledness",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Drag data store, DataTransfer, event sequence, cancellation, and drop behavior.",
+      "domain": "html",
+      "id": "html.behaviors.drag-and-drop",
+      "kind": "behavior",
+      "name": "drag and drop",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#drag-and-drop",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "contenteditable, designMode, editing host, selection, and input mutation behavior.",
+      "domain": "html",
+      "id": "html.behaviors.editing",
+      "kind": "behavior",
+      "name": "editing",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#editing",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Element and control focusability follows HTML rules.",
+      "domain": "html",
+      "id": "html.behaviors.focusability",
+      "kind": "behavior",
+      "name": "focusability",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#focusability",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Listed controls resolve and update their form owner.",
+      "domain": "html",
+      "id": "html.behaviors.form-ownership",
+      "kind": "behavior",
+      "name": "form ownership",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#form-ownership",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Form reset restores control defaults and dispatches the reset event.",
+      "domain": "html",
+      "id": "html.behaviors.form-reset",
+      "kind": "behavior",
+      "name": "form reset",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#form-reset",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Submission constructs form data, validates, dispatches submit/formdata, and navigates or invokes actions.",
+      "domain": "html",
+      "id": "html.behaviors.form-submission",
+      "kind": "behavior",
+      "name": "form submission",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#form-submission",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "hidden state affects rendering and interaction without destroying semantic identity.",
+      "domain": "html",
+      "id": "html.behaviors.hidden",
+      "kind": "behavior",
+      "name": "hidden",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#hidden",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Image request selection, decode, dimensions, currentSrc, load/error, and fallback semantics.",
+      "domain": "html",
+      "id": "html.behaviors.images",
+      "kind": "behavior",
+      "name": "images",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#images",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "inert subtrees suppress focus, activation, selection, and accessibility exposure.",
+      "domain": "html",
+      "id": "html.behaviors.inert",
+      "kind": "behavior",
+      "name": "inert",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#inert",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "showPicker invokes the type-specific picker with activation and security checks.",
+      "domain": "html",
+      "id": "html.behaviors.input-picker",
+      "kind": "behavior",
+      "name": "input picker",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#input-picker",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Text-like input selectionStart, selectionEnd, selectionDirection, and range mutation.",
+      "domain": "html",
+      "id": "html.behaviors.input-selection",
+      "kind": "behavior",
+      "name": "input selection",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#input-selection",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "stepUp and stepDown apply type-specific stepping, ranges, and mismatch rules.",
+      "domain": "html",
+      "id": "html.behaviors.input-step",
+      "kind": "behavior",
+      "name": "input step",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#input-step",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "HTMLInputElement button state, sanitization, properties, events, and activation behavior.",
+      "domain": "html",
+      "id": "html.behaviors.input-type-button",
+      "kind": "input-type",
+      "name": "input type=button",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/input.html#button-state-(type=button)",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "HTMLInputElement checkbox state, sanitization, properties, events, and activation behavior.",
+      "domain": "html",
+      "id": "html.behaviors.input-type-checkbox",
+      "kind": "input-type",
+      "name": "input type=checkbox",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/input.html#checkbox-state-(type=checkbox)",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "HTMLInputElement color state, sanitization, properties, events, and activation behavior.",
+      "domain": "html",
+      "id": "html.behaviors.input-type-color",
+      "kind": "input-type",
+      "name": "input type=color",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/input.html#color-state-(type=color)",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "HTMLInputElement date state, sanitization, properties, events, and activation behavior.",
+      "domain": "html",
+      "id": "html.behaviors.input-type-date",
+      "kind": "input-type",
+      "name": "input type=date",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/input.html#date-state-(type=date)",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "HTMLInputElement datetime-local state, sanitization, properties, events, and activation behavior.",
+      "domain": "html",
+      "id": "html.behaviors.input-type-datetime-local",
+      "kind": "input-type",
+      "name": "input type=datetime-local",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/input.html#datetime-local-state-(type=datetime-local)",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "HTMLInputElement email state, sanitization, properties, events, and activation behavior.",
+      "domain": "html",
+      "id": "html.behaviors.input-type-email",
+      "kind": "input-type",
+      "name": "input type=email",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/input.html#email-state-(type=email)",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "HTMLInputElement file state, sanitization, properties, events, and activation behavior.",
+      "domain": "html",
+      "id": "html.behaviors.input-type-file",
+      "kind": "input-type",
+      "name": "input type=file",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/input.html#file-state-(type=file)",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "HTMLInputElement hidden state, sanitization, properties, events, and activation behavior.",
+      "domain": "html",
+      "id": "html.behaviors.input-type-hidden",
+      "kind": "input-type",
+      "name": "input type=hidden",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/input.html#hidden-state-(type=hidden)",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "HTMLInputElement image state, sanitization, properties, events, and activation behavior.",
+      "domain": "html",
+      "id": "html.behaviors.input-type-image",
+      "kind": "input-type",
+      "name": "input type=image",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/input.html#image-state-(type=image)",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "HTMLInputElement month state, sanitization, properties, events, and activation behavior.",
+      "domain": "html",
+      "id": "html.behaviors.input-type-month",
+      "kind": "input-type",
+      "name": "input type=month",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/input.html#month-state-(type=month)",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "HTMLInputElement number state, sanitization, properties, events, and activation behavior.",
+      "domain": "html",
+      "id": "html.behaviors.input-type-number",
+      "kind": "input-type",
+      "name": "input type=number",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/input.html#number-state-(type=number)",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "HTMLInputElement password state, sanitization, properties, events, and activation behavior.",
+      "domain": "html",
+      "id": "html.behaviors.input-type-password",
+      "kind": "input-type",
+      "name": "input type=password",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/input.html#password-state-(type=password)",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "HTMLInputElement radio state, sanitization, properties, events, and activation behavior.",
+      "domain": "html",
+      "id": "html.behaviors.input-type-radio",
+      "kind": "input-type",
+      "name": "input type=radio",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/input.html#radio-state-(type=radio)",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "HTMLInputElement range state, sanitization, properties, events, and activation behavior.",
+      "domain": "html",
+      "id": "html.behaviors.input-type-range",
+      "kind": "input-type",
+      "name": "input type=range",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/input.html#range-state-(type=range)",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "HTMLInputElement reset state, sanitization, properties, events, and activation behavior.",
+      "domain": "html",
+      "id": "html.behaviors.input-type-reset",
+      "kind": "input-type",
+      "name": "input type=reset",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/input.html#reset-state-(type=reset)",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "HTMLInputElement search state, sanitization, properties, events, and activation behavior.",
+      "domain": "html",
+      "id": "html.behaviors.input-type-search",
+      "kind": "input-type",
+      "name": "input type=search",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/input.html#search-state-(type=search)",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "HTMLInputElement submit state, sanitization, properties, events, and activation behavior.",
+      "domain": "html",
+      "id": "html.behaviors.input-type-submit",
+      "kind": "input-type",
+      "name": "input type=submit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/input.html#submit-state-(type=submit)",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "HTMLInputElement tel state, sanitization, properties, events, and activation behavior.",
+      "domain": "html",
+      "id": "html.behaviors.input-type-tel",
+      "kind": "input-type",
+      "name": "input type=tel",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/input.html#tel-state-(type=tel)",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "HTMLInputElement text state, sanitization, properties, events, and activation behavior.",
+      "domain": "html",
+      "id": "html.behaviors.input-type-text",
+      "kind": "input-type",
+      "name": "input type=text",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/input.html#text-state-(type=text)",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "HTMLInputElement time state, sanitization, properties, events, and activation behavior.",
+      "domain": "html",
+      "id": "html.behaviors.input-type-time",
+      "kind": "input-type",
+      "name": "input type=time",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/input.html#time-state-(type=time)",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "HTMLInputElement url state, sanitization, properties, events, and activation behavior.",
+      "domain": "html",
+      "id": "html.behaviors.input-type-url",
+      "kind": "input-type",
+      "name": "input type=url",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/input.html#url-state-(type=url)",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "HTMLInputElement week state, sanitization, properties, events, and activation behavior.",
+      "domain": "html",
+      "id": "html.behaviors.input-type-week",
+      "kind": "input-type",
+      "name": "input type=week",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/input.html#week-state-(type=week)",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Explicit and implicit labels resolve to labelable controls.",
+      "domain": "html",
+      "id": "html.behaviors.label-association",
+      "kind": "behavior",
+      "name": "label association",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#label-association",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Hyperlink activation, URL resolution, target, download, ping, and navigation.",
+      "domain": "html",
+      "id": "html.behaviors.links-navigation",
+      "kind": "behavior",
+      "name": "links navigation",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#links-navigation",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Ordered/unordered/description list semantic state and reflected attributes.",
+      "domain": "html",
+      "id": "html.behaviors.lists",
+      "kind": "behavior",
+      "name": "lists",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#lists",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Dirty/live control state remains distinct from default content attributes.",
+      "domain": "html",
+      "id": "html.behaviors.live-state-vs-content-attributes",
+      "kind": "behavior",
+      "name": "live state vs content attributes",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#live-state-vs-content-attributes",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Resource owners dispatch load/error with the specified timing and target.",
+      "domain": "html",
+      "id": "html.behaviors.load-error-events",
+      "kind": "behavior",
+      "name": "load error events",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#load-error-events",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Audio/video resource selection, playback state, tracks, events, and controls.",
+      "domain": "html",
+      "id": "html.behaviors.media",
+      "kind": "behavior",
+      "name": "media",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#media",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Popover state, top layer, invokers, light dismiss, focus, and toggle events.",
+      "domain": "html",
+      "id": "html.behaviors.popover",
+      "kind": "behavior",
+      "name": "popover",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#popover",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Progress and meter numeric normalization and semantic rendering state.",
+      "domain": "html",
+      "id": "html.behaviors.progress-meter",
+      "kind": "behavior",
+      "name": "progress meter",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#progress-meter",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Element-owned fetch, readiness, cancellation, and resource lifecycle.",
+      "domain": "html",
+      "id": "html.behaviors.resource-loading",
+      "kind": "behavior",
+      "name": "resource loading",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#resource-loading",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Select, option, and optgroup ownership, live collections, selectedness, and picker/listbox behavior.",
+      "domain": "html",
+      "id": "html.behaviors.select-option-optgroup",
+      "kind": "behavior",
+      "name": "select option optgroup",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#select-option-optgroup",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "tabindex and document order determine sequential navigation.",
+      "domain": "html",
+      "id": "html.behaviors.sequential-focus-navigation",
+      "kind": "behavior",
+      "name": "sequential focus navigation",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#sequential-focus-navigation",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Table model, rows/cells/sections collections, spans, headers, and algorithms.",
+      "domain": "html",
+      "id": "html.behaviors.tables",
+      "kind": "behavior",
+      "name": "tables",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#tables",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "Textarea raw/default/live value, wrapping, selection, and validation semantics.",
+      "domain": "html",
+      "id": "html.behaviors.textarea",
+      "kind": "behavior",
+      "name": "textarea",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "whatwg-html#textarea",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/behaviors.json"
+}

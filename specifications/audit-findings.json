@@ -1,0 +1,1246 @@
+{
+  "schemaVersion": 1,
+  "verificationDate": "2026-08-29",
+  "gaps": [
+    {
+      "schemaVersion": 1,
+      "id": "gap.engine.glyph-cache-font-identity",
+      "capability": "engine.features.glyph-cache-identity",
+      "reportedBy": {
+        "repository": "renderer",
+        "package": "@zavx0z/renderer-webgpu",
+        "subject": "retained text materialization",
+        "scenario": "two fonts reuse the same glyph id"
+      },
+      "expected": {
+        "reference": "@engine/core text/resource contract",
+        "behavior": "Glyph geometry cache identity includes the exact font and glyph so different fonts cannot share incompatible outlines."
+      },
+      "actual": {
+        "behavior": "The static glyph cache is keyed only by gid; a diagnostic probe produced identical geometry for two fonts with the same gid and different outlines.",
+        "evidence": [
+          {
+            "type": "implementation",
+            "repository": "engine",
+            "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e",
+            "path": "packages/core/src/objects/text.ts",
+            "symbol": "glyphGeometryCache",
+            "lines": "159-268",
+            "proves": "Cache lookup and insertion use gid without font identity.",
+            "doesNotProve": "The eventual generic cache design."
+          }
+        ]
+      },
+      "minimalReproduction": {
+        "source": "Create two fake fonts that return the same gid but different outlines, then construct Text geometry for each.",
+        "test": "Assert the second geometry differs from the first; current code returns the first geometry."
+      },
+      "suspectedOwner": {
+        "repository": "engine",
+        "package": "@engine/core",
+        "stage": "text-resource"
+      },
+      "severity": "P0",
+      "dependencies": [],
+      "forbiddenLocalWorkarounds": [
+        "Changing glyph ids in Renderer or components",
+        "Per-component Text caches"
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "gap.engine.texture-cache-device-identity",
+      "capability": "engine.features.texture-device-identity",
+      "reportedBy": {
+        "repository": "renderer",
+        "package": "@zavx0z/renderer-webgpu",
+        "subject": "image materialization",
+        "scenario": "same source is requested on two GPUDevice owners"
+      },
+      "expected": {
+        "reference": "WebGPU resource-device ownership and @engine/core texture contract",
+        "behavior": "Every cached GPUTexture and fallback texture belongs to the exact GPUDevice that created it."
+      },
+      "actual": {
+        "behavior": "TextureLoader caches by src and one process-global fallback; a second device can receive the first device's texture.",
+        "evidence": [
+          {
+            "type": "implementation",
+            "repository": "engine",
+            "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e",
+            "path": "packages/core/src/loaders/texture-loader.ts",
+            "symbol": "textureCache/fallbackTexture",
+            "lines": "17-193",
+            "proves": "Cache and fallback identity are global rather than GPUDevice-scoped.",
+            "doesNotProve": "A future per-device cache policy."
+          }
+        ]
+      },
+      "minimalReproduction": {
+        "source": "Request the fallback or same src from fake device A and then fake device B.",
+        "test": "Assert each device creates and receives its own texture; current code returns A's texture to B."
+      },
+      "suspectedOwner": {
+        "repository": "engine",
+        "package": "@engine/core",
+        "stage": "texture-resource"
+      },
+      "severity": "P0",
+      "dependencies": [],
+      "forbiddenLocalWorkarounds": [
+        "Source URL rewriting in consumers",
+        "Renderer-owned duplicate texture cache"
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "gap.engine.renderer-resource-teardown",
+      "capability": "engine.features.renderer-disposal",
+      "reportedBy": {
+        "repository": "renderer",
+        "package": "@zavx0z/renderer-browser",
+        "subject": "browser runtime cleanup",
+        "scenario": "dispose a complete canvas/plane runtime"
+      },
+      "expected": {
+        "reference": "@engine/core resource lifecycle contract",
+        "behavior": "Disposing the Engine renderer releases device-owned buffers, attachments, cached texture/text resources, callbacks and subscriptions exactly once."
+      },
+      "actual": {
+        "behavior": "Renderer exposes geometry invalidation but no whole-owner dispose; TextureLoader caches/listeners and evicted Text GPU buffers have no complete teardown path.",
+        "evidence": [
+          {
+            "type": "implementation",
+            "repository": "engine",
+            "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e",
+            "path": "packages/core/src/renderer/index.ts",
+            "symbol": "Renderer",
+            "proves": "No whole-renderer dispose method exists.",
+            "doesNotProve": "Resource lifetime outside Renderer."
+          },
+          {
+            "type": "implementation",
+            "repository": "engine",
+            "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e",
+            "path": "packages/core/src/loaders/texture-loader.ts",
+            "symbol": "TextureLoader caches",
+            "proves": "Global caches and callback sets have no clear/dispose/unsubscribe owner API.",
+            "doesNotProve": "A caller-specific manual teardown."
+          }
+        ]
+      },
+      "minimalReproduction": {
+        "source": "Create a renderer, materialize text/images/pipelines, dispose the browser runtime and inspect retained Engine cache/resource owners.",
+        "test": "Assert all owner resources and callbacks are released exactly once."
+      },
+      "suspectedOwner": {
+        "repository": "engine",
+        "package": "@engine/core",
+        "stage": "resource-lifecycle"
+      },
+      "severity": "P0",
+      "dependencies": [
+        "gap.engine.texture-cache-device-identity"
+      ],
+      "forbiddenLocalWorkarounds": [
+        "Browser runtime reaching into private Engine maps",
+        "Component-owned GPU resource destruction"
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "gap.engine.css-layout-ownership",
+      "capability": "engine.features.dom-css-ownership-boundary",
+      "reportedBy": {
+        "repository": "renderer",
+        "package": "@zavx0z/renderer",
+        "subject": "platform ownership law",
+        "scenario": "Engine public Object3D surface"
+      },
+      "expected": {
+        "reference": "Accepted one semantic tree / CPU Renderer CSS ownership law",
+        "behavior": "Engine public objects contain only scene, GPU and resource state; DOM/CSS layout semantics remain in CPU Renderer."
+      },
+      "actual": {
+        "behavior": "Object3D publicly exposes layout/computedLayout and @engine/core exports CSS-like flex/sizing/gap/padding/margin types.",
+        "evidence": [
+          {
+            "type": "implementation",
+            "repository": "engine",
+            "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e",
+            "path": "packages/core/src/core/object-3d.ts",
+            "symbol": "Object3D.layout/computedLayout",
+            "lines": "22-23",
+            "proves": "CSS-like layout state is publicly attached to Engine scene objects.",
+            "doesNotProve": "Whether any current consumer still uses the fields."
+          },
+          {
+            "type": "implementation",
+            "repository": "engine",
+            "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e",
+            "path": "packages/core/src/layout/layout-types.ts",
+            "symbol": "LayoutProps/ComputedLayout",
+            "proves": "Engine defines CSS-like layout types.",
+            "doesNotProve": "Migration safety."
+          }
+        ]
+      },
+      "minimalReproduction": {
+        "source": "Import LayoutProps or assign Object3D.layout from @engine/core.",
+        "test": "A package-boundary test should reject DOM/CSS semantic exports from Engine."
+      },
+      "suspectedOwner": {
+        "repository": "engine",
+        "package": "@engine/core",
+        "stage": "public-boundary"
+      },
+      "severity": "P0",
+      "dependencies": [],
+      "forbiddenLocalWorkarounds": [
+        "Moving CSS computation into materials",
+        "Creating a second layout tree on Object3D"
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "gap.engine.browser-document-ownership",
+      "capability": "engine.features.browser-document-boundary",
+      "reportedBy": {
+        "repository": "renderer",
+        "package": "@zavx0z/renderer-browser",
+        "subject": "Document-bound browser composition",
+        "scenario": "secondary Document or canvas runtime"
+      },
+      "expected": {
+        "reference": "Browser composition ownership law",
+        "behavior": "Engine receives host-neutral inputs/resources; browser document/canvas/listener ownership stays in renderer-browser."
+      },
+      "actual": {
+        "behavior": "ViewPoint accepts HTMLElement, mutates touchAction and binds global document; Renderer creates/owns HTMLCanvasElement.",
+        "evidence": [
+          {
+            "type": "implementation",
+            "repository": "engine",
+            "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e",
+            "path": "packages/core/src/core/view-point.ts",
+            "symbol": "ViewPoint attach/dispose",
+            "proves": "Browser globals and HTMLElement state are owned inside Engine.",
+            "doesNotProve": "Behavior on every browser."
+          },
+          {
+            "type": "implementation",
+            "repository": "engine",
+            "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e",
+            "path": "packages/core/src/renderer/index.ts",
+            "symbol": "Renderer.init canvas",
+            "proves": "Engine owns HTMLCanvasElement creation/lifecycle.",
+            "doesNotProve": "A future host-neutral constructor."
+          }
+        ]
+      },
+      "minimalReproduction": {
+        "source": "Create ViewPoint for an element in a secondary Document and inspect listener owner and restored touchAction after disposal.",
+        "test": "Assert listeners bind ownerDocument and browser state is restored or entirely browser-owner controlled."
+      },
+      "suspectedOwner": {
+        "repository": "engine",
+        "package": "@engine/core",
+        "stage": "public-boundary"
+      },
+      "severity": "P0",
+      "dependencies": [],
+      "forbiddenLocalWorkarounds": [
+        "Monkey-patching global document",
+        "Duplicating browser listeners in components"
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "gap.engine.index-buffer-format",
+      "capability": "engine.features.index-buffer-format",
+      "reportedBy": {
+        "repository": "renderer",
+        "package": "@zavx0z/renderer-webgpu",
+        "subject": "Engine draw ABI",
+        "scenario": "Uint8 or invalid index attribute"
+      },
+      "expected": {
+        "reference": "WebGPU index buffer format contract",
+        "behavior": "Only Uint16/Uint32 index buffers reach GPU submission and their declared format matches the underlying data."
+      },
+      "actual": {
+        "behavior": "BufferGeometry accepts arbitrary TypedArray indices and GLTF admits UNSIGNED_BYTE, while Renderer binds every non-Uint32 index as uint16 without validation.",
+        "evidence": [
+          {
+            "type": "implementation",
+            "repository": "engine",
+            "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e",
+            "path": "packages/core/src/renderer/index.ts",
+            "symbol": "setIndexBuffer format selection",
+            "proves": "Non-Uint32 arrays select uint16 format.",
+            "doesNotProve": "Actual GPU validation outcome for every array type."
+          }
+        ]
+      },
+      "minimalReproduction": {
+        "source": "Create geometry with Uint8Array or Float32Array indices and submit it.",
+        "test": "Assert construction fails closed before GPU submission or binds a valid matching index representation."
+      },
+      "suspectedOwner": {
+        "repository": "engine",
+        "package": "@engine/core",
+        "stage": "geometry-upload"
+      },
+      "severity": "P0",
+      "dependencies": [],
+      "forbiddenLocalWorkarounds": [
+        "Renderer consumers recasting private geometry",
+        "Ignoring GPU validation errors"
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "gap.browser.bulk-overlay-duplicate-owner",
+      "capability": "browser.features.overlays",
+      "reportedBy": {
+        "repository": "metafor",
+        "package": "@quantum/bulk",
+        "subject": "quantum/bulk DOM overlay",
+        "scenario": "HUD composition over the existing 3D scene"
+      },
+      "expected": {
+        "reference": "@zavx0z/renderer-browser overlay runtime",
+        "behavior": "The consumer creates a shared browser-owned overlay and supplies its exact Document/root/style contract."
+      },
+      "actual": {
+        "behavior": "Bulk directly constructs CPU Renderer and WebGPU backend and reimplements pointer mapping, hit, pointer capture, touch suppression and lifecycle.",
+        "evidence": [
+          {
+            "type": "consumer-usage",
+            "repository": "metafor",
+            "revision": "603d5604ac550b044ad809d5be27190cba9118aa+dirty",
+            "path": "quantum/bulk/dom/overlay-runtime.ts",
+            "symbol": "createOverlayRuntime",
+            "lines": "1-236",
+            "proves": "A second browser-composition implementation exists in the consumer.",
+            "doesNotProve": "Whether every branch is currently reachable."
+          }
+        ]
+      },
+      "minimalReproduction": {
+        "source": "Compare Bulk overlay-runtime ownership with RendererBrowserSpaceRuntime.addOverlay.",
+        "test": "A package-boundary test should reject direct @zavx0z/renderer and renderer-webgpu imports from the Bulk DOM consumer."
+      },
+      "suspectedOwner": {
+        "repository": "renderer",
+        "package": "@zavx0z/renderer-browser",
+        "stage": "browser-host"
+      },
+      "severity": "P0",
+      "dependencies": [],
+      "forbiddenLocalWorkarounds": [
+        "Keeping consumer-owned pointer capture",
+        "Copying RendererBrowserSpaceRuntime behavior"
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "gap.renderer.backend-neutral-diagnostics",
+      "capability": "renderer.features.backend-neutral-diagnostics",
+      "reportedBy": {
+        "repository": "demo",
+        "package": "@zavx0z/demo",
+        "subject": "journal diagnostics",
+        "scenario": "observe retained presentation owner count"
+      },
+      "expected": {
+        "reference": "Consumer boundary law",
+        "behavior": "A consumer reads a neutral documented diagnostic or does not inspect backend internals."
+      },
+      "actual": {
+        "behavior": "Demo reads journalPlane.backend.root.children directly, exposing retained WebGPU/Engine owner objects to product code.",
+        "evidence": [
+          {
+            "type": "consumer-usage",
+            "repository": "demo",
+            "revision": "7a88ae3d6fa82b53d03f08e0cc9f86b1c41f0325+dirty",
+            "path": "src/main.ts",
+            "symbol": "journalBackendChildren",
+            "lines": "411-418",
+            "proves": "Product code reaches into backend.root.children.",
+            "doesNotProve": "That the diagnostic is required in production."
+          }
+        ]
+      },
+      "minimalReproduction": {
+        "source": "Run the Demo journal plane subscription and inspect the dataset write.",
+        "test": "A consumer-boundary test should reject backend/root/Engine object reads from product code."
+      },
+      "suspectedOwner": {
+        "repository": "renderer",
+        "package": "@zavx0z/renderer",
+        "stage": "diagnostics"
+      },
+      "severity": "P0",
+      "dependencies": [],
+      "forbiddenLocalWorkarounds": [
+        "Casting private backend fields",
+        "Exporting Engine Object3D to components"
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "gap.tsx.consumer-build-migration",
+      "capability": "tsx.compiler.browser-target-build",
+      "reportedBy": {
+        "repository": "interpreter",
+        "package": "@metafor/interpreter",
+        "subject": "compiled component consumers",
+        "scenario": "linked @ui/components exports now resolve to .tsx"
+      },
+      "expected": {
+        "reference": "@zavx0z/template compiler contract",
+        "behavior": "Consumer build configurations compile governed TSX and mount compiled components through @zavx0z/react."
+      },
+      "actual": {
+        "behavior": "Demo, Interpreter and MetaFor visual consumers lack JSX compiler settings and still import removed create*Controller APIs.",
+        "evidence": [
+          {
+            "type": "negative-test",
+            "repository": "interpreter",
+            "revision": "879b4e01a4abd12756f86228784421e26270f485+dirty",
+            "path": "packages/interpreter/web/requirements.md",
+            "symbol": "consumer typecheck",
+            "proves": "Current consumer typecheck fails first with TS6142 and then missing create*Controller exports when JSX is enabled diagnostically.",
+            "doesNotProve": "The intended migration patch."
+          }
+        ]
+      },
+      "minimalReproduction": {
+        "source": "Run current Demo/Interpreter/@internal/visual/Bulk typechecks against linked @ui/components.",
+        "test": "Expect no TS6142 and no imports of removed imperative controllers after the consumer migration."
+      },
+      "suspectedOwner": {
+        "repository": "interpreter",
+        "package": "@metafor/interpreter",
+        "stage": "consumer-build"
+      },
+      "severity": "P1",
+      "dependencies": [],
+      "forbiddenLocalWorkarounds": [
+        "Restoring create*Controller exports",
+        "Adding a second JSX runtime"
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "gap.browser.number-input-proxy",
+      "capability": "browser.features.number-input-proxy",
+      "reportedBy": {
+        "repository": "ui",
+        "package": "@ui/components",
+        "subject": "NumberInput",
+        "scenario": "typed numeric editing"
+      },
+      "expected": {
+        "reference": "HTML number input and browser host contract",
+        "behavior": "Focused semantic type=number mirrors through a native host with valueAsNumber, keyboard, beforeinput/input/change and rollback."
+      },
+      "actual": {
+        "behavior": "DocumentNativeInputHost mirrors text/search/tel/url/password and textarea, not type=number.",
+        "evidence": [
+          {
+            "type": "implementation",
+            "repository": "renderer",
+            "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+            "path": "packages/browser/src/native-input-host.ts",
+            "symbol": "supported native input types",
+            "proves": "Number input is outside the mirrored type subset.",
+            "doesNotProve": "The future proxy design."
+          },
+          {
+            "type": "consumer-usage",
+            "repository": "ui",
+            "revision": "2148fa46d41efdc6ece993a6298b4adb2ade0b19+dirty",
+            "path": "packages/components/number-input.tsx",
+            "symbol": "NumberInput",
+            "lines": "85-156",
+            "proves": "The component requires valueAsNumber and native input/change events.",
+            "doesNotProve": "Platform support."
+          }
+        ]
+      },
+      "minimalReproduction": {
+        "source": "Focus a semantic input type=number through RendererBrowserRuntime and type a numeric value.",
+        "test": "Assert native proxy value, semantic valueAsNumber and input/change sequence remain synchronized."
+      },
+      "suspectedOwner": {
+        "repository": "renderer",
+        "package": "@zavx0z/renderer-browser",
+        "stage": "native-input-host"
+      },
+      "severity": "P1",
+      "dependencies": [],
+      "forbiddenLocalWorkarounds": [
+        "Component-local hidden native input",
+        "Manual keyboard parsing in NumberInput"
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "gap.dom.pointer-capture",
+      "capability": "dom.extensions.pointerevents.interfaces.element.methods.setpointercapture",
+      "reportedBy": {
+        "repository": "ui",
+        "package": "@ui/components",
+        "subject": "NumberInput scrub",
+        "scenario": "pointer leaves control during drag"
+      },
+      "expected": {
+        "reference": "Pointer Events setPointerCapture",
+        "behavior": "The semantic owner captures an active pointer and receives move/up/cancel until release."
+      },
+      "actual": {
+        "behavior": "The DOM has no pointer capture API; NumberInput retains component-local scrub state.",
+        "evidence": [
+          {
+            "type": "negative-test",
+            "repository": "renderer",
+            "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+            "path": "packages/dom/SUPPORT.md",
+            "symbol": "pointer capture boundary",
+            "proves": "Pointer capture is explicitly unsupported in the semantic DOM.",
+            "doesNotProve": "Browser canvas capture ownership."
+          }
+        ]
+      },
+      "minimalReproduction": {
+        "source": "Pointer down a NumberInput scrub region, leave its bounds, move and release.",
+        "test": "Semantic move/up continues at the captured owner and got/lostpointercapture order is correct."
+      },
+      "suspectedOwner": {
+        "repository": "renderer",
+        "package": "@zavx0z/dom",
+        "stage": "semantic-pointer"
+      },
+      "severity": "P1",
+      "dependencies": [
+        "browser.features.pointer-capture"
+      ],
+      "forbiddenLocalWorkarounds": [
+        "Component-owned global pointer map",
+        "Data attributes that imitate capture state"
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "gap.renderer.caret-selection-paint",
+      "capability": "renderer.features.caret-selection-paint",
+      "reportedBy": {
+        "repository": "interpreter",
+        "package": "@metafor/interpreter",
+        "subject": "SourceEditor",
+        "scenario": "transparent textarea over token presentation"
+      },
+      "expected": {
+        "reference": "HTML editing/selection and CPU Renderer paint contract",
+        "behavior": "Caret and selected range are painted at exact text geometry and synchronized with semantic selection."
+      },
+      "actual": {
+        "behavior": "Selection offsets exist, but CPU Renderer does not emit caret/selection display items; the transparent textarea cannot supply visible selection.",
+        "evidence": [
+          {
+            "type": "consumer-usage",
+            "repository": "interpreter",
+            "revision": "879b4e01a4abd12756f86228784421e26270f485+dirty",
+            "path": "packages/interpreter/web/dom/source-editor.ts",
+            "symbol": "createSourceEditor",
+            "lines": "170-434",
+            "proves": "The editor separates editable textarea state from token presentation and needs synchronized visual selection.",
+            "doesNotProve": "A generic renderer implementation."
+          }
+        ]
+      },
+      "minimalReproduction": {
+        "source": "Select a range in the semantic source-editor textarea while token presentation remains visible.",
+        "test": "Assert RenderFrame contains caret/selection items aligned to measured text and clips."
+      },
+      "suspectedOwner": {
+        "repository": "renderer",
+        "package": "@zavx0z/renderer",
+        "stage": "paint"
+      },
+      "severity": "P1",
+      "dependencies": [
+        "dom.algorithms.selection"
+      ],
+      "forbiddenLocalWorkarounds": [
+        "Component-owned caret coordinates",
+        "Private canvas text selection paint"
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "gap.dom.geometry-readback",
+      "capability": "dom.extensions.cssom-view.interfaces.element.methods.getboundingclientrect",
+      "reportedBy": {
+        "repository": "interpreter",
+        "package": "@metafor/interpreter",
+        "subject": "SourceEditor scrollToLine",
+        "scenario": "scroll a rendered line into view"
+      },
+      "expected": {
+        "reference": "CSSOM View geometry read",
+        "behavior": "A semantic Element can read the current CPU Renderer box without creating a second tree."
+      },
+      "actual": {
+        "behavior": "Current canonical DOM has no getBoundingClientRect/readComputedStyle realm bridge; SourceEditor uses line*16 and a fixed 220px viewport.",
+        "evidence": [
+          {
+            "type": "consumer-usage",
+            "repository": "interpreter",
+            "revision": "879b4e01a4abd12756f86228784421e26270f485+dirty",
+            "path": "packages/interpreter/web/dom/source-editor.ts",
+            "symbol": "scrollToLine",
+            "lines": "434-456",
+            "proves": "The consumer uses fixed geometry because no public read exists.",
+            "doesNotProve": "The accepted generic read API shape."
+          }
+        ]
+      },
+      "minimalReproduction": {
+        "source": "Change source-editor font size/line height and invoke scrollToLine.",
+        "test": "Assert scrolling uses the current rendered line box rather than a constant."
+      },
+      "suspectedOwner": {
+        "repository": "renderer",
+        "package": "@zavx0z/dom",
+        "stage": "renderer-backed-read"
+      },
+      "severity": "P1",
+      "dependencies": [],
+      "forbiddenLocalWorkarounds": [
+        "Hard-coded line height",
+        "A component-owned layout tree"
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "gap.html.select-picker",
+      "capability": "browser.features.select-picker",
+      "reportedBy": {
+        "repository": "ui",
+        "package": "@ui/components",
+        "subject": "EnumInput",
+        "scenario": "open and navigate enum options"
+      },
+      "expected": {
+        "reference": "HTML select/option interaction",
+        "behavior": "Collapsed select paint opens an owner-controlled picker/listbox, supports keyboard selection and dispatches input/change."
+      },
+      "actual": {
+        "behavior": "DOM live selectedness and collapsed paint exist; Browser host has no picker/listbox interaction."
+      , "evidence": [
+          {
+            "type": "negative-test",
+            "repository": "renderer",
+            "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+            "path": "packages/core/test/select-paint.test.ts",
+            "symbol": "collapsed select paint",
+            "proves": "Only collapsed presentation is tested.",
+            "doesNotProve": "Picker/listbox interaction."
+          }
+        ]
+      },
+      "minimalReproduction": {
+        "source": "Focus a semantic select, activate it and navigate options with ArrowDown/Enter/Escape.",
+        "test": "Assert picker visibility, option selectedness and input/change ordering."
+      },
+      "suspectedOwner": {
+        "repository": "renderer",
+        "package": "@zavx0z/renderer-browser",
+        "stage": "control-host"
+      },
+      "severity": "P1",
+      "dependencies": [
+        "html.behaviors.select-option-optgroup"
+      ],
+      "forbiddenLocalWorkarounds": [
+        "Component-local option popup dispatcher",
+        "Private canvas picker"
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "gap.html.anchored-popover",
+      "capability": "html.behaviors.popover",
+      "reportedBy": {
+        "repository": "ui",
+        "package": "@ui/components",
+        "subject": "ColorInput",
+        "scenario": "open the picker beside its trigger"
+      },
+      "expected": {
+        "reference": "HTML popover and CSS positioning",
+        "behavior": "A top-layer popover is anchored, clipped correctly, light-dismissed and restores focus."
+      },
+      "actual": {
+        "behavior": "Bounded Auto/Manual popover visibility exists, but ColorInput uses an inline display:none panel; anchor, light-dismiss, Escape and focus policy are absent."
+      , "evidence": [
+          {
+            "type": "consumer-usage",
+            "repository": "ui",
+            "revision": "2148fa46d41efdc6ece993a6298b4adb2ade0b19+dirty",
+            "path": "packages/components/color-input.tsx",
+            "symbol": "ColorInput presentation",
+            "lines": "142-181",
+            "proves": "The component hides an inline panel instead of using the semantic popover path.",
+            "doesNotProve": "The final anchored positioning API."
+          }
+        ]
+      },
+      "minimalReproduction": {
+        "source": "Open ColorInput near viewport edges and click/focus outside it.",
+        "test": "Assert top-layer placement, clipping, light dismiss, Escape and focus restoration."
+      },
+      "suspectedOwner": {
+        "repository": "renderer",
+        "package": "@zavx0z/renderer-browser",
+        "stage": "popover-host"
+      },
+      "severity": "P1",
+      "dependencies": [
+        "renderer.features.popover-projection"
+      ],
+      "forbiddenLocalWorkarounds": [
+        "Inline hidden panel",
+        "Component-owned viewport coordinates"
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "gap.renderer.vector-path-display-item",
+      "capability": "renderer.features.vector-path-display-item",
+      "reportedBy": {
+        "repository": "node",
+        "package": "@nodes/ui",
+        "subject": "NodeConnection/grid",
+        "scenario": "render scalable routed graph links"
+      },
+      "expected": {
+        "reference": "Generic CPU display-list capability",
+        "behavior": "A generic path/vector display item carries paint order, clipping, transform and retained identity through WebGPU without Node-specific semantics."
+      },
+      "actual": {
+        "behavior": "RenderFrame admits Rect/Text/Image only; Node code hand-builds orthogonal rectangles/points and local placement/culling formulas."
+      , "evidence": [
+          {
+            "type": "consumer-usage",
+            "repository": "node",
+            "revision": "9f390945f51f88c6374d5fb8f3215cf5d776e571",
+            "path": "packages/ui/node-system.tsx",
+            "symbol": "NodeConnection/nodePlacement",
+            "lines": "667-954",
+            "proves": "Node presentation locally synthesizes placement/endpoints/routes.",
+            "doesNotProve": "That all layout formulas belong in the platform."
+          }
+        ]
+      },
+      "minimalReproduction": {
+        "source": "Render one routed link with pan/zoom/clip and stable node endpoint identities.",
+        "test": "Assert a generic path display item preserves geometry/order/clip/hit metadata without Node-specific branches."
+      },
+      "suspectedOwner": {
+        "repository": "renderer",
+        "package": "@zavx0z/renderer",
+        "stage": "display-list"
+      },
+      "severity": "P1",
+      "dependencies": [
+        "webgpu.features.vector-path"
+      ],
+      "forbiddenLocalWorkarounds": [
+        "Node-specific Renderer branch",
+        "Component-owned private WebGPU drawing",
+        "Manual Rect decomposition as a hidden permanent fallback"
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "gap.css.named-color-transport",
+      "capability": "css.properties.color",
+      "reportedBy": {
+        "repository": "renderer",
+        "package": "@zavx0z/renderer-webgpu",
+        "subject": "resolved display color transport",
+        "scenario": "color:red reaches retained backend"
+      },
+      "expected": {
+        "reference": "CSS Color plus resolved display-list ABI",
+        "behavior": "Any CPU-admitted resolved color is either normalized to the backend ABI or rejected before a frame is emitted."
+      },
+      "actual": {
+        "behavior": "CPU emits the named color red; backend fails closed with Unsupported resolved display color: red."
+      , "evidence": [
+          {
+            "type": "implementation",
+            "repository": "renderer",
+            "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+            "path": "packages/core/src/css.ts",
+            "symbol": "resolvedColor",
+            "proves": "CPU can retain a named color string.",
+            "doesNotProve": "Backend transport."
+          },
+          {
+            "type": "negative-test",
+            "repository": "renderer",
+            "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+            "path": "packages/webgpu/src/webgpu-backend.ts",
+            "symbol": "parseResolvedColor",
+            "proves": "Backend accepts only transparent, hex and rgb/rgba and rejects red.",
+            "doesNotProve": "The chosen normalization owner."
+          }
+        ]
+      },
+      "minimalReproduction": {
+        "source": "Render <div style=\"background:red\"> through DOM, CPU Renderer and WebGPU backend.",
+        "test": "Assert the pipeline normalizes or rejects at the CSS stage, never after emitting a supposedly valid frame."
+      },
+      "suspectedOwner": {
+        "repository": "renderer",
+        "package": "@zavx0z/renderer",
+        "stage": "computed-color"
+      },
+      "severity": "P2",
+      "dependencies": [],
+      "forbiddenLocalWorkarounds": [
+        "Per-component color normalization",
+        "Silent backend fallback color"
+      ]
+    }
+  ],
+  "contradictions": [
+    {
+      "id": "contradiction.react.matrix-completeness",
+      "title": "React compatibility manifest claims completeness but lists only a selected subset",
+      "claim": "requirements.md says the manifest marks every feature supported or unsupported.",
+      "fact": "The prior hand-written manifest contains 25 features and 19 hooks, omitting most React/ReactDOM 19.2 public APIs and two required architecture flags.",
+      "owner": "@zavx0z/react",
+      "evidence": [
+        "renderer:packages/react/requirements.md#DOM-COMPONENTS-007",
+        "renderer:packages/react/compatibility.json"
+      ],
+      "impact": "Compatibility consumers could infer support from absence or treat a partial list as complete."
+    },
+    {
+      "id": "contradiction.dom.react-custom-renderer",
+      "title": "DOM SUPPORT still names an optional React custom renderer",
+      "claim": "An optional React custom renderer is an integration path.",
+      "fact": "Current architecture uses compiled @zavx0z/react and explicitly excludes npm React, reconciler, Fiber and a custom React renderer.",
+      "owner": "@zavx0z/dom",
+      "evidence": [
+        "renderer:packages/dom/SUPPORT.md",
+        "renderer:packages/react/test/boundary.test.ts"
+      ],
+      "impact": "The document points future work toward a removed architecture."
+    },
+    {
+      "id": "contradiction.renderer.migration-react",
+      "title": "MIGRATION.md still promises React adapter/reconciler hooks",
+      "claim": "A React adapter and reconciler/DevTools hook remain migration targets.",
+      "fact": "The current compiled runtime has no npm React/reconciler/Fiber/React DevTools integration.",
+      "owner": "renderer root",
+      "evidence": [
+        "renderer:MIGRATION.md",
+        "renderer:ARCHITECTURE.md"
+      ],
+      "impact": "Historical migration text conflicts with the accepted owner graph."
+    },
+    {
+      "id": "contradiction.renderer.performance-current",
+      "title": "PERFORMANCE.md numbers are historical and two documented benchmark routes are broken",
+      "claim": "Documented renderer/transform numbers describe the current checkout.",
+      "fact": "The document predates major retained-instancing changes; renderer.ts and transform.ts fail module resolution for @zavx0z/renderer.",
+      "owner": "renderer audit tooling",
+      "evidence": [
+        "renderer:PERFORMANCE.md",
+        "renderer:bench/renderer.ts",
+        "renderer:bench/transform.ts"
+      ],
+      "impact": "Historical performance claims cannot be used as current acceptance."
+    },
+    {
+      "id": "contradiction.renderer.web-realm-history",
+      "title": "Detached web-realm acceptance is absent from canonical main",
+      "claim": "Document-bound DOMRect/readComputedStyle/browser evidence exists in Renderer.",
+      "fact": "Current main has no packages/web-realm, realm-host.ts, dom-rect.ts, readComputedStyle or getBoundingClientRect implementation.",
+      "owner": "renderer",
+      "evidence": [
+        "renderer:packages/dom/src",
+        "renderer:packages/core/src/renderer.ts"
+      ],
+      "impact": "Historical browser proof must not promote current capabilities."
+    },
+    {
+      "id": "contradiction.template.first-html-block",
+      "title": "Template static parse claims first html block but slices through the last backtick",
+      "claim": "parse() analyzes the first html tagged template.",
+      "fact": "extractMainHtmlBlock starts at the first html tag and ends at the final backtick; a two-template probe returned nodes from both blocks.",
+      "owner": "@zavx0z/template",
+      "evidence": [
+        "template:index.ts",
+        "template:README.md"
+      ],
+      "impact": "Static analysis can merge unrelated tagged templates."
+    },
+    {
+      "id": "contradiction.template.domain-neutrality",
+      "title": "Template README says domain semantics are external while static parser hardcodes MetaFor terms",
+      "claim": "Domain validation belongs outside Template.",
+      "fact": "The static parser hardcodes meta-*, fields, mass, energy and update descriptors and sometimes logs/degrades unsupported methods.",
+      "owner": "@zavx0z/template",
+      "evidence": [
+        "template:README.md",
+        "template:parser.ts",
+        "template:node/text.ts"
+      ],
+      "impact": "The source-analysis DSL is not the same neutral contract as the DOM/compiled runtimes."
+    },
+    {
+      "id": "contradiction.engine.material-groups",
+      "title": "Mesh material-array documentation names geometry.groups that do not exist",
+      "claim": "Material arrays map to BufferGeometry groups.",
+      "fact": "BufferGeometry has no groups and Renderer selects material[0].",
+      "owner": "@engine/core",
+      "evidence": [
+        "engine:packages/core/src/core/mesh.ts",
+        "engine:packages/core/src/core/buffer-geometry.ts",
+        "engine:packages/core/src/renderer/index.ts"
+      ],
+      "impact": "Public documentation promises an unimplemented draw contract."
+    },
+    {
+      "id": "contradiction.browser.optional-engine-peer",
+      "title": "renderer-browser marks Engine optional while its root statically imports Engine",
+      "claim": "@engine/core is an optional peer.",
+      "fact": "The main browser entry exports modules with runtime Engine imports and cannot load without Engine.",
+      "owner": "@zavx0z/renderer-browser",
+      "evidence": [
+        "renderer:packages/browser/package.json",
+        "renderer:packages/browser/src/runtime.ts"
+      ],
+      "impact": "Package installation/loading contract is misleading."
+    },
+    {
+      "id": "contradiction.renderer.disabled-hit-metadata",
+      "title": "Hit metadata disabledness is narrower than semantic disabledness",
+      "claim": "Hit metadata describes effective interactivity.",
+      "fact": "HitMetadata.disabled reads the element's own disabled attribute while :disabled and activation also consider disabled fieldset ancestry.",
+      "owner": "@zavx0z/renderer",
+      "evidence": [
+        "renderer:packages/core/src/renderer.ts",
+        "renderer:packages/core/src/css.ts"
+      ],
+      "impact": "Metadata may say interactive even when semantic default action/focus is suppressed."
+    },
+    {
+      "id": "contradiction.consumer.removed-controllers",
+      "title": "Consumers import removed imperative UI controllers",
+      "claim": "Demo, Interpreter and MetaFor visual packages consume current @ui/components exports.",
+      "fact": "The package exports compiled .tsx components; consumer typechecks fail on JSX configuration and missing create*Controller exports.",
+      "owner": "consumer repositories",
+      "evidence": [
+        "ui:packages/components/package.json",
+        "interpreter:packages/interpreter/web/dom/source-editor.ts",
+        "metafor:cosmos/internal/visual/main/index.ts",
+        "demo:src/dom/journalDocument.ts"
+      ],
+      "impact": "Current product consumers do not build; restoring controllers would revive the removed architecture."
+    },
+    {
+      "id": "contradiction.consumer.bulk-overlay-owner",
+      "title": "Bulk duplicates browser composition ownership",
+      "claim": "renderer-browser is the single browser composition owner.",
+      "fact": "Bulk directly creates CPU Renderer/WebGPU and copies pointer/capture/hit/lifecycle behavior.",
+      "owner": "@quantum/bulk",
+      "evidence": [
+        "metafor:quantum/bulk/dom/overlay-runtime.ts"
+      ],
+      "impact": "Two owners can diverge on exact Document/input/presentation lifecycle."
+    },
+    {
+      "id": "contradiction.consumer.node-local-layout",
+      "title": "Node presentation invents fallback placement and route geometry",
+      "claim": "Components consume owner layout and do not compensate for missing platform behavior with manual geometry.",
+      "fact": "NodeSystem/node-editor contain fallback placement, socket endpoint formulas, culling and rectangle/point link decomposition.",
+      "owner": "@nodes/ui",
+      "evidence": [
+        "node:packages/ui/node-system.tsx",
+        "node:packages/ui/dom/node-editor.ts"
+      ],
+      "impact": "Domain layout law and missing generic vector presentation are hidden inside a component."
+    },
+    {
+      "id": "contradiction.consumer.demo-backend-read",
+      "title": "Demo reads private retained backend owner objects",
+      "claim": "Consumers receive DOM/CSS/TSX and neutral diagnostics, not Surface/Engine/private materializers.",
+      "fact": "Demo reads journalPlane.backend.root.children.",
+      "owner": "@zavx0z/demo",
+      "evidence": [
+        "demo:src/main.ts"
+      ],
+      "impact": "A product depends on backend materialization shape."
+    },
+    {
+      "id": "contradiction.consumer.storybook-concurrent-wip",
+      "title": "Current UI and Node Storybook checkouts reference missing local modules",
+      "claim": "Focused Storybook typechecks are green consumer evidence.",
+      "fact": "The final current-checkout Storybook typechecks fail with TS2307 for multiple missing compiled production story, DOM story, asset and node story modules. Nodes UI also has one owner-route assertion mismatch: /references/ was expected while the current source emits /__storybook/resources/nodes/.... These failures appeared in concurrent owner WIP and are not platform implementation evidence.",
+      "owner": "UI and Node Storybook WIP",
+      "evidence": [
+        "ui:packages/storybook/app/production-component-stories.ts",
+        "ui:packages/storybook/app/route-style.ts",
+        "node:packages/storybook/app/dom-entry.ts",
+        "node:packages/storybook/app/dom-story.ts"
+      ],
+      "impact": "Current Storybook routes cannot be used as final browser/component acceptance until their owner WIP is completed."
+    }
+  ],
+  "historicalClaims": [
+    {
+      "id": "claim.dom-memory",
+      "claim": "Lean DOM is about 189 B/node versus 312 B/node for per-instance closures.",
+      "status": "current-reproduced",
+      "evidence": "bun bench/dom-memory.ts 100000: empty 188.780-188.801 B/node; closures 312.207 B/node.",
+      "notes": "Memory benchmark evidence only; it does not establish DOM conformance."
+    },
+    {
+      "id": "claim.lazy-state",
+      "claim": "Attributes, listeners and control state are lazy.",
+      "status": "confirmed-current-code",
+      "evidence": "packages/dom/src/node.ts, element.ts, event-target.ts and specialized control fields allocate optional state on demand.",
+      "notes": "The exact byte effect varies by node kind and title/control state."
+    },
+    {
+      "id": "claim.prototype-chain",
+      "claim": "Supported DOM classes preserve their exact prototype chains.",
+      "status": "confirmed-bounded",
+      "evidence": "DOM structural/control tests assert exact specialized constructor/prototype identity.",
+      "notes": "Only the currently specialized element map; arbitrary standard tags may still be generic HTMLElement."
+    },
+    {
+      "id": "claim.one-semantic-tree",
+      "claim": "The platform has one semantic tree.",
+      "status": "confirmed-current-code",
+      "evidence": "Document/Node mutation path feeds CPU Renderer and retained backend without a second semantic or virtual tree.",
+      "notes": "Engine still exposes legacy CSS-like layout fields, recorded as a P0 ownership contradiction."
+    },
+    {
+      "id": "claim.clean-frame",
+      "claim": "A clean 10k frame is about 0.016-0.020 ms.",
+      "status": "not-exactly-reproduced",
+      "evidence": "Current components benchmark measured clean flush 0.02149 ms with zero work.",
+      "notes": "The O(1) clean path is confirmed; the historical numeric band was narrowly missed in one current run."
+    },
+    {
+      "id": "claim.warm-leaf",
+      "claim": "Warm leaf update is substantially below 16.7 ms.",
+      "status": "current-reproduced",
+      "evidence": "Current 10k components benchmark warm leaf p95 0.01385 ms.",
+      "notes": "A benchmark path, not a universal dirty-frame guarantee."
+    },
+    {
+      "id": "claim.transform-p95",
+      "claim": "Transform/backend p95 is about 10.77 ms.",
+      "status": "not-reproduced",
+      "evidence": "bun bench/transform.ts currently fails to resolve @zavx0z/renderer.",
+      "notes": "Keep the old number as historical only until the route and threshold are restored."
+    },
+    {
+      "id": "claim.retained-identities",
+      "claim": "Retained visual identities remain stable.",
+      "status": "confirmed-bounded",
+      "evidence": "WebGPU backend tests prove scalar (node,key) owners and instanced generation-guarded stable slots across admitted updates.",
+      "notes": "Topology/overlap/clip/capacity changes can intentionally rebuild plans or fall back scalar."
+    },
+    {
+      "id": "claim.transform-geometry-invalidation",
+      "claim": "Transform-only updates cause zero geometry invalidation.",
+      "status": "confirmed-bounded",
+      "evidence": "Core transform fast-path and WebGPU backend tests preserve geometry and mutate transform state in place.",
+      "notes": "Only guarded axis-aligned transform-only updates."
+    },
+    {
+      "id": "claim.rect-instancing",
+      "claim": "Safe Rect instancing is automatic.",
+      "status": "current-reproduced",
+      "evidence": "10k current benchmark: one instanced owner versus 10k scalar owners; one update uploads 128 record bytes; warm p95 about 1.432 ms.",
+      "notes": "Overlap/touch, clip, Text/Image, capacity and spatial-policy barriers remain scalar."
+    },
+    {
+      "id": "claim.native-input-host",
+      "claim": "A hidden native input/textarea host exists.",
+      "status": "confirmed-unit-only",
+      "evidence": "DocumentNativeInputHost and 39 Browser package tests cover the bounded proxy/rollback path.",
+      "notes": "No live browser IME/caret/pixel acceptance was reproduced."
+    },
+    {
+      "id": "claim.same-document-identity",
+      "claim": "Native input projection retains the exact semantic Document identity.",
+      "status": "confirmed-unit-only",
+      "evidence": "Browser adapter tests assert exact Document/owner routing.",
+      "notes": "The historical detached web-realm live browser proof is not current canonical evidence."
+    },
+    {
+      "id": "claim.title",
+      "claim": "HTMLElement.title and explicit-empty inherited title suppression work.",
+      "status": "confirmed-bounded",
+      "evidence": "DOM reflection and Core interaction tests prove nearest present title, empty suppression and deterministic UA overlay.",
+      "notes": "Not full native tooltip or accessible-name parity."
+    },
+    {
+      "id": "claim.scroll-clip-input-controls",
+      "claim": "Scroll, clip, input and form-control slices exist.",
+      "status": "confirmed-partial",
+      "evidence": "DOM/Core/WebGPU focused tests cover requested/applied scroll, clip stacks, text proxy and bounded control paint.",
+      "notes": "No complete forms, picker, caret/selection paint, clipboard, range drag/keyboard or all downstream clip combinations."
+    },
+    {
+      "id": "claim.compiled-tsx",
+      "claim": "TSX compiles without JSX descriptors, Fiber or a virtual DOM.",
+      "status": "confirmed-current-code",
+      "evidence": "Template compiler/runtime/boundary tests and @zavx0z/react dependency boundary prove the fixed-slot compiled ABI and reject npm React/reconciler.",
+      "notes": "Browser-target build is tested; live browser execution was not reproduced in this audit."
+    }
+  ],
+  "checks": [
+    {
+      "target": "renderer root and six platform packages",
+      "command": "bun run check",
+      "status": "passed",
+      "result": "all workspace typechecks; 373 tests / 3344 expectations; audit typecheck; 3 deterministic audit tests / 429 expectations"
+    },
+    {
+      "target": "template",
+      "command": "bun run typecheck && bun test",
+      "status": "passed",
+      "result": "698 tests / 885 expectations"
+    },
+    {
+      "target": "engine core",
+      "command": "bun run --cwd packages/core typecheck && bun test packages/core/src",
+      "status": "passed",
+      "result": "123 tests / 607 expectations including real bun-webgpu pipeline/pixel tests"
+    },
+    {
+      "target": "UI components",
+      "command": "bun run --cwd packages/components typecheck",
+      "status": "passed",
+      "result": "production typecheck passed"
+    },
+    {
+      "target": "UI components",
+      "command": "bun test packages/components",
+      "status": "passed",
+      "result": "63 tests / 451 expectations"
+    },
+    {
+      "target": "Nodes UI",
+      "command": "bun run --cwd packages/ui typecheck",
+      "status": "passed",
+      "result": "typecheck passed"
+    },
+    {
+      "target": "Nodes UI",
+      "command": "bun test packages/ui",
+      "status": "failed-owner-wip",
+      "result": "101/102 tests passed; NodeWorkbench accepted-reference route expected /references/ but current source emitted /__storybook/resources/nodes/..."
+    },
+    {
+      "target": "Demo",
+      "command": "bun run typecheck",
+      "status": "failed-known-gap",
+      "result": "TS6142: linked @ui/components .tsx exports require the Template JSX build profile"
+    },
+    {
+      "target": "Interpreter",
+      "command": "bun run --cwd packages/interpreter typecheck",
+      "status": "failed-known-gap",
+      "result": "TS6142 for compiled UI imports plus two implicit-any errors in current Terminal WIP"
+    },
+    {
+      "target": "MetaFor internal visual",
+      "command": "bun run typecheck",
+      "status": "failed-known-gap",
+      "result": "TS6142 for linked @ui/components/button.tsx"
+    },
+    {
+      "target": "MetaFor Bulk",
+      "command": "tsc --noEmit --pretty false --project tsconfig.json",
+      "status": "failed-known-gap",
+      "result": "TS6142 for linked @ui/components/hud.tsx"
+    },
+    {
+      "target": "UI Storybook",
+      "command": "bun run typecheck",
+      "status": "failed-owner-wip",
+      "result": "TS2307 for missing compiled production stories, DOM stories and reference catalog asset"
+    },
+    {
+      "target": "Node Storybook",
+      "command": "bun run typecheck",
+      "status": "failed-owner-wip",
+      "result": "TS2307 for missing dom-css, production-node, compiled-node-system and NodeTree story modules"
+    }
+  ],
+  "benchmarks": [
+    {
+      "repository": "renderer",
+      "command": "bun bench/dom-memory.ts 100000 dom-empty|dom-title|closures",
+      "status": "passed",
+      "result": "empty 188.780-188.801 B/node; titled 497.454 B/node; closures 312.207 B/node"
+    },
+    {
+      "repository": "renderer",
+      "command": "bun bench/components.ts 10000",
+      "status": "passed",
+      "result": "clean 0.02149 ms; warm leaf p95 0.01385 ms; Text identity retained"
+    },
+    {
+      "repository": "renderer",
+      "command": "bun bench/keyed-components.ts 10000",
+      "status": "passed",
+      "result": "identities retained; rotate p95 4.264 ms; insert 7.829 ms; delete 13.034 ms; arbitrary reorder 178.425 ms"
+    },
+    {
+      "repository": "renderer",
+      "command": "bun bench/instance-batches.ts 10000",
+      "status": "passed",
+      "result": "one instanced owner; 128-byte single update; current warm p95 about 1.432 ms"
+    },
+    {
+      "repository": "renderer",
+      "command": "bun bench/renderer.ts 10000 500 50",
+      "status": "blocked",
+      "result": "Cannot find module @zavx0z/renderer"
+    },
+    {
+      "repository": "renderer",
+      "command": "bun bench/transform.ts 1000 500 50",
+      "status": "blocked",
+      "result": "Cannot find module @zavx0z/renderer"
+    },
+    {
+      "repository": "template",
+      "command": "bun run bench:jsx / bench:jsx:children",
+      "status": "passed",
+      "result": "application cold 288.197 ms cached mean 0.28257 ms; children cold 324.097 ms cached mean 0.20086 ms"
+    },
+    {
+      "repository": "engine",
+      "command": "benchmark inventory",
+      "status": "absent",
+      "result": "No Engine benchmark file or script exists"
+    }
+  ]
+}

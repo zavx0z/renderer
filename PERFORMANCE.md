@@ -1,5 +1,11 @@
 # Performance baseline
 
+The numeric runs below are historical evidence. Current reproduction status is
+generated in `CONTRADICTIONS.md`; in the 2026-08-29 audit the DOM/components and
+instance-batch routes reproduced, while `bench/renderer.ts` and
+`bench/transform.ts` were blocked by root module resolution. Do not treat an
+old number as current acceptance without rerunning its exact command.
+
 The benchmark scripts are diagnostics, not universal thresholds:
 
 ```bash

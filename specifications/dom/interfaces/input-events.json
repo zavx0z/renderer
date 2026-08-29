@@ -1,0 +1,142 @@
+{
+  "entries": [
+    {
+      "description": "dictionary InputEventInit from input-events.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.input-events.dictionaries.inputeventinit",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "input-events.idl"
+      },
+      "name": "InputEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/input-events/#WebIDL:InputEventInit",
+        "profile": "standard",
+        "source": "input-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "InputEventInit.dataTransfer Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.input-events.dictionaries.inputeventinit.fields.datatransfer",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "input-events.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"dataTransfer\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"DataTransfer\"},\"default\":{\"type\":\"null\"},\"required\":false}"
+      },
+      "name": "dataTransfer",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.input-events.dictionaries.inputeventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/input-events/#WebIDL:InputEventInit.dataTransfer",
+        "profile": "standard",
+        "source": "input-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "InputEventInit.targetRanges Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.input-events.dictionaries.inputeventinit.fields.targetranges",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "input-events.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"targetRanges\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"StaticRange\"}]},\"default\":{\"type\":\"sequence\",\"value\":[]},\"required\":false}"
+      },
+      "name": "targetRanges",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.input-events.dictionaries.inputeventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/input-events/#WebIDL:InputEventInit.targetRanges",
+        "profile": "standard",
+        "source": "input-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface InputEvent from input-events.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.input-events.interfaces.inputevent",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "input-events.idl"
+      },
+      "name": "InputEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/input-events/#WebIDL:InputEvent",
+        "profile": "standard",
+        "source": "input-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "InputEvent.dataTransfer Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.input-events.interfaces.inputevent.attributes.datatransfer",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "input-events.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"dataTransfer\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"DataTransfer\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "dataTransfer",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.input-events.interfaces.inputevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/input-events/#WebIDL:InputEvent.dataTransfer",
+        "profile": "standard",
+        "source": "input-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "InputEvent.getTargetRanges Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.input-events.interfaces.inputevent.methods.gettargetranges",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "input-events.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"getTargetRanges\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"StaticRange\"}]},\"arguments\":[],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "getTargetRanges",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.input-events.interfaces.inputevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/input-events/#WebIDL:InputEvent.getTargetRanges",
+        "profile": "standard",
+        "source": "input-events",
+        "version": "snapshot 2026-08-29"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "dom/interfaces/input-events.json"
+}

@@ -1,0 +1,616 @@
+{
+  "entries": [
+    {
+      "description": "react-dom/client public export createRoot in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom-client.createroot",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react-dom/client"
+      },
+      "name": "createRoot",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom/client@19.2.0#exports.createRoot",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom/client public export hydrateRoot in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom-client.hydrateroot",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react-dom/client"
+      },
+      "name": "hydrateRoot",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom/client@19.2.0#exports.hydrateRoot",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom/client public export version in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom-client.version",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react-dom/client"
+      },
+      "name": "version",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom/client@19.2.0#exports.version",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom/server public export renderToPipeableStream in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom-server.rendertopipeablestream",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react-dom/server"
+      },
+      "name": "renderToPipeableStream",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom/server@19.2.0#exports.renderToPipeableStream",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom/server public export renderToReadableStream in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom-server.rendertoreadablestream",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react-dom/server"
+      },
+      "name": "renderToReadableStream",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom/server@19.2.0#exports.renderToReadableStream",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom/server public export renderToStaticMarkup in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom-server.rendertostaticmarkup",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react-dom/server"
+      },
+      "name": "renderToStaticMarkup",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom/server@19.2.0#exports.renderToStaticMarkup",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom/server public export renderToString in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom-server.rendertostring",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react-dom/server"
+      },
+      "name": "renderToString",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom/server@19.2.0#exports.renderToString",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom/server public export resume in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom-server.resume",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react-dom/server"
+      },
+      "name": "resume",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom/server@19.2.0#exports.resume",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom/server public export resumeToPipeableStream in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom-server.resumetopipeablestream",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react-dom/server"
+      },
+      "name": "resumeToPipeableStream",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom/server@19.2.0#exports.resumeToPipeableStream",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom/server public export version in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom-server.version",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react-dom/server"
+      },
+      "name": "version",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom/server@19.2.0#exports.version",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom/static public export prerender in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom-static.prerender",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react-dom/static"
+      },
+      "name": "prerender",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom/static@19.2.0#exports.prerender",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom/static public export prerenderToNodeStream in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom-static.prerendertonodestream",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react-dom/static"
+      },
+      "name": "prerenderToNodeStream",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom/static@19.2.0#exports.prerenderToNodeStream",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom/static public export resumeAndPrerender in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom-static.resumeandprerender",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react-dom/static"
+      },
+      "name": "resumeAndPrerender",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom/static@19.2.0#exports.resumeAndPrerender",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom/static public export resumeAndPrerenderToNodeStream in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom-static.resumeandprerendertonodestream",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react-dom/static"
+      },
+      "name": "resumeAndPrerenderToNodeStream",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom/static@19.2.0#exports.resumeAndPrerenderToNodeStream",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom/static public export version in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom-static.version",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react-dom/static"
+      },
+      "name": "version",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom/static@19.2.0#exports.version",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom/test-utils public export act in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom-test-utils.act",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react-dom/test-utils"
+      },
+      "name": "act",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom/test-utils@19.2.0#exports.act",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom public export createPortal in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom.createportal",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react-dom"
+      },
+      "name": "createPortal",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom@19.2.0#exports.createPortal",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom public export flushSync in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom.flushsync",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react-dom"
+      },
+      "name": "flushSync",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom@19.2.0#exports.flushSync",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom public export preconnect in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom.preconnect",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react-dom"
+      },
+      "name": "preconnect",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom@19.2.0#exports.preconnect",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom public export prefetchDNS in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom.prefetchdns",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react-dom"
+      },
+      "name": "prefetchDNS",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom@19.2.0#exports.prefetchDNS",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom public export preinit in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom.preinit",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react-dom"
+      },
+      "name": "preinit",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom@19.2.0#exports.preinit",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom public export preinitModule in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom.preinitmodule",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react-dom"
+      },
+      "name": "preinitModule",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom@19.2.0#exports.preinitModule",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom public export preload in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom.preload",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react-dom"
+      },
+      "name": "preload",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom@19.2.0#exports.preload",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom public export preloadModule in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom.preloadmodule",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react-dom"
+      },
+      "name": "preloadModule",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom@19.2.0#exports.preloadModule",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom public export requestFormReset in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom.requestformreset",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react-dom"
+      },
+      "name": "requestFormReset",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom@19.2.0#exports.requestFormReset",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom public export unstable_batchedUpdates in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom.unstable_batchedupdates",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react-dom"
+      },
+      "name": "unstable_batchedUpdates",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom@19.2.0#exports.unstable_batchedUpdates",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom public export useFormState in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom.useformstate",
+      "kind": "hook",
+      "metadata": {
+        "entrypoint": "react-dom"
+      },
+      "name": "useFormState",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom@19.2.0#exports.useFormState",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom public export useFormStatus in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom.useformstatus",
+      "kind": "hook",
+      "metadata": {
+        "entrypoint": "react-dom"
+      },
+      "name": "useFormStatus",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom@19.2.0#exports.useFormStatus",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react-dom public export version in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.react-dom.react-dom.version",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react-dom"
+      },
+      "name": "version",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react-dom@19.2.0#exports.version",
+        "profile": "reference",
+        "source": "react-dom-19.2",
+        "version": "19.2.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "react-19.2/react-dom.json"
+}

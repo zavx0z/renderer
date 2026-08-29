@@ -1,0 +1,284 @@
+{
+  "entries": [
+    {
+      "description": "dictionary SnapEventInit from css-scroll-snap-2.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-scroll-snap-2.dictionaries.snapeventinit",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "css-scroll-snap-2.idl",
+        "inheritance": "EventInit"
+      },
+      "name": "SnapEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-scroll-snap-2.idl#WebIDL:SnapEventInit",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "SnapEventInit.snapTargetBlock Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-scroll-snap-2.dictionaries.snapeventinit.fields.snaptargetblock",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-scroll-snap-2.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"snapTargetBlock\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"Node\"},\"default\":null,\"required\":false}"
+      },
+      "name": "snapTargetBlock",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-scroll-snap-2.dictionaries.snapeventinit",
+      "spec": {
+        "anchor": "webref/idl/css-scroll-snap-2.idl#WebIDL:SnapEventInit.snapTargetBlock",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "SnapEventInit.snapTargetInline Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-scroll-snap-2.dictionaries.snapeventinit.fields.snaptargetinline",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-scroll-snap-2.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"snapTargetInline\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"Node\"},\"default\":null,\"required\":false}"
+      },
+      "name": "snapTargetInline",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-scroll-snap-2.dictionaries.snapeventinit",
+      "spec": {
+        "anchor": "webref/idl/css-scroll-snap-2.idl#WebIDL:SnapEventInit.snapTargetInline",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "SnapEventInit has EventInit as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-scroll-snap-2.dictionaries.snapeventinit.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "EventInit"
+      },
+      "name": "SnapEventInit inherits EventInit",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-scroll-snap-2.dictionaries.snapeventinit",
+      "spec": {
+        "anchor": "webref/idl/css-scroll-snap-2.idl#WebIDL:SnapEventInit",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface SnapEvent from css-scroll-snap-2.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-scroll-snap-2.interfaces.snapevent",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-scroll-snap-2.idl",
+        "inheritance": "Event"
+      },
+      "name": "SnapEvent",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-scroll-snap-2.idl#WebIDL:SnapEvent",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "SnapEvent.snapTargetBlock Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-scroll-snap-2.interfaces.snapevent.attributes.snaptargetblock",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-scroll-snap-2.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"snapTargetBlock\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"Node\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "snapTargetBlock",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-scroll-snap-2.interfaces.snapevent",
+      "spec": {
+        "anchor": "webref/idl/css-scroll-snap-2.idl#WebIDL:SnapEvent.snapTargetBlock",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "SnapEvent.snapTargetInline Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-scroll-snap-2.interfaces.snapevent.attributes.snaptargetinline",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-scroll-snap-2.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"snapTargetInline\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"Node\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "snapTargetInline",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-scroll-snap-2.interfaces.snapevent",
+      "spec": {
+        "anchor": "webref/idl/css-scroll-snap-2.idl#WebIDL:SnapEvent.snapTargetInline",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "SnapEvent.constructor Web IDL constructor.",
+      "domain": "css",
+      "id": "css.cssom.css-scroll-snap-2.interfaces.snapevent.constructors.constructor",
+      "kind": "constructor",
+      "metadata": {
+        "idlSource": "css-scroll-snap-2.idl",
+        "signature": "{\"type\":\"constructor\",\"arguments\":[{\"type\":\"argument\",\"name\":\"type\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"eventInitDict\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"SnapEventInit\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[]}"
+      },
+      "name": "constructor",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-scroll-snap-2.interfaces.snapevent",
+      "spec": {
+        "anchor": "webref/idl/css-scroll-snap-2.idl#WebIDL:SnapEvent.constructor",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "SnapEvent has Event as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-scroll-snap-2.interfaces.snapevent.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "Event"
+      },
+      "name": "SnapEvent inherits Event",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-scroll-snap-2.interfaces.snapevent",
+      "spec": {
+        "anchor": "webref/idl/css-scroll-snap-2.idl#WebIDL:SnapEvent",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface mixin GlobalEventHandlers from css-scroll-snap-2.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-scroll-snap-2.mixins.globaleventhandlers",
+      "kind": "interface mixin",
+      "metadata": {
+        "idlSource": "css-scroll-snap-2.idl"
+      },
+      "name": "GlobalEventHandlers",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-scroll-snap-2.idl#WebIDL:GlobalEventHandlers",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "GlobalEventHandlers.onsnapchanged Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-scroll-snap-2.mixins.globaleventhandlers.attributes.onsnapchanged",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-scroll-snap-2.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"onsnapchanged\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"EventHandler\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "onsnapchanged",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-scroll-snap-2.mixins.globaleventhandlers",
+      "spec": {
+        "anchor": "webref/idl/css-scroll-snap-2.idl#WebIDL:GlobalEventHandlers.onsnapchanged",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "GlobalEventHandlers.onsnapchanging Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-scroll-snap-2.mixins.globaleventhandlers.attributes.onsnapchanging",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-scroll-snap-2.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"onsnapchanging\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"EventHandler\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "onsnapchanging",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-scroll-snap-2.mixins.globaleventhandlers",
+      "spec": {
+        "anchor": "webref/idl/css-scroll-snap-2.idl#WebIDL:GlobalEventHandlers.onsnapchanging",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-scroll-snap-2.json"
+}

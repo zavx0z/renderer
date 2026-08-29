@@ -1,0 +1,925 @@
+{
+  "entries": [
+    {
+      "domain": "css",
+      "id": "css.properties.accent-color",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword auto or a computed color",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "accent-color",
+          "accentColor"
+        ],
+        "syntax": "auto | <color>"
+      },
+      "name": "accent-color",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-ui-4/#propdef-accent-color",
+        "profile": "standard",
+        "source": "css:css-ui-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.align-content",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block containers, multicol containers, flex containers, and grid containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword(s)",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "align-content",
+          "alignContent"
+        ],
+        "syntax": "normal | <baseline-position> | <content-distribution> | <overflow-position>? <content-position>"
+      },
+      "name": "align-content",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-align-3/#propdef-align-content",
+        "profile": "standard",
+        "source": "css:css-align-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.align-items",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword(s)",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "align-items",
+          "alignItems"
+        ],
+        "syntax": "normal | stretch | <baseline-position> | <overflow-position>? <self-position>"
+      },
+      "name": "align-items",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-align-3/#propdef-align-items",
+        "profile": "standard",
+        "source": "css:css-align-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.align-self",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "flex items, grid items, and absolutely-positioned boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword(s)",
+        "extended": [
+          "https://drafts.csswg.org/css-anchor-position-1/#propdef-align-self"
+        ],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "align-self",
+          "alignSelf"
+        ],
+        "syntax": "auto | <overflow-position>? [ normal | <self-position> ]| stretch | <baseline-position> | anchor-center"
+      },
+      "name": "align-self",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-align-3/#propdef-align-self",
+        "profile": "standard",
+        "source": "css:css-align-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.alignment-baseline",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "inline-level boxes, flex items, grid items, table cells, and SVG text content elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "baseline",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "alignment-baseline",
+          "alignmentBaseline"
+        ],
+        "syntax": "baseline | <baseline-metric>"
+      },
+      "name": "alignment-baseline",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-inline-3/#propdef-alignment-baseline",
+        "profile": "standard",
+        "source": "css:css-inline-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.all",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "all"
+        ],
+        "syntax": "initial | inherit | unset | revert | revert-layer | revert-rule"
+      },
+      "name": "all",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-cascade-5/#propdef-all",
+        "profile": "standard",
+        "source": "css:css-cascade-5",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.anchor-name",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements that generate a principal box",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "anchor-name",
+          "anchorName"
+        ],
+        "syntax": "none | <anchor-name>#"
+      },
+      "name": "anchor-name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-anchor-position-1/#propdef-anchor-name",
+        "profile": "standard",
+        "source": "css:css-anchor-position-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.anchor-scope",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "anchor-scope",
+          "anchorScope"
+        ],
+        "syntax": "none | all | <anchor-name>#"
+      },
+      "name": "anchor-scope",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-anchor-position-1/#propdef-anchor-scope",
+        "profile": "standard",
+        "source": "css:css-anchor-position-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.animation",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "see individual properties",
+        "longhands": [
+          "animation-name",
+          "animation-duration",
+          "animation-timing-function",
+          "animation-delay",
+          "animation-iteration-count",
+          "animation-direction",
+          "animation-fill-mode",
+          "animation-play-state",
+          "animation-timeline"
+        ],
+        "percentages": "N/A",
+        "resetLonghands": [
+          "animation-range",
+          "animation-trigger"
+        ],
+        "styleDeclaration": [
+          "animation"
+        ],
+        "syntax": "<single-animation>#"
+      },
+      "name": "animation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-animations-1/#propdef-animation",
+        "profile": "standard",
+        "source": "css:css-animations-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.animation-composition",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item a keyword as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "replace",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "animation-composition",
+          "animationComposition"
+        ],
+        "syntax": "<single-animation-composition>#"
+      },
+      "name": "animation-composition",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-animations-2/#propdef-animation-composition",
+        "profile": "standard",
+        "source": "css:css-animations-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.animation-delay",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "animation-delay-start",
+          "animation-delay-end"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "animation-delay",
+          "animationDelay"
+        ],
+        "syntax": "[ <'animation-delay-start'> <'animation-delay-end'>? ]#"
+      },
+      "name": "animation-delay",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-animations-2/#propdef-animation-delay",
+        "profile": "standard",
+        "source": "css:css-animations-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.animation-delay-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item a duration",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0s",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "animation-delay-end",
+          "animationDelayEnd"
+        ],
+        "syntax": "<time [0s,∞]>#"
+      },
+      "name": "animation-delay-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-animations-2/#propdef-animation-delay-end",
+        "profile": "standard",
+        "source": "css:css-animations-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.animation-delay-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item a duration",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0s",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "animation-delay-start",
+          "animationDelayStart"
+        ],
+        "syntax": "<time>#"
+      },
+      "name": "animation-delay-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-animations-2/#propdef-animation-delay-start",
+        "profile": "standard",
+        "source": "css:css-animations-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.animation-direction",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item a keyword as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "animation-direction",
+          "animationDirection"
+        ],
+        "syntax": "<single-animation-direction>#"
+      },
+      "name": "animation-direction",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-animations-1/#propdef-animation-direction",
+        "profile": "standard",
+        "source": "css:css-animations-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.animation-duration",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item either a time or the keyword auto",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "animation-duration",
+          "animationDuration"
+        ],
+        "syntax": "[ auto | <time [0s,∞]> ]#"
+      },
+      "name": "animation-duration",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-animations-2/#propdef-animation-duration",
+        "profile": "standard",
+        "source": "css:css-animations-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.animation-fill-mode",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item a keyword as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "animation-fill-mode",
+          "animationFillMode"
+        ],
+        "syntax": "<single-animation-fill-mode>#"
+      },
+      "name": "animation-fill-mode",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-animations-1/#propdef-animation-fill-mode",
+        "profile": "standard",
+        "source": "css:css-animations-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.animation-iteration-count",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item either a number or the keyword infinite",
+        "extended": [],
+        "inherited": "no",
+        "initial": "1",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "animation-iteration-count",
+          "animationIterationCount"
+        ],
+        "syntax": "<single-animation-iteration-count>#"
+      },
+      "name": "animation-iteration-count",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-animations-1/#propdef-animation-iteration-count",
+        "profile": "standard",
+        "source": "css:css-animations-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.animation-name",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item either a case-sensitive css identifier or the keyword none",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "animation-name",
+          "animationName"
+        ],
+        "syntax": "[ none | <keyframes-name> ]#"
+      },
+      "name": "animation-name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-animations-1/#propdef-animation-name",
+        "profile": "standard",
+        "source": "css:css-animations-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.animation-play-state",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item a keyword as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "running",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "animation-play-state",
+          "animationPlayState"
+        ],
+        "syntax": "<single-animation-play-state>#"
+      },
+      "name": "animation-play-state",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-animations-1/#propdef-animation-play-state",
+        "profile": "standard",
+        "source": "css:css-animations-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.animation-range",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "animation-range-start",
+          "animation-range-end"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "animation-range",
+          "animationRange"
+        ],
+        "syntax": "[ <'animation-range-start'> <'animation-range-end'>? ]#"
+      },
+      "name": "animation-range",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/scroll-animations-1/#propdef-animation-range",
+        "profile": "standard",
+        "source": "css:scroll-animations-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.animation-range-center",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item either the keyword normal or a timeline range center subject and a length-percentage value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "relative to the corresponding dimension of the specified timeline range center subject, else relative to the start of the animation attachment range",
+        "styleDeclaration": [
+          "animation-range-center",
+          "animationRangeCenter"
+        ],
+        "syntax": "[ normal | [ <length-percentage> | <timeline-range-center-subject> <length-percentage>? ] ]#"
+      },
+      "name": "animation-range-center",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/pointer-animations-1/#propdef-animation-range-center",
+        "profile": "standard",
+        "source": "css:pointer-animations-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.animation-range-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item either the keyword normal or a timeline range and progress percentage",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "relative to the specified named timeline range if one was specified, else to the entire timeline",
+        "styleDeclaration": [
+          "animation-range-end",
+          "animationRangeEnd"
+        ],
+        "syntax": "[ normal | <length-percentage> | <timeline-range-name> <length-percentage>? ]#"
+      },
+      "name": "animation-range-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/scroll-animations-1/#propdef-animation-range-end",
+        "profile": "standard",
+        "source": "css:scroll-animations-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.animation-range-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item either the keyword normal or a timeline range and progress percentage",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "relative to the specified named timeline range if one was specified, else to the entire timeline",
+        "styleDeclaration": [
+          "animation-range-start",
+          "animationRangeStart"
+        ],
+        "syntax": "[ normal | <length-percentage> | <timeline-range-name> <length-percentage>? ]#"
+      },
+      "name": "animation-range-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/scroll-animations-1/#propdef-animation-range-start",
+        "profile": "standard",
+        "source": "css:scroll-animations-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.animation-timeline",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item either the keyword none, the keyword auto, a case-sensitive css identifier, a computed scroll() function, or a computed view() function",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "animation-timeline",
+          "animationTimeline"
+        ],
+        "syntax": "<single-animation-timeline>#"
+      },
+      "name": "animation-timeline",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-animations-2/#propdef-animation-timeline",
+        "profile": "standard",
+        "source": "css:css-animations-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.animation-timing-function",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "list, each item a computed <easing-function>",
+        "extended": [],
+        "inherited": "no",
+        "initial": "ease",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "animation-timing-function",
+          "animationTimingFunction"
+        ],
+        "syntax": "<easing-function>#"
+      },
+      "name": "animation-timing-function",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-animations-1/#propdef-animation-timing-function",
+        "profile": "standard",
+        "source": "css:css-animations-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.animation-trigger",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "animation-trigger",
+          "animationTrigger"
+        ],
+        "syntax": "[ none | [ <dashed-ident> <animation-action>+ ]+ ]#"
+      },
+      "name": "animation-trigger",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/animation-triggers-1/#propdef-animation-trigger",
+        "profile": "standard",
+        "source": "css:animation-triggers-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.appearance",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "appearance"
+        ],
+        "syntax": "none | auto | base | base-select | <compat-auto> | <compat-special>"
+      },
+      "name": "appearance",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-ui-4/#propdef-appearance",
+        "profile": "standard",
+        "source": "css:css-ui-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.aspect-ratio",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "all elements except inline boxes and internal ruby or table boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword or a pair of numbers",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "aspect-ratio",
+          "aspectRatio"
+        ],
+        "syntax": "auto || <ratio>"
+      },
+      "name": "aspect-ratio",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-sizing-4/#propdef-aspect-ratio",
+        "profile": "standard",
+        "source": "css:css-sizing-4",
+        "version": "8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/properties/a.json"
+}

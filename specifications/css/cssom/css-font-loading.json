@@ -1,0 +1,1920 @@
+{
+  "entries": [
+    {
+      "description": "dictionary FontFaceDescriptors from css-font-loading.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.dictionaries.fontfacedescriptors",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "css-font-loading.idl"
+      },
+      "name": "FontFaceDescriptors",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceDescriptors",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceDescriptors.ascentOverride Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.dictionaries.fontfacedescriptors.fields.ascentoverride",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"ascentOverride\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":{\"type\":\"string\",\"value\":\"normal\"},\"required\":false}"
+      },
+      "name": "ascentOverride",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.dictionaries.fontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceDescriptors.ascentOverride",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceDescriptors.descentOverride Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.dictionaries.fontfacedescriptors.fields.descentoverride",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"descentOverride\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":{\"type\":\"string\",\"value\":\"normal\"},\"required\":false}"
+      },
+      "name": "descentOverride",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.dictionaries.fontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceDescriptors.descentOverride",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceDescriptors.display Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.dictionaries.fontfacedescriptors.fields.display",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"display\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":{\"type\":\"string\",\"value\":\"auto\"},\"required\":false}"
+      },
+      "name": "display",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.dictionaries.fontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceDescriptors.display",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceDescriptors.featureSettings Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.dictionaries.fontfacedescriptors.fields.featuresettings",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"featureSettings\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":{\"type\":\"string\",\"value\":\"normal\"},\"required\":false}"
+      },
+      "name": "featureSettings",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.dictionaries.fontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceDescriptors.featureSettings",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceDescriptors.lineGapOverride Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.dictionaries.fontfacedescriptors.fields.linegapoverride",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"lineGapOverride\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":{\"type\":\"string\",\"value\":\"normal\"},\"required\":false}"
+      },
+      "name": "lineGapOverride",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.dictionaries.fontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceDescriptors.lineGapOverride",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceDescriptors.stretch Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.dictionaries.fontfacedescriptors.fields.stretch",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"stretch\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":{\"type\":\"string\",\"value\":\"normal\"},\"required\":false}"
+      },
+      "name": "stretch",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.dictionaries.fontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceDescriptors.stretch",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceDescriptors.style Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.dictionaries.fontfacedescriptors.fields.style",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"style\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":{\"type\":\"string\",\"value\":\"normal\"},\"required\":false}"
+      },
+      "name": "style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.dictionaries.fontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceDescriptors.style",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceDescriptors.unicodeRange Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.dictionaries.fontfacedescriptors.fields.unicoderange",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"unicodeRange\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":{\"type\":\"string\",\"value\":\"U+0-10FFFF\"},\"required\":false}"
+      },
+      "name": "unicodeRange",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.dictionaries.fontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceDescriptors.unicodeRange",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceDescriptors.variationSettings Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.dictionaries.fontfacedescriptors.fields.variationsettings",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"variationSettings\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":{\"type\":\"string\",\"value\":\"normal\"},\"required\":false}"
+      },
+      "name": "variationSettings",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.dictionaries.fontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceDescriptors.variationSettings",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceDescriptors.weight Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.dictionaries.fontfacedescriptors.fields.weight",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"weight\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":{\"type\":\"string\",\"value\":\"normal\"},\"required\":false}"
+      },
+      "name": "weight",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.dictionaries.fontfacedescriptors",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceDescriptors.weight",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "dictionary FontFaceSetLoadEventInit from css-font-loading.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.dictionaries.fontfacesetloadeventinit",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "inheritance": "EventInit"
+      },
+      "name": "FontFaceSetLoadEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceSetLoadEventInit",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceSetLoadEventInit.fontfaces Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.dictionaries.fontfacesetloadeventinit.fields.fontfaces",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"fontfaces\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"FontFace\"}]},\"default\":{\"type\":\"sequence\",\"value\":[]},\"required\":false}"
+      },
+      "name": "fontfaces",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.dictionaries.fontfacesetloadeventinit",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceSetLoadEventInit.fontfaces",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceSetLoadEventInit has EventInit as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.dictionaries.fontfacesetloadeventinit.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "EventInit"
+      },
+      "name": "FontFaceSetLoadEventInit inherits EventInit",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.dictionaries.fontfacesetloadeventinit",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceSetLoadEventInit",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "enum FontFaceLoadStatus from css-font-loading.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.enums.fontfaceloadstatus",
+      "kind": "enum",
+      "metadata": {
+        "idlSource": "css-font-loading.idl"
+      },
+      "name": "FontFaceLoadStatus",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceLoadStatus",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceLoadStatus enum value error.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.enums.fontfaceloadstatus.values.error",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "error"
+      },
+      "name": "error",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.enums.fontfaceloadstatus",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceLoadStatus",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceLoadStatus enum value loaded.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.enums.fontfaceloadstatus.values.loaded",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "loaded"
+      },
+      "name": "loaded",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.enums.fontfaceloadstatus",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceLoadStatus",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceLoadStatus enum value loading.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.enums.fontfaceloadstatus.values.loading",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "loading"
+      },
+      "name": "loading",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.enums.fontfaceloadstatus",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceLoadStatus",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceLoadStatus enum value unloaded.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.enums.fontfaceloadstatus.values.unloaded",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "unloaded"
+      },
+      "name": "unloaded",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.enums.fontfaceloadstatus",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceLoadStatus",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "enum FontFaceSetLoadStatus from css-font-loading.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.enums.fontfacesetloadstatus",
+      "kind": "enum",
+      "metadata": {
+        "idlSource": "css-font-loading.idl"
+      },
+      "name": "FontFaceSetLoadStatus",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceSetLoadStatus",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceSetLoadStatus enum value loaded.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.enums.fontfacesetloadstatus.values.loaded",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "loaded"
+      },
+      "name": "loaded",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.enums.fontfacesetloadstatus",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceSetLoadStatus",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceSetLoadStatus enum value loading.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.enums.fontfacesetloadstatus.values.loading",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "loading"
+      },
+      "name": "loading",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.enums.fontfacesetloadstatus",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceSetLoadStatus",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "includes Document-includes-FontFaceSource from css-font-loading.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.includes.document-includes-fontfacesource",
+      "kind": "includes",
+      "metadata": {
+        "idlSource": "css-font-loading.idl"
+      },
+      "name": "Document-includes-FontFaceSource",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:Document-includes-FontFaceSource",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "includes WorkerGlobalScope-includes-FontFaceSource from css-font-loading.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.includes.workerglobalscope-includes-fontfacesource",
+      "kind": "includes",
+      "metadata": {
+        "idlSource": "css-font-loading.idl"
+      },
+      "name": "WorkerGlobalScope-includes-FontFaceSource",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:WorkerGlobalScope-includes-FontFaceSource",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface FontFace from css-font-loading.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontface",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier-list\",\"value\":[{\"value\":\"Window\"},{\"value\":\"Worker\"}]}"
+        ],
+        "idlSource": "css-font-loading.idl"
+      },
+      "name": "FontFace",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFace",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface FontFace from css-font-loading.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontface--c368c0ea",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "css-font-loading.idl"
+      },
+      "name": "FontFace",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFace",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFace.features Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontface--c368c0ea.attributes.features",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"features\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"FontFaceFeatures\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "features",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontface--c368c0ea",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFace.features",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFace.palettes Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontface--c368c0ea.attributes.palettes",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"palettes\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"FontFacePalettes\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "palettes",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontface--c368c0ea",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFace.palettes",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFace.variations Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontface--c368c0ea.attributes.variations",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"variations\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"FontFaceVariations\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "variations",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontface--c368c0ea",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFace.variations",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFace.ascentOverride Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontface.attributes.ascentoverride",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"ascentOverride\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "ascentOverride",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontface",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFace.ascentOverride",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFace.descentOverride Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontface.attributes.descentoverride",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"descentOverride\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "descentOverride",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontface",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFace.descentOverride",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFace.display Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontface.attributes.display",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"display\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "display",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontface",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFace.display",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFace.family Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontface.attributes.family",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"family\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "family",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontface",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFace.family",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFace.featureSettings Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontface.attributes.featuresettings",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"featureSettings\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "featureSettings",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontface",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFace.featureSettings",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFace.lineGapOverride Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontface.attributes.linegapoverride",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"lineGapOverride\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "lineGapOverride",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontface",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFace.lineGapOverride",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFace.loaded Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontface.attributes.loaded",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"loaded\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"Promise\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"FontFace\"}]},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "loaded",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontface",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFace.loaded",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFace.status Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontface.attributes.status",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"status\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"FontFaceLoadStatus\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "status",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontface",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFace.status",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFace.stretch Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontface.attributes.stretch",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"stretch\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "stretch",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontface",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFace.stretch",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFace.style Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontface.attributes.style",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"style\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontface",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFace.style",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFace.unicodeRange Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontface.attributes.unicoderange",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"unicodeRange\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "unicodeRange",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontface",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFace.unicodeRange",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFace.variationSettings Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontface.attributes.variationsettings",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"variationSettings\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "variationSettings",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontface",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFace.variationSettings",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFace.weight Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontface.attributes.weight",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"weight\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "weight",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontface",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFace.weight",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFace.constructor Web IDL constructor.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontface.constructors.constructor",
+      "kind": "constructor",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "signature": "{\"type\":\"constructor\",\"arguments\":[{\"type\":\"argument\",\"name\":\"family\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"source\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":true,\"idlType\":[{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"BufferSource\"}]},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"descriptors\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"FontFaceDescriptors\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[]}"
+      },
+      "name": "constructor",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontface",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFace.constructor",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFace.load Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontface.methods.load",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"load\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"Promise\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"FontFace\"}]},\"arguments\":[],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "load",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontface",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFace.load",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface FontFaceFeatures from css-font-loading.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfacefeatures",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier-list\",\"value\":[{\"value\":\"Window\"},{\"value\":\"Worker\"}]}"
+        ],
+        "idlSource": "css-font-loading.idl"
+      },
+      "name": "FontFaceFeatures",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceFeatures",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface FontFacePalette from css-font-loading.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfacepalette",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier-list\",\"value\":[{\"value\":\"Window\"},{\"value\":\"Worker\"}]}"
+        ],
+        "idlSource": "css-font-loading.idl"
+      },
+      "name": "FontFacePalette",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFacePalette",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFacePalette.length Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfacepalette.attributes.length",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"length\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "length",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfacepalette",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFacePalette.length",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFacePalette.usableWithDarkBackground Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfacepalette.attributes.usablewithdarkbackground",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"usableWithDarkBackground\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "usableWithDarkBackground",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfacepalette",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFacePalette.usableWithDarkBackground",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFacePalette.usableWithLightBackground Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfacepalette.attributes.usablewithlightbackground",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"usableWithLightBackground\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "usableWithLightBackground",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfacepalette",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFacePalette.usableWithLightBackground",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFacePalette.iterable-0bb90b12 Web IDL iterable.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfacepalette.iterable.iterable-0bb90b12",
+      "kind": "iterable",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"iterable\",\"idlType\":[{\"type\":null,\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"}],\"arguments\":[],\"extAttrs\":[],\"readonly\":false,\"async\":false}"
+      },
+      "name": "iterable-0bb90b12",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfacepalette",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFacePalette.iterable-0bb90b12",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFacePalette.getter Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfacepalette.methods.getter",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"index\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"getter\"}",
+        "special": "getter"
+      },
+      "name": "getter",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfacepalette",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFacePalette.getter",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface FontFacePalettes from css-font-loading.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfacepalettes",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier-list\",\"value\":[{\"value\":\"Window\"},{\"value\":\"Worker\"}]}"
+        ],
+        "idlSource": "css-font-loading.idl"
+      },
+      "name": "FontFacePalettes",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFacePalettes",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFacePalettes.length Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfacepalettes.attributes.length",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"length\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "length",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfacepalettes",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFacePalettes.length",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFacePalettes.iterable-c5ee5ca6 Web IDL iterable.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfacepalettes.iterable.iterable-c5ee5ca6",
+      "kind": "iterable",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"iterable\",\"idlType\":[{\"type\":null,\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"FontFacePalette\"}],\"arguments\":[],\"extAttrs\":[],\"readonly\":false,\"async\":false}"
+      },
+      "name": "iterable-c5ee5ca6",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfacepalettes",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFacePalettes.iterable-c5ee5ca6",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFacePalettes.getter Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfacepalettes.methods.getter",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"FontFacePalette\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"index\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"getter\"}",
+        "special": "getter"
+      },
+      "name": "getter",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfacepalettes",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFacePalettes.getter",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface FontFaceSet from css-font-loading.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfaceset",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier-list\",\"value\":[{\"value\":\"Window\"},{\"value\":\"Worker\"}]}"
+        ],
+        "idlSource": "css-font-loading.idl",
+        "inheritance": "EventTarget"
+      },
+      "name": "FontFaceSet",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceSet",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceSet.onloading Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfaceset.attributes.onloading",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"onloading\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"EventHandler\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "onloading",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfaceset",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceSet.onloading",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceSet.onloadingdone Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfaceset.attributes.onloadingdone",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"onloadingdone\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"EventHandler\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "onloadingdone",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfaceset",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceSet.onloadingdone",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceSet.onloadingerror Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfaceset.attributes.onloadingerror",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"onloadingerror\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"EventHandler\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "onloadingerror",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfaceset",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceSet.onloadingerror",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceSet.ready Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfaceset.attributes.ready",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"ready\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"Promise\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"FontFaceSet\"}]},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "ready",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfaceset",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceSet.ready",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceSet.status Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfaceset.attributes.status",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"status\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"FontFaceSetLoadStatus\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "status",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfaceset",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceSet.status",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceSet has EventTarget as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfaceset.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "EventTarget"
+      },
+      "name": "FontFaceSet inherits EventTarget",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfaceset",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceSet",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceSet.add Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfaceset.methods.add",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"add\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"FontFaceSet\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"font\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"FontFace\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "add",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfaceset",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceSet.add",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceSet.check Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfaceset.methods.check",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"check\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"font\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"text\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":{\"type\":\"string\",\"value\":\" \"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "check",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfaceset",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceSet.check",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceSet.clear Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfaceset.methods.clear",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"clear\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "clear",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfaceset",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceSet.clear",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceSet.delete Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfaceset.methods.delete",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"delete\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"font\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"FontFace\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "delete",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfaceset",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceSet.delete",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceSet.load Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfaceset.methods.load",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"load\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"Promise\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"FontFace\"}]}]},\"arguments\":[{\"type\":\"argument\",\"name\":\"font\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"text\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":{\"type\":\"string\",\"value\":\" \"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "load",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfaceset",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceSet.load",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceSet.setlike-bf98c6c3 Web IDL setlike.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfaceset.setlike.setlike-bf98c6c3",
+      "kind": "setlike",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"setlike\",\"idlType\":[{\"type\":null,\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"FontFace\"}],\"arguments\":[],\"extAttrs\":[],\"readonly\":false,\"async\":false}"
+      },
+      "name": "setlike-bf98c6c3",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfaceset",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceSet.setlike-bf98c6c3",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface FontFaceSetLoadEvent from css-font-loading.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfacesetloadevent",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier-list\",\"value\":[{\"value\":\"Window\"},{\"value\":\"Worker\"}]}"
+        ],
+        "idlSource": "css-font-loading.idl",
+        "inheritance": "Event"
+      },
+      "name": "FontFaceSetLoadEvent",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceSetLoadEvent",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceSetLoadEvent.fontfaces Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfacesetloadevent.attributes.fontfaces",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SameObject"
+        ],
+        "idlSource": "css-font-loading.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"fontfaces\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"FrozenArray\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"FontFace\"}]},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SameObject\",\"rhs\":null,\"arguments\":[]}],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "fontfaces",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfacesetloadevent",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceSetLoadEvent.fontfaces",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceSetLoadEvent.constructor Web IDL constructor.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfacesetloadevent.constructors.constructor",
+      "kind": "constructor",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "signature": "{\"type\":\"constructor\",\"arguments\":[{\"type\":\"argument\",\"name\":\"type\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"eventInitDict\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"FontFaceSetLoadEventInit\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[]}"
+      },
+      "name": "constructor",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfacesetloadevent",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceSetLoadEvent.constructor",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceSetLoadEvent has Event as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfacesetloadevent.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "Event"
+      },
+      "name": "FontFaceSetLoadEvent inherits Event",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfacesetloadevent",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceSetLoadEvent",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface FontFaceVariationAxis from css-font-loading.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfacevariationaxis",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier-list\",\"value\":[{\"value\":\"Window\"},{\"value\":\"Worker\"}]}"
+        ],
+        "idlSource": "css-font-loading.idl"
+      },
+      "name": "FontFaceVariationAxis",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceVariationAxis",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceVariationAxis.axisTag Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfacevariationaxis.attributes.axistag",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"axisTag\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "axisTag",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfacevariationaxis",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceVariationAxis.axisTag",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceVariationAxis.defaultValue Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfacevariationaxis.attributes.defaultvalue",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"defaultValue\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "defaultValue",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfacevariationaxis",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceVariationAxis.defaultValue",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceVariationAxis.maximumValue Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfacevariationaxis.attributes.maximumvalue",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"maximumValue\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "maximumValue",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfacevariationaxis",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceVariationAxis.maximumValue",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceVariationAxis.minimumValue Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfacevariationaxis.attributes.minimumvalue",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"minimumValue\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"double\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "minimumValue",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfacevariationaxis",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceVariationAxis.minimumValue",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceVariationAxis.name Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfacevariationaxis.attributes.name",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"name\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfacevariationaxis",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceVariationAxis.name",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface FontFaceVariations from css-font-loading.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfacevariations",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier-list\",\"value\":[{\"value\":\"Window\"},{\"value\":\"Worker\"}]}"
+        ],
+        "idlSource": "css-font-loading.idl"
+      },
+      "name": "FontFaceVariations",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceVariations",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceVariations.setlike-d72ab418 Web IDL setlike.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.interfaces.fontfacevariations.setlike.setlike-d72ab418",
+      "kind": "setlike",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"setlike\",\"idlType\":[{\"type\":null,\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"FontFaceVariationAxis\"}],\"arguments\":[],\"extAttrs\":[],\"readonly\":true,\"async\":false}"
+      },
+      "name": "setlike-d72ab418",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.interfaces.fontfacevariations",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceVariations.setlike-d72ab418",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface mixin FontFaceSource from css-font-loading.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.mixins.fontfacesource",
+      "kind": "interface mixin",
+      "metadata": {
+        "idlSource": "css-font-loading.idl"
+      },
+      "name": "FontFaceSource",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceSource",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FontFaceSource.fonts Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-font-loading.mixins.fontfacesource.attributes.fonts",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-font-loading.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"fonts\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"FontFaceSet\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "fonts",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-font-loading.mixins.fontfacesource",
+      "spec": {
+        "anchor": "webref/idl/css-font-loading.idl#WebIDL:FontFaceSource.fonts",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-font-loading.json"
+}

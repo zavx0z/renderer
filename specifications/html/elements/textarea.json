@@ -1,0 +1,445 @@
+{
+  "entries": [
+    {
+      "description": "Multiline text controls",
+      "domain": "html",
+      "id": "html.elements.textarea",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; phrasing; interactive; listed; labelable; submittable; resettable; form-associated; palpable",
+        "children": "text",
+        "interface": "HTMLTextAreaElement",
+        "parents": "phrasing"
+      },
+      "name": "textarea",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-textarea-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <textarea> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.textarea.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "textarea",
+        "interface": "HTMLTextAreaElement"
+      },
+      "name": "textarea implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.textarea",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <textarea> element activation and default action.",
+      "domain": "html",
+      "id": "html.elements.textarea.activation-behavior",
+      "kind": "activation-behavior",
+      "metadata": {
+        "element": "textarea",
+        "interface": "HTMLTextAreaElement"
+      },
+      "name": "textarea activation and default action",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.textarea",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-textarea-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "autocomplete content attribute on <textarea>.",
+      "domain": "html",
+      "id": "html.elements.textarea.attributes.autocomplete",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "textarea",
+        "interface": "HTMLTextAreaElement"
+      },
+      "name": "autocomplete",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.textarea",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fe-autocomplete",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "cols content attribute on <textarea>.",
+      "domain": "html",
+      "id": "html.elements.textarea.attributes.cols",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "textarea",
+        "interface": "HTMLTextAreaElement"
+      },
+      "name": "cols",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.textarea",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-textarea-cols",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "dirname content attribute on <textarea>.",
+      "domain": "html",
+      "id": "html.elements.textarea.attributes.dirname",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "textarea",
+        "interface": "HTMLTextAreaElement"
+      },
+      "name": "dirname",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.textarea",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fe-dirname",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "disabled content attribute on <textarea>.",
+      "domain": "html",
+      "id": "html.elements.textarea.attributes.disabled",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "textarea",
+        "interface": "HTMLTextAreaElement"
+      },
+      "name": "disabled",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.textarea",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fe-disabled",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "form content attribute on <textarea>.",
+      "domain": "html",
+      "id": "html.elements.textarea.attributes.form",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "textarea",
+        "interface": "HTMLTextAreaElement"
+      },
+      "name": "form",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.textarea",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fae-form",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "maxlength content attribute on <textarea>.",
+      "domain": "html",
+      "id": "html.elements.textarea.attributes.maxlength",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "textarea",
+        "interface": "HTMLTextAreaElement"
+      },
+      "name": "maxlength",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.textarea",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-textarea-maxlength",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "minlength content attribute on <textarea>.",
+      "domain": "html",
+      "id": "html.elements.textarea.attributes.minlength",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "textarea",
+        "interface": "HTMLTextAreaElement"
+      },
+      "name": "minlength",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.textarea",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-textarea-minlength",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "name content attribute on <textarea>.",
+      "domain": "html",
+      "id": "html.elements.textarea.attributes.name",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "textarea",
+        "interface": "HTMLTextAreaElement"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.textarea",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fe-name",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "placeholder content attribute on <textarea>.",
+      "domain": "html",
+      "id": "html.elements.textarea.attributes.placeholder",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "textarea",
+        "interface": "HTMLTextAreaElement"
+      },
+      "name": "placeholder",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.textarea",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-textarea-placeholder",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "readonly content attribute on <textarea>.",
+      "domain": "html",
+      "id": "html.elements.textarea.attributes.readonly",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "textarea",
+        "interface": "HTMLTextAreaElement"
+      },
+      "name": "readonly",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.textarea",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-textarea-readonly",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "required content attribute on <textarea>.",
+      "domain": "html",
+      "id": "html.elements.textarea.attributes.required",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "textarea",
+        "interface": "HTMLTextAreaElement"
+      },
+      "name": "required",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.textarea",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-textarea-required",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "rows content attribute on <textarea>.",
+      "domain": "html",
+      "id": "html.elements.textarea.attributes.rows",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "textarea",
+        "interface": "HTMLTextAreaElement"
+      },
+      "name": "rows",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.textarea",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-textarea-rows",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "wrap content attribute on <textarea>.",
+      "domain": "html",
+      "id": "html.elements.textarea.attributes.wrap",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "textarea",
+        "interface": "HTMLTextAreaElement"
+      },
+      "name": "wrap",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.textarea",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-textarea-wrap",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <textarea> element content categories.",
+      "domain": "html",
+      "id": "html.elements.textarea.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "textarea",
+        "interface": "HTMLTextAreaElement"
+      },
+      "name": "textarea content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.textarea",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-textarea-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <textarea> element content model.",
+      "domain": "html",
+      "id": "html.elements.textarea.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "textarea",
+        "interface": "HTMLTextAreaElement"
+      },
+      "name": "textarea content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.textarea",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-textarea-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <textarea> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.textarea.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "textarea",
+        "interface": "HTMLTextAreaElement"
+      },
+      "name": "textarea interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.textarea",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-textarea-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/textarea.json"
+}

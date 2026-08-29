@@ -1,0 +1,1278 @@
+{
+  "entries": [
+    {
+      "description": "@zavx0z/renderer package export ..",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root",
+      "kind": "package-export-path",
+      "metadata": {
+        "package": "@zavx0z/renderer",
+        "sourceTarget": "src/index.ts",
+        "target": "./src/index.ts"
+      },
+      "name": ".",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "./src/index.ts",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public runtime export createDocumentInteractionController.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.createdocumentinteractioncontroller",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 3,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": false
+      },
+      "name": "createDocumentInteractionController",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L3",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export CreateDocumentInteractionControllerOptions.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.createdocumentinteractioncontrolleroptions",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 44,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "CreateDocumentInteractionControllerOptions",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L44",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public runtime export createDocumentInteractionState.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.createdocumentinteractionstate",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 2,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": false
+      },
+      "name": "createDocumentInteractionState",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L2",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public runtime export createDocumentRenderer.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.createdocumentrenderer",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 1,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": false
+      },
+      "name": "createDocumentRenderer",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L1",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export CreateDocumentRendererOptions.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.createdocumentrendereroptions",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "CreateDocumentRendererOptions",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export DisplayItem.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.displayitem",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DisplayItem",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export DocumentInteractionController.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.documentinteractioncontroller",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 44,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DocumentInteractionController",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L44",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export DocumentInteractionState.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.documentinteractionstate",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 52,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DocumentInteractionState",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L52",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export DocumentInteractionStateChange.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.documentinteractionstatechange",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 52,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DocumentInteractionStateChange",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L52",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export DocumentInteractionStateSubscriber.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.documentinteractionstatesubscriber",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 52,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DocumentInteractionStateSubscriber",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L52",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export DocumentRenderer.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.documentrenderer",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DocumentRenderer",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export HitMetadata.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.hitmetadata",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "HitMetadata",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public runtime export hitTest.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.hittest",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 3,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": false
+      },
+      "name": "hitTest",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L3",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export ImageDisplayItem.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.imagedisplayitem",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "ImageDisplayItem",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export PointerInput.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.pointerinput",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 44,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "PointerInput",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L44",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RectDisplayItem.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.rectdisplayitem",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RectDisplayItem",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RenderAlignItems.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderalignitems",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderAlignItems",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RenderBorder.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderborder",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderBorder",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RenderBorderColors.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderbordercolors",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderBorderColors",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RenderBorderWidths.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderborderwidths",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderBorderWidths",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RenderBox.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderbox",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderBox",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RenderBoxShadow.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderboxshadow",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderBoxShadow",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RenderBoxSizing.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderboxsizing",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderBoxSizing",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RenderClip.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderclip",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderClip",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RenderClipCornerRadii.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderclipcornerradii",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderClipCornerRadii",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RenderClipRadius.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderclipradius",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderClipRadius",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RenderCornerRadii.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.rendercornerradii",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderCornerRadii",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RenderDisplay.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderdisplay",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderDisplay",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RenderEdges.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderedges",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderEdges",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RenderFlexDirection.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderflexdirection",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderFlexDirection",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RenderFrame.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderframe",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderFrame",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RenderJustifyContent.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderjustifycontent",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderJustifyContent",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RenderMargin.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.rendermargin",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderMargin",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RenderObjectFit.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderobjectfit",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderObjectFit",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RenderOverflow.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderoverflow",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderOverflow",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RenderPadding.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderpadding",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderPadding",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RenderPosition.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderposition",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderPosition",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RenderScrollMetrics.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderscrollmetrics",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderScrollMetrics",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RenderTextAlign.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.rendertextalign",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderTextAlign",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RenderTransform.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.rendertransform",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderTransform",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RenderViewport.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderviewport",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderViewport",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RenderWhiteSpace.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderwhitespace",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderWhiteSpace",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export RenderZIndex.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderzindex",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderZIndex",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public runtime export resolveTitle.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.resolvetitle",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 3,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": false
+      },
+      "name": "resolveTitle",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L3",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export TextDisplayItem.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.textdisplayitem",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "TextDisplayItem",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export TitleCandidate.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.titlecandidate",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 44,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "TitleCandidate",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L44",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export TitleTooltip.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.titletooltip",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 44,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "TitleTooltip",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L44",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer public type export WheelInput.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.wheelinput",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 44,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "WheelInput",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L44",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "platform/renderer-exports.json"
+}

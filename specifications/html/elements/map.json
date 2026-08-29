@@ -1,0 +1,146 @@
+{
+  "entries": [
+    {
+      "description": "Image map",
+      "domain": "html",
+      "id": "html.elements.map",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; phrasing*; palpable",
+        "children": "transparent; area*",
+        "interface": "HTMLMapElement",
+        "parents": "phrasing"
+      },
+      "name": "map",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/image-maps.html#the-map-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <map> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.map.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "map",
+        "interface": "HTMLMapElement"
+      },
+      "name": "map implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.map",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "name content attribute on <map>.",
+      "domain": "html",
+      "id": "html.elements.map.attributes.name",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "map",
+        "interface": "HTMLMapElement"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.map",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/image-maps.html#attr-map-name",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <map> element content categories.",
+      "domain": "html",
+      "id": "html.elements.map.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "map",
+        "interface": "HTMLMapElement"
+      },
+      "name": "map content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.map",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/image-maps.html#the-map-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <map> element content model.",
+      "domain": "html",
+      "id": "html.elements.map.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "map",
+        "interface": "HTMLMapElement"
+      },
+      "name": "map content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.map",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/image-maps.html#the-map-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <map> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.map.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "map",
+        "interface": "HTMLMapElement"
+      },
+      "name": "map interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.map",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/image-maps.html#the-map-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/map.json"
+}

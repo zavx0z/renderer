@@ -1,0 +1,325 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "capability": "html.behaviors.input-type-range",
+      "repository": "ui",
+      "package": "@ui/components",
+      "subject": "ColorInput",
+      "scope": "production",
+      "path": "packages/components/color-input.tsx",
+      "anchor": "export function ColorInput(props: ColorInputProps)",
+      "behavior": "Stable controlled RGBA channels with range input/change semantics and analytical color paint."
+    },
+    {
+      "capability": "html.behaviors.popover",
+      "repository": "ui",
+      "package": "@ui/components",
+      "subject": "ColorInput",
+      "scope": "production",
+      "path": "packages/components/color-input.tsx",
+      "anchor": "presentation: ColorInputPresentation",
+      "behavior": "An anchored top-layer color picker with clipping, light dismiss, Escape and focus restoration instead of an inline hidden panel."
+    },
+    {
+      "capability": "browser.features.number-input-proxy",
+      "repository": "ui",
+      "package": "@ui/components",
+      "subject": "NumberInput",
+      "scope": "production",
+      "path": "packages/components/number-input.tsx",
+      "anchor": "const value = (event.target as HTMLInputElement).valueAsNumber",
+      "behavior": "Native typed number editing, focus, input/change, Escape rollback and selection through the exact semantic owner."
+    },
+    {
+      "capability": "dom.extensions.pointerevents.interfaces.element.methods.setpointercapture",
+      "repository": "ui",
+      "package": "@ui/components",
+      "subject": "NumberInput scrub",
+      "scope": "production",
+      "path": "packages/components/number-input.tsx",
+      "anchor": "const onPointerDown = (event: PointerEvent)",
+      "behavior": "A scrub gesture continues outside the control until pointerup/cancel without component-owned capture emulation."
+    },
+    {
+      "capability": "css.properties.overflow",
+      "repository": "ui",
+      "package": "@ui/components",
+      "subject": "CodeEditor",
+      "scope": "production",
+      "path": "packages/components/code-editor.tsx",
+      "anchor": "overflow: \"auto\"",
+      "behavior": "Two-axis scrolling with clipping and stable retained line/token identity."
+    },
+    {
+      "capability": "css.properties.white-space",
+      "repository": "ui",
+      "package": "@ui/components",
+      "subject": "CodeEditor",
+      "scope": "production",
+      "path": "packages/components/code-editor.tsx",
+      "anchor": "whiteSpace: \"nowrap\"",
+      "behavior": "Preserve source whitespace and prevent wrapping for read-only code lines."
+    },
+    {
+      "capability": "browser.features.number-input-proxy",
+      "repository": "ui",
+      "package": "@ui/components",
+      "subject": "Inspector numeric fields",
+      "scope": "production",
+      "path": "packages/components/inspector.tsx",
+      "anchor": "export function Inspector",
+      "behavior": "Focused numeric field editing inside nested scrollable Inspector groups."
+    },
+    {
+      "capability": "dom.algorithms.selection",
+      "repository": "interpreter",
+      "package": "@metafor/interpreter",
+      "subject": "SourceEditor",
+      "scope": "production",
+      "path": "packages/interpreter/web/dom/source-editor.ts",
+      "anchor": "function selectionSnapshot(value: string, input: HTMLTextAreaElement)",
+      "behavior": "Keep semantic textarea selection start/end/direction synchronized with the editable source."
+    },
+    {
+      "capability": "renderer.features.caret-selection-paint",
+      "repository": "interpreter",
+      "package": "@metafor/interpreter",
+      "subject": "SourceEditor",
+      "scope": "production",
+      "path": "packages/interpreter/web/dom/source-editor.ts",
+      "anchor": "export function createSourceEditor",
+      "behavior": "Paint a visible caret and selected range aligned with the separately tokenized presentation."
+    },
+    {
+      "capability": "dom.extensions.cssom-view.interfaces.element.methods.getboundingclientrect",
+      "repository": "interpreter",
+      "package": "@metafor/interpreter",
+      "subject": "SourceEditor scrollToLine",
+      "scope": "production",
+      "path": "packages/interpreter/web/dom/source-editor.ts",
+      "anchor": "function scrollToLine(",
+      "behavior": "Use current rendered line geometry instead of a hard-coded line height and viewport."
+    },
+    {
+      "capability": "html.behaviors.clipboard",
+      "repository": "interpreter",
+      "package": "@metafor/interpreter",
+      "subject": "SourceEditor",
+      "scope": "production",
+      "path": "packages/interpreter/web/dom/source-editor.ts",
+      "anchor": "getSelectedText: () => selectionSnapshot",
+      "behavior": "Copy/cut/paste the current source selection through the browser host without a component-local clipboard dispatcher."
+    },
+    {
+      "capability": "html.behaviors.select-option-optgroup",
+      "repository": "ui",
+      "package": "@ui/components",
+      "subject": "EnumInput",
+      "scope": "production",
+      "path": "packages/components/enum-input.tsx",
+      "anchor": "export function EnumInput",
+      "behavior": "Open a collapsed select picker, navigate options by keyboard, activate one option and dispatch input/change."
+    },
+    {
+      "capability": "react.semantics.create-root",
+      "repository": "node",
+      "package": "@nodes/ui",
+      "subject": "mountField",
+      "scope": "production",
+      "path": "packages/ui/dom/field-mount.ts",
+      "anchor": "const root = createRoot(staging)",
+      "behavior": "Mount and update a compiled component into a DocumentFragment while retaining the exact owner element and disposing on unmount."
+    },
+    {
+      "capability": "react.semantics.keys",
+      "repository": "node",
+      "package": "@nodes/ui",
+      "subject": "NodeSystem",
+      "scope": "production",
+      "path": "packages/ui/node-system.tsx",
+      "anchor": "export function NodeSystem(props: NodeSystemProps)",
+      "behavior": "Retain node, link, parameter and socket identity across high-volume topology and parameter updates."
+    },
+    {
+      "capability": "react.hooks.react.usesyncexternalstore",
+      "repository": "node",
+      "package": "@nodes/ui",
+      "subject": "NodeSystem view store",
+      "scope": "production",
+      "path": "packages/ui/node-system.tsx",
+      "anchor": "function createNodeSystemViewStore(",
+      "behavior": "Observe topology/parameter snapshots without duplicating the canonical Node store."
+    },
+    {
+      "capability": "renderer.features.vector-path-display-item",
+      "repository": "node",
+      "package": "@nodes/ui",
+      "subject": "NodeConnection",
+      "scope": "production",
+      "path": "packages/ui/node-system.tsx",
+      "anchor": "export function NodeConnection(props: NodeConnectionProps)",
+      "behavior": "Present routed links and grid primitives without decomposing them into component-owned rectangles and points."
+    },
+    {
+      "capability": "css.properties.transform",
+      "repository": "node",
+      "package": "@nodes/ui",
+      "subject": "NodeEditor",
+      "scope": "production",
+      "path": "packages/ui/dom/node-editor.ts",
+      "anchor": "export function createNodeEditor",
+      "behavior": "Pan/zoom reaches paint, clip and inverse hit consistently for the graph surface."
+    },
+    {
+      "capability": "renderer.features.vector-path-display-item",
+      "repository": "node",
+      "package": "@nodes/ui",
+      "subject": "NodeEditor grid and links",
+      "scope": "production",
+      "path": "packages/ui/dom/node-editor.ts",
+      "anchor": "function createGrid(document: Document, size: number)",
+      "behavior": "Scale grid and routed connection presentation without a local DOM geometry renderer."
+    },
+    {
+      "capability": "html.behaviors.accessibility-semantics",
+      "repository": "interpreter",
+      "package": "@metafor/interpreter",
+      "subject": "FileTree",
+      "scope": "production",
+      "path": "packages/interpreter/web/dom/file-tree.ts",
+      "anchor": "root.setAttribute(\"aria-label\", options.title)",
+      "behavior": "Expose tree rows, level, expansion and selection through the semantic accessibility mapping."
+    },
+    {
+      "capability": "browser.features.text-input-proxy",
+      "repository": "interpreter",
+      "package": "@metafor/interpreter",
+      "subject": "Terminal",
+      "scope": "production",
+      "path": "packages/interpreter/web/dom/terminal.ts",
+      "anchor": "export function createTerminal",
+      "behavior": "Route focused text entry, keyboard control sequences and composition into the semantic terminal input owner."
+    },
+    {
+      "capability": "dom.algorithms.selection",
+      "repository": "interpreter",
+      "package": "@metafor/interpreter",
+      "subject": "Terminal selection",
+      "scope": "production",
+      "path": "packages/interpreter/web/dom/terminal.ts",
+      "anchor": "selectionSnapshot: () => null",
+      "behavior": "Retain and expose terminal text selection for copy instead of returning a fabricated null snapshot."
+    },
+    {
+      "capability": "browser.features.multiple-planes",
+      "repository": "interpreter",
+      "package": "@metafor/interpreter",
+      "subject": "Module displays",
+      "scope": "production",
+      "path": "packages/interpreter/web/main.ts",
+      "anchor": "function syncModuleDisplays(): void",
+      "behavior": "Maintain one exact semantic Document per stable world plane with nearest-plane input, resize, capture and cleanup."
+    },
+    {
+      "capability": "browser.features.overlays",
+      "repository": "metafor",
+      "package": "@quantum/bulk",
+      "subject": "Bulk DOM overlay",
+      "scope": "production",
+      "path": "quantum/bulk/dom/overlay-runtime.ts",
+      "anchor": "const backend = new RendererWebGpuBackend",
+      "behavior": "Compose the HUD through the shared browser overlay owner rather than reimplementing pointer mapping, capture, hit and lifecycle."
+    },
+    {
+      "capability": "browser.features.document-plane",
+      "repository": "metafor",
+      "package": "@internal/visual",
+      "subject": "Cosmos display plane",
+      "scope": "production",
+      "path": "cosmos/internal/visual/main/index.ts",
+      "anchor": "runtime.addPlane({",
+      "behavior": "Attach the Cosmos document to a stable world plane with the intended stylesheet and camera gestures."
+    },
+    {
+      "capability": "browser.features.overlays",
+      "repository": "metafor",
+      "package": "@internal/visual",
+      "subject": "Cosmos display dock",
+      "scope": "production",
+      "path": "cosmos/internal/visual/main/index.ts",
+      "anchor": "runtime.addOverlay({",
+      "behavior": "Attach the dock to a camera-locked overlay and apply the dock stylesheet to that exact runtime."
+    },
+    {
+      "capability": "browser.features.document-plane",
+      "repository": "demo",
+      "package": "@zavx0z/demo",
+      "subject": "Journal plane",
+      "scope": "production",
+      "path": "src/main.ts",
+      "anchor": "const journalPlane = runtime.addPlane({",
+      "behavior": "Present the transactional journal Document on a stable resizable plane with capture and diagnostics."
+    },
+    {
+      "capability": "renderer.features.backend-neutral-diagnostics",
+      "repository": "demo",
+      "package": "@zavx0z/demo",
+      "subject": "Journal diagnostics",
+      "scope": "production",
+      "path": "src/main.ts",
+      "anchor": "journalPlane.backend.root.children.length",
+      "behavior": "Observe neutral plane/frame diagnostics without reaching into retained Engine/WebGPU owner objects."
+    },
+    {
+      "capability": "renderer.features.images",
+      "repository": "demo",
+      "package": "@zavx0z/demo",
+      "subject": "Journal document",
+      "scope": "production",
+      "path": "src/dom/journalDocument.ts",
+      "anchor": "export function createJournalDocument",
+      "behavior": "Render journal images with object-fit, explicit dimensions, retained texture readiness and cleanup."
+    },
+    {
+      "capability": "tsx.compiler.browser-target-build",
+      "repository": "demo",
+      "package": "@zavx0z/demo",
+      "subject": "Compiled UI migration",
+      "scope": "production",
+      "path": "src/dom/journalDocument.ts",
+      "anchor": "export function createJournalDocument",
+      "behavior": "Compile linked .tsx component exports through the Template JSX profile instead of importing removed imperative controllers."
+    },
+    {
+      "capability": "tsx.compiler.browser-target-build",
+      "repository": "interpreter",
+      "package": "@metafor/interpreter",
+      "subject": "Compiled web UI migration",
+      "scope": "production",
+      "path": "packages/interpreter/web/dom/source-editor.ts",
+      "anchor": "export function createSourceEditor",
+      "behavior": "Configure JSX compilation and migrate stale create*Controller imports to compiled component roots."
+    },
+    {
+      "capability": "tsx.compiler.browser-target-build",
+      "repository": "metafor",
+      "package": "@internal/visual",
+      "subject": "Compiled dock migration",
+      "scope": "production",
+      "path": "cosmos/internal/visual/main/index.ts",
+      "anchor": "runtime.addOverlay({",
+      "behavior": "Compile linked .tsx component exports and remove stale imperative createButton usage without restoring legacy APIs."
+    },
+    {
+      "capability": "tsx.tagged-html.static-element-names",
+      "repository": "metafor",
+      "package": "@metafor/dsl",
+      "subject": "Matter source parser",
+      "scope": "production",
+      "path": "create-metafor/dsl/matter.ts",
+      "anchor": "@zavx0z/template",
+      "behavior": "Parse the bounded meta/log/conditional/map source contract without treating ordinary HTML as executable DOM UI."
+    }
+  ]
+}

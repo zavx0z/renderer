@@ -1,0 +1,169 @@
+{
+  "entries": [
+    {
+      "description": "Embedded styling information",
+      "domain": "html",
+      "id": "html.elements.style",
+      "kind": "element",
+      "metadata": {
+        "categories": "metadata",
+        "children": "text*",
+        "interface": "HTMLStyleElement",
+        "parents": "head; noscript*"
+      },
+      "name": "style",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/semantics.html#the-style-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <style> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.style.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "style",
+        "interface": "HTMLStyleElement"
+      },
+      "name": "style implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.style",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "blocking content attribute on <style>.",
+      "domain": "html",
+      "id": "html.elements.style.attributes.blocking",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "style",
+        "interface": "HTMLStyleElement"
+      },
+      "name": "blocking",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.style",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/semantics.html#attr-style-blocking",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "media content attribute on <style>.",
+      "domain": "html",
+      "id": "html.elements.style.attributes.media",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "style",
+        "interface": "HTMLStyleElement"
+      },
+      "name": "media",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.style",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/semantics.html#attr-style-media",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <style> element content categories.",
+      "domain": "html",
+      "id": "html.elements.style.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "style",
+        "interface": "HTMLStyleElement"
+      },
+      "name": "style content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.style",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/semantics.html#the-style-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <style> element content model.",
+      "domain": "html",
+      "id": "html.elements.style.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "style",
+        "interface": "HTMLStyleElement"
+      },
+      "name": "style content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.style",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/semantics.html#the-style-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <style> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.style.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "style",
+        "interface": "HTMLStyleElement"
+      },
+      "name": "style interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.style",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/semantics.html#the-style-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/style.json"
+}

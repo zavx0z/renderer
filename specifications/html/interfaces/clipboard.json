@@ -1,0 +1,992 @@
+{
+  "entries": [
+    {
+      "description": "dictionary ClipboardChangeEventInit from clipboard-apis.idl.",
+      "domain": "html",
+      "id": "html.clipboard.dictionaries.clipboardchangeeventinit",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl",
+        "inheritance": "EventInit"
+      },
+      "name": "ClipboardChangeEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardChangeEventInit",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "ClipboardChangeEventInit.changeId Web IDL field.",
+      "domain": "html",
+      "id": "html.clipboard.dictionaries.clipboardchangeeventinit.fields.changeid",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"changeId\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"bigint\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"required\":false}"
+      },
+      "name": "changeId",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.dictionaries.clipboardchangeeventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardChangeEventInit.changeId",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "ClipboardChangeEventInit.types Web IDL field.",
+      "domain": "html",
+      "id": "html.clipboard.dictionaries.clipboardchangeeventinit.fields.types",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"types\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"}]},\"default\":{\"type\":\"sequence\",\"value\":[]},\"required\":false}"
+      },
+      "name": "types",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.dictionaries.clipboardchangeeventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardChangeEventInit.types",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "ClipboardChangeEventInit has EventInit as its declared base interface.",
+      "domain": "html",
+      "id": "html.clipboard.dictionaries.clipboardchangeeventinit.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "EventInit"
+      },
+      "name": "ClipboardChangeEventInit inherits EventInit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.dictionaries.clipboardchangeeventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardChangeEventInit",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "dictionary ClipboardEventInit from clipboard-apis.idl.",
+      "domain": "html",
+      "id": "html.clipboard.dictionaries.clipboardeventinit",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl",
+        "inheritance": "EventInit"
+      },
+      "name": "ClipboardEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardEventInit",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "ClipboardEventInit.clipboardData Web IDL field.",
+      "domain": "html",
+      "id": "html.clipboard.dictionaries.clipboardeventinit.fields.clipboarddata",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"clipboardData\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"DataTransfer\"},\"default\":{\"type\":\"null\"},\"required\":false}"
+      },
+      "name": "clipboardData",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.dictionaries.clipboardeventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardEventInit.clipboardData",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "ClipboardEventInit has EventInit as its declared base interface.",
+      "domain": "html",
+      "id": "html.clipboard.dictionaries.clipboardeventinit.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "EventInit"
+      },
+      "name": "ClipboardEventInit inherits EventInit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.dictionaries.clipboardeventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardEventInit",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "dictionary ClipboardItemOptions from clipboard-apis.idl.",
+      "domain": "html",
+      "id": "html.clipboard.dictionaries.clipboarditemoptions",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl"
+      },
+      "name": "ClipboardItemOptions",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardItemOptions",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "ClipboardItemOptions.presentationStyle Web IDL field.",
+      "domain": "html",
+      "id": "html.clipboard.dictionaries.clipboarditemoptions.fields.presentationstyle",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"presentationStyle\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"PresentationStyle\"},\"default\":{\"type\":\"string\",\"value\":\"unspecified\"},\"required\":false}"
+      },
+      "name": "presentationStyle",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.dictionaries.clipboarditemoptions",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardItemOptions.presentationStyle",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "dictionary ClipboardPermissionDescriptor from clipboard-apis.idl.",
+      "domain": "html",
+      "id": "html.clipboard.dictionaries.clipboardpermissiondescriptor",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl",
+        "inheritance": "PermissionDescriptor"
+      },
+      "name": "ClipboardPermissionDescriptor",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardPermissionDescriptor",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "ClipboardPermissionDescriptor.allowWithoutGesture Web IDL field.",
+      "domain": "html",
+      "id": "html.clipboard.dictionaries.clipboardpermissiondescriptor.fields.allowwithoutgesture",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"allowWithoutGesture\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"required\":false}"
+      },
+      "name": "allowWithoutGesture",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.dictionaries.clipboardpermissiondescriptor",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardPermissionDescriptor.allowWithoutGesture",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "ClipboardPermissionDescriptor has PermissionDescriptor as its declared base interface.",
+      "domain": "html",
+      "id": "html.clipboard.dictionaries.clipboardpermissiondescriptor.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "PermissionDescriptor"
+      },
+      "name": "ClipboardPermissionDescriptor inherits PermissionDescriptor",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.dictionaries.clipboardpermissiondescriptor",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardPermissionDescriptor",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "dictionary ClipboardUnsanitizedFormats from clipboard-apis.idl.",
+      "domain": "html",
+      "id": "html.clipboard.dictionaries.clipboardunsanitizedformats",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl"
+      },
+      "name": "ClipboardUnsanitizedFormats",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardUnsanitizedFormats",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "ClipboardUnsanitizedFormats.unsanitized Web IDL field.",
+      "domain": "html",
+      "id": "html.clipboard.dictionaries.clipboardunsanitizedformats.fields.unsanitized",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"unsanitized\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"}]},\"default\":null,\"required\":false}"
+      },
+      "name": "unsanitized",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.dictionaries.clipboardunsanitizedformats",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardUnsanitizedFormats.unsanitized",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "enum PresentationStyle from clipboard-apis.idl.",
+      "domain": "html",
+      "id": "html.clipboard.enums.presentationstyle",
+      "kind": "enum",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl"
+      },
+      "name": "PresentationStyle",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:PresentationStyle",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PresentationStyle enum value attachment.",
+      "domain": "html",
+      "id": "html.clipboard.enums.presentationstyle.values.attachment",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "attachment"
+      },
+      "name": "attachment",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.enums.presentationstyle",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:PresentationStyle",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PresentationStyle enum value inline.",
+      "domain": "html",
+      "id": "html.clipboard.enums.presentationstyle.values.inline",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "inline"
+      },
+      "name": "inline",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.enums.presentationstyle",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:PresentationStyle",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "PresentationStyle enum value unspecified.",
+      "domain": "html",
+      "id": "html.clipboard.enums.presentationstyle.values.unspecified",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "unspecified"
+      },
+      "name": "unspecified",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.enums.presentationstyle",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:PresentationStyle",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface Clipboard from clipboard-apis.idl.",
+      "domain": "html",
+      "id": "html.clipboard.interfaces.clipboard",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "SecureContext",
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "clipboard-apis.idl",
+        "inheritance": "EventTarget"
+      },
+      "name": "Clipboard",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:Clipboard",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Clipboard has EventTarget as its declared base interface.",
+      "domain": "html",
+      "id": "html.clipboard.interfaces.clipboard.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "EventTarget"
+      },
+      "name": "Clipboard inherits EventTarget",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.interfaces.clipboard",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:Clipboard",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Clipboard.read Web IDL operation.",
+      "domain": "html",
+      "id": "html.clipboard.interfaces.clipboard.methods.read",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"read\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"Promise\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"ClipboardItems\"}]},\"arguments\":[{\"type\":\"argument\",\"name\":\"formats\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"ClipboardUnsanitizedFormats\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "read",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.interfaces.clipboard",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:Clipboard.read",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Clipboard.readText Web IDL operation.",
+      "domain": "html",
+      "id": "html.clipboard.interfaces.clipboard.methods.readtext",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"readText\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"Promise\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"}]},\"arguments\":[],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "readText",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.interfaces.clipboard",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:Clipboard.readText",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Clipboard.write Web IDL operation.",
+      "domain": "html",
+      "id": "html.clipboard.interfaces.clipboard.methods.write",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"write\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"Promise\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"}]},\"arguments\":[{\"type\":\"argument\",\"name\":\"data\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"ClipboardItems\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "write",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.interfaces.clipboard",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:Clipboard.write",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Clipboard.writeText Web IDL operation.",
+      "domain": "html",
+      "id": "html.clipboard.interfaces.clipboard.methods.writetext",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"writeText\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"Promise\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"}]},\"arguments\":[{\"type\":\"argument\",\"name\":\"data\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "writeText",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.interfaces.clipboard",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:Clipboard.writeText",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface ClipboardChangeEvent from clipboard-apis.idl.",
+      "domain": "html",
+      "id": "html.clipboard.interfaces.clipboardchangeevent",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "clipboard-apis.idl",
+        "inheritance": "Event"
+      },
+      "name": "ClipboardChangeEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardChangeEvent",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "ClipboardChangeEvent.changeId Web IDL attribute.",
+      "domain": "html",
+      "id": "html.clipboard.interfaces.clipboardchangeevent.attributes.changeid",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"changeId\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"bigint\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "changeId",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.interfaces.clipboardchangeevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardChangeEvent.changeId",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "ClipboardChangeEvent.types Web IDL attribute.",
+      "domain": "html",
+      "id": "html.clipboard.interfaces.clipboardchangeevent.attributes.types",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"types\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"FrozenArray\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"}]},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "types",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.interfaces.clipboardchangeevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardChangeEvent.types",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "ClipboardChangeEvent.constructor Web IDL constructor.",
+      "domain": "html",
+      "id": "html.clipboard.interfaces.clipboardchangeevent.constructors.constructor",
+      "kind": "constructor",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl",
+        "signature": "{\"type\":\"constructor\",\"arguments\":[{\"type\":\"argument\",\"name\":\"type\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"eventInitDict\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"ClipboardChangeEventInit\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[]}"
+      },
+      "name": "constructor",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.interfaces.clipboardchangeevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardChangeEvent.constructor",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "ClipboardChangeEvent has Event as its declared base interface.",
+      "domain": "html",
+      "id": "html.clipboard.interfaces.clipboardchangeevent.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "Event"
+      },
+      "name": "ClipboardChangeEvent inherits Event",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.interfaces.clipboardchangeevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardChangeEvent",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface ClipboardEvent from clipboard-apis.idl.",
+      "domain": "html",
+      "id": "html.clipboard.interfaces.clipboardevent",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "clipboard-apis.idl",
+        "inheritance": "Event"
+      },
+      "name": "ClipboardEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardEvent",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "ClipboardEvent.clipboardData Web IDL attribute.",
+      "domain": "html",
+      "id": "html.clipboard.interfaces.clipboardevent.attributes.clipboarddata",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"clipboardData\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"DataTransfer\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "clipboardData",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.interfaces.clipboardevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardEvent.clipboardData",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "ClipboardEvent.constructor Web IDL constructor.",
+      "domain": "html",
+      "id": "html.clipboard.interfaces.clipboardevent.constructors.constructor",
+      "kind": "constructor",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl",
+        "signature": "{\"type\":\"constructor\",\"arguments\":[{\"type\":\"argument\",\"name\":\"type\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"eventInitDict\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"ClipboardEventInit\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[]}"
+      },
+      "name": "constructor",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.interfaces.clipboardevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardEvent.constructor",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "ClipboardEvent has Event as its declared base interface.",
+      "domain": "html",
+      "id": "html.clipboard.interfaces.clipboardevent.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "Event"
+      },
+      "name": "ClipboardEvent inherits Event",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.interfaces.clipboardevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardEvent",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface ClipboardItem from clipboard-apis.idl.",
+      "domain": "html",
+      "id": "html.clipboard.interfaces.clipboarditem",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "SecureContext",
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "clipboard-apis.idl"
+      },
+      "name": "ClipboardItem",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardItem",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "ClipboardItem.presentationStyle Web IDL attribute.",
+      "domain": "html",
+      "id": "html.clipboard.interfaces.clipboarditem.attributes.presentationstyle",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"presentationStyle\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"PresentationStyle\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "presentationStyle",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.interfaces.clipboarditem",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardItem.presentationStyle",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "ClipboardItem.types Web IDL attribute.",
+      "domain": "html",
+      "id": "html.clipboard.interfaces.clipboarditem.attributes.types",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"types\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"FrozenArray\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"}]},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "types",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.interfaces.clipboarditem",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardItem.types",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "ClipboardItem.constructor Web IDL constructor.",
+      "domain": "html",
+      "id": "html.clipboard.interfaces.clipboarditem.constructors.constructor",
+      "kind": "constructor",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl",
+        "signature": "{\"type\":\"constructor\",\"arguments\":[{\"type\":\"argument\",\"name\":\"items\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"record\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"ClipboardItemData\"}]},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"options\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"ClipboardItemOptions\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[]}"
+      },
+      "name": "constructor",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.interfaces.clipboarditem",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardItem.constructor",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "ClipboardItem.getType Web IDL operation.",
+      "domain": "html",
+      "id": "html.clipboard.interfaces.clipboarditem.methods.gettype",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"getType\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"Promise\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"Blob\"}]},\"arguments\":[{\"type\":\"argument\",\"name\":\"type\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "getType",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.interfaces.clipboarditem",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardItem.getType",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "ClipboardItem.supports Web IDL operation.",
+      "domain": "html",
+      "id": "html.clipboard.interfaces.clipboarditem.methods.supports",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"supports\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"type\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"static\"}",
+        "special": "static"
+      },
+      "name": "supports",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.interfaces.clipboarditem",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardItem.supports",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface Navigator from clipboard-apis.idl.",
+      "domain": "html",
+      "id": "html.clipboard.interfaces.navigator",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl"
+      },
+      "name": "Navigator",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:Navigator",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "Navigator.clipboard Web IDL attribute.",
+      "domain": "html",
+      "id": "html.clipboard.interfaces.navigator.attributes.clipboard",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SecureContext",
+          "SameObject"
+        ],
+        "idlSource": "clipboard-apis.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"clipboard\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"Clipboard\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SecureContext\",\"rhs\":null,\"arguments\":[]},{\"type\":\"extended-attribute\",\"name\":\"SameObject\",\"rhs\":null,\"arguments\":[]}],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "clipboard",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.clipboard.interfaces.navigator",
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:Navigator.clipboard",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "typedef ClipboardItemData from clipboard-apis.idl.",
+      "domain": "html",
+      "id": "html.clipboard.typedefs.clipboarditemdata",
+      "kind": "typedef",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl"
+      },
+      "name": "ClipboardItemData",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardItemData",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "typedef ClipboardItems from clipboard-apis.idl.",
+      "domain": "html",
+      "id": "html.clipboard.typedefs.clipboarditems",
+      "kind": "typedef",
+      "metadata": {
+        "idlSource": "clipboard-apis.idl"
+      },
+      "name": "ClipboardItems",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#WebIDL:ClipboardItems",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/interfaces/clipboard.json"
+}

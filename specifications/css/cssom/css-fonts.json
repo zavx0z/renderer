@@ -1,0 +1,504 @@
+{
+  "entries": [
+    {
+      "description": "interface CSSFontFeatureValuesMap from css-fonts.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts.interfaces.cssfontfeaturevaluesmap",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-fonts.idl"
+      },
+      "name": "CSSFontFeatureValuesMap",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-fonts.idl#WebIDL:CSSFontFeatureValuesMap",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFeatureValuesMap.maplike-150f1ca4 Web IDL maplike.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts.interfaces.cssfontfeaturevaluesmap.maplike.maplike-150f1ca4",
+      "kind": "maplike",
+      "metadata": {
+        "idlSource": "css-fonts.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"maplike\",\"idlType\":[{\"type\":null,\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},{\"type\":null,\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":null,\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"}]}],\"arguments\":[],\"extAttrs\":[],\"readonly\":false,\"async\":false}"
+      },
+      "name": "maplike-150f1ca4",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts.interfaces.cssfontfeaturevaluesmap",
+      "spec": {
+        "anchor": "webref/idl/css-fonts.idl#WebIDL:CSSFontFeatureValuesMap.maplike-150f1ca4",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFeatureValuesMap.set Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts.interfaces.cssfontfeaturevaluesmap.methods.set",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-fonts.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"set\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"featureValueName\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"values\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":true,\"idlType\":[{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"}]}]},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "set",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts.interfaces.cssfontfeaturevaluesmap",
+      "spec": {
+        "anchor": "webref/idl/css-fonts.idl#WebIDL:CSSFontFeatureValuesMap.set",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSFontFeatureValuesRule from css-fonts.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts.interfaces.cssfontfeaturevaluesrule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-fonts.idl",
+        "inheritance": "CSSRule"
+      },
+      "name": "CSSFontFeatureValuesRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-fonts.idl#WebIDL:CSSFontFeatureValuesRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFeatureValuesRule.annotation Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts.interfaces.cssfontfeaturevaluesrule.attributes.annotation",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"annotation\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSFontFeatureValuesMap\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "annotation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts.interfaces.cssfontfeaturevaluesrule",
+      "spec": {
+        "anchor": "webref/idl/css-fonts.idl#WebIDL:CSSFontFeatureValuesRule.annotation",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFeatureValuesRule.characterVariant Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts.interfaces.cssfontfeaturevaluesrule.attributes.charactervariant",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"characterVariant\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSFontFeatureValuesMap\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "characterVariant",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts.interfaces.cssfontfeaturevaluesrule",
+      "spec": {
+        "anchor": "webref/idl/css-fonts.idl#WebIDL:CSSFontFeatureValuesRule.characterVariant",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFeatureValuesRule.fontFamily Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts.interfaces.cssfontfeaturevaluesrule.attributes.fontfamily",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts.idl",
+        "readonly": false,
+        "signature": "{\"type\":\"attribute\",\"name\":\"fontFamily\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":false}"
+      },
+      "name": "fontFamily",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts.interfaces.cssfontfeaturevaluesrule",
+      "spec": {
+        "anchor": "webref/idl/css-fonts.idl#WebIDL:CSSFontFeatureValuesRule.fontFamily",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFeatureValuesRule.historicalForms Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts.interfaces.cssfontfeaturevaluesrule.attributes.historicalforms",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"historicalForms\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSFontFeatureValuesMap\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "historicalForms",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts.interfaces.cssfontfeaturevaluesrule",
+      "spec": {
+        "anchor": "webref/idl/css-fonts.idl#WebIDL:CSSFontFeatureValuesRule.historicalForms",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFeatureValuesRule.ornaments Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts.interfaces.cssfontfeaturevaluesrule.attributes.ornaments",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"ornaments\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSFontFeatureValuesMap\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "ornaments",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts.interfaces.cssfontfeaturevaluesrule",
+      "spec": {
+        "anchor": "webref/idl/css-fonts.idl#WebIDL:CSSFontFeatureValuesRule.ornaments",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFeatureValuesRule.styleset Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts.interfaces.cssfontfeaturevaluesrule.attributes.styleset",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"styleset\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSFontFeatureValuesMap\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "styleset",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts.interfaces.cssfontfeaturevaluesrule",
+      "spec": {
+        "anchor": "webref/idl/css-fonts.idl#WebIDL:CSSFontFeatureValuesRule.styleset",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFeatureValuesRule.stylistic Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts.interfaces.cssfontfeaturevaluesrule.attributes.stylistic",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"stylistic\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSFontFeatureValuesMap\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "stylistic",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts.interfaces.cssfontfeaturevaluesrule",
+      "spec": {
+        "anchor": "webref/idl/css-fonts.idl#WebIDL:CSSFontFeatureValuesRule.stylistic",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFeatureValuesRule.swash Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts.interfaces.cssfontfeaturevaluesrule.attributes.swash",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"swash\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSFontFeatureValuesMap\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "swash",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts.interfaces.cssfontfeaturevaluesrule",
+      "spec": {
+        "anchor": "webref/idl/css-fonts.idl#WebIDL:CSSFontFeatureValuesRule.swash",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontFeatureValuesRule has CSSRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts.interfaces.cssfontfeaturevaluesrule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSRule"
+      },
+      "name": "CSSFontFeatureValuesRule inherits CSSRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts.interfaces.cssfontfeaturevaluesrule",
+      "spec": {
+        "anchor": "webref/idl/css-fonts.idl#WebIDL:CSSFontFeatureValuesRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSFontPaletteValuesRule from css-fonts.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts.interfaces.cssfontpalettevaluesrule",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-fonts.idl",
+        "inheritance": "CSSRule"
+      },
+      "name": "CSSFontPaletteValuesRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-fonts.idl#WebIDL:CSSFontPaletteValuesRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontPaletteValuesRule.basePalette Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts.interfaces.cssfontpalettevaluesrule.attributes.basepalette",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"basePalette\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "basePalette",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts.interfaces.cssfontpalettevaluesrule",
+      "spec": {
+        "anchor": "webref/idl/css-fonts.idl#WebIDL:CSSFontPaletteValuesRule.basePalette",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontPaletteValuesRule.fontFamily Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts.interfaces.cssfontpalettevaluesrule.attributes.fontfamily",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"fontFamily\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "fontFamily",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts.interfaces.cssfontpalettevaluesrule",
+      "spec": {
+        "anchor": "webref/idl/css-fonts.idl#WebIDL:CSSFontPaletteValuesRule.fontFamily",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontPaletteValuesRule.name Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts.interfaces.cssfontpalettevaluesrule.attributes.name",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"name\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts.interfaces.cssfontpalettevaluesrule",
+      "spec": {
+        "anchor": "webref/idl/css-fonts.idl#WebIDL:CSSFontPaletteValuesRule.name",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontPaletteValuesRule.overrideColors Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts.interfaces.cssfontpalettevaluesrule.attributes.overridecolors",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-fonts.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"overrideColors\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "overrideColors",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts.interfaces.cssfontpalettevaluesrule",
+      "spec": {
+        "anchor": "webref/idl/css-fonts.idl#WebIDL:CSSFontPaletteValuesRule.overrideColors",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSFontPaletteValuesRule has CSSRule as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts.interfaces.cssfontpalettevaluesrule.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "CSSRule"
+      },
+      "name": "CSSFontPaletteValuesRule inherits CSSRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts.interfaces.cssfontpalettevaluesrule",
+      "spec": {
+        "anchor": "webref/idl/css-fonts.idl#WebIDL:CSSFontPaletteValuesRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSRule from css-fonts.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts.interfaces.cssrule",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "css-fonts.idl"
+      },
+      "name": "CSSRule",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-fonts.idl#WebIDL:CSSRule",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSRule.FONT_FEATURE_VALUES_RULE Web IDL const.",
+      "domain": "css",
+      "id": "css.cssom.css-fonts.interfaces.cssrule.constants.font_feature_values_rule",
+      "kind": "const",
+      "metadata": {
+        "idlSource": "css-fonts.idl",
+        "signature": "{\"type\":\"const\",\"name\":\"FONT_FEATURE_VALUES_RULE\",\"idlType\":{\"type\":\"const-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned short\"},\"extAttrs\":[],\"value\":{\"type\":\"number\",\"value\":\"14\"}}"
+      },
+      "name": "FONT_FEATURE_VALUES_RULE",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-fonts.interfaces.cssrule",
+      "spec": {
+        "anchor": "webref/idl/css-fonts.idl#WebIDL:CSSRule.FONT_FEATURE_VALUES_RULE",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-fonts.json"
+}

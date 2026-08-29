@@ -1,0 +1,169 @@
+{
+  "entries": [
+    {
+      "description": "A removal from the document",
+      "domain": "html",
+      "id": "html.elements.del",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; phrasing*; palpable",
+        "children": "transparent",
+        "interface": "HTMLModElement",
+        "parents": "phrasing"
+      },
+      "name": "del",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/edits.html#the-del-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <del> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.del.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "del",
+        "interface": "HTMLModElement"
+      },
+      "name": "del implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.del",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "cite content attribute on <del>.",
+      "domain": "html",
+      "id": "html.elements.del.attributes.cite",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "del",
+        "interface": "HTMLModElement"
+      },
+      "name": "cite",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.del",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/edits.html#attr-mod-cite",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "datetime content attribute on <del>.",
+      "domain": "html",
+      "id": "html.elements.del.attributes.datetime",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "del",
+        "interface": "HTMLModElement"
+      },
+      "name": "datetime",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.del",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/edits.html#attr-mod-datetime",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <del> element content categories.",
+      "domain": "html",
+      "id": "html.elements.del.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "del",
+        "interface": "HTMLModElement"
+      },
+      "name": "del content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.del",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/edits.html#the-del-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <del> element content model.",
+      "domain": "html",
+      "id": "html.elements.del.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "del",
+        "interface": "HTMLModElement"
+      },
+      "name": "del content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.del",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/edits.html#the-del-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <del> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.del.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "del",
+        "interface": "HTMLModElement"
+      },
+      "name": "del interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.del",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/edits.html#the-del-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/del.json"
+}

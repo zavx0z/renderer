@@ -1,0 +1,1968 @@
+{
+  "generatorVersion": "1.0.0",
+  "package": "@zavx0z/renderer-browser",
+  "records": [
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Live native browser execution.",
+          "path": "packages/browser/src/runtime.ts",
+          "proves": "The bounded browser composition adapter logic.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "animation-frame-coalescing",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live browser/native input/WebGPU pixels.",
+          "path": "packages/browser/test/runtime.test.ts",
+          "proves": "Adapter lifecycle, mapping, rollback, and identity.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "animation-frame-coalescing",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.animation-frame-coalescing",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "adapted",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Complete browser-host semantics.",
+          "path": "packages/browser/src/native-input-host.ts",
+          "proves": "The bounded host slice exists.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "beforeinput-input",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live browser/native input/WebGPU acceptance.",
+          "path": "packages/browser/test/native-input-host.test.ts",
+          "proves": "Current adapter behavior.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "beforeinput-input",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.beforeinput-input",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Live native browser execution.",
+          "path": "packages/browser/src/space-runtime.ts",
+          "proves": "The bounded browser composition adapter logic.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "camera-gestures",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live browser/native input/WebGPU pixels.",
+          "path": "packages/browser/test/space-runtime.test.ts",
+          "proves": "Adapter lifecycle, mapping, rollback, and identity.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "camera-gestures",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.camera-gestures",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Live native browser execution.",
+          "path": "packages/browser/src/native-input-host.ts",
+          "proves": "The bounded browser composition adapter logic.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "cancellation-rollback",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live browser/native input/WebGPU pixels.",
+          "path": "packages/browser/test/native-input-host.test.ts",
+          "proves": "Adapter lifecycle, mapping, rollback, and identity.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "cancellation-rollback",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.cancellation-rollback",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "adapted",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Complete browser-host semantics.",
+          "path": "packages/browser/src/runtime.ts",
+          "proves": "The bounded host slice exists.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "canvas-lifecycle",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live browser/native input/WebGPU acceptance.",
+          "path": "packages/browser/test/runtime.test.ts",
+          "proves": "Current adapter behavior.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "canvas-lifecycle",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.canvas-lifecycle",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "adapted",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Complete browser-host semantics.",
+          "path": "packages/browser/src/runtime.ts",
+          "proves": "The bounded host slice exists.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "capture",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live browser/native input/WebGPU acceptance.",
+          "path": "packages/browser/test/runtime.test.ts",
+          "proves": "Current adapter behavior.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "capture",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.capture",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Live native browser execution.",
+          "path": "packages/browser/src/runtime.ts",
+          "proves": "The bounded browser composition adapter logic.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "cleanup",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live browser/native input/WebGPU pixels.",
+          "path": "packages/browser/test/runtime.test.ts",
+          "proves": "Adapter lifecycle, mapping, rollback, and identity.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "cleanup",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.cleanup",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "none",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Runtime implementation or observable conformance.",
+          "path": "packages/browser/requirements.md",
+          "proves": "The pinned project inventory contains browser.features.clipboard-proxy.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "clipboard proxy",
+          "type": "requirement"
+        }
+      ],
+      "id": "browser.features.clipboard-proxy",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "The native host intentionally exposes only the current text input/textarea proxy subset; this control/browser integration is absent."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unsupported"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "adapted",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Complete browser-host semantics.",
+          "path": "packages/browser/src/native-input-host.ts",
+          "proves": "The bounded host slice exists.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "composition-ime",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live browser/native input/WebGPU acceptance.",
+          "path": "packages/browser/test/native-input-host.test.ts",
+          "proves": "Current adapter behavior.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "composition-ime",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.composition-ime",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "adapted",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Complete browser-host semantics.",
+          "path": "packages/browser/src/runtime.ts",
+          "proves": "The bounded host slice exists.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "device-pixel-ratio",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live browser/native input/WebGPU acceptance.",
+          "path": "packages/browser/test/runtime.test.ts",
+          "proves": "Current adapter behavior.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "device-pixel-ratio",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.device-pixel-ratio",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Live native browser execution.",
+          "path": "packages/browser/src/plane-runtime.ts",
+          "proves": "The bounded browser composition adapter logic.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "document-plane",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live browser/native input/WebGPU pixels.",
+          "path": "packages/browser/test/plane-runtime.test.ts",
+          "proves": "Adapter lifecycle, mapping, rollback, and identity.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "document-plane",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.document-plane",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "none",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Runtime implementation or observable conformance.",
+          "path": "packages/browser/requirements.md",
+          "proves": "The pinned project inventory contains browser.features.error-boundaries.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "error boundaries",
+          "type": "requirement"
+        }
+      ],
+      "id": "browser.features.error-boundaries",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "The browser composition owner has lifecycle validation but no general application error-boundary contract."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unsupported"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "adapted",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Complete browser-host semantics.",
+          "path": "packages/browser/src/native-input-host.ts",
+          "proves": "The bounded host slice exists.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "keyboard",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live browser/native input/WebGPU acceptance.",
+          "path": "packages/browser/test/native-input-host.test.ts",
+          "proves": "Current adapter behavior.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "keyboard",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.keyboard",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "adapted",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Complete browser-host semantics.",
+          "path": "packages/browser/src/runtime.ts",
+          "proves": "The bounded host slice exists.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "lifecycle-boundaries",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live browser/native input/WebGPU acceptance.",
+          "path": "packages/browser/test/runtime.test.ts",
+          "proves": "Current adapter behavior.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "lifecycle-boundaries",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.lifecycle-boundaries",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Live native browser execution.",
+          "path": "packages/browser/src/plane-runtime.ts",
+          "proves": "The bounded browser composition adapter logic.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "multiple-planes",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live browser/native input/WebGPU pixels.",
+          "path": "packages/browser/test/plane-runtime.test.ts",
+          "proves": "Adapter lifecycle, mapping, rollback, and identity.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "multiple-planes",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.multiple-planes",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable implementation behavior.",
+          "path": "packages/browser/requirements.md",
+          "proves": "The owner contract or public export claims this bounded capability.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "native browser evidence",
+          "type": "requirement"
+        }
+      ],
+      "id": "browser.features.native-browser-evidence",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "All current Browser tests use Bun seams/fakes; no live browser console, pixels, native IME, or real ResizeObserver/rAF evidence was reproduced."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "none",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Runtime implementation or observable conformance.",
+          "path": "packages/browser/requirements.md",
+          "proves": "The pinned project inventory contains browser.features.number-input-proxy.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "number input proxy",
+          "type": "requirement"
+        }
+      ],
+      "id": "browser.features.number-input-proxy",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "The native host intentionally exposes only the current text input/textarea proxy subset; this control/browser integration is absent."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unsupported"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Live native browser execution.",
+          "path": "packages/browser/src/overlay-runtime.ts",
+          "proves": "The bounded browser composition adapter logic.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "overlays",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live browser/native input/WebGPU pixels.",
+          "path": "packages/browser/test/overlay-runtime.test.ts",
+          "proves": "Adapter lifecycle, mapping, rollback, and identity.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "overlays",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.overlays",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "adapted",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Complete browser-host semantics.",
+          "path": "packages/browser/src/runtime.ts",
+          "proves": "The bounded host slice exists.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "pointer-capture",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live browser/native input/WebGPU acceptance.",
+          "path": "packages/browser/test/runtime.test.ts",
+          "proves": "Current adapter behavior.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "pointer-capture",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.pointer-capture",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Live native browser execution.",
+          "path": "packages/browser/src/runtime.ts",
+          "proves": "The bounded browser composition adapter logic.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "pointer-mapping",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live browser/native input/WebGPU pixels.",
+          "path": "packages/browser/test/runtime.test.ts",
+          "proves": "Adapter lifecycle, mapping, rollback, and identity.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "pointer-mapping",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.pointer-mapping",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "adapted",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Complete browser-host semantics.",
+          "path": "packages/browser/src/runtime.ts",
+          "proves": "The bounded host slice exists.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "resize",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live browser/native input/WebGPU acceptance.",
+          "path": "packages/browser/test/runtime.test.ts",
+          "proves": "Current adapter behavior.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "resize",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.resize",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Live native browser execution.",
+          "path": "packages/browser/src/native-input-host.ts",
+          "proves": "The bounded browser composition adapter logic.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "same-document-input-identity",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live browser/native input/WebGPU pixels.",
+          "path": "packages/browser/test/native-input-host.test.ts",
+          "proves": "Adapter lifecycle, mapping, rollback, and identity.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "same-document-input-identity",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.same-document-input-identity",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "none",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Runtime implementation or observable conformance.",
+          "path": "packages/browser/requirements.md",
+          "proves": "The pinned project inventory contains browser.features.select-picker.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "select picker",
+          "type": "requirement"
+        }
+      ],
+      "id": "browser.features.select-picker",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "The native host intentionally exposes only the current text input/textarea proxy subset; this control/browser integration is absent."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unsupported"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Live native browser execution.",
+          "path": "packages/browser/src/native-input-host.ts",
+          "proves": "The bounded browser composition adapter logic.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "selection-synchronization",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live browser/native input/WebGPU pixels.",
+          "path": "packages/browser/test/native-input-host.test.ts",
+          "proves": "Adapter lifecycle, mapping, rollback, and identity.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "selection-synchronization",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.selection-synchronization",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "adapted",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Complete browser-host semantics.",
+          "path": "packages/browser/src/runtime.ts",
+          "proves": "The bounded host slice exists.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "semantic-pointer-events",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live browser/native input/WebGPU acceptance.",
+          "path": "packages/browser/test/runtime.test.ts",
+          "proves": "Current adapter behavior.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "semantic-pointer-events",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.semantic-pointer-events",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "adapted",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Complete browser-host semantics.",
+          "path": "packages/browser/src/native-input-host.ts",
+          "proves": "The bounded host slice exists.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "text-input-proxy",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live browser/native input/WebGPU acceptance.",
+          "path": "packages/browser/test/native-input-host.test.ts",
+          "proves": "Current adapter behavior.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "text-input-proxy",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.text-input-proxy",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "adapted",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Complete browser-host semantics.",
+          "path": "packages/browser/src/runtime.ts",
+          "proves": "The bounded host slice exists.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "textarea-proxy",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live browser/native input/WebGPU acceptance.",
+          "path": "packages/browser/test/runtime.test.ts",
+          "proves": "Current adapter behavior.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "textarea-proxy",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.textarea-proxy",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "adapted",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Complete browser-host semantics.",
+          "path": "packages/browser/src/runtime.ts",
+          "proves": "The bounded host slice exists.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "viewport",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live browser/native input/WebGPU acceptance.",
+          "path": "packages/browser/test/runtime.test.ts",
+          "proves": "Current adapter behavior.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "viewport",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.viewport",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "adapted",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Complete browser-host semantics.",
+          "path": "packages/browser/src/runtime.ts",
+          "proves": "The bounded host slice exists.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "wheel",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live browser/native input/WebGPU acceptance.",
+          "path": "packages/browser/test/runtime.test.ts",
+          "proves": "Current adapter behavior.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "wheel",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.wheel",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Every symbol and observable behavior behind the path.",
+          "path": "packages/browser/package.json",
+          "proves": "The package export path exists.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": ".",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "1",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "createDocumentCanvasRuntime",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.createdocumentcanvasruntime",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "2",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "CreateDocumentCanvasRuntimeOptions",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.createdocumentcanvasruntimeoptions",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "31",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "createDocumentNativeInputHost",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.createdocumentnativeinputhost",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "32",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "CreateDocumentNativeInputHostOptions",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.createdocumentnativeinputhostoptions",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "13",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "createDocumentOverlayRuntime",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.createdocumentoverlayruntime",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "14",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "CreateDocumentOverlayRuntimeOptions",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.createdocumentoverlayruntimeoptions",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "7",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "createDocumentPlaneRuntime",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.createdocumentplaneruntime",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "8",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "CreateDocumentPlaneRuntimeOptions",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.createdocumentplaneruntimeoptions",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "19",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "createDocumentSpaceRuntime",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.createdocumentspaceruntime",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "20",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "CreateDocumentSpaceRuntimeOptions",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.createdocumentspaceruntimeoptions",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "2",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DocumentCanvasFrameSubscriber",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentcanvasframesubscriber",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "2",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DocumentCanvasRuntime",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentcanvasruntime",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "32",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DocumentNativeInputHost",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentnativeinputhost",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "32",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DocumentNativeInputTarget",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentnativeinputtarget",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "14",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DocumentOverlayRuntime",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentoverlayruntime",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "14",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DocumentOverlayRuntimeFrameSubscriber",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentoverlayruntimeframesubscriber",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "8",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DocumentPlaneRuntime",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentplaneruntime",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "8",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DocumentPlaneRuntimeFrameSubscriber",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentplaneruntimeframesubscriber",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "20",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DocumentSpaceOverlayRegistration",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceoverlayregistration",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "20",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DocumentSpacePlaneRegistration",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceplaneregistration",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "20",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DocumentSpacePlaneTransform",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceplanetransform",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "20",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DocumentSpacePlaneUpdate",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceplaneupdate",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "20",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DocumentSpaceQuaternion",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspacequaternion",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "20",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DocumentSpaceRuntime",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceruntime",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "20",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DocumentSpaceVector3",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspacevector3",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "20",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DocumentSpaceViewPointSnapshot",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.documentspaceviewpointsnapshot",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    }
+  ],
+  "repository": "renderer",
+  "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+  "schemaVersion": 1,
+  "verificationDate": "2026-08-29"
+}

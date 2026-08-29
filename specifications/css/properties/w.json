@@ -1,0 +1,551 @@
+{
+  "entries": [
+    {
+      "domain": "css",
+      "id": "css.properties.white-space",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "text",
+        "canonicalOrder": "n/a",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "normal",
+        "longhands": [
+          "white-space-collapse",
+          "text-wrap-mode"
+        ],
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "white-space",
+          "whiteSpace"
+        ],
+        "syntax": "normal | pre | pre-wrap | pre-line | <'white-space-collapse'> || <'text-wrap-mode'> || <'white-space-trim'>"
+      },
+      "name": "white-space",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-white-space",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.white-space-collapse",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "collapse",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "white-space-collapse",
+          "whiteSpaceCollapse"
+        ],
+        "syntax": "collapse | discard | preserve | preserve-breaks | preserve-spaces | break-spaces"
+      },
+      "name": "white-space-collapse",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-white-space-collapse",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.white-space-trim",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "inline boxes and block containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword(s)",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "white-space-trim",
+          "whiteSpaceTrim"
+        ],
+        "syntax": "none | discard-before || discard-after || discard-inner"
+      },
+      "name": "white-space-trim",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-white-space-trim",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.widows",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "block containers that establish an inline formatting context",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified integer",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "2",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "widows"
+        ],
+        "syntax": "<integer [1,∞]>"
+      },
+      "name": "widows",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-break-4/#propdef-widows",
+        "profile": "standard",
+        "source": "css:css-break-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.width",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type, recursing into fit-content()",
+        "appliesTo": "all elements except non-replaced inlines",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified, with <length-percentage> values computed",
+        "extended": [
+          "https://drafts.csswg.org/css-anchor-position-1/",
+          "https://drafts.csswg.org/css-sizing-4/"
+        ],
+        "inherited": "no",
+        "initial": "auto",
+        "logicalPropertyGroup": "size",
+        "percentages": "relative to width/height of containing block",
+        "styleDeclaration": [
+          "width"
+        ],
+        "syntax": "auto | <length-percentage [0,∞]> | min-content | max-content | fit-content(<length-percentage [0,∞]>) | <calc-size()> | <anchor-size()> | stretch | fit-content | contain"
+      },
+      "name": "width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-sizing-3/#propdef-width",
+        "profile": "standard",
+        "source": "css:css-sizing-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.will-change",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "will-change",
+          "willChange"
+        ],
+        "syntax": "auto | <animateable-feature>#"
+      },
+      "name": "will-change",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-will-change-1/#propdef-will-change",
+        "profile": "standard",
+        "source": "css:css-will-change-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.window-drag",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "window-drag",
+          "windowDrag"
+        ],
+        "syntax": "none | move"
+      },
+      "name": "window-drag",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-ui-4/#propdef-window-drag",
+        "profile": "standard",
+        "source": "css:css-ui-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.word-break",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "text",
+        "canonicalOrder": "n/a",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "word-break",
+          "wordBreak"
+        ],
+        "syntax": "normal | break-all | keep-all | manual | auto-phrase | break-word"
+      },
+      "name": "word-break",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-word-break",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.word-space-transform",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "text",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "word-space-transform",
+          "wordSpaceTransform"
+        ],
+        "syntax": "none | [ space | ideographic-space ] && auto-phrase?"
+      },
+      "name": "word-space-transform",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-word-space-transform",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.word-spacing",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "text",
+        "canonicalOrder": "n/a",
+        "computedValue": "an absolute length and/or a percentage",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "percentages": "relative to used font-size",
+        "styleDeclaration": [
+          "word-spacing",
+          "wordSpacing"
+        ],
+        "syntax": "normal | <length-percentage>"
+      },
+      "name": "word-spacing",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-word-spacing",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.word-wrap",
+      "kind": "property",
+      "metadata": {
+        "extended": [],
+        "legacyAliasOf": "overflow-wrap",
+        "styleDeclaration": [
+          "word-wrap",
+          "wordWrap"
+        ],
+        "syntax": "normal | break-word | anywhere"
+      },
+      "name": "word-wrap",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-word-wrap",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.wrap-after",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "inline-level boxes and flex items",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "wrap-after",
+          "wrapAfter"
+        ],
+        "syntax": "auto | avoid | avoid-line | avoid-flex | line | flex"
+      },
+      "name": "wrap-after",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-wrap-after",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.wrap-before",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "inline-level boxes and flex items",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "wrap-before",
+          "wrapBefore"
+        ],
+        "syntax": "auto | avoid | avoid-line | avoid-flex | line | flex"
+      },
+      "name": "wrap-before",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-wrap-before",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.wrap-flow",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block-level elements.",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified except for element’s whose float computed value is not none, in which case the computed value is auto.",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "wrap-flow",
+          "wrapFlow"
+        ],
+        "syntax": "auto | both | start | end | minimum | maximum | clear"
+      },
+      "name": "wrap-flow",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-exclusions-1/#propdef-wrap-flow",
+        "profile": "standard",
+        "source": "css:css-exclusions-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.wrap-inside",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "inline boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "wrap-inside",
+          "wrapInside"
+        ],
+        "syntax": "auto | avoid"
+      },
+      "name": "wrap-inside",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-text-4/#propdef-wrap-inside",
+        "profile": "standard",
+        "source": "css:css-text-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.wrap-through",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block-level elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "wrap",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "wrap-through",
+          "wrapThrough"
+        ],
+        "syntax": "wrap | none"
+      },
+      "name": "wrap-through",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-exclusions-1/#propdef-wrap-through",
+        "profile": "standard",
+        "source": "css:css-exclusions-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.writing-mode",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "All elements except table row groups, table column groups, table rows, table columns, ruby base containers, ruby annotation containers",
+        "canonicalOrder": "n/a",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "horizontal-tb",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "writing-mode",
+          "writingMode"
+        ],
+        "syntax": "horizontal-tb | vertical-rl | vertical-lr | sideways-rl | sideways-lr"
+      },
+      "name": "writing-mode",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-writing-modes-4/#propdef-writing-mode",
+        "profile": "standard",
+        "source": "css:css-writing-modes-4",
+        "version": "8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/properties/w.json"
+}

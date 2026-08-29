@@ -1,0 +1,51 @@
+{
+  "entries": [
+    {
+      "description": "interface Window from css-sizing-4.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-sizing-4.interfaces.window",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "css-sizing-4.idl"
+      },
+      "name": "Window",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-sizing-4.idl#WebIDL:Window",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "Window.requestResize Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-sizing-4.interfaces.window.methods.requestresize",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-sizing-4.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"requestResize\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "requestResize",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-sizing-4.interfaces.window",
+      "spec": {
+        "anchor": "webref/idl/css-sizing-4.idl#WebIDL:Window.requestResize",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-sizing-4.json"
+}

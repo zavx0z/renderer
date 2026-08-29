@@ -1,0 +1,44 @@
+{
+  "actual": {
+    "behavior": "The sticky value is not admitted by the bounded positioning implementation.",
+    "evidence": [
+      {
+        "doesNotProve": "Other positioning values or browser behavior.",
+        "path": "packages/core/test/position.test.ts",
+        "proves": "The current bounded positioning tests omit sticky positioning.",
+        "repository": "renderer",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+        "symbol": "positioning suite",
+        "type": "negative-test"
+      }
+    ]
+  },
+  "capability": "css.properties.position",
+  "dependencies": [],
+  "expected": {
+    "behavior": "A sticky positioned box remains within its scroll-container constraint rectangle.",
+    "reference": "CSS Positioned Layout"
+  },
+  "forbiddenLocalWorkarounds": [
+    "Manual component-owned x/y coordinates",
+    "A component-local scroll listener that imitates sticky layout"
+  ],
+  "id": "gap.css.position-sticky",
+  "minimalReproduction": {
+    "source": "A scroll container with a child styled position: sticky; top: 0",
+    "test": "Scroll the container and assert the sticky constraint against the generated RenderFrame"
+  },
+  "reportedBy": {
+    "package": "@ui/components",
+    "repository": "ui",
+    "scenario": "sticky-gutter",
+    "subject": "code-editor"
+  },
+  "schemaVersion": 1,
+  "severity": "P1",
+  "suspectedOwner": {
+    "package": "@zavx0z/renderer",
+    "repository": "renderer",
+    "stage": "layout"
+  }
+}

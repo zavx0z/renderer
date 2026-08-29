@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "observedAtTaskStart": "2026-08-29",
+  "repositories": [
+    {
+      "id": "renderer",
+      "root": "/Users/zavx0z/repozitarium/renderer",
+      "branch": "main",
+      "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+      "status": "clean"
+    },
+    {
+      "id": "template",
+      "root": "/Users/zavx0z/repozitarium/template",
+      "branch": "main",
+      "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+      "status": "clean"
+    },
+    {
+      "id": "engine",
+      "root": "/Users/zavx0z/repozitarium/webxr-space/projects/engine",
+      "branch": "main",
+      "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e",
+      "status": "clean"
+    },
+    {
+      "id": "webxr-space",
+      "root": "/Users/zavx0z/repozitarium/webxr-space",
+      "branch": "main",
+      "revision": "f5ec226dbe10829ecadb22cb0089b73ca7701d5b",
+      "status": "dirty",
+      "dirtyPaths": [
+        "projects/ui"
+      ]
+    },
+    {
+      "id": "ui",
+      "root": "/Users/zavx0z/repozitarium/webxr-space/projects/ui",
+      "branch": "main",
+      "revision": "77a075a0069ff43e1551b3cdbfe174fe525177d3",
+      "status": "dirty",
+      "dirtyPaths": [
+        "packages/storybook/app/dom-entry.test.ts",
+        "packages/storybook/app/dom-entry.ts",
+        "packages/storybook/app/hub.test.ts",
+        "packages/storybook/app/workbench-style.test.ts",
+        "packages/storybook/app/workbench-style.ts",
+        "packages/storybook/requirements.md"
+      ],
+      "concurrentObservation": "During the later read-only consumer audit the checkout had advanced externally to 2148fa46d41efdc6ece993a6298b4adb2ade0b19 with untracked .storybook state. No platform-audit tool changed this repository."
+    },
+    {
+      "id": "node",
+      "root": "/Users/zavx0z/repozitarium/webxr-space/projects/node",
+      "branch": "main",
+      "revision": "9f390945f51f88c6374d5fb8f3215cf5d776e571",
+      "status": "clean"
+    },
+    {
+      "id": "metafor",
+      "root": "/Users/zavx0z/repozitarium/metafor",
+      "branch": "main",
+      "revision": "603d5604ac550b044ad809d5be27190cba9118aa",
+      "status": "dirty",
+      "dirtyPaths": [
+        "cosmos/internal/visual/**",
+        "quantum/bulk/**",
+        "quantum/storybook/**",
+        "quantum/tests/graph/node-tree-presentation.spec.ts"
+      ]
+    },
+    {
+      "id": "interpreter",
+      "root": "/Users/zavx0z/repozitarium/interpreter",
+      "branch": "main",
+      "revision": "879b4e01a4abd12756f86228784421e26270f485",
+      "status": "dirty",
+      "dirtyPaths": [
+        "packages/interpreter/web/dom/**",
+        "packages/interpreter/web/dom-boundary.test.ts",
+        "packages/interpreter/web/requirements.md"
+      ]
+    },
+    {
+      "id": "demo",
+      "root": "/Users/zavx0z/repozitarium/demo",
+      "branch": "main",
+      "revision": "7a88ae3d6fa82b53d03f08e0cc9f86b1c41f0325",
+      "status": "dirty",
+      "dirtyPaths": [
+        ".gitignore",
+        "README.md",
+        "bun.lock",
+        "package.json",
+        "src/dom/**"
+      ]
+    }
+  ]
+}

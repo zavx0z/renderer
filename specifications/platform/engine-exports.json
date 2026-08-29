@@ -1,0 +1,2806 @@
+{
+  "entries": [
+    {
+      "description": "@engine/core package export ./default-font.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.default-font",
+      "kind": "package-export-path",
+      "metadata": {
+        "package": "@engine/core",
+        "sourceTarget": "src/text/default-font.ts",
+        "target": "./src/text/default-font.ts"
+      },
+      "name": "./default-font",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "./src/text/default-font.ts",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core/default-font public runtime export DEFAULT_FONT_META_NAME.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.default-font.symbols.default_font_meta_name",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": "./default-font",
+        "line": 13,
+        "path": "engine:packages/core/src/text/default-font.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "DEFAULT_FONT_META_NAME",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.default-font",
+      "spec": {
+        "anchor": "engine:packages/core/src/text/default-font.ts#L13",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core/default-font public type export DefaultFontDocument.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.default-font.symbols.defaultfontdocument",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": "./default-font",
+        "line": 15,
+        "path": "engine:packages/core/src/text/default-font.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "DefaultFontDocument",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.default-font",
+      "spec": {
+        "anchor": "engine:packages/core/src/text/default-font.ts#L15",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core/default-font public runtime export documentDefaultFontUrl.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.default-font.symbols.documentdefaultfonturl",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": "./default-font",
+        "line": 35,
+        "path": "engine:packages/core/src/text/default-font.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "documentDefaultFontUrl",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.default-font",
+      "spec": {
+        "anchor": "engine:packages/core/src/text/default-font.ts#L35",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core/default-font public runtime export loadDocumentDefaultFont.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.default-font.symbols.loaddocumentdefaultfont",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": "./default-font",
+        "line": 81,
+        "path": "engine:packages/core/src/text/default-font.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "loadDocumentDefaultFont",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.default-font",
+      "spec": {
+        "anchor": "engine:packages/core/src/text/default-font.ts#L81",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core/default-font public runtime export loadSharedFont.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.default-font.symbols.loadsharedfont",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": "./default-font",
+        "line": 58,
+        "path": "engine:packages/core/src/text/default-font.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "loadSharedFont",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.default-font",
+      "spec": {
+        "anchor": "engine:packages/core/src/text/default-font.ts#L58",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core package export ./fonts/jetbrains-mono-bold.ttf.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.fonts-jetbrains-mono-bold.ttf",
+      "kind": "package-export-path",
+      "metadata": {
+        "package": "@engine/core",
+        "sourceTarget": "static/fonts/jetbrains-mono-bold.ttf",
+        "target": "./static/fonts/jetbrains-mono-bold.ttf"
+      },
+      "name": "./fonts/jetbrains-mono-bold.ttf",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "./static/fonts/jetbrains-mono-bold.ttf",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core package export ..",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root",
+      "kind": "package-export-path",
+      "metadata": {
+        "package": "@engine/core",
+        "sourceTarget": "src/index.ts",
+        "target": "./src/index.ts"
+      },
+      "name": ".",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "./src/index.ts",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export AnimationAction.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.animationaction",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 19,
+        "path": "engine:packages/core/src/animation/animation-action.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "AnimationAction",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/animation/animation-action.ts#L19",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export AnimationClip.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.animationclip",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 3,
+        "path": "engine:packages/core/src/animation/animation-clip.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "AnimationClip",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/animation/animation-clip.ts#L3",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export AnimationMixer.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.animationmixer",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 5,
+        "path": "engine:packages/core/src/animation/animation-mixer.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "AnimationMixer",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/animation/animation-mixer.ts#L5",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export AxesHelper.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.axeshelper",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 6,
+        "path": "engine:packages/core/src/helpers/axes-helper.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "AxesHelper",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/helpers/axes-helper.ts#L6",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export BoxGeometry.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.boxgeometry",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 13,
+        "path": "engine:packages/core/src/geometries/box-geometry.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "BoxGeometry",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/geometries/box-geometry.ts#L13",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export BoxGeometryParameters.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.boxgeometryparameters",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 4,
+        "path": "engine:packages/core/src/geometries/box-geometry.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "BoxGeometryParameters",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/geometries/box-geometry.ts#L4",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export BufferAttribute.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.bufferattribute",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 4,
+        "path": "engine:packages/core/src/core/buffer-geometry.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "BufferAttribute",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/buffer-geometry.ts#L4",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export BufferAttributeUpdateRange.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.bufferattributeupdaterange",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 5,
+        "path": "engine:packages/core/src/core/buffer-geometry.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "BufferAttributeUpdateRange",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/buffer-geometry.ts#L5",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export BufferGeometry.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.buffergeometry",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 11,
+        "path": "engine:packages/core/src/core/buffer-geometry.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "BufferGeometry",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/buffer-geometry.ts#L11",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export CachedText.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.cachedtext",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 404,
+        "path": "engine:packages/core/src/objects/text.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "CachedText",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/objects/text.ts#L404",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export Color.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.color",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 4,
+        "path": "engine:packages/core/src/math/color.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "Color",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/math/color.ts#L4",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export ColorPickerMaterial.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.colorpickermaterial",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 21,
+        "path": "engine:packages/core/src/materials/color-picker-material.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "ColorPickerMaterial",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/color-picker-material.ts#L21",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export ColorPickerMaterialMode.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.colorpickermaterialmode",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 4,
+        "path": "engine:packages/core/src/materials/color-picker-material.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "ColorPickerMaterialMode",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/color-picker-material.ts#L4",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export ColorPickerMaterialParameters.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.colorpickermaterialparameters",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 6,
+        "path": "engine:packages/core/src/materials/color-picker-material.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "ColorPickerMaterialParameters",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/color-picker-material.ts#L6",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export ComputedLayout.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.computedlayout",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 29,
+        "path": "engine:packages/core/src/layout/layout-types.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "ComputedLayout",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/layout/layout-types.ts#L29",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export ExternalTexturePool.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.externaltexturepool",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 35,
+        "path": "engine:packages/core/src/loaders/texture-loader.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "ExternalTexturePool",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/loaders/texture-loader.ts#L35",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export Float32BufferAttribute.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.float32bufferattribute",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 4,
+        "path": "engine:packages/core/src/core/buffer-geometry.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "Float32BufferAttribute",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/buffer-geometry.ts#L4",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export GLTFLoader.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.gltfloader",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 123,
+        "path": "engine:packages/core/src/loaders/gltf-loader.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "GLTFLoader",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/loaders/gltf-loader.ts#L123",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export GLTFLoaderOptions.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.gltfloaderoptions",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 114,
+        "path": "engine:packages/core/src/loaders/gltf-loader.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "GLTFLoaderOptions",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/loaders/gltf-loader.ts#L114",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export GridHelper.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.gridhelper",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 10,
+        "path": "engine:packages/core/src/helpers/grid-helper.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "GridHelper",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/helpers/grid-helper.ts#L10",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export HolographicMaterial.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.holographicmaterial",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 64,
+        "path": "engine:packages/core/src/materials/holographic-material.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "HolographicMaterial",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/holographic-material.ts#L64",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export HolographicMaterialParameters.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.holographicmaterialparameters",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 4,
+        "path": "engine:packages/core/src/materials/holographic-material.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "HolographicMaterialParameters",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/holographic-material.ts#L4",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export ImageFit.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.imagefit",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 4,
+        "path": "engine:packages/core/src/materials/image-material.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "ImageFit",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/image-material.ts#L4",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export ImageMaterial.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.imagematerial",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 23,
+        "path": "engine:packages/core/src/materials/image-material.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "ImageMaterial",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/image-material.ts#L23",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export ImageMaterialParameters.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.imagematerialparameters",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 13,
+        "path": "engine:packages/core/src/materials/image-material.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "ImageMaterialParameters",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/image-material.ts#L13",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export ImageViewBox.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.imageviewbox",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 6,
+        "path": "engine:packages/core/src/materials/image-material.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "ImageViewBox",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/image-material.ts#L6",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export InstancedMesh.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.instancedmesh",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 6,
+        "path": "engine:packages/core/src/core/instanced-mesh.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "InstancedMesh",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instanced-mesh.ts#L6",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export InstancedRoundedRect.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.instancedroundedrect",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 71,
+        "path": "engine:packages/core/src/core/instanced-rounded-rect.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "InstancedRoundedRect",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instanced-rounded-rect.ts#L71",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export InstanceHandle.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.instancehandle",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 6,
+        "path": "engine:packages/core/src/core/instance-layer.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "InstanceHandle",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instance-layer.ts#L6",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export InstanceLayer.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.instancelayer",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 51,
+        "path": "engine:packages/core/src/core/instance-layer.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "InstanceLayer",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instance-layer.ts#L51",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export InstanceLayerOptions.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.instancelayeroptions",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 11,
+        "path": "engine:packages/core/src/core/instance-layer.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "InstanceLayerOptions",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instance-layer.ts#L11",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export Intersection.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.intersection",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 5,
+        "path": "engine:packages/core/src/core/raycaster.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "Intersection",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/raycaster.ts#L5",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export KeyframeTrack.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.keyframetrack",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 1,
+        "path": "engine:packages/core/src/animation/keyframe-track.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "KeyframeTrack",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/animation/keyframe-track.ts#L1",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export LayoutProps.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.layoutprops",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 1,
+        "path": "engine:packages/core/src/layout/layout-types.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "LayoutProps",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/layout/layout-types.ts#L1",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export Light.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.light",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "engine:packages/core/src/lights/light.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "Light",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/lights/light.ts#L8",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export Line.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.line",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 9,
+        "path": "engine:packages/core/src/objects/line.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "Line",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/objects/line.ts#L9",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export LineBasicMaterial.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.linebasicmaterial",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 23,
+        "path": "engine:packages/core/src/materials/line-basic-material.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "LineBasicMaterial",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/line-basic-material.ts#L23",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export LineBasicMaterialParameters.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.linebasicmaterialparameters",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 7,
+        "path": "engine:packages/core/src/materials/line-basic-material.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "LineBasicMaterialParameters",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/line-basic-material.ts#L7",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export LineGlowMaterial.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.lineglowmaterial",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 66,
+        "path": "engine:packages/core/src/materials/line-glow-material.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "LineGlowMaterial",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/line-glow-material.ts#L66",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export LineGlowMaterialParameters.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.lineglowmaterialparameters",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 9,
+        "path": "engine:packages/core/src/materials/line-glow-material.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "LineGlowMaterialParameters",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/line-glow-material.ts#L9",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export LineSegments.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.linesegments",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "engine:packages/core/src/objects/line-segments.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "LineSegments",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/objects/line-segments.ts#L8",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export LineVisibilityMode.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.linevisibilitymode",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 4,
+        "path": "engine:packages/core/src/materials/line-glow-material.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "LineVisibilityMode",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/line-glow-material.ts#L4",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export Material.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.material",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 20,
+        "path": "engine:packages/core/src/materials/material.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "Material",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/material.ts#L20",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export MaterialParameters.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.materialparameters",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 4,
+        "path": "engine:packages/core/src/materials/material.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "MaterialParameters",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/material.ts#L4",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export Matrix4.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.matrix4",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 7,
+        "path": "engine:packages/core/src/math/matrix-4.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "Matrix4",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/math/matrix-4.ts#L7",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export Mesh.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.mesh",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 26,
+        "path": "engine:packages/core/src/core/mesh.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "Mesh",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/mesh.ts#L26",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export MeshBasicMaterial.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.meshbasicmaterial",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 18,
+        "path": "engine:packages/core/src/materials/mesh-basic-material.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "MeshBasicMaterial",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/mesh-basic-material.ts#L18",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export MeshBasicMaterialParameters.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.meshbasicmaterialparameters",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 7,
+        "path": "engine:packages/core/src/materials/mesh-basic-material.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "MeshBasicMaterialParameters",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/mesh-basic-material.ts#L7",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export MeshLambertMaterial.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.meshlambertmaterial",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 19,
+        "path": "engine:packages/core/src/materials/mesh-lambert-material.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "MeshLambertMaterial",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/mesh-lambert-material.ts#L19",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export MeshLambertMaterialParameters.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.meshlambertmaterialparameters",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 7,
+        "path": "engine:packages/core/src/materials/mesh-lambert-material.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "MeshLambertMaterialParameters",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/mesh-lambert-material.ts#L7",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export normaliseSvgRootDimensions.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.normalisesvgrootdimensions",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 401,
+        "path": "engine:packages/core/src/loaders/texture-loader.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "normaliseSvgRootDimensions",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/loaders/texture-loader.ts#L401",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export Object3D.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.object3d",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 18,
+        "path": "engine:packages/core/src/core/object-3d.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "Object3D",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/object-3d.ts#L18",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export Outline.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.outline",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 5,
+        "path": "engine:packages/core/src/text/true-type-font.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "Outline",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/text/true-type-font.ts#L5",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export ParsedGLTF.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.parsedgltf",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 118,
+        "path": "engine:packages/core/src/loaders/gltf-loader.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "ParsedGLTF",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/loaders/gltf-loader.ts#L118",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export PendingExternalSource.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.pendingexternalsource",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 21,
+        "path": "engine:packages/core/src/loaders/texture-loader.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "PendingExternalSource",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/loaders/texture-loader.ts#L21",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export PlaneGeometry.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.planegeometry",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 10,
+        "path": "engine:packages/core/src/geometries/plane-geometry.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "PlaneGeometry",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/geometries/plane-geometry.ts#L10",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export PlaneGeometryParameters.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.planegeometryparameters",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 3,
+        "path": "engine:packages/core/src/geometries/plane-geometry.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "PlaneGeometryParameters",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/geometries/plane-geometry.ts#L3",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export PresentationClipShape.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.presentationclipshape",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 10,
+        "path": "engine:packages/core/src/core/presentation-clip.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "PresentationClipShape",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/presentation-clip.ts#L10",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export Quaternion.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.quaternion",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 7,
+        "path": "engine:packages/core/src/math/quaternion.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "Quaternion",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/math/quaternion.ts#L7",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export RadialBackdropGlow.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.radialbackdropglow",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 4,
+        "path": "engine:packages/core/src/materials/radial-backdrop-material.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "RadialBackdropGlow",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/radial-backdrop-material.ts#L4",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export RadialBackdropMaterial.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.radialbackdropmaterial",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 24,
+        "path": "engine:packages/core/src/materials/radial-backdrop-material.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "RadialBackdropMaterial",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/radial-backdrop-material.ts#L24",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export RadialBackdropMaterialParameters.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.radialbackdropmaterialparameters",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 16,
+        "path": "engine:packages/core/src/materials/radial-backdrop-material.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "RadialBackdropMaterialParameters",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/radial-backdrop-material.ts#L16",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export Ray.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.ray",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 6,
+        "path": "engine:packages/core/src/math/ray.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "Ray",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/math/ray.ts#L6",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export Raycaster.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.raycaster",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 13,
+        "path": "engine:packages/core/src/core/raycaster.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "Raycaster",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/raycaster.ts#L13",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export Renderer.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.renderer",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 151,
+        "path": "engine:packages/core/src/renderer/index.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "Renderer",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/renderer/index.ts#L151",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export RenderLayer.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.renderlayer",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 7,
+        "path": "engine:packages/core/src/core/object-3d.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "RenderLayer",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/object-3d.ts#L7",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export RenderOverlay.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.renderoverlay",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 139,
+        "path": "engine:packages/core/src/renderer/index.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "RenderOverlay",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/renderer/index.ts#L139",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export ReplaceExternalSourceOptions.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.replaceexternalsourceoptions",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 29,
+        "path": "engine:packages/core/src/loaders/texture-loader.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "ReplaceExternalSourceOptions",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/loaders/texture-loader.ts#L29",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export ROUNDED_RECT_INSTANCE_OFFSETS.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.rounded_rect_instance_offsets",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 11,
+        "path": "engine:packages/core/src/core/instanced-rounded-rect.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "ROUNDED_RECT_INSTANCE_OFFSETS",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instanced-rounded-rect.ts#L11",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export ROUNDED_RECT_INSTANCE_RECORD_BYTE_LENGTH.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.rounded_rect_instance_record_byte_length",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 7,
+        "path": "engine:packages/core/src/core/instanced-rounded-rect.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "ROUNDED_RECT_INSTANCE_RECORD_BYTE_LENGTH",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instanced-rounded-rect.ts#L7",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export ROUNDED_RECT_INSTANCE_RECORD_FLOATS.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.rounded_rect_instance_record_floats",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 6,
+        "path": "engine:packages/core/src/core/instanced-rounded-rect.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "ROUNDED_RECT_INSTANCE_RECORD_FLOATS",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instanced-rounded-rect.ts#L6",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export RoundedRectBorderWidths.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.roundedrectborderwidths",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 42,
+        "path": "engine:packages/core/src/materials/rounded-rect-material.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "RoundedRectBorderWidths",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/rounded-rect-material.ts#L42",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export RoundedRectInstanceLayer.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.roundedrectinstancelayer",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 35,
+        "path": "engine:packages/core/src/core/instanced-rounded-rect.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "RoundedRectInstanceLayer",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instanced-rounded-rect.ts#L35",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export RoundedRectInstanceLayerOptions.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.roundedrectinstancelayeroptions",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 22,
+        "path": "engine:packages/core/src/core/instanced-rounded-rect.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "RoundedRectInstanceLayerOptions",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instanced-rounded-rect.ts#L22",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export RoundedRectMaterial.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.roundedrectmaterial",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 52,
+        "path": "engine:packages/core/src/materials/rounded-rect-material.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "RoundedRectMaterial",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/rounded-rect-material.ts#L52",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export RoundedRectMaterialParameters.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.roundedrectmaterialparameters",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 20,
+        "path": "engine:packages/core/src/materials/rounded-rect-material.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "RoundedRectMaterialParameters",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/rounded-rect-material.ts#L20",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export Skeleton.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.skeleton",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 4,
+        "path": "engine:packages/core/src/animation/skeleton.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "Skeleton",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/animation/skeleton.ts#L4",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export SkinnedMesh.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.skinnedmesh",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 15,
+        "path": "engine:packages/core/src/core/skinned-mesh.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "SkinnedMesh",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/skinned-mesh.ts#L15",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export Space.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.space",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 7,
+        "path": "engine:packages/core/src/scenes/space.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "Space",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/scenes/space.ts#L7",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export SphereGeometry.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.spheregeometry",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 36,
+        "path": "engine:packages/core/src/geometries/sphere-geometry.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "SphereGeometry",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/geometries/sphere-geometry.ts#L36",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export SphereGeometryParameters.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.spheregeometryparameters",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 30,
+        "path": "engine:packages/core/src/geometries/sphere-geometry.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "SphereGeometryParameters",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/geometries/sphere-geometry.ts#L30",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export TableInfo.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.tableinfo",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 3,
+        "path": "engine:packages/core/src/text/true-type-font.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "TableInfo",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/text/true-type-font.ts#L3",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export Text.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.text",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 139,
+        "path": "engine:packages/core/src/objects/text.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "Text",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/objects/text.ts#L139",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export TextMaterial.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.textmaterial",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 32,
+        "path": "engine:packages/core/src/materials/text-material.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "TextMaterial",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/text-material.ts#L32",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export TextMaterialParameters.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.textmaterialparameters",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 7,
+        "path": "engine:packages/core/src/materials/text-material.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "TextMaterialParameters",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/text-material.ts#L7",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export TexturedPlaneGeometry.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.texturedplanegeometry",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "engine:packages/core/src/geometries/textured-plane-geometry.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "TexturedPlaneGeometry",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/geometries/textured-plane-geometry.ts#L8",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export TexturedPlaneGeometryParameters.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.texturedplanegeometryparameters",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 3,
+        "path": "engine:packages/core/src/geometries/textured-plane-geometry.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "TexturedPlaneGeometryParameters",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/geometries/textured-plane-geometry.ts#L3",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export TextureEntry.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.textureentry",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 3,
+        "path": "engine:packages/core/src/loaders/texture-loader.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "TextureEntry",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/loaders/texture-loader.ts#L3",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export TextureLoader.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.textureloader",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 42,
+        "path": "engine:packages/core/src/loaders/texture-loader.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "TextureLoader",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/loaders/texture-loader.ts#L42",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export TextureStatus.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.texturestatus",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 1,
+        "path": "engine:packages/core/src/loaders/texture-loader.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "TextureStatus",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/loaders/texture-loader.ts#L1",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export ThinFilmMaterial.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.thinfilmmaterial",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 54,
+        "path": "engine:packages/core/src/materials/thin-film-material.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "ThinFilmMaterial",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/thin-film-material.ts#L54",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export ThinFilmMaterialParameters.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.thinfilmmaterialparameters",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 4,
+        "path": "engine:packages/core/src/materials/thin-film-material.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "ThinFilmMaterialParameters",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/materials/thin-film-material.ts#L4",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export TorusGeometry.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.torusgeometry",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 39,
+        "path": "engine:packages/core/src/geometries/torus-geometry.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "TorusGeometry",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/geometries/torus-geometry.ts#L39",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export TorusGeometryParameters.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.torusgeometryparameters",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 28,
+        "path": "engine:packages/core/src/geometries/torus-geometry.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "TorusGeometryParameters",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/geometries/torus-geometry.ts#L28",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export TrueTypeFont.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.truetypefont",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 15,
+        "path": "engine:packages/core/src/text/true-type-font.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "TrueTypeFont",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/text/true-type-font.ts#L15",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export TypedArray.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.typedarray",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 5,
+        "path": "engine:packages/core/src/core/buffer-geometry.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "TypedArray",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/buffer-geometry.ts#L5",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export Vector3.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.vector3",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 7,
+        "path": "engine:packages/core/src/math/vector-3.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "Vector3",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/math/vector-3.ts#L7",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export ViewPoint.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.viewpoint",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 91,
+        "path": "engine:packages/core/src/core/view-point.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "ViewPoint",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/view-point.ts#L91",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public type export ViewPointParameters.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.viewpointparameters",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "engine:packages/core/src/core/view-point.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "ViewPointParameters",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/view-point.ts#L8",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export WireframeInstancedMesh.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.wireframeinstancedmesh",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 7,
+        "path": "engine:packages/core/src/core/wireframe-instanced-mesh.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "WireframeInstancedMesh",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/wireframe-instanced-mesh.ts#L7",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "platform/engine-exports.json"
+}

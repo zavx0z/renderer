@@ -1,0 +1,62 @@
+{
+  "entrypoints": {
+    "react": [
+      "act",
+      "Activity",
+      "cache",
+      "cacheSignal",
+      "captureOwnerStack",
+      "Children",
+      "cloneElement",
+      "Component",
+      "createContext",
+      "createElement",
+      "createRef",
+      "forwardRef",
+      "Fragment",
+      "isValidElement",
+      "lazy",
+      "memo",
+      "Profiler",
+      "PureComponent",
+      "startTransition",
+      "StrictMode",
+      "Suspense",
+      "unstable_useCacheRefresh",
+      "use",
+      "useActionState",
+      "useCallback",
+      "useContext",
+      "useDebugValue",
+      "useDeferredValue",
+      "useEffect",
+      "useEffectEvent",
+      "useId",
+      "useImperativeHandle",
+      "useInsertionEffect",
+      "useLayoutEffect",
+      "useMemo",
+      "useOptimistic",
+      "useReducer",
+      "useRef",
+      "useState",
+      "useSyncExternalStore",
+      "useTransition",
+      "version"
+    ],
+    "react/compiler-runtime": [
+      "c"
+    ],
+    "react/jsx-dev-runtime": [
+      "Fragment",
+      "jsxDEV"
+    ],
+    "react/jsx-runtime": [
+      "Fragment",
+      "jsx",
+      "jsxs"
+    ]
+  },
+  "package": "react",
+  "version": "19.2.0"
+}

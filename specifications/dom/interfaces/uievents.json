@@ -1,0 +1,2169 @@
+{
+  "entries": [
+    {
+      "description": "dictionary CompositionEventInit from uievents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.compositioneventinit",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "inheritance": "UIEventInit"
+      },
+      "name": "CompositionEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:CompositionEventInit",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "CompositionEventInit.data Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.compositioneventinit.fields.data",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"data\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":{\"type\":\"string\",\"value\":\"\"},\"required\":false}"
+      },
+      "name": "data",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.compositioneventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:CompositionEventInit.data",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "CompositionEventInit has UIEventInit as its declared base interface.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.compositioneventinit.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "UIEventInit"
+      },
+      "name": "CompositionEventInit inherits UIEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.compositioneventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:CompositionEventInit",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "dictionary EventModifierInit from uievents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.eventmodifierinit",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "inheritance": "UIEventInit"
+      },
+      "name": "EventModifierInit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:EventModifierInit",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "EventModifierInit.altKey Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.eventmodifierinit.fields.altkey",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"altKey\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"required\":false}"
+      },
+      "name": "altKey",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.eventmodifierinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:EventModifierInit.altKey",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "EventModifierInit.ctrlKey Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.eventmodifierinit.fields.ctrlkey",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"ctrlKey\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"required\":false}"
+      },
+      "name": "ctrlKey",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.eventmodifierinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:EventModifierInit.ctrlKey",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "EventModifierInit.metaKey Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.eventmodifierinit.fields.metakey",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"metaKey\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"required\":false}"
+      },
+      "name": "metaKey",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.eventmodifierinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:EventModifierInit.metaKey",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "EventModifierInit.modifierAltGraph Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.eventmodifierinit.fields.modifieraltgraph",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"modifierAltGraph\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"required\":false}"
+      },
+      "name": "modifierAltGraph",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.eventmodifierinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:EventModifierInit.modifierAltGraph",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "EventModifierInit.modifierCapsLock Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.eventmodifierinit.fields.modifiercapslock",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"modifierCapsLock\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"required\":false}"
+      },
+      "name": "modifierCapsLock",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.eventmodifierinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:EventModifierInit.modifierCapsLock",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "EventModifierInit.modifierFn Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.eventmodifierinit.fields.modifierfn",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"modifierFn\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"required\":false}"
+      },
+      "name": "modifierFn",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.eventmodifierinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:EventModifierInit.modifierFn",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "EventModifierInit.modifierFnLock Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.eventmodifierinit.fields.modifierfnlock",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"modifierFnLock\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"required\":false}"
+      },
+      "name": "modifierFnLock",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.eventmodifierinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:EventModifierInit.modifierFnLock",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "EventModifierInit.modifierHyper Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.eventmodifierinit.fields.modifierhyper",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"modifierHyper\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"required\":false}"
+      },
+      "name": "modifierHyper",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.eventmodifierinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:EventModifierInit.modifierHyper",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "EventModifierInit.modifierNumLock Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.eventmodifierinit.fields.modifiernumlock",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"modifierNumLock\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"required\":false}"
+      },
+      "name": "modifierNumLock",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.eventmodifierinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:EventModifierInit.modifierNumLock",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "EventModifierInit.modifierScrollLock Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.eventmodifierinit.fields.modifierscrolllock",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"modifierScrollLock\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"required\":false}"
+      },
+      "name": "modifierScrollLock",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.eventmodifierinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:EventModifierInit.modifierScrollLock",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "EventModifierInit.modifierSuper Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.eventmodifierinit.fields.modifiersuper",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"modifierSuper\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"required\":false}"
+      },
+      "name": "modifierSuper",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.eventmodifierinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:EventModifierInit.modifierSuper",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "EventModifierInit.modifierSymbol Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.eventmodifierinit.fields.modifiersymbol",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"modifierSymbol\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"required\":false}"
+      },
+      "name": "modifierSymbol",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.eventmodifierinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:EventModifierInit.modifierSymbol",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "EventModifierInit.modifierSymbolLock Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.eventmodifierinit.fields.modifiersymbollock",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"modifierSymbolLock\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"required\":false}"
+      },
+      "name": "modifierSymbolLock",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.eventmodifierinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:EventModifierInit.modifierSymbolLock",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "EventModifierInit.shiftKey Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.eventmodifierinit.fields.shiftkey",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"shiftKey\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"required\":false}"
+      },
+      "name": "shiftKey",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.eventmodifierinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:EventModifierInit.shiftKey",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "EventModifierInit has UIEventInit as its declared base interface.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.eventmodifierinit.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "UIEventInit"
+      },
+      "name": "EventModifierInit inherits UIEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.eventmodifierinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:EventModifierInit",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "dictionary FocusEventInit from uievents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.focuseventinit",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "inheritance": "UIEventInit"
+      },
+      "name": "FocusEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:FocusEventInit",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "FocusEventInit.relatedTarget Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.focuseventinit.fields.relatedtarget",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"relatedTarget\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"EventTarget\"},\"default\":{\"type\":\"null\"},\"required\":false}"
+      },
+      "name": "relatedTarget",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.focuseventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:FocusEventInit.relatedTarget",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "FocusEventInit has UIEventInit as its declared base interface.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.focuseventinit.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "UIEventInit"
+      },
+      "name": "FocusEventInit inherits UIEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.focuseventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:FocusEventInit",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "dictionary InputEventInit from uievents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.inputeventinit",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "inheritance": "UIEventInit"
+      },
+      "name": "InputEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:InputEventInit",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "InputEventInit.data Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.inputeventinit.fields.data",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"data\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"DOMString\"},\"default\":{\"type\":\"null\"},\"required\":false}"
+      },
+      "name": "data",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.inputeventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:InputEventInit.data",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "InputEventInit.inputType Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.inputeventinit.fields.inputtype",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"inputType\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":{\"type\":\"string\",\"value\":\"\"},\"required\":false}"
+      },
+      "name": "inputType",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.inputeventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:InputEventInit.inputType",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "InputEventInit.isComposing Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.inputeventinit.fields.iscomposing",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"isComposing\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"required\":false}"
+      },
+      "name": "isComposing",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.inputeventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:InputEventInit.isComposing",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "InputEventInit has UIEventInit as its declared base interface.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.inputeventinit.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "UIEventInit"
+      },
+      "name": "InputEventInit inherits UIEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.inputeventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:InputEventInit",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "dictionary KeyboardEventInit from uievents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.keyboardeventinit",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "inheritance": "EventModifierInit"
+      },
+      "name": "KeyboardEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEventInit",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "dictionary KeyboardEventInit from uievents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.keyboardeventinit--1e94ae5d",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "uievents.idl"
+      },
+      "name": "KeyboardEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEventInit",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "KeyboardEventInit.charCode Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.keyboardeventinit--1e94ae5d.fields.charcode",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"charCode\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"required\":false}"
+      },
+      "name": "charCode",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.keyboardeventinit--1e94ae5d",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEventInit.charCode",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "KeyboardEventInit.keyCode Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.keyboardeventinit--1e94ae5d.fields.keycode",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"keyCode\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"required\":false}"
+      },
+      "name": "keyCode",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.keyboardeventinit--1e94ae5d",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEventInit.keyCode",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "KeyboardEventInit.code Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.keyboardeventinit.fields.code",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"code\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":{\"type\":\"string\",\"value\":\"\"},\"required\":false}"
+      },
+      "name": "code",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.keyboardeventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEventInit.code",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "KeyboardEventInit.isComposing Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.keyboardeventinit.fields.iscomposing",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"isComposing\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"required\":false}"
+      },
+      "name": "isComposing",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.keyboardeventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEventInit.isComposing",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "KeyboardEventInit.key Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.keyboardeventinit.fields.key",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"key\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":{\"type\":\"string\",\"value\":\"\"},\"required\":false}"
+      },
+      "name": "key",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.keyboardeventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEventInit.key",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "KeyboardEventInit.location Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.keyboardeventinit.fields.location",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"location\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"required\":false}"
+      },
+      "name": "location",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.keyboardeventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEventInit.location",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "KeyboardEventInit.repeat Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.keyboardeventinit.fields.repeat",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"repeat\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"required\":false}"
+      },
+      "name": "repeat",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.keyboardeventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEventInit.repeat",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "KeyboardEventInit has EventModifierInit as its declared base interface.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.keyboardeventinit.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "EventModifierInit"
+      },
+      "name": "KeyboardEventInit inherits EventModifierInit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.keyboardeventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEventInit",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "dictionary UIEventInit from uievents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.uieventinit",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "inheritance": "EventInit"
+      },
+      "name": "UIEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:UIEventInit",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "dictionary UIEventInit from uievents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.uieventinit--9d980e24",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "uievents.idl"
+      },
+      "name": "UIEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:UIEventInit",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "UIEventInit.which Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.uieventinit--9d980e24.fields.which",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"which\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"required\":false}"
+      },
+      "name": "which",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.uieventinit--9d980e24",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:UIEventInit.which",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "UIEventInit.detail Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.uieventinit.fields.detail",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"detail\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"required\":false}"
+      },
+      "name": "detail",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.uieventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:UIEventInit.detail",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "UIEventInit.view Web IDL field.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.uieventinit.fields.view",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"view\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"Window\"},\"default\":{\"type\":\"null\"},\"required\":false}"
+      },
+      "name": "view",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.uieventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:UIEventInit.view",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "UIEventInit has EventInit as its declared base interface.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.dictionaries.uieventinit.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "EventInit"
+      },
+      "name": "UIEventInit inherits EventInit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.dictionaries.uieventinit",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:UIEventInit",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface CompositionEvent from uievents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.compositionevent",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "uievents.idl",
+        "inheritance": "UIEvent"
+      },
+      "name": "CompositionEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:CompositionEvent",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface CompositionEvent from uievents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.compositionevent--5a516c69",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "uievents.idl"
+      },
+      "name": "CompositionEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:CompositionEvent",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "CompositionEvent.initCompositionEvent Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.compositionevent--5a516c69.methods.initcompositionevent",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"initCompositionEvent\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"typeArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"bubblesArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"cancelableArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"viewArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"WindowProxy\"},\"default\":{\"type\":\"null\"},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"dataArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":{\"type\":\"string\",\"value\":\"\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "initCompositionEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.compositionevent--5a516c69",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:CompositionEvent.initCompositionEvent",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "CompositionEvent.data Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.compositionevent.attributes.data",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"data\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"USVString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "data",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.compositionevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:CompositionEvent.data",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "CompositionEvent.constructor Web IDL constructor.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.compositionevent.constructors.constructor",
+      "kind": "constructor",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"constructor\",\"arguments\":[{\"type\":\"argument\",\"name\":\"type\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"eventInitDict\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CompositionEventInit\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[]}"
+      },
+      "name": "constructor",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.compositionevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:CompositionEvent.constructor",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "CompositionEvent has UIEvent as its declared base interface.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.compositionevent.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "UIEvent"
+      },
+      "name": "CompositionEvent inherits UIEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.compositionevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:CompositionEvent",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface FocusEvent from uievents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.focusevent",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "uievents.idl",
+        "inheritance": "UIEvent"
+      },
+      "name": "FocusEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:FocusEvent",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "FocusEvent.relatedTarget Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.focusevent.attributes.relatedtarget",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"relatedTarget\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"EventTarget\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "relatedTarget",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.focusevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:FocusEvent.relatedTarget",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "FocusEvent.constructor Web IDL constructor.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.focusevent.constructors.constructor",
+      "kind": "constructor",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"constructor\",\"arguments\":[{\"type\":\"argument\",\"name\":\"type\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"eventInitDict\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"FocusEventInit\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[]}"
+      },
+      "name": "constructor",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.focusevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:FocusEvent.constructor",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "FocusEvent has UIEvent as its declared base interface.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.focusevent.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "UIEvent"
+      },
+      "name": "FocusEvent inherits UIEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.focusevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:FocusEvent",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface InputEvent from uievents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.inputevent",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "uievents.idl",
+        "inheritance": "UIEvent"
+      },
+      "name": "InputEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:InputEvent",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "InputEvent.data Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.inputevent.attributes.data",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"data\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"USVString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "data",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.inputevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:InputEvent.data",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "InputEvent.inputType Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.inputevent.attributes.inputtype",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"inputType\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "inputType",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.inputevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:InputEvent.inputType",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "InputEvent.isComposing Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.inputevent.attributes.iscomposing",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"isComposing\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "isComposing",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.inputevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:InputEvent.isComposing",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "InputEvent.constructor Web IDL constructor.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.inputevent.constructors.constructor",
+      "kind": "constructor",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"constructor\",\"arguments\":[{\"type\":\"argument\",\"name\":\"type\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"eventInitDict\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"InputEventInit\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[]}"
+      },
+      "name": "constructor",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.inputevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:InputEvent.constructor",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "InputEvent has UIEvent as its declared base interface.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.inputevent.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "UIEvent"
+      },
+      "name": "InputEvent inherits UIEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.inputevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:InputEvent",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface KeyboardEvent from uievents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.keyboardevent",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "uievents.idl",
+        "inheritance": "UIEvent"
+      },
+      "name": "KeyboardEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEvent",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface KeyboardEvent from uievents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.keyboardevent--9f5e992c",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "uievents.idl"
+      },
+      "name": "KeyboardEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEvent",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "KeyboardEvent.charCode Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.keyboardevent--9f5e992c.attributes.charcode",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"charCode\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "charCode",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.keyboardevent--9f5e992c",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEvent.charCode",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "KeyboardEvent.keyCode Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.keyboardevent--9f5e992c.attributes.keycode",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"keyCode\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "keyCode",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.keyboardevent--9f5e992c",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEvent.keyCode",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface KeyboardEvent from uievents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.keyboardevent--b1d8102d",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "uievents.idl"
+      },
+      "name": "KeyboardEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEvent",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "KeyboardEvent.initKeyboardEvent Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.keyboardevent--b1d8102d.methods.initkeyboardevent",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"initKeyboardEvent\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"typeArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"bubblesArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"cancelableArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"viewArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"Window\"},\"default\":{\"type\":\"null\"},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"keyArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":{\"type\":\"string\",\"value\":\"\"},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"locationArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"ctrlKey\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"altKey\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"shiftKey\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"metaKey\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "initKeyboardEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.keyboardevent--b1d8102d",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEvent.initKeyboardEvent",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "KeyboardEvent.altKey Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.keyboardevent.attributes.altkey",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"altKey\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "altKey",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.keyboardevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEvent.altKey",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "KeyboardEvent.code Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.keyboardevent.attributes.code",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"code\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "code",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.keyboardevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEvent.code",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "KeyboardEvent.ctrlKey Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.keyboardevent.attributes.ctrlkey",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"ctrlKey\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "ctrlKey",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.keyboardevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEvent.ctrlKey",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "KeyboardEvent.isComposing Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.keyboardevent.attributes.iscomposing",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"isComposing\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "isComposing",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.keyboardevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEvent.isComposing",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "KeyboardEvent.key Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.keyboardevent.attributes.key",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"key\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "key",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.keyboardevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEvent.key",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "KeyboardEvent.location Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.keyboardevent.attributes.location",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"location\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "location",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.keyboardevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEvent.location",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "KeyboardEvent.metaKey Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.keyboardevent.attributes.metakey",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"metaKey\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "metaKey",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.keyboardevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEvent.metaKey",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "KeyboardEvent.repeat Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.keyboardevent.attributes.repeat",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"repeat\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "repeat",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.keyboardevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEvent.repeat",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "KeyboardEvent.shiftKey Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.keyboardevent.attributes.shiftkey",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"shiftKey\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "shiftKey",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.keyboardevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEvent.shiftKey",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "KeyboardEvent.DOM_KEY_LOCATION_LEFT Web IDL const.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.keyboardevent.constants.dom_key_location_left",
+      "kind": "const",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"const\",\"name\":\"DOM_KEY_LOCATION_LEFT\",\"idlType\":{\"type\":\"const-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"extAttrs\":[],\"value\":{\"type\":\"number\",\"value\":\"0x01\"}}"
+      },
+      "name": "DOM_KEY_LOCATION_LEFT",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.keyboardevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEvent.DOM_KEY_LOCATION_LEFT",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "KeyboardEvent.DOM_KEY_LOCATION_NUMPAD Web IDL const.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.keyboardevent.constants.dom_key_location_numpad",
+      "kind": "const",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"const\",\"name\":\"DOM_KEY_LOCATION_NUMPAD\",\"idlType\":{\"type\":\"const-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"extAttrs\":[],\"value\":{\"type\":\"number\",\"value\":\"0x03\"}}"
+      },
+      "name": "DOM_KEY_LOCATION_NUMPAD",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.keyboardevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEvent.DOM_KEY_LOCATION_NUMPAD",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "KeyboardEvent.DOM_KEY_LOCATION_RIGHT Web IDL const.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.keyboardevent.constants.dom_key_location_right",
+      "kind": "const",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"const\",\"name\":\"DOM_KEY_LOCATION_RIGHT\",\"idlType\":{\"type\":\"const-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"extAttrs\":[],\"value\":{\"type\":\"number\",\"value\":\"0x02\"}}"
+      },
+      "name": "DOM_KEY_LOCATION_RIGHT",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.keyboardevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEvent.DOM_KEY_LOCATION_RIGHT",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "KeyboardEvent.DOM_KEY_LOCATION_STANDARD Web IDL const.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.keyboardevent.constants.dom_key_location_standard",
+      "kind": "const",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"const\",\"name\":\"DOM_KEY_LOCATION_STANDARD\",\"idlType\":{\"type\":\"const-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"extAttrs\":[],\"value\":{\"type\":\"number\",\"value\":\"0x00\"}}"
+      },
+      "name": "DOM_KEY_LOCATION_STANDARD",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.keyboardevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEvent.DOM_KEY_LOCATION_STANDARD",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "KeyboardEvent.constructor Web IDL constructor.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.keyboardevent.constructors.constructor",
+      "kind": "constructor",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"constructor\",\"arguments\":[{\"type\":\"argument\",\"name\":\"type\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"eventInitDict\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"KeyboardEventInit\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[]}"
+      },
+      "name": "constructor",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.keyboardevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEvent.constructor",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "KeyboardEvent has UIEvent as its declared base interface.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.keyboardevent.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "UIEvent"
+      },
+      "name": "KeyboardEvent inherits UIEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.keyboardevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEvent",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "KeyboardEvent.getModifierState Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.keyboardevent.methods.getmodifierstate",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"getModifierState\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"keyArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "getModifierState",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.keyboardevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:KeyboardEvent.getModifierState",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface TextEvent from uievents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.textevent",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "uievents.idl",
+        "inheritance": "UIEvent"
+      },
+      "name": "TextEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:TextEvent",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "TextEvent.data Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.textevent.attributes.data",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"data\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "data",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.textevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:TextEvent.data",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "TextEvent has UIEvent as its declared base interface.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.textevent.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "UIEvent"
+      },
+      "name": "TextEvent inherits UIEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.textevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:TextEvent",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "TextEvent.initTextEvent Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.textevent.methods.inittextevent",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"initTextEvent\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"type\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"bubbles\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"cancelable\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"view\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"Window\"},\"default\":{\"type\":\"null\"},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"data\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":{\"type\":\"string\",\"value\":\"undefined\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "initTextEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.textevent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:TextEvent.initTextEvent",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface UIEvent from uievents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.uievent",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "uievents.idl",
+        "inheritance": "Event"
+      },
+      "name": "UIEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:UIEvent",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface UIEvent from uievents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.uievent--74d12d4d",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "uievents.idl"
+      },
+      "name": "UIEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:UIEvent",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "UIEvent.which Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.uievent--74d12d4d.attributes.which",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"which\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"unsigned long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "which",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.uievent--74d12d4d",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:UIEvent.which",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "interface UIEvent from uievents.idl.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.uievent--f6db9bb3",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "uievents.idl"
+      },
+      "name": "UIEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:UIEvent",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "UIEvent.initUIEvent Web IDL operation.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.uievent--f6db9bb3.methods.inituievent",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"initUIEvent\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"typeArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"bubblesArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"cancelableArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"boolean\"},\"default\":{\"type\":\"boolean\",\"value\":false},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"viewArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"Window\"},\"default\":{\"type\":\"null\"},\"optional\":true,\"variadic\":false},{\"type\":\"argument\",\"name\":\"detailArg\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"default\":{\"type\":\"number\",\"value\":\"0\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "initUIEvent",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.uievent--f6db9bb3",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:UIEvent.initUIEvent",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "UIEvent.detail Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.uievent.attributes.detail",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"detail\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"long\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "detail",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.uievent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:UIEvent.detail",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "UIEvent.view Web IDL attribute.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.uievent.attributes.view",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"view\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"Window\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "view",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.uievent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:UIEvent.view",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "UIEvent.constructor Web IDL constructor.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.uievent.constructors.constructor",
+      "kind": "constructor",
+      "metadata": {
+        "idlSource": "uievents.idl",
+        "signature": "{\"type\":\"constructor\",\"arguments\":[{\"type\":\"argument\",\"name\":\"type\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"eventInitDict\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"UIEventInit\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[]}"
+      },
+      "name": "constructor",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.uievent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:UIEvent.constructor",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "UIEvent has Event as its declared base interface.",
+      "domain": "dom",
+      "id": "dom.extensions.uievents.interfaces.uievent.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "Event"
+      },
+      "name": "UIEvent inherits Event",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "dom.extensions.uievents.interfaces.uievent",
+      "spec": {
+        "anchor": "https://w3c.github.io/uievents/#WebIDL:UIEvent",
+        "profile": "standard",
+        "source": "ui-events",
+        "version": "snapshot 2026-08-29"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "dom/interfaces/uievents.json"
+}

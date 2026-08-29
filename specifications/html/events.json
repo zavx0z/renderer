@@ -1,0 +1,2899 @@
+{
+  "entries": [
+    {
+      "description": "abort event using Event.",
+      "domain": "html",
+      "id": "html.events.abort",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLMediaElement"
+          }
+        ]
+      },
+      "name": "abort",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-abort",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "addtrack event using TrackEvent.",
+      "domain": "html",
+      "id": "html.events.addtrack",
+      "kind": "event",
+      "metadata": {
+        "interface": "TrackEvent",
+        "targets": [
+          {
+            "target": "AudioTrackList"
+          },
+          {
+            "target": "TextTrackList"
+          },
+          {
+            "target": "VideoTrackList"
+          }
+        ]
+      },
+      "name": "addtrack",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-addtrack",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "afterprint event using Event.",
+      "domain": "html",
+      "id": "html.events.afterprint",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "target": "Window"
+          }
+        ]
+      },
+      "name": "afterprint",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-afterprint",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "beforematch event using Event.",
+      "domain": "html",
+      "id": "html.events.beforematch",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLElement"
+          }
+        ]
+      },
+      "name": "beforematch",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-beforematch",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "beforeprint event using Event.",
+      "domain": "html",
+      "id": "html.events.beforeprint",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "target": "Window"
+          }
+        ]
+      },
+      "name": "beforeprint",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-beforeprint",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "beforetoggle event using ToggleEvent.",
+      "domain": "html",
+      "id": "html.events.beforetoggle",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "ToggleEvent",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLElement"
+          }
+        ]
+      },
+      "name": "beforetoggle",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-beforetoggle",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "beforeunload event using BeforeUnloadEvent.",
+      "domain": "html",
+      "id": "html.events.beforeunload",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "BeforeUnloadEvent",
+        "targets": [
+          {
+            "target": "Window"
+          }
+        ]
+      },
+      "name": "beforeunload",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-beforeunload",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "blur event using Event.",
+      "domain": "html",
+      "id": "html.events.blur",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "target": "Window"
+          },
+          {
+            "bubbles": false,
+            "target": "HTMLElement"
+          }
+        ]
+      },
+      "name": "blur",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-blur",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "cancel event using Event.",
+      "domain": "html",
+      "id": "html.events.cancel",
+      "kind": "event",
+      "metadata": {
+        "cancelable": false,
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLInputElement"
+          }
+        ]
+      },
+      "name": "cancel",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-cancel",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "cancel event using Event.",
+      "domain": "html",
+      "id": "html.events.cancel--bbedd4b3",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "Event",
+        "targets": [
+          {
+            "target": "CloseWatcher"
+          },
+          {
+            "bubbles": false,
+            "target": "HTMLDialogElement"
+          }
+        ]
+      },
+      "name": "cancel",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-cancel",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "canplay event using Event.",
+      "domain": "html",
+      "id": "html.events.canplay",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLMediaElement"
+          }
+        ]
+      },
+      "name": "canplay",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-canplay",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "canplaythrough event using Event.",
+      "domain": "html",
+      "id": "html.events.canplaythrough",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLMediaElement"
+          }
+        ]
+      },
+      "name": "canplaythrough",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-canplaythrough",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "change event using Event.",
+      "domain": "html",
+      "id": "html.events.change",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLInputElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLSelectElement"
+          }
+        ]
+      },
+      "name": "change",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-change",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "change event using Event.",
+      "domain": "html",
+      "id": "html.events.change--ad50e22a",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "target": "AudioTrackList"
+          },
+          {
+            "target": "TextTrackList"
+          },
+          {
+            "target": "VideoTrackList"
+          }
+        ]
+      },
+      "name": "change",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-change",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "clipboardchange event using ClipboardChangeEvent.",
+      "domain": "html",
+      "id": "html.events.clipboardchange",
+      "kind": "event",
+      "metadata": {
+        "interface": "ClipboardChangeEvent",
+        "targets": [
+          {
+            "target": "Window"
+          }
+        ]
+      },
+      "name": "clipboardchange",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#eventdef-globaleventhandlers-clipboardchange",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "close event using Event.",
+      "domain": "html",
+      "id": "html.events.close",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "target": "CloseWatcher"
+          },
+          {
+            "target": "MessagePort"
+          },
+          {
+            "bubbles": false,
+            "target": "HTMLDialogElement"
+          }
+        ]
+      },
+      "name": "close",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-close",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "command event using CommandEvent.",
+      "domain": "html",
+      "id": "html.events.command",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "CommandEvent",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLElement"
+          }
+        ]
+      },
+      "name": "command",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-command",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "connect event using MessageEvent.",
+      "domain": "html",
+      "id": "html.events.connect",
+      "kind": "event",
+      "metadata": {
+        "interface": "MessageEvent",
+        "targets": [
+          {
+            "target": "SharedWorkerGlobalScope"
+          }
+        ]
+      },
+      "name": "connect",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-workerglobalscope-connect",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "contextlost event using Event.",
+      "domain": "html",
+      "id": "html.events.contextlost",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "Event",
+        "targets": [
+          {
+            "target": "OffscreenCanvas"
+          },
+          {
+            "bubbles": false,
+            "target": "HTMLCanvasElement"
+          }
+        ]
+      },
+      "name": "contextlost",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-contextlost",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "contextrestored event using Event.",
+      "domain": "html",
+      "id": "html.events.contextrestored",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "target": "OffscreenCanvas"
+          },
+          {
+            "bubbles": false,
+            "target": "HTMLCanvasElement"
+          }
+        ]
+      },
+      "name": "contextrestored",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-contextrestored",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "copy event using ClipboardEvent.",
+      "domain": "html",
+      "id": "html.events.copy",
+      "kind": "event",
+      "metadata": {
+        "interface": "ClipboardEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "MathMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "SVGElement"
+          }
+        ]
+      },
+      "name": "copy",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#eventdef-globaleventhandlers-copy",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "cuechange event using Event.",
+      "domain": "html",
+      "id": "html.events.cuechange",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "target": "TextTrack"
+          },
+          {
+            "bubbles": false,
+            "target": "HTMLTrackElement"
+          }
+        ]
+      },
+      "name": "cuechange",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-cuechange",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "currententrychange event using NavigationCurrentEntryChangeEvent.",
+      "domain": "html",
+      "id": "html.events.currententrychange",
+      "kind": "event",
+      "metadata": {
+        "interface": "NavigationCurrentEntryChangeEvent",
+        "targets": [
+          {
+            "target": "Navigation"
+          }
+        ]
+      },
+      "name": "currententrychange",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-currententrychange",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "cut event using ClipboardEvent.",
+      "domain": "html",
+      "id": "html.events.cut",
+      "kind": "event",
+      "metadata": {
+        "interface": "ClipboardEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "MathMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "SVGElement"
+          }
+        ]
+      },
+      "name": "cut",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#eventdef-globaleventhandlers-cut",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "dispose event using Event.",
+      "domain": "html",
+      "id": "html.events.dispose",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "target": "NavigationHistoryEntry"
+          }
+        ]
+      },
+      "name": "dispose",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-dispose",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "DOMContentLoaded event using Event.",
+      "domain": "html",
+      "id": "html.events.domcontentloaded",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Window"
+            ],
+            "target": "Document"
+          }
+        ]
+      },
+      "name": "DOMContentLoaded",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-domcontentloaded",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "drag event using DragEvent.",
+      "domain": "html",
+      "id": "html.events.drag",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "DragEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "MathMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "SVGElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Text"
+          }
+        ]
+      },
+      "name": "drag",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/dnd.html#event-dnd-drag",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "dragend event using DragEvent.",
+      "domain": "html",
+      "id": "html.events.dragend",
+      "kind": "event",
+      "metadata": {
+        "cancelable": false,
+        "interface": "DragEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "MathMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "SVGElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Text"
+          }
+        ]
+      },
+      "name": "dragend",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/dnd.html#event-dnd-dragend",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "dragenter event using DragEvent.",
+      "domain": "html",
+      "id": "html.events.dragenter",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "DragEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "MathMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "SVGElement"
+          }
+        ]
+      },
+      "name": "dragenter",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/dnd.html#event-dnd-dragenter",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "dragleave event using DragEvent.",
+      "domain": "html",
+      "id": "html.events.dragleave",
+      "kind": "event",
+      "metadata": {
+        "cancelable": false,
+        "interface": "DragEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "MathMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "SVGElement"
+          }
+        ]
+      },
+      "name": "dragleave",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/dnd.html#event-dnd-dragleave",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "dragover event using DragEvent.",
+      "domain": "html",
+      "id": "html.events.dragover",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "DragEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "MathMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "SVGElement"
+          }
+        ]
+      },
+      "name": "dragover",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/dnd.html#event-dnd-dragover",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "dragstart event using DragEvent.",
+      "domain": "html",
+      "id": "html.events.dragstart",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "DragEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "MathMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "SVGElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "Text"
+          }
+        ]
+      },
+      "name": "dragstart",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/dnd.html#event-dnd-dragstart",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "drop event using DragEvent.",
+      "domain": "html",
+      "id": "html.events.drop",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "DragEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "MathMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "SVGElement"
+          }
+        ]
+      },
+      "name": "drop",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/dnd.html#event-dnd-drop",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "durationchange event using Event.",
+      "domain": "html",
+      "id": "html.events.durationchange",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLMediaElement"
+          }
+        ]
+      },
+      "name": "durationchange",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-durationchange",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "emptied event using Event.",
+      "domain": "html",
+      "id": "html.events.emptied",
+      "kind": "event",
+      "metadata": {
+        "extendedIn": [
+          {
+            "href": "https://w3c.github.io/media-source/#mediasource-detach",
+            "spec": "media-source"
+          }
+        ],
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLMediaElement"
+          }
+        ]
+      },
+      "name": "emptied",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-emptied",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "ended event using Event.",
+      "domain": "html",
+      "id": "html.events.ended",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLMediaElement"
+          }
+        ]
+      },
+      "name": "ended",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-ended",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "enter event using Event.",
+      "domain": "html",
+      "id": "html.events.enter",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "target": "TextTrackCue"
+          }
+        ]
+      },
+      "name": "enter",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-enter",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "error event using Event.",
+      "domain": "html",
+      "id": "html.events.error",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "extendedIn": [
+          {
+            "href": "https://wicg.github.io/webpackage/loading.html#ref-for-concept-event-fire%E2%91%A0",
+            "spec": "webpackage"
+          }
+        ],
+        "interface": "Event",
+        "targets": [
+          {
+            "target": "Window"
+          },
+          {
+            "target": "WorkerGlobalScope"
+          },
+          {
+            "target": "EventSource"
+          },
+          {
+            "target": "Worker"
+          },
+          {
+            "target": "SharedWorker"
+          },
+          {
+            "target": "Worker"
+          },
+          {
+            "target": "SharedWorker"
+          },
+          {
+            "target": "ServiceWorker"
+          },
+          {
+            "bubbles": false,
+            "target": "HTMLElement"
+          }
+        ]
+      },
+      "name": "error",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-error",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "error event using Event.",
+      "domain": "html",
+      "id": "html.events.error--428dfdf1",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLMediaElement"
+          }
+        ]
+      },
+      "name": "error",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-error",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "error event using Event.",
+      "domain": "html",
+      "id": "html.events.error--894d079b",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLTrackElement"
+          }
+        ]
+      },
+      "name": "error",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-track-error",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "error event using Event.",
+      "domain": "html",
+      "id": "html.events.error--9b0b10f9",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLSourceElement"
+          }
+        ]
+      },
+      "name": "error",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-source-error",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "exit event using Event.",
+      "domain": "html",
+      "id": "html.events.exit",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "target": "TextTrackCue"
+          }
+        ]
+      },
+      "name": "exit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-exit",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "focus event using Event.",
+      "domain": "html",
+      "id": "html.events.focus",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "target": "Window"
+          },
+          {
+            "bubbles": false,
+            "target": "HTMLElement"
+          }
+        ]
+      },
+      "name": "focus",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-focus",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "formdata event using FormDataEvent.",
+      "domain": "html",
+      "id": "html.events.formdata",
+      "kind": "event",
+      "metadata": {
+        "interface": "FormDataEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLFormElement"
+          }
+        ]
+      },
+      "name": "formdata",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-formdata",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "hashchange event using HashChangeEvent.",
+      "domain": "html",
+      "id": "html.events.hashchange",
+      "kind": "event",
+      "metadata": {
+        "interface": "HashChangeEvent",
+        "targets": [
+          {
+            "target": "Window"
+          }
+        ]
+      },
+      "name": "hashchange",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-hashchange",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "invalid event using Event.",
+      "domain": "html",
+      "id": "html.events.invalid",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLButtonElement"
+          },
+          {
+            "bubbles": false,
+            "target": "HTMLInputElement"
+          },
+          {
+            "bubbles": false,
+            "target": "HTMLSelectElement"
+          },
+          {
+            "bubbles": false,
+            "target": "HTMLTextAreaElement"
+          }
+        ]
+      },
+      "name": "invalid",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-invalid",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "languagechange event using Event.",
+      "domain": "html",
+      "id": "html.events.languagechange",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "target": "Window"
+          },
+          {
+            "target": "WorkerGlobalScope"
+          }
+        ]
+      },
+      "name": "languagechange",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-languagechange",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "load event using Event.",
+      "domain": "html",
+      "id": "html.events.load",
+      "kind": "event",
+      "metadata": {
+        "extendedIn": [
+          {
+            "href": "https://wicg.github.io/portals/#ref-for-concept-event-fire%E2%91%A1",
+            "spec": "portals"
+          },
+          {
+            "href": "https://wicg.github.io/webpackage/loading.html#ref-for-concept-event-fire",
+            "spec": "webpackage"
+          }
+        ],
+        "interface": "Event",
+        "targets": [
+          {
+            "target": "Window"
+          },
+          {
+            "bubbles": false,
+            "target": "HTMLElement"
+          }
+        ]
+      },
+      "name": "load",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-load",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "load event using Event.",
+      "domain": "html",
+      "id": "html.events.load--fd7e3850",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLTrackElement"
+          }
+        ]
+      },
+      "name": "load",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-track-load",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "loadeddata event using Event.",
+      "domain": "html",
+      "id": "html.events.loadeddata",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLMediaElement"
+          }
+        ]
+      },
+      "name": "loadeddata",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-loadeddata",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "loadedmetadata event using Event.",
+      "domain": "html",
+      "id": "html.events.loadedmetadata",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLMediaElement"
+          }
+        ]
+      },
+      "name": "loadedmetadata",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-loadedmetadata",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "loadstart event using Event.",
+      "domain": "html",
+      "id": "html.events.loadstart",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLMediaElement"
+          }
+        ]
+      },
+      "name": "loadstart",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-loadstart",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "message event using MessageEvent.",
+      "domain": "html",
+      "id": "html.events.message",
+      "kind": "event",
+      "metadata": {
+        "extendedIn": [
+          {
+            "spec": "presentation-api"
+          }
+        ],
+        "interface": "MessageEvent",
+        "targets": [
+          {
+            "target": "Window"
+          },
+          {
+            "target": "EventSource"
+          },
+          {
+            "target": "MessagePort"
+          },
+          {
+            "target": "BroadcastChannel"
+          },
+          {
+            "target": "DedicatedWorkerGlobalScope"
+          },
+          {
+            "target": "Worker"
+          },
+          {
+            "target": "ServiceWorkerContainer"
+          },
+          {
+            "target": "PresentationConnection"
+          }
+        ]
+      },
+      "name": "message",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-message",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "messageerror event using MessageEvent.",
+      "domain": "html",
+      "id": "html.events.messageerror",
+      "kind": "event",
+      "metadata": {
+        "interface": "MessageEvent",
+        "targets": [
+          {
+            "target": "Window"
+          },
+          {
+            "target": "MessagePort"
+          },
+          {
+            "target": "BroadcastChannel"
+          },
+          {
+            "target": "DedicatedWorkerGlobalScope"
+          },
+          {
+            "target": "Worker"
+          },
+          {
+            "target": "ServiceWorkerContainer"
+          }
+        ]
+      },
+      "name": "messageerror",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-messageerror",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "navigate event using NavigateEvent.",
+      "domain": "html",
+      "id": "html.events.navigate",
+      "kind": "event",
+      "metadata": {
+        "interface": "NavigateEvent",
+        "targets": [
+          {
+            "target": "Navigation"
+          }
+        ]
+      },
+      "name": "navigate",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-navigate",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "navigateerror event using ErrorEvent.",
+      "domain": "html",
+      "id": "html.events.navigateerror",
+      "kind": "event",
+      "metadata": {
+        "interface": "ErrorEvent",
+        "targets": [
+          {
+            "target": "Navigation"
+          }
+        ]
+      },
+      "name": "navigateerror",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-navigateerror",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "navigatesuccess event using Event.",
+      "domain": "html",
+      "id": "html.events.navigatesuccess",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "target": "Navigation"
+          }
+        ]
+      },
+      "name": "navigatesuccess",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-navigatesuccess",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "offline event using Event.",
+      "domain": "html",
+      "id": "html.events.offline",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "target": "Window"
+          },
+          {
+            "target": "WorkerGlobalScope"
+          }
+        ]
+      },
+      "name": "offline",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-offline",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "online event using Event.",
+      "domain": "html",
+      "id": "html.events.online",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "target": "Window"
+          },
+          {
+            "target": "WorkerGlobalScope"
+          }
+        ]
+      },
+      "name": "online",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-online",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "open event using Event.",
+      "domain": "html",
+      "id": "html.events.open",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "target": "EventSource"
+          }
+        ]
+      },
+      "name": "open",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-open",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "pagehide event using PageTransitionEvent.",
+      "domain": "html",
+      "id": "html.events.pagehide",
+      "kind": "event",
+      "metadata": {
+        "interface": "PageTransitionEvent",
+        "targets": [
+          {
+            "target": "Window"
+          }
+        ]
+      },
+      "name": "pagehide",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-pagehide",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "pagereveal event using PageRevealEvent.",
+      "domain": "html",
+      "id": "html.events.pagereveal",
+      "kind": "event",
+      "metadata": {
+        "interface": "PageRevealEvent",
+        "targets": [
+          {
+            "target": "Window"
+          }
+        ]
+      },
+      "name": "pagereveal",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-pagereveal",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "pageshow event using PageTransitionEvent.",
+      "domain": "html",
+      "id": "html.events.pageshow",
+      "kind": "event",
+      "metadata": {
+        "interface": "PageTransitionEvent",
+        "targets": [
+          {
+            "target": "Window"
+          }
+        ]
+      },
+      "name": "pageshow",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-pageshow",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "pageswap event using PageSwapEvent.",
+      "domain": "html",
+      "id": "html.events.pageswap",
+      "kind": "event",
+      "metadata": {
+        "interface": "PageSwapEvent",
+        "targets": [
+          {
+            "target": "Window"
+          }
+        ]
+      },
+      "name": "pageswap",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-pageswap",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "paste event using ClipboardEvent.",
+      "domain": "html",
+      "id": "html.events.paste",
+      "kind": "event",
+      "metadata": {
+        "interface": "ClipboardEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "MathMLElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "SVGElement"
+          }
+        ]
+      },
+      "name": "paste",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/clipboard-apis/#eventdef-globaleventhandlers-paste",
+        "profile": "standard",
+        "source": "clipboard-apis",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "pause event using Event.",
+      "domain": "html",
+      "id": "html.events.pause",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLMediaElement"
+          }
+        ]
+      },
+      "name": "pause",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-pause",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "play event using Event.",
+      "domain": "html",
+      "id": "html.events.play",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLMediaElement"
+          }
+        ]
+      },
+      "name": "play",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-play",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "playing event using Event.",
+      "domain": "html",
+      "id": "html.events.playing",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLMediaElement"
+          }
+        ]
+      },
+      "name": "playing",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-playing",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "popstate event using PopStateEvent.",
+      "domain": "html",
+      "id": "html.events.popstate",
+      "kind": "event",
+      "metadata": {
+        "interface": "PopStateEvent",
+        "targets": [
+          {
+            "target": "Window"
+          }
+        ]
+      },
+      "name": "popstate",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-popstate",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "progress event using Event.",
+      "domain": "html",
+      "id": "html.events.progress",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLMediaElement"
+          }
+        ]
+      },
+      "name": "progress",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-progress",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "ratechange event using Event.",
+      "domain": "html",
+      "id": "html.events.ratechange",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLMediaElement"
+          }
+        ]
+      },
+      "name": "ratechange",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-ratechange",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "readystatechange event using Event.",
+      "domain": "html",
+      "id": "html.events.readystatechange",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "Document"
+          }
+        ]
+      },
+      "name": "readystatechange",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-readystatechange",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "rejectionhandled event using PromiseRejectionEvent.",
+      "domain": "html",
+      "id": "html.events.rejectionhandled",
+      "kind": "event",
+      "metadata": {
+        "interface": "PromiseRejectionEvent",
+        "targets": [
+          {
+            "target": "Window"
+          },
+          {
+            "target": "WorkerGlobalScope"
+          }
+        ]
+      },
+      "name": "rejectionhandled",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-rejectionhandled",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "removetrack event using TrackEvent.",
+      "domain": "html",
+      "id": "html.events.removetrack",
+      "kind": "event",
+      "metadata": {
+        "interface": "TrackEvent",
+        "targets": [
+          {
+            "target": "AudioTrackList"
+          },
+          {
+            "target": "TextTrackList"
+          },
+          {
+            "target": "VideoTrackList"
+          }
+        ]
+      },
+      "name": "removetrack",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-removetrack",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "reset event using Event.",
+      "domain": "html",
+      "id": "html.events.reset",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLFormElement"
+          }
+        ]
+      },
+      "name": "reset",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-reset",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "resize event using Event.",
+      "domain": "html",
+      "id": "html.events.resize",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLMediaElement"
+          }
+        ]
+      },
+      "name": "resize",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-resize",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "seeked event using Event.",
+      "domain": "html",
+      "id": "html.events.seeked",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLMediaElement"
+          }
+        ]
+      },
+      "name": "seeked",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-seeked",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "seeking event using Event.",
+      "domain": "html",
+      "id": "html.events.seeking",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLMediaElement"
+          }
+        ]
+      },
+      "name": "seeking",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-seeking",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "select event using Event.",
+      "domain": "html",
+      "id": "html.events.select",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLInputElement"
+          },
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLTextAreaElement"
+          }
+        ]
+      },
+      "name": "select",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-select",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "stalled event using Event.",
+      "domain": "html",
+      "id": "html.events.stalled",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLMediaElement"
+          }
+        ]
+      },
+      "name": "stalled",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-stalled",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "storage event using StorageEvent.",
+      "domain": "html",
+      "id": "html.events.storage",
+      "kind": "event",
+      "metadata": {
+        "interface": "StorageEvent",
+        "targets": [
+          {
+            "target": "Window"
+          }
+        ]
+      },
+      "name": "storage",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-storage",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "submit event using SubmitEvent.",
+      "domain": "html",
+      "id": "html.events.submit",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "SubmitEvent",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Node",
+              "Document",
+              "Window"
+            ],
+            "target": "HTMLFormElement"
+          }
+        ]
+      },
+      "name": "submit",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-submit",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "suspend event using Event.",
+      "domain": "html",
+      "id": "html.events.suspend",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLMediaElement"
+          }
+        ]
+      },
+      "name": "suspend",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-suspend",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "timeupdate event using Event.",
+      "domain": "html",
+      "id": "html.events.timeupdate",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLMediaElement"
+          }
+        ]
+      },
+      "name": "timeupdate",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-timeupdate",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "toggle event using ToggleEvent.",
+      "domain": "html",
+      "id": "html.events.toggle",
+      "kind": "event",
+      "metadata": {
+        "interface": "ToggleEvent",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLDetailsElement"
+          }
+        ]
+      },
+      "name": "toggle",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-toggle",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "unhandledrejection event using PromiseRejectionEvent.",
+      "domain": "html",
+      "id": "html.events.unhandledrejection",
+      "kind": "event",
+      "metadata": {
+        "cancelable": true,
+        "interface": "PromiseRejectionEvent",
+        "targets": [
+          {
+            "target": "Window"
+          },
+          {
+            "target": "WorkerGlobalScope"
+          }
+        ]
+      },
+      "name": "unhandledrejection",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-unhandledrejection",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "unload event using Event.",
+      "domain": "html",
+      "id": "html.events.unload",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "target": "Window"
+          }
+        ]
+      },
+      "name": "unload",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-unload",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "visibilitychange event using Event.",
+      "domain": "html",
+      "id": "html.events.visibilitychange",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": true,
+            "bubblingPath": [
+              "Window"
+            ],
+            "target": "Document"
+          }
+        ]
+      },
+      "name": "visibilitychange",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/indices.html#event-visibilitychange",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "volumechange event using Event.",
+      "domain": "html",
+      "id": "html.events.volumechange",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLMediaElement"
+          }
+        ]
+      },
+      "name": "volumechange",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-volumechange",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "waiting event using Event.",
+      "domain": "html",
+      "id": "html.events.waiting",
+      "kind": "event",
+      "metadata": {
+        "interface": "Event",
+        "targets": [
+          {
+            "bubbles": false,
+            "target": "HTMLMediaElement"
+          }
+        ]
+      },
+      "name": "waiting",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/media.html#event-media-waiting",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/events.json"
+}

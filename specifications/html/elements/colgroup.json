@@ -1,0 +1,146 @@
+{
+  "entries": [
+    {
+      "description": "Group of columns in a table",
+      "domain": "html",
+      "id": "html.elements.colgroup",
+      "kind": "element",
+      "metadata": {
+        "categories": "none",
+        "children": "col*; template*",
+        "interface": "HTMLTableColElement",
+        "parents": "table"
+      },
+      "name": "colgroup",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/tables.html#the-colgroup-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <colgroup> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.colgroup.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "colgroup",
+        "interface": "HTMLTableColElement"
+      },
+      "name": "colgroup implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.colgroup",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "span content attribute on <colgroup>.",
+      "domain": "html",
+      "id": "html.elements.colgroup.attributes.span",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "colgroup",
+        "interface": "HTMLTableColElement"
+      },
+      "name": "span",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.colgroup",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/tables.html#attr-colgroup-span",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <colgroup> element content categories.",
+      "domain": "html",
+      "id": "html.elements.colgroup.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "colgroup",
+        "interface": "HTMLTableColElement"
+      },
+      "name": "colgroup content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.colgroup",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/tables.html#the-colgroup-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <colgroup> element content model.",
+      "domain": "html",
+      "id": "html.elements.colgroup.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "colgroup",
+        "interface": "HTMLTableColElement"
+      },
+      "name": "colgroup content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.colgroup",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/tables.html#the-colgroup-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <colgroup> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.colgroup.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "colgroup",
+        "interface": "HTMLTableColElement"
+      },
+      "name": "colgroup interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.colgroup",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/tables.html#the-colgroup-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/colgroup.json"
+}

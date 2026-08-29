@@ -1,0 +1,123 @@
+{
+  "entries": [
+    {
+      "description": "Table",
+      "domain": "html",
+      "id": "html.elements.table",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; palpable",
+        "children": "caption*; colgroup*; thead*; tbody*; tfoot*; tr*; script-supporting elements",
+        "interface": "HTMLTableElement",
+        "parents": "flow"
+      },
+      "name": "table",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/tables.html#the-table-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <table> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.table.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "table",
+        "interface": "HTMLTableElement"
+      },
+      "name": "table implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.table",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <table> element content categories.",
+      "domain": "html",
+      "id": "html.elements.table.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "table",
+        "interface": "HTMLTableElement"
+      },
+      "name": "table content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.table",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/tables.html#the-table-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <table> element content model.",
+      "domain": "html",
+      "id": "html.elements.table.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "table",
+        "interface": "HTMLTableElement"
+      },
+      "name": "table content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.table",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/tables.html#the-table-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <table> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.table.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "table",
+        "interface": "HTMLTableElement"
+      },
+      "name": "table interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.table",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/tables.html#the-table-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/table.json"
+}

@@ -1,0 +1,295 @@
+{
+  "entries": [
+    {
+      "description": "DOM inspection css panel capability.",
+      "domain": "devtools",
+      "id": "devtools.features.css-panel",
+      "kind": "inspection",
+      "name": "css panel",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "spec": {
+        "anchor": "dom-devtools-contract#css-panel",
+        "profile": "project-contract",
+        "source": "dom-devtools-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "DOM inspection deep frozen json capability.",
+      "domain": "devtools",
+      "id": "devtools.features.deep-frozen-json",
+      "kind": "inspection",
+      "name": "deep frozen json",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "spec": {
+        "anchor": "dom-devtools-contract#deep-frozen-json",
+        "profile": "project-contract",
+        "source": "dom-devtools-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "DOM inspection display key projection capability.",
+      "domain": "devtools",
+      "id": "devtools.features.display-key-projection",
+      "kind": "inspection",
+      "name": "display key projection",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "spec": {
+        "anchor": "dom-devtools-contract#display-key-projection",
+        "profile": "project-contract",
+        "source": "dom-devtools-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "DOM inspection disposal capability.",
+      "domain": "devtools",
+      "id": "devtools.features.disposal",
+      "kind": "inspection",
+      "name": "disposal",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "spec": {
+        "anchor": "dom-devtools-contract#disposal",
+        "profile": "project-contract",
+        "source": "dom-devtools-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "DOM inspection document inspector capability.",
+      "domain": "devtools",
+      "id": "devtools.features.document-inspector",
+      "kind": "inspection",
+      "name": "document inspector",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "spec": {
+        "anchor": "dom-devtools-contract#document-inspector",
+        "profile": "project-contract",
+        "source": "dom-devtools-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "DOM inspection editing capability.",
+      "domain": "devtools",
+      "id": "devtools.features.editing",
+      "kind": "inspection",
+      "name": "editing",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "spec": {
+        "anchor": "dom-devtools-contract#editing",
+        "profile": "project-contract",
+        "source": "dom-devtools-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "DOM inspection engine resource inspection capability.",
+      "domain": "devtools",
+      "id": "devtools.features.engine-resource-inspection",
+      "kind": "inspection",
+      "name": "engine resource inspection",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "spec": {
+        "anchor": "dom-devtools-contract#engine-resource-inspection",
+        "profile": "project-contract",
+        "source": "dom-devtools-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "DOM inspection hit projection capability.",
+      "domain": "devtools",
+      "id": "devtools.features.hit-projection",
+      "kind": "inspection",
+      "name": "hit projection",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "spec": {
+        "anchor": "dom-devtools-contract#hit-projection",
+        "profile": "project-contract",
+        "source": "dom-devtools-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "DOM inspection mutation notifications capability.",
+      "domain": "devtools",
+      "id": "devtools.features.mutation-notifications",
+      "kind": "inspection",
+      "name": "mutation notifications",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "spec": {
+        "anchor": "dom-devtools-contract#mutation-notifications",
+        "profile": "project-contract",
+        "source": "dom-devtools-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "DOM inspection react devtools integration capability.",
+      "domain": "devtools",
+      "id": "devtools.features.react-devtools-integration",
+      "kind": "inspection",
+      "name": "react devtools integration",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "spec": {
+        "anchor": "dom-devtools-contract#react-devtools-integration",
+        "profile": "project-contract",
+        "source": "dom-devtools-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "DOM inspection renderer projection capability.",
+      "domain": "devtools",
+      "id": "devtools.features.renderer-projection",
+      "kind": "inspection",
+      "name": "renderer projection",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "spec": {
+        "anchor": "dom-devtools-contract#renderer-projection",
+        "profile": "project-contract",
+        "source": "dom-devtools-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "DOM inspection reverse reference release capability.",
+      "domain": "devtools",
+      "id": "devtools.features.reverse-reference-release",
+      "kind": "inspection",
+      "name": "reverse reference release",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "spec": {
+        "anchor": "dom-devtools-contract#reverse-reference-release",
+        "profile": "project-contract",
+        "source": "dom-devtools-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "DOM inspection stable node ids capability.",
+      "domain": "devtools",
+      "id": "devtools.features.stable-node-ids",
+      "kind": "inspection",
+      "name": "stable node ids",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "spec": {
+        "anchor": "dom-devtools-contract#stable-node-ids",
+        "profile": "project-contract",
+        "source": "dom-devtools-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "DOM inspection state notifications capability.",
+      "domain": "devtools",
+      "id": "devtools.features.state-notifications",
+      "kind": "inspection",
+      "name": "state notifications",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "spec": {
+        "anchor": "dom-devtools-contract#state-notifications",
+        "profile": "project-contract",
+        "source": "dom-devtools-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "DOM inspection subtree snapshots capability.",
+      "domain": "devtools",
+      "id": "devtools.features.subtree-snapshots",
+      "kind": "inspection",
+      "name": "subtree snapshots",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "spec": {
+        "anchor": "dom-devtools-contract#subtree-snapshots",
+        "profile": "project-contract",
+        "source": "dom-devtools-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "DOM inspection transport capability.",
+      "domain": "devtools",
+      "id": "devtools.features.transport",
+      "kind": "inspection",
+      "name": "transport",
+      "ownerHint": {
+        "package": "@zavx0z/dom-devtools",
+        "repository": "renderer",
+        "stage": "inspection"
+      },
+      "spec": {
+        "anchor": "dom-devtools-contract#transport",
+        "profile": "project-contract",
+        "source": "dom-devtools-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "platform/devtools-features.json"
+}

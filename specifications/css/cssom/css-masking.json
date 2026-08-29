@@ -1,0 +1,293 @@
+{
+  "entries": [
+    {
+      "description": "interface SVGClipPathElement from css-masking.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-masking.interfaces.svgclippathelement",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-masking.idl",
+        "inheritance": "SVGElement"
+      },
+      "name": "SVGClipPathElement",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-masking.idl#WebIDL:SVGClipPathElement",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "SVGClipPathElement.clipPathUnits Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-masking.interfaces.svgclippathelement.attributes.clippathunits",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-masking.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"clipPathUnits\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"SVGAnimatedEnumeration\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "clipPathUnits",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-masking.interfaces.svgclippathelement",
+      "spec": {
+        "anchor": "webref/idl/css-masking.idl#WebIDL:SVGClipPathElement.clipPathUnits",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "SVGClipPathElement.transform Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-masking.interfaces.svgclippathelement.attributes.transform",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-masking.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"transform\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"SVGAnimatedTransformList\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "transform",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-masking.interfaces.svgclippathelement",
+      "spec": {
+        "anchor": "webref/idl/css-masking.idl#WebIDL:SVGClipPathElement.transform",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "SVGClipPathElement has SVGElement as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-masking.interfaces.svgclippathelement.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "SVGElement"
+      },
+      "name": "SVGClipPathElement inherits SVGElement",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-masking.interfaces.svgclippathelement",
+      "spec": {
+        "anchor": "webref/idl/css-masking.idl#WebIDL:SVGClipPathElement",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface SVGMaskElement from css-masking.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-masking.interfaces.svgmaskelement",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-masking.idl",
+        "inheritance": "SVGElement"
+      },
+      "name": "SVGMaskElement",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-masking.idl#WebIDL:SVGMaskElement",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "SVGMaskElement.height Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-masking.interfaces.svgmaskelement.attributes.height",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-masking.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"height\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"SVGAnimatedLength\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "height",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-masking.interfaces.svgmaskelement",
+      "spec": {
+        "anchor": "webref/idl/css-masking.idl#WebIDL:SVGMaskElement.height",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "SVGMaskElement.maskContentUnits Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-masking.interfaces.svgmaskelement.attributes.maskcontentunits",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-masking.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"maskContentUnits\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"SVGAnimatedEnumeration\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "maskContentUnits",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-masking.interfaces.svgmaskelement",
+      "spec": {
+        "anchor": "webref/idl/css-masking.idl#WebIDL:SVGMaskElement.maskContentUnits",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "SVGMaskElement.maskUnits Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-masking.interfaces.svgmaskelement.attributes.maskunits",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-masking.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"maskUnits\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"SVGAnimatedEnumeration\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "maskUnits",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-masking.interfaces.svgmaskelement",
+      "spec": {
+        "anchor": "webref/idl/css-masking.idl#WebIDL:SVGMaskElement.maskUnits",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "SVGMaskElement.width Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-masking.interfaces.svgmaskelement.attributes.width",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-masking.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"width\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"SVGAnimatedLength\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "width",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-masking.interfaces.svgmaskelement",
+      "spec": {
+        "anchor": "webref/idl/css-masking.idl#WebIDL:SVGMaskElement.width",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "SVGMaskElement.x Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-masking.interfaces.svgmaskelement.attributes.x",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-masking.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"x\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"SVGAnimatedLength\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "x",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-masking.interfaces.svgmaskelement",
+      "spec": {
+        "anchor": "webref/idl/css-masking.idl#WebIDL:SVGMaskElement.x",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "SVGMaskElement.y Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-masking.interfaces.svgmaskelement.attributes.y",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-masking.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"y\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"SVGAnimatedLength\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "y",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-masking.interfaces.svgmaskelement",
+      "spec": {
+        "anchor": "webref/idl/css-masking.idl#WebIDL:SVGMaskElement.y",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "SVGMaskElement has SVGElement as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-masking.interfaces.svgmaskelement.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "SVGElement"
+      },
+      "name": "SVGMaskElement inherits SVGElement",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-masking.interfaces.svgmaskelement",
+      "spec": {
+        "anchor": "webref/idl/css-masking.idl#WebIDL:SVGMaskElement",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-masking.json"
+}

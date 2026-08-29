@@ -1,0 +1,55 @@
+{
+  "entries": [
+    {
+      "description": "namespace CSS from css-images-4.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-images-4.namespaces.css",
+      "kind": "namespace",
+      "metadata": {
+        "idlSource": "css-images-4.idl"
+      },
+      "name": "CSS",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-images-4.idl#WebIDL:CSS",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSS.elementSources Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-images-4.namespaces.css.attributes.elementsources",
+      "kind": "attribute",
+      "metadata": {
+        "extendedAttributes": [
+          "SameObject"
+        ],
+        "idlSource": "css-images-4.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"elementSources\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"any\"},\"extAttrs\":[{\"type\":\"extended-attribute\",\"name\":\"SameObject\",\"rhs\":null,\"arguments\":[]}],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "elementSources",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-images-4.namespaces.css",
+      "spec": {
+        "anchor": "webref/idl/css-images-4.idl#WebIDL:CSS.elementSources",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-images-4.json"
+}

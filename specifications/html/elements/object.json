@@ -1,0 +1,284 @@
+{
+  "entries": [
+    {
+      "description": "Image, child navigable, or plugin",
+      "domain": "html",
+      "id": "html.elements.object",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; phrasing; embedded; interactive*; listed; form-associated; palpable",
+        "children": "transparent",
+        "interface": "HTMLObjectElement",
+        "parents": "phrasing"
+      },
+      "name": "object",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-object-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <object> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.object.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "object",
+        "interface": "HTMLObjectElement"
+      },
+      "name": "object implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.object",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <object> element activation and default action.",
+      "domain": "html",
+      "id": "html.elements.object.activation-behavior",
+      "kind": "activation-behavior",
+      "metadata": {
+        "element": "object",
+        "interface": "HTMLObjectElement"
+      },
+      "name": "object activation and default action",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.object",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-object-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "data content attribute on <object>.",
+      "domain": "html",
+      "id": "html.elements.object.attributes.data",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "object",
+        "interface": "HTMLObjectElement"
+      },
+      "name": "data",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.object",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/iframe-embed-object.html#attr-object-data",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "form content attribute on <object>.",
+      "domain": "html",
+      "id": "html.elements.object.attributes.form",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "object",
+        "interface": "HTMLObjectElement"
+      },
+      "name": "form",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.object",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-control-infrastructure.html#attr-fae-form",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "height content attribute on <object>.",
+      "domain": "html",
+      "id": "html.elements.object.attributes.height",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "object",
+        "interface": "HTMLObjectElement"
+      },
+      "name": "height",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.object",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/embedded-content-other.html#attr-dim-height",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "name content attribute on <object>.",
+      "domain": "html",
+      "id": "html.elements.object.attributes.name",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "object",
+        "interface": "HTMLObjectElement"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.object",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/iframe-embed-object.html#attr-object-name",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "type content attribute on <object>.",
+      "domain": "html",
+      "id": "html.elements.object.attributes.type",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "object",
+        "interface": "HTMLObjectElement"
+      },
+      "name": "type",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.object",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/iframe-embed-object.html#attr-object-type",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "width content attribute on <object>.",
+      "domain": "html",
+      "id": "html.elements.object.attributes.width",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "object",
+        "interface": "HTMLObjectElement"
+      },
+      "name": "width",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.object",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/embedded-content-other.html#attr-dim-width",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <object> element content categories.",
+      "domain": "html",
+      "id": "html.elements.object.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "object",
+        "interface": "HTMLObjectElement"
+      },
+      "name": "object content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.object",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-object-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <object> element content model.",
+      "domain": "html",
+      "id": "html.elements.object.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "object",
+        "interface": "HTMLObjectElement"
+      },
+      "name": "object content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.object",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-object-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <object> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.object.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "object",
+        "interface": "HTMLObjectElement"
+      },
+      "name": "object interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.object",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/iframe-embed-object.html#the-object-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/object.json"
+}

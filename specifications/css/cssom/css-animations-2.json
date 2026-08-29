@@ -1,0 +1,170 @@
+{
+  "entries": [
+    {
+      "description": "dictionary AnimationEventInit from css-animations-2.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-animations-2.dictionaries.animationeventinit",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "css-animations-2.idl"
+      },
+      "name": "AnimationEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-animations-2.idl#WebIDL:AnimationEventInit",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "AnimationEventInit.animation Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-animations-2.dictionaries.animationeventinit.fields.animation",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-animations-2.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"animation\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"CSSAnimation\"},\"default\":{\"type\":\"null\"},\"required\":false}"
+      },
+      "name": "animation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations-2.dictionaries.animationeventinit",
+      "spec": {
+        "anchor": "webref/idl/css-animations-2.idl#WebIDL:AnimationEventInit.animation",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface AnimationEvent from css-animations-2.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-animations-2.interfaces.animationevent",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-animations-2.idl"
+      },
+      "name": "AnimationEvent",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-animations-2.idl#WebIDL:AnimationEvent",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "AnimationEvent.animation Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-animations-2.interfaces.animationevent.attributes.animation",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-animations-2.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"animation\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"CSSAnimation\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "animation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations-2.interfaces.animationevent",
+      "spec": {
+        "anchor": "webref/idl/css-animations-2.idl#WebIDL:AnimationEvent.animation",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface CSSAnimation from css-animations-2.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-animations-2.interfaces.cssanimation",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-animations-2.idl",
+        "inheritance": "Animation"
+      },
+      "name": "CSSAnimation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-animations-2.idl#WebIDL:CSSAnimation",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSAnimation.animationName Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-animations-2.interfaces.cssanimation.attributes.animationname",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-animations-2.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"animationName\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"CSSOMString\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "animationName",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations-2.interfaces.cssanimation",
+      "spec": {
+        "anchor": "webref/idl/css-animations-2.idl#WebIDL:CSSAnimation.animationName",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "CSSAnimation has Animation as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-animations-2.interfaces.cssanimation.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "Animation"
+      },
+      "name": "CSSAnimation inherits Animation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-animations-2.interfaces.cssanimation",
+      "spec": {
+        "anchor": "webref/idl/css-animations-2.idl#WebIDL:CSSAnimation",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-animations-2.json"
+}

@@ -1,0 +1,175 @@
+{
+  "entries": [
+    {
+      "description": "react public export Children in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.legacy.react.children",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "Children",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.Children",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export cloneElement in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.legacy.react.cloneelement",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "cloneElement",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.cloneElement",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export Component in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.legacy.react.component",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "Component",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.Component",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export createElement in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.legacy.react.createelement",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "createElement",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.createElement",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export createRef in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.legacy.react.createref",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "createRef",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.createRef",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export forwardRef in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.legacy.react.forwardref",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "forwardRef",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.forwardRef",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export isValidElement in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.legacy.react.isvalidelement",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "isValidElement",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.isValidElement",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    },
+    {
+      "description": "react public export PureComponent in React 19.2 reference profile.",
+      "domain": "react",
+      "id": "react.legacy.react.purecomponent",
+      "kind": "api",
+      "metadata": {
+        "entrypoint": "react"
+      },
+      "name": "PureComponent",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "npm:react@19.2.0#exports.PureComponent",
+        "profile": "reference",
+        "source": "react-19.2",
+        "version": "19.2.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "react-19.2/legacy.json"
+}

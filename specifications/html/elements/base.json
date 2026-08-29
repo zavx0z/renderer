@@ -1,0 +1,169 @@
+{
+  "entries": [
+    {
+      "description": "Base URL and default target navigable for hyperlinks and forms",
+      "domain": "html",
+      "id": "html.elements.base",
+      "kind": "element",
+      "metadata": {
+        "categories": "metadata",
+        "children": "empty",
+        "interface": "HTMLBaseElement",
+        "parents": "head"
+      },
+      "name": "base",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/semantics.html#the-base-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <base> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.base.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "base",
+        "interface": "HTMLBaseElement"
+      },
+      "name": "base implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.base",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "href content attribute on <base>.",
+      "domain": "html",
+      "id": "html.elements.base.attributes.href",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "base",
+        "interface": "HTMLBaseElement"
+      },
+      "name": "href",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.base",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/semantics.html#attr-base-href",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "target content attribute on <base>.",
+      "domain": "html",
+      "id": "html.elements.base.attributes.target",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "base",
+        "interface": "HTMLBaseElement"
+      },
+      "name": "target",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.base",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/semantics.html#attr-base-target",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <base> element content categories.",
+      "domain": "html",
+      "id": "html.elements.base.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "base",
+        "interface": "HTMLBaseElement"
+      },
+      "name": "base content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.base",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/semantics.html#the-base-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <base> element content model.",
+      "domain": "html",
+      "id": "html.elements.base.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "base",
+        "interface": "HTMLBaseElement"
+      },
+      "name": "base content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.base",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/semantics.html#the-base-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <base> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.base.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "base",
+        "interface": "HTMLBaseElement"
+      },
+      "name": "base interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.base",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/semantics.html#the-base-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/base.json"
+}

@@ -1,0 +1,38 @@
+{
+  "entries": [
+    {
+      "domain": "css",
+      "id": "css.properties.quotes",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword none, the keyword auto or match-parent, or a list, each item a pair of string values",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "quotes"
+        ],
+        "syntax": "auto | none | match-parent | [ <string> <string> ]+"
+      },
+      "name": "quotes",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-content-3/#propdef-quotes",
+        "profile": "standard",
+        "source": "css:css-content-3",
+        "version": "8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/properties/q.json"
+}

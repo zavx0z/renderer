@@ -1,0 +1,169 @@
+{
+  "entries": [
+    {
+      "description": "Group of options in a list box",
+      "domain": "html",
+      "id": "html.elements.optgroup",
+      "kind": "element",
+      "metadata": {
+        "categories": "none",
+        "children": "option*; script-supporting elements*; noscript*; div*; legend*",
+        "interface": "HTMLOptGroupElement",
+        "parents": "select; div*"
+      },
+      "name": "optgroup",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-optgroup-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <optgroup> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.optgroup.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "optgroup",
+        "interface": "HTMLOptGroupElement"
+      },
+      "name": "optgroup implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.optgroup",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "disabled content attribute on <optgroup>.",
+      "domain": "html",
+      "id": "html.elements.optgroup.attributes.disabled",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "optgroup",
+        "interface": "HTMLOptGroupElement"
+      },
+      "name": "disabled",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.optgroup",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-optgroup-disabled",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "label content attribute on <optgroup>.",
+      "domain": "html",
+      "id": "html.elements.optgroup.attributes.label",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "optgroup",
+        "interface": "HTMLOptGroupElement"
+      },
+      "name": "label",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.optgroup",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/form-elements.html#attr-optgroup-label",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <optgroup> element content categories.",
+      "domain": "html",
+      "id": "html.elements.optgroup.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "optgroup",
+        "interface": "HTMLOptGroupElement"
+      },
+      "name": "optgroup content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.optgroup",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-optgroup-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <optgroup> element content model.",
+      "domain": "html",
+      "id": "html.elements.optgroup.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "optgroup",
+        "interface": "HTMLOptGroupElement"
+      },
+      "name": "optgroup content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.optgroup",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-optgroup-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <optgroup> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.optgroup.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "optgroup",
+        "interface": "HTMLOptGroupElement"
+      },
+      "name": "optgroup interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.optgroup",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/form-elements.html#the-optgroup-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/optgroup.json"
+}

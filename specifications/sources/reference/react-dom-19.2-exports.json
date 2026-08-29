@@ -1,0 +1,45 @@
+{
+  "entrypoints": {
+    "react-dom": [
+      "createPortal",
+      "flushSync",
+      "preconnect",
+      "prefetchDNS",
+      "preinit",
+      "preinitModule",
+      "preload",
+      "preloadModule",
+      "requestFormReset",
+      "unstable_batchedUpdates",
+      "useFormState",
+      "useFormStatus",
+      "version"
+    ],
+    "react-dom/client": [
+      "createRoot",
+      "hydrateRoot",
+      "version"
+    ],
+    "react-dom/server": [
+      "renderToPipeableStream",
+      "renderToReadableStream",
+      "renderToStaticMarkup",
+      "renderToString",
+      "resume",
+      "resumeToPipeableStream",
+      "version"
+    ],
+    "react-dom/static": [
+      "prerender",
+      "prerenderToNodeStream",
+      "resumeAndPrerender",
+      "resumeAndPrerenderToNodeStream",
+      "version"
+    ],
+    "react-dom/test-utils": [
+      "act"
+    ]
+  },
+  "package": "react-dom",
+  "version": "19.2.0"
+}

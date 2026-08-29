@@ -1,0 +1,781 @@
+{
+  "entries": [
+    {
+      "description": "CPU Renderer backend neutral diagnostics capability.",
+      "domain": "renderer",
+      "id": "renderer.features.backend-neutral-diagnostics",
+      "kind": "renderer-stage",
+      "name": "backend neutral diagnostics",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#backend-neutral-diagnostics",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer block layout capability.",
+      "domain": "renderer",
+      "id": "renderer.features.block-layout",
+      "kind": "renderer-stage",
+      "name": "block layout",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#block-layout",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer box model capability.",
+      "domain": "renderer",
+      "id": "renderer.features.box-model",
+      "kind": "renderer-stage",
+      "name": "box model",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#box-model",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer caret selection paint capability.",
+      "domain": "renderer",
+      "id": "renderer.features.caret-selection-paint",
+      "kind": "renderer-stage",
+      "name": "caret selection paint",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#caret-selection-paint",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer cascade capability.",
+      "domain": "renderer",
+      "id": "renderer.features.cascade",
+      "kind": "renderer-stage",
+      "name": "cascade",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#cascade",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer clean frame fast path capability.",
+      "domain": "renderer",
+      "id": "renderer.features.clean-frame-fast-path",
+      "kind": "renderer-stage",
+      "name": "clean frame fast path",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#clean-frame-fast-path",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer clip stacks capability.",
+      "domain": "renderer",
+      "id": "renderer.features.clip-stacks",
+      "kind": "renderer-stage",
+      "name": "clip stacks",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#clip-stacks",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer computed style capability.",
+      "domain": "renderer",
+      "id": "renderer.features.computed-style",
+      "kind": "renderer-stage",
+      "name": "computed style",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#computed-style",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer default activation capability.",
+      "domain": "renderer",
+      "id": "renderer.features.default-activation",
+      "kind": "renderer-stage",
+      "name": "default activation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#default-activation",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer display list capability.",
+      "domain": "renderer",
+      "id": "renderer.features.display-list",
+      "kind": "renderer-stage",
+      "name": "display list",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#display-list",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer flex layout capability.",
+      "domain": "renderer",
+      "id": "renderer.features.flex-layout",
+      "kind": "renderer-stage",
+      "name": "flex layout",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#flex-layout",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer form control projection capability.",
+      "domain": "renderer",
+      "id": "renderer.features.form-control-projection",
+      "kind": "renderer-stage",
+      "name": "form control projection",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#form-control-projection",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer geometry readback capability.",
+      "domain": "renderer",
+      "id": "renderer.features.geometry-readback",
+      "kind": "renderer-stage",
+      "name": "geometry readback",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#geometry-readback",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer hit metadata capability.",
+      "domain": "renderer",
+      "id": "renderer.features.hit-metadata",
+      "kind": "renderer-stage",
+      "name": "hit metadata",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#hit-metadata",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer images capability.",
+      "domain": "renderer",
+      "id": "renderer.features.images",
+      "kind": "renderer-stage",
+      "name": "images",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#images",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer immutable frame capability.",
+      "domain": "renderer",
+      "id": "renderer.features.immutable-frame",
+      "kind": "renderer-stage",
+      "name": "immutable frame",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#immutable-frame",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer incremental patches capability.",
+      "domain": "renderer",
+      "id": "renderer.features.incremental-patches",
+      "kind": "renderer-stage",
+      "name": "incremental patches",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#incremental-patches",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer inheritance capability.",
+      "domain": "renderer",
+      "id": "renderer.features.inheritance",
+      "kind": "renderer-stage",
+      "name": "inheritance",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#inheritance",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer inline layout capability.",
+      "domain": "renderer",
+      "id": "renderer.features.inline-layout",
+      "kind": "renderer-stage",
+      "name": "inline layout",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#inline-layout",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer invalidation capability.",
+      "domain": "renderer",
+      "id": "renderer.features.invalidation",
+      "kind": "renderer-stage",
+      "name": "invalidation",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#invalidation",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer line breaking capability.",
+      "domain": "renderer",
+      "id": "renderer.features.line-breaking",
+      "kind": "renderer-stage",
+      "name": "line breaking",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#line-breaking",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer overflow capability.",
+      "domain": "renderer",
+      "id": "renderer.features.overflow",
+      "kind": "renderer-stage",
+      "name": "overflow",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#overflow",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer performance paths capability.",
+      "domain": "renderer",
+      "id": "renderer.features.performance-paths",
+      "kind": "renderer-stage",
+      "name": "performance paths",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#performance-paths",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer pointer capability.",
+      "domain": "renderer",
+      "id": "renderer.features.pointer",
+      "kind": "renderer-stage",
+      "name": "pointer",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#pointer",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer popover projection capability.",
+      "domain": "renderer",
+      "id": "renderer.features.popover-projection",
+      "kind": "renderer-stage",
+      "name": "popover projection",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#popover-projection",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer positioning capability.",
+      "domain": "renderer",
+      "id": "renderer.features.positioning",
+      "kind": "renderer-stage",
+      "name": "positioning",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#positioning",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer progress meter capability.",
+      "domain": "renderer",
+      "id": "renderer.features.progress-meter",
+      "kind": "renderer-stage",
+      "name": "progress meter",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#progress-meter",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer scroll metrics capability.",
+      "domain": "renderer",
+      "id": "renderer.features.scroll-metrics",
+      "kind": "renderer-stage",
+      "name": "scroll metrics",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#scroll-metrics",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer scrollbar paint capability.",
+      "domain": "renderer",
+      "id": "renderer.features.scrollbar-paint",
+      "kind": "renderer-stage",
+      "name": "scrollbar paint",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#scrollbar-paint",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer selector matching capability.",
+      "domain": "renderer",
+      "id": "renderer.features.selector-matching",
+      "kind": "renderer-stage",
+      "name": "selector matching",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#selector-matching",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer shadows capability.",
+      "domain": "renderer",
+      "id": "renderer.features.shadows",
+      "kind": "renderer-stage",
+      "name": "shadows",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#shadows",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer sizing capability.",
+      "domain": "renderer",
+      "id": "renderer.features.sizing",
+      "kind": "renderer-stage",
+      "name": "sizing",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#sizing",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer specificity capability.",
+      "domain": "renderer",
+      "id": "renderer.features.specificity",
+      "kind": "renderer-stage",
+      "name": "specificity",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#specificity",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer stylesheet parser capability.",
+      "domain": "renderer",
+      "id": "renderer.features.stylesheet-parser",
+      "kind": "renderer-stage",
+      "name": "stylesheet parser",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#stylesheet-parser",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer text leaf fast path capability.",
+      "domain": "renderer",
+      "id": "renderer.features.text-leaf-fast-path",
+      "kind": "renderer-stage",
+      "name": "text leaf fast path",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#text-leaf-fast-path",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer textarea select range capability.",
+      "domain": "renderer",
+      "id": "renderer.features.textarea-select-range",
+      "kind": "renderer-stage",
+      "name": "textarea select range",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#textarea-select-range",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer tooltip title capability.",
+      "domain": "renderer",
+      "id": "renderer.features.tooltip-title",
+      "kind": "renderer-stage",
+      "name": "tooltip title",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#tooltip-title",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer transform subtree fast path capability.",
+      "domain": "renderer",
+      "id": "renderer.features.transform-subtree-fast-path",
+      "kind": "renderer-stage",
+      "name": "transform subtree fast path",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#transform-subtree-fast-path",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer transforms capability.",
+      "domain": "renderer",
+      "id": "renderer.features.transforms",
+      "kind": "renderer-stage",
+      "name": "transforms",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#transforms",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer typography capability.",
+      "domain": "renderer",
+      "id": "renderer.features.typography",
+      "kind": "renderer-stage",
+      "name": "typography",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#typography",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer vector path display item capability.",
+      "domain": "renderer",
+      "id": "renderer.features.vector-path-display-item",
+      "kind": "renderer-stage",
+      "name": "vector path display item",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#vector-path-display-item",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer wheel capability.",
+      "domain": "renderer",
+      "id": "renderer.features.wheel",
+      "kind": "renderer-stage",
+      "name": "wheel",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#wheel",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "CPU Renderer z index capability.",
+      "domain": "renderer",
+      "id": "renderer.features.z-index",
+      "kind": "renderer-stage",
+      "name": "z index",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#z-index",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "platform/renderer-features.json"
+}

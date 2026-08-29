@@ -1,0 +1,634 @@
+{
+  "entries": [
+    {
+      "description": "dictionary FocusableAreasOption from css-nav.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.dictionaries.focusableareasoption",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "css-nav.idl"
+      },
+      "name": "FocusableAreasOption",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:FocusableAreasOption",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FocusableAreasOption.mode Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.dictionaries.focusableareasoption.fields.mode",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-nav.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"mode\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"FocusableAreaSearchMode\"},\"default\":null,\"required\":false}"
+      },
+      "name": "mode",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-nav.dictionaries.focusableareasoption",
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:FocusableAreasOption.mode",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "dictionary NavigationEventInit from css-nav.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.dictionaries.navigationeventinit",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "css-nav.idl",
+        "inheritance": "UIEventInit"
+      },
+      "name": "NavigationEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:NavigationEventInit",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "NavigationEventInit.dir Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.dictionaries.navigationeventinit.fields.dir",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-nav.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"dir\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"SpatialNavigationDirection\"},\"default\":null,\"required\":false}"
+      },
+      "name": "dir",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-nav.dictionaries.navigationeventinit",
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:NavigationEventInit.dir",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "NavigationEventInit.relatedTarget Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.dictionaries.navigationeventinit.fields.relatedtarget",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-nav.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"relatedTarget\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"EventTarget\"},\"default\":{\"type\":\"null\"},\"required\":false}"
+      },
+      "name": "relatedTarget",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-nav.dictionaries.navigationeventinit",
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:NavigationEventInit.relatedTarget",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "NavigationEventInit has UIEventInit as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.dictionaries.navigationeventinit.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "UIEventInit"
+      },
+      "name": "NavigationEventInit inherits UIEventInit",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-nav.dictionaries.navigationeventinit",
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:NavigationEventInit",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "dictionary SpatialNavigationSearchOptions from css-nav.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.dictionaries.spatialnavigationsearchoptions",
+      "kind": "dictionary",
+      "metadata": {
+        "idlSource": "css-nav.idl"
+      },
+      "name": "SpatialNavigationSearchOptions",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:SpatialNavigationSearchOptions",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "SpatialNavigationSearchOptions.candidates Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.dictionaries.spatialnavigationsearchoptions.fields.candidates",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-nav.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"candidates\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":true,\"union\":false,\"idlType\":[{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"Node\"}]},\"default\":null,\"required\":false}"
+      },
+      "name": "candidates",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-nav.dictionaries.spatialnavigationsearchoptions",
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:SpatialNavigationSearchOptions.candidates",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "SpatialNavigationSearchOptions.container Web IDL field.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.dictionaries.spatialnavigationsearchoptions.fields.container",
+      "kind": "field",
+      "metadata": {
+        "idlSource": "css-nav.idl",
+        "signature": "{\"type\":\"field\",\"name\":\"container\",\"extAttrs\":[],\"idlType\":{\"type\":\"dictionary-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"Node\"},\"default\":null,\"required\":false}"
+      },
+      "name": "container",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-nav.dictionaries.spatialnavigationsearchoptions",
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:SpatialNavigationSearchOptions.container",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "enum FocusableAreaSearchMode from css-nav.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.enums.focusableareasearchmode",
+      "kind": "enum",
+      "metadata": {
+        "idlSource": "css-nav.idl"
+      },
+      "name": "FocusableAreaSearchMode",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:FocusableAreaSearchMode",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FocusableAreaSearchMode enum value all.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.enums.focusableareasearchmode.values.all",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "all"
+      },
+      "name": "all",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-nav.enums.focusableareasearchmode",
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:FocusableAreaSearchMode",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "FocusableAreaSearchMode enum value visible.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.enums.focusableareasearchmode.values.visible",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "visible"
+      },
+      "name": "visible",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-nav.enums.focusableareasearchmode",
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:FocusableAreaSearchMode",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "enum SpatialNavigationDirection from css-nav.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.enums.spatialnavigationdirection",
+      "kind": "enum",
+      "metadata": {
+        "idlSource": "css-nav.idl"
+      },
+      "name": "SpatialNavigationDirection",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:SpatialNavigationDirection",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "SpatialNavigationDirection enum value down.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.enums.spatialnavigationdirection.values.down",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "down"
+      },
+      "name": "down",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-nav.enums.spatialnavigationdirection",
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:SpatialNavigationDirection",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "SpatialNavigationDirection enum value left.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.enums.spatialnavigationdirection.values.left",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "left"
+      },
+      "name": "left",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-nav.enums.spatialnavigationdirection",
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:SpatialNavigationDirection",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "SpatialNavigationDirection enum value right.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.enums.spatialnavigationdirection.values.right",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "right"
+      },
+      "name": "right",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-nav.enums.spatialnavigationdirection",
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:SpatialNavigationDirection",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "SpatialNavigationDirection enum value up.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.enums.spatialnavigationdirection.values.up",
+      "kind": "enum-value",
+      "metadata": {
+        "rawValue": "up"
+      },
+      "name": "up",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-nav.enums.spatialnavigationdirection",
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:SpatialNavigationDirection",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface Element from css-nav.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.interfaces.element",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "css-nav.idl"
+      },
+      "name": "Element",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:Element",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "Element.focusableAreas Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.interfaces.element.methods.focusableareas",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-nav.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"focusableAreas\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"sequence\",\"nullable\":false,\"union\":false,\"idlType\":[{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"Node\"}]},\"arguments\":[{\"type\":\"argument\",\"name\":\"option\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"FocusableAreasOption\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "focusableAreas",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-nav.interfaces.element",
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:Element.focusableAreas",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "Element.getSpatialNavigationContainer Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.interfaces.element.methods.getspatialnavigationcontainer",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-nav.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"getSpatialNavigationContainer\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"Node\"},\"arguments\":[],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "getSpatialNavigationContainer",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-nav.interfaces.element",
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:Element.getSpatialNavigationContainer",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "Element.spatialNavigationSearch Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.interfaces.element.methods.spatialnavigationsearch",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-nav.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"spatialNavigationSearch\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"Node\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"dir\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"SpatialNavigationDirection\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"options\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"SpatialNavigationSearchOptions\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "spatialNavigationSearch",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-nav.interfaces.element",
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:Element.spatialNavigationSearch",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface NavigationEvent from css-nav.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.interfaces.navigationevent",
+      "kind": "interface",
+      "metadata": {
+        "extendedAttributes": [
+          "Exposed={\"type\":\"identifier\",\"value\":\"Window\"}"
+        ],
+        "idlSource": "css-nav.idl",
+        "inheritance": "UIEvent"
+      },
+      "name": "NavigationEvent",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:NavigationEvent",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "NavigationEvent.dir Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.interfaces.navigationevent.attributes.dir",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-nav.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"dir\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"SpatialNavigationDirection\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "dir",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-nav.interfaces.navigationevent",
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:NavigationEvent.dir",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "NavigationEvent.relatedTarget Web IDL attribute.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.interfaces.navigationevent.attributes.relatedtarget",
+      "kind": "attribute",
+      "metadata": {
+        "idlSource": "css-nav.idl",
+        "readonly": true,
+        "signature": "{\"type\":\"attribute\",\"name\":\"relatedTarget\",\"idlType\":{\"type\":\"attribute-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":true,\"union\":false,\"idlType\":\"EventTarget\"},\"extAttrs\":[],\"special\":\"\",\"readonly\":true}"
+      },
+      "name": "relatedTarget",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-nav.interfaces.navigationevent",
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:NavigationEvent.relatedTarget",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "NavigationEvent.constructor Web IDL constructor.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.interfaces.navigationevent.constructors.constructor",
+      "kind": "constructor",
+      "metadata": {
+        "idlSource": "css-nav.idl",
+        "signature": "{\"type\":\"constructor\",\"arguments\":[{\"type\":\"argument\",\"name\":\"type\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"DOMString\"},\"default\":null,\"optional\":false,\"variadic\":false},{\"type\":\"argument\",\"name\":\"eventInitDict\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"NavigationEventInit\"},\"default\":{\"type\":\"dictionary\"},\"optional\":true,\"variadic\":false}],\"extAttrs\":[]}"
+      },
+      "name": "constructor",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-nav.interfaces.navigationevent",
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:NavigationEvent.constructor",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "NavigationEvent has UIEvent as its declared base interface.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.interfaces.navigationevent.inheritance",
+      "kind": "inheritance",
+      "metadata": {
+        "base": "UIEvent"
+      },
+      "name": "NavigationEvent inherits UIEvent",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-nav.interfaces.navigationevent",
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:NavigationEvent",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "interface Window from css-nav.idl.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.interfaces.window",
+      "kind": "interface",
+      "metadata": {
+        "idlSource": "css-nav.idl"
+      },
+      "name": "Window",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:Window",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    },
+    {
+      "description": "Window.navigate Web IDL operation.",
+      "domain": "css",
+      "id": "css.cssom.css-nav.interfaces.window.methods.navigate",
+      "kind": "operation",
+      "metadata": {
+        "idlSource": "css-nav.idl",
+        "signature": "{\"type\":\"operation\",\"name\":\"navigate\",\"idlType\":{\"type\":\"return-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"undefined\"},\"arguments\":[{\"type\":\"argument\",\"name\":\"dir\",\"extAttrs\":[],\"idlType\":{\"type\":\"argument-type\",\"extAttrs\":[],\"generic\":\"\",\"nullable\":false,\"union\":false,\"idlType\":\"SpatialNavigationDirection\"},\"default\":null,\"optional\":false,\"variadic\":false}],\"extAttrs\":[],\"special\":\"\"}"
+      },
+      "name": "navigate",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "css.cssom.css-nav.interfaces.window",
+      "spec": {
+        "anchor": "webref/idl/css-nav.idl#WebIDL:Window.navigate",
+        "profile": "standard",
+        "source": "webref-idl",
+        "version": "3.83.0"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/cssom/css-nav.json"
+}

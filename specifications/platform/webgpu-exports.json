@@ -1,0 +1,264 @@
+{
+  "entries": [
+    {
+      "description": "@zavx0z/renderer-webgpu package export ..",
+      "domain": "webgpu",
+      "id": "platform.at-zavx0z-renderer-webgpu.export-paths.root",
+      "kind": "package-export-path",
+      "metadata": {
+        "package": "@zavx0z/renderer-webgpu",
+        "sourceTarget": "src/index.ts",
+        "target": "./src/index.ts"
+      },
+      "name": ".",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "spec": {
+        "anchor": "./src/index.ts",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-webgpu-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer-webgpu public runtime export RendererWebGpuBackend.",
+      "domain": "webgpu",
+      "id": "platform.at-zavx0z-renderer-webgpu.export-paths.root.symbols.rendererwebgpubackend",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 1,
+        "path": "renderer:packages/webgpu/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": false
+      },
+      "name": "RendererWebGpuBackend",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "parent": "platform.at-zavx0z-renderer-webgpu.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/webgpu/src/index.ts#L1",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-webgpu-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer-webgpu public type export RendererWebGpuBackendDiagnostics.",
+      "domain": "webgpu",
+      "id": "platform.at-zavx0z-renderer-webgpu.export-paths.root.symbols.rendererwebgpubackenddiagnostics",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 2,
+        "path": "renderer:packages/webgpu/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RendererWebGpuBackendDiagnostics",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "parent": "platform.at-zavx0z-renderer-webgpu.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/webgpu/src/index.ts#L2",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-webgpu-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer-webgpu public type export RendererWebGpuBackendOptions.",
+      "domain": "webgpu",
+      "id": "platform.at-zavx0z-renderer-webgpu.export-paths.root.symbols.rendererwebgpubackendoptions",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 2,
+        "path": "renderer:packages/webgpu/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RendererWebGpuBackendOptions",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "parent": "platform.at-zavx0z-renderer-webgpu.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/webgpu/src/index.ts#L2",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-webgpu-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer-webgpu public runtime export RendererWebGpuDocumentPlane.",
+      "domain": "webgpu",
+      "id": "platform.at-zavx0z-renderer-webgpu.export-paths.root.symbols.rendererwebgpudocumentplane",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 8,
+        "path": "renderer:packages/webgpu/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": false
+      },
+      "name": "RendererWebGpuDocumentPlane",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "parent": "platform.at-zavx0z-renderer-webgpu.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/webgpu/src/index.ts#L8",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-webgpu-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer-webgpu public type export RendererWebGpuDocumentPlaneIntersection.",
+      "domain": "webgpu",
+      "id": "platform.at-zavx0z-renderer-webgpu.export-paths.root.symbols.rendererwebgpudocumentplaneintersection",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 9,
+        "path": "renderer:packages/webgpu/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RendererWebGpuDocumentPlaneIntersection",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "parent": "platform.at-zavx0z-renderer-webgpu.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/webgpu/src/index.ts#L9",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-webgpu-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer-webgpu public type export RendererWebGpuDocumentPlaneOptions.",
+      "domain": "webgpu",
+      "id": "platform.at-zavx0z-renderer-webgpu.export-paths.root.symbols.rendererwebgpudocumentplaneoptions",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 9,
+        "path": "renderer:packages/webgpu/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RendererWebGpuDocumentPlaneOptions",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "parent": "platform.at-zavx0z-renderer-webgpu.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/webgpu/src/index.ts#L9",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-webgpu-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer-webgpu public type export RendererWebGpuDocumentPoint.",
+      "domain": "webgpu",
+      "id": "platform.at-zavx0z-renderer-webgpu.export-paths.root.symbols.rendererwebgpudocumentpoint",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 9,
+        "path": "renderer:packages/webgpu/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RendererWebGpuDocumentPoint",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "parent": "platform.at-zavx0z-renderer-webgpu.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/webgpu/src/index.ts#L9",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-webgpu-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer-webgpu public runtime export RendererWebGpuScreenOverlay.",
+      "domain": "webgpu",
+      "id": "platform.at-zavx0z-renderer-webgpu.export-paths.root.symbols.rendererwebgpuscreenoverlay",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 6,
+        "path": "renderer:packages/webgpu/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": false
+      },
+      "name": "RendererWebGpuScreenOverlay",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "parent": "platform.at-zavx0z-renderer-webgpu.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/webgpu/src/index.ts#L6",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-webgpu-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer-webgpu public type export RendererWebGpuScreenOverlayOptions.",
+      "domain": "webgpu",
+      "id": "platform.at-zavx0z-renderer-webgpu.export-paths.root.symbols.rendererwebgpuscreenoverlayoptions",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 7,
+        "path": "renderer:packages/webgpu/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RendererWebGpuScreenOverlayOptions",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-webgpu",
+        "repository": "renderer",
+        "stage": "webgpu"
+      },
+      "parent": "platform.at-zavx0z-renderer-webgpu.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/webgpu/src/index.ts#L7",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-webgpu-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "platform/webgpu-exports.json"
+}

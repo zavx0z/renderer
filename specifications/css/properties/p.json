@@ -1,0 +1,1237 @@
+{
+  "entries": [
+    {
+      "domain": "css",
+      "id": "css.properties.padding",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements except: internal table elements other than table cells, ruby base containers, and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "longhands": [
+          "padding-top",
+          "padding-right",
+          "padding-bottom",
+          "padding-left"
+        ],
+        "percentages": "refer to logical width of containing block",
+        "styleDeclaration": [
+          "padding"
+        ],
+        "syntax": "<'padding-top'>{1,4}"
+      },
+      "name": "padding",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-box-4/#propdef-padding",
+        "profile": "standard",
+        "source": "css:css-box-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.padding-block",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "padding-block-start",
+          "padding-block-end"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "padding-block",
+          "paddingBlock"
+        ],
+        "syntax": "<'padding-top'>{1,2}"
+      },
+      "name": "padding-block",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-logical-1/#propdef-padding-block",
+        "profile": "standard",
+        "source": "css:css-logical-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.padding-block-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "Same as padding-top",
+        "canonicalOrder": "per grammar",
+        "computedValue": "Same as corresponding padding-* properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "padding",
+        "percentages": "As for the corresponding physical property",
+        "styleDeclaration": [
+          "padding-block-end",
+          "paddingBlockEnd"
+        ],
+        "syntax": "<'padding-top'>"
+      },
+      "name": "padding-block-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-logical-1/#propdef-padding-block-end",
+        "profile": "standard",
+        "source": "css:css-logical-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.padding-block-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "Same as padding-top",
+        "canonicalOrder": "per grammar",
+        "computedValue": "Same as corresponding padding-* properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "padding",
+        "percentages": "As for the corresponding physical property",
+        "styleDeclaration": [
+          "padding-block-start",
+          "paddingBlockStart"
+        ],
+        "syntax": "<'padding-top'>"
+      },
+      "name": "padding-block-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-logical-1/#propdef-padding-block-start",
+        "profile": "standard",
+        "source": "css:css-logical-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.padding-bottom",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements except: internal table elements other than table cells, ruby base containers, and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "a computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "padding",
+        "percentages": "refer to logical width of containing block",
+        "styleDeclaration": [
+          "padding-bottom",
+          "paddingBottom"
+        ],
+        "syntax": "<length-percentage [0,∞]>"
+      },
+      "name": "padding-bottom",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-box-4/#propdef-padding-bottom",
+        "profile": "standard",
+        "source": "css:css-box-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.padding-inline",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "padding-inline-start",
+          "padding-inline-end"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "padding-inline",
+          "paddingInline"
+        ],
+        "syntax": "<'padding-top'>{1,2}"
+      },
+      "name": "padding-inline",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-logical-1/#propdef-padding-inline",
+        "profile": "standard",
+        "source": "css:css-logical-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.padding-inline-end",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "Same as padding-top",
+        "canonicalOrder": "per grammar",
+        "computedValue": "Same as corresponding padding-* properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "padding",
+        "percentages": "As for the corresponding physical property",
+        "styleDeclaration": [
+          "padding-inline-end",
+          "paddingInlineEnd"
+        ],
+        "syntax": "<'padding-top'>"
+      },
+      "name": "padding-inline-end",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-logical-1/#propdef-padding-inline-end",
+        "profile": "standard",
+        "source": "css:css-logical-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.padding-inline-start",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "Same as padding-top",
+        "canonicalOrder": "per grammar",
+        "computedValue": "Same as corresponding padding-* properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "padding",
+        "percentages": "As for the corresponding physical property",
+        "styleDeclaration": [
+          "padding-inline-start",
+          "paddingInlineStart"
+        ],
+        "syntax": "<'padding-top'>"
+      },
+      "name": "padding-inline-start",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-logical-1/#propdef-padding-inline-start",
+        "profile": "standard",
+        "source": "css:css-logical-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.padding-left",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements except: internal table elements other than table cells, ruby base containers, and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "a computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "padding",
+        "percentages": "refer to logical width of containing block",
+        "styleDeclaration": [
+          "padding-left",
+          "paddingLeft"
+        ],
+        "syntax": "<length-percentage [0,∞]>"
+      },
+      "name": "padding-left",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-box-4/#propdef-padding-left",
+        "profile": "standard",
+        "source": "css:css-box-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.padding-right",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements except: internal table elements other than table cells, ruby base containers, and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "a computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "padding",
+        "percentages": "refer to logical width of containing block",
+        "styleDeclaration": [
+          "padding-right",
+          "paddingRight"
+        ],
+        "syntax": "<length-percentage [0,∞]>"
+      },
+      "name": "padding-right",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-box-4/#propdef-padding-right",
+        "profile": "standard",
+        "source": "css:css-box-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.padding-top",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements except: internal table elements other than table cells, ruby base containers, and ruby annotation containers",
+        "canonicalOrder": "per grammar",
+        "computedValue": "a computed <length-percentage> value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "0",
+        "logicalPropertyGroup": "padding",
+        "percentages": "refer to logical width of containing block",
+        "styleDeclaration": [
+          "padding-top",
+          "paddingTop"
+        ],
+        "syntax": "<length-percentage [0,∞]>"
+      },
+      "name": "padding-top",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-box-4/#propdef-padding-top",
+        "profile": "standard",
+        "source": "css:css-box-4",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.page",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "boxes that create class A break points",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "no (but see prose)",
+        "initial": "auto",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "page"
+        ],
+        "syntax": "auto | <custom-ident>"
+      },
+      "name": "page",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-page-3/#propdef-page",
+        "profile": "standard",
+        "source": "css:css-page-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.page-break-after",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block-level elements (but see text)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "media": "visual, paged",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "page-break-after",
+          "pageBreakAfter"
+        ],
+        "syntax": "auto | always | avoid | left | right | inherit"
+      },
+      "name": "page-break-after",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css2/#propdef-page-break-after",
+        "profile": "standard",
+        "source": "css:css2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.page-break-before",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block-level elements (but see text)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "media": "visual, paged",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "page-break-before",
+          "pageBreakBefore"
+        ],
+        "syntax": "auto | always | avoid | left | right | inherit"
+      },
+      "name": "page-break-before",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css2/#propdef-page-break-before",
+        "profile": "standard",
+        "source": "css:css2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.page-break-inside",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "block-level elements (but see text)",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "media": "visual, paged",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "page-break-inside",
+          "pageBreakInside"
+        ],
+        "syntax": "avoid | auto | inherit"
+      },
+      "name": "page-break-inside",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css2/#propdef-page-break-inside",
+        "profile": "standard",
+        "source": "css:css2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.paint-order",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "shapes and text content elements",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "normal",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "paint-order",
+          "paintOrder"
+        ],
+        "syntax": "normal | [ fill || stroke || markers ]"
+      },
+      "name": "paint-order",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/painting.html#PaintOrderProperty",
+        "profile": "standard",
+        "source": "css:svgwg",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.path-length",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "‘path’, ‘circle’, ‘ellipse’, ‘line’, ‘polygon’, ‘polyline’, ‘rect’",
+        "computedValue": "the keyword none, or an absolute length",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "path-length",
+          "pathLength"
+        ],
+        "syntax": "none | <length> [0,∞]"
+      },
+      "name": "path-length",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/paths.html#PathLengthCSSProperty",
+        "profile": "standard",
+        "source": "css:svgwg",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.pause",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "see individual properties",
+        "longhands": [
+          "pause-before",
+          "pause-after"
+        ],
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "pause"
+        ],
+        "syntax": "<'pause-before'> <'pause-after'>?"
+      },
+      "name": "pause",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-speech-1/#propdef-pause",
+        "profile": "standard",
+        "source": "css:css-speech-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.pause-after",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "pause-after",
+          "pauseAfter"
+        ],
+        "syntax": "<time [0s,∞]> | none | x-weak | weak | medium | strong | x-strong"
+      },
+      "name": "pause-after",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-speech-1/#propdef-pause-after",
+        "profile": "standard",
+        "source": "css:css-speech-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.pause-before",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value type",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified value",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "pause-before",
+          "pauseBefore"
+        ],
+        "syntax": "<time [0s,∞]> | none | x-weak | weak | medium | strong | x-strong"
+      },
+      "name": "pause-before",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-speech-1/#propdef-pause-before",
+        "profile": "standard",
+        "source": "css:css-speech-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.perspective",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "transformable elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword none or an absolute length",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "perspective"
+        ],
+        "syntax": "none | <length [0,∞]>"
+      },
+      "name": "perspective",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-transforms-2/#propdef-perspective",
+        "profile": "standard",
+        "source": "css:css-transforms-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.perspective-origin",
+      "kind": "property",
+      "metadata": {
+        "animationType": "by computed value",
+        "appliesTo": "transformable elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see background-position",
+        "extended": [],
+        "inherited": "no",
+        "initial": "50% 50%",
+        "percentages": "refer to the size of the reference box",
+        "styleDeclaration": [
+          "perspective-origin",
+          "perspectiveOrigin"
+        ],
+        "syntax": "<position>"
+      },
+      "name": "perspective-origin",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-transforms-2/#propdef-perspective-origin",
+        "profile": "standard",
+        "source": "css:css-transforms-2",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.place-content",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "longhands": [
+          "align-content",
+          "justify-content"
+        ],
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "place-content",
+          "placeContent"
+        ],
+        "syntax": "<'align-content'> <'justify-content'>?"
+      },
+      "name": "place-content",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-align-3/#propdef-place-content",
+        "profile": "standard",
+        "source": "css:css-align-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.place-items",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "see individual properties",
+        "longhands": [
+          "align-items",
+          "justify-items"
+        ],
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "place-items",
+          "placeItems"
+        ],
+        "syntax": "<'align-items'> <'justify-items'>?"
+      },
+      "name": "place-items",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-align-3/#propdef-place-items",
+        "profile": "standard",
+        "source": "css:css-align-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.place-self",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "no",
+        "initial": "auto",
+        "longhands": [
+          "align-self",
+          "justify-self"
+        ],
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "place-self",
+          "placeSelf"
+        ],
+        "syntax": "<'align-self'> <'justify-self'>?"
+      },
+      "name": "place-self",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-align-3/#propdef-place-self",
+        "profile": "standard",
+        "source": "css:css-align-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.pointer-events",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "container elements, graphics elements and ‘use’",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "auto",
+        "media": "visual",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "pointer-events",
+          "pointerEvents"
+        ],
+        "syntax": "auto | bounding-box | visiblePainted | visibleFill | visibleStroke | visible | painted | fill | stroke | all | none"
+      },
+      "name": "pointer-events",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://w3c.github.io/svgwg/svg2-draft/interact.html#PointerEventsProperty",
+        "profile": "standard",
+        "source": "css:svgwg",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.pointer-timeline",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "pointer-timeline-name",
+          "pointer-timeline-axis"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "pointer-timeline",
+          "pointerTimeline"
+        ],
+        "syntax": "[ <'pointer-timeline-name'> <'pointer-timeline-axis'>? ]#"
+      },
+      "name": "pointer-timeline",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/pointer-animations-1/#propdef-pointer-timeline",
+        "profile": "standard",
+        "source": "css:pointer-animations-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.pointer-timeline-axis",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "a list of the keywords specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "block",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "pointer-timeline-axis",
+          "pointerTimelineAxis"
+        ],
+        "syntax": "[ block | inline | x | y ]#"
+      },
+      "name": "pointer-timeline-axis",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/pointer-animations-1/#propdef-pointer-timeline-axis",
+        "profile": "standard",
+        "source": "css:pointer-animations-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.pointer-timeline-name",
+      "kind": "property",
+      "metadata": {
+        "animationType": "not animatable",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword none or a list of CSS identifiers",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "pointer-timeline-name",
+          "pointerTimelineName"
+        ],
+        "syntax": "[ none | <dashed-ident> ]#"
+      },
+      "name": "pointer-timeline-name",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/pointer-animations-1/#propdef-pointer-timeline-name",
+        "profile": "standard",
+        "source": "css:pointer-animations-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.position",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements except table-column-group and table-column",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [
+          "https://drafts.csswg.org/css-gcpm-3/"
+        ],
+        "inherited": "no",
+        "initial": "static",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "position"
+        ],
+        "syntax": "static | relative | absolute | sticky | fixed | <running()>"
+      },
+      "name": "position",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-position-3/#propdef-position",
+        "profile": "standard",
+        "source": "css:css-position-3",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.position-anchor",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "absolutely positioned boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "position-anchor",
+          "positionAnchor"
+        ],
+        "syntax": "normal | none | auto | <anchor-name> | match-parent"
+      },
+      "name": "position-anchor",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-anchor-position-1/#propdef-position-anchor",
+        "profile": "standard",
+        "source": "css:css-anchor-position-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.position-area",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "positioned boxes with a default anchor box",
+        "canonicalOrder": "per grammar",
+        "computedValue": "the keyword none or a pair of keywords, see § 3.1.3 Computed Value and Serialization of <position-area>",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "position-area",
+          "positionArea"
+        ],
+        "syntax": "none | <position-area>"
+      },
+      "name": "position-area",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-anchor-position-1/#propdef-position-area",
+        "profile": "standard",
+        "source": "css:css-anchor-position-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.position-try",
+      "kind": "property",
+      "metadata": {
+        "animationType": "see individual properties",
+        "appliesTo": "see individual properties",
+        "canonicalOrder": "per grammar",
+        "computedValue": "see individual properties",
+        "extended": [],
+        "inherited": "see individual properties",
+        "initial": "see individual properties",
+        "longhands": [
+          "position-try-order",
+          "position-try-fallbacks"
+        ],
+        "percentages": "see individual properties",
+        "styleDeclaration": [
+          "position-try",
+          "positionTry"
+        ],
+        "syntax": "<'position-try-order'>? <'position-try-fallbacks'>"
+      },
+      "name": "position-try",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-anchor-position-1/#propdef-position-try",
+        "profile": "standard",
+        "source": "css:css-anchor-position-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.position-try-fallbacks",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "absolutely positioned boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "none",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "position-try-fallbacks",
+          "positionTryFallbacks"
+        ],
+        "syntax": "none | [ [<dashed-ident> || <try-tactic>] | <position-area> ]#"
+      },
+      "name": "position-try-fallbacks",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-anchor-position-1/#propdef-position-try-fallbacks",
+        "profile": "standard",
+        "source": "css:css-anchor-position-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.position-try-order",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "absolutely positioned boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "normal",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "position-try-order",
+          "positionTryOrder"
+        ],
+        "syntax": "normal | <try-size>"
+      },
+      "name": "position-try-order",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-anchor-position-1/#propdef-position-try-order",
+        "profile": "standard",
+        "source": "css:css-anchor-position-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.position-visibility",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "absolutely positioned boxes",
+        "canonicalOrder": "per grammar",
+        "computedValue": "as specified",
+        "extended": [],
+        "inherited": "no",
+        "initial": "anchor-visible",
+        "percentages": "n/a",
+        "styleDeclaration": [
+          "position-visibility",
+          "positionVisibility"
+        ],
+        "syntax": "always | [ anchor-valid || anchor-visible || no-overflow ]"
+      },
+      "name": "position-visibility",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-anchor-position-1/#propdef-position-visibility",
+        "profile": "standard",
+        "source": "css:css-anchor-position-1",
+        "version": "8.7.3"
+      }
+    },
+    {
+      "domain": "css",
+      "id": "css.properties.print-color-adjust",
+      "kind": "property",
+      "metadata": {
+        "animationType": "discrete",
+        "appliesTo": "all elements",
+        "canonicalOrder": "per grammar",
+        "computedValue": "specified keyword",
+        "extended": [],
+        "inherited": "yes",
+        "initial": "economy",
+        "percentages": "N/A",
+        "styleDeclaration": [
+          "print-color-adjust",
+          "printColorAdjust"
+        ],
+        "syntax": "economy | exact"
+      },
+      "name": "print-color-adjust",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "https://drafts.csswg.org/css-color-adjust-1/#propdef-print-color-adjust",
+        "profile": "standard",
+        "source": "css:css-color-adjust-1",
+        "version": "8.7.3"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "css/properties/p.json"
+}

@@ -1,5 +1,9 @@
 # Web-platform support boundary
 
+This is an architectural boundary document. Exact per-interface/member status
+and evidence are generated from `packages/dom/support.json` into the repository
+`capabilities.index.json`; absence from the prose below is not a support claim.
+
 `@zavx0z/dom` uses the standard public names and observable contracts for the
 subset it implements. Consumers import the realm explicitly:
 
@@ -63,8 +67,9 @@ New support extends this prototype chain and the same mutation/event boundary.
 ## Compatibility consequences
 
 - ordinary application logic that uses an implemented DOM member is portable;
-- `react-dom` cannot target this realm because it owns the browser host config;
-  an optional React custom renderer must map React mutations to this same DOM;
+- npm `react-dom` cannot target this realm because it owns the browser host
+  config; project TSX is compiled by `@zavx0z/template` and executed by the
+  non-React-alias `@zavx0z/react` runtime against this same DOM;
 - browser DevTools Elements/CSS panels inspect Blink backend node identifiers,
   so exact interface names alone cannot register these JavaScript nodes there;
   engine inspection needs an explicit DevTools bridge or custom panel;

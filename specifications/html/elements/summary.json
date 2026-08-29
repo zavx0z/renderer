@@ -1,0 +1,146 @@
+{
+  "entries": [
+    {
+      "description": "Caption for details",
+      "domain": "html",
+      "id": "html.elements.summary",
+      "kind": "element",
+      "metadata": {
+        "categories": "none",
+        "children": "phrasing; heading content",
+        "interface": "HTMLElement",
+        "parents": "details"
+      },
+      "name": "summary",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-summary-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <summary> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.summary.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "summary",
+        "interface": "HTMLElement"
+      },
+      "name": "summary implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.summary",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "The <summary> element activation and default action.",
+      "domain": "html",
+      "id": "html.elements.summary.activation-behavior",
+      "kind": "activation-behavior",
+      "metadata": {
+        "element": "summary",
+        "interface": "HTMLElement"
+      },
+      "name": "summary activation and default action",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.summary",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-summary-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <summary> element content categories.",
+      "domain": "html",
+      "id": "html.elements.summary.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "summary",
+        "interface": "HTMLElement"
+      },
+      "name": "summary content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.summary",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-summary-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <summary> element content model.",
+      "domain": "html",
+      "id": "html.elements.summary.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "summary",
+        "interface": "HTMLElement"
+      },
+      "name": "summary content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.summary",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-summary-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <summary> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.summary.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "summary",
+        "interface": "HTMLElement"
+      },
+      "name": "summary interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.summary",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/interactive-elements.html#the-summary-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/summary.json"
+}

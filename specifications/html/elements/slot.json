@@ -1,0 +1,146 @@
+{
+  "entries": [
+    {
+      "description": "Shadow tree slot",
+      "domain": "html",
+      "id": "html.elements.slot",
+      "kind": "element",
+      "metadata": {
+        "categories": "flow; phrasing",
+        "children": "transparent",
+        "interface": "HTMLSlotElement",
+        "parents": "phrasing"
+      },
+      "name": "slot",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/scripting.html#the-slot-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <slot> element implicit role, allowed ARIA, accessible name/state, and platform mapping.",
+      "domain": "html",
+      "id": "html.elements.slot.accessibility-semantics",
+      "kind": "accessibility-semantics",
+      "metadata": {
+        "element": "slot",
+        "interface": "HTMLSlotElement"
+      },
+      "name": "slot implicit role, allowed ARIA, accessible name/state, and platform mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.slot",
+      "spec": {
+        "anchor": "https://w3c.github.io/html-aam/#html-element-role-mappings",
+        "profile": "standard",
+        "source": "html-aam",
+        "version": "snapshot 2026-08-29"
+      }
+    },
+    {
+      "description": "name content attribute on <slot>.",
+      "domain": "html",
+      "id": "html.elements.slot.attributes.name",
+      "kind": "element-attribute",
+      "metadata": {
+        "element": "slot",
+        "interface": "HTMLSlotElement"
+      },
+      "name": "name",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.slot",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/dev/scripting.html#attr-slot-name",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <slot> element content categories.",
+      "domain": "html",
+      "id": "html.elements.slot.content-categories",
+      "kind": "content-categories",
+      "metadata": {
+        "element": "slot",
+        "interface": "HTMLSlotElement"
+      },
+      "name": "slot content categories",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.slot",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/scripting.html#the-slot-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <slot> element content model.",
+      "domain": "html",
+      "id": "html.elements.slot.content-model",
+      "kind": "content-model",
+      "metadata": {
+        "element": "slot",
+        "interface": "HTMLSlotElement"
+      },
+      "name": "slot content model",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.slot",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/scripting.html#the-slot-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    },
+    {
+      "description": "The <slot> element interface mapping.",
+      "domain": "html",
+      "id": "html.elements.slot.interface-mapping",
+      "kind": "interface-mapping",
+      "metadata": {
+        "element": "slot",
+        "interface": "HTMLSlotElement"
+      },
+      "name": "slot interface mapping",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "html.elements.slot",
+      "spec": {
+        "anchor": "https://html.spec.whatwg.org/multipage/scripting.html#the-slot-element",
+        "profile": "standard",
+        "source": "whatwg-html",
+        "version": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8"
+      }
+    }
+  ],
+  "generatorVersion": "1.0.0",
+  "schemaVersion": 1,
+  "source": "html/elements/slot.json"
+}
