@@ -1,0 +1,11 @@
+{
+  "$schema": "https://raw.githubusercontent.com/zavx0z/storybook/main/schemas/manifest.schema.json",
+  "schemaVersion": 1,
+  "kind": "project",
+  "id": "renderer",
+  "label": "Renderer",
+  "readme": "../README.md",
+  "packages": [
+    {"declaration": "../packages/dom/.storybook/manifest.json"}
+  ]
+}

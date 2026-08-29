@@ -1,0 +1,11 @@
+{
+  "$schema": "https://raw.githubusercontent.com/zavx0z/storybook/main/schemas/manifest.schema.json",
+  "schemaVersion": 1,
+  "kind": "package",
+  "id": "@zavx0z/dom",
+  "label": "DOM",
+  "packageJson": "../package.json",
+  "readme": "../requirements.md",
+  "runtime": {"module": "./runtime.ts", "export": "runtime"},
+  "catalog": "./catalog.json"
+}

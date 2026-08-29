@@ -82,3 +82,15 @@ Generic Layout and `@ui/elements` were retired after their production consumers
 reached zero imports. They have no compatibility aliases or alternate runtime
 path in the new graph. The unrelated `@nodes/layout` domain package remains the
 Node owner's numeric layout and routing boundary.
+
+## External Storybook ownership
+
+Renderer publishes no Storybook package or dependency. The root
+`.storybook/manifest.json` declares a project and `@zavx0z/dom` owns pure JSON
+catalog data, static owner stories and a structural `storybook-runtime/1`
+adapter under `packages/dom/.storybook`. The external Storybook tool owns the
+single server, Workbench, routing, package revisions and browser tabs.
+
+The 91 migrated DOM/Elements leaves retain their exact former paths. Interface
+and standard-element stories import only the exact production DOM owner; UI
+components, navigation and package lifecycle do not enter Renderer.

@@ -1,0 +1,2171 @@
+{
+  "$schema": "https://raw.githubusercontent.com/zavx0z/storybook/main/schemas/catalog.schema.json",
+  "schemaVersion": 1,
+  "categories": [
+    {
+      "id": "dom-interfaces",
+      "label": "Интерфейсы",
+      "route": "dom/interfaces",
+      "group": {
+        "id": "dom",
+        "label": "DOM"
+      },
+      "subjects": [
+        {
+          "id": "node",
+          "label": "Node",
+          "route": "dom/interfaces/node",
+          "apiName": "Node",
+          "kind": "interface",
+          "tags": [
+            "Node",
+            "Базовый",
+            "узел",
+            "дерева"
+          ],
+          "variants": [
+            {
+              "id": "hierarchy-default",
+              "label": "Основной",
+              "group": {
+                "id": "hierarchy",
+                "label": "Иерархия"
+              },
+              "route": "dom/interfaces/node/hierarchy/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-node.ts",
+                "export": "story_hierarchy_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "element",
+          "label": "Element",
+          "route": "dom/interfaces/element",
+          "apiName": "Element",
+          "kind": "interface",
+          "tags": [
+            "Element",
+            "Узел",
+            "с",
+            "attributes",
+            "и",
+            "selectors"
+          ],
+          "variants": [
+            {
+              "id": "attributes-default",
+              "label": "Основной",
+              "group": {
+                "id": "attributes",
+                "label": "Атрибуты"
+              },
+              "route": "dom/interfaces/element/attributes/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-element.ts",
+                "export": "story_attributes_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "html-element",
+          "label": "HTMLElement",
+          "route": "dom/interfaces/html-element",
+          "apiName": "HTMLElement",
+          "kind": "interface",
+          "tags": [
+            "HTMLElement",
+            "Глобальные",
+            "HTML",
+            "attributes",
+            "и",
+            "title"
+          ],
+          "variants": [
+            {
+              "id": "title-default",
+              "label": "Основной",
+              "group": {
+                "id": "title",
+                "label": "title"
+              },
+              "route": "dom/interfaces/html-element/title/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-html-element.ts",
+                "export": "story_title_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "html-button-element",
+          "label": "HTMLButtonElement",
+          "route": "dom/interfaces/html-button-element",
+          "apiName": "HTMLButtonElement",
+          "kind": "interface",
+          "tags": [
+            "HTMLButtonElement",
+            "Кнопка",
+            "и",
+            "обычные",
+            "DOM",
+            "events"
+          ],
+          "variants": [
+            {
+              "id": "activation-default",
+              "label": "Основной",
+              "group": {
+                "id": "activation",
+                "label": "Активация"
+              },
+              "route": "dom/interfaces/html-button-element/activation/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-html-button-element.ts",
+                "export": "story_activation_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "html-input-element",
+          "label": "HTMLInputElement",
+          "route": "dom/interfaces/html-input-element",
+          "apiName": "HTMLInputElement",
+          "kind": "interface",
+          "tags": [
+            "HTMLInputElement",
+            "Live",
+            "input",
+            "state"
+          ],
+          "variants": [
+            {
+              "id": "value-default",
+              "label": "Основной",
+              "group": {
+                "id": "value",
+                "label": "Значение"
+              },
+              "route": "dom/interfaces/html-input-element/value/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-html-input-element.ts",
+                "export": "story_value_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "html-select-element",
+          "label": "HTMLSelectElement",
+          "route": "dom/interfaces/html-select-element",
+          "apiName": "HTMLSelectElement",
+          "kind": "interface",
+          "tags": [
+            "HTMLSelectElement",
+            "Select",
+            "и",
+            "Option",
+            "selectedness"
+          ],
+          "variants": [
+            {
+              "id": "selection-default",
+              "label": "Основной",
+              "group": {
+                "id": "selection",
+                "label": "Выбор"
+              },
+              "route": "dom/interfaces/html-select-element/selection/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-html-select-element.ts",
+                "export": "story_selection_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "html-text-area-element",
+          "label": "HTMLTextAreaElement",
+          "route": "dom/interfaces/html-text-area-element",
+          "apiName": "HTMLTextAreaElement",
+          "kind": "interface",
+          "tags": [
+            "HTMLTextAreaElement",
+            "Многострочное",
+            "live",
+            "value"
+          ],
+          "variants": [
+            {
+              "id": "value-default",
+              "label": "Основной",
+              "group": {
+                "id": "value",
+                "label": "Значение"
+              },
+              "route": "dom/interfaces/html-text-area-element/value/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-html-text-area-element.ts",
+                "export": "story_value_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "html-progress-element",
+          "label": "HTMLProgressElement",
+          "route": "dom/interfaces/html-progress-element",
+          "apiName": "HTMLProgressElement",
+          "kind": "interface",
+          "tags": [
+            "HTMLProgressElement",
+            "Determinate",
+            "и",
+            "indeterminate",
+            "progress"
+          ],
+          "variants": [
+            {
+              "id": "value-default",
+              "label": "Основной",
+              "group": {
+                "id": "value",
+                "label": "Прогресс"
+              },
+              "route": "dom/interfaces/html-progress-element/value/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-html-progress-element.ts",
+                "export": "story_value_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "html-meter-element",
+          "label": "HTMLMeterElement",
+          "route": "dom/interfaces/html-meter-element",
+          "apiName": "HTMLMeterElement",
+          "kind": "interface",
+          "tags": [
+            "HTMLMeterElement",
+            "Нормализованный",
+            "scalar",
+            "meter"
+          ],
+          "variants": [
+            {
+              "id": "value-default",
+              "label": "Основной",
+              "group": {
+                "id": "value",
+                "label": "Диапазон"
+              },
+              "route": "dom/interfaces/html-meter-element/value/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-html-meter-element.ts",
+                "export": "story_value_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "event-target",
+          "label": "EventTarget",
+          "route": "dom/interfaces/event-target",
+          "apiName": "EventTarget",
+          "kind": "interface",
+          "tags": [
+            "EventTarget",
+            "capture",
+            "target",
+            "bubble",
+            "addEventListener",
+            "dispatchEvent"
+          ],
+          "variants": [
+            {
+              "id": "listeners-default",
+              "label": "Основной",
+              "group": {
+                "id": "listeners",
+                "label": "Слушатели"
+              },
+              "route": "dom/interfaces/event-target/listeners/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-event-target.ts",
+                "export": "story_listeners_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "document",
+          "label": "Document",
+          "route": "dom/interfaces/document",
+          "apiName": "Document",
+          "kind": "interface",
+          "tags": [
+            "Document",
+            "root",
+            "mutation",
+            "transaction",
+            "query"
+          ],
+          "variants": [
+            {
+              "id": "tree-default",
+              "label": "Основной",
+              "group": {
+                "id": "tree",
+                "label": "Дерево"
+              },
+              "route": "dom/interfaces/document/tree/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-document.ts",
+                "export": "story_tree_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "document-fragment",
+          "label": "DocumentFragment",
+          "route": "dom/interfaces/document-fragment",
+          "apiName": "DocumentFragment",
+          "kind": "interface",
+          "tags": [
+            "DocumentFragment",
+            "detached",
+            "tree",
+            "mutation",
+            "query"
+          ],
+          "variants": [
+            {
+              "id": "mutation-default",
+              "label": "Основной",
+              "group": {
+                "id": "mutation",
+                "label": "Мутация"
+              },
+              "route": "dom/interfaces/document-fragment/mutation/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-document-fragment.ts",
+                "export": "story_mutation_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "character-data",
+          "label": "CharacterData",
+          "route": "dom/interfaces/character-data",
+          "apiName": "CharacterData",
+          "kind": "interface",
+          "tags": [
+            "CharacterData",
+            "live",
+            "data",
+            "length",
+            "mutation"
+          ],
+          "variants": [
+            {
+              "id": "data-default",
+              "label": "Основной",
+              "group": {
+                "id": "data",
+                "label": "Данные"
+              },
+              "route": "dom/interfaces/character-data/data/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-character-data.ts",
+                "export": "story_data_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "text",
+          "label": "Text",
+          "route": "dom/interfaces/text",
+          "apiName": "Text",
+          "kind": "interface",
+          "tags": [
+            "Text",
+            "CharacterData",
+            "textContent",
+            "appendData"
+          ],
+          "variants": [
+            {
+              "id": "data-default",
+              "label": "Основной",
+              "group": {
+                "id": "data",
+                "label": "Данные"
+              },
+              "route": "dom/interfaces/text/data/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-text.ts",
+                "export": "story_data_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "comment",
+          "label": "Comment",
+          "route": "dom/interfaces/comment",
+          "apiName": "Comment",
+          "kind": "interface",
+          "tags": [
+            "Comment",
+            "invisible",
+            "anchor",
+            "CharacterData"
+          ],
+          "variants": [
+            {
+              "id": "anchors-default",
+              "label": "Основной",
+              "group": {
+                "id": "anchors",
+                "label": "Якоря"
+              },
+              "route": "dom/interfaces/comment/anchors/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-comment.ts",
+                "export": "story_anchors_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "node-list",
+          "label": "NodeList",
+          "route": "dom/interfaces/node-list",
+          "apiName": "NodeList",
+          "kind": "interface",
+          "tags": [
+            "NodeList",
+            "static",
+            "query",
+            "snapshot",
+            "item",
+            "iterator"
+          ],
+          "variants": [
+            {
+              "id": "snapshot-default",
+              "label": "Основной",
+              "group": {
+                "id": "snapshot",
+                "label": "Snapshot"
+              },
+              "route": "dom/interfaces/node-list/snapshot/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-node-list.ts",
+                "export": "story_snapshot_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "dom-token-list",
+          "label": "DOMTokenList",
+          "route": "dom/interfaces/dom-token-list",
+          "apiName": "DOMTokenList",
+          "kind": "interface",
+          "tags": [
+            "DOMTokenList",
+            "classList",
+            "reflected",
+            "tokens",
+            "add",
+            "remove",
+            "toggle"
+          ],
+          "variants": [
+            {
+              "id": "classes-default",
+              "label": "Основной",
+              "group": {
+                "id": "classes",
+                "label": "Классы"
+              },
+              "route": "dom/interfaces/dom-token-list/classes/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-dom-token-list.ts",
+                "export": "story_classes_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "html-div-element",
+          "label": "HTMLDivElement",
+          "route": "dom/interfaces/html-div-element",
+          "apiName": "HTMLDivElement",
+          "kind": "interface",
+          "tags": [
+            "HTMLDivElement",
+            "exact",
+            "div",
+            "prototype"
+          ],
+          "variants": [
+            {
+              "id": "container-default",
+              "label": "Основной",
+              "group": {
+                "id": "container",
+                "label": "Контейнер"
+              },
+              "route": "dom/interfaces/html-div-element/container/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-html-div-element.ts",
+                "export": "story_container_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "html-span-element",
+          "label": "HTMLSpanElement",
+          "route": "dom/interfaces/html-span-element",
+          "apiName": "HTMLSpanElement",
+          "kind": "interface",
+          "tags": [
+            "HTMLSpanElement",
+            "exact",
+            "span",
+            "prototype"
+          ],
+          "variants": [
+            {
+              "id": "inline-default",
+              "label": "Основной",
+              "group": {
+                "id": "inline",
+                "label": "Строка"
+              },
+              "route": "dom/interfaces/html-span-element/inline/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-html-span-element.ts",
+                "export": "story_inline_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "html-image-element",
+          "label": "HTMLImageElement",
+          "route": "dom/interfaces/html-image-element",
+          "apiName": "HTMLImageElement",
+          "kind": "interface",
+          "tags": [
+            "HTMLImageElement",
+            "src",
+            "alt",
+            "width",
+            "height",
+            "reflected",
+            "author",
+            "attributes"
+          ],
+          "variants": [
+            {
+              "id": "attributes-default",
+              "label": "Основной",
+              "group": {
+                "id": "attributes",
+                "label": "Атрибуты"
+              },
+              "route": "dom/interfaces/html-image-element/attributes/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-html-image-element.ts",
+                "export": "story_attributes_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "html-option-element",
+          "label": "HTMLOptionElement",
+          "route": "dom/interfaces/html-option-element",
+          "apiName": "HTMLOptionElement",
+          "kind": "interface",
+          "tags": [
+            "HTMLOptionElement",
+            "value",
+            "label",
+            "disabled",
+            "selectedness"
+          ],
+          "variants": [
+            {
+              "id": "selectedness-default",
+              "label": "Основной",
+              "group": {
+                "id": "selectedness",
+                "label": "Выбор"
+              },
+              "route": "dom/interfaces/html-option-element/selectedness/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-html-option-element.ts",
+                "export": "story_selectedness_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "html-label-element",
+          "label": "HTMLLabelElement",
+          "route": "dom/interfaces/html-label-element",
+          "apiName": "HTMLLabelElement",
+          "kind": "interface",
+          "tags": [
+            "HTMLLabelElement",
+            "htmlFor",
+            "control",
+            "resolution"
+          ],
+          "variants": [
+            {
+              "id": "control-default",
+              "label": "Основной",
+              "group": {
+                "id": "control",
+                "label": "Control"
+              },
+              "route": "dom/interfaces/html-label-element/control/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-html-label-element.ts",
+                "export": "story_control_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "html-field-set-element",
+          "label": "HTMLFieldSetElement",
+          "route": "dom/interfaces/html-field-set-element",
+          "apiName": "HTMLFieldSetElement",
+          "kind": "interface",
+          "tags": [
+            "HTMLFieldSetElement",
+            "disabled",
+            "name",
+            "bounded",
+            "descendant",
+            "state"
+          ],
+          "variants": [
+            {
+              "id": "disabled-default",
+              "label": "Основной",
+              "group": {
+                "id": "disabled",
+                "label": "Disabled"
+              },
+              "route": "dom/interfaces/html-field-set-element/disabled/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-html-field-set-element.ts",
+                "export": "story_disabled_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "html-legend-element",
+          "label": "HTMLLegendElement",
+          "route": "dom/interfaces/html-legend-element",
+          "apiName": "HTMLLegendElement",
+          "kind": "interface",
+          "tags": [
+            "HTMLLegendElement",
+            "fieldset",
+            "caption",
+            "exact",
+            "prototype"
+          ],
+          "variants": [
+            {
+              "id": "caption-default",
+              "label": "Основной",
+              "group": {
+                "id": "caption",
+                "label": "Заголовок"
+              },
+              "route": "dom/interfaces/html-legend-element/caption/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-html-legend-element.ts",
+                "export": "story_caption_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "html-u-list-element",
+          "label": "HTMLUListElement",
+          "route": "dom/interfaces/html-u-list-element",
+          "apiName": "HTMLUListElement",
+          "kind": "interface",
+          "tags": [
+            "HTMLUListElement",
+            "exact",
+            "ul",
+            "prototype"
+          ],
+          "variants": [
+            {
+              "id": "list-default",
+              "label": "Основной",
+              "group": {
+                "id": "list",
+                "label": "Список"
+              },
+              "route": "dom/interfaces/html-u-list-element/list/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-html-u-list-element.ts",
+                "export": "story_list_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "html-li-element",
+          "label": "HTMLLIElement",
+          "route": "dom/interfaces/html-li-element",
+          "apiName": "HTMLLIElement",
+          "kind": "interface",
+          "tags": [
+            "HTMLLIElement",
+            "exact",
+            "li",
+            "prototype"
+          ],
+          "variants": [
+            {
+              "id": "item-default",
+              "label": "Основной",
+              "group": {
+                "id": "item",
+                "label": "Элемент"
+              },
+              "route": "dom/interfaces/html-li-element/item/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-html-li-element.ts",
+                "export": "story_item_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "html-heading-element",
+          "label": "HTMLHeadingElement",
+          "route": "dom/interfaces/html-heading-element",
+          "apiName": "HTMLHeadingElement",
+          "kind": "interface",
+          "tags": [
+            "HTMLHeadingElement",
+            "h1",
+            "h2",
+            "h3",
+            "h4",
+            "h5",
+            "h6",
+            "exact",
+            "prototype"
+          ],
+          "variants": [
+            {
+              "id": "heading-default",
+              "label": "Основной",
+              "group": {
+                "id": "heading",
+                "label": "Заголовок"
+              },
+              "route": "dom/interfaces/html-heading-element/heading/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-html-heading-element.ts",
+                "export": "story_heading_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "html-paragraph-element",
+          "label": "HTMLParagraphElement",
+          "route": "dom/interfaces/html-paragraph-element",
+          "apiName": "HTMLParagraphElement",
+          "kind": "interface",
+          "tags": [
+            "HTMLParagraphElement",
+            "exact",
+            "p",
+            "prototype"
+          ],
+          "variants": [
+            {
+              "id": "text-default",
+              "label": "Основной",
+              "group": {
+                "id": "text",
+                "label": "Текст"
+              },
+              "route": "dom/interfaces/html-paragraph-element/text/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-html-paragraph-element.ts",
+                "export": "story_text_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "html-table-element",
+          "label": "HTMLTableElement",
+          "route": "dom/interfaces/html-table-element",
+          "apiName": "HTMLTableElement",
+          "kind": "interface",
+          "tags": [
+            "HTMLTableElement",
+            "exact",
+            "table",
+            "prototype"
+          ],
+          "variants": [
+            {
+              "id": "table-default",
+              "label": "Основной",
+              "group": {
+                "id": "table",
+                "label": "Таблица"
+              },
+              "route": "dom/interfaces/html-table-element/table/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-html-table-element.ts",
+                "export": "story_table_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "html-table-section-element",
+          "label": "HTMLTableSectionElement",
+          "route": "dom/interfaces/html-table-section-element",
+          "apiName": "HTMLTableSectionElement",
+          "kind": "interface",
+          "tags": [
+            "HTMLTableSectionElement",
+            "thead",
+            "tbody",
+            "tfoot",
+            "exact",
+            "prototype"
+          ],
+          "variants": [
+            {
+              "id": "section-default",
+              "label": "Основной",
+              "group": {
+                "id": "section",
+                "label": "Секция"
+              },
+              "route": "dom/interfaces/html-table-section-element/section/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-html-table-section-element.ts",
+                "export": "story_section_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "html-table-row-element",
+          "label": "HTMLTableRowElement",
+          "route": "dom/interfaces/html-table-row-element",
+          "apiName": "HTMLTableRowElement",
+          "kind": "interface",
+          "tags": [
+            "HTMLTableRowElement",
+            "exact",
+            "tr",
+            "prototype"
+          ],
+          "variants": [
+            {
+              "id": "row-default",
+              "label": "Основной",
+              "group": {
+                "id": "row",
+                "label": "Строка"
+              },
+              "route": "dom/interfaces/html-table-row-element/row/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-html-table-row-element.ts",
+                "export": "story_row_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "html-table-cell-element",
+          "label": "HTMLTableCellElement",
+          "route": "dom/interfaces/html-table-cell-element",
+          "apiName": "HTMLTableCellElement",
+          "kind": "interface",
+          "tags": [
+            "HTMLTableCellElement",
+            "th",
+            "td",
+            "colSpan",
+            "rowSpan",
+            "scope",
+            "reflections"
+          ],
+          "variants": [
+            {
+              "id": "cell-default",
+              "label": "Основной",
+              "group": {
+                "id": "cell",
+                "label": "Ячейка"
+              },
+              "route": "dom/interfaces/html-table-cell-element/cell/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-html-table-cell-element.ts",
+                "export": "story_cell_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "event",
+          "label": "Event",
+          "route": "dom/interfaces/event",
+          "apiName": "Event",
+          "kind": "interface",
+          "tags": [
+            "Event",
+            "bubbles",
+            "cancelable",
+            "composed",
+            "propagation",
+            "cancellation"
+          ],
+          "variants": [
+            {
+              "id": "propagation-default",
+              "label": "Основной",
+              "group": {
+                "id": "propagation",
+                "label": "Распространение"
+              },
+              "route": "dom/interfaces/event/propagation/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-event.ts",
+                "export": "story_propagation_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "custom-event",
+          "label": "CustomEvent",
+          "route": "dom/interfaces/custom-event",
+          "apiName": "CustomEvent",
+          "kind": "interface",
+          "tags": [
+            "CustomEvent",
+            "detail",
+            "Event",
+            "propagation"
+          ],
+          "variants": [
+            {
+              "id": "detail-default",
+              "label": "Основной",
+              "group": {
+                "id": "detail",
+                "label": "Detail"
+              },
+              "route": "dom/interfaces/custom-event/detail/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-custom-event.ts",
+                "export": "story_detail_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "toggle-event",
+          "label": "ToggleEvent",
+          "route": "dom/interfaces/toggle-event",
+          "apiName": "ToggleEvent",
+          "kind": "interface",
+          "tags": [
+            "ToggleEvent",
+            "oldState",
+            "newState",
+            "source"
+          ],
+          "variants": [
+            {
+              "id": "states-default",
+              "label": "Основной",
+              "group": {
+                "id": "states",
+                "label": "Состояния"
+              },
+              "route": "dom/interfaces/toggle-event/states/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-toggle-event.ts",
+                "export": "story_states_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ui-event",
+          "label": "UIEvent",
+          "route": "dom/interfaces/ui-event",
+          "apiName": "UIEvent",
+          "kind": "interface",
+          "tags": [
+            "UIEvent",
+            "view",
+            "detail"
+          ],
+          "variants": [
+            {
+              "id": "detail-default",
+              "label": "Основной",
+              "group": {
+                "id": "detail",
+                "label": "Detail"
+              },
+              "route": "dom/interfaces/ui-event/detail/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-ui-event.ts",
+                "export": "story_detail_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "focus-event",
+          "label": "FocusEvent",
+          "route": "dom/interfaces/focus-event",
+          "apiName": "FocusEvent",
+          "kind": "interface",
+          "tags": [
+            "FocusEvent",
+            "relatedTarget",
+            "UIEvent"
+          ],
+          "variants": [
+            {
+              "id": "related-target-default",
+              "label": "Основной",
+              "group": {
+                "id": "related-target",
+                "label": "Related target"
+              },
+              "route": "dom/interfaces/focus-event/related-target/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-focus-event.ts",
+                "export": "story_related_target_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "mouse-event",
+          "label": "MouseEvent",
+          "route": "dom/interfaces/mouse-event",
+          "apiName": "MouseEvent",
+          "kind": "interface",
+          "tags": [
+            "MouseEvent",
+            "coordinates",
+            "buttons",
+            "modifiers"
+          ],
+          "variants": [
+            {
+              "id": "pointer-default",
+              "label": "Основной",
+              "group": {
+                "id": "pointer",
+                "label": "Указатель"
+              },
+              "route": "dom/interfaces/mouse-event/pointer/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-mouse-event.ts",
+                "export": "story_pointer_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "pointer-event",
+          "label": "PointerEvent",
+          "route": "dom/interfaces/pointer-event",
+          "apiName": "PointerEvent",
+          "kind": "interface",
+          "tags": [
+            "PointerEvent",
+            "pointerId",
+            "pressure",
+            "type",
+            "coalesced",
+            "predicted"
+          ],
+          "variants": [
+            {
+              "id": "samples-default",
+              "label": "Основной",
+              "group": {
+                "id": "samples",
+                "label": "Samples"
+              },
+              "route": "dom/interfaces/pointer-event/samples/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-pointer-event.ts",
+                "export": "story_samples_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "wheel-event",
+          "label": "WheelEvent",
+          "route": "dom/interfaces/wheel-event",
+          "apiName": "WheelEvent",
+          "kind": "interface",
+          "tags": [
+            "WheelEvent",
+            "deltaX",
+            "deltaY",
+            "deltaZ",
+            "deltaMode"
+          ],
+          "variants": [
+            {
+              "id": "delta-default",
+              "label": "Основной",
+              "group": {
+                "id": "delta",
+                "label": "Delta"
+              },
+              "route": "dom/interfaces/wheel-event/delta/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-wheel-event.ts",
+                "export": "story_delta_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "keyboard-event",
+          "label": "KeyboardEvent",
+          "route": "dom/interfaces/keyboard-event",
+          "apiName": "KeyboardEvent",
+          "kind": "interface",
+          "tags": [
+            "KeyboardEvent",
+            "key",
+            "code",
+            "location",
+            "modifiers",
+            "repeat",
+            "composing"
+          ],
+          "variants": [
+            {
+              "id": "key-default",
+              "label": "Основной",
+              "group": {
+                "id": "key",
+                "label": "Клавиша"
+              },
+              "route": "dom/interfaces/keyboard-event/key/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-keyboard-event.ts",
+                "export": "story_key_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "input-event",
+          "label": "InputEvent",
+          "route": "dom/interfaces/input-event",
+          "apiName": "InputEvent",
+          "kind": "interface",
+          "tags": [
+            "InputEvent",
+            "data",
+            "inputType",
+            "composing"
+          ],
+          "variants": [
+            {
+              "id": "data-default",
+              "label": "Основной",
+              "group": {
+                "id": "data",
+                "label": "Данные"
+              },
+              "route": "dom/interfaces/input-event/data/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-input-event.ts",
+                "export": "story_data_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "composition-event",
+          "label": "CompositionEvent",
+          "route": "dom/interfaces/composition-event",
+          "apiName": "CompositionEvent",
+          "kind": "interface",
+          "tags": [
+            "CompositionEvent",
+            "composition",
+            "data"
+          ],
+          "variants": [
+            {
+              "id": "data-default",
+              "label": "Основной",
+              "group": {
+                "id": "data",
+                "label": "Данные"
+              },
+              "route": "dom/interfaces/composition-event/data/default",
+              "module": {
+                "path": "./stories/subjects/dom-interfaces-composition-event.ts",
+                "export": "story_data_default"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "elements-primitives",
+      "label": "Примитивы",
+      "route": "elements/primitives",
+      "group": {
+        "id": "elements",
+        "label": "Элементы"
+      },
+      "subjects": [
+        {
+          "id": "div",
+          "label": "Контейнер",
+          "route": "elements/primitives/div",
+          "apiName": "div",
+          "kind": "element",
+          "tags": [
+            "примитивы",
+            "контейнер",
+            "div",
+            "оформление",
+            "фон",
+            "·",
+            "box",
+            "container",
+            "scroll"
+          ],
+          "variants": [
+            {
+              "id": "basic-background",
+              "label": "Фон",
+              "group": {
+                "id": "basic",
+                "label": "Оформление"
+              },
+              "route": "elements/primitives/div/basic/background",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-div.ts",
+                "export": "story_basic_background"
+              }
+            },
+            {
+              "id": "basic-border",
+              "label": "Граница",
+              "group": {
+                "id": "basic",
+                "label": "Оформление"
+              },
+              "route": "elements/primitives/div/basic/border",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-div.ts",
+                "export": "story_basic_border"
+              }
+            },
+            {
+              "id": "basic-padding",
+              "label": "Отступы",
+              "group": {
+                "id": "basic",
+                "label": "Оформление"
+              },
+              "route": "elements/primitives/div/basic/padding",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-div.ts",
+                "export": "story_basic_padding"
+              }
+            },
+            {
+              "id": "basic-z-index",
+              "label": "Слои",
+              "group": {
+                "id": "basic",
+                "label": "Оформление"
+              },
+              "route": "elements/primitives/div/basic/z-index",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-div.ts",
+                "export": "story_basic_z_index"
+              }
+            },
+            {
+              "id": "overflow-nested",
+              "label": "Вложенная скруглённая",
+              "group": {
+                "id": "overflow",
+                "label": "Обрезка содержимого"
+              },
+              "route": "elements/primitives/div/overflow/nested",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-div.ts",
+                "export": "story_overflow_nested"
+              }
+            },
+            {
+              "id": "scroll-vertical",
+              "label": "Вертикальная",
+              "group": {
+                "id": "scroll",
+                "label": "Прокрутка"
+              },
+              "route": "elements/primitives/div/scroll/vertical",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-div.ts",
+                "export": "story_scroll_vertical"
+              }
+            },
+            {
+              "id": "scroll-horizontal",
+              "label": "Горизонтальная",
+              "group": {
+                "id": "scroll",
+                "label": "Прокрутка"
+              },
+              "route": "elements/primitives/div/scroll/horizontal",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-div.ts",
+                "export": "story_scroll_horizontal"
+              }
+            },
+            {
+              "id": "scroll-both",
+              "label": "По двум осям",
+              "group": {
+                "id": "scroll",
+                "label": "Прокрутка"
+              },
+              "route": "elements/primitives/div/scroll/both",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-div.ts",
+                "export": "story_scroll_both"
+              }
+            }
+          ]
+        },
+        {
+          "id": "span",
+          "label": "Строка текста",
+          "route": "elements/primitives/span",
+          "apiName": "span",
+          "kind": "element",
+          "tags": [
+            "примитивы",
+            "строка",
+            "текста",
+            "span",
+            "выравнивание",
+            "слева",
+            "·",
+            "text",
+            "align"
+          ],
+          "variants": [
+            {
+              "id": "content-left",
+              "label": "Слева",
+              "group": {
+                "id": "content",
+                "label": "Выравнивание"
+              },
+              "route": "elements/primitives/span/content/left",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-span.ts",
+                "export": "story_content_left"
+              }
+            },
+            {
+              "id": "content-center",
+              "label": "По центру",
+              "group": {
+                "id": "content",
+                "label": "Выравнивание"
+              },
+              "route": "elements/primitives/span/content/center",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-span.ts",
+                "export": "story_content_center"
+              }
+            },
+            {
+              "id": "content-right",
+              "label": "Справа",
+              "group": {
+                "id": "content",
+                "label": "Выравнивание"
+              },
+              "route": "elements/primitives/span/content/right",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-span.ts",
+                "export": "story_content_right"
+              }
+            }
+          ]
+        },
+        {
+          "id": "button",
+          "label": "Кнопка",
+          "route": "elements/primitives/button",
+          "apiName": "button",
+          "kind": "element",
+          "tags": [
+            "примитивы",
+            "кнопка",
+            "button",
+            "состояние",
+            "обычная",
+            "·",
+            "action",
+            "pointer",
+            "disabled"
+          ],
+          "variants": [
+            {
+              "id": "state-default",
+              "label": "Обычная",
+              "group": {
+                "id": "state",
+                "label": "Состояние"
+              },
+              "route": "elements/primitives/button/state/default",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-button.ts",
+                "export": "story_state_default"
+              }
+            },
+            {
+              "id": "state-disabled",
+              "label": "Недоступная",
+              "group": {
+                "id": "state",
+                "label": "Состояние"
+              },
+              "route": "elements/primitives/button/state/disabled",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-button.ts",
+                "export": "story_state_disabled"
+              }
+            },
+            {
+              "id": "state-clickable",
+              "label": "Интерактивная",
+              "group": {
+                "id": "state",
+                "label": "Состояние"
+              },
+              "route": "elements/primitives/button/state/clickable",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-button.ts",
+                "export": "story_state_clickable"
+              }
+            }
+          ]
+        },
+        {
+          "id": "input",
+          "label": "Текстовый ввод",
+          "route": "elements/primitives/input",
+          "apiName": "input",
+          "kind": "element",
+          "tags": [
+            "примитивы",
+            "текстовый",
+            "ввод",
+            "input",
+            "состояние",
+            "неактивный",
+            "·",
+            "keyboard",
+            "value",
+            "placeholder"
+          ],
+          "variants": [
+            {
+              "id": "state-inactive",
+              "label": "Неактивный",
+              "group": {
+                "id": "state",
+                "label": "Состояние"
+              },
+              "route": "elements/primitives/input/state/inactive",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-input.ts",
+                "export": "story_state_inactive"
+              }
+            },
+            {
+              "id": "state-active",
+              "label": "Активный",
+              "group": {
+                "id": "state",
+                "label": "Состояние"
+              },
+              "route": "elements/primitives/input/state/active",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-input.ts",
+                "export": "story_state_active"
+              }
+            },
+            {
+              "id": "state-disabled",
+              "label": "Недоступный",
+              "group": {
+                "id": "state",
+                "label": "Состояние"
+              },
+              "route": "elements/primitives/input/state/disabled",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-input.ts",
+                "export": "story_state_disabled"
+              }
+            }
+          ]
+        },
+        {
+          "id": "select",
+          "label": "Выбор значения",
+          "route": "elements/primitives/select",
+          "apiName": "select",
+          "kind": "element",
+          "tags": [
+            "примитивы",
+            "выбор",
+            "значения",
+            "select",
+            "состояние",
+            "неактивный",
+            "·",
+            "value",
+            "options",
+            "dropdown",
+            "disabled"
+          ],
+          "variants": [
+            {
+              "id": "state-inactive",
+              "label": "Неактивный",
+              "group": {
+                "id": "state",
+                "label": "Состояние"
+              },
+              "route": "elements/primitives/select/state/inactive",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-select.ts",
+                "export": "story_state_inactive"
+              }
+            },
+            {
+              "id": "state-active",
+              "label": "Активный",
+              "group": {
+                "id": "state",
+                "label": "Состояние"
+              },
+              "route": "elements/primitives/select/state/active",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-select.ts",
+                "export": "story_state_active"
+              }
+            },
+            {
+              "id": "state-open",
+              "label": "Раскрытый",
+              "group": {
+                "id": "state",
+                "label": "Состояние"
+              },
+              "route": "elements/primitives/select/state/open",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-select.ts",
+                "export": "story_state_open"
+              }
+            },
+            {
+              "id": "state-header",
+              "label": "С заголовком",
+              "group": {
+                "id": "state",
+                "label": "Состояние"
+              },
+              "route": "elements/primitives/select/state/header",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-select.ts",
+                "export": "story_state_header"
+              }
+            },
+            {
+              "id": "state-flipped",
+              "label": "Сверху",
+              "group": {
+                "id": "state",
+                "label": "Состояние"
+              },
+              "route": "elements/primitives/select/state/flipped",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-select.ts",
+                "export": "story_state_flipped"
+              }
+            },
+            {
+              "id": "state-disabled",
+              "label": "Недоступный",
+              "group": {
+                "id": "state",
+                "label": "Состояние"
+              },
+              "route": "elements/primitives/select/state/disabled",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-select.ts",
+                "export": "story_state_disabled"
+              }
+            }
+          ]
+        },
+        {
+          "id": "popover",
+          "label": "Всплывающий слой",
+          "route": "elements/primitives/popover",
+          "apiName": "popover",
+          "kind": "element",
+          "tags": [
+            "примитивы",
+            "всплывающий",
+            "слой",
+            "popover",
+            "состояние",
+            "закрыт",
+            "·",
+            "popup",
+            "overlay",
+            "outside",
+            "escape",
+            "flip"
+          ],
+          "variants": [
+            {
+              "id": "state-closed",
+              "label": "Закрыт",
+              "group": {
+                "id": "state",
+                "label": "Состояние"
+              },
+              "route": "elements/primitives/popover/state/closed",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-popover.ts",
+                "export": "story_state_closed"
+              }
+            },
+            {
+              "id": "state-open",
+              "label": "Открыт",
+              "group": {
+                "id": "state",
+                "label": "Состояние"
+              },
+              "route": "elements/primitives/popover/state/open",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-popover.ts",
+                "export": "story_state_open"
+              }
+            }
+          ]
+        },
+        {
+          "id": "img",
+          "label": "Изображение",
+          "route": "elements/primitives/img",
+          "apiName": "img",
+          "kind": "element",
+          "tags": [
+            "примитивы",
+            "изображение",
+            "img",
+            "вписывание",
+            "заполнение",
+            "·",
+            "image",
+            "cover",
+            "contain"
+          ],
+          "variants": [
+            {
+              "id": "fit-cover",
+              "label": "Заполнение",
+              "group": {
+                "id": "fit",
+                "label": "Вписывание"
+              },
+              "route": "elements/primitives/img/fit/cover",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-img.ts",
+                "export": "story_fit_cover"
+              }
+            },
+            {
+              "id": "fit-contain",
+              "label": "Целиком",
+              "group": {
+                "id": "fit",
+                "label": "Вписывание"
+              },
+              "route": "elements/primitives/img/fit/contain",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-img.ts",
+                "export": "story_fit_contain"
+              }
+            }
+          ]
+        },
+        {
+          "id": "list",
+          "label": "Список",
+          "route": "elements/primitives/list",
+          "apiName": "ul / li",
+          "kind": "element",
+          "tags": [
+            "примитивы",
+            "список",
+            "ul",
+            "/",
+            "li",
+            "режим",
+            "обычный",
+            "·",
+            "list",
+            "rows",
+            "scroll"
+          ],
+          "variants": [
+            {
+              "id": "mode-regular",
+              "label": "Обычный",
+              "group": {
+                "id": "mode",
+                "label": "Режим"
+              },
+              "route": "elements/primitives/list/mode/regular",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-list.ts",
+                "export": "story_mode_regular"
+              }
+            },
+            {
+              "id": "mode-dense",
+              "label": "Плотный",
+              "group": {
+                "id": "mode",
+                "label": "Режим"
+              },
+              "route": "elements/primitives/list/mode/dense",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-list.ts",
+                "export": "story_mode_dense"
+              }
+            },
+            {
+              "id": "mode-interactive",
+              "label": "Интерактивный",
+              "group": {
+                "id": "mode",
+                "label": "Режим"
+              },
+              "route": "elements/primitives/list/mode/interactive",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-list.ts",
+                "export": "story_mode_interactive"
+              }
+            },
+            {
+              "id": "mode-scroll",
+              "label": "С прокруткой",
+              "group": {
+                "id": "mode",
+                "label": "Режим"
+              },
+              "route": "elements/primitives/list/mode/scroll",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-list.ts",
+                "export": "story_mode_scroll"
+              }
+            }
+          ]
+        },
+        {
+          "id": "status-bar",
+          "label": "Строка состояния",
+          "route": "elements/primitives/status-bar",
+          "apiName": "statusBar",
+          "kind": "element",
+          "tags": [
+            "примитивы",
+            "строка",
+            "состояния",
+            "statusbar",
+            "содержимое",
+            "статистика",
+            "·",
+            "status",
+            "statistics",
+            "version",
+            "footer"
+          ],
+          "variants": [
+            {
+              "id": "content-statistics",
+              "label": "Статистика",
+              "group": {
+                "id": "content",
+                "label": "Содержимое"
+              },
+              "route": "elements/primitives/status-bar/content/statistics",
+              "module": {
+                "path": "./stories/subjects/elements-primitives-status-bar.ts",
+                "export": "story_content_statistics"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "elements-style",
+      "label": "Стили",
+      "route": "elements/style",
+      "group": {
+        "id": "elements",
+        "label": "Элементы"
+      },
+      "subjects": [
+        {
+          "id": "css",
+          "label": "CSS-свойства",
+          "route": "elements/style/css",
+          "apiName": "StyleProps",
+          "kind": "capability",
+          "tags": [
+            "стили",
+            "css-свойства",
+            "styleprops",
+            "отступы",
+            "основной",
+            "·",
+            "style",
+            "padding",
+            "border",
+            "typography"
+          ],
+          "variants": [
+            {
+              "id": "padding-default",
+              "label": "Основной",
+              "group": {
+                "id": "padding",
+                "label": "Отступы"
+              },
+              "route": "elements/style/css/padding/default",
+              "module": {
+                "path": "./stories/subjects/elements-style-css.ts",
+                "export": "story_padding_default"
+              }
+            },
+            {
+              "id": "flex-default",
+              "label": "Основной",
+              "group": {
+                "id": "flex",
+                "label": "Flex"
+              },
+              "route": "elements/style/css/flex/default",
+              "module": {
+                "path": "./stories/subjects/elements-style-css.ts",
+                "export": "story_flex_default"
+              }
+            },
+            {
+              "id": "border-rounded",
+              "label": "Скруглённая",
+              "group": {
+                "id": "border",
+                "label": "Граница"
+              },
+              "route": "elements/style/css/border/rounded",
+              "module": {
+                "path": "./stories/subjects/elements-style-css.ts",
+                "export": "story_border_rounded"
+              }
+            },
+            {
+              "id": "border-capsule",
+              "label": "Капсула",
+              "group": {
+                "id": "border",
+                "label": "Граница"
+              },
+              "route": "elements/style/css/border/capsule",
+              "module": {
+                "path": "./stories/subjects/elements-style-css.ts",
+                "export": "story_border_capsule"
+              }
+            },
+            {
+              "id": "color-default",
+              "label": "Палитра",
+              "group": {
+                "id": "color",
+                "label": "Цвет"
+              },
+              "route": "elements/style/css/color/default",
+              "module": {
+                "path": "./stories/subjects/elements-style-css.ts",
+                "export": "story_color_default"
+              }
+            },
+            {
+              "id": "typography-default",
+              "label": "Иерархия",
+              "group": {
+                "id": "typography",
+                "label": "Типографика"
+              },
+              "route": "elements/style/css/typography/default",
+              "module": {
+                "path": "./stories/subjects/elements-style-css.ts",
+                "export": "story_typography_default"
+              }
+            }
+          ]
+        },
+        {
+          "id": "theme",
+          "label": "Тема",
+          "route": "elements/style/theme",
+          "apiName": "palette",
+          "kind": "capability",
+          "tags": [
+            "стили",
+            "тема",
+            "palette",
+            "акцент",
+            "голубой",
+            "·",
+            "theme",
+            "tokens",
+            "color"
+          ],
+          "variants": [
+            {
+              "id": "tone-cyan",
+              "label": "Голубой",
+              "group": {
+                "id": "tone",
+                "label": "Акцент"
+              },
+              "route": "elements/style/theme/tone/cyan",
+              "module": {
+                "path": "./stories/subjects/elements-style-theme.ts",
+                "export": "story_tone_cyan"
+              }
+            },
+            {
+              "id": "tone-green",
+              "label": "Зелёный",
+              "group": {
+                "id": "tone",
+                "label": "Акцент"
+              },
+              "route": "elements/style/theme/tone/green",
+              "module": {
+                "path": "./stories/subjects/elements-style-theme.ts",
+                "export": "story_tone_green"
+              }
+            },
+            {
+              "id": "tone-orange",
+              "label": "Оранжевый",
+              "group": {
+                "id": "tone",
+                "label": "Акцент"
+              },
+              "route": "elements/style/theme/tone/orange",
+              "module": {
+                "path": "./stories/subjects/elements-style-theme.ts",
+                "export": "story_tone_orange"
+              }
+            },
+            {
+              "id": "tone-red",
+              "label": "Красный",
+              "group": {
+                "id": "tone",
+                "label": "Акцент"
+              },
+              "route": "elements/style/theme/tone/red",
+              "module": {
+                "path": "./stories/subjects/elements-style-theme.ts",
+                "export": "story_tone_red"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "elements-events",
+      "label": "События",
+      "route": "elements/events",
+      "group": {
+        "id": "elements",
+        "label": "Элементы"
+      },
+      "subjects": [
+        {
+          "id": "pointer",
+          "label": "Указатель",
+          "route": "elements/events/pointer",
+          "apiName": "InteractiveElementProps",
+          "kind": "capability",
+          "tags": [
+            "события",
+            "указатель",
+            "interactiveelementprops",
+            "состояние",
+            "ожидание",
+            "·",
+            "pointer",
+            "hover",
+            "press",
+            "click"
+          ],
+          "variants": [
+            {
+              "id": "state-idle",
+              "label": "Ожидание",
+              "group": {
+                "id": "state",
+                "label": "Состояние"
+              },
+              "route": "elements/events/pointer/state/idle",
+              "module": {
+                "path": "./stories/subjects/elements-events-pointer.ts",
+                "export": "story_state_idle"
+              }
+            },
+            {
+              "id": "state-hover",
+              "label": "Наведение",
+              "group": {
+                "id": "state",
+                "label": "Состояние"
+              },
+              "route": "elements/events/pointer/state/hover",
+              "module": {
+                "path": "./stories/subjects/elements-events-pointer.ts",
+                "export": "story_state_hover"
+              }
+            },
+            {
+              "id": "state-press",
+              "label": "Нажатие",
+              "group": {
+                "id": "state",
+                "label": "Состояние"
+              },
+              "route": "elements/events/pointer/state/press",
+              "module": {
+                "path": "./stories/subjects/elements-events-pointer.ts",
+                "export": "story_state_press"
+              }
+            },
+            {
+              "id": "state-release",
+              "label": "Отпускание",
+              "group": {
+                "id": "state",
+                "label": "Состояние"
+              },
+              "route": "elements/events/pointer/state/release",
+              "module": {
+                "path": "./stories/subjects/elements-events-pointer.ts",
+                "export": "story_state_release"
+              }
+            },
+            {
+              "id": "state-click",
+              "label": "Клик",
+              "group": {
+                "id": "state",
+                "label": "Состояние"
+              },
+              "route": "elements/events/pointer/state/click",
+              "module": {
+                "path": "./stories/subjects/elements-events-pointer.ts",
+                "export": "story_state_click"
+              }
+            },
+            {
+              "id": "state-disabled",
+              "label": "Недоступно",
+              "group": {
+                "id": "state",
+                "label": "Состояние"
+              },
+              "route": "elements/events/pointer/state/disabled",
+              "module": {
+                "path": "./stories/subjects/elements-events-pointer.ts",
+                "export": "story_state_disabled"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
