@@ -3,6 +3,7 @@ import type {DocumentInteractionState} from "./pseudo-state.ts"
 
 export type RenderDisplay = "block" | "inline" | "flex" | "none"
 export type RenderFlexDirection = "row" | "column"
+export type RenderFlexWrap = "nowrap" | "wrap" | "wrap-reverse"
 export type RenderWhiteSpace = "normal" | "pre" | "nowrap"
 export type RenderTextAlign = "start" | "end" | "left" | "right" | "center"
 export type RenderObjectFit = "cover" | "contain"

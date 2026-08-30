@@ -64103,7 +64103,7 @@
         "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
       },
       "limitations": [
-        "No flex wrap, order, align-self, or complete Flexbox sizing algorithm."
+        "Balance, reverse main axes, flex-flow, order, align-self, align-content, separate row/column gaps, and complete intrinsic multi-line Flexbox sizing remain unsupported."
       ],
       "owner": {
         "package": "@zavx0z/renderer",
@@ -78092,7 +78092,7 @@
         "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
       },
       "limitations": [
-        "No flex wrap, order, align-self, or complete Flexbox sizing algorithm."
+        "Balance, reverse main axes, flex-flow, order, align-self, align-content, separate row/column gaps, and complete intrinsic multi-line Flexbox sizing remain unsupported."
       ],
       "owner": {
         "package": "@zavx0z/renderer",
@@ -78152,7 +78152,7 @@
         "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
       },
       "limitations": [
-        "No flex wrap, order, align-self, or complete Flexbox sizing algorithm."
+        "Balance, reverse main axes, flex-flow, order, align-self, align-content, separate row/column gaps, and complete intrinsic multi-line Flexbox sizing remain unsupported."
       ],
       "owner": {
         "package": "@zavx0z/renderer",
@@ -78212,7 +78212,7 @@
         "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
       },
       "limitations": [
-        "No flex wrap, order, align-self, or complete Flexbox sizing algorithm."
+        "Balance, reverse main axes, flex-flow, order, align-self, align-content, separate row/column gaps, and complete intrinsic multi-line Flexbox sizing remain unsupported."
       ],
       "owner": {
         "package": "@zavx0z/renderer",
@@ -78323,7 +78323,7 @@
         "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
       },
       "limitations": [
-        "No flex wrap, order, align-self, or complete Flexbox sizing algorithm."
+        "Balance, reverse main axes, flex-flow, order, align-self, align-content, separate row/column gaps, and complete intrinsic multi-line Flexbox sizing remain unsupported."
       ],
       "owner": {
         "package": "@zavx0z/renderer",
@@ -78434,7 +78434,7 @@
         "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
       },
       "limitations": [
-        "No flex wrap, order, align-self, or complete Flexbox sizing algorithm."
+        "Balance, reverse main axes, flex-flow, order, align-self, align-content, separate row/column gaps, and complete intrinsic multi-line Flexbox sizing remain unsupported."
       ],
       "owner": {
         "package": "@zavx0z/renderer",
@@ -78457,7 +78457,7 @@
     {
       "blockedBy": [],
       "blocks": [],
-      "conformance": "none",
+      "conformance": "adapted",
       "consumers": [],
       "evidence": [
         {
@@ -78469,23 +78469,58 @@
           "type": "external-spec"
         },
         {
-          "doesNotProve": "Computed, layout, paint, hit-test, or backend support for this property.",
-          "lines": "573-738",
+          "doesNotProve": "The balance value, CSS-wide keywords, animation, CSSOM serialization, and complete Flexbox grammar.",
           "path": "packages/core/src/css.ts",
-          "proves": "Unknown declarations can enter the cascade map.",
+          "proves": "The computed-style stage admits nowrap, wrap, and wrap-reverse with nowrap as the initial value.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "parseDeclarations/computeStyle",
+          "revision": "6aac3e2960ff04ff2450c605c25fd1c54dfc081e+dirty",
+          "symbol": "ComputedStyle.flexWrap/parseFlexWrap",
           "type": "implementation"
+        },
+        {
+          "doesNotProve": "align-content, separate row/column gaps, reverse main axes, order/align-self, or complete intrinsic multi-line Flexbox sizing.",
+          "path": "packages/core/src/renderer.ts",
+          "proves": "The CPU layout stage forms bounded row or column flex lines, distributes main-axis flex sizing per line, and reverses the cross-axis line order for wrap-reverse.",
+          "repository": "renderer",
+          "revision": "6aac3e2960ff04ff2450c605c25fd1c54dfc081e+dirty",
+          "symbol": "createFlexLines/placeFlexChildren",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Full CSS Flexbox conformance, native browser pixels, or the unsupported values and properties named in the limitation.",
+          "path": "packages/core/test/flex-wrap.test.ts",
+          "proves": "Observable computed values and frame boxes prove keyword validation, variable substitution, invalid-declaration cascade fallback, nowrap, definite-width row wrapping with auto cross growth, per-line grow/shrink/justification/alignment, definite-height column wrapping, auto-height non-wrapping, scalar gap, oversized-base line isolation, and wrap-reverse cross-end packing.",
+          "repository": "renderer",
+          "revision": "6aac3e2960ff04ff2450c605c25fd1c54dfc081e+dirty",
+          "symbol": "flex-wrap",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Live WebGPU pixels, every aggregate route, wrap-reverse, or full CSS Flexbox conformance.",
+          "path": "src/external/browser/aggregate-presentation.test.tsx",
+          "proves": "The compiled Storybook owner uses row plus flex-wrap without coordinate packing, preserves real same-Document child roots, places two 280px cards on the first 600px row and the next card on a later row with an 8px gap, and lets a single child fill the grid content box.",
+          "repository": "storybook",
+          "revision": "035d5fbb559ddf886c38f5c212e0e6484c8d5e75+dirty",
+          "symbol": "external Storybook aggregate presentation",
+          "type": "integration-test"
+        },
+        {
+          "doesNotProve": "Every viewport size, wrap-reverse, unsupported Flexbox properties, or native browser equivalence.",
+          "path": "storybook://captures/capture_uzjbdZD1PD3ANOAZMYubPIZR",
+          "proves": "The exact ready/presented UI inputs overview renders sixteen real owner roots as three 280px columns with 8px gaps on one visible canvas, with empty diagnostics and console output.",
+          "repository": "external",
+          "revision": "ea7420f0ec07391c7de62088",
+          "symbol": "@ui/components/components/inputs",
+          "type": "visual-evidence"
         }
       ],
       "id": "css.properties.flex-wrap",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-30",
+        "revision": "6aac3e2960ff04ff2450c605c25fd1c54dfc081e+dirty"
       },
       "limitations": [
-        "The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it."
+        "Bounded to nowrap, wrap, and wrap-reverse on the existing row/column Flex subset: row wrapping uses its definite or auto-fill width, column wrapping requires a definite height, and one scalar gap serves both axes; balance and other invalid values are discarded before cascade priority, while align-content, row-gap/column-gap, flex-flow, row-reverse/column-reverse, order, align-self, and complete intrinsic multi-line sizing remain unsupported."
       ],
       "owner": {
         "package": "@zavx0z/renderer",
@@ -78493,17 +78528,17 @@
         "stage": "cpu"
       },
       "stages": {
-        "browser": "unsupported",
+        "browser": "not-applicable",
         "cascade": "partial",
-        "computed": "unsupported",
+        "computed": "partial",
         "evidence": "implemented",
-        "hit-test": "unsupported",
-        "layout": "unsupported",
-        "paint": "unsupported",
+        "hit-test": "not-applicable",
+        "layout": "partial",
+        "paint": "not-applicable",
         "parse": "partial",
-        "webgpu": "unsupported"
+        "webgpu": "not-applicable"
       },
-      "status": "unsupported"
+      "status": "partial"
     },
     {
       "blockedBy": [],
@@ -83222,7 +83257,7 @@
         "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
       },
       "limitations": [
-        "No flex wrap, order, align-self, or complete Flexbox sizing algorithm."
+        "Balance, reverse main axes, flex-flow, order, align-self, align-content, separate row/column gaps, and complete intrinsic multi-line Flexbox sizing remain unsupported."
       ],
       "owner": {
         "package": "@zavx0z/renderer",
@@ -136992,31 +137027,49 @@
       "consumers": [],
       "evidence": [
         {
-          "doesNotProve": "The complete CSS/browser algorithm.",
-          "path": "packages/core/src/renderer.ts",
-          "proves": "The bounded CPU frame stage exists.",
+          "doesNotProve": "Runtime behavior or full CSS Flexbox conformance.",
+          "path": "packages/core/requirements.md",
+          "proves": "The owner contract defines the bounded multi-line Flex semantics and explicit exclusions.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "flex-layout",
+          "revision": "6aac3e2960ff04ff2450c605c25fd1c54dfc081e+dirty",
+          "symbol": "RENDERER-CPU-004",
+          "type": "requirement"
+        },
+        {
+          "doesNotProve": "The excluded Flexbox values and complete standard algorithms.",
+          "path": "packages/core/src/renderer.ts",
+          "proves": "The CPU owner implements single-line and bounded multi-line row/column Flex placement.",
+          "repository": "renderer",
+          "revision": "6aac3e2960ff04ff2450c605c25fd1c54dfc081e+dirty",
+          "symbol": "createFlexLines/placeFlexChildren",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Unsupported values and general incremental coverage.",
+          "doesNotProve": "Multi-line packing and full CSS Flexbox conformance.",
           "path": "packages/core/test/renderer.test.ts",
-          "proves": "Observable behavior for the bounded subset.",
+          "proves": "Observable frames prove the existing bounded single-line grow/shrink/justification/alignment contract.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "flex-layout",
+          "revision": "6aac3e2960ff04ff2450c605c25fd1c54dfc081e+dirty",
+          "symbol": "production CSS box and flex slice",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Full CSS Flexbox conformance and the explicitly excluded values.",
+          "path": "packages/core/test/flex-wrap.test.ts",
+          "proves": "Observable computed values and frame boxes prove the bounded row/column nowrap, wrap, wrap-reverse, per-line sizing/alignment, gap, definite-boundary, and cross-axis reversal contract.",
+          "repository": "renderer",
+          "revision": "6aac3e2960ff04ff2450c605c25fd1c54dfc081e+dirty",
+          "symbol": "flex-wrap",
           "type": "unit-test"
         }
       ],
       "id": "renderer.features.flex-layout",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-30",
+        "revision": "6aac3e2960ff04ff2450c605c25fd1c54dfc081e+dirty"
       },
       "limitations": [
-        "The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests."
+        "The bounded owner supports row/column single-line Flex and nowrap/wrap/wrap-reverse multi-line packing with one scalar gap and per-line grow/shrink/justification/align-items; balance, reverse main axes, flex-flow, order, align-self, align-content, separate row/column gaps, and complete intrinsic multi-line Flexbox sizing remain unsupported."
       ],
       "owner": {
         "package": "@zavx0z/renderer",

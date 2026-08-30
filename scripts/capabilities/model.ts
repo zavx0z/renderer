@@ -145,6 +145,7 @@ export interface WorkspaceRoots {
   renderer: string
   template: string
   engine: string
+  storybook: string
   ui: string
   node: string
   metafor: string
@@ -159,6 +160,7 @@ export const workspaceRoots: WorkspaceRoots = {
   renderer: rendererRoot,
   template: resolve(repozitariumRoot, "template"),
   engine: resolve(repozitariumRoot, "webxr-space/projects/engine"),
+  storybook: resolve(repozitariumRoot, "storybook"),
   ui: resolve(repozitariumRoot, "webxr-space/projects/ui"),
   node: resolve(repozitariumRoot, "webxr-space/projects/node"),
   metafor: resolve(repozitariumRoot, "metafor"),

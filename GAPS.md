@@ -1800,7 +1800,7 @@
 | P3 | `css.functions.xywh-function` | unsupported | @zavx0z/renderer/cpu | 0 | No implementation of this pinned CSS feature was found. |
 | P3 | `css.properties.accent-color` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.align-content` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
-| P3 | `css.properties.align-items` | partial | @zavx0z/renderer/cpu | 0 | No flex wrap, order, align-self, or complete Flexbox sizing algorithm. |
+| P3 | `css.properties.align-items` | partial | @zavx0z/renderer/cpu | 0 | Balance, reverse main axes, flex-flow, order, align-self, align-content, separate row/column gaps, and complete intrinsic multi-line Flexbox sizing remain unsupported. |
 | P3 | `css.properties.align-self` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.alignment-baseline` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.all` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
@@ -2069,14 +2069,14 @@
 | P3 | `css.properties.fill-rule` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.fill-size` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.filter` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
-| P3 | `css.properties.flex` | partial | @zavx0z/renderer/cpu | 0 | No flex wrap, order, align-self, or complete Flexbox sizing algorithm. |
-| P3 | `css.properties.flex-basis` | partial | @zavx0z/renderer/cpu | 0 | No flex wrap, order, align-self, or complete Flexbox sizing algorithm. |
-| P3 | `css.properties.flex-direction` | partial | @zavx0z/renderer/cpu | 0 | No flex wrap, order, align-self, or complete Flexbox sizing algorithm. |
+| P3 | `css.properties.flex` | partial | @zavx0z/renderer/cpu | 0 | Balance, reverse main axes, flex-flow, order, align-self, align-content, separate row/column gaps, and complete intrinsic multi-line Flexbox sizing remain unsupported. |
+| P3 | `css.properties.flex-basis` | partial | @zavx0z/renderer/cpu | 0 | Balance, reverse main axes, flex-flow, order, align-self, align-content, separate row/column gaps, and complete intrinsic multi-line Flexbox sizing remain unsupported. |
+| P3 | `css.properties.flex-direction` | partial | @zavx0z/renderer/cpu | 0 | Balance, reverse main axes, flex-flow, order, align-self, align-content, separate row/column gaps, and complete intrinsic multi-line Flexbox sizing remain unsupported. |
 | P3 | `css.properties.flex-flow` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
-| P3 | `css.properties.flex-grow` | partial | @zavx0z/renderer/cpu | 0 | No flex wrap, order, align-self, or complete Flexbox sizing algorithm. |
+| P3 | `css.properties.flex-grow` | partial | @zavx0z/renderer/cpu | 0 | Balance, reverse main axes, flex-flow, order, align-self, align-content, separate row/column gaps, and complete intrinsic multi-line Flexbox sizing remain unsupported. |
 | P3 | `css.properties.flex-line-count` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
-| P3 | `css.properties.flex-shrink` | partial | @zavx0z/renderer/cpu | 0 | No flex wrap, order, align-self, or complete Flexbox sizing algorithm. |
-| P3 | `css.properties.flex-wrap` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
+| P3 | `css.properties.flex-shrink` | partial | @zavx0z/renderer/cpu | 0 | Balance, reverse main axes, flex-flow, order, align-self, align-content, separate row/column gaps, and complete intrinsic multi-line Flexbox sizing remain unsupported. |
+| P3 | `css.properties.flex-wrap` | partial | @zavx0z/renderer/cpu | 1 | Bounded to nowrap, wrap, and wrap-reverse on the existing row/column Flex subset: row wrapping uses its definite or auto-fill width, column wrapping requires a definite height, and one scalar gap serves both axes; balance and other invalid values are discarded before cascade priority, while align-content, row-gap/column-gap, flex-flow, row-reverse/column-reverse, order, align-self, and complete intrinsic multi-line sizing remain unsupported. |
 | P3 | `css.properties.float` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.float-defer` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.float-offset` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
@@ -2168,7 +2168,7 @@
 | P3 | `css.properties.interest-delay-start` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.interpolate-size` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.isolation` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
-| P3 | `css.properties.justify-content` | partial | @zavx0z/renderer/cpu | 0 | No flex wrap, order, align-self, or complete Flexbox sizing algorithm. |
+| P3 | `css.properties.justify-content` | partial | @zavx0z/renderer/cpu | 0 | Balance, reverse main axes, flex-flow, order, align-self, align-content, separate row/column gaps, and complete intrinsic multi-line Flexbox sizing remain unsupported. |
 | P3 | `css.properties.justify-items` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.justify-self` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.left` | partial | @zavx0z/renderer/cpu | 0 | Only the explicitly admitted property values and bounded CPU/backend algorithms are implemented. |
@@ -7836,7 +7836,7 @@
 | P4 | `renderer.features.computed-style` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
 | P4 | `renderer.features.default-activation` | partial | @zavx0z/renderer/cpu | 0 | Implemented for the bounded rendered-control set; complete browser Pointer Events and default actions remain outside Core. |
 | P4 | `renderer.features.display-list` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
-| P4 | `renderer.features.flex-layout` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
+| P4 | `renderer.features.flex-layout` | partial | @zavx0z/renderer/cpu | 0 | The bounded owner supports row/column single-line Flex and nowrap/wrap/wrap-reverse multi-line packing with one scalar gap and per-line grow/shrink/justification/align-items; balance, reverse main axes, flex-flow, order, align-self, align-content, separate row/column gaps, and complete intrinsic multi-line Flexbox sizing remain unsupported. |
 | P4 | `renderer.features.form-control-projection` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
 | P4 | `renderer.features.geometry-readback` | unsupported | @zavx0z/renderer/cpu | 0 | The CPU renderer has no implementation of this internal platform capability. |
 | P4 | `renderer.features.hit-metadata` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |

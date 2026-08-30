@@ -99,6 +99,17 @@ grow/shrink, and grow/shrink/basis), the corresponding longhands,
 negative free space follows weighted shrink factors and honors resolved minima.
 Rows and columns own every child position, including padding, border and margin.
 
+The bounded multi-line Flex subset supports `flex-wrap: nowrap | wrap |
+wrap-reverse`. A row wraps against its definite or auto-fill content width; a
+column wraps only when it has a definite content height. Each line independently
+applies grow, shrink, `justify-content` and `align-items`. One scalar `gap`
+separates items and lines. An oversized first item remains on its own line and
+uses the existing flex-shrink law. `wrap-reverse` reverses the cross-axis line
+stack from the cross end without changing source order. `balance`,
+`row-reverse`/`column-reverse`, `flex-flow`, `order`, `align-self`,
+`align-content`, separate `row-gap`/`column-gap`, and the complete intrinsic
+multi-line Flexbox algorithm remain outside this contract.
+
 ## `RENDERER-CPU-005` — built-in defaults
 
 The renderer supplies a small user-agent sheet: `div` is block, `span` is

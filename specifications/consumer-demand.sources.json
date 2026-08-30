@@ -82,6 +82,16 @@
       "behavior": "Preserve source whitespace and prevent wrapping for read-only code lines."
     },
     {
+      "capability": "css.properties.flex-wrap",
+      "repository": "storybook",
+      "package": "@zavx0z/storybook",
+      "subject": "aggregate overview packing",
+      "scope": "storybook",
+      "path": "src/external/browser/aggregate-presentation.tsx",
+      "anchor": "data-storybook-aggregate-grid=\"\"",
+      "behavior": "Pack aggregate category and subject cards on shared flex lines while space remains, then move later cards to following lines without consumer-owned coordinates."
+    },
+    {
       "capability": "browser.features.number-input-proxy",
       "repository": "ui",
       "package": "@ui/components",
@@ -268,7 +278,7 @@
       "subject": "Cosmos display plane",
       "scope": "production",
       "path": "cosmos/internal/visual/main/index.ts",
-      "anchor": "runtime.addPlane({",
+      "anchor": "createdRuntime.addPlane({",
       "behavior": "Attach the Cosmos main root from the shared Experience Document to a stable world plane with the intended stylesheet and camera gestures."
     },
     {
@@ -278,7 +288,7 @@
       "subject": "Cosmos display dock",
       "scope": "production",
       "path": "cosmos/internal/visual/main/index.ts",
-      "anchor": "runtime.addOverlay({",
+      "anchor": "createdRuntime.addOverlay({",
       "behavior": "Attach the dock sibling root from the same Experience Document to a camera-locked overlay using the host stylesheet realm."
     },
     {
@@ -288,7 +298,7 @@
       "subject": "Cosmos presentation host",
       "scope": "production",
       "path": "cosmos/internal/visual/main/index.ts",
-      "anchor": "export const runtime = await createDocumentSpaceRuntime({",
+      "anchor": "const createdRuntime = await createDocumentSpaceRuntime({",
       "behavior": "Own one semantic Document, Canvas, Engine Renderer and Space for the Cosmos main plane and dock HUD projection."
     },
     {
@@ -358,7 +368,7 @@
       "subject": "Compiled dock migration",
       "scope": "production",
       "path": "cosmos/internal/visual/main/index.ts",
-      "anchor": "runtime.addOverlay({",
+      "anchor": "createdRuntime.addOverlay({",
       "behavior": "Compile linked .tsx component exports and remove stale imperative createButton usage without restoring legacy APIs."
     },
     {

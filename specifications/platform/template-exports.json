@@ -30,7 +30,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": "./bun",
-        "line": 16,
+        "line": 21,
         "path": "template:compiler/bun.ts",
         "repository": "template",
         "typeOnly": false
@@ -43,7 +43,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.bun",
       "spec": {
-        "anchor": "template:compiler/bun.ts#L16",
+        "anchor": "template:compiler/bun.ts#L21",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -56,7 +56,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": "./bun",
-        "line": 6,
+        "line": 11,
         "path": "template:compiler/bun.ts",
         "repository": "template",
         "typeOnly": true
@@ -69,7 +69,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.bun",
       "spec": {
-        "anchor": "template:compiler/bun.ts#L6",
+        "anchor": "template:compiler/bun.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"

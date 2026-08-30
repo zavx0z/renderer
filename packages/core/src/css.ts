@@ -8,6 +8,7 @@ import type {
   RenderDisplay,
   RenderEdges,
   RenderFlexDirection,
+  RenderFlexWrap,
   RenderJustifyContent,
   RenderMargin,
   RenderObjectFit,
@@ -70,6 +71,7 @@ export type ComputedStyle = Readonly<{
   display: RenderDisplay
   boxSizing: RenderBoxSizing
   flexDirection: RenderFlexDirection
+  flexWrap: RenderFlexWrap
   flexGrow: number
   flexShrink: number
   flexBasis: CSSLength | null
@@ -196,6 +198,7 @@ const CENTER_ORIGIN: ComputedTransformOrigin = Object.freeze({
 
 const customPropertyNamePattern = /^--(?:[A-Za-z_]|[^\x00-\x7f])(?:[A-Za-z0-9_-]|[^\x00-\x7f])*$/
 const deferredVariablePropertySet: ReadonlySet<string> = new Set([
+  "flex-wrap",
   "scrollbar-width",
   "text-align",
   "line-height",
@@ -404,6 +407,7 @@ export const computeStyle = (
     display: parseDisplay(readValue(values, "display"), tag),
     boxSizing: parseBoxSizing(readValue(values, "box-sizing")),
     flexDirection: parseFlexDirection(readValue(values, "flex-direction")),
+    flexWrap: parseFlexWrap(readValue(values, "flex-wrap")),
     flexGrow: nonNegativeNumber(readValue(values, "flex-grow"), 0),
     flexShrink: nonNegativeNumber(readValue(values, "flex-shrink"), 1),
     flexBasis: parseLength(readValue(values, "flex-basis"), fontSize),
@@ -948,6 +952,10 @@ const expandDeclaration = (
     if (deferredVariablePropertySet.has(property)) return [[property, value]]
   }
   switch (property) {
+    case "flex-wrap":
+      return validFlexWrap(value)
+        ? [["flex-wrap", value.trim().toLowerCase()]]
+        : []
     case "inline-size":
       return [["width", value]]
     case "block-size":
@@ -1572,6 +1580,22 @@ const parseBoxSizing = (value: string | undefined): RenderBoxSizing =>
 
 const parseFlexDirection = (value: string | undefined): RenderFlexDirection =>
   value?.trim().toLowerCase() === "column" ? "column" : "row"
+
+const parseFlexWrap = (value: string | undefined): RenderFlexWrap => {
+  switch (value?.trim().toLowerCase()) {
+    case "wrap":
+      return "wrap"
+    case "wrap-reverse":
+      return "wrap-reverse"
+    default:
+      return "nowrap"
+  }
+}
+
+const validFlexWrap = (value: string): boolean => {
+  const normalized = value.trim().toLowerCase()
+  return normalized === "nowrap" || normalized === "wrap" || normalized === "wrap-reverse"
+}
 
 const parseAlignItems = (value: string | undefined): RenderAlignItems => {
   switch (value?.trim().toLowerCase()) {
