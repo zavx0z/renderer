@@ -209,7 +209,8 @@ const ROOT_STYLE: ComputedStyle = Object.freeze({
     y: Object.freeze({unit: "percent", value: 50}),
   }),
   boxShadow: null,
-  gap: 0,
+  rowGap: 0,
+  columnGap: 0,
   margin: ZERO_EDGES,
   padding: ZERO_EDGES,
   borderWidths: ZERO_EDGES,
@@ -1151,7 +1152,9 @@ const measure = (
         ? explicitHeight
         : explicitHeight - edgeHeight,
   )
-  const children = flowChildren(layoutNode)
+  const children = layoutNode.style.display === "flex"
+    ? flexFlowChildren(layoutNode)
+    : flowChildren(layoutNode)
   const rowFlex = layoutNode.style.display === "flex" &&
     layoutNode.style.flexDirection === "row"
   const wrappingMainAvailable = layoutNode.style.display === "flex" &&
@@ -1185,8 +1188,13 @@ const measure = (
 
   let naturalContentWidth = 0
   let naturalContentHeight = 0
-  const gap = layoutNode.style.display === "flex" ? layoutNode.style.gap : 0
-  const gaps = Math.max(0, childSizes.length - 1) * gap
+  const mainGap = layoutNode.style.display === "flex"
+    ? flexMainGap(layoutNode.style, rowFlex)
+    : 0
+  const crossGap = layoutNode.style.display === "flex"
+    ? flexCrossGap(layoutNode.style, rowFlex)
+    : 0
+  const gaps = Math.max(0, childSizes.length - 1) * mainGap
 
   if (
     layoutNode.style.display === "flex" &&
@@ -1200,7 +1208,8 @@ const measure = (
       wrappingMainAvailable,
       childConstraintWidth,
       childConstraintHeight,
-      gap,
+      mainGap,
+      crossGap,
       state,
     )
     naturalContentWidth = wrappedContent.width
@@ -1284,6 +1293,13 @@ const flowChildren = (layoutNode: LayoutNode): readonly LayoutNode[] => {
     : children
 }
 
+const flexFlowChildren = (layoutNode: LayoutNode): readonly LayoutNode[] => {
+  const children = flowChildren(layoutNode)
+  return children.some((child) => child.style.display === "none" || child.text === "")
+    ? children.filter((child) => child.style.display !== "none" && child.text !== "")
+    : children
+}
+
 const definiteFlexMainSize = (
   node: LayoutNode,
   row: boolean,
@@ -1320,7 +1336,7 @@ const createFlexLines = (
   baseSizes: readonly number[],
   row: boolean,
   mainAvailable: number,
-  gap: number,
+  mainGap: number,
   wrap: boolean,
 ): readonly FlexLine[] => {
   const lines: FlexLine[] = []
@@ -1348,9 +1364,9 @@ const createFlexLines = (
       (row ? horizontal(margin) : vertical(margin))
     const nextMain = indices.length === 0
       ? mainOuter
-      : usedMain + gap + mainOuter
+      : usedMain + mainGap + mainOuter
     if (wrap && indices.length > 0 && nextMain > mainAvailable) commit()
-    usedMain = indices.length === 0 ? mainOuter : usedMain + gap + mainOuter
+    usedMain = indices.length === 0 ? mainOuter : usedMain + mainGap + mainOuter
     indices.push(index)
     crossSize = Math.max(
       crossSize,
@@ -1369,7 +1385,8 @@ const wrappedFlexContentSize = (
   mainAvailable: number,
   availableWidth: number,
   availableHeight: number,
-  gap: number,
+  mainGap: number,
+  crossGap: number,
   state: BuildState,
 ): Size => {
   const baseSizes = children.map((child, index) =>
@@ -1389,7 +1406,7 @@ const wrappedFlexContentSize = (
     baseSizes,
     row,
     mainAvailable,
-    gap,
+    mainGap,
     true,
   )
   const naturalMain = lines.reduce((maximum, line) => {
@@ -1399,12 +1416,12 @@ const wrappedFlexContentSize = (
       return sum +
         (baseSizes[index] ?? 0) +
         (row ? horizontal(margin) : vertical(margin)) +
-        (lineIndex === 0 ? 0 : gap)
+        (lineIndex === 0 ? 0 : mainGap)
     }, 0)
     return Math.max(maximum, lineMain)
   }, 0)
   const naturalCross = lines.reduce(
-    (sum, line, index) => sum + line.crossSize + (index === 0 ? 0 : gap),
+    (sum, line, index) => sum + line.crossSize + (index === 0 ? 0 : crossGap),
     0,
   )
   return Object.freeze({
@@ -1925,10 +1942,11 @@ const placeFlexChildren = (
   const row = layoutNode.style.flexDirection === "row"
   const mainAvailable = row ? width : height
   const crossAvailable = row ? height : width
-  const baseGap = layoutNode.style.gap
+  const mainGap = flexMainGap(layoutNode.style, row)
+  const crossGap = flexCrossGap(layoutNode.style, row)
   const wrap = layoutNode.style.flexWrap !== "nowrap"
   const wrapReverse = layoutNode.style.flexWrap === "wrap-reverse"
-  const children = flowChildren(layoutNode)
+  const children = flexFlowChildren(layoutNode)
   const childSizes = children.map((child) => {
     const margin = child.style.margin
     return measure(
@@ -1955,7 +1973,7 @@ const placeFlexChildren = (
     baseSizes,
     row,
     mainAvailable,
-    baseGap,
+    mainGap,
     wrap,
   )
   const lineAlignment = wrap
@@ -1963,7 +1981,7 @@ const placeFlexChildren = (
         layoutNode.style.alignContent,
         lines.map((line) => line.crossSize),
         crossAvailable,
-        baseGap,
+        crossGap,
       )
     : Object.freeze({
         lineSizes: Object.freeze(lines.map(() => crossAvailable)),
@@ -1985,7 +2003,7 @@ const placeFlexChildren = (
       (sum, size, index) => sum + size + (lineMainMargins[index] ?? 0),
       0,
     )
-    const gapTotal = Math.max(0, lineChildren.length - 1) * baseGap
+    const gapTotal = Math.max(0, lineChildren.length - 1) * mainGap
     const freeSpace = mainAvailable - baseOuter - gapTotal
     const mainSizes = distributeFlexSpace(
       lineChildren,
@@ -2076,9 +2094,9 @@ const placeFlexChildren = (
         hitStart,
         hitEnd: state.hitOrder.length,
       })
-      mainCursor += mainSize + mainEndMargin + baseGap + justify.extraGap
+      mainCursor += mainSize + mainEndMargin + mainGap + justify.extraGap
     }
-    logicalCrossCursor += lineCrossSize + baseGap + lineAlignment.extraGap
+    logicalCrossCursor += lineCrossSize + crossGap + lineAlignment.extraGap
   }
 
   for (let index = 0; index < layoutNode.children.length; index++) {
@@ -2387,18 +2405,19 @@ const intrinsicWidth = (
     )
   }
 
-  const children = flowChildren(node)
+  const children = node.style.display === "flex" ? flexFlowChildren(node) : flowChildren(node)
   const childWidths = children.map(
     (child) =>
       intrinsicWidth(child, availableWidth, availableHeight, state) +
       horizontal(child.style.margin),
   )
   const content =
-    node.style.display === "inline" ||
-    (node.style.display === "flex" && node.style.flexDirection === "row")
-      ? childWidths.reduce((sum, value) => sum + value, 0) +
-        Math.max(0, childWidths.length - 1) * node.style.gap
-      : childWidths.reduce((maximum, value) => Math.max(maximum, value), 0)
+    node.style.display === "inline"
+      ? childWidths.reduce((sum, value) => sum + value, 0)
+      : node.style.display === "flex" && node.style.flexDirection === "row"
+        ? childWidths.reduce((sum, value) => sum + value, 0) +
+          Math.max(0, childWidths.length - 1) * node.style.columnGap
+        : childWidths.reduce((maximum, value) => Math.max(maximum, value), 0)
   return clampAxis(
     content + edge,
     node.style.minWidth,
@@ -2461,7 +2480,7 @@ const intrinsicHeight = (
     )
   }
 
-  const children = flowChildren(node)
+  const children = node.style.display === "flex" ? flexFlowChildren(node) : flowChildren(node)
   const childHeights = children.map(
     (child) =>
       intrinsicHeight(child, availableWidth, availableHeight, state) +
@@ -2471,8 +2490,10 @@ const intrinsicHeight = (
     node.style.display === "inline" ||
     (node.style.display === "flex" && node.style.flexDirection === "row")
       ? childHeights.reduce((maximum, value) => Math.max(maximum, value), 0)
-      : childHeights.reduce((sum, value) => sum + value, 0) +
-        Math.max(0, childHeights.length - 1) * node.style.gap
+      : node.style.display === "flex"
+        ? childHeights.reduce((sum, value) => sum + value, 0) +
+          Math.max(0, childHeights.length - 1) * node.style.rowGap
+        : childHeights.reduce((sum, value) => sum + value, 0)
   return clampAxis(
     content + edge,
     node.style.minHeight,
@@ -2526,7 +2547,7 @@ const intrinsicWrappedFlexContent = (
             : explicitHeight - edgeHeight,
       )
     : mainAvailable
-  const children = flowChildren(node)
+  const children = flexFlowChildren(node)
   const childSizes = children.map((child) => {
     const margin = child.style.margin
     return measure(
@@ -2543,10 +2564,17 @@ const intrinsicWrappedFlexContent = (
     mainAvailable,
     contentWidth,
     contentHeight,
-    node.style.gap,
+    flexMainGap(node.style, row),
+    flexCrossGap(node.style, row),
     state,
   )
 }
+
+const flexMainGap = (style: ComputedStyle, row: boolean): number =>
+  row ? style.columnGap : style.rowGap
+
+const flexCrossGap = (style: ComputedStyle, row: boolean): number =>
+  row ? style.rowGap : style.columnGap
 
 const justifyOffsets = (
   justify: ComputedStyle["justifyContent"],
@@ -2580,7 +2608,7 @@ const alignFlexLines = (
   align: ComputedStyle["alignContent"],
   naturalLineSizes: readonly number[],
   available: number,
-  gap: number,
+  crossGap: number,
 ): Readonly<{
   lineSizes: readonly number[]
   offset: number
@@ -2588,7 +2616,7 @@ const alignFlexLines = (
 }> => {
   const count = naturalLineSizes.length
   const used = naturalLineSizes.reduce((sum, size) => sum + size, 0) +
-    Math.max(0, count - 1) * gap
+    Math.max(0, count - 1) * crossGap
   const free = available - used
   if ((align === "normal" || align === "stretch") && free > 0 && count > 0) {
     const addition = free / count
@@ -4161,7 +4189,8 @@ const textStyle = (inherited: ComputedStyle): ComputedStyle =>
     transform: Object.freeze([]),
     transformOrigin: ROOT_STYLE.transformOrigin,
     boxShadow: null,
-    gap: 0,
+    rowGap: 0,
+    columnGap: 0,
     margin: ZERO_EDGES,
     padding: ZERO_EDGES,
     borderWidths: ZERO_EDGES,

@@ -93,7 +93,8 @@ export type ComputedStyle = Readonly<{
   transform: readonly ComputedTransformFunction[]
   transformOrigin: ComputedTransformOrigin
   boxShadow: ComputedBoxShadow | null
-  gap: number
+  rowGap: number
+  columnGap: number
   margin: RenderMargin
   padding: RenderPadding
   borderWidths: RenderBorderWidths
@@ -115,7 +116,10 @@ export type ComputedStyle = Readonly<{
   zIndex: RenderZIndex
 }>
 
-type DeclarationMap = Readonly<Record<string, string>>
+type DeclarationEntry = readonly [property: string, value: string]
+type DeclarationMap =
+  | Readonly<Record<string, string>>
+  | readonly DeclarationEntry[]
 
 type AttributeSelector = Readonly<{
   name: string
@@ -201,6 +205,8 @@ const CENTER_ORIGIN: ComputedTransformOrigin = Object.freeze({
 const customPropertyNamePattern = /^--(?:[A-Za-z_]|[^\x00-\x7f])(?:[A-Za-z0-9_-]|[^\x00-\x7f])*$/
 const deferredVariablePropertySet: ReadonlySet<string> = new Set([
   "align-content",
+  "row-gap",
+  "column-gap",
   "flex-wrap",
   "scrollbar-width",
   "text-align",
@@ -222,6 +228,7 @@ const deferredVariablePropertySet: ReadonlySet<string> = new Set([
 const deferredVariableShorthandSet: ReadonlySet<string> = new Set([
   "border",
   "border-color",
+  "gap",
 ])
 const unsupportedVariableShorthandSet: ReadonlySet<string> = new Set([
   "flex",
@@ -431,7 +438,8 @@ export const computeStyle = (
     transform: parseTransform(readValue(values, "transform")) ?? Object.freeze([]),
     transformOrigin: parseTransformOrigin(readValue(values, "transform-origin")) ?? CENTER_ORIGIN,
     boxShadow: parseBoxShadow(readValue(values, "box-shadow"), color) ?? null,
-    gap: nonNegativePixelLength(readValue(values, "gap"), 0, fontSize),
+    rowGap: parseGapValue(readValue(values, "row-gap"), fontSize) ?? 0,
+    columnGap: parseGapValue(readValue(values, "column-gap"), fontSize) ?? 0,
     margin: readEdges(values, "margin", ZERO_EDGES, true),
     padding: readEdges(values, "padding", defaultPadding, false),
     borderWidths: readEdges(values, "border", ZERO_EDGES, false, "width"),
@@ -643,14 +651,14 @@ const readInlineStyle = (element: Element): string => {
 }
 
 const parseDeclarations = (source: string): DeclarationMap => {
-  const declarations: Record<string, string> = Object.create(null)
+  const declarations: DeclarationEntry[] = []
   for (const entry of source.split(";")) {
     const separator = entry.indexOf(":")
     if (separator < 0) continue
     const property = normalizeProperty(entry.slice(0, separator))
     const value = entry.slice(separator + 1).trim()
     if (!property || !value) continue
-    declarations[property] = value
+    declarations.push(Object.freeze([property, value] as const))
   }
   return Object.freeze(declarations)
 }
@@ -687,7 +695,10 @@ const resolveCascadedVariables = (
     const value = substituteVariables(cascaded.value, resolver)
     if (value === null) {
       resolved ??= new Map(values)
-      resolved.delete(property)
+      const current = resolved.get(property)
+      if (current !== undefined && comparePriority(current, cascaded) <= 0) {
+        resolved.delete(property)
+      }
       invalidateDeferredShorthand(resolved, property, cascaded)
       continue
     }
@@ -707,7 +718,11 @@ const resolveCascadedVariables = (
     }
     if (value === cascaded.value) continue
     resolved ??= new Map(values)
-    resolved.set(property, Object.freeze({...cascaded, value}))
+    const next = Object.freeze({...cascaded, value})
+    const current = resolved.get(property)
+    if (!current || comparePriority(current, next) <= 0) {
+      resolved.set(property, next)
+    }
   }
   return resolved ?? values
 }
@@ -724,7 +739,9 @@ const invalidateDeferredShorthand = (
       ]
     : property === "border-color"
       ? ["border-top-color", "border-right-color", "border-bottom-color", "border-left-color"]
-      : []
+      : property === "gap"
+        ? ["row-gap", "column-gap"]
+        : []
   for (const target of targets) {
     const current = values.get(target)
     if (current !== undefined && comparePriority(current, cascaded) <= 0) values.delete(target)
@@ -904,7 +921,10 @@ const applyDeclarations = (
   order: number,
   sequence: CascadeSequence,
 ): void => {
-  for (const [property, value] of Object.entries(declarations)) {
+  const entries = Array.isArray(declarations)
+    ? declarations as readonly DeclarationEntry[]
+    : Object.entries(declarations)
+  for (const [property, value] of entries) {
     if (property.startsWith("--")) {
       const next = Object.freeze({
         specificity,
@@ -959,6 +979,13 @@ const expandDeclaration = (
     case "align-content":
       return validAlignContent(value)
         ? [["align-content", value.trim().toLowerCase()]]
+        : []
+    case "gap":
+      return expandGap(value)
+    case "row-gap":
+    case "column-gap":
+      return validGapValue(value)
+        ? [[property, value.trim().toLowerCase()]]
         : []
     case "flex-wrap":
       return validFlexWrap(value)
@@ -1109,6 +1136,25 @@ const expandPair = (
   return [
     [`${property}-${start}`, first],
     [`${property}-${end}`, second],
+  ]
+}
+
+const expandGap = (
+  value: string,
+): readonly (readonly [string, string])[] => {
+  const parts = splitCssComponents(value)
+  if (parts.length < 1 || parts.length > 2) return []
+  const row = parts[0]
+  const column = parts[1] ?? row
+  if (
+    row === undefined ||
+    column === undefined ||
+    !validGapValue(row) ||
+    !validGapValue(column)
+  ) return []
+  return [
+    ["row-gap", row.trim().toLowerCase()],
+    ["column-gap", column.trim().toLowerCase()],
   ]
 }
 
@@ -2227,14 +2273,16 @@ const parseFontSize = (value: string | undefined, inherited: number): number => 
   return Math.max(0, pixels)
 }
 
-const nonNegativePixelLength = (
+const parseGapValue = (
   value: string | undefined,
-  fallback: number,
   emBase: number,
-): number => {
+): number | null => {
+  if (value?.trim().toLowerCase() === "normal") return 0
   const length = parseLength(value, emBase)
-  return length?.unit === "px" ? Math.max(0, length.value) : fallback
+  return length?.unit === "px" && length.value >= 0 ? length.value : null
 }
+
+const validGapValue = (value: string): boolean => parseGapValue(value, 16) !== null
 
 const unitNumber = (value: string | undefined, fallback: number): number => {
   if (!value) return fallback

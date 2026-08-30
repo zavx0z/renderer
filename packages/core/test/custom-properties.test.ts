@@ -301,7 +301,8 @@ describe("bounded CSS custom properties and var()", () => {
     `])
     const rootStyle = computeStyle(root, null, rules)
     const componentStyle = computeStyle(component, rootStyle, rules)
-    expect(componentStyle.gap).toBe(4)
+    expect(componentStyle.rowGap).toBe(4)
+    expect(componentStyle.columnGap).toBe(4)
     expect(componentStyle.fontSize).toBe(14)
     expect(componentStyle.lineHeight).toEqual({kind: "length", value: 21})
 

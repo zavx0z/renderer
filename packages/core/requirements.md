@@ -42,7 +42,8 @@ inline style wins over author rules. `color`, `font-size`, `line-height` and
 properties are `display`, physical `width`/`height` and logical
 `inline-size`/`block-size`, their `min-*`/`max-*` constraints, `box-sizing`,
 physical and logical margin/padding edges, solid border width/color/radius,
-`opacity`, `overflow`/`overflow-x`/`overflow-y`, standard `scrollbar-width`, `gap`,
+`opacity`, `overflow`/`overflow-x`/`overflow-y`, standard `scrollbar-width`,
+`gap`/`row-gap`/`column-gap`,
 `background`/`background-color`, `color`, `font-size`, bounded `line-height`,
 `letter-spacing`, inherited `text-align` (`start | end | left | right | center`),
 single-line `text-overflow`, plus integer/`auto`
@@ -54,7 +55,8 @@ with `auto`, px or percentage values. Bounded compositor properties are
 `center` axes. One standard bounded `box-shadow` is supported for analytical
 rounded-card ink.
 Shorthands expand before cascade resolution, so a later side declaration or
-longhand wins at the same specificity. Inherited `white-space` supports
+longhand wins at the same specificity. Declaration order remains exact even
+when a property name repeats. Inherited `white-space` supports
 `normal` collapsing, `pre` preservation and `nowrap` collapsing without line
 breaks; formatting-only whitespace under
 `normal` paints nothing.
@@ -63,7 +65,8 @@ The bounded `calc()` path admits finite `+`, `-`, `*`, `/` arithmetic when the
 result is a number or one compatible `px`, `%` or resolved `em` dimension.
 Multiplication/division requires a unitless side; `em` resolves against the
 property's current font-size basis. It is used by admitted dimensional
-longhands, font-size, line-height, gap, border width and the single shadow path.
+longhands, font-size, line-height, Flex gaps, border width and the single shadow
+path.
 Mixed-unit sums such as `% - px`, `min()`, `max()` and `clamp()` remain rejected
 rather than being approximated.
 
@@ -99,11 +102,22 @@ grow/shrink, and grow/shrink/basis), the corresponding longhands,
 negative free space follows weighted shrink factors and honors resolved minima.
 Rows and columns own every child position, including padding, border and margin.
 
+Flex gap transport consists of independent `row-gap` and `column-gap` used
+values. The `gap` shorthand accepts one value for both axes or two values in
+row/column order. `normal` has a zero used value for Flex. The bounded dimensions
+are finite non-negative px, unitless, resolved `em`, or the existing compatible
+`calc()` grammar; negative values, percentages and unsupported mixed dimensions
+are invalid declarations and cannot replace a valid lower-priority declaration.
+A row uses `column-gap` on its main axis and `row-gap` between lines; a column
+uses `row-gap` on its main axis and `column-gap` between lines. Absolute children
+remain outside item counting and gap formation.
+
 The bounded multi-line Flex subset supports `flex-wrap: nowrap | wrap |
 wrap-reverse`. A row wraps against its definite or auto-fill content width; a
 column wraps only when it has a definite content height. Each line independently
-applies grow, shrink, `justify-content` and `align-items`. One scalar `gap`
-separates items and lines. An oversized first item remains on its own line and
+applies grow, shrink, `justify-content` and `align-items`. The direction-mapped
+main gap separates items while the cross gap separates lines. An oversized first
+item remains on its own line and
 uses the existing flex-shrink law. `wrap-reverse` reverses both the cross-axis
 line stack and the cross-start/cross-end interpretation of `align-items`, without
 changing source order.
@@ -111,21 +125,21 @@ changing source order.
 Wrapped containers admit `align-content: normal | stretch | flex-start |
 flex-end | center | space-between | space-around | space-evenly`, including when
 only one line is formed. `normal` behaves as `stretch`. For a definite cross
-size, positive free space is resolved after natural line sizes and scalar line
-gaps: stretch values enlarge every line equally, positional values offset the
-line stack, and distribution values add space between lines. An unconstrained
-auto cross size resolves to the natural line stack and therefore contributes no
-free space; an auto-authored flex item whose parent assigns a larger used cross
-size aligns within that assigned size. `nowrap` keeps its existing single-line
-behavior and ignores `align-content`.
+size, positive free space is resolved after natural line sizes and the
+mandatory cross gap: stretch values enlarge every line equally, positional
+values offset the line stack, and distribution values add space between lines.
+An unconstrained auto cross size resolves to the natural line stack and
+therefore contributes no free space; an auto-authored flex item whose parent
+assigns a larger used cross size aligns within that assigned size. `nowrap`
+keeps its existing single-line behavior and ignores `align-content`.
 
 Negative cross free space is bounded explicitly: `flex-end` and `center` keep
 their unsafe offsets; `space-between`, `space-around` and `space-evenly` use
 their safe fallback at cross-start; `normal` and `stretch` also fall back to
 cross-start. This slice does not admit `start`/`end`, baseline alignment,
 author-specified `safe`/`unsafe` syntax, writing modes or animation. `balance`,
-`row-reverse`/`column-reverse`, `flex-flow`, `order`, `align-self`, separate
-`row-gap`/`column-gap`, and the complete intrinsic multi-line Flexbox algorithm
+`row-reverse`/`column-reverse`, `flex-flow`, `order`, `align-self`, gap
+decorations/rules, and the complete intrinsic multi-line Flexbox algorithm
 remain outside this contract.
 
 ## `RENDERER-CPU-005` — built-in defaults
