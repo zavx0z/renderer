@@ -655,6 +655,11 @@
       "limitation": "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM.",
       "status": "partial"
     },
+    "react.semantics.root-stylesheet-snapshot": {
+      "conformance": "extension",
+      "limitation": null,
+      "status": "implemented"
+    },
     "react.semantics.scheduling": {
       "conformance": "none",
       "limitation": "This React 19.2 reference behavior is not part of the current compiled runtime.",
@@ -732,7 +737,7 @@
     }
   },
   "compilerOwner": "@zavx0z/template",
-  "featureCount": 146,
+  "featureCount": 147,
   "features": {
     "browserExecution": "unsupported",
     "browserTargetBuild": "supported",
@@ -791,13 +796,13 @@
   "runtimeModel": "compiled-static-template",
   "statistics": {
     "implemented": 28,
-    "mappedEntries": 217,
+    "mappedEntries": 211,
     "missing": 0,
     "not-applicable": 35,
-    "partial": 50,
-    "specEntries": 217,
+    "partial": 49,
+    "specEntries": 211,
     "unsupported": 70,
-    "unverified": 34
+    "unverified": 29
   },
   "virtualDom": false
 }

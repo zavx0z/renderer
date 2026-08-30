@@ -553,7 +553,7 @@
             "type": "consumer-usage",
             "repository": "interpreter",
             "revision": "879b4e01a4abd12756f86228784421e26270f485+dirty",
-            "path": "packages/interpreter/web/dom/source-editor.ts",
+            "path": "packages/interpreter/web/dom/source-editor.tsx",
             "symbol": "createSourceEditor",
             "lines": "170-434",
             "proves": "The editor separates editable textarea state from token presentation and needs synchronized visual selection.",
@@ -600,7 +600,7 @@
             "type": "consumer-usage",
             "repository": "interpreter",
             "revision": "879b4e01a4abd12756f86228784421e26270f485+dirty",
-            "path": "packages/interpreter/web/dom/source-editor.ts",
+            "path": "packages/interpreter/web/dom/source-editor.tsx",
             "symbol": "scrollToLine",
             "lines": "434-456",
             "proves": "The consumer uses fixed geometry because no public read exists.",
@@ -820,44 +820,81 @@
     },
     {
       "schemaVersion": 1,
-      "id": "gap.css.dynamic-pseudo-custom-properties",
-      "capability": "css.features.custom-properties",
+      "id": "gap.css.linked-author-import",
+      "capability": "css.at-rules.at-import",
       "reportedBy": {
-        "repository": "ui",
-        "package": "@ui/components",
-        "subject": "component-local dynamic pseudo styles",
-        "scenario": "one Button hover value depends on props or component state"
+        "repository": "renderer",
+        "package": "@zavx0z/renderer-browser",
+        "subject": "native linked author theme",
+        "scenario": "an explicitly supplied loaded theme contains @import or @font-face"
       },
       "expected": {
-        "reference": "CSS Custom Properties plus TEMPLATE-COMPILED-018",
-        "behavior": "Template emits one shared static pseudo rule using var(--z-*), each instance supplies only an addressed inline custom-property value, and Renderer resolves ordinary cascade, inheritance and var() substitution without per-instance rules or runtime scanning."
+        "reference": "CSS Cascade @import plus CSS Fonts @font-face",
+        "behavior": "A linked author stylesheet either carries imported/resource rules through their true owners or rejects the complete source before semantic publication."
       },
       "actual": {
-        "behavior": "Static pseudos are compiled, but CPU Renderer implements neither custom-property cascade nor var() substitution; direct props/state values inside a pseudo therefore fail at the Template compiler boundary.",
+        "behavior": "The bounded host accepts flat CSSStyleRule records only and fails closed for @import, @font-face and other at-rules; it performs no second fetch and owns no Engine font loader.",
         "evidence": [
           {
             "type": "negative-test",
-            "repository": "template",
-            "revision": "871eb8576094519ee9f7f48a638971b29c5a16b0",
-            "path": "compiler/test-fixture/style-dynamic-pseudo.tsx",
-            "symbol": "Invalid dynamic pseudo fixture",
-            "proves": "A pseudo declaration that reads props is rejected before bundling.",
-            "doesNotProve": "Future custom-property lowering or Renderer substitution."
-          },
-          {
-            "type": "implementation",
             "repository": "renderer",
-            "revision": "658124f4df03f1b46cbe1ad250a714e45111d2d5",
-            "path": "packages/core/src/css.ts",
-            "symbol": "computeStyle",
-            "proves": "The current computed-style result reads only admitted concrete properties and contains no custom-property environment or var() substitution stage.",
-            "doesNotProve": "CSS Variables behavior after a future owner implementation."
+            "revision": "25a461671aa1dd5f6669d2c25f944704c34afd12+dirty",
+            "path": "packages/browser/test/linked-author-style-sheet-host.test.ts",
+            "symbol": "fails closed for unreadable, imported, font and nested CSS",
+            "proves": "@import and @font-face reject atomically while the last valid semantic snapshot remains unchanged.",
+            "doesNotProve": "A future import graph or font-resource owner."
           }
         ]
       },
       "minimalReproduction": {
-        "source": "Render two Buttons with style={{\"--z-hover-background\": props.hoverColor, \":hover\": {background: \"var(--z-hover-background)\"}}} and different hoverColor values.",
-        "test": "Assert one shared compiled pseudo rule, two inline custom-property values, exact inherited/cascaded substitution on hover, and no per-instance stylesheet allocation."
+        "source": "Pass an exact loaded link whose cssRules contain CSSImportRule or CSSFontFaceRule to the linked author stylesheet host.",
+        "test": "Assert host.ready/refresh rejects and no partial author snapshot is published."
+      },
+      "suspectedOwner": {
+        "repository": "renderer",
+        "package": "@zavx0z/renderer-browser",
+        "stage": "browser-host"
+      },
+      "severity": "P2",
+      "dependencies": [
+        "css.at-rules.at-font-face"
+      ],
+      "forbiddenLocalWorkarounds": [
+        "A second consumer fetch of the same CSS URL",
+        "Copying imported rules or font declarations into component CSS"
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "gap.css.linked-author-nesting",
+      "capability": "css.features.nesting",
+      "reportedBy": {
+        "repository": "renderer",
+        "package": "@zavx0z/renderer-browser",
+        "subject": "native linked author theme",
+        "scenario": "an explicitly supplied theme contains nested selectors"
+      },
+      "expected": {
+        "reference": "CSS Nesting",
+        "behavior": "Nested rules preserve parent selector expansion, source order, specificity and pseudo behavior before semantic cascade."
+      },
+      "actual": {
+        "behavior": "The current CPU parser admits flat rules only; the linked host detects nested CSSStyleRule blocks and rejects the source atomically rather than flattening them incorrectly.",
+        "evidence": [
+          {
+            "type": "negative-test",
+            "repository": "renderer",
+            "revision": "25a461671aa1dd5f6669d2c25f944704c34afd12+dirty",
+            "path": "packages/browser/test/linked-author-style-sheet-host.test.ts",
+            "symbol": "nested CSS failure",
+            "proves": "Nested rules do not partially enter the semantic author registry.",
+            "doesNotProve": "Compile-time or runtime nesting expansion."
+          }
+        ]
+      },
+      "minimalReproduction": {
+        "source": "Load a configured link containing button { &:hover { color:red } }.",
+        "test": "Assert refresh rejects with a nesting diagnostic and retains the previous exact snapshot."
       },
       "suspectedOwner": {
         "repository": "renderer",
@@ -865,13 +902,57 @@
         "stage": "cpu"
       },
       "severity": "P2",
+      "dependencies": [],
+      "forbiddenLocalWorkarounds": [
+        "Regex flattening in a component or Storybook consumer",
+        "Silently dropping nested pseudo rules"
+      ]
+    },
+    {
+      "schemaVersion": 1,
+      "id": "gap.css.theme-math-functions",
+      "capability": "css.functions.clamp-function",
+      "reportedBy": {
+        "repository": "ui",
+        "package": "@ui/components",
+        "subject": "foundation theme dimensional tokens",
+        "scenario": "a component dimension uses min(), max(), clamp() or mixed-unit calc"
+      },
+      "expected": {
+        "reference": "CSS Values mathematical expressions",
+        "behavior": "Theme dimensions evaluate supported CSS math with compatible unit algebra and containing-block resolution."
+      },
+      "actual": {
+        "behavior": "Bounded calc() supports one compatible number/px/percent/resolved-em result; min(), max(), clamp() and mixed percent-plus-pixel sums reject instead of approximating.",
+        "evidence": [
+          {
+            "type": "negative-test",
+            "repository": "renderer",
+            "revision": "25a461671aa1dd5f6669d2c25f944704c34afd12+dirty",
+            "path": "packages/core/test/custom-properties.test.ts",
+            "symbol": "does not silently admit min max clamp or mixed-unit calc",
+            "proves": "Unsupported math values do not produce a computed dimension.",
+            "doesNotProve": "A future linear length-percentage representation or min/max/clamp evaluator."
+          }
+        ]
+      },
+      "minimalReproduction": {
+        "source": "Set width:min(10px,20px), height:max(...), clamp(...) and calc(100% - 4px) on a semantic Element.",
+        "test": "Assert current computed dimensions are absent and a future implementation resolves each without component-local arithmetic."
+      },
+      "suspectedOwner": {
+        "repository": "renderer",
+        "package": "@zavx0z/renderer",
+        "stage": "computed"
+      },
+      "severity": "P3",
       "dependencies": [
-        "css.functions.var-function"
+        "css.functions.min-function",
+        "css.functions.max-function"
       ],
       "forbiddenLocalWorkarounds": [
-        "A stylesheet or selector generated for every component instance",
-        "Runtime scanning of mounted style objects or DOM nodes",
-        "JavaScript hover/focus listeners or data-state pseudo emulation"
+        "Computing layout tokens in component JavaScript",
+        "Treating mixed units as pixels"
       ]
     }
   ],
@@ -1007,7 +1088,7 @@
       "owner": "consumer repositories",
       "evidence": [
         "ui:packages/components/package.json",
-        "interpreter:packages/interpreter/web/dom/source-editor.ts",
+        "interpreter:packages/interpreter/web/dom/source-editor.tsx",
         "metafor:cosmos/internal/visual/main/index.ts",
         "demo:src/dom/journalDocument.ts"
       ],

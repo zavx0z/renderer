@@ -1,108 +1,27 @@
 /** Renderer-owned external Storybook story support. */
-import type {
-  Document,
-  Element,
-  HTMLElement,
-  HTMLSelectElement,
-  Node,
-} from "@zavx0z/dom"
+import type {Document, HTMLElement} from "@zavx0z/dom"
+import type {ComponentRoot} from "@zavx0z/react"
+import type {CompiledTemplate} from "@zavx0z/template/compiled"
+import {
+  DomInterfaceStoryView,
+  type DomInterfaceStoryViewProps,
+} from "./dom-stories-view.tsx"
+import {
+  mountCompiledStory,
+  serializeStoryElement,
+} from "./compiled-story.ts"
 
 export type DomInterfaceStorySource = Readonly<{
   html: string
-  css: string
   typescript: string
 }>
 
 export type DomInterfaceStory = Readonly<{
   element: HTMLElement
+  componentRoot: ComponentRoot
   source: DomInterfaceStorySource
+  dispose(): void
 }>
-
-export const domInterfaceStoryCss = String.raw`
-.dom-interface-story {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  width: 620px;
-  min-height: 300px;
-  gap: 14px;
-  padding: 18px;
-  border: 1px solid rgb(22, 22, 22);
-  border-radius: 6px;
-  background: rgb(48, 48, 48);
-  color: rgb(224, 224, 224);
-}
-
-.dom-interface-story__title {
-  display: block;
-  height: 24px;
-  color: rgb(126, 220, 236);
-  font-size: 16px;
-}
-
-.dom-interface-story__summary {
-  display: block;
-  min-height: 20px;
-  color: rgb(176, 176, 176);
-  font-size: 12px;
-}
-
-.dom-interface-story__chain {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  min-height: 34px;
-  gap: 6px;
-}
-
-.dom-interface-story__type {
-  box-sizing: border-box;
-  display: flex;
-  align-items: center;
-  height: 28px;
-  padding: 4px 8px;
-  border: 1px solid rgb(72, 72, 72);
-  border-radius: 3px;
-  background: rgb(36, 36, 36);
-  color: rgb(224, 224, 224);
-  font-size: 11px;
-}
-
-.dom-interface-story__arrow {
-  display: inline;
-  width: 12px;
-  color: rgb(126, 220, 236);
-  font-size: 12px;
-}
-
-.dom-interface-story__demo {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 584px;
-  min-height: 130px;
-  padding: 16px;
-  border: 1px solid rgb(22, 22, 22);
-  border-radius: 4px;
-  background: rgb(28, 28, 28);
-}
-
-.dom-interface-story__sample {
-  box-sizing: border-box;
-  display: block;
-  width: 240px;
-  min-height: 30px;
-  padding: 5px 10px;
-  border: 1px solid rgb(72, 72, 72);
-  border-radius: 4px;
-  background: rgb(36, 36, 36);
-  color: rgb(224, 224, 224);
-  font-size: 12px;
-}
-`
 
 const summaries = Object.freeze({
   EventTarget: "EventTarget хранит listeners и выполняет capture, target и bubble dispatch.",
@@ -161,45 +80,27 @@ export function createDomInterfaceStory(
   input: Readonly<{apiName: string; title: string; route: string}>,
 ): DomInterfaceStory {
   const apiName = supportedApiName(input.apiName)
-  const root = document.createElement("section")
-  const title = document.createElement("h2")
-  const summary = document.createElement("p")
-  const chain = document.createElement("div")
-  const demo = document.createElement("div")
-  root.className = "dom-interface-story"
-  title.className = "dom-interface-story__title"
-  summary.className = "dom-interface-story__summary"
-  chain.className = "dom-interface-story__chain"
-  demo.className = "dom-interface-story__demo"
-  root.setAttribute("data-interface", apiName)
-  root.setAttribute("data-route", input.route)
-  title.appendChild(document.createTextNode(input.title))
-  summary.appendChild(document.createTextNode(summaries[apiName]))
-
-  const hierarchy = hierarchyFor(apiName)
-  for (const [index, name] of hierarchy.entries()) {
-    if (index > 0) {
-      const arrow = document.createElement("span")
-      arrow.className = "dom-interface-story__arrow"
-      arrow.appendChild(document.createTextNode("→"))
-      chain.appendChild(arrow)
-    }
-    const item = document.createElement("code")
-    item.className = "dom-interface-story__type"
-    item.appendChild(document.createTextNode(name))
-    chain.appendChild(item)
-  }
-
-  const sample = createSample(document, apiName)
-  demo.appendChild(sample)
-  root.append(title, summary, chain, demo)
+  const props: DomInterfaceStoryViewProps = Object.freeze({
+    apiName,
+    title: input.title,
+    route: input.route,
+    summary: summaries[apiName],
+    hierarchy: hierarchyFor(apiName),
+  })
+  const mounted = mountCompiledStory(
+    document,
+    DomInterfaceStoryView as unknown as CompiledTemplate<DomInterfaceStoryViewProps>,
+    props,
+    "[data-dom-interface-story]",
+  )
   return Object.freeze({
-    element: root,
+    element: mounted.element,
+    componentRoot: mounted.componentRoot,
     source: Object.freeze({
-      html: serializeElement(root),
-      css: domInterfaceStoryCss,
+      html: serializeStoryElement(mounted.element),
       typescript: sampleTypeScript(apiName),
     }),
+    dispose: mounted.dispose,
   })
 }
 
@@ -236,184 +137,6 @@ function hierarchyFor(apiName: SupportedApiName): readonly string[] {
     return Object.freeze(["Event", "UIEvent", "MouseEvent", apiName])
   }
   return Object.freeze(["EventTarget", "Node", "Element", "HTMLElement", apiName])
-}
-
-function createSample(document: Document, apiName: SupportedApiName): Node {
-  if (apiName === "Element" || apiName === "HTMLElement") {
-    const element = document.createElement(apiName === "Element" ? "section" : "div")
-    element.className = "dom-interface-story__sample"
-    element.title = apiName === "HTMLElement" ? "HTMLElement.title" : "Element attributes"
-    element.appendChild(document.createTextNode(
-      apiName === "HTMLElement" ? "title lives on HTMLElement" : "data-owner=DOM",
-    ))
-    if (apiName === "Element") element.setAttribute("data-owner", "DOM")
-    return element
-  }
-  if (apiName === "HTMLDivElement" || apiName === "HTMLSpanElement" ||
-    apiName === "HTMLHeadingElement" || apiName === "HTMLParagraphElement") {
-    const tag = apiName === "HTMLDivElement" ? "div"
-      : apiName === "HTMLSpanElement" ? "span"
-        : apiName === "HTMLHeadingElement" ? "h3"
-          : "p"
-    const element = document.createElement(tag)
-    element.className = "dom-interface-story__sample"
-    element.appendChild(document.createTextNode(apiName))
-    return element
-  }
-  if (apiName === "HTMLButtonElement") {
-    const button = document.createElement("button")
-    button.className = "dom-interface-story__sample"
-    button.setAttribute("type", "button")
-    button.title = "title inherited from HTMLElement"
-    button.appendChild(document.createTextNode("Output"))
-    return button
-  }
-  if (apiName === "HTMLInputElement") {
-    const input = document.createElement("input")
-    input.className = "dom-interface-story__sample"
-    input.type = "text"
-    input.value = "Output"
-    input.title = "Live input value"
-    return input
-  }
-  if (apiName === "HTMLImageElement") {
-    const image = document.createElement("img")
-    image.className = "dom-interface-story__sample"
-    image.src = ""
-    image.alt = "Output preview"
-    image.width = 240
-    image.height = 72
-    return image
-  }
-  if (apiName === "HTMLSelectElement") return selectSample(document, false)
-  if (apiName === "HTMLOptionElement") return selectSample(document, true)
-  if (apiName === "HTMLTextAreaElement") {
-    const textarea = document.createElement("textarea")
-    textarea.className = "dom-interface-story__sample"
-    textarea.rows = 3
-    textarea.value = "Node\n  Element\n    HTMLElement"
-    textarea.readOnly = true
-    return textarea
-  }
-  if (apiName === "HTMLProgressElement") {
-    const progress = document.createElement("progress")
-    progress.className = "dom-interface-story__sample"
-    progress.max = 100
-    progress.value = 64
-    return progress
-  }
-  if (apiName === "HTMLMeterElement") {
-    const meter = document.createElement("meter")
-    meter.className = "dom-interface-story__sample"
-    meter.min = 0
-    meter.max = 100
-    meter.low = 25
-    meter.high = 75
-    meter.optimum = 50
-    meter.value = 64
-    return meter
-  }
-  if (apiName === "HTMLLabelElement") {
-    const label = document.createElement("label")
-    const input = document.createElement("input")
-    label.className = "dom-interface-story__sample"
-    label.htmlFor = "interface-label-control"
-    label.appendChild(document.createTextNode("Output "))
-    input.id = "interface-label-control"
-    input.type = "text"
-    input.value = "Ready"
-    label.appendChild(input)
-    return label
-  }
-  if (apiName === "HTMLFieldSetElement") {
-    const fieldset = document.createElement("fieldset")
-    const legend = document.createElement("legend")
-    const input = document.createElement("input")
-    fieldset.className = "dom-interface-story__sample"
-    fieldset.name = "output"
-    fieldset.disabled = true
-    legend.appendChild(document.createTextNode("Output"))
-    input.type = "text"
-    input.value = "Ready"
-    fieldset.append(legend, input)
-    return fieldset
-  }
-  if (apiName === "HTMLLegendElement") {
-    const fieldset = document.createElement("fieldset")
-    const legend = document.createElement("legend")
-    legend.className = "dom-interface-story__sample"
-    legend.appendChild(document.createTextNode("Output settings"))
-    fieldset.appendChild(legend)
-    return fieldset
-  }
-  if (apiName === "HTMLUListElement") {
-    const list = document.createElement("ul")
-    list.className = "dom-interface-story__sample"
-    for (const value of ["Preview", "Output"]) {
-      const item = document.createElement("li")
-      item.appendChild(document.createTextNode(value))
-      list.appendChild(item)
-    }
-    return list
-  }
-  if (apiName === "HTMLLIElement") {
-    const list = document.createElement("ul")
-    const item = document.createElement("li")
-    item.className = "dom-interface-story__sample"
-    item.appendChild(document.createTextNode("Output"))
-    list.appendChild(item)
-    return list
-  }
-  if (apiName === "HTMLTableElement" || apiName === "HTMLTableSectionElement" ||
-    apiName === "HTMLTableRowElement" || apiName === "HTMLTableCellElement") {
-    return tableSample(document, apiName)
-  }
-  return codeSample(document, `${apiName} · implemented runtime subset`)
-}
-
-function codeSample(document: Document, value: string): HTMLElement {
-  const code = document.createElement("code")
-  code.className = "dom-interface-story__sample"
-  code.appendChild(document.createTextNode(value))
-  return code
-}
-
-function selectSample(document: Document, optionInterface: boolean): HTMLSelectElement {
-  const select = document.createElement("select")
-  if (!optionInterface) select.className = "dom-interface-story__sample"
-  const values = optionInterface ? ["Output"] : ["Preview", "Output", "Capture"]
-  for (const value of values) {
-    const option = document.createElement("option")
-    option.value = value.toLowerCase()
-    option.appendChild(document.createTextNode(value))
-    if (optionInterface && value === "Output") option.className = "dom-interface-story__sample"
-    select.appendChild(option)
-  }
-  select.value = "output"
-  return select
-}
-
-function tableSample(
-  document: Document,
-  apiName: "HTMLTableElement" | "HTMLTableSectionElement" | "HTMLTableRowElement" | "HTMLTableCellElement",
-): Node {
-  const table = document.createElement("table")
-  const body = document.createElement("tbody")
-  const row = document.createElement("tr")
-  const label = document.createElement("th")
-  const value = document.createElement("td")
-  if (apiName === "HTMLTableElement") table.className = "dom-interface-story__sample"
-  if (apiName === "HTMLTableSectionElement") body.className = "dom-interface-story__sample"
-  if (apiName === "HTMLTableRowElement") row.className = "dom-interface-story__sample"
-  if (apiName === "HTMLTableCellElement") label.className = "dom-interface-story__sample"
-  label.scope = "row"
-  label.colSpan = 1
-  label.appendChild(document.createTextNode("State"))
-  value.appendChild(document.createTextNode("Ready"))
-  row.append(label, value)
-  body.appendChild(row)
-  table.appendChild(body)
-  return table
 }
 
 function sampleTypeScript(apiName: SupportedApiName): string {
@@ -656,41 +379,4 @@ function simpleHtmlTag(apiName: SupportedApiName): string {
   if (apiName === "HTMLHeadingElement") return "h3"
   if (apiName === "HTMLParagraphElement") return "p"
   throw new Error(`DOM interface sample has no HTML tag: ${apiName}`)
-}
-
-function serializeElement(element: Element, depth = 0): string {
-  const indent = "  ".repeat(depth)
-  const attributes = element.getAttributeNames()
-    .sort()
-    .map((name) => {
-      const value = element.getAttribute(name) ?? ""
-      if ((name === "disabled" || name === "readonly" || name === "selected") && value === "") {
-        return ` ${name}`
-      }
-      return ` ${name}="${escapeAttribute(value)}"`
-    })
-    .join("")
-  const children = [...element.childNodes]
-  if ((element.localName === "input" || element.localName === "img") && children.length === 0) {
-    return `${indent}<${element.localName}${attributes}>`
-  }
-  if (children.length === 0) return `${indent}<${element.localName}${attributes}></${element.localName}>`
-  if (children.every((node) => node.nodeType === 3)) {
-    return `${indent}<${element.localName}${attributes}>${escapeText(element.textContent ?? "")}</${element.localName}>`
-  }
-  const body = children.map((node) => node.nodeType === 3
-    ? `${"  ".repeat(depth + 1)}${escapeText(node.textContent ?? "")}`
-    : serializeElement(node as Element, depth + 1)).join("\n")
-  return `${indent}<${element.localName}${attributes}>\n${body}\n${indent}</${element.localName}>`
-}
-
-function escapeText(value: string): string {
-  return value
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-}
-
-function escapeAttribute(value: string): string {
-  return escapeText(value).replaceAll('"', "&quot;")
 }

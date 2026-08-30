@@ -625,3 +625,18 @@ outer `Document.transaction()` are coalesced; acquiring and releasing the same
 previously absent record in that transaction publishes nothing. This internal
 compiled-style transport does not claim `CSSStyleSheet`, `StyleSheetList`,
 `Document.styleSheets` or `adoptedStyleSheets` CSSOM behavior.
+
+## DOM-CORE-028 — ordered author/theme stylesheet ownership
+
+One semantic Document may have one separate author/theme stylesheet owner. It
+publishes an ordered immutable `{id, cssText}` set, a monotonic Document-local
+revision and synchronous subscriptions without sharing state, ids or leases
+with the compiled-template registry. Exact duplicate records deduplicate in
+first-source order; the same id with different CSS rejects the complete
+replacement atomically. A second simultaneous owner is rejected.
+
+`replace()` publishes only content or order changes and coalesces inside the
+outer `Document.transaction()`. Idempotent `release()` clears the active author
+set and permits a later Experience-level host to acquire ownership. This is an
+opaque semantic rendering channel, not `Document.styleSheets`,
+`adoptedStyleSheets` or another semantic/stylesheet realm.

@@ -30,7 +30,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": "./bun",
-        "line": 14,
+        "line": 16,
         "path": "template:compiler/bun.ts",
         "repository": "template",
         "typeOnly": false
@@ -43,7 +43,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.bun",
       "spec": {
-        "anchor": "template:compiler/bun.ts#L14",
+        "anchor": "template:compiler/bun.ts#L16",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -105,7 +105,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": "./compiled",
-        "line": 157,
+        "line": 183,
         "path": "template:compiled.ts",
         "repository": "template",
         "typeOnly": false
@@ -118,7 +118,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.compiled",
       "spec": {
-        "anchor": "template:compiled.ts#L157",
+        "anchor": "template:compiled.ts#L183",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -131,7 +131,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": "./compiled",
-        "line": 161,
+        "line": 187,
         "path": "template:compiled.ts",
         "repository": "template",
         "typeOnly": false
@@ -144,7 +144,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.compiled",
       "spec": {
-        "anchor": "template:compiled.ts#L161",
+        "anchor": "template:compiled.ts#L187",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -157,7 +157,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": "./compiled",
-        "line": 137,
+        "line": 163,
         "path": "template:compiled.ts",
         "repository": "template",
         "typeOnly": false
@@ -170,7 +170,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.compiled",
       "spec": {
-        "anchor": "template:compiled.ts#L137",
+        "anchor": "template:compiled.ts#L163",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -183,7 +183,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": "./compiled",
-        "line": 13,
+        "line": 18,
         "path": "template:compiled.ts",
         "repository": "template",
         "typeOnly": true
@@ -196,7 +196,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.compiled",
       "spec": {
-        "anchor": "template:compiled.ts#L13",
+        "anchor": "template:compiled.ts#L18",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -209,7 +209,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": "./compiled",
-        "line": 165,
+        "line": 191,
         "path": "template:compiled.ts",
         "repository": "template",
         "typeOnly": false
@@ -222,7 +222,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.compiled",
       "spec": {
-        "anchor": "template:compiled.ts#L165",
+        "anchor": "template:compiled.ts#L191",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -235,7 +235,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": "./compiled",
-        "line": 122,
+        "line": 148,
         "path": "template:compiled.ts",
         "repository": "template",
         "typeOnly": false
@@ -248,7 +248,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.compiled",
       "spec": {
-        "anchor": "template:compiled.ts#L122",
+        "anchor": "template:compiled.ts#L148",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -261,7 +261,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": "./compiled",
-        "line": 153,
+        "line": 179,
         "path": "template:compiled.ts",
         "repository": "template",
         "typeOnly": false
@@ -274,7 +274,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.compiled",
       "spec": {
-        "anchor": "template:compiled.ts#L153",
+        "anchor": "template:compiled.ts#L179",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -287,7 +287,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": "./compiled",
-        "line": 133,
+        "line": 159,
         "path": "template:compiled.ts",
         "repository": "template",
         "typeOnly": false
@@ -300,7 +300,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.compiled",
       "spec": {
-        "anchor": "template:compiled.ts#L133",
+        "anchor": "template:compiled.ts#L159",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -313,7 +313,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": "./compiled",
-        "line": 118,
+        "line": 144,
         "path": "template:compiled.ts",
         "repository": "template",
         "typeOnly": false
@@ -326,7 +326,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.compiled",
       "spec": {
-        "anchor": "template:compiled.ts#L118",
+        "anchor": "template:compiled.ts#L144",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -339,7 +339,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": "./compiled",
-        "line": 69,
+        "line": 95,
         "path": "template:compiled.ts",
         "repository": "template",
         "typeOnly": true
@@ -352,7 +352,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.compiled",
       "spec": {
-        "anchor": "template:compiled.ts#L69",
+        "anchor": "template:compiled.ts#L95",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -365,38 +365,12 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": "./compiled",
-        "line": 15,
-        "path": "template:compiled.ts",
-        "repository": "template",
-        "typeOnly": true
-      },
-      "name": "CompiledMount",
-      "ownerHint": {
-        "package": "@zavx0z/template",
-        "repository": "template",
-        "stage": "compiler"
-      },
-      "parent": "platform.at-zavx0z-template.export-paths.compiled",
-      "spec": {
-        "anchor": "template:compiled.ts#L15",
-        "profile": "project-contract",
-        "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
-      }
-    },
-    {
-      "description": "@zavx0z/template/compiled public type export CompiledStyleSheet.",
-      "domain": "tsx",
-      "id": "platform.at-zavx0z-template.export-paths.compiled.symbols.compiledstylesheet",
-      "kind": "type-export",
-      "metadata": {
-        "entrypoint": "./compiled",
         "line": 20,
         "path": "template:compiled.ts",
         "repository": "template",
         "typeOnly": true
       },
-      "name": "CompiledStyleSheet",
+      "name": "CompiledMount",
       "ownerHint": {
         "package": "@zavx0z/template",
         "repository": "template",
@@ -411,243 +385,62 @@
       }
     },
     {
+      "description": "@zavx0z/template/compiled public runtime export compiledStyleSheet.",
+      "domain": "tsx",
+      "id": "platform.at-zavx0z-template.export-paths.compiled.symbols.compiledstylesheet",
+      "kind": "runtime-export",
+      "metadata": {
+        "elements": [],
+        "entrypoint": "./compiled",
+        "line": 55,
+        "path": "template:compiled.ts",
+        "repository": "template",
+        "typeOnly": false
+      },
+      "name": "compiledStyleSheet",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "parent": "platform.at-zavx0z-template.export-paths.compiled",
+      "spec": {
+        "anchor": "template:compiled.ts#L55",
+        "profile": "project-contract",
+        "source": "@zavx0z/template-exports",
+        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "@zavx0z/template/compiled public type export CompiledStyleSheetSource.",
+      "domain": "tsx",
+      "id": "platform.at-zavx0z-template.export-paths.compiled.symbols.compiledstylesheetsource",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": "./compiled",
+        "line": 31,
+        "path": "template:compiled.ts",
+        "repository": "template",
+        "typeOnly": true
+      },
+      "name": "CompiledStyleSheetSource",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "parent": "platform.at-zavx0z-template.export-paths.compiled",
+      "spec": {
+        "anchor": "template:compiled.ts#L31",
+        "profile": "project-contract",
+        "source": "@zavx0z/template-exports",
+        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
       "description": "@zavx0z/template/compiled public type export CompiledTemplate.",
       "domain": "tsx",
       "id": "platform.at-zavx0z-template.export-paths.compiled.symbols.compiledtemplate",
-      "kind": "type-export",
-      "metadata": {
-        "entrypoint": "./compiled",
-        "line": 33,
-        "path": "template:compiled.ts",
-        "repository": "template",
-        "typeOnly": true
-      },
-      "name": "CompiledTemplate",
-      "ownerHint": {
-        "package": "@zavx0z/template",
-        "repository": "template",
-        "stage": "compiler"
-      },
-      "parent": "platform.at-zavx0z-template.export-paths.compiled",
-      "spec": {
-        "anchor": "template:compiled.ts#L33",
-        "profile": "project-contract",
-        "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
-      }
-    },
-    {
-      "description": "@zavx0z/template/compiled public type export CompiledTemplateDefinition.",
-      "domain": "tsx",
-      "id": "platform.at-zavx0z-template.export-paths.compiled.symbols.compiledtemplatedefinition",
-      "kind": "type-export",
-      "metadata": {
-        "entrypoint": "./compiled",
-        "line": 25,
-        "path": "template:compiled.ts",
-        "repository": "template",
-        "typeOnly": true
-      },
-      "name": "CompiledTemplateDefinition",
-      "ownerHint": {
-        "package": "@zavx0z/template",
-        "repository": "template",
-        "stage": "compiler"
-      },
-      "parent": "platform.at-zavx0z-template.export-paths.compiled",
-      "spec": {
-        "anchor": "template:compiled.ts#L25",
-        "profile": "project-contract",
-        "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
-      }
-    },
-    {
-      "description": "@zavx0z/template/compiled public type export ConditionalBinding.",
-      "domain": "tsx",
-      "id": "platform.at-zavx0z-template.export-paths.compiled.symbols.conditionalbinding",
-      "kind": "type-export",
-      "metadata": {
-        "entrypoint": "./compiled",
-        "line": 75,
-        "path": "template:compiled.ts",
-        "repository": "template",
-        "typeOnly": true
-      },
-      "name": "ConditionalBinding",
-      "ownerHint": {
-        "package": "@zavx0z/template",
-        "repository": "template",
-        "stage": "compiler"
-      },
-      "parent": "platform.at-zavx0z-template.export-paths.compiled",
-      "spec": {
-        "anchor": "template:compiled.ts#L75",
-        "profile": "project-contract",
-        "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
-      }
-    },
-    {
-      "description": "@zavx0z/template/compiled public runtime export defineCompiledTemplate.",
-      "domain": "tsx",
-      "id": "platform.at-zavx0z-template.export-paths.compiled.symbols.definecompiledtemplate",
-      "kind": "runtime-export",
-      "metadata": {
-        "entrypoint": "./compiled",
-        "line": 97,
-        "path": "template:compiled.ts",
-        "repository": "template",
-        "typeOnly": false
-      },
-      "name": "defineCompiledTemplate",
-      "ownerHint": {
-        "package": "@zavx0z/template",
-        "repository": "template",
-        "stage": "compiler"
-      },
-      "parent": "platform.at-zavx0z-template.export-paths.compiled",
-      "spec": {
-        "anchor": "template:compiled.ts#L97",
-        "profile": "project-contract",
-        "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
-      }
-    },
-    {
-      "description": "@zavx0z/template/compiled public type export EventBinding.",
-      "domain": "tsx",
-      "id": "platform.at-zavx0z-template.export-paths.compiled.symbols.eventbinding",
-      "kind": "type-export",
-      "metadata": {
-        "entrypoint": "./compiled",
-        "line": 57,
-        "path": "template:compiled.ts",
-        "repository": "template",
-        "typeOnly": true
-      },
-      "name": "EventBinding",
-      "ownerHint": {
-        "package": "@zavx0z/template",
-        "repository": "template",
-        "stage": "compiler"
-      },
-      "parent": "platform.at-zavx0z-template.export-paths.compiled",
-      "spec": {
-        "anchor": "template:compiled.ts#L57",
-        "profile": "project-contract",
-        "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
-      }
-    },
-    {
-      "description": "@zavx0z/template/compiled public type export HostBinding.",
-      "domain": "tsx",
-      "id": "platform.at-zavx0z-template.export-paths.compiled.symbols.hostbinding",
-      "kind": "type-export",
-      "metadata": {
-        "entrypoint": "./compiled",
-        "line": 87,
-        "path": "template:compiled.ts",
-        "repository": "template",
-        "typeOnly": true
-      },
-      "name": "HostBinding",
-      "ownerHint": {
-        "package": "@zavx0z/template",
-        "repository": "template",
-        "stage": "compiler"
-      },
-      "parent": "platform.at-zavx0z-template.export-paths.compiled",
-      "spec": {
-        "anchor": "template:compiled.ts#L87",
-        "profile": "project-contract",
-        "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
-      }
-    },
-    {
-      "description": "@zavx0z/template/compiled public runtime export isCompiledTemplate.",
-      "domain": "tsx",
-      "id": "platform.at-zavx0z-template.export-paths.compiled.symbols.iscompiledtemplate",
-      "kind": "runtime-export",
-      "metadata": {
-        "entrypoint": "./compiled",
-        "line": 176,
-        "path": "template:compiled.ts",
-        "repository": "template",
-        "typeOnly": false
-      },
-      "name": "isCompiledTemplate",
-      "ownerHint": {
-        "package": "@zavx0z/template",
-        "repository": "template",
-        "stage": "compiler"
-      },
-      "parent": "platform.at-zavx0z-template.export-paths.compiled",
-      "spec": {
-        "anchor": "template:compiled.ts#L176",
-        "profile": "project-contract",
-        "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
-      }
-    },
-    {
-      "description": "@zavx0z/template/compiled public runtime export isHostBinding.",
-      "domain": "tsx",
-      "id": "platform.at-zavx0z-template.export-paths.compiled.symbols.ishostbinding",
-      "kind": "runtime-export",
-      "metadata": {
-        "entrypoint": "./compiled",
-        "line": 181,
-        "path": "template:compiled.ts",
-        "repository": "template",
-        "typeOnly": false
-      },
-      "name": "isHostBinding",
-      "ownerHint": {
-        "package": "@zavx0z/template",
-        "repository": "template",
-        "stage": "compiler"
-      },
-      "parent": "platform.at-zavx0z-template.export-paths.compiled",
-      "spec": {
-        "anchor": "template:compiled.ts#L181",
-        "profile": "project-contract",
-        "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
-      }
-    },
-    {
-      "description": "@zavx0z/template/compiled public type export KeyedBinding.",
-      "domain": "tsx",
-      "id": "platform.at-zavx0z-template.export-paths.compiled.symbols.keyedbinding",
-      "kind": "type-export",
-      "metadata": {
-        "entrypoint": "./compiled",
-        "line": 81,
-        "path": "template:compiled.ts",
-        "repository": "template",
-        "typeOnly": true
-      },
-      "name": "KeyedBinding",
-      "ownerHint": {
-        "package": "@zavx0z/template",
-        "repository": "template",
-        "stage": "compiler"
-      },
-      "parent": "platform.at-zavx0z-template.export-paths.compiled",
-      "spec": {
-        "anchor": "template:compiled.ts#L81",
-        "profile": "project-contract",
-        "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
-      }
-    },
-    {
-      "description": "@zavx0z/template/compiled public type export PropertyBinding.",
-      "domain": "tsx",
-      "id": "platform.at-zavx0z-template.export-paths.compiled.symbols.propertybinding",
       "kind": "type-export",
       "metadata": {
         "entrypoint": "./compiled",
@@ -656,7 +449,7 @@
         "repository": "template",
         "typeOnly": true
       },
-      "name": "PropertyBinding",
+      "name": "CompiledTemplate",
       "ownerHint": {
         "package": "@zavx0z/template",
         "repository": "template",
@@ -671,13 +464,299 @@
       }
     },
     {
+      "description": "@zavx0z/template/compiled public type export CompiledTemplateDefinition.",
+      "domain": "tsx",
+      "id": "platform.at-zavx0z-template.export-paths.compiled.symbols.compiledtemplatedefinition",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": "./compiled",
+        "line": 38,
+        "path": "template:compiled.ts",
+        "repository": "template",
+        "typeOnly": true
+      },
+      "name": "CompiledTemplateDefinition",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "parent": "platform.at-zavx0z-template.export-paths.compiled",
+      "spec": {
+        "anchor": "template:compiled.ts#L38",
+        "profile": "project-contract",
+        "source": "@zavx0z/template-exports",
+        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "@zavx0z/template/compiled public type export ConditionalBinding.",
+      "domain": "tsx",
+      "id": "platform.at-zavx0z-template.export-paths.compiled.symbols.conditionalbinding",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": "./compiled",
+        "line": 101,
+        "path": "template:compiled.ts",
+        "repository": "template",
+        "typeOnly": true
+      },
+      "name": "ConditionalBinding",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "parent": "platform.at-zavx0z-template.export-paths.compiled",
+      "spec": {
+        "anchor": "template:compiled.ts#L101",
+        "profile": "project-contract",
+        "source": "@zavx0z/template-exports",
+        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "@zavx0z/template/compiled public runtime export decodeCompiledStyleText.",
+      "domain": "tsx",
+      "id": "platform.at-zavx0z-template.export-paths.compiled.symbols.decodecompiledstyletext",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": "./compiled",
+        "line": 9,
+        "path": "template:compiled.ts",
+        "repository": "template",
+        "typeOnly": false
+      },
+      "name": "decodeCompiledStyleText",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "parent": "platform.at-zavx0z-template.export-paths.compiled",
+      "spec": {
+        "anchor": "template:compiled.ts#L9",
+        "profile": "project-contract",
+        "source": "@zavx0z/template-exports",
+        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "@zavx0z/template/compiled public runtime export defineCompiledTemplate.",
+      "domain": "tsx",
+      "id": "platform.at-zavx0z-template.export-paths.compiled.symbols.definecompiledtemplate",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": "./compiled",
+        "line": 123,
+        "path": "template:compiled.ts",
+        "repository": "template",
+        "typeOnly": false
+      },
+      "name": "defineCompiledTemplate",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "parent": "platform.at-zavx0z-template.export-paths.compiled",
+      "spec": {
+        "anchor": "template:compiled.ts#L123",
+        "profile": "project-contract",
+        "source": "@zavx0z/template-exports",
+        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "@zavx0z/template/compiled public runtime export encodeCompiledStyleText.",
+      "domain": "tsx",
+      "id": "platform.at-zavx0z-template.export-paths.compiled.symbols.encodecompiledstyletext",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": "./compiled",
+        "line": 9,
+        "path": "template:compiled.ts",
+        "repository": "template",
+        "typeOnly": false
+      },
+      "name": "encodeCompiledStyleText",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "parent": "platform.at-zavx0z-template.export-paths.compiled",
+      "spec": {
+        "anchor": "template:compiled.ts#L9",
+        "profile": "project-contract",
+        "source": "@zavx0z/template-exports",
+        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "@zavx0z/template/compiled public type export EventBinding.",
+      "domain": "tsx",
+      "id": "platform.at-zavx0z-template.export-paths.compiled.symbols.eventbinding",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": "./compiled",
+        "line": 83,
+        "path": "template:compiled.ts",
+        "repository": "template",
+        "typeOnly": true
+      },
+      "name": "EventBinding",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "parent": "platform.at-zavx0z-template.export-paths.compiled",
+      "spec": {
+        "anchor": "template:compiled.ts#L83",
+        "profile": "project-contract",
+        "source": "@zavx0z/template-exports",
+        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "@zavx0z/template/compiled public type export HostBinding.",
+      "domain": "tsx",
+      "id": "platform.at-zavx0z-template.export-paths.compiled.symbols.hostbinding",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": "./compiled",
+        "line": 113,
+        "path": "template:compiled.ts",
+        "repository": "template",
+        "typeOnly": true
+      },
+      "name": "HostBinding",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "parent": "platform.at-zavx0z-template.export-paths.compiled",
+      "spec": {
+        "anchor": "template:compiled.ts#L113",
+        "profile": "project-contract",
+        "source": "@zavx0z/template-exports",
+        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "@zavx0z/template/compiled public runtime export isCompiledTemplate.",
+      "domain": "tsx",
+      "id": "platform.at-zavx0z-template.export-paths.compiled.symbols.iscompiledtemplate",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": "./compiled",
+        "line": 202,
+        "path": "template:compiled.ts",
+        "repository": "template",
+        "typeOnly": false
+      },
+      "name": "isCompiledTemplate",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "parent": "platform.at-zavx0z-template.export-paths.compiled",
+      "spec": {
+        "anchor": "template:compiled.ts#L202",
+        "profile": "project-contract",
+        "source": "@zavx0z/template-exports",
+        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "@zavx0z/template/compiled public runtime export isHostBinding.",
+      "domain": "tsx",
+      "id": "platform.at-zavx0z-template.export-paths.compiled.symbols.ishostbinding",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": "./compiled",
+        "line": 207,
+        "path": "template:compiled.ts",
+        "repository": "template",
+        "typeOnly": false
+      },
+      "name": "isHostBinding",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "parent": "platform.at-zavx0z-template.export-paths.compiled",
+      "spec": {
+        "anchor": "template:compiled.ts#L207",
+        "profile": "project-contract",
+        "source": "@zavx0z/template-exports",
+        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "@zavx0z/template/compiled public type export KeyedBinding.",
+      "domain": "tsx",
+      "id": "platform.at-zavx0z-template.export-paths.compiled.symbols.keyedbinding",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": "./compiled",
+        "line": 107,
+        "path": "template:compiled.ts",
+        "repository": "template",
+        "typeOnly": true
+      },
+      "name": "KeyedBinding",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "parent": "platform.at-zavx0z-template.export-paths.compiled",
+      "spec": {
+        "anchor": "template:compiled.ts#L107",
+        "profile": "project-contract",
+        "source": "@zavx0z/template-exports",
+        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "@zavx0z/template/compiled public type export PropertyBinding.",
+      "domain": "tsx",
+      "id": "platform.at-zavx0z-template.export-paths.compiled.symbols.propertybinding",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": "./compiled",
+        "line": 72,
+        "path": "template:compiled.ts",
+        "repository": "template",
+        "typeOnly": true
+      },
+      "name": "PropertyBinding",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "parent": "platform.at-zavx0z-template.export-paths.compiled",
+      "spec": {
+        "anchor": "template:compiled.ts#L72",
+        "profile": "project-contract",
+        "source": "@zavx0z/template-exports",
+        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
       "description": "@zavx0z/template/compiled public type export RefBinding.",
       "domain": "tsx",
       "id": "platform.at-zavx0z-template.export-paths.compiled.symbols.refbinding",
       "kind": "type-export",
       "metadata": {
         "entrypoint": "./compiled",
-        "line": 64,
+        "line": 90,
         "path": "template:compiled.ts",
         "repository": "template",
         "typeOnly": true
@@ -690,7 +769,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.compiled",
       "spec": {
-        "anchor": "template:compiled.ts#L64",
+        "anchor": "template:compiled.ts#L90",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -703,7 +782,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": "./compiled",
-        "line": 52,
+        "line": 78,
         "path": "template:compiled.ts",
         "repository": "template",
         "typeOnly": true
@@ -716,7 +795,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.compiled",
       "spec": {
-        "anchor": "template:compiled.ts#L52",
+        "anchor": "template:compiled.ts#L78",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -729,7 +808,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": "./compiled",
-        "line": 41,
+        "line": 67,
         "path": "template:compiled.ts",
         "repository": "template",
         "typeOnly": true
@@ -742,7 +821,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.compiled",
       "spec": {
-        "anchor": "template:compiled.ts#L41",
+        "anchor": "template:compiled.ts#L67",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -755,7 +834,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": "./compiled",
-        "line": 169,
+        "line": 195,
         "path": "template:compiled.ts",
         "repository": "template",
         "typeOnly": false
@@ -768,7 +847,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.compiled",
       "spec": {
-        "anchor": "template:compiled.ts#L169",
+        "anchor": "template:compiled.ts#L195",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -922,6 +1001,32 @@
       "parent": "platform.at-zavx0z-template.export-paths.compiler",
       "spec": {
         "anchor": "template:compiler/index.ts#L3",
+        "profile": "project-contract",
+        "source": "@zavx0z/template-exports",
+        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "@zavx0z/template/compiler public type export JsxTransformOptions.",
+      "domain": "tsx",
+      "id": "platform.at-zavx0z-template.export-paths.compiler.symbols.jsxtransformoptions",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": "./compiler",
+        "line": 5,
+        "path": "template:compiler/index.ts",
+        "repository": "template",
+        "typeOnly": true
+      },
+      "name": "JsxTransformOptions",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "parent": "platform.at-zavx0z-template.export-paths.compiler",
+      "spec": {
+        "anchor": "template:compiler/index.ts#L5",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -1130,13 +1235,39 @@
       }
     },
     {
+      "description": "@zavx0z/template/jsx-runtime public type export CssCompilerIntrinsic.",
+      "domain": "tsx",
+      "id": "platform.at-zavx0z-template.export-paths.jsx-runtime.symbols.csscompilerintrinsic",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": "./jsx-runtime",
+        "line": 16,
+        "path": "template:jsx-runtime.ts",
+        "repository": "template",
+        "typeOnly": true
+      },
+      "name": "CssCompilerIntrinsic",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "parent": "platform.at-zavx0z-template.export-paths.jsx-runtime",
+      "spec": {
+        "anchor": "template:jsx-runtime.ts#L16",
+        "profile": "project-contract",
+        "source": "@zavx0z/template-exports",
+        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
       "description": "@zavx0z/template/jsx-runtime public type export Element.",
       "domain": "tsx",
       "id": "platform.at-zavx0z-template.export-paths.jsx-runtime.symbols.element",
       "kind": "type-export",
       "metadata": {
         "entrypoint": "./jsx-runtime",
-        "line": 12,
+        "line": 28,
         "path": "template:jsx-runtime.ts",
         "repository": "template",
         "typeOnly": true
@@ -1149,7 +1280,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.jsx-runtime",
       "spec": {
-        "anchor": "template:jsx-runtime.ts#L12",
+        "anchor": "template:jsx-runtime.ts#L28",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -1162,7 +1293,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": "./jsx-runtime",
-        "line": 14,
+        "line": 30,
         "path": "template:jsx-runtime.ts",
         "repository": "template",
         "typeOnly": true
@@ -1175,7 +1306,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.jsx-runtime",
       "spec": {
-        "anchor": "template:jsx-runtime.ts#L14",
+        "anchor": "template:jsx-runtime.ts#L30",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -1188,7 +1319,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": "./jsx-runtime",
-        "line": 13,
+        "line": 29,
         "path": "template:jsx-runtime.ts",
         "repository": "template",
         "typeOnly": true
@@ -1201,7 +1332,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.jsx-runtime",
       "spec": {
-        "anchor": "template:jsx-runtime.ts#L13",
+        "anchor": "template:jsx-runtime.ts#L29",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -1214,12 +1345,38 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": "./jsx-runtime",
-        "line": 33,
+        "line": 49,
         "path": "template:jsx-runtime.ts",
         "repository": "template",
         "typeOnly": false
       },
       "name": "Fragment",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "parent": "platform.at-zavx0z-template.export-paths.jsx-runtime",
+      "spec": {
+        "anchor": "template:jsx-runtime.ts#L49",
+        "profile": "project-contract",
+        "source": "@zavx0z/template-exports",
+        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "@zavx0z/template/jsx-runtime public type export IntrinsicAttributes.",
+      "domain": "tsx",
+      "id": "platform.at-zavx0z-template.export-paths.jsx-runtime.symbols.intrinsicattributes",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": "./jsx-runtime",
+        "line": 33,
+        "path": "template:jsx-runtime.ts",
+        "repository": "template",
+        "typeOnly": true
+      },
+      "name": "IntrinsicAttributes",
       "ownerHint": {
         "package": "@zavx0z/template",
         "repository": "template",
@@ -1234,39 +1391,13 @@
       }
     },
     {
-      "description": "@zavx0z/template/jsx-runtime public type export IntrinsicAttributes.",
-      "domain": "tsx",
-      "id": "platform.at-zavx0z-template.export-paths.jsx-runtime.symbols.intrinsicattributes",
-      "kind": "type-export",
-      "metadata": {
-        "entrypoint": "./jsx-runtime",
-        "line": 17,
-        "path": "template:jsx-runtime.ts",
-        "repository": "template",
-        "typeOnly": true
-      },
-      "name": "IntrinsicAttributes",
-      "ownerHint": {
-        "package": "@zavx0z/template",
-        "repository": "template",
-        "stage": "compiler"
-      },
-      "parent": "platform.at-zavx0z-template.export-paths.jsx-runtime",
-      "spec": {
-        "anchor": "template:jsx-runtime.ts#L17",
-        "profile": "project-contract",
-        "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
-      }
-    },
-    {
       "description": "@zavx0z/template/jsx-runtime public type export IntrinsicElements.",
       "domain": "tsx",
       "id": "platform.at-zavx0z-template.export-paths.jsx-runtime.symbols.intrinsicelements",
       "kind": "type-export",
       "metadata": {
         "entrypoint": "./jsx-runtime",
-        "line": 20,
+        "line": 36,
         "path": "template:jsx-runtime.ts",
         "repository": "template",
         "typeOnly": true
@@ -1279,7 +1410,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.jsx-runtime",
       "spec": {
-        "anchor": "template:jsx-runtime.ts#L20",
+        "anchor": "template:jsx-runtime.ts#L36",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -1292,7 +1423,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": "./jsx-runtime",
-        "line": 25,
+        "line": 41,
         "path": "template:jsx-runtime.ts",
         "repository": "template",
         "typeOnly": false
@@ -1305,7 +1436,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.jsx-runtime",
       "spec": {
-        "anchor": "template:jsx-runtime.ts#L25",
+        "anchor": "template:jsx-runtime.ts#L41",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -1318,7 +1449,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": "./jsx-runtime",
-        "line": 29,
+        "line": 45,
         "path": "template:jsx-runtime.ts",
         "repository": "template",
         "typeOnly": false
@@ -1331,7 +1462,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.jsx-runtime",
       "spec": {
-        "anchor": "template:jsx-runtime.ts#L29",
+        "anchor": "template:jsx-runtime.ts#L45",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -1393,7 +1524,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 26,
+        "line": 38,
         "path": "template:index.ts",
         "repository": "template",
         "typeOnly": true
@@ -1406,7 +1537,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.root",
       "spec": {
-        "anchor": "template:index.ts#L26",
+        "anchor": "template:index.ts#L38",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -1419,7 +1550,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 16,
+        "line": 28,
         "path": "template:index.ts",
         "repository": "template",
         "typeOnly": false
@@ -1432,7 +1563,163 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.root",
       "spec": {
-        "anchor": "template:index.ts#L16",
+        "anchor": "template:index.ts#L28",
+        "profile": "project-contract",
+        "source": "@zavx0z/template-exports",
+        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "@zavx0z/template public runtime export css.",
+      "domain": "tsx",
+      "id": "platform.at-zavx0z-template.export-paths.root.symbols.css",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 20,
+        "path": "template:index.ts",
+        "repository": "template",
+        "typeOnly": false
+      },
+      "name": "css",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "parent": "platform.at-zavx0z-template.export-paths.root",
+      "spec": {
+        "anchor": "template:index.ts#L20",
+        "profile": "project-contract",
+        "source": "@zavx0z/template-exports",
+        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "@zavx0z/template public type export CssDeclarationValue.",
+      "domain": "tsx",
+      "id": "platform.at-zavx0z-template.export-paths.root.symbols.cssdeclarationvalue",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 21,
+        "path": "template:index.ts",
+        "repository": "template",
+        "typeOnly": true
+      },
+      "name": "CssDeclarationValue",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "parent": "platform.at-zavx0z-template.export-paths.root",
+      "spec": {
+        "anchor": "template:index.ts#L21",
+        "profile": "project-contract",
+        "source": "@zavx0z/template-exports",
+        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "@zavx0z/template public type export CssSourceValue.",
+      "domain": "tsx",
+      "id": "platform.at-zavx0z-template.export-paths.root.symbols.csssourcevalue",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 21,
+        "path": "template:index.ts",
+        "repository": "template",
+        "typeOnly": true
+      },
+      "name": "CssSourceValue",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "parent": "platform.at-zavx0z-template.export-paths.root",
+      "spec": {
+        "anchor": "template:index.ts#L21",
+        "profile": "project-contract",
+        "source": "@zavx0z/template-exports",
+        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "@zavx0z/template public type export CssStyleValue.",
+      "domain": "tsx",
+      "id": "platform.at-zavx0z-template.export-paths.root.symbols.cssstylevalue",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 21,
+        "path": "template:index.ts",
+        "repository": "template",
+        "typeOnly": true
+      },
+      "name": "CssStyleValue",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "parent": "platform.at-zavx0z-template.export-paths.root",
+      "spec": {
+        "anchor": "template:index.ts#L21",
+        "profile": "project-contract",
+        "source": "@zavx0z/template-exports",
+        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "@zavx0z/template public type export CssTemplateResult.",
+      "domain": "tsx",
+      "id": "platform.at-zavx0z-template.export-paths.root.symbols.csstemplateresult",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 21,
+        "path": "template:index.ts",
+        "repository": "template",
+        "typeOnly": true
+      },
+      "name": "CssTemplateResult",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "parent": "platform.at-zavx0z-template.export-paths.root",
+      "spec": {
+        "anchor": "template:index.ts#L21",
+        "profile": "project-contract",
+        "source": "@zavx0z/template-exports",
+        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "@zavx0z/template public type export CssTemplateValue.",
+      "domain": "tsx",
+      "id": "platform.at-zavx0z-template.export-paths.root.symbols.csstemplatevalue",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 21,
+        "path": "template:index.ts",
+        "repository": "template",
+        "typeOnly": true
+      },
+      "name": "CssTemplateValue",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "parent": "platform.at-zavx0z-template.export-paths.root",
+      "spec": {
+        "anchor": "template:index.ts#L21",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -1445,7 +1732,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 16,
+        "line": 28,
         "path": "template:index.ts",
         "repository": "template",
         "typeOnly": false
@@ -1458,7 +1745,33 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.root",
       "spec": {
-        "anchor": "template:index.ts#L16",
+        "anchor": "template:index.ts#L28",
+        "profile": "project-contract",
+        "source": "@zavx0z/template-exports",
+        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "@zavx0z/template public runtime export isCssTemplateResult.",
+      "domain": "tsx",
+      "id": "platform.at-zavx0z-template.export-paths.root.symbols.iscsstemplateresult",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 20,
+        "path": "template:index.ts",
+        "repository": "template",
+        "typeOnly": false
+      },
+      "name": "isCssTemplateResult",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "parent": "platform.at-zavx0z-template.export-paths.root",
+      "spec": {
+        "anchor": "template:index.ts#L20",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -1471,7 +1784,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 25,
+        "line": 37,
         "path": "template:index.ts",
         "repository": "template",
         "typeOnly": true
@@ -1484,7 +1797,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.root",
       "spec": {
-        "anchor": "template:index.ts#L25",
+        "anchor": "template:index.ts#L37",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -1497,7 +1810,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 61,
+        "line": 73,
         "path": "template:index.ts",
         "repository": "template",
         "typeOnly": false
@@ -1510,7 +1823,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.root",
       "spec": {
-        "anchor": "template:index.ts#L61",
+        "anchor": "template:index.ts#L73",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -1523,64 +1836,12 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 17,
-        "path": "template:index.ts",
-        "repository": "template",
-        "typeOnly": true
-      },
-      "name": "TemplateChild",
-      "ownerHint": {
-        "package": "@zavx0z/template",
-        "repository": "template",
-        "stage": "compiler"
-      },
-      "parent": "platform.at-zavx0z-template.export-paths.root",
-      "spec": {
-        "anchor": "template:index.ts#L17",
-        "profile": "project-contract",
-        "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
-      }
-    },
-    {
-      "description": "@zavx0z/template public type export TemplateInstance.",
-      "domain": "tsx",
-      "id": "platform.at-zavx0z-template.export-paths.root.symbols.templateinstance",
-      "kind": "type-export",
-      "metadata": {
-        "entrypoint": ".",
-        "line": 17,
-        "path": "template:index.ts",
-        "repository": "template",
-        "typeOnly": true
-      },
-      "name": "TemplateInstance",
-      "ownerHint": {
-        "package": "@zavx0z/template",
-        "repository": "template",
-        "stage": "compiler"
-      },
-      "parent": "platform.at-zavx0z-template.export-paths.root",
-      "spec": {
-        "anchor": "template:index.ts#L17",
-        "profile": "project-contract",
-        "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
-      }
-    },
-    {
-      "description": "@zavx0z/template public type export TemplateParameters.",
-      "domain": "tsx",
-      "id": "platform.at-zavx0z-template.export-paths.root.symbols.templateparameters",
-      "kind": "type-export",
-      "metadata": {
-        "entrypoint": ".",
         "line": 29,
         "path": "template:index.ts",
         "repository": "template",
         "typeOnly": true
       },
-      "name": "TemplateParameters",
+      "name": "TemplateChild",
       "ownerHint": {
         "package": "@zavx0z/template",
         "repository": "template",
@@ -1595,13 +1856,65 @@
       }
     },
     {
+      "description": "@zavx0z/template public type export TemplateInstance.",
+      "domain": "tsx",
+      "id": "platform.at-zavx0z-template.export-paths.root.symbols.templateinstance",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 29,
+        "path": "template:index.ts",
+        "repository": "template",
+        "typeOnly": true
+      },
+      "name": "TemplateInstance",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "parent": "platform.at-zavx0z-template.export-paths.root",
+      "spec": {
+        "anchor": "template:index.ts#L29",
+        "profile": "project-contract",
+        "source": "@zavx0z/template-exports",
+        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
+      "description": "@zavx0z/template public type export TemplateParameters.",
+      "domain": "tsx",
+      "id": "platform.at-zavx0z-template.export-paths.root.symbols.templateparameters",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 41,
+        "path": "template:index.ts",
+        "repository": "template",
+        "typeOnly": true
+      },
+      "name": "TemplateParameters",
+      "ownerHint": {
+        "package": "@zavx0z/template",
+        "repository": "template",
+        "stage": "compiler"
+      },
+      "parent": "platform.at-zavx0z-template.export-paths.root",
+      "spec": {
+        "anchor": "template:index.ts#L41",
+        "profile": "project-contract",
+        "source": "@zavx0z/template-exports",
+        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+      }
+    },
+    {
       "description": "@zavx0z/template public type export TemplateProgram.",
       "domain": "tsx",
       "id": "platform.at-zavx0z-template.export-paths.root.symbols.templateprogram",
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 17,
+        "line": 29,
         "path": "template:index.ts",
         "repository": "template",
         "typeOnly": true
@@ -1614,7 +1927,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.root",
       "spec": {
-        "anchor": "template:index.ts#L17",
+        "anchor": "template:index.ts#L29",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -1627,7 +1940,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 17,
+        "line": 29,
         "path": "template:index.ts",
         "repository": "template",
         "typeOnly": true
@@ -1640,7 +1953,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.root",
       "spec": {
-        "anchor": "template:index.ts#L17",
+        "anchor": "template:index.ts#L29",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -1653,7 +1966,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 17,
+        "line": 29,
         "path": "template:index.ts",
         "repository": "template",
         "typeOnly": true
@@ -1666,7 +1979,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.root",
       "spec": {
-        "anchor": "template:index.ts#L17",
+        "anchor": "template:index.ts#L29",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -1679,7 +1992,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 27,
+        "line": 39,
         "path": "template:index.ts",
         "repository": "template",
         "typeOnly": true
@@ -1692,7 +2005,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.root",
       "spec": {
-        "anchor": "template:index.ts#L27",
+        "anchor": "template:index.ts#L39",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
@@ -1705,7 +2018,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 27,
+        "line": 39,
         "path": "template:index.ts",
         "repository": "template",
         "typeOnly": true
@@ -1718,7 +2031,7 @@
       },
       "parent": "platform.at-zavx0z-template.export-paths.root",
       "spec": {
-        "anchor": "template:index.ts#L27",
+        "anchor": "template:index.ts#L39",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
         "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"

@@ -8,6 +8,7 @@ import {JsxCompilerSession} from "@zavx0z/template/compiler"
 
 const fixture = join(import.meta.dir, "compiler-fixture/application.tsx")
 const importedFixture = join(import.meta.dir, "compiler-fixture/imported-entry.tsx")
+const customPropertyFixture = join(import.meta.dir, "compiler-fixture/custom-property.tsx")
 const session = new JsxCompilerSession({
   cwd: import.meta.dir,
   sourceRoots: [join(import.meta.dir, "compiler-fixture")]
@@ -122,6 +123,48 @@ describe("Template-owned TSX compiler with @zavx0z/react", () => {
       expect(button.firstChild).toBe(text)
       expect(button.textContent).toBe("Imported: 1")
       application.root.unmount()
+    } finally {
+      await rm(outputDirectory, {recursive: true, force: true})
+    }
+  })
+
+  test("runs instance custom properties through one shared compiled pseudo sheet", async () => {
+    const outputDirectory = await mkdtemp(join(tmpdir(), "zavx0z-compiled-custom-property-"))
+    try {
+      const result = await Bun.build({
+        entrypoints: [customPropertyFixture],
+        outdir: outputDirectory,
+        target: "bun",
+        format: "esm",
+        packages: "bundle",
+        plugins: [createTemplateJsxBunPlugin({sourceRoots: [join(import.meta.dir, "compiler-fixture")]})],
+      })
+      expect(result.success).toBe(true)
+      const output = result.outputs.find((artifact) => artifact.kind === "entry-point")
+      if (!output) throw new Error("Custom-property compiler fixture emitted no entry point")
+      const javascript = await Bun.file(output.path).text()
+      expect(javascript).toContain("var(--hover-color)")
+      expect(javascript).toContain('"--hover-color: "')
+      expect(javascript).not.toMatch(/--z-[a-z0-9-]+/)
+      const application = await import(`${pathToFileURL(output.path).href}?custom=${Date.now()}`) as Readonly<{
+        backgrounds(): readonly string[]
+        dispose(): void
+        hover(index: number | null): void
+        hoverStyleSheetCount(): number
+        renderColors(first: string, second: string): void
+        styleSheetCount(): number
+      }>
+
+      expect(application.styleSheetCount()).toBe(2)
+      expect(application.hoverStyleSheetCount()).toBe(1)
+      expect(application.backgrounds()).toEqual(["#000000", "#000000"])
+      application.hover(0)
+      expect(application.backgrounds()).toEqual(["#112233", "#000000"])
+      application.renderColors("#778899", "#445566")
+      expect(application.backgrounds()).toEqual(["#778899", "#000000"])
+      application.hover(1)
+      expect(application.backgrounds()).toEqual(["#000000", "#445566"])
+      application.dispose()
     } finally {
       await rm(outputDirectory, {recursive: true, force: true})
     }

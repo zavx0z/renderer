@@ -1,18 +1,20 @@
 import type {Document, HTMLElement} from "@zavx0z/dom"
+import type {ComponentRoot} from "@zavx0z/react"
 
 type RawStory = Readonly<{
   element: HTMLElement
-  source: unknown
+  componentRoot: Pick<ComponentRoot, "readStyleSheets">
+  source: Readonly<{html: string; typescript: string}>
   dispose?(): void
 }>
 
 export type RoutedOwnerStory = Readonly<{
   story: Readonly<{
     element: HTMLElement
-    source: unknown
+    componentRoot: Pick<ComponentRoot, "readStyleSheets">
+    source: Readonly<{html: string; typescript: string}>
     dispose(): void
   }>
-  css: string
 }>
 
 export type OwnerStoryDescriptor = Readonly<{
@@ -27,13 +29,13 @@ export function defineOwnerStory(
   return Object.freeze({route, create})
 }
 
-export function routeStory(story: RawStory, css: string): RoutedOwnerStory {
+export function routeStory(story: RawStory): RoutedOwnerStory {
   return Object.freeze({
     story: Object.freeze({
       element: story.element,
+      componentRoot: story.componentRoot,
       source: story.source,
       dispose: () => story.dispose?.(),
     }),
-    css,
   })
 }

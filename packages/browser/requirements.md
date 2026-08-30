@@ -337,3 +337,35 @@ global/consumer CSS и не заменяются component metadata; они сл
 compiled owner sheets в author cascade. Dispose каждого runtime отключает exact
 style subscription, поэтому поздний release не планирует frame через
 освобождённый projection.
+
+## `RENDERER-BROWSER-014` — explicit native linked author stylesheets
+
+`createBrowserLinkedAuthorStyleSheetHost()` accepts only an explicit ordered
+`sources` list of `{id, link}` owners. Every link must belong to the native
+`canvas.ownerDocument`; the host never enumerates `document.styleSheets`, never
+creates another Canvas/Document/Renderer/Space and never performs a second CSS
+fetch. It reads the already loaded, origin-clean `link.sheet.cssRules` CSSOM and
+mirrors flat style rules into the semantic Document's separate author registry.
+Registry order follows current native tree order among the exact supplied links.
+
+`await host.ready` resolves only after every required initial link has loaded
+and its complete readable CSSOM has been mirrored; required load failure rejects
+and releases ownership before the first runtime frame. Native listeners are
+attached before readiness inspection, then every exact `link.sheet` is reread
+immediately, so a load completing during host construction cannot be missed.
+Later `load`, configured
+link attribute/connectivity changes
+and explicit `refresh()` after CSSOM mutation replace the complete ordered set
+atomically. `refresh()` is the intentional boundary for `insertRule()` and
+`deleteRule()` because native CSSOM publishes no general mutation event. Dispose
+disconnects the exact MutationObserver/listeners and releases the author owner;
+late native events become inert.
+Observation is bounded to supplied links and their exact current parent nodes;
+ordinary application/Workbench subtree churn cannot trigger CSSOM rereads.
+
+Unreadable cross-origin CSSOM, `@import`, `@font-face`, CSS nesting,
+grouping/conditional rules, unsupported media and other unowned at-rules fail
+closed without replacing the last valid semantic snapshot. Current executable evidence uses
+browser-compatible fakes, not live native pixels. A consumer creates the linked
+host before its one `DocumentSpaceRuntime` and disposes the runtime before the
+linked host; this lifecycle composes owners without adding another Experience.

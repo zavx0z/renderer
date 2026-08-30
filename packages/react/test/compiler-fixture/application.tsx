@@ -27,7 +27,7 @@ const MemoRow = memo(Row, (previous, next) => previous.item === next.item)
 function App({label, initial}: Readonly<{label: string; initial: readonly Item[]}>) {
   const [items, updateItems] = useState(initial)
   setItems = updateItems
-  return <div style={{display: "flex", width: 240}}>
+  return <div style={css`& { display: flex; width: 240px; }`}>
     <Counter label={label} />
     <ul>{items.map(item => <MemoRow key={item.id} item={item} />)}</ul>
   </div>

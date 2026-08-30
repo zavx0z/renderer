@@ -356,10 +356,47 @@ function classifyCss(entry: CapabilityInventoryEntry): Classification {
     }
   }
   if (entry.kind === "selector") {
+    if (entry.id === "css.selectors.pseudo-class-root") {
+      return partial(
+        "adapted",
+        [
+          external,
+          implementation("renderer", "packages/core/src/css.ts", ":root", undefined, "Matches only the exact semantic Document.documentElement through the bounded selector pipeline.", "Shadow roots, scoped roots and the complete selector grammar."),
+          test("renderer", "packages/core/test/author-style-sheet.test.ts", ":root", "Semantic documentElement matching and inherited theme variables.", "Native browser or Shadow DOM conformance."),
+        ],
+        "Implemented for the one semantic Document root; Shadow DOM and the remaining selector grammar are absent.",
+        {...defaultStages, parse: "partial", cascade: "partial", computed: "not-applicable", layout: "not-applicable", paint: "not-applicable", "hit-test": "not-applicable", webgpu: "not-applicable", browser: "partial"},
+      )
+    }
     const supported = supportedSelectors.has(entry.name)
     return supported
       ? partial("adapted", [external, implementation("renderer", "packages/core/src/css.ts", "parseSelector/matchesSelector", "981-1180", "Bounded selector parsing/matching.", "The complete selector grammar and composed tree."), test("renderer", "packages/core/test/native-pseudo-style.test.ts", entry.name, "Current selector matching.", "Every grammar/namespace/pseudo branch.")], "Implemented only in the flat compound/child/descendant selector subset.", { ...defaultStages, parse: "partial", cascade: "partial", computed: "not-applicable", layout: "not-applicable", paint: "not-applicable", "hit-test": "not-applicable", webgpu: "not-applicable", browser: "partial" })
       : { status: "unsupported", conformance: "none", limitations: ["Selector grammar is not admitted by the bounded parser."], evidence: [external], stages: defaultStages }
+  }
+  if (entry.id === "css.functions.var-function") {
+    return partial(
+      "adapted",
+      [
+        external,
+        implementation("renderer", "packages/core/src/css.ts", "CustomPropertyResolver/substituteVariables", undefined, "Case-sensitive inherited custom-property environments and cycle-aware var() substitution for admitted longhands, one border/shadow path and nested color/calc functions.", "The complete CSS Variables grammar, typed properties, animation and every variable-bearing shorthand."),
+        test("renderer", "packages/core/test/custom-properties.test.ts", "var()", "Nested fallback, cycles, casing, pseudo overrides, inline precedence, foundation/semantic/component aliases, focused border colors, rgb alpha, calc and one thousand instance values.", "Escaped names, every declaration grammar and full browser conformance."),
+        test("renderer", "packages/react/test/compiler.test.ts", "compiled custom-property pseudo", "Exact authored TSX executes through Template metadata, React adoption and CPU hover substitution with one shared pseudo sheet.", "Live browser/WebGPU pixels and unrelated Template syntax."),
+      ],
+      "Implemented for admitted longhands, one solid border/border-color, one shadow and current background/color/sizing/transform/calc paths; other multi-value shorthands, escaped names, @property and animation remain unsupported.",
+      cssVariableStages(defaultStages),
+    )
+  }
+  if (entry.id === "css.functions.calc-function") {
+    return partial(
+      "adapted",
+      [
+        external,
+        implementation("renderer", "packages/core/src/css.ts", "CalculationParser", undefined, "Finite arithmetic with one compatible px, percent or resolved em dimension for admitted properties.", "Mixed-unit linear combinations, math constants, min/max/clamp and complete CSS typed arithmetic."),
+        test("renderer", "packages/core/test/custom-properties.test.ts", "bounded calc()", "Variable-backed multiplication/division, font-size, line-height, gap and explicit unsupported cases.", "Complete CSS Values conformance and every property context."),
+      ],
+      "Bounded to finite arithmetic producing one compatible number/px/percent/resolved-em result; mixed-unit sums and adjacent CSS math functions remain unsupported.",
+      cssVariableStages(defaultStages),
+    )
   }
   if (entry.kind === "function" && supportedCssFunctions.has(entry.name)) {
     return partial("adapted", [external, implementation("renderer", "packages/core/src/css.ts", entry.name, undefined, "Bounded value parsing.", "All function syntax and contexts."), test("renderer", "packages/core/test/transform.test.ts", entry.name, "Current bounded parsing.", "Full CSS Values conformance.")], "Only the values admitted by current color/transform parsing are implemented.", defaultStages)
@@ -382,6 +419,19 @@ function classifyCssFeature(entry: CapabilityInventoryEntry, stages: Record<stri
     "text-overflow", "computed-values", "used-values", "display-list-projection", "hit-test-projection", "webgpu-transport",
   ])
   const suffix = entry.id.slice("css.features.".length)
+  if (suffix === "custom-properties") {
+    return partialClassification(
+      "adapted",
+      [
+        externalEvidence(entry),
+        implementation("renderer", "packages/core/src/css.ts", "ComputedCustomProperties", undefined, "Ordinary case-sensitive custom-property cascade, sparse inheritance and cycle-aware substitution through admitted border, shadow, color and dimensional function paths.", "Full CSS Variables, CSSOM, typed custom properties and animation."),
+        test("renderer", "packages/core/test/custom-properties.test.ts", suffix, "Inheritance identity, aliases, fallback/cycles, casing, pseudo changes, border/shadow, rgb/calc, descendant invalidation, consumer precedence and one thousand instances.", "Every grammar and native browser behavior."),
+        test("renderer", "packages/react/test/compiler.test.ts", "exact dynamic pseudo authoring", "One shared compiled pseudo sheet consumes two instance-specific inline custom values and updates while hovered.", "Live browser/WebGPU pixels."),
+      ],
+      "Bounded to unescaped custom names and var() in admitted longhands, one border/border-color, one shadow and background/color/sizing/transform/calc paths; CSS-wide semantics, !important, @property, animation and other multi-value shorthands remain unsupported.",
+      cssVariableStages(stages),
+    )
+  }
   if (partial.has(suffix)) return partialClassification("adapted", [externalEvidence(entry), implementation("renderer", "packages/core/src/css.ts", entry.name, undefined, "Bounded CSS stage implementation.", "Complete CSS module algorithms."), test("renderer", "packages/core/test/renderer.test.ts", entry.name, "Current bounded behavior.", "Full conformance.")], "Only the explicitly admitted values/algorithms are implemented.", stages)
   return { status: "unsupported", conformance: "none", limitations: ["The current stylesheet/cascade/layout pipeline does not implement this CSS module capability."], evidence: [externalEvidence(entry)], stages }
 }
@@ -395,13 +445,21 @@ function classifyRenderer(entry: CapabilityInventoryEntry): Classification {
       test("renderer", "packages/core/test/renderer.test.ts", name, "Ancestor-derived color/font values and reparent invalidation on an exact projection root.", "Full CSS inheritance and cross-browser conformance."),
     ])
   }
+  if (name === "author-stylesheet-lifecycle") {
+    return implemented("extension", [
+      implementation("renderer", "packages/dom/src/author-style-sheet.ts", "Document author stylesheet registry", undefined, "One separate exclusive ordered Document owner with atomic replace, revision snapshots, subscriptions and release.", "Standard CSSOM styleSheets/adoptedStyleSheets interfaces."),
+      implementation("renderer", "packages/core/src/stylesheet-cache.ts", "cachedDocumentStyleRules", undefined, "Author sheets precede compiled and explicit consumer sheets and share cache keys across same-Document projections.", "Full CSS cascade grammar and live browser pixels."),
+      test("renderer", "packages/dom/test/author-style-sheet.test.ts", name, "Order, deduplication, collision/exclusive ownership, transaction coalescing and release.", "Native CSSOM behavior."),
+      test("renderer", "packages/core/test/author-style-sheet.test.ts", name, "Theme/compiled/consumer/inline precedence, semantic :root, multiple projections, shared parses and invalidation.", "Unsupported CSS grammar and live native presentation."),
+    ])
+  }
   if (name === "compiled-stylesheet-lifecycle") {
     return implemented("extension", [
       implementation("renderer", "packages/dom/src/compiled-style-sheet.ts", "Document compiled stylesheet registry", undefined, "Exact Document-scoped immutable records, collision rejection, revision snapshots, subscriptions and reference-counted leases.", "The standard CSSOM styleSheets/adoptedStyleSheets interfaces."),
       implementation("renderer", "packages/react/src/runtime.ts", "RootStyleSheetOwner", undefined, "Exact compiled template metadata is acquired once per ComponentRoot and released on unmount without per-instance scanning.", "Template compiler extraction outside the Renderer repository."),
       implementation("renderer", "packages/core/src/stylesheet-cache.ts", "cachedDocumentStyleRules", undefined, "Same-Document projections share parsed rules by compiled revision and explicit global CSS content.", "General incremental layout cost after a style change."),
       test("renderer", "packages/dom/test/compiled-style-sheet.test.ts", name, "Registry deduplication, collision atomicity, transaction coalescing and lease release.", "Full CSSOM behavior."),
-      test("renderer", "packages/react/test/compiled-style-sheet.test.ts", name, "One thousand instances, multiple roots, collision rollback, memo metadata and root release.", "Compiler extraction and native browser pixels."),
+      test("renderer", "packages/react/test/compiled-style-sheet.test.ts", name, "One thousand instances, isolated root snapshots with exact Template metadata, shared Document deduplication, collision rollback, memo metadata and root release.", "Compiler extraction and native browser pixels."),
       test("renderer", "packages/core/test/compiled-style-sheet.test.ts", name, "Initial/late rules, explicit global CSS, shared projection cache, pseudos, inheritance and release.", "Unsupported CSS grammar and general renderer performance."),
     ])
   }
@@ -444,6 +502,13 @@ function classifyBrowser(entry: CapabilityInventoryEntry): Classification {
       implementation("renderer", "packages/browser/src/presentation-host.ts", "presentation-host claim", undefined, "CanvasRuntime and SpaceRuntime share one native-Document/canvas cardinality claim with rollback and release.", "Direct Engine-only canvas ownership outside renderer-browser."),
       test("renderer", "packages/browser/test/space-runtime.test.ts", name, "Same-Document display/HUD reparenting, foreign/detached rejection, shared state and host lifecycle.", "Live browser/native input/WebGPU pixels."),
       test("renderer", "packages/browser/test/presentation-host.test.ts", "presentation-host claim", "Exact canvas/native Document cardinality and release.", "Cross-process or direct Engine hosts."),
+    ])
+  }
+  if (name === "linked-author-stylesheets") {
+    return implemented("extension", [
+      implementation("renderer", "packages/browser/src/linked-author-style-sheet-host.ts", "createBrowserLinkedAuthorStyleSheetHost", undefined, "Exact native-tree-ordered link sources, awaitable readiness, origin-clean loaded CSSOM mirroring, bounded observation, refresh and disposal without fetch or global scan.", "Native browser pixels, cross-origin access, @import, @font-face, nesting or grouping rules."),
+      test("renderer", "packages/browser/test/linked-author-style-sheet-host.test.ts", name, "Loaded and late CSSOM, native order, required load rejection, exact observation, refresh, disposal, collision/security and unsupported-rule failure.", "Live native load/CSSOM/browser rendering."),
+      test("renderer", "packages/browser/test/plane-runtime.test.ts", "author stylesheet scheduling", "Author revisions use the same coalesced projection frame channel and are inert after disposal.", "Live requestAnimationFrame/WebGPU pixels."),
     ])
   }
   if (name === "direct-world-regions") {
@@ -510,6 +575,12 @@ function classifyReact(entry: CapabilityInventoryEntry): Classification {
   if (entry.id.startsWith("react.semantics.architecture-")) {
     return implemented("extension", [implementation("renderer", "packages/react/src/compatibility.ts", entry.name, "3-47", "The explicit false architecture flags and custom runtime profile.", "React compatibility behavior."), test("renderer", "packages/react/test/boundary.test.ts", entry.name, "No npm react/react-dom/reconciler, Fiber, or virtual DOM dependency/import.", "External package manager state outside this checkout.")])
   }
+  if (entry.id === "react.semantics.root-stylesheet-snapshot") {
+    return implemented("extension", [
+      implementation("renderer", "packages/react/src/runtime.ts", "ComponentRoot.readStyleSheets", undefined, "Stable immutable first-adoption snapshots preserve exact full Template sheet objects per root while Document execution ownership remains separate.", "Storybook navigation/UI behavior and native browser pixels."),
+      test("renderer", "packages/react/test/compiled-style-sheet.test.ts", entry.name, "Empty/stable snapshots, one thousand instances, exact source metadata, isolated Workbench/story roots, shared Document deduplication, collision rollback and unmount inaccessibility.", "Compiler opt-in routing and live consumer integration."),
+    ])
+  }
   if (supportedReactSemanticIds.has(entry.id)) {
     return partial("adapted", [externalEvidence(entry), implementation("renderer", "packages/react/src/runtime.ts", entry.name, undefined, "Compiled component/root lifecycle implementation.", "Fiber/concurrent/StrictMode/server semantics."), test("renderer", "packages/react/test/runtime.test.ts", entry.name, "Current synchronous component lifecycle and rollback.", "Full React 19.2 behavior.")], "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM.")
   }
@@ -547,9 +618,9 @@ function classifyTsxCompiler(entry: CapabilityInventoryEntry): Classification {
   const suffix = entry.id.slice("tsx.compiler.".length)
   if (suffix === "static-style-extraction") {
     return implemented("extension", [
-      implementation("template", "compiler/style.ts", "component-local static style extraction", undefined, "Module-stable base declarations, supported pseudos and conditional static fragments become scoped compiled stylesheet metadata and addressed markers.", "Dynamic pseudo values, style spreads, computed keys and general CSS nesting."),
+      implementation("template", "compiler/style.ts", "component-local css extraction", undefined, "Global css intrinsic rules, bounded attribute/pseudo selectors and nested fragments become one ordered compiled sheet with addressed markers.", "Dynamic non-base selector values, general selectors and CSS nesting."),
       implementation("template", "compiled.ts", "CompiledTemplate.styleSheets", undefined, "Immutable stylesheet metadata crosses the compiled-template ABI with exact duplicate collapse and collision rejection.", "Document registration and rendered pixels outside Template."),
-      test("template", "compiler/style-compiler.test.ts", suffix, "Golden lowering, module-stable expressions, authored precedence, residual caller style and exact fail-closed diagnostics.", "Downstream Document/Renderer lifecycle."),
+      test("template", "compiler/style-compiler.test.ts", suffix, "Global intrinsic identity, css-only lowering, authored precedence, component base styles, residual caller style and exact fail-closed diagnostics.", "Downstream Document/Renderer lifecycle."),
       test("template", "compiled-style-sheet.test.ts", suffix, "Compiled metadata reaches the runtime package without runtime JSX or defineStyles authoring.", "Native browser presentation."),
     ])
   }
@@ -627,7 +698,7 @@ function classifyPublicExport(entry: CapabilityInventoryEntry, status: Capabilit
     ? [implementation(repository ?? entry.ownerHint.repository, repositoryPath, entry.name, typeof entry.metadata?.line === "number" ? String(entry.metadata.line) : undefined, "The public export exists at the pinned revision.", "Observable runtime behavior or semantic conformance.")]
     : [implementation(entry.ownerHint.repository, packageManifestPath(entry.ownerHint), entry.name, undefined, "The package export path exists.", "Every symbol and observable behavior behind the path.")]
   if (status === "implemented") {
-    evidence.push(test(entry.ownerHint.repository, ownerTestPath(entry.ownerHint), entry.name, "The bounded project API has behavioral coverage.", "External-standard compatibility unless separately mapped."))
+    evidence.push(test(entry.ownerHint.repository, publicExportTestPath(entry), entry.name, "The bounded project API has behavioral coverage.", "External-standard compatibility unless separately mapped."))
     return implemented("extension", evidence)
   }
   if (status === "partial") return partial("extension", evidence, "The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered.")
@@ -641,6 +712,9 @@ function domExportStatus(entry: CapabilityInventoryEntry): CapabilityStatus {
     "acquireDocumentCompiledStyleSheets",
     "readDocumentCompiledStyleSheets",
     "subscribeDocumentCompiledStyleSheets",
+    "acquireDocumentAuthorStyleSheetOwner",
+    "readDocumentAuthorStyleSheets",
+    "subscribeDocumentAuthorStyleSheets",
   ].includes(entry.name)) return "implemented"
   return ["Node", "Document", "DocumentFragment", "Text", "Comment", "Element", "Event", "EventTarget"].includes(entry.name) ? "partial" : "unverified"
 }
@@ -653,6 +727,7 @@ function rendererExportStatus(entry: CapabilityInventoryEntry): CapabilityStatus
 
 function browserExportStatus(entry: CapabilityInventoryEntry): CapabilityStatus {
   if (entry.kind === "package-export-path") return "partial"
+  if (entry.name === "createBrowserLinkedAuthorStyleSheetHost") return "implemented"
   return entry.kind === "runtime-export" ? "partial" : "unverified"
 }
 
@@ -664,7 +739,7 @@ function webgpuExportStatus(entry: CapabilityInventoryEntry): CapabilityStatus {
 function reactExportStatus(entry: CapabilityInventoryEntry): CapabilityStatus {
   if (entry.kind === "package-export-path") return "partial"
   if (unsupportedReactHooks.has(entry.name)) return "unsupported"
-  if (supportedReactHooks.has(entry.name) || ["createRoot", "batch", "component", "keyedComponents", "memo", "createContext", "provideContext", "defineStyles", "when"].includes(entry.name)) return "implemented"
+  if (supportedReactHooks.has(entry.name) || ["createRoot", "batch", "component", "keyedComponents", "memo", "createContext", "provideContext", "when"].includes(entry.name)) return "implemented"
   return entry.kind === "type-export" ? "unverified" : "partial"
 }
 
@@ -836,6 +911,22 @@ function cssDefaultStages(): Record<string, CapabilityStatus> {
   }
 }
 
+function cssVariableStages(
+  stages: Record<string, CapabilityStatus>,
+): Record<string, CapabilityStatus> {
+  return {
+    ...stages,
+    parse: "partial",
+    cascade: "partial",
+    computed: "partial",
+    layout: "partial",
+    paint: "partial",
+    "hit-test": "partial",
+    webgpu: "partial",
+    browser: "partial",
+  }
+}
+
 function cssPropertyStages(name: string): Record<string, CapabilityStatus> {
   const paint = paintProperties.has(name)
   const hit = hitProperties.has(name)
@@ -1001,6 +1092,16 @@ function ownerTestPath(owner: CapabilityOwner): string {
   return `packages/${packageDir[owner.package] ?? "unknown"}`
 }
 
+function publicExportTestPath(entry: CapabilityInventoryEntry): string {
+  if (entry.name.includes("AuthorStyleSheet") && entry.ownerHint.package === "@zavx0z/dom") {
+    return "packages/dom/test/author-style-sheet.test.ts"
+  }
+  if (entry.name === "createBrowserLinkedAuthorStyleSheetHost") {
+    return "packages/browser/test/linked-author-style-sheet-host.test.ts"
+  }
+  return ownerTestPath(entry.ownerHint)
+}
+
 const supportedCssProperties = new Set([
   "display", "box-sizing", "flex-direction", "flex-grow", "flex-shrink", "flex-basis", "flex", "align-items", "justify-content", "gap",
   "width", "height", "min-width", "min-height", "max-width", "max-height", "inline-size", "block-size", "min-inline-size", "min-block-size", "max-inline-size", "max-block-size",
@@ -1015,7 +1116,7 @@ const supportedCssProperties = new Set([
 const layoutProperties = new Set([...supportedCssProperties].filter((name) => !["background", "background-color", "color", "opacity", "box-shadow", "border-color", "border-top-color", "border-right-color", "border-bottom-color", "border-left-color"].includes(name)))
 const paintProperties = new Set(["display", "background", "background-color", "color", "opacity", "box-shadow", "border", "border-top", "border-right", "border-bottom", "border-left", "border-width", "border-top-width", "border-right-width", "border-bottom-width", "border-left-width", "border-color", "border-top-color", "border-right-color", "border-bottom-color", "border-left-color", "border-style", "border-radius", "border-top-left-radius", "border-top-right-radius", "border-bottom-right-radius", "border-bottom-left-radius", "font-size", "line-height", "letter-spacing", "object-fit", "text-align", "text-overflow", "white-space", "overflow", "overflow-x", "overflow-y", "scrollbar-width", "transform"])
 const hitProperties = new Set(["display", "position", "left", "top", "right", "bottom", "z-index", "overflow", "overflow-x", "overflow-y", "transform", "transform-origin"])
-const supportedSelectors = new Set([">", ":active", ":checked", ":disabled", ":focus", ":focus-within", ":hover", ":indeterminate"])
+const supportedSelectors = new Set([">", ":active", ":checked", ":disabled", ":focus", ":focus-within", ":hover", ":indeterminate", ":root"])
 const supportedCssFunctions = new Set(["rgb()", "rgba()", "translate()", "translateX()", "translateY()", "scale()", "scaleX()", "scaleY()"])
 const supportedCssTypes = new Set(["alpha-value", "color", "hex-color", "integer", "length", "length-percentage", "named-color", "number", "percentage", "position", "shadow", "transform-function"])
 

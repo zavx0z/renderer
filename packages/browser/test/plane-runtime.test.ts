@@ -3,7 +3,11 @@ import {
   Object3D,
   type TrueTypeFont,
 } from "@engine/core"
-import {acquireDocumentCompiledStyleSheets, createDocument} from "@zavx0z/dom"
+import {
+  acquireDocumentAuthorStyleSheetOwner,
+  acquireDocumentCompiledStyleSheets,
+  createDocument
+} from "@zavx0z/dom"
 import {
   createDocumentInteractionController,
   createDocumentRenderer,
@@ -60,11 +64,21 @@ describe("createDocumentPlaneRuntime", () => {
     expect(presentations).toBe(1)
     expect(frameRequests).toBe(0)
 
+    const authorStyleOwner = acquireDocumentAuthorStyleSheetOwner(document)
+    authorStyleOwner.replace([{
+      id: "plane-theme",
+      cssText: "[data-z-late]{color:#778899}"
+    }])
+    expect(frameRequests).toBe(1)
+    expect(runtime.flush().displayList.find(item =>
+      item.kind === "text" && item.node.parentNode === label
+    )).toMatchObject({kind: "text", color: "#778899"})
+
     const styleLease = acquireDocumentCompiledStyleSheets(document, [{
       id: "late-plane-style",
       cssText: "[data-z-late]{color:#abcdef}"
     }])
-    expect(frameRequests).toBe(1)
+    expect(frameRequests).toBe(2)
     const styled = runtime.flush()
     const labelText = styled.displayList.find(item => item.kind === "text" && item.node.parentNode === label)
     expect(labelText).toMatchObject({kind: "text", color: "#abcdef"})
@@ -74,15 +88,16 @@ describe("createDocumentPlaneRuntime", () => {
     expect(frames).toEqual([runtime.frame])
     const initial = runtime.frame
     label.textContent = "Updated"
-    expect(frameRequests).toBe(2)
+    expect(frameRequests).toBe(3)
     const updated = runtime.flush()
     expect(updated).not.toBe(initial)
     expect(frames.at(-1)).toBe(updated)
-    expect(presentations).toBe(3)
+    expect(presentations).toBe(4)
 
     runtime.dispose()
     const requestsBeforeRelease = frameRequests
     styleLease.release()
+    authorStyleOwner.release()
     expect(frameRequests).toBe(requestsBeforeRelease)
     expect(runtime.disposed).toBeTrue()
     expect(invalidations).toBeGreaterThan(0)

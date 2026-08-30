@@ -4,31 +4,31 @@
   "duplicateCapabilityIds": 0,
   "generatorVersion": "1.0.0",
   "inventoryFiles": 214,
-  "mappedEntries": 8714,
+  "mappedEntries": 8735,
   "missing": 0,
   "schemaErrors": 0,
   "schemaVersion": 1,
   "sourceArtifacts": 75,
-  "specEntries": 8714,
+  "specEntries": 8735,
   "statistics": {
     "browser": {
-      "implemented": 13,
-      "mappedEntries": 64,
+      "implemented": 15,
+      "mappedEntries": 70,
       "missing": 0,
       "not-applicable": 0,
       "partial": 20,
-      "specEntries": 64,
+      "specEntries": 70,
       "unsupported": 4,
-      "unverified": 27
+      "unverified": 31
     },
     "css": {
       "implemented": 0,
       "mappedEntries": 3032,
       "missing": 0,
       "not-applicable": 0,
-      "partial": 171,
+      "partial": 175,
       "specEntries": 3032,
-      "unsupported": 2861,
+      "unsupported": 2857,
       "unverified": 0
     },
     "devtools": {
@@ -42,14 +42,14 @@
       "unverified": 13
     },
     "dom": {
-      "implemented": 72,
-      "mappedEntries": 1204,
+      "implemented": 75,
+      "mappedEntries": 1212,
       "missing": 0,
       "not-applicable": 0,
       "partial": 242,
-      "specEntries": 1204,
+      "specEntries": 1212,
       "unsupported": 713,
-      "unverified": 177
+      "unverified": 182
     },
     "engine": {
       "implemented": 13,
@@ -73,33 +73,33 @@
     },
     "react": {
       "implemented": 28,
-      "mappedEntries": 217,
+      "mappedEntries": 211,
       "missing": 0,
       "not-applicable": 35,
-      "partial": 50,
-      "specEntries": 217,
+      "partial": 49,
+      "specEntries": 211,
       "unsupported": 70,
-      "unverified": 34
+      "unverified": 29
     },
     "renderer": {
-      "implemented": 5,
-      "mappedEntries": 95,
+      "implemented": 6,
+      "mappedEntries": 96,
       "missing": 0,
       "not-applicable": 0,
       "partial": 41,
-      "specEntries": 95,
+      "specEntries": 96,
       "unsupported": 4,
       "unverified": 45
     },
     "tsx": {
-      "implemented": 67,
-      "mappedEntries": 154,
+      "implemented": 72,
+      "mappedEntries": 166,
       "missing": 0,
       "not-applicable": 0,
       "partial": 22,
-      "specEntries": 154,
+      "specEntries": 166,
       "unsupported": 28,
-      "unverified": 37
+      "unverified": 44
     },
     "webgpu": {
       "implemented": 18,

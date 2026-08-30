@@ -37,7 +37,16 @@
                 "export": "story_hierarchy_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "element",
@@ -67,7 +76,16 @@
                 "export": "story_attributes_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "html-element",
@@ -97,7 +115,16 @@
                 "export": "story_title_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "html-button-element",
@@ -127,7 +154,16 @@
                 "export": "story_activation_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "html-input-element",
@@ -155,7 +191,16 @@
                 "export": "story_value_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "html-select-element",
@@ -184,7 +229,16 @@
                 "export": "story_selection_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "html-text-area-element",
@@ -212,7 +266,16 @@
                 "export": "story_value_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "html-progress-element",
@@ -241,7 +304,16 @@
                 "export": "story_value_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "html-meter-element",
@@ -269,7 +341,16 @@
                 "export": "story_value_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "event-target",
@@ -299,7 +380,16 @@
                 "export": "story_listeners_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "document",
@@ -328,7 +418,16 @@
                 "export": "story_tree_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "document-fragment",
@@ -357,7 +456,16 @@
                 "export": "story_mutation_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "character-data",
@@ -386,7 +494,16 @@
                 "export": "story_data_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "text",
@@ -414,7 +531,16 @@
                 "export": "story_data_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "comment",
@@ -442,7 +568,16 @@
                 "export": "story_anchors_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "node-list",
@@ -472,7 +607,16 @@
                 "export": "story_snapshot_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "dom-token-list",
@@ -503,7 +647,16 @@
                 "export": "story_classes_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "html-div-element",
@@ -531,7 +684,16 @@
                 "export": "story_container_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "html-span-element",
@@ -559,7 +721,16 @@
                 "export": "story_inline_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "html-image-element",
@@ -591,7 +762,16 @@
                 "export": "story_attributes_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "html-option-element",
@@ -620,7 +800,16 @@
                 "export": "story_selectedness_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "html-label-element",
@@ -648,7 +837,16 @@
                 "export": "story_control_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "html-field-set-element",
@@ -678,7 +876,16 @@
                 "export": "story_disabled_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "html-legend-element",
@@ -707,7 +914,16 @@
                 "export": "story_caption_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "html-u-list-element",
@@ -735,7 +951,16 @@
                 "export": "story_list_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "html-li-element",
@@ -763,7 +988,16 @@
                 "export": "story_item_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "html-heading-element",
@@ -796,7 +1030,16 @@
                 "export": "story_heading_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "html-paragraph-element",
@@ -824,7 +1067,16 @@
                 "export": "story_text_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "html-table-element",
@@ -852,7 +1104,16 @@
                 "export": "story_table_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "html-table-section-element",
@@ -882,7 +1143,16 @@
                 "export": "story_section_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "html-table-row-element",
@@ -910,7 +1180,16 @@
                 "export": "story_row_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "html-table-cell-element",
@@ -941,7 +1220,16 @@
                 "export": "story_cell_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "event",
@@ -971,7 +1259,16 @@
                 "export": "story_propagation_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "custom-event",
@@ -999,7 +1296,16 @@
                 "export": "story_detail_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "toggle-event",
@@ -1027,7 +1333,16 @@
                 "export": "story_states_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "ui-event",
@@ -1054,7 +1369,16 @@
                 "export": "story_detail_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "focus-event",
@@ -1081,7 +1405,16 @@
                 "export": "story_related_target_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "mouse-event",
@@ -1109,7 +1442,16 @@
                 "export": "story_pointer_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "pointer-event",
@@ -1139,7 +1481,16 @@
                 "export": "story_samples_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "wheel-event",
@@ -1168,7 +1519,16 @@
                 "export": "story_delta_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "keyboard-event",
@@ -1199,7 +1559,16 @@
                 "export": "story_key_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "input-event",
@@ -1227,7 +1596,16 @@
                 "export": "story_data_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "composition-event",
@@ -1254,7 +1632,16 @@
                 "export": "story_data_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         }
       ]
     },
@@ -1389,7 +1776,16 @@
                 "export": "story_scroll_both"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "span",
@@ -1448,7 +1844,16 @@
                 "export": "story_content_right"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "button",
@@ -1507,7 +1912,16 @@
                 "export": "story_state_clickable"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "input",
@@ -1567,7 +1981,16 @@
                 "export": "story_state_disabled"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "select",
@@ -1667,7 +2090,16 @@
                 "export": "story_state_disabled"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "popover",
@@ -1716,7 +2148,16 @@
                 "export": "story_state_open"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "img",
@@ -1762,7 +2203,16 @@
                 "export": "story_fit_contain"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "list",
@@ -1836,7 +2286,16 @@
                 "export": "story_mode_scroll"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "status-bar",
@@ -1871,7 +2330,16 @@
                 "export": "story_content_statistics"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         }
       ]
     },
@@ -1981,7 +2449,16 @@
                 "export": "story_typography_default"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         },
         {
           "id": "theme",
@@ -2053,7 +2530,16 @@
                 "export": "story_tone_red"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         }
       ]
     },
@@ -2163,7 +2649,16 @@
                 "export": "story_state_disabled"
               }
             }
-          ]
+          ],
+          "presentation": {
+            "protocol": "story-presentation/1",
+            "projection": "display",
+            "widgets": [
+              "props",
+              "source",
+              "diagnostics"
+            ]
+          }
         }
       ]
     }

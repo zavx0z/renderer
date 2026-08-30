@@ -13,7 +13,6 @@ import {
   HookContractError,
   UnsupportedReactFeatureError,
   createRoot,
-  defineStyles,
   reactCompatibility,
   useCallback,
   useTransition,
@@ -510,7 +509,7 @@ describe("compiled component runtime", () => {
     expect(input.hasAttribute("indeterminate")).toBe(false)
   })
 
-  it("applies direct style objects and performs zero work on a clean explicit flush", () => {
+  it("applies compiled CSS strings and performs zero work on a clean explicit flush", () => {
     const template = defineCompiledTemplate<{opacity: number}>({
       bindingCount: 1,
       displayName: "Styled",
@@ -519,7 +518,7 @@ describe("compiled component runtime", () => {
         return {bindings: [bindStyle(div)], nodes: [div]}
       },
       render(props, values) {
-        writeBinding(values, 0, {display: "flex", opacity: props.opacity, width: 24})
+        writeBinding(values, 0, `display: flex; opacity: ${props.opacity}; width: 24px`)
       }
     })
     const {root, semanticRoot} = mountedRoot()
@@ -532,39 +531,44 @@ describe("compiled component runtime", () => {
     expect(root.flush()).toBe(0)
   })
 
-  it("composes class-free owner style tokens with one caller style override", () => {
-    const styles = defineStyles("runtime.fixture", {
-      root: {display: "flex", ":hover": {background: "rgb(101 101 101)"}},
-      selected: {background: "rgb(71 114 179)"}
-    })
+  it("keeps compiled owner markers separate from the inline string channel", () => {
     const template = defineCompiledTemplate<{selected: boolean}>({
-      bindingCount: 1,
-      displayName: "TokenStyled",
+      bindingCount: 2,
+      displayName: "CompiledStyled",
+      styleSheets: [{
+        id: "runtime.compiled-style",
+        cssText: [
+          "[data-z-runtime-root]{display:flex}",
+          "[data-z-runtime-root]:hover{background:rgb(101 101 101)}",
+          "[data-z-runtime-selected]{background:rgb(71 114 179)}"
+        ].join("\n")
+      }],
       mount(document) {
         const button = document.createElement("button")
-        return {bindings: [bindStyle(button)], nodes: [button]}
+        button.setAttribute("data-z-runtime-root", "")
+        return {
+          bindings: [bindProperty(button, "data-z-runtime-selected"), bindStyle(button)],
+          nodes: [button]
+        }
       },
       render(props, values) {
-        writeBinding(values, 0, [
-          styles.root,
-          props.selected && styles.selected,
-          {height: 22}
-        ])
+        writeBinding(values, 0, props.selected)
+        writeBinding(values, 1, "height: 22px")
       }
     })
     const {root, semanticRoot} = mountedRoot()
     root.render(template, {selected: true})
     const button = semanticRoot.querySelector("button")!
 
-    expect(button.hasAttribute(styles.root.attributeName)).toBe(true)
-    expect(button.hasAttribute(styles.selected.attributeName)).toBe(true)
+    expect(button.hasAttribute("data-z-runtime-root")).toBe(true)
+    expect(button.hasAttribute("data-z-runtime-selected")).toBe(true)
     expect(button.getAttribute("style")).toBe("height: 22px")
     expect(button.className).toBe("")
 
     root.render(template, {selected: false})
     expect(semanticRoot.querySelector("button")).toBe(button)
-    expect(button.hasAttribute(styles.root.attributeName)).toBe(true)
-    expect(button.hasAttribute(styles.selected.attributeName)).toBe(false)
+    expect(button.hasAttribute("data-z-runtime-root")).toBe(true)
+    expect(button.hasAttribute("data-z-runtime-selected")).toBe(false)
   })
 
   it("exposes remaining unsupported React 19.2 hooks only as explicit throws", () => {

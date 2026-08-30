@@ -1,16 +1,16 @@
-/** Renderer-owned external Storybook story support. */
-import type {
-  Document,
-  Element,
-  HTMLElement,
-  HTMLImageElement,
-  Node,
-  Text,
-} from "@zavx0z/dom"
+/** Compiled exact HTMLImageElement Storybook stories. */
+import type {Document, HTMLElement, HTMLImageElement} from "@zavx0z/dom"
+import type {ComponentRoot} from "@zavx0z/react"
+import type {CompiledTemplate} from "@zavx0z/template/compiled"
 import {
   IMAGE_DOM_STORY_ROUTES,
   type ImageDomStoryRoute,
 } from "./dom-routes.ts"
+import {
+  ImageDomStoryView,
+  type ImageDomStoryViewProps,
+} from "./dom-stories-view.tsx"
+import {mountCompiledStory, serializeStoryElement} from "./compiled-story.ts"
 
 export type ImageDomStoryRefs = Readonly<{
   root: HTMLElement
@@ -19,8 +19,10 @@ export type ImageDomStoryRefs = Readonly<{
 
 export type ImageDomStory = Readonly<{
   element: HTMLElement
+  componentRoot: ComponentRoot
   refs: ImageDomStoryRefs
-  source: Readonly<{html: string; css: string; typescript: string}>
+  source: Readonly<{html: string; typescript: string}>
+  dispose(): void
 }>
 
 const artworkSvg = [
@@ -35,79 +37,35 @@ const artworkSvg = [
 
 export const IMAGE_DOM_STORY_ARTWORK_SRC = svgDataUrl(artworkSvg)
 
-export const imageDomStoryCss = String.raw`
-.image-dom-story {
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 520px;
-  min-height: 300px;
-  padding: 24px;
-  background: rgb(28, 28, 28);
-  color: rgb(224, 224, 224);
-}
-
-.image-dom-story__frame {
-  box-sizing: border-box;
-  display: block;
-  width: 320px;
-  height: 180px;
-  border: 1px solid rgb(72, 72, 72);
-  border-radius: 4px;
-  overflow: hidden;
-  background: rgb(7, 16, 28);
-}
-
-.image-dom-story__image {
-  box-sizing: border-box;
-  display: block;
-  width: 320px;
-  height: 180px;
-  background: rgb(7, 16, 28);
-}
-
-.image-dom-story__image--cover {
-  object-fit: cover;
-}
-
-.image-dom-story__image--contain {
-  object-fit: contain;
-}
-
-`
-
 export function createImageDomStory(
   document: Document,
   route: ImageDomStoryRoute,
 ): ImageDomStory {
-  const root = document.createElement("section")
-  const image = document.createElement("img")
-
-  root.className = "image-dom-story"
-  root.setAttribute("aria-label", "Вписывание изображения")
-  const frame = document.createElement("div")
-  const fit = route.endsWith("/cover") ? "cover" : "contain"
-  frame.className = "image-dom-story__frame"
-  image.className = `image-dom-story__image image-dom-story__image--${fit}`
-  image.src = IMAGE_DOM_STORY_ARTWORK_SRC
-  image.alt = "Абстрактная сцена"
-  image.width = 320
-  image.height = 180
-  image.title = fit === "cover" ? "Заполнение области" : "Изображение целиком"
-  frame.appendChild(image)
-  root.appendChild(frame)
-
-  const refs: ImageDomStoryRefs = Object.freeze({root, image})
+  const props: ImageDomStoryViewProps = Object.freeze({
+    route,
+    src: IMAGE_DOM_STORY_ARTWORK_SRC,
+  })
+  const mounted = mountCompiledStory(
+    document,
+    ImageDomStoryView as unknown as CompiledTemplate<ImageDomStoryViewProps>,
+    props,
+    "[data-image-dom-story]",
+  )
+  const image = mounted.element.querySelector("img") as HTMLImageElement | null
+  if (image === null) {
+    mounted.dispose()
+    throw new Error(`Compiled image story mounted no image: ${route}`)
+  }
+  const refs: ImageDomStoryRefs = Object.freeze({root: mounted.element, image})
   return Object.freeze({
-    element: root,
+    element: mounted.element,
+    componentRoot: mounted.componentRoot,
     refs,
     source: Object.freeze({
-      html: serializeElement(root),
-      css: imageDomStoryCss,
+      html: serializeStoryElement(mounted.element),
       typescript: renderTypeScript(route),
     }),
+    dispose: mounted.dispose,
   })
 }
 
@@ -116,55 +74,25 @@ export function isImageDomStoryRoute(route: string): route is ImageDomStoryRoute
 }
 
 function renderTypeScript(route: ImageDomStoryRoute): string {
-  const lines = [
+  const fit = route.endsWith("/cover") ? "cover" : "contain"
+  return [
     'import {createDocument} from "@zavx0z/dom"',
     "",
     "const document = createDocument()",
     'const root = document.createElement("section")',
+    'const frame = document.createElement("div")',
     'const image = document.createElement("img")',
     `image.src = ${JSON.stringify(IMAGE_DOM_STORY_ARTWORK_SRC)}`,
-  ]
-  const fit = route.endsWith("/cover") ? "cover" : "contain"
-  lines.push(
-    'const frame = document.createElement("div")',
-    'frame.className = "image-dom-story__frame"',
-    `image.className = "image-dom-story__image image-dom-story__image--${fit}"`,
     'image.alt = "Абстрактная сцена"',
     "image.width = 320",
     "image.height = 180",
+    `image.setAttribute("data-image-fit", ${JSON.stringify(fit)})`,
     "frame.appendChild(image)",
     "root.appendChild(frame)",
-  )
-  lines.push("document.appendChild(root)")
-  return lines.join("\n")
-}
-
-function serializeElement(element: Element, depth = 0): string {
-  const indent = "  ".repeat(depth)
-  const attributes = element.getAttributeNames().sort().map((name) => {
-    const value = element.getAttribute(name) ?? ""
-    return ` ${name}="${escapeAttribute(value)}"`
-  }).join("")
-  if (element.localName === "img") return `${indent}<img${attributes}>`
-  const children = [...element.childNodes]
-  if (children.length === 0) return `${indent}<${element.localName}${attributes}></${element.localName}>`
-  if (children.every((node) => node.nodeType === 3)) {
-    return `${indent}<${element.localName}${attributes}>${escapeText(element.textContent ?? "")}</${element.localName}>`
-  }
-  const body = children.map((node: Node) => node.nodeType === 3
-    ? `${"  ".repeat(depth + 1)}${escapeText((node as Text).data)}`
-    : serializeElement(node as Element, depth + 1)).join("\n")
-  return `${indent}<${element.localName}${attributes}>\n${body}\n${indent}</${element.localName}>`
+    "document.appendChild(root)",
+  ].join("\n")
 }
 
 function svgDataUrl(svg: string): string {
   return `data:image/svg+xml;charset=utf-8,${encodeURIComponent(svg)}`
-}
-
-function escapeText(value: string): string {
-  return value.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;")
-}
-
-function escapeAttribute(value: string): string {
-  return escapeText(value).replaceAll('"', "&quot;")
 }

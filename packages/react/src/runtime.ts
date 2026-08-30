@@ -17,6 +17,7 @@ import {
 import {
   isCompiledTemplate,
   isHostBinding,
+  type CompiledStyleSheet,
   type CompiledTemplate,
   type HostBinding
 } from "@zavx0z/template/compiled"
@@ -79,9 +80,15 @@ export interface ComponentRoot {
     props: Readonly<Props>,
     options?: RenderOptions
   ): void
+  readStyleSheets(): ComponentRootStyleSheetSnapshot
   stats(): ComponentRuntimeStats
   unmount(): void
 }
+
+export type ComponentRootStyleSheetSnapshot = Readonly<{
+  revision: number
+  styleSheets: readonly CompiledStyleSheet[]
+}>
 
 export type ComponentRuntimeStats = Readonly<{
   disposes: number
@@ -446,10 +453,14 @@ const noStyleSheetCommit: PreparedStyleSheetCommit = Object.freeze({rollback() {
 
 class RootStyleSheetOwner {
   readonly document: Document
-  private readonly acquiredStyleSheets = new Map<string, string>()
+  private readonly acquiredStyleSheets = new Map<string, CompiledStyleSheet>()
   private readonly acquiredTemplates = new Set<CompiledTemplate<unknown>>()
   private readonly leases: DocumentCompiledStyleSheetLease[] = []
   private readonly pendingTemplates = new Map<CompiledTemplate<unknown>, number>()
+  private snapshot: ComponentRootStyleSheetSnapshot = Object.freeze({
+    revision: 0,
+    styleSheets: Object.freeze([])
+  })
   private disposed = false
 
   constructor(document: Document) {
@@ -469,26 +480,38 @@ class RootStyleSheetOwner {
     else this.pendingTemplates.set(template, count - 1)
   }
 
+  read(): ComponentRootStyleSheetSnapshot {
+    if (this.disposed) throw new Error("Cannot read styles from an unmounted component root")
+    return this.snapshot
+  }
+
   commitPending(): PreparedStyleSheetCommit {
     if (this.pendingTemplates.size === 0) return noStyleSheetCommit
     const pending = [...this.pendingTemplates]
-    const nextStyleSheets = new Map<string, string>()
+    const nextStyleSheets = new Map<string, CompiledStyleSheet>()
     for (const [template] of pending) {
       for (const styleSheet of template.styleSheets) {
         const current = this.acquiredStyleSheets.get(styleSheet.id) ?? nextStyleSheets.get(styleSheet.id)
-        if (current !== undefined && current !== styleSheet.cssText) {
+        if (current !== undefined && current.cssText !== styleSheet.cssText) {
           throw new Error(`Compiled stylesheet id collision: ${styleSheet.id}`)
         }
-        if (current === undefined) nextStyleSheets.set(styleSheet.id, styleSheet.cssText)
+        if (current === undefined) nextStyleSheets.set(styleSheet.id, styleSheet)
       }
     }
-    const acquired = [...nextStyleSheets].map(([id, cssText]) => Object.freeze({id, cssText}))
+    const acquired = [...nextStyleSheets.values()]
     const lease = acquireDocumentCompiledStyleSheets(this.document, acquired)
     for (const [template] of pending) this.acquiredTemplates.add(template)
-    for (const [id, cssText] of nextStyleSheets) this.acquiredStyleSheets.set(id, cssText)
+    for (const [id, styleSheet] of nextStyleSheets) this.acquiredStyleSheets.set(id, styleSheet)
     for (const [template] of pending) this.pendingTemplates.delete(template)
     if (acquired.length > 0) this.leases.push(lease)
     else lease.release()
+    const previousSnapshot = this.snapshot
+    if (acquired.length > 0) {
+      this.snapshot = Object.freeze({
+        revision: previousSnapshot.revision + 1,
+        styleSheets: Object.freeze([...this.acquiredStyleSheets.values()])
+      })
+    }
 
     let rolledBack = false
     return Object.freeze({
@@ -501,6 +524,7 @@ class RootStyleSheetOwner {
           lease.release()
         }
         for (const [id] of nextStyleSheets) this.acquiredStyleSheets.delete(id)
+        this.snapshot = previousSnapshot
         for (const [template, count] of pending) {
           this.acquiredTemplates.delete(template)
           this.pendingTemplates.set(template, (this.pendingTemplates.get(template) ?? 0) + count)
@@ -515,6 +539,10 @@ class RootStyleSheetOwner {
     this.pendingTemplates.clear()
     this.acquiredTemplates.clear()
     this.acquiredStyleSheets.clear()
+    this.snapshot = Object.freeze({
+      revision: this.snapshot.revision + 1,
+      styleSheets: Object.freeze([])
+    })
     for (let index = this.leases.length - 1; index >= 0; index -= 1) {
       this.leases[index]!.release()
     }
@@ -1913,6 +1941,11 @@ export function createRoot(container: RootContainer, options: RootOptions = {}):
       if (commitError) throw commitError
     },
 
+    readStyleSheets(): ComponentRootStyleSheetSnapshot {
+      assertRootActive(active)
+      return styleSheetOwner.read()
+    },
+
     stats(): ComponentRuntimeStats {
       return scheduler.stats()
     },
@@ -2600,8 +2633,7 @@ function prepareStylePatch(binding: RuntimeStyleBinding, sourceValue: unknown): 
     : binding.value
   if (
     previous.signature === next.signature &&
-    binding.definition.target.getAttribute("style") === next.cssText &&
-    next.attributes.every(attribute => binding.definition.target.hasAttribute(attribute))
+    binding.definition.target.getAttribute("style") === next.cssText
   ) {
     binding.value = next
     return null
@@ -2760,24 +2792,16 @@ function attributeValue(value: unknown, name: string): string | null {
 
 function initialResolvedStyle(cssText: string | null): ResolvedStyleValue {
   return Object.freeze({
-    attributes: Object.freeze([]),
     cssText,
-    signature: `\u0001${cssText ?? ""}`
+    signature: cssText ?? ""
   })
 }
 
 function writeResolvedStyle(
   target: Element,
-  previous: ResolvedStyleValue,
+  _previous: ResolvedStyleValue,
   next: ResolvedStyleValue
 ): void {
-  const nextAttributes = new Set(next.attributes)
-  for (const attribute of previous.attributes) {
-    if (!nextAttributes.has(attribute)) target.removeAttribute(attribute)
-  }
-  for (const attribute of next.attributes) {
-    if (!target.hasAttribute(attribute)) target.setAttribute(attribute, "")
-  }
   if (next.cssText === null) target.removeAttribute("style")
   else target.setAttribute("style", next.cssText)
 }

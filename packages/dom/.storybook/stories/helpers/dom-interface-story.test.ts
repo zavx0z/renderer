@@ -28,7 +28,6 @@ import {
 import {
   createDomInterfaceStory,
   DOM_INTERFACE_API_NAMES,
-  domInterfaceStoryCss,
 } from "./dom-interface-story.ts"
 
 const implementedInterfaces = Object.freeze([
@@ -78,27 +77,27 @@ const implementedInterfaces = Object.freeze([
 ] as const)
 
 const htmlSamples = Object.freeze([
-  ["HTMLDivElement", HTMLDivElement, ".dom-interface-story__sample"],
-  ["HTMLSpanElement", HTMLSpanElement, ".dom-interface-story__sample"],
-  ["HTMLButtonElement", HTMLButtonElement, ".dom-interface-story__sample"],
-  ["HTMLInputElement", HTMLInputElement, ".dom-interface-story__sample"],
-  ["HTMLImageElement", HTMLImageElement, ".dom-interface-story__sample"],
-  ["HTMLSelectElement", HTMLSelectElement, ".dom-interface-story__sample"],
-  ["HTMLOptionElement", HTMLOptionElement, "option.dom-interface-story__sample"],
-  ["HTMLProgressElement", HTMLProgressElement, ".dom-interface-story__sample"],
-  ["HTMLMeterElement", HTMLMeterElement, ".dom-interface-story__sample"],
-  ["HTMLTextAreaElement", HTMLTextAreaElement, ".dom-interface-story__sample"],
-  ["HTMLLabelElement", HTMLLabelElement, ".dom-interface-story__sample"],
-  ["HTMLFieldSetElement", HTMLFieldSetElement, ".dom-interface-story__sample"],
-  ["HTMLLegendElement", HTMLLegendElement, "legend.dom-interface-story__sample"],
-  ["HTMLUListElement", HTMLUListElement, ".dom-interface-story__sample"],
-  ["HTMLLIElement", HTMLLIElement, "li.dom-interface-story__sample"],
-  ["HTMLHeadingElement", HTMLHeadingElement, ".dom-interface-story__sample"],
-  ["HTMLParagraphElement", HTMLParagraphElement, ".dom-interface-story__sample"],
-  ["HTMLTableElement", HTMLTableElement, "table.dom-interface-story__sample"],
-  ["HTMLTableSectionElement", HTMLTableSectionElement, "tbody.dom-interface-story__sample"],
-  ["HTMLTableRowElement", HTMLTableRowElement, "tr.dom-interface-story__sample"],
-  ["HTMLTableCellElement", HTMLTableCellElement, "th.dom-interface-story__sample"],
+  ["HTMLDivElement", HTMLDivElement, "div[data-interface-sample]"],
+  ["HTMLSpanElement", HTMLSpanElement, "span[data-interface-sample]"],
+  ["HTMLButtonElement", HTMLButtonElement, "button[data-interface-sample]"],
+  ["HTMLInputElement", HTMLInputElement, "input[data-interface-sample]"],
+  ["HTMLImageElement", HTMLImageElement, "img[data-interface-sample]"],
+  ["HTMLSelectElement", HTMLSelectElement, "select[data-interface-sample]"],
+  ["HTMLOptionElement", HTMLOptionElement, "option[data-interface-sample]"],
+  ["HTMLProgressElement", HTMLProgressElement, "progress[data-interface-sample]"],
+  ["HTMLMeterElement", HTMLMeterElement, "meter[data-interface-sample]"],
+  ["HTMLTextAreaElement", HTMLTextAreaElement, "textarea[data-interface-sample]"],
+  ["HTMLLabelElement", HTMLLabelElement, "label[data-interface-sample]"],
+  ["HTMLFieldSetElement", HTMLFieldSetElement, "fieldset[data-interface-sample]"],
+  ["HTMLLegendElement", HTMLLegendElement, "legend[data-interface-sample]"],
+  ["HTMLUListElement", HTMLUListElement, "ul[data-interface-sample]"],
+  ["HTMLLIElement", HTMLLIElement, "li[data-interface-sample]"],
+  ["HTMLHeadingElement", HTMLHeadingElement, "h3[data-interface-sample]"],
+  ["HTMLParagraphElement", HTMLParagraphElement, "p[data-interface-sample]"],
+  ["HTMLTableElement", HTMLTableElement, "table[data-interface-sample]"],
+  ["HTMLTableSectionElement", HTMLTableSectionElement, "tbody[data-interface-sample]"],
+  ["HTMLTableRowElement", HTMLTableRowElement, "tr[data-interface-sample]"],
+  ["HTMLTableCellElement", HTMLTableCellElement, "th[data-interface-sample]"],
 ] as const)
 
 function story(apiName: string) {
@@ -110,7 +109,7 @@ function story(apiName: string) {
 }
 
 function hierarchy(apiName: string): string {
-  return story(apiName).element.querySelector(".dom-interface-story__chain")?.textContent ?? ""
+  return story(apiName).element.querySelector("[data-interface-hierarchy]")?.textContent ?? ""
 }
 
 describe("DOM interface Storybook stories", () => {
@@ -122,7 +121,9 @@ describe("DOM interface Storybook stories", () => {
       expect(current.element).toBeInstanceOf(HTMLElement)
       expect(current.element.getAttribute("data-interface")).toBe(apiName)
       expect(current.element.textContent).toContain(apiName)
-      expect(current.source.css).toBe(domInterfaceStoryCss)
+      expect(current.componentRoot.readStyleSheets().styleSheets.length).toBeGreaterThan(0)
+      expect(current.componentRoot.readStyleSheets().styleSheets.every(sheet =>
+        sheet.source?.kind === "authored-css"), apiName).toBeTrue()
       expect(current.source.typescript).toContain('from "@zavx0z/dom"')
       expect(current.source.typescript.length).toBeGreaterThan(40)
     }
@@ -163,7 +164,7 @@ describe("DOM interface Storybook stories", () => {
       title: "HTMLElement · title",
       route: "dom/interfaces/html-element/title/default",
     })
-    const sample = current.element.querySelector(".dom-interface-story__sample")
+    const sample = current.element.querySelector("[data-interface-sample]")
     expect(sample).toBeInstanceOf(HTMLElement)
     expect((sample as HTMLElement).title).toBe("HTMLElement.title")
     expect(current.element.textContent).toContain("title находится именно здесь")

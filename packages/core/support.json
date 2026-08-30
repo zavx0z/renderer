@@ -53790,7 +53790,7 @@
     {
       "blockedBy": [],
       "blocks": [],
-      "conformance": "none",
+      "conformance": "adapted",
       "consumers": [],
       "evidence": [
         {
@@ -53800,6 +53800,33 @@
           "repository": "external",
           "revision": "W3C Group Note 2025-09-18 + WebRef CSS 8.7.3",
           "type": "external-spec"
+        },
+        {
+          "doesNotProve": "Full CSS Variables, CSSOM, typed custom properties and animation.",
+          "path": "packages/core/src/css.ts",
+          "proves": "Ordinary case-sensitive custom-property cascade, sparse inheritance and cycle-aware substitution through admitted border, shadow, color and dimensional function paths.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "ComputedCustomProperties",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Every grammar and native browser behavior.",
+          "path": "packages/core/test/custom-properties.test.ts",
+          "proves": "Inheritance identity, aliases, fallback/cycles, casing, pseudo changes, border/shadow, rgb/calc, descendant invalidation, consumer precedence and one thousand instances.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "custom-properties",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Live browser/WebGPU pixels.",
+          "path": "packages/react/test/compiler.test.ts",
+          "proves": "One shared compiled pseudo sheet consumes two instance-specific inline custom values and updates while hovered.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "exact dynamic pseudo authoring",
+          "type": "unit-test"
         }
       ],
       "id": "css.features.custom-properties",
@@ -53808,7 +53835,7 @@
         "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
       },
       "limitations": [
-        "The current stylesheet/cascade/layout pipeline does not implement this CSS module capability."
+        "Bounded to unescaped custom names and var() in admitted longhands, one border/border-color, one shadow and background/color/sizing/transform/calc paths; CSS-wide semantics, !important, @property, animation and other multi-value shorthands remain unsupported."
       ],
       "owner": {
         "package": "@zavx0z/renderer",
@@ -53816,17 +53843,17 @@
         "stage": "cpu"
       },
       "stages": {
-        "browser": "unsupported",
+        "browser": "partial",
         "cascade": "partial",
-        "computed": "unsupported",
+        "computed": "partial",
         "evidence": "implemented",
-        "hit-test": "unsupported",
-        "layout": "unsupported",
-        "paint": "unsupported",
+        "hit-test": "partial",
+        "layout": "partial",
+        "paint": "partial",
         "parse": "partial",
-        "webgpu": "unsupported"
+        "webgpu": "partial"
       },
-      "status": "unsupported"
+      "status": "partial"
     },
     {
       "blockedBy": [],
@@ -57503,7 +57530,7 @@
     {
       "blockedBy": [],
       "blocks": [],
-      "conformance": "none",
+      "conformance": "adapted",
       "consumers": [],
       "evidence": [
         {
@@ -57513,6 +57540,24 @@
           "repository": "external",
           "revision": "8.7.3",
           "type": "external-spec"
+        },
+        {
+          "doesNotProve": "Mixed-unit linear combinations, math constants, min/max/clamp and complete CSS typed arithmetic.",
+          "path": "packages/core/src/css.ts",
+          "proves": "Finite arithmetic with one compatible px, percent or resolved em dimension for admitted properties.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "CalculationParser",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Complete CSS Values conformance and every property context.",
+          "path": "packages/core/test/custom-properties.test.ts",
+          "proves": "Variable-backed multiplication/division, font-size, line-height, gap and explicit unsupported cases.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "bounded calc()",
+          "type": "unit-test"
         }
       ],
       "id": "css.functions.calc-function",
@@ -57521,7 +57566,7 @@
         "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
       },
       "limitations": [
-        "No implementation of this pinned CSS feature was found."
+        "Bounded to finite arithmetic producing one compatible number/px/percent/resolved-em result; mixed-unit sums and adjacent CSS math functions remain unsupported."
       ],
       "owner": {
         "package": "@zavx0z/renderer",
@@ -57529,17 +57574,17 @@
         "stage": "cpu"
       },
       "stages": {
-        "browser": "unsupported",
+        "browser": "partial",
         "cascade": "partial",
-        "computed": "unsupported",
+        "computed": "partial",
         "evidence": "implemented",
-        "hit-test": "unsupported",
-        "layout": "unsupported",
-        "paint": "unsupported",
+        "hit-test": "partial",
+        "layout": "partial",
+        "paint": "partial",
         "parse": "partial",
-        "webgpu": "unsupported"
+        "webgpu": "partial"
       },
-      "status": "unsupported"
+      "status": "partial"
     },
     {
       "blockedBy": [],
@@ -63687,7 +63732,7 @@
     {
       "blockedBy": [],
       "blocks": [],
-      "conformance": "none",
+      "conformance": "adapted",
       "consumers": [],
       "evidence": [
         {
@@ -63697,6 +63742,33 @@
           "repository": "external",
           "revision": "8.7.3",
           "type": "external-spec"
+        },
+        {
+          "doesNotProve": "The complete CSS Variables grammar, typed properties, animation and every variable-bearing shorthand.",
+          "path": "packages/core/src/css.ts",
+          "proves": "Case-sensitive inherited custom-property environments and cycle-aware var() substitution for admitted longhands, one border/shadow path and nested color/calc functions.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "CustomPropertyResolver/substituteVariables",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Escaped names, every declaration grammar and full browser conformance.",
+          "path": "packages/core/test/custom-properties.test.ts",
+          "proves": "Nested fallback, cycles, casing, pseudo overrides, inline precedence, foundation/semantic/component aliases, focused border colors, rgb alpha, calc and one thousand instance values.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "var()",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Live browser/WebGPU pixels and unrelated Template syntax.",
+          "path": "packages/react/test/compiler.test.ts",
+          "proves": "Exact authored TSX executes through Template metadata, React adoption and CPU hover substitution with one shared pseudo sheet.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "compiled custom-property pseudo",
+          "type": "unit-test"
         }
       ],
       "id": "css.functions.var-function",
@@ -63705,7 +63777,7 @@
         "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
       },
       "limitations": [
-        "No implementation of this pinned CSS feature was found."
+        "Implemented for admitted longhands, one solid border/border-color, one shadow and current background/color/sizing/transform/calc paths; other multi-value shorthands, escaped names, @property and animation remain unsupported."
       ],
       "owner": {
         "package": "@zavx0z/renderer",
@@ -63713,17 +63785,17 @@
         "stage": "cpu"
       },
       "stages": {
-        "browser": "unsupported",
+        "browser": "partial",
         "cascade": "partial",
-        "computed": "unsupported",
+        "computed": "partial",
         "evidence": "implemented",
-        "hit-test": "unsupported",
-        "layout": "unsupported",
-        "paint": "unsupported",
+        "hit-test": "partial",
+        "layout": "partial",
+        "paint": "partial",
         "parse": "partial",
-        "webgpu": "unsupported"
+        "webgpu": "partial"
       },
-      "status": "unsupported"
+      "status": "partial"
     },
     {
       "blockedBy": [],
@@ -110171,7 +110243,7 @@
     {
       "blockedBy": [],
       "blocks": [],
-      "conformance": "none",
+      "conformance": "adapted",
       "consumers": [],
       "evidence": [
         {
@@ -110181,6 +110253,24 @@
           "repository": "external",
           "revision": "8.7.3",
           "type": "external-spec"
+        },
+        {
+          "doesNotProve": "Shadow roots, scoped roots and the complete selector grammar.",
+          "path": "packages/core/src/css.ts",
+          "proves": "Matches only the exact semantic Document.documentElement through the bounded selector pipeline.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": ":root",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Native browser or Shadow DOM conformance.",
+          "path": "packages/core/test/author-style-sheet.test.ts",
+          "proves": "Semantic documentElement matching and inherited theme variables.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": ":root",
+          "type": "unit-test"
         }
       ],
       "id": "css.selectors.pseudo-class-root",
@@ -110189,7 +110279,7 @@
         "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
       },
       "limitations": [
-        "Selector grammar is not admitted by the bounded parser."
+        "Implemented for the one semantic Document root; Shadow DOM and the remaining selector grammar are absent."
       ],
       "owner": {
         "package": "@zavx0z/renderer",
@@ -110197,17 +110287,17 @@
         "stage": "cpu"
       },
       "stages": {
-        "browser": "unsupported",
+        "browser": "partial",
         "cascade": "partial",
-        "computed": "unsupported",
+        "computed": "not-applicable",
         "evidence": "implemented",
-        "hit-test": "unsupported",
-        "layout": "unsupported",
-        "paint": "unsupported",
+        "hit-test": "not-applicable",
+        "layout": "not-applicable",
+        "paint": "not-applicable",
         "parse": "partial",
-        "webgpu": "unsupported"
+        "webgpu": "not-applicable"
       },
-      "status": "unsupported"
+      "status": "partial"
     },
     {
       "blockedBy": [],
@@ -136388,6 +136478,62 @@
     {
       "blockedBy": [],
       "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Standard CSSOM styleSheets/adoptedStyleSheets interfaces.",
+          "path": "packages/dom/src/author-style-sheet.ts",
+          "proves": "One separate exclusive ordered Document owner with atomic replace, revision snapshots, subscriptions and release.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "Document author stylesheet registry",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Full CSS cascade grammar and live browser pixels.",
+          "path": "packages/core/src/stylesheet-cache.ts",
+          "proves": "Author sheets precede compiled and explicit consumer sheets and share cache keys across same-Document projections.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "cachedDocumentStyleRules",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Native CSSOM behavior.",
+          "path": "packages/dom/test/author-style-sheet.test.ts",
+          "proves": "Order, deduplication, collision/exclusive ownership, transaction coalescing and release.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "author-stylesheet-lifecycle",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Unsupported CSS grammar and live native presentation.",
+          "path": "packages/core/test/author-style-sheet.test.ts",
+          "proves": "Theme/compiled/consumer/inline precedence, semantic :root, multiple projections, shared parses and invalidation.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "author-stylesheet-lifecycle",
+          "type": "unit-test"
+        }
+      ],
+      "id": "renderer.features.author-stylesheet-lifecycle",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
       "conformance": "none",
       "consumers": [],
       "evidence": [
@@ -136690,7 +136836,7 @@
         {
           "doesNotProve": "Compiler extraction and native browser pixels.",
           "path": "packages/react/test/compiled-style-sheet.test.ts",
-          "proves": "One thousand instances, multiple roots, collision rollback, memo metadata and root release.",
+          "proves": "One thousand instances, isolated root snapshots with exact Template metadata, shared Document deduplication, collision rollback, memo metadata and root release.",
           "repository": "renderer",
           "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
           "symbol": "compiled-stylesheet-lifecycle",

@@ -24,6 +24,136 @@
       }
     },
     {
+      "description": "@zavx0z/renderer-browser public type export BrowserLinkedAuthorStyleSheetErrorHandler.",
+      "domain": "browser",
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.browserlinkedauthorstylesheeterrorhandler",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 43,
+        "path": "renderer:packages/browser/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "BrowserLinkedAuthorStyleSheetErrorHandler",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "parent": "platform.at-zavx0z-renderer-browser.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/browser/src/index.ts#L43",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-browser-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer-browser public type export BrowserLinkedAuthorStyleSheetHost.",
+      "domain": "browser",
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.browserlinkedauthorstylesheethost",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 43,
+        "path": "renderer:packages/browser/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "BrowserLinkedAuthorStyleSheetHost",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "parent": "platform.at-zavx0z-renderer-browser.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/browser/src/index.ts#L43",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-browser-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer-browser public type export BrowserLinkedAuthorStyleSheetSource.",
+      "domain": "browser",
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.browserlinkedauthorstylesheetsource",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 43,
+        "path": "renderer:packages/browser/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "BrowserLinkedAuthorStyleSheetSource",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "parent": "platform.at-zavx0z-renderer-browser.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/browser/src/index.ts#L43",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-browser-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer-browser public runtime export createBrowserLinkedAuthorStyleSheetHost.",
+      "domain": "browser",
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.createbrowserlinkedauthorstylesheethost",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 42,
+        "path": "renderer:packages/browser/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": false
+      },
+      "name": "createBrowserLinkedAuthorStyleSheetHost",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "parent": "platform.at-zavx0z-renderer-browser.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/browser/src/index.ts#L42",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-browser-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/renderer-browser public type export CreateBrowserLinkedAuthorStyleSheetHostOptions.",
+      "domain": "browser",
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.createbrowserlinkedauthorstylesheethostoptions",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 43,
+        "path": "renderer:packages/browser/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "CreateBrowserLinkedAuthorStyleSheetHostOptions",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "parent": "platform.at-zavx0z-renderer-browser.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/browser/src/index.ts#L43",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-browser-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
       "description": "@zavx0z/renderer-browser public runtime export createDocumentCanvasRuntime.",
       "domain": "browser",
       "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.createdocumentcanvasruntime",

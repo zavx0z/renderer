@@ -88,7 +88,7 @@
 - Current fact: The package exports compiled .tsx components; consumer typechecks fail on JSX configuration and missing create*Controller exports.
 - Owner: consumer repositories
 - Impact: Current product consumers do not build; restoring controllers would revive the removed architecture.
-- Evidence: `ui:packages/components/package.json`, `interpreter:packages/interpreter/web/dom/source-editor.ts`, `metafor:cosmos/internal/visual/main/index.ts`, `demo:src/dom/journalDocument.ts`
+- Evidence: `ui:packages/components/package.json`, `interpreter:packages/interpreter/web/dom/source-editor.tsx`, `metafor:cosmos/internal/visual/main/index.ts`, `demo:src/dom/journalDocument.ts`
 
 ## contradiction.consumer.bulk-overlay-owner — Bulk duplicates browser composition ownership
 

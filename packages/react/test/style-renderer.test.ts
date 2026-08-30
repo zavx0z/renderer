@@ -11,7 +11,7 @@ import {
   defineCompiledTemplate,
   writeBinding
 } from "@zavx0z/template/compiled"
-import {createRoot, defineStyles, type StyleValue} from "../src/index.ts"
+import {createRoot} from "../src/index.ts"
 
 describe("class-free styles through the document renderer", () => {
   test("adopts compiled template styles without explicit renderer wiring", () => {
@@ -61,26 +61,24 @@ describe("class-free styles through the document renderer", () => {
   })
 
   test("resolves native pseudos and keeps caller style above owner defaults", () => {
-    const styles = defineStyles("style.renderer.fixture", {
-      root: {
-        background: "#111111",
-        ":hover": {background: "#222222"},
-        ":active": {background: "#333333"}
-      }
-    })
-    const Button = defineCompiledTemplate<{style?: StyleValue}>({
+    const Button = defineCompiledTemplate<{style?: string}>({
       bindingCount: 1,
       displayName: "StyledButton",
+      styleSheets: [{
+        id: "style.renderer.fixture",
+        cssText: [
+          "[data-z-style-renderer]{display:block;width:40px;height:20px;background:#111111}",
+          "[data-z-style-renderer]:hover{background:#222222}",
+          "[data-z-style-renderer]:active{background:#333333}"
+        ].join("\n")
+      }],
       mount(document) {
         const button = document.createElement("button")
+        button.setAttribute("data-z-style-renderer", "")
         return {nodes: [button], bindings: [bindStyle(button)]}
       },
       render(props, values) {
-        writeBinding(values, 0, [
-          styles.root,
-          {display: "block", width: 40, height: 20},
-          props.style
-        ])
+        writeBinding(values, 0, props.style)
       }
     })
     const document = createDocument()
@@ -95,7 +93,7 @@ describe("class-free styles through the document renderer", () => {
       root: host,
       viewport: {width: 80, height: 40},
       interactionState,
-      styleSheets: [styles.cssText]
+      styleSheets: []
     })
 
     expect(background(renderer.flush(), button).color).toBe("#111111")
@@ -104,7 +102,7 @@ describe("class-free styles through the document renderer", () => {
     interactionState.setActiveElement(button)
     expect(background(renderer.flush(), button).color).toBe("#333333")
 
-    root.render(Button, {style: {background: "#abcdef"}})
+    root.render(Button, {style: "background: #abcdef"})
     expect(background(renderer.flush(), button).color).toBe("#abcdef")
     expect(button.className).toBe("")
     renderer.dispose()

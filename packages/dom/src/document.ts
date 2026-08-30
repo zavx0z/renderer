@@ -1,5 +1,16 @@
 import {Comment} from "./comment.ts"
 import {
+  acquireDocumentAuthorStyleSheetOwnerInternal,
+  readDocumentAuthorStyleSheetsInternal,
+  subscribeDocumentAuthorStyleSheetsInternal
+} from "./author-style-sheet.ts"
+import type {
+  DocumentAuthorStyleSheet,
+  DocumentAuthorStyleSheetOwner,
+  DocumentAuthorStyleSheetSnapshot,
+  DocumentAuthorStyleSheetSubscriber
+} from "./author-style-sheet.ts"
+import {
   acquireDocumentCompiledStyleSheetsInternal,
   readDocumentCompiledStyleSheetsInternal,
   subscribeDocumentCompiledStyleSheetsInternal
@@ -86,6 +97,14 @@ type CompiledStyleSheetState = {
   subscribers: Set<DocumentCompiledStyleSheetSubscriber>
 }
 
+type AuthorStyleSheetState = {
+  dirty: boolean
+  owner: symbol | null
+  pending: readonly DocumentAuthorStyleSheet[]
+  snapshot: DocumentAuthorStyleSheetSnapshot
+  subscribers: Set<DocumentAuthorStyleSheetSubscriber>
+}
+
 export interface HTMLElementTagNameMap {
   button: HTMLButtonElement
   div: HTMLDivElement
@@ -126,6 +145,7 @@ export class Document extends Node {
   private mutationVersion = 0
   private focusState: {activeElement: HTMLElement | null; revision: number} | null = null
   private stateChangeState: StateChangeState | null = null
+  private authorStyleSheetState: AuthorStyleSheetState | null = null
   private compiledStyleSheetState: CompiledStyleSheetState | null = null
 
   constructor() {
@@ -236,6 +256,7 @@ export class Document extends Node {
     } finally {
       this.transactionDepth -= 1
       if (this.transactionDepth === 0) {
+        this.flushAuthorStyleSheets()
         this.flushCompiledStyleSheets()
         this.flushMutations()
         this.flushStateChanges()
@@ -246,6 +267,53 @@ export class Document extends Node {
   subscribeMutations(subscriber: MutationSubscriber): () => void {
     this.mutationSubscribers.add(subscriber)
     return () => this.mutationSubscribers.delete(subscriber)
+  }
+
+  [acquireDocumentAuthorStyleSheetOwnerInternal](): DocumentAuthorStyleSheetOwner {
+    const state = this.ensureAuthorStyleSheetState()
+    if (state.owner !== null) {
+      throw new Error("Document author stylesheet owner is already acquired")
+    }
+    const owner = Symbol("document-author-style-sheet-owner")
+    state.owner = owner
+    let released = false
+    return Object.freeze({
+      replace: (styleSheets: readonly DocumentAuthorStyleSheet[]) => {
+        if (released || state.owner !== owner) {
+          throw new Error("Document author stylesheet owner has been released")
+        }
+        const next = normalizeAuthorStyleSheets(styleSheets)
+        if (sameAuthorStyleSheets(state.pending, next)) return
+        state.pending = next
+        state.dirty = true
+        if (this.transactionDepth === 0) this.flushAuthorStyleSheets()
+      },
+      release: () => {
+        if (released) return
+        released = true
+        if (state.owner !== owner) return
+        state.owner = null
+        if (state.pending.length === 0) return
+        state.pending = Object.freeze([])
+        state.dirty = true
+        if (this.transactionDepth === 0) this.flushAuthorStyleSheets()
+      }
+    })
+  }
+
+  [readDocumentAuthorStyleSheetsInternal](): DocumentAuthorStyleSheetSnapshot {
+    return this.ensureAuthorStyleSheetState().snapshot
+  }
+
+  [subscribeDocumentAuthorStyleSheetsInternal](
+    subscriber: DocumentAuthorStyleSheetSubscriber
+  ): () => void {
+    if (typeof subscriber !== "function") {
+      throw new TypeError("Author stylesheet subscriber must be a function")
+    }
+    const state = this.ensureAuthorStyleSheetState()
+    state.subscribers.add(subscriber)
+    return () => state.subscribers.delete(subscriber)
   }
 
   [acquireDocumentCompiledStyleSheetsInternal](
@@ -588,6 +656,28 @@ export class Document extends Node {
     }
   }
 
+  private ensureAuthorStyleSheetState(): AuthorStyleSheetState {
+    return this.authorStyleSheetState ??= {
+      dirty: false,
+      owner: null,
+      pending: Object.freeze([]),
+      snapshot: Object.freeze({revision: 0, styleSheets: Object.freeze([])}),
+      subscribers: new Set()
+    }
+  }
+
+  private flushAuthorStyleSheets(): void {
+    const state = this.authorStyleSheetState
+    if (!state?.dirty) return
+    state.dirty = false
+    if (sameAuthorStyleSheets(state.snapshot.styleSheets, state.pending)) return
+    const revision = state.snapshot.revision + 1
+    const styleSheets = state.pending
+    state.snapshot = Object.freeze({revision, styleSheets})
+    const change = Object.freeze({document: this, revision, styleSheets})
+    for (const subscriber of [...state.subscribers]) subscriber(change)
+  }
+
   private flushCompiledStyleSheets(): void {
     const state = this.compiledStyleSheetState
     if (!state?.dirty) return
@@ -635,6 +725,42 @@ export class Document extends Node {
     }
   }
 }
+
+const normalizeAuthorStyleSheets = (
+  styleSheets: readonly DocumentAuthorStyleSheet[]
+): readonly DocumentAuthorStyleSheet[] => {
+  if (!Array.isArray(styleSheets)) throw new TypeError("Author styleSheets must be an array")
+  const unique = new Map<string, DocumentAuthorStyleSheet>()
+  for (const source of styleSheets) {
+    if (source === null || typeof source !== "object") {
+      throw new TypeError("An author stylesheet must be an object")
+    }
+    if (typeof source.id !== "string" || typeof source.cssText !== "string") {
+      throw new TypeError("An author stylesheet requires string id and cssText")
+    }
+    const id = source.id.trim()
+    const {cssText} = source
+    if (id.length === 0) throw new TypeError("An author stylesheet id cannot be empty")
+    const previous = unique.get(id)
+    if (previous !== undefined && previous.cssText !== cssText) {
+      throw new Error(`Author stylesheet id collision: ${id}`)
+    }
+    if (previous === undefined) unique.set(id, Object.freeze({id, cssText}))
+  }
+  return Object.freeze([...unique.values()])
+}
+
+const sameAuthorStyleSheets = (
+  left: readonly DocumentAuthorStyleSheet[],
+  right: readonly DocumentAuthorStyleSheet[]
+): boolean =>
+  left.length === right.length &&
+  left.every((styleSheet, index) => {
+    const other = right[index]
+    return other !== undefined &&
+      styleSheet.id === other.id &&
+      styleSheet.cssText === other.cssText
+  })
 
 const focusChain = (element: HTMLElement | null): Set<HTMLElement> => {
   const chain = new Set<HTMLElement>()

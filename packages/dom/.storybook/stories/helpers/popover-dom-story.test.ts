@@ -11,7 +11,6 @@ import {
 import {
   createPopoverDomStory,
   isPopoverDomStoryRoute,
-  popoverDomStoryCss,
 } from "./popover-dom-story.ts"
 import {POPOVER_DOM_STORY_ROUTES} from "./dom-routes.ts"
 
@@ -33,11 +32,12 @@ describe("DOM popover and compound select stories", () => {
       expect(isPopoverDomStoryRoute(route), route).toBeTrue()
       expect(story.element.localName, route).toBe("section")
       expect(story.source.html, route).toContain('popover="manual"')
-      expect(story.source.css, route).toBe(popoverDomStoryCss)
       expect(story.source.typescript, route).toContain('from "@zavx0z/dom"')
       expect(story.source.typescript, route).toContain("showPopover")
       expect(Object.isFrozen(story.source), route).toBeTrue()
       expect(Object.isFrozen(story.refs), route).toBeTrue()
+      expect(story.componentRoot.readStyleSheets().styleSheets.every(sheet =>
+        sheet.source?.kind === "authored-css"), route).toBeTrue()
       story.dispose()
     }
     expect(isPopoverDomStoryRoute("elements/primitives/select/state/inactive")).toBeFalse()
@@ -52,7 +52,6 @@ describe("DOM popover and compound select stories", () => {
     ]) {
       expect(source).not.toContain(forbidden)
     }
-    expect(popoverDomStoryCss).not.toContain("&")
   })
 
   test("uses standard popover state for closed and open variants", async () => {

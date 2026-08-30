@@ -901,6 +901,24 @@
       }
     },
     {
+      "description": "Root-scoped compiled stylesheet metadata snapshot without Document/root mixing.",
+      "domain": "react",
+      "id": "react.semantics.root-stylesheet-snapshot",
+      "kind": "reference-semantics",
+      "name": "root stylesheet snapshot",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "spec": {
+        "anchor": "react-docs-19.2#root-stylesheet-snapshot",
+        "profile": "reference",
+        "source": "react-docs-19.2",
+        "version": "19.2"
+      }
+    },
+    {
       "description": "Priority and scheduler behavior.",
       "domain": "react",
       "id": "react.semantics.scheduling",

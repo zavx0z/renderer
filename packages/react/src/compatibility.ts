@@ -12,15 +12,15 @@ const compatibilityData = {
   "fiber": false,
   "virtualDom": false,
   "reactDomHost": false,
-  "featureCount": 146,
+  "featureCount": 147,
   "statistics": {
-    "specEntries": 217,
-    "mappedEntries": 217,
+    "specEntries": 211,
+    "mappedEntries": 211,
     "implemented": 28,
-    "partial": 50,
+    "partial": 49,
     "unsupported": 70,
     "not-applicable": 35,
-    "unverified": 34,
+    "unverified": 29,
     "missing": 0
   },
   "features": {
@@ -727,6 +727,11 @@ const compatibilityData = {
       "status": "partial",
       "conformance": "adapted",
       "limitation": "The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM."
+    },
+    "react.semantics.root-stylesheet-snapshot": {
+      "status": "implemented",
+      "conformance": "extension",
+      "limitation": null
     },
     "react.semantics.scheduling": {
       "status": "unsupported",

@@ -289,6 +289,24 @@
       }
     },
     {
+      "description": "Browser composition linked author stylesheets capability.",
+      "domain": "browser",
+      "id": "browser.features.linked-author-stylesheets",
+      "kind": "browser-host",
+      "name": "linked author stylesheets",
+      "ownerHint": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "spec": {
+        "anchor": "renderer-browser-contract#linked-author-stylesheets",
+        "profile": "project-contract",
+        "source": "renderer-browser-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
       "description": "Browser composition multiple planes capability.",
       "domain": "browser",
       "id": "browser.features.multiple-planes",

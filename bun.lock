@@ -181,7 +181,5 @@
     "undici-types": ["undici-types@8.3.0", "", {}, "sha512-j375ScV60dom+YkPFIfTLcOiPxkN/buHz5GobjLhixFuANaNs3C9l4GmrWqejgXWJ7BbJcFYpTEUkS1Ge8bpZQ=="],
 
     "@zavx0z/template/@zavx0z/dom": ["@zavx0z/dom@file:packages/dom", {}],
-
-    "@zavx0z/template/@zavx0z/dom": ["@zavx0z/dom@file:packages/dom", {}],
   }
 }

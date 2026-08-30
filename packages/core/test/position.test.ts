@@ -90,7 +90,7 @@ describe("bounded positioned layout", () => {
     })
 
     const first = renderer.flush()
-    expect(first.boxByNode.get(relative)).toMatchObject({x: 20, y: 5})
+    expect(first.boxByNode.get(relative)).toMatchObject({x: 10, y: 5})
     expect(first.boxByNode.get(after)).toMatchObject({x: 0, y: 20})
 
     relative.setAttribute(

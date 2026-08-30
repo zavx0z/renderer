@@ -104,7 +104,7 @@ describe("RendererWebGpuBackend", () => {
     backend.applyFrame(frame(fixture.document, fixture.root, [
       rect(fixture.root, {
         color: "rgb(29 29 29)",
-        border: uniformBorder(2, "rgba(71 114 179 / 50%)"),
+        border: uniformBorder(2, "rgb(71 114 179 / 50%)"),
       }),
     ]))
 

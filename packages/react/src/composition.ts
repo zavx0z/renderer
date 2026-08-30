@@ -5,7 +5,7 @@ import {
   type CompiledTemplate
 } from "@zavx0z/template/compiled"
 import type {JsxSourceElement} from "@zavx0z/template/jsx-runtime"
-import type {StyleValue} from "./style.ts"
+import type {CompiledStyleValue} from "./style.ts"
 
 const componentValueBrand = Symbol("@zavx0z/react/component-value")
 const keyedValueBrand = Symbol("@zavx0z/react/keyed-value")
@@ -58,7 +58,7 @@ export type CallbackRef<Target extends Node = Node> = (
 ) => void | (() => void)
 
 export type EventHandler = (event: Event) => unknown
-export type StyleBindingValue = StyleValue
+export type StyleBindingValue = CompiledStyleValue
 
 export function createContext<Value>(defaultValue: Value): Context<Value> {
   const context = {

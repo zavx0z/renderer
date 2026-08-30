@@ -7,7 +7,7 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "406",
+          "lines": "417",
           "path": "src/main.ts",
           "proves": "Present the journal root from the shared Experience Document on a stable resizable plane with capture and diagnostics.",
           "repository": "demo",
@@ -16,7 +16,7 @@
           "type": "consumer-usage"
         }
       ],
-      "line": 406,
+      "line": 417,
       "package": "@zavx0z/demo",
       "path": "src/main.ts",
       "repository": "demo",
@@ -29,7 +29,7 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "97",
+          "lines": "107",
           "path": "cosmos/internal/visual/main/index.ts",
           "proves": "Attach the Cosmos main root from the shared Experience Document to a stable world plane with the intended stylesheet and camera gestures.",
           "repository": "metafor",
@@ -38,7 +38,7 @@
           "type": "consumer-usage"
         }
       ],
-      "line": 97,
+      "line": 107,
       "package": "@internal/visual",
       "path": "cosmos/internal/visual/main/index.ts",
       "repository": "metafor",
@@ -51,7 +51,7 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "921",
+          "lines": "933",
           "path": "packages/interpreter/web/main.ts",
           "proves": "Project every module root from one shared Experience Document into stable world planes with nearest-plane input, resize, capture and cleanup.",
           "repository": "interpreter",
@@ -60,7 +60,7 @@
           "type": "consumer-usage"
         }
       ],
-      "line": 921,
+      "line": 933,
       "package": "@metafor/interpreter",
       "path": "packages/interpreter/web/main.ts",
       "repository": "interpreter",
@@ -73,16 +73,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "157",
+          "lines": "89",
           "path": "packages/components/inspector.tsx",
           "proves": "Focused numeric field editing inside nested scrollable Inspector groups.",
           "repository": "ui",
-          "revision": "a2a7c476cb6ce81c43aa35315703db19e1c35891+dirty",
+          "revision": "b4cb93ec8b865fcbd71182cb358a15e4f0781466+dirty",
           "symbol": "Inspector numeric fields",
           "type": "consumer-usage"
         }
       ],
-      "line": 157,
+      "line": 89,
       "package": "@ui/components",
       "path": "packages/components/inspector.tsx",
       "repository": "ui",
@@ -95,16 +95,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "95",
+          "lines": "44",
           "path": "packages/components/number-input.tsx",
           "proves": "Native typed number editing, focus, input/change, Escape rollback and selection through the exact semantic owner.",
           "repository": "ui",
-          "revision": "a2a7c476cb6ce81c43aa35315703db19e1c35891+dirty",
+          "revision": "b4cb93ec8b865fcbd71182cb358a15e4f0781466+dirty",
           "symbol": "NumberInput",
           "type": "consumer-usage"
         }
       ],
-      "line": 95,
+      "line": 44,
       "package": "@ui/components",
       "path": "packages/components/number-input.tsx",
       "repository": "ui",
@@ -117,7 +117,7 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "398",
+          "lines": "409",
           "path": "src/main.ts",
           "proves": "Own one semantic Document, Canvas, Engine Renderer and Space for every Demo projection root.",
           "repository": "demo",
@@ -126,7 +126,7 @@
           "type": "consumer-usage"
         }
       ],
-      "line": 398,
+      "line": 409,
       "package": "@zavx0z/demo",
       "path": "src/main.ts",
       "repository": "demo",
@@ -139,7 +139,7 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "825",
+          "lines": "837",
           "path": "packages/interpreter/web/main.ts",
           "proves": "Own one semantic Document, Canvas, Engine Renderer and Space for all module display roots in the Interpreter Experience.",
           "repository": "interpreter",
@@ -148,7 +148,7 @@
           "type": "consumer-usage"
         }
       ],
-      "line": 825,
+      "line": 837,
       "package": "@metafor/interpreter",
       "path": "packages/interpreter/web/main.ts",
       "repository": "interpreter",
@@ -161,7 +161,7 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "82",
+          "lines": "92",
           "path": "cosmos/internal/visual/main/index.ts",
           "proves": "Own one semantic Document, Canvas, Engine Renderer and Space for the Cosmos main plane and dock HUD projection.",
           "repository": "metafor",
@@ -170,7 +170,7 @@
           "type": "consumer-usage"
         }
       ],
-      "line": 82,
+      "line": 92,
       "package": "@internal/visual",
       "path": "cosmos/internal/visual/main/index.ts",
       "repository": "metafor",
@@ -183,7 +183,7 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "125",
+          "lines": "135",
           "path": "cosmos/internal/visual/main/index.ts",
           "proves": "Attach the dock sibling root from the same Experience Document to a camera-locked overlay using the host stylesheet realm.",
           "repository": "metafor",
@@ -192,7 +192,7 @@
           "type": "consumer-usage"
         }
       ],
-      "line": 125,
+      "line": 135,
       "package": "@internal/visual",
       "path": "cosmos/internal/visual/main/index.ts",
       "repository": "metafor",
@@ -205,7 +205,7 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "63",
+          "lines": "60",
           "path": "quantum/bulk/dom/overlay-runtime.ts",
           "proves": "Compose the HUD through the shared browser overlay owner rather than reimplementing pointer mapping, capture, hit and lifecycle.",
           "repository": "metafor",
@@ -214,7 +214,7 @@
           "type": "consumer-usage"
         }
       ],
-      "line": 63,
+      "line": 60,
       "package": "@quantum/bulk",
       "path": "quantum/bulk/dom/overlay-runtime.ts",
       "repository": "metafor",
@@ -227,8 +227,8 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "168",
-          "path": "packages/interpreter/web/dom/terminal.ts",
+          "lines": "185",
+          "path": "packages/interpreter/web/dom/terminal.tsx",
           "proves": "Route focused text entry, keyboard control sequences and composition into the semantic terminal input owner.",
           "repository": "interpreter",
           "revision": "f3ddf4e115726ee43f04dbfef71dfae8893e4af4+dirty",
@@ -236,9 +236,9 @@
           "type": "consumer-usage"
         }
       ],
-      "line": 168,
+      "line": 185,
       "package": "@metafor/interpreter",
-      "path": "packages/interpreter/web/dom/terminal.ts",
+      "path": "packages/interpreter/web/dom/terminal.tsx",
       "repository": "interpreter",
       "scope": "production",
       "subject": "Terminal"
@@ -249,16 +249,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "19",
+          "lines": "18",
           "path": "packages/components/code-editor.tsx",
           "proves": "Two-axis scrolling with clipping and stable retained line/token identity.",
           "repository": "ui",
-          "revision": "a2a7c476cb6ce81c43aa35315703db19e1c35891+dirty",
+          "revision": "b4cb93ec8b865fcbd71182cb358a15e4f0781466+dirty",
           "symbol": "CodeEditor",
           "type": "consumer-usage"
         }
       ],
-      "line": 19,
+      "line": 18,
       "package": "@ui/components",
       "path": "packages/components/code-editor.tsx",
       "repository": "ui",
@@ -275,7 +275,7 @@
           "path": "packages/ui/dom/node-editor.ts",
           "proves": "Pan/zoom reaches paint, clip and inverse hit consistently for the graph surface.",
           "repository": "node",
-          "revision": "66b616a912950a023a2ddff5d62702e4074b0011",
+          "revision": "66b616a912950a023a2ddff5d62702e4074b0011+dirty",
           "symbol": "NodeEditor",
           "type": "consumer-usage"
         }
@@ -293,16 +293,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "49",
+          "lines": "46",
           "path": "packages/components/code-editor.tsx",
           "proves": "Preserve source whitespace and prevent wrapping for read-only code lines.",
           "repository": "ui",
-          "revision": "a2a7c476cb6ce81c43aa35315703db19e1c35891+dirty",
+          "revision": "b4cb93ec8b865fcbd71182cb358a15e4f0781466+dirty",
           "symbol": "CodeEditor",
           "type": "consumer-usage"
         }
       ],
-      "line": 49,
+      "line": 46,
       "package": "@ui/components",
       "path": "packages/components/code-editor.tsx",
       "repository": "ui",
@@ -315,8 +315,8 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "394",
-          "path": "packages/interpreter/web/dom/source-editor.ts",
+          "lines": "407",
+          "path": "packages/interpreter/web/dom/source-editor.tsx",
           "proves": "Keep semantic textarea selection start/end/direction synchronized with the editable source.",
           "repository": "interpreter",
           "revision": "f3ddf4e115726ee43f04dbfef71dfae8893e4af4+dirty",
@@ -324,9 +324,9 @@
           "type": "consumer-usage"
         }
       ],
-      "line": 394,
+      "line": 407,
       "package": "@metafor/interpreter",
-      "path": "packages/interpreter/web/dom/source-editor.ts",
+      "path": "packages/interpreter/web/dom/source-editor.tsx",
       "repository": "interpreter",
       "scope": "production",
       "subject": "SourceEditor"
@@ -337,8 +337,8 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "466",
-          "path": "packages/interpreter/web/dom/terminal.ts",
+          "lines": "480",
+          "path": "packages/interpreter/web/dom/terminal.tsx",
           "proves": "Retain and expose terminal text selection for copy instead of returning a fabricated null snapshot.",
           "repository": "interpreter",
           "revision": "f3ddf4e115726ee43f04dbfef71dfae8893e4af4+dirty",
@@ -346,9 +346,9 @@
           "type": "consumer-usage"
         }
       ],
-      "line": 466,
+      "line": 480,
       "package": "@metafor/interpreter",
-      "path": "packages/interpreter/web/dom/terminal.ts",
+      "path": "packages/interpreter/web/dom/terminal.tsx",
       "repository": "interpreter",
       "scope": "production",
       "subject": "Terminal selection"
@@ -359,8 +359,8 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "434",
-          "path": "packages/interpreter/web/dom/source-editor.ts",
+          "lines": "506",
+          "path": "packages/interpreter/web/dom/source-editor.tsx",
           "proves": "Use current rendered line geometry instead of a hard-coded line height and viewport.",
           "repository": "interpreter",
           "revision": "f3ddf4e115726ee43f04dbfef71dfae8893e4af4+dirty",
@@ -368,9 +368,9 @@
           "type": "consumer-usage"
         }
       ],
-      "line": 434,
+      "line": 506,
       "package": "@metafor/interpreter",
-      "path": "packages/interpreter/web/dom/source-editor.ts",
+      "path": "packages/interpreter/web/dom/source-editor.tsx",
       "repository": "interpreter",
       "scope": "production",
       "subject": "SourceEditor scrollToLine"
@@ -381,16 +381,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "110",
+          "lines": "59",
           "path": "packages/components/number-input.tsx",
           "proves": "A scrub gesture continues outside the control until pointerup/cancel without component-owned capture emulation.",
           "repository": "ui",
-          "revision": "a2a7c476cb6ce81c43aa35315703db19e1c35891+dirty",
+          "revision": "b4cb93ec8b865fcbd71182cb358a15e4f0781466+dirty",
           "symbol": "NumberInput scrub",
           "type": "consumer-usage"
         }
       ],
-      "line": 110,
+      "line": 59,
       "package": "@ui/components",
       "path": "packages/components/number-input.tsx",
       "repository": "ui",
@@ -425,8 +425,8 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "372",
-          "path": "packages/interpreter/web/dom/source-editor.ts",
+          "lines": "385",
+          "path": "packages/interpreter/web/dom/source-editor.tsx",
           "proves": "Copy/cut/paste the current source selection through the browser host without a component-local clipboard dispatcher.",
           "repository": "interpreter",
           "revision": "f3ddf4e115726ee43f04dbfef71dfae8893e4af4+dirty",
@@ -434,9 +434,9 @@
           "type": "consumer-usage"
         }
       ],
-      "line": 372,
+      "line": 385,
       "package": "@metafor/interpreter",
-      "path": "packages/interpreter/web/dom/source-editor.ts",
+      "path": "packages/interpreter/web/dom/source-editor.tsx",
       "repository": "interpreter",
       "scope": "production",
       "subject": "SourceEditor"
@@ -447,16 +447,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "141",
+          "lines": "81",
           "path": "packages/components/color-input.tsx",
           "proves": "Stable controlled RGBA channels with range input/change semantics and analytical color paint.",
           "repository": "ui",
-          "revision": "a2a7c476cb6ce81c43aa35315703db19e1c35891+dirty",
+          "revision": "b4cb93ec8b865fcbd71182cb358a15e4f0781466+dirty",
           "symbol": "ColorInput",
           "type": "consumer-usage"
         }
       ],
-      "line": 141,
+      "line": 81,
       "package": "@ui/components",
       "path": "packages/components/color-input.tsx",
       "repository": "ui",
@@ -469,16 +469,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "185",
+          "lines": "143",
           "path": "packages/components/color-input.tsx",
           "proves": "An anchored top-layer color picker with clipping, light dismiss, Escape and focus restoration instead of an inline hidden panel.",
           "repository": "ui",
-          "revision": "a2a7c476cb6ce81c43aa35315703db19e1c35891+dirty",
+          "revision": "b4cb93ec8b865fcbd71182cb358a15e4f0781466+dirty",
           "symbol": "ColorInput",
           "type": "consumer-usage"
         }
       ],
-      "line": 185,
+      "line": 143,
       "package": "@ui/components",
       "path": "packages/components/color-input.tsx",
       "repository": "ui",
@@ -491,16 +491,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "54",
+          "lines": "29",
           "path": "packages/components/enum-input.tsx",
           "proves": "Open a collapsed select picker, navigate options by keyboard, activate one option and dispatch input/change.",
           "repository": "ui",
-          "revision": "a2a7c476cb6ce81c43aa35315703db19e1c35891+dirty",
+          "revision": "b4cb93ec8b865fcbd71182cb358a15e4f0781466+dirty",
           "symbol": "EnumInput",
           "type": "consumer-usage"
         }
       ],
-      "line": 54,
+      "line": 29,
       "package": "@ui/components",
       "path": "packages/components/enum-input.tsx",
       "repository": "ui",
@@ -513,16 +513,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "713",
+          "lines": "777",
           "path": "packages/ui/node-system.tsx",
           "proves": "Observe topology/parameter snapshots without duplicating the canonical Node store.",
           "repository": "node",
-          "revision": "66b616a912950a023a2ddff5d62702e4074b0011",
+          "revision": "66b616a912950a023a2ddff5d62702e4074b0011+dirty",
           "symbol": "NodeSystem view store",
           "type": "consumer-usage"
         }
       ],
-      "line": 713,
+      "line": 777,
       "package": "@nodes/ui",
       "path": "packages/ui/node-system.tsx",
       "repository": "node",
@@ -535,16 +535,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "20",
+          "lines": "28",
           "path": "packages/ui/dom/field-mount.ts",
           "proves": "Mount and update a compiled component into a DocumentFragment while retaining the exact owner element and disposing on unmount.",
           "repository": "node",
-          "revision": "66b616a912950a023a2ddff5d62702e4074b0011",
+          "revision": "66b616a912950a023a2ddff5d62702e4074b0011+dirty",
           "symbol": "mountField",
           "type": "consumer-usage"
         }
       ],
-      "line": 20,
+      "line": 28,
       "package": "@nodes/ui",
       "path": "packages/ui/dom/field-mount.ts",
       "repository": "node",
@@ -557,16 +557,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "374",
+          "lines": "137",
           "path": "packages/ui/node-system.tsx",
           "proves": "Retain node, link, parameter and socket identity across high-volume topology and parameter updates.",
           "repository": "node",
-          "revision": "66b616a912950a023a2ddff5d62702e4074b0011",
+          "revision": "66b616a912950a023a2ddff5d62702e4074b0011+dirty",
           "symbol": "NodeSystem",
           "type": "consumer-usage"
         }
       ],
-      "line": 374,
+      "line": 137,
       "package": "@nodes/ui",
       "path": "packages/ui/node-system.tsx",
       "repository": "node",
@@ -579,7 +579,7 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "419",
+          "lines": "430",
           "path": "src/main.ts",
           "proves": "Observe neutral plane/frame diagnostics without reaching into retained Engine/WebGPU owner objects.",
           "repository": "demo",
@@ -588,7 +588,7 @@
           "type": "consumer-usage"
         }
       ],
-      "line": 419,
+      "line": 430,
       "package": "@zavx0z/demo",
       "path": "src/main.ts",
       "repository": "demo",
@@ -601,8 +601,8 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "170",
-          "path": "packages/interpreter/web/dom/source-editor.ts",
+          "lines": "184",
+          "path": "packages/interpreter/web/dom/source-editor.tsx",
           "proves": "Paint a visible caret and selected range aligned with the separately tokenized presentation.",
           "repository": "interpreter",
           "revision": "f3ddf4e115726ee43f04dbfef71dfae8893e4af4+dirty",
@@ -610,9 +610,9 @@
           "type": "consumer-usage"
         }
       ],
-      "line": 170,
+      "line": 184,
       "package": "@metafor/interpreter",
-      "path": "packages/interpreter/web/dom/source-editor.ts",
+      "path": "packages/interpreter/web/dom/source-editor.tsx",
       "repository": "interpreter",
       "scope": "production",
       "subject": "SourceEditor"
@@ -623,16 +623,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "48",
+          "lines": "43",
           "path": "packages/components/button.tsx",
           "proves": "Adopt the exact compiled Button stylesheet once per Document and make it visible to every same-Document projection without manual buttonCss or consumer styleSheets wiring.",
           "repository": "ui",
-          "revision": "a2a7c476cb6ce81c43aa35315703db19e1c35891+dirty",
+          "revision": "b4cb93ec8b865fcbd71182cb358a15e4f0781466+dirty",
           "symbol": "Button automatic stylesheet adoption",
           "type": "consumer-usage"
         }
       ],
-      "line": 48,
+      "line": 43,
       "package": "@ui/components",
       "path": "packages/components/button.tsx",
       "repository": "ui",
@@ -646,7 +646,7 @@
         {
           "doesNotProve": "Platform implementation or conformance.",
           "lines": "161",
-          "path": "src/dom/journalDocument.ts",
+          "path": "src/dom/journalDocument.tsx",
           "proves": "Render journal images with object-fit, explicit dimensions, retained texture readiness and cleanup.",
           "repository": "demo",
           "revision": "b71608957a9c8df7f595c7fd08ef14ab5247d9a3+dirty",
@@ -656,7 +656,7 @@
       ],
       "line": 161,
       "package": "@zavx0z/demo",
-      "path": "src/dom/journalDocument.ts",
+      "path": "src/dom/journalDocument.tsx",
       "repository": "demo",
       "scope": "production",
       "subject": "Journal document"
@@ -671,7 +671,7 @@
           "path": "packages/ui/dom/node-editor.ts",
           "proves": "Scale grid and routed connection presentation without a local DOM geometry renderer.",
           "repository": "node",
-          "revision": "66b616a912950a023a2ddff5d62702e4074b0011",
+          "revision": "66b616a912950a023a2ddff5d62702e4074b0011+dirty",
           "symbol": "NodeEditor grid and links",
           "type": "consumer-usage"
         }
@@ -689,16 +689,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "667",
+          "lines": "673",
           "path": "packages/ui/node-system.tsx",
           "proves": "Present routed links and grid primitives without decomposing them into component-owned rectangles and points.",
           "repository": "node",
-          "revision": "66b616a912950a023a2ddff5d62702e4074b0011",
+          "revision": "66b616a912950a023a2ddff5d62702e4074b0011+dirty",
           "symbol": "NodeConnection",
           "type": "consumer-usage"
         }
       ],
-      "line": 667,
+      "line": 673,
       "package": "@nodes/ui",
       "path": "packages/ui/node-system.tsx",
       "repository": "node",
@@ -712,7 +712,7 @@
         {
           "doesNotProve": "Platform implementation or conformance.",
           "lines": "161",
-          "path": "src/dom/journalDocument.ts",
+          "path": "src/dom/journalDocument.tsx",
           "proves": "Compile linked .tsx component exports through the Template JSX profile instead of importing removed imperative controllers.",
           "repository": "demo",
           "revision": "b71608957a9c8df7f595c7fd08ef14ab5247d9a3+dirty",
@@ -722,7 +722,7 @@
       ],
       "line": 161,
       "package": "@zavx0z/demo",
-      "path": "src/dom/journalDocument.ts",
+      "path": "src/dom/journalDocument.tsx",
       "repository": "demo",
       "scope": "production",
       "subject": "Compiled UI migration"
@@ -733,8 +733,8 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "170",
-          "path": "packages/interpreter/web/dom/source-editor.ts",
+          "lines": "184",
+          "path": "packages/interpreter/web/dom/source-editor.tsx",
           "proves": "Configure JSX compilation and migrate stale create*Controller imports to compiled component roots.",
           "repository": "interpreter",
           "revision": "f3ddf4e115726ee43f04dbfef71dfae8893e4af4+dirty",
@@ -742,9 +742,9 @@
           "type": "consumer-usage"
         }
       ],
-      "line": 170,
+      "line": 184,
       "package": "@metafor/interpreter",
-      "path": "packages/interpreter/web/dom/source-editor.ts",
+      "path": "packages/interpreter/web/dom/source-editor.tsx",
       "repository": "interpreter",
       "scope": "production",
       "subject": "Compiled web UI migration"
@@ -755,7 +755,7 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "125",
+          "lines": "135",
           "path": "cosmos/internal/visual/main/index.ts",
           "proves": "Compile linked .tsx component exports and remove stale imperative createButton usage without restoring legacy APIs.",
           "repository": "metafor",
@@ -764,7 +764,7 @@
           "type": "consumer-usage"
         }
       ],
-      "line": 125,
+      "line": 135,
       "package": "@internal/visual",
       "path": "cosmos/internal/visual/main/index.ts",
       "repository": "metafor",
@@ -772,21 +772,21 @@
       "subject": "Compiled dock migration"
     },
     {
-      "behavior": "Extract Button owner declarations, native pseudo states and finite conditional variants from intrinsic style objects without defineStyles or runtime owner-style scanning.",
+      "behavior": "Extract Button owner CSS, bounded attribute/native pseudo selectors and caller composition from the global css intrinsic without runtime object authoring or scanning.",
       "capability": "tsx.compiler.static-style-extraction",
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "48",
+          "lines": "43",
           "path": "packages/components/button.tsx",
-          "proves": "Extract Button owner declarations, native pseudo states and finite conditional variants from intrinsic style objects without defineStyles or runtime owner-style scanning.",
+          "proves": "Extract Button owner CSS, bounded attribute/native pseudo selectors and caller composition from the global css intrinsic without runtime object authoring or scanning.",
           "repository": "ui",
-          "revision": "a2a7c476cb6ce81c43aa35315703db19e1c35891+dirty",
+          "revision": "b4cb93ec8b865fcbd71182cb358a15e4f0781466+dirty",
           "symbol": "Button component-local styles",
           "type": "consumer-usage"
         }
       ],
-      "line": 48,
+      "line": 43,
       "package": "@ui/components",
       "path": "packages/components/button.tsx",
       "repository": "ui",

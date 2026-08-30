@@ -32,6 +32,18 @@ export {DOMTokenList} from "./dom-token-list.ts"
 export {Document, createDocument} from "./document.ts"
 export type {HTMLElementTagNameMap} from "./document.ts"
 export {
+  acquireDocumentAuthorStyleSheetOwner,
+  readDocumentAuthorStyleSheets,
+  subscribeDocumentAuthorStyleSheets
+} from "./author-style-sheet.ts"
+export type {
+  DocumentAuthorStyleSheet,
+  DocumentAuthorStyleSheetChange,
+  DocumentAuthorStyleSheetOwner,
+  DocumentAuthorStyleSheetSnapshot,
+  DocumentAuthorStyleSheetSubscriber
+} from "./author-style-sheet.ts"
+export {
   acquireDocumentCompiledStyleSheets,
   readDocumentCompiledStyleSheets,
   subscribeDocumentCompiledStyleSheets

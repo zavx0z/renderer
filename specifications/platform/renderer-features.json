@@ -1,6 +1,24 @@
 {
   "entries": [
     {
+      "description": "CPU Renderer author stylesheet lifecycle capability.",
+      "domain": "renderer",
+      "id": "renderer.features.author-stylesheet-lifecycle",
+      "kind": "renderer-stage",
+      "name": "author stylesheet lifecycle",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#author-stylesheet-lifecycle",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
       "description": "CPU Renderer backend neutral diagnostics capability.",
       "domain": "renderer",
       "id": "renderer.features.backend-neutral-diagnostics",

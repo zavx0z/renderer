@@ -32,8 +32,10 @@ maps preserve Map lookup, size, order, iteration and `forEach` without exposing
 
 The initial cascade supports flat author rules with tag, class, id, attribute,
 child and descendant selectors. The bounded native pseudo-class subset is
-`:hover`, `:active`, `:focus`, `:focus-within`, `:disabled`, `:checked` and
-`:indeterminate`. Unsupported selector syntax rejects that selector rather than
+`:root`, `:hover`, `:active`, `:focus`, `:focus-within`, `:disabled`, `:checked`
+and `:indeterminate`. `:root` matches only the exact semantic
+`Document.documentElement`, including when it is projected through a display or
+HUD root. Unsupported selector syntax rejects that selector rather than
 partially matching it. Specificity and source order decide declarations;
 inline style wins over author rules. `color`, `font-size`, `line-height` and
 `letter-spacing` inherit. Supported
@@ -56,6 +58,14 @@ longhand wins at the same specificity. Inherited `white-space` supports
 `normal` collapsing, `pre` preservation and `nowrap` collapsing without line
 breaks; formatting-only whitespace under
 `normal` paints nothing.
+
+The bounded `calc()` path admits finite `+`, `-`, `*`, `/` arithmetic when the
+result is a number or one compatible `px`, `%` or resolved `em` dimension.
+Multiplication/division requires a unitless side; `em` resolves against the
+property's current font-size basis. It is used by admitted dimensional
+longhands, font-size, line-height, gap, border width and the single shadow path.
+Mixed-unit sums such as `% - px`, `min()`, `max()` and `clamp()` remain rejected
+rather than being approximated.
 
 The computed `color` resolves `currentcolor` against the inherited computed
 color. `background` and `background-color` resolve `currentcolor` against that
@@ -738,16 +748,60 @@ replacement. The cache contains no DOM scan, component registry or WebGPU
 state; a Document becoming unreachable releases the cache through weak
 ownership.
 
-## `RENDERER-CPU-029` — future dynamic pseudo variable boundary
+## `RENDERER-CPU-029` — bounded custom properties and `var()`
 
-Instance-dependent pseudo values require both `css.features.custom-properties`
-and `css.functions.var-function`. The future path keeps one compiler-extracted
-static pseudo rule with `var(--z-*)`; each semantic Element supplies only its
-addressed inline custom-property value, which participates in ordinary cascade
-and inheritance. Renderer, not React or a Component, resolves substitution.
+Custom declarations whose valid case-sensitive name begins with `--` enter a
+separate ordinary author cascade with the same selector specificity, source
+order, pseudo matching and inline priority as other declarations. Their values
+inherit through an immutable sparse environment: an Element with no winning
+own custom declaration reuses its parent's exact environment object; an owner
+stores only its own winning raw values and a parent reference.
+An inherited declaration is resolved in the environment of the Element where
+it won, so a descendant override of one dependency cannot retroactively change
+the inherited computed custom value.
 
-Until those capabilities are implemented, Renderer admits neither custom
-property cascade nor `var()` substitution for compiled pseudos. Template fails
-such author source before bundling. Per-instance stylesheet rules, DOM/style
-scanning, JS hover/focus listeners and `data-state` pseudo emulation are
-forbidden substitutes.
+For admitted longhands and the current background/color/sizing/transform value
+paths, Renderer substitutes lowercase or ASCII-case-equivalent `var()` calls
+before property grammar parsing. Custom-property names remain case-sensitive.
+Multiple references, nested fallbacks and function/comma content in a fallback
+are supported. Missing, malformed and cyclic references invalidate the selected
+declaration at computed-value time unless that use supplies a valid fallback;
+an invalid winning declaration does not reveal a lower cascade declaration.
+Every property participating in a cycle remains invalid even if an internal
+edge contains a fallback.
+
+An inline custom-property mutation invalidates the owner subtree through the
+ordinary Document mutation channel. Pseudo custom declarations produce a new
+environment through the existing interaction-state invalidation, so inherited
+descendants and the hovered/focused owner recompute without JS pseudo
+listeners. One compiler-extracted static pseudo sheet can therefore use
+`var(--hover-color)` while thousands of semantic instances supply only their
+addressed inline `--hover-color` values.
+
+The admitted composite variable paths include one solid `border` shorthand,
+`border-color`, one analytical `box-shadow`, modern `rgb()` triplet/alpha
+transport and bounded dimensional `calc()`. This is an adapted CSS Variables
+subset, not a full conformance claim. Escaped
+custom-property names, CSS-wide custom-property semantics, `!important`, typed
+`@property`, animation and `var()` inside multi-value `margin`/`padding`/
+`flex`/`overflow`, border-side/style/radius shorthands and multiple shadow
+layers remain unsupported. Such var-bearing shorthands are ignored before
+cascade. Per-instance stylesheet rules,
+DOM/style scanning, hidden compiler variables, JS hover/focus listeners and
+`data-state` pseudo emulation remain forbidden substitutes.
+
+## `RENDERER-CPU-030` — Document author/theme stylesheet lifecycle
+
+Each DocumentRenderer composes author sources in this exact order: the
+Document's ordered author/theme snapshot, compiled component-owner sheets,
+explicit legacy/global/consumer `styleSheets`, then inline declarations. Thus a
+theme supplies `:root` tokens and flat global defaults, a component may replace
+those defaults at equal specificity, an explicit migration consumer remains
+later, and inline style remains highest.
+
+Author and compiled revisions are independent cache keys for one shared
+Document-local parsed rule index. Either revision invalidates every live
+same-Document CPU projection and blocks clean/incremental reuse before the next
+flush. Multiple planes/HUD projections with equal explicit CSS reuse one parse;
+release clears theme rules without replacing semantic nodes. No stage scans
+Elements, native stylesheets, Component instances or style attributes.

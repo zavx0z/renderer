@@ -9,7 +9,7 @@
       "scope": "production",
       "path": "packages/components/button.tsx",
       "anchor": "export function Button(props: ButtonProps)",
-      "behavior": "Extract Button owner declarations, native pseudo states and finite conditional variants from intrinsic style objects without defineStyles or runtime owner-style scanning."
+      "behavior": "Extract Button owner CSS, bounded attribute/native pseudo selectors and caller composition from the global css intrinsic without runtime object authoring or scanning."
     },
     {
       "capability": "renderer.features.compiled-stylesheet-lifecycle",
@@ -68,7 +68,7 @@
       "subject": "CodeEditor",
       "scope": "production",
       "path": "packages/components/code-editor.tsx",
-      "anchor": "overflow: \"auto\"",
+      "anchor": "overflow: auto;",
       "behavior": "Two-axis scrolling with clipping and stable retained line/token identity."
     },
     {
@@ -78,7 +78,7 @@
       "subject": "CodeEditor",
       "scope": "production",
       "path": "packages/components/code-editor.tsx",
-      "anchor": "whiteSpace: \"nowrap\"",
+      "anchor": "white-space: nowrap;",
       "behavior": "Preserve source whitespace and prevent wrapping for read-only code lines."
     },
     {
@@ -97,7 +97,7 @@
       "package": "@metafor/interpreter",
       "subject": "SourceEditor",
       "scope": "production",
-      "path": "packages/interpreter/web/dom/source-editor.ts",
+      "path": "packages/interpreter/web/dom/source-editor.tsx",
       "anchor": "function selectionSnapshot(value: string, input: HTMLTextAreaElement)",
       "behavior": "Keep semantic textarea selection start/end/direction synchronized with the editable source."
     },
@@ -107,7 +107,7 @@
       "package": "@metafor/interpreter",
       "subject": "SourceEditor",
       "scope": "production",
-      "path": "packages/interpreter/web/dom/source-editor.ts",
+      "path": "packages/interpreter/web/dom/source-editor.tsx",
       "anchor": "export function createSourceEditor",
       "behavior": "Paint a visible caret and selected range aligned with the separately tokenized presentation."
     },
@@ -117,7 +117,7 @@
       "package": "@metafor/interpreter",
       "subject": "SourceEditor scrollToLine",
       "scope": "production",
-      "path": "packages/interpreter/web/dom/source-editor.ts",
+      "path": "packages/interpreter/web/dom/source-editor.tsx",
       "anchor": "function scrollToLine(",
       "behavior": "Use current rendered line geometry instead of a hard-coded line height and viewport."
     },
@@ -127,7 +127,7 @@
       "package": "@metafor/interpreter",
       "subject": "SourceEditor",
       "scope": "production",
-      "path": "packages/interpreter/web/dom/source-editor.ts",
+      "path": "packages/interpreter/web/dom/source-editor.tsx",
       "anchor": "getSelectedText: () => selectionSnapshot",
       "behavior": "Copy/cut/paste the current source selection through the browser host without a component-local clipboard dispatcher."
     },
@@ -217,7 +217,7 @@
       "package": "@metafor/interpreter",
       "subject": "Terminal",
       "scope": "production",
-      "path": "packages/interpreter/web/dom/terminal.ts",
+      "path": "packages/interpreter/web/dom/terminal.tsx",
       "anchor": "export function createTerminal",
       "behavior": "Route focused text entry, keyboard control sequences and composition into the semantic terminal input owner."
     },
@@ -227,7 +227,7 @@
       "package": "@metafor/interpreter",
       "subject": "Terminal selection",
       "scope": "production",
-      "path": "packages/interpreter/web/dom/terminal.ts",
+      "path": "packages/interpreter/web/dom/terminal.tsx",
       "anchor": "selectionSnapshot: () => null",
       "behavior": "Retain and expose terminal text selection for copy instead of returning a fabricated null snapshot."
     },
@@ -327,7 +327,7 @@
       "package": "@zavx0z/demo",
       "subject": "Journal document",
       "scope": "production",
-      "path": "src/dom/journalDocument.ts",
+      "path": "src/dom/journalDocument.tsx",
       "anchor": "export function createJournalDocument",
       "behavior": "Render journal images with object-fit, explicit dimensions, retained texture readiness and cleanup."
     },
@@ -337,7 +337,7 @@
       "package": "@zavx0z/demo",
       "subject": "Compiled UI migration",
       "scope": "production",
-      "path": "src/dom/journalDocument.ts",
+      "path": "src/dom/journalDocument.tsx",
       "anchor": "export function createJournalDocument",
       "behavior": "Compile linked .tsx component exports through the Template JSX profile instead of importing removed imperative controllers."
     },
@@ -347,7 +347,7 @@
       "package": "@metafor/interpreter",
       "subject": "Compiled web UI migration",
       "scope": "production",
-      "path": "packages/interpreter/web/dom/source-editor.ts",
+      "path": "packages/interpreter/web/dom/source-editor.tsx",
       "anchor": "export function createSourceEditor",
       "behavior": "Configure JSX compilation and migrate stale create*Controller imports to compiled component roots."
     },

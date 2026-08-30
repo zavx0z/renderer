@@ -4,6 +4,7 @@ import type {
   ViewPoint,
 } from "@engine/core"
 import {
+  subscribeDocumentAuthorStyleSheets,
   subscribeDocumentCompiledStyleSheets,
   type Document,
   type Element,
@@ -121,7 +122,8 @@ export function createDocumentOverlayRuntimeWithSeams(
   let currentFrame: RenderFrame | null = null
   let unsubscribeMutations = (): void => {}
   let unsubscribeStateChanges = (): void => {}
-  let unsubscribeStyleSheets = (): void => {}
+  let unsubscribeAuthorStyleSheets = (): void => {}
+  let unsubscribeCompiledStyleSheets = (): void => {}
   let disposed = false
   let requestVersion = 0
   const subscribers = new Set<DocumentOverlayRuntimeFrameSubscriber>()
@@ -139,10 +141,12 @@ export function createDocumentOverlayRuntimeWithSeams(
     requestBackendPresentation = (): void => {}
     unsubscribeMutations()
     unsubscribeStateChanges()
-    unsubscribeStyleSheets()
+    unsubscribeAuthorStyleSheets()
+    unsubscribeCompiledStyleSheets()
     unsubscribeMutations = () => {}
     unsubscribeStateChanges = () => {}
-    unsubscribeStyleSheets = () => {}
+    unsubscribeAuthorStyleSheets = () => {}
+    unsubscribeCompiledStyleSheets = () => {}
     interaction?.dispose()
     renderer?.dispose()
     backend?.dispose()
@@ -176,7 +180,8 @@ export function createDocumentOverlayRuntimeWithSeams(
     }
     unsubscribeMutations = options.document.subscribeMutations(requestFrame)
     unsubscribeStateChanges = options.document.subscribeStateChanges(requestFrame)
-    unsubscribeStyleSheets = subscribeDocumentCompiledStyleSheets(options.document, requestFrame)
+    unsubscribeAuthorStyleSheets = subscribeDocumentAuthorStyleSheets(options.document, requestFrame)
+    unsubscribeCompiledStyleSheets = subscribeDocumentCompiledStyleSheets(options.document, requestFrame)
   } catch (error) {
     cleanupOwners()
     throw error

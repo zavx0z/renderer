@@ -105,7 +105,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": "./compatibility",
-        "line": 809,
+        "line": 814,
         "path": "renderer:packages/react/src/compatibility.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -118,7 +118,7 @@
       },
       "parent": "platform.at-zavx0z-react.export-paths.compatibility",
       "spec": {
-        "anchor": "renderer:packages/react/src/compatibility.ts#L809",
+        "anchor": "renderer:packages/react/src/compatibility.ts#L814",
         "profile": "project-contract",
         "source": "@zavx0z/react-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -131,7 +131,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": "./compatibility",
-        "line": 816,
+        "line": 821,
         "path": "renderer:packages/react/src/compatibility.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -144,7 +144,7 @@
       },
       "parent": "platform.at-zavx0z-react.export-paths.compatibility",
       "spec": {
-        "anchor": "renderer:packages/react/src/compatibility.ts#L816",
+        "anchor": "renderer:packages/react/src/compatibility.ts#L821",
         "profile": "project-contract",
         "source": "@zavx0z/react-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -232,7 +232,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 45,
+        "line": 46,
         "path": "renderer:packages/react/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -245,7 +245,7 @@
       },
       "parent": "platform.at-zavx0z-react.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/react/src/index.ts#L45",
+        "anchor": "renderer:packages/react/src/index.ts#L46",
         "profile": "project-contract",
         "source": "@zavx0z/react-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -258,7 +258,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 55,
+        "line": 56,
         "path": "renderer:packages/react/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -271,7 +271,7 @@
       },
       "parent": "platform.at-zavx0z-react.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/react/src/index.ts#L55",
+        "anchor": "renderer:packages/react/src/index.ts#L56",
         "profile": "project-contract",
         "source": "@zavx0z/react-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -290,6 +290,32 @@
         "typeOnly": true
       },
       "name": "ComponentRoot",
+      "ownerHint": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "parent": "platform.at-zavx0z-react.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/react/src/index.ts#L27",
+        "profile": "project-contract",
+        "source": "@zavx0z/react-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
+      "description": "@zavx0z/react public type export ComponentRootStyleSheetSnapshot.",
+      "domain": "react",
+      "id": "platform.at-zavx0z-react.export-paths.root.symbols.componentrootstylesheetsnapshot",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 27,
+        "path": "renderer:packages/react/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "ComponentRootStyleSheetSnapshot",
       "ownerHint": {
         "package": "@zavx0z/react",
         "repository": "renderer",
@@ -330,65 +356,13 @@
       }
     },
     {
-      "description": "@zavx0z/react public type export ComponentStyleDefinition.",
-      "domain": "react",
-      "id": "platform.at-zavx0z-react.export-paths.root.symbols.componentstyledefinition",
-      "kind": "type-export",
-      "metadata": {
-        "entrypoint": ".",
-        "line": 66,
-        "path": "renderer:packages/react/src/index.ts",
-        "repository": "renderer",
-        "typeOnly": true
-      },
-      "name": "ComponentStyleDefinition",
-      "ownerHint": {
-        "package": "@zavx0z/react",
-        "repository": "renderer",
-        "stage": "authoring-runtime"
-      },
-      "parent": "platform.at-zavx0z-react.export-paths.root",
-      "spec": {
-        "anchor": "renderer:packages/react/src/index.ts#L66",
-        "profile": "project-contract",
-        "source": "@zavx0z/react-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
-      }
-    },
-    {
-      "description": "@zavx0z/react public type export ComponentStyleSheet.",
-      "domain": "react",
-      "id": "platform.at-zavx0z-react.export-paths.root.symbols.componentstylesheet",
-      "kind": "type-export",
-      "metadata": {
-        "entrypoint": ".",
-        "line": 66,
-        "path": "renderer:packages/react/src/index.ts",
-        "repository": "renderer",
-        "typeOnly": true
-      },
-      "name": "ComponentStyleSheet",
-      "ownerHint": {
-        "package": "@zavx0z/react",
-        "repository": "renderer",
-        "stage": "authoring-runtime"
-      },
-      "parent": "platform.at-zavx0z-react.export-paths.root",
-      "spec": {
-        "anchor": "renderer:packages/react/src/index.ts#L66",
-        "profile": "project-contract",
-        "source": "@zavx0z/react-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
-      }
-    },
-    {
       "description": "@zavx0z/react public type export ComponentValue.",
       "domain": "react",
       "id": "platform.at-zavx0z-react.export-paths.root.symbols.componentvalue",
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 55,
+        "line": 56,
         "path": "renderer:packages/react/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -401,7 +375,7 @@
       },
       "parent": "platform.at-zavx0z-react.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/react/src/index.ts#L55",
+        "anchor": "renderer:packages/react/src/index.ts#L56",
         "profile": "project-contract",
         "source": "@zavx0z/react-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -414,7 +388,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 55,
+        "line": 56,
         "path": "renderer:packages/react/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -427,7 +401,7 @@
       },
       "parent": "platform.at-zavx0z-react.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/react/src/index.ts#L55",
+        "anchor": "renderer:packages/react/src/index.ts#L56",
         "profile": "project-contract",
         "source": "@zavx0z/react-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -440,7 +414,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 55,
+        "line": 56,
         "path": "renderer:packages/react/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -453,7 +427,7 @@
       },
       "parent": "platform.at-zavx0z-react.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/react/src/index.ts#L55",
+        "anchor": "renderer:packages/react/src/index.ts#L56",
         "profile": "project-contract",
         "source": "@zavx0z/react-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -466,7 +440,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 45,
+        "line": 46,
         "path": "renderer:packages/react/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -479,7 +453,7 @@
       },
       "parent": "platform.at-zavx0z-react.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/react/src/index.ts#L45",
+        "anchor": "renderer:packages/react/src/index.ts#L46",
         "profile": "project-contract",
         "source": "@zavx0z/react-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -506,58 +480,6 @@
       "parent": "platform.at-zavx0z-react.export-paths.root",
       "spec": {
         "anchor": "renderer:packages/react/src/index.ts#L1",
-        "profile": "project-contract",
-        "source": "@zavx0z/react-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
-      }
-    },
-    {
-      "description": "@zavx0z/react public type export CSSProperties.",
-      "domain": "react",
-      "id": "platform.at-zavx0z-react.export-paths.root.symbols.cssproperties",
-      "kind": "type-export",
-      "metadata": {
-        "entrypoint": ".",
-        "line": 66,
-        "path": "renderer:packages/react/src/index.ts",
-        "repository": "renderer",
-        "typeOnly": true
-      },
-      "name": "CSSProperties",
-      "ownerHint": {
-        "package": "@zavx0z/react",
-        "repository": "renderer",
-        "stage": "authoring-runtime"
-      },
-      "parent": "platform.at-zavx0z-react.export-paths.root",
-      "spec": {
-        "anchor": "renderer:packages/react/src/index.ts#L66",
-        "profile": "project-contract",
-        "source": "@zavx0z/react-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
-      }
-    },
-    {
-      "description": "@zavx0z/react public runtime export defineStyles.",
-      "domain": "react",
-      "id": "platform.at-zavx0z-react.export-paths.root.symbols.definestyles",
-      "kind": "runtime-export",
-      "metadata": {
-        "entrypoint": ".",
-        "line": 65,
-        "path": "renderer:packages/react/src/index.ts",
-        "repository": "renderer",
-        "typeOnly": false
-      },
-      "name": "defineStyles",
-      "ownerHint": {
-        "package": "@zavx0z/react",
-        "repository": "renderer",
-        "stage": "authoring-runtime"
-      },
-      "parent": "platform.at-zavx0z-react.export-paths.root",
-      "spec": {
-        "anchor": "renderer:packages/react/src/index.ts#L65",
         "profile": "project-contract",
         "source": "@zavx0z/react-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -674,7 +596,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 55,
+        "line": 56,
         "path": "renderer:packages/react/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -687,7 +609,7 @@
       },
       "parent": "platform.at-zavx0z-react.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/react/src/index.ts#L55",
+        "anchor": "renderer:packages/react/src/index.ts#L56",
         "profile": "project-contract",
         "source": "@zavx0z/react-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -700,7 +622,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 55,
+        "line": 56,
         "path": "renderer:packages/react/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -713,7 +635,7 @@
       },
       "parent": "platform.at-zavx0z-react.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/react/src/index.ts#L55",
+        "anchor": "renderer:packages/react/src/index.ts#L56",
         "profile": "project-contract",
         "source": "@zavx0z/react-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -746,39 +668,13 @@
       }
     },
     {
-      "description": "@zavx0z/react public runtime export isStyleToken.",
-      "domain": "react",
-      "id": "platform.at-zavx0z-react.export-paths.root.symbols.isstyletoken",
-      "kind": "runtime-export",
-      "metadata": {
-        "entrypoint": ".",
-        "line": 65,
-        "path": "renderer:packages/react/src/index.ts",
-        "repository": "renderer",
-        "typeOnly": false
-      },
-      "name": "isStyleToken",
-      "ownerHint": {
-        "package": "@zavx0z/react",
-        "repository": "renderer",
-        "stage": "authoring-runtime"
-      },
-      "parent": "platform.at-zavx0z-react.export-paths.root",
-      "spec": {
-        "anchor": "renderer:packages/react/src/index.ts#L65",
-        "profile": "project-contract",
-        "source": "@zavx0z/react-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
-      }
-    },
-    {
       "description": "@zavx0z/react public runtime export keyedComponents.",
       "domain": "react",
       "id": "platform.at-zavx0z-react.export-paths.root.symbols.keyedcomponents",
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 45,
+        "line": 46,
         "path": "renderer:packages/react/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -791,7 +687,7 @@
       },
       "parent": "platform.at-zavx0z-react.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/react/src/index.ts#L45",
+        "anchor": "renderer:packages/react/src/index.ts#L46",
         "profile": "project-contract",
         "source": "@zavx0z/react-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -804,7 +700,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 55,
+        "line": 56,
         "path": "renderer:packages/react/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -817,7 +713,7 @@
       },
       "parent": "platform.at-zavx0z-react.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/react/src/index.ts#L55",
+        "anchor": "renderer:packages/react/src/index.ts#L56",
         "profile": "project-contract",
         "source": "@zavx0z/react-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -830,7 +726,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 45,
+        "line": 46,
         "path": "renderer:packages/react/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -843,7 +739,7 @@
       },
       "parent": "platform.at-zavx0z-react.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/react/src/index.ts#L45",
+        "anchor": "renderer:packages/react/src/index.ts#L46",
         "profile": "project-contract",
         "source": "@zavx0z/react-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -856,7 +752,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 55,
+        "line": 56,
         "path": "renderer:packages/react/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -869,7 +765,7 @@
       },
       "parent": "platform.at-zavx0z-react.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/react/src/index.ts#L55",
+        "anchor": "renderer:packages/react/src/index.ts#L56",
         "profile": "project-contract",
         "source": "@zavx0z/react-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -908,7 +804,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 45,
+        "line": 46,
         "path": "renderer:packages/react/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -921,7 +817,7 @@
       },
       "parent": "platform.at-zavx0z-react.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/react/src/index.ts#L45",
+        "anchor": "renderer:packages/react/src/index.ts#L46",
         "profile": "project-contract",
         "source": "@zavx0z/react-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -934,7 +830,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 53,
+        "line": 54,
         "path": "renderer:packages/react/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -947,7 +843,7 @@
       },
       "parent": "platform.at-zavx0z-react.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/react/src/index.ts#L53",
+        "anchor": "renderer:packages/react/src/index.ts#L54",
         "profile": "project-contract",
         "source": "@zavx0z/react-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -960,7 +856,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 54,
+        "line": 55,
         "path": "renderer:packages/react/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -973,7 +869,7 @@
       },
       "parent": "platform.at-zavx0z-react.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/react/src/index.ts#L54",
+        "anchor": "renderer:packages/react/src/index.ts#L55",
         "profile": "project-contract",
         "source": "@zavx0z/react-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -1208,84 +1104,6 @@
       "parent": "platform.at-zavx0z-react.export-paths.root",
       "spec": {
         "anchor": "renderer:packages/react/src/index.ts#L27",
-        "profile": "project-contract",
-        "source": "@zavx0z/react-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
-      }
-    },
-    {
-      "description": "@zavx0z/react public type export StyleToken.",
-      "domain": "react",
-      "id": "platform.at-zavx0z-react.export-paths.root.symbols.styletoken",
-      "kind": "type-export",
-      "metadata": {
-        "entrypoint": ".",
-        "line": 66,
-        "path": "renderer:packages/react/src/index.ts",
-        "repository": "renderer",
-        "typeOnly": true
-      },
-      "name": "StyleToken",
-      "ownerHint": {
-        "package": "@zavx0z/react",
-        "repository": "renderer",
-        "stage": "authoring-runtime"
-      },
-      "parent": "platform.at-zavx0z-react.export-paths.root",
-      "spec": {
-        "anchor": "renderer:packages/react/src/index.ts#L66",
-        "profile": "project-contract",
-        "source": "@zavx0z/react-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
-      }
-    },
-    {
-      "description": "@zavx0z/react public type export StyleValue.",
-      "domain": "react",
-      "id": "platform.at-zavx0z-react.export-paths.root.symbols.stylevalue",
-      "kind": "type-export",
-      "metadata": {
-        "entrypoint": ".",
-        "line": 66,
-        "path": "renderer:packages/react/src/index.ts",
-        "repository": "renderer",
-        "typeOnly": true
-      },
-      "name": "StyleValue",
-      "ownerHint": {
-        "package": "@zavx0z/react",
-        "repository": "renderer",
-        "stage": "authoring-runtime"
-      },
-      "parent": "platform.at-zavx0z-react.export-paths.root",
-      "spec": {
-        "anchor": "renderer:packages/react/src/index.ts#L66",
-        "profile": "project-contract",
-        "source": "@zavx0z/react-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
-      }
-    },
-    {
-      "description": "@zavx0z/react public type export SupportedStylePseudo.",
-      "domain": "react",
-      "id": "platform.at-zavx0z-react.export-paths.root.symbols.supportedstylepseudo",
-      "kind": "type-export",
-      "metadata": {
-        "entrypoint": ".",
-        "line": 66,
-        "path": "renderer:packages/react/src/index.ts",
-        "repository": "renderer",
-        "typeOnly": true
-      },
-      "name": "SupportedStylePseudo",
-      "ownerHint": {
-        "package": "@zavx0z/react",
-        "repository": "renderer",
-        "stage": "authoring-runtime"
-      },
-      "parent": "platform.at-zavx0z-react.export-paths.root",
-      "spec": {
-        "anchor": "renderer:packages/react/src/index.ts#L66",
         "profile": "project-contract",
         "source": "@zavx0z/react-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -1818,7 +1636,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 45,
+        "line": 46,
         "path": "renderer:packages/react/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -1831,7 +1649,7 @@
       },
       "parent": "platform.at-zavx0z-react.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/react/src/index.ts#L45",
+        "anchor": "renderer:packages/react/src/index.ts#L46",
         "profile": "project-contract",
         "source": "@zavx0z/react-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"

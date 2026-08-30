@@ -626,6 +626,53 @@
       "consumers": [],
       "evidence": [
         {
+          "doesNotProve": "Native browser pixels, cross-origin access, @import, @font-face, nesting or grouping rules.",
+          "path": "packages/browser/src/linked-author-style-sheet-host.ts",
+          "proves": "Exact native-tree-ordered link sources, awaitable readiness, origin-clean loaded CSSOM mirroring, bounded observation, refresh and disposal without fetch or global scan.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "createBrowserLinkedAuthorStyleSheetHost",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live native load/CSSOM/browser rendering.",
+          "path": "packages/browser/test/linked-author-style-sheet-host.test.ts",
+          "proves": "Loaded and late CSSOM, native order, required load rejection, exact observation, refresh, disposal, collision/security and unsupported-rule failure.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "linked-author-stylesheets",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Live requestAnimationFrame/WebGPU pixels.",
+          "path": "packages/browser/test/plane-runtime.test.ts",
+          "proves": "Author revisions use the same coalesced projection frame channel and are inert after disposal.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "author stylesheet scheduling",
+          "type": "unit-test"
+        }
+      ],
+      "id": "browser.features.linked-author-stylesheets",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
           "doesNotProve": "Live native browser execution.",
           "path": "packages/browser/src/space-runtime.ts",
           "proves": "The bounded browser composition adapter logic.",
@@ -1268,6 +1315,173 @@
         "stage": "browser-host"
       },
       "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "43",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "BrowserLinkedAuthorStyleSheetErrorHandler",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.browserlinkedauthorstylesheeterrorhandler",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "43",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "BrowserLinkedAuthorStyleSheetHost",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.browserlinkedauthorstylesheethost",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "43",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "BrowserLinkedAuthorStyleSheetSource",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.browserlinkedauthorstylesheetsource",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "42",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "createBrowserLinkedAuthorStyleSheetHost",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "External-standard compatibility unless separately mapped.",
+          "path": "packages/browser/test/linked-author-style-sheet-host.test.ts",
+          "proves": "The bounded project API has behavioral coverage.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "createBrowserLinkedAuthorStyleSheetHost",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.createbrowserlinkedauthorstylesheethost",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "43",
+          "path": "packages/browser/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "CreateBrowserLinkedAuthorStyleSheetHostOptions",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer-browser.export-paths.root.symbols.createbrowserlinkedauthorstylesheethostoptions",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer-browser",
+        "repository": "renderer",
+        "stage": "browser-host"
+      },
+      "status": "unverified"
     },
     {
       "blockedBy": [],

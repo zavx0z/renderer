@@ -62,40 +62,25 @@ Hooks follow the familiar names and dependency semantics. Supported now:
 
 ## Styles
 
-Components expose one `style` prop. Owner defaults are class-free compiled
-tokens; a caller declaration object is placed last.
+Components expose one source-level `style?: CssStyle` prop. Owner defaults and
+caller composition are authored through the global Template `css`` intrinsic;
+the compiler emits static sheets/markers plus ordered inline CSS strings.
 
 ```tsx
-import {defineStyles} from "@zavx0z/react"
-
-const styles = defineStyles("@ui/button", {
-  root: {
-    display: "flex",
-    height: 22,
-    ":hover": {background: "rgb(101 101 101)"},
-    ":active": {background: "rgb(71 114 179)"}
-  }
-})
-
-function Button({style, label}: Readonly<{style?: object; label: string}>) {
-  return <button style={[styles.root, style]}>{label}</button>
+function Button({style, label}: Readonly<{style?: CssStyle; label: string}>) {
+  return <button style={css`
+    & { display: flex; height: 22px; }
+    &:hover { background: rgb(101 101 101); }
+    &:active { background: rgb(71 114 179); }
+    ${style}
+  `}>{label}</button>
 }
-
-const renderer = createDocumentRenderer({
-  document,
-  root: container,
-  viewport,
-  styleSheets: [styles.cssText]
-})
 ```
 
-`defineStyles` emits static attribute-scoped CSS. Authors write no BEM names,
-`className` or manual pointer-state attributes. Native renderer pseudos own
-hover, active, focus, focus-within, disabled, checked and indeterminate.
-Style tokens do not inject a global stylesheet as a hidden side effect. The
-application or catalog passes each owner `cssText` to its one document
-renderer; a production component normally exports its aggregated CSS beside
-the component.
+At runtime React receives only compiler-produced CSS strings and nested arrays;
+objects, CSSProperties, style tokens and `defineStyles` do not exist. Native
+Renderer selectors own hover/focus/active/disabled behavior, while compiled
+template metadata owns Document stylesheet adoption and release.
 
 The machine-readable support matrix is available from
 `@zavx0z/react/compatibility`. Compiler APIs deliberately remain in

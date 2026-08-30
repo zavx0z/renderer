@@ -53,9 +53,20 @@ export type ComputedLineHeight =
   | "normal"
   | Readonly<{kind: "number" | "length"; value: number}>
 
+export type ComputedCustomProperties = Readonly<{
+  parent: ComputedCustomProperties | null
+  own: Readonly<Record<string, string>>
+}>
+
+export const EMPTY_CUSTOM_PROPERTIES: ComputedCustomProperties = Object.freeze({
+  parent: null,
+  own: Object.freeze(Object.create(null) as Record<string, string>),
+})
+
 export type ComputedTextOverflow = "clip" | "ellipsis"
 
 export type ComputedStyle = Readonly<{
+  customProperties: ComputedCustomProperties
   display: RenderDisplay
   boxSizing: RenderBoxSizing
   flexDirection: RenderFlexDirection
@@ -115,6 +126,7 @@ type SupportedPseudoClass =
   | "focus-within"
   | "hover"
   | "indeterminate"
+  | "root"
 
 type SelectorCombinator = "child" | "descendant"
 
@@ -181,6 +193,57 @@ const CENTER_ORIGIN: ComputedTransformOrigin = Object.freeze({
   x: CENTER_PERCENT,
   y: CENTER_PERCENT,
 })
+
+const customPropertyNamePattern = /^--(?:[A-Za-z_]|[^\x00-\x7f])(?:[A-Za-z0-9_-]|[^\x00-\x7f])*$/
+const deferredVariablePropertySet: ReadonlySet<string> = new Set([
+  "scrollbar-width",
+  "text-align",
+  "line-height",
+  "letter-spacing",
+  "white-space",
+  "text-overflow",
+  "object-fit",
+  "position",
+  "left",
+  "top",
+  "right",
+  "bottom",
+  "transform",
+  "transform-origin",
+  "box-shadow",
+  "z-index",
+])
+const deferredVariableShorthandSet: ReadonlySet<string> = new Set([
+  "border",
+  "border-color",
+])
+const unsupportedVariableShorthandSet: ReadonlySet<string> = new Set([
+  "flex",
+  "overflow",
+  "margin",
+  "margin-inline",
+  "margin-block",
+  "padding",
+  "padding-inline",
+  "padding-block",
+  "border-top",
+  "border-right",
+  "border-bottom",
+  "border-left",
+  "border-width",
+  "border-style",
+  "border-radius",
+])
+
+type VariableResolution =
+  | Readonly<{valid: true; value: string}>
+  | Readonly<{valid: false}>
+
+const INVALID_VARIABLE: VariableResolution = Object.freeze({valid: false})
+const variableResolutionCache = new WeakMap<
+  ComputedCustomProperties,
+  Map<string, VariableResolution>
+>()
 
 export const parseStyleSheets = (
   styleSheets: readonly string[],
@@ -282,11 +345,13 @@ export const computeStyle = (
   interactionState?: DocumentInteractionState,
 ): ComputedStyle => {
   const tag = elementTag(element)
-  const values = new Map<string, CascadedValue>()
+  let values = new Map<string, CascadedValue>()
+  const customValues = new Map<string, CascadedValue>()
   const sequence: CascadeSequence = { value: 0 }
 
   applyDeclarations(
     values,
+    customValues,
     uaDeclarations(tag, element),
     [0, 0, 0],
     -1_000_000,
@@ -297,6 +362,7 @@ export const computeStyle = (
     if (!matchesSelector(element, rule.selector, interactionState)) return
     applyDeclarations(
       values,
+      customValues,
       rule.declarations,
       rule.selector.specificity,
       rule.order,
@@ -308,11 +374,15 @@ export const computeStyle = (
   if (inline)
     applyDeclarations(
       values,
+      customValues,
       parseDeclarations(inline),
       [1_000_000, 0, 0],
       1_000_000,
       sequence,
     )
+
+  const customProperties = createCustomPropertyEnvironment(parent, customValues)
+  values = resolveCascadedVariables(values, customProperties)
 
   const inheritedColor = parent?.color ?? "#000000"
   const color = resolvedColor(readValue(values, "color"), inheritedColor)
@@ -322,10 +392,7 @@ export const computeStyle = (
   const background = backgroundValue === undefined
     ? null
     : resolvedColor(backgroundValue, color)
-  const fontSize = nonNegativeNumber(
-    readValue(values, "font-size"),
-    parent?.fontSize ?? 16,
-  )
+  const fontSize = parseFontSize(readValue(values, "font-size"), parent?.fontSize ?? 16)
   const defaultPadding = tag === "button" ? BUTTON_PADDING : ZERO_EDGES
   const overflow = normalizeOverflowAxes(
     parseOverflow(readValue(values, "overflow-x")),
@@ -333,29 +400,30 @@ export const computeStyle = (
   )
 
   return Object.freeze({
+    customProperties,
     display: parseDisplay(readValue(values, "display"), tag),
     boxSizing: parseBoxSizing(readValue(values, "box-sizing")),
     flexDirection: parseFlexDirection(readValue(values, "flex-direction")),
     flexGrow: nonNegativeNumber(readValue(values, "flex-grow"), 0),
     flexShrink: nonNegativeNumber(readValue(values, "flex-shrink"), 1),
-    flexBasis: parseLength(readValue(values, "flex-basis")),
+    flexBasis: parseLength(readValue(values, "flex-basis"), fontSize),
     alignItems: parseAlignItems(readValue(values, "align-items")),
     justifyContent: parseJustifyContent(readValue(values, "justify-content")),
-    width: parseLength(readValue(values, "width")),
-    height: parseLength(readValue(values, "height")),
-    minWidth: parseLength(readValue(values, "min-width")),
-    minHeight: parseLength(readValue(values, "min-height")),
-    maxWidth: parseLength(readValue(values, "max-width")),
-    maxHeight: parseLength(readValue(values, "max-height")),
+    width: parseLength(readValue(values, "width"), fontSize),
+    height: parseLength(readValue(values, "height"), fontSize),
+    minWidth: parseLength(readValue(values, "min-width"), fontSize),
+    minHeight: parseLength(readValue(values, "min-height"), fontSize),
+    maxWidth: parseLength(readValue(values, "max-width"), fontSize),
+    maxHeight: parseLength(readValue(values, "max-height"), fontSize),
     position: parsePosition(readValue(values, "position")),
-    left: parseLength(readValue(values, "left")),
-    top: parseLength(readValue(values, "top")),
-    right: parseLength(readValue(values, "right")),
-    bottom: parseLength(readValue(values, "bottom")),
+    left: parseLength(readValue(values, "left"), fontSize),
+    top: parseLength(readValue(values, "top"), fontSize),
+    right: parseLength(readValue(values, "right"), fontSize),
+    bottom: parseLength(readValue(values, "bottom"), fontSize),
     transform: parseTransform(readValue(values, "transform")) ?? Object.freeze([]),
     transformOrigin: parseTransformOrigin(readValue(values, "transform-origin")) ?? CENTER_ORIGIN,
     boxShadow: parseBoxShadow(readValue(values, "box-shadow"), color) ?? null,
-    gap: nonNegativeNumber(readValue(values, "gap"), 0),
+    gap: nonNegativePixelLength(readValue(values, "gap"), 0, fontSize),
     margin: readEdges(values, "margin", ZERO_EDGES, true),
     padding: readEdges(values, "padding", defaultPadding, false),
     borderWidths: readEdges(values, "border", ZERO_EDGES, false, "width"),
@@ -372,6 +440,7 @@ export const computeStyle = (
     letterSpacing: parseLetterSpacing(
       readValue(values, "letter-spacing"),
       parent?.letterSpacing ?? 0,
+      fontSize,
     ),
     opacity: unitNumber(readValue(values, "opacity"), 1),
     overflowX: overflow.x,
@@ -578,20 +647,267 @@ const parseDeclarations = (source: string): DeclarationMap => {
   return Object.freeze(declarations)
 }
 
-const normalizeProperty = (property: string): string =>
-  property
-    .trim()
-    .replace(/([A-Z])/g, "-$1")
-    .toLowerCase()
+const normalizeProperty = (property: string): string => {
+  const value = property.trim()
+  if (value.startsWith("--")) return validCustomPropertyName(value) ? value : ""
+  return value.replace(/([A-Z])/g, "-$1").toLowerCase()
+}
+
+const validCustomPropertyName = (value: string): boolean =>
+  value !== "--" && customPropertyNamePattern.test(value)
+
+const createCustomPropertyEnvironment = (
+  parent: ComputedStyle | null,
+  values: ReadonlyMap<string, CascadedValue>,
+): ComputedCustomProperties => {
+  const inherited = parent?.customProperties ?? EMPTY_CUSTOM_PROPERTIES
+  if (values.size === 0) return inherited
+  const own = Object.create(null) as Record<string, string>
+  for (const [name, value] of values) own[name] = value.value
+  return Object.freeze({parent: inherited, own: Object.freeze(own)})
+}
+
+const resolveCascadedVariables = (
+  values: Map<string, CascadedValue>,
+  customProperties: ComputedCustomProperties,
+): Map<string, CascadedValue> => {
+  let resolved: Map<string, CascadedValue> | null = null
+  let resolver: CustomPropertyResolver | null = null
+  for (const [property, cascaded] of values) {
+    if (!hasVarFunction(cascaded.value)) continue
+    resolver ??= new CustomPropertyResolver(customProperties)
+    const value = substituteVariables(cascaded.value, resolver)
+    if (value === null) {
+      resolved ??= new Map(values)
+      resolved.delete(property)
+      invalidateDeferredShorthand(resolved, property, cascaded)
+      continue
+    }
+    if (deferredVariableShorthandSet.has(property)) {
+      resolved ??= new Map(values)
+      resolved.delete(property)
+      const expanded = expandDeclaration(property, value)
+      if (expanded.length === 0) invalidateDeferredShorthand(resolved, property, cascaded)
+      for (const [expandedProperty, expandedValue] of expanded) {
+        const next = Object.freeze({...cascaded, value: expandedValue})
+        const current = resolved.get(expandedProperty)
+        if (!current || comparePriority(current, next) <= 0) {
+          resolved.set(expandedProperty, next)
+        }
+      }
+      continue
+    }
+    if (value === cascaded.value) continue
+    resolved ??= new Map(values)
+    resolved.set(property, Object.freeze({...cascaded, value}))
+  }
+  return resolved ?? values
+}
+
+const invalidateDeferredShorthand = (
+  values: Map<string, CascadedValue>,
+  property: string,
+  cascaded: CascadedValue,
+): void => {
+  const targets = property === "border"
+    ? [
+        "border-top-width", "border-right-width", "border-bottom-width", "border-left-width",
+        "border-top-color", "border-right-color", "border-bottom-color", "border-left-color",
+      ]
+    : property === "border-color"
+      ? ["border-top-color", "border-right-color", "border-bottom-color", "border-left-color"]
+      : []
+  for (const target of targets) {
+    const current = values.get(target)
+    if (current !== undefined && comparePriority(current, cascaded) <= 0) values.delete(target)
+  }
+}
+
+class CustomPropertyResolver {
+  private readonly cache: Map<string, VariableResolution>
+  private readonly cyclic = new Set<string>()
+  private readonly stack: string[] = []
+
+  constructor(private readonly environment: ComputedCustomProperties) {
+    this.cache = variableResolutionCache.get(environment) ?? new Map()
+    variableResolutionCache.set(environment, this.cache)
+  }
+
+  resolve(name: string): VariableResolution {
+    const cached = this.cache.get(name)
+    if (cached !== undefined) return cached
+    const declaration = lookupCustomProperty(this.environment, name)
+    if (declaration === null) {
+      this.cache.set(name, INVALID_VARIABLE)
+      return INVALID_VARIABLE
+    }
+    if (declaration.environment !== this.environment) {
+      const result = new CustomPropertyResolver(declaration.environment).resolve(name)
+      this.cache.set(name, result)
+      return result
+    }
+    const cycleStart = this.stack.indexOf(name)
+    if (cycleStart >= 0) {
+      for (let index = cycleStart; index < this.stack.length; index += 1) {
+        this.cyclic.add(this.stack[index]!)
+      }
+      return INVALID_VARIABLE
+    }
+    this.stack.push(name)
+    const value = substituteVariables(declaration.source, this)
+    this.stack.pop()
+    const result = value === null || this.cyclic.has(name)
+      ? INVALID_VARIABLE
+      : Object.freeze({valid: true as const, value})
+    this.cache.set(name, result)
+    return result
+  }
+}
+
+const lookupCustomProperty = (
+  environment: ComputedCustomProperties,
+  name: string,
+): Readonly<{
+  environment: ComputedCustomProperties
+  source: string
+}> | null => {
+  for (
+    let current: ComputedCustomProperties | null = environment;
+    current !== null;
+    current = current.parent
+  ) {
+    if (Object.prototype.hasOwnProperty.call(current.own, name)) {
+      return Object.freeze({environment: current, source: current.own[name]!})
+    }
+  }
+  return null
+}
+
+const hasVarFunction = (source: string): boolean => findVarFunction(source, 0) >= 0
+
+const substituteVariables = (
+  source: string,
+  resolver: CustomPropertyResolver,
+): string | null => {
+  let cursor = 0
+  let output = ""
+  while (cursor < source.length) {
+    const start = findVarFunction(source, cursor)
+    if (start < 0) return `${output}${source.slice(cursor)}`
+    output += source.slice(cursor, start)
+    const end = matchingParenthesis(source, start + 3)
+    if (end < 0) return null
+    const argument = splitVarArgument(source.slice(start + 4, end))
+    if (argument === null || !validCustomPropertyName(argument.name)) return null
+    const variable = resolver.resolve(argument.name)
+    if (variable.valid) output += variable.value
+    else {
+      if (argument.fallback === null) return null
+      const fallback = substituteVariables(argument.fallback, resolver)
+      if (fallback === null) return null
+      output += fallback
+    }
+    cursor = end + 1
+  }
+  return output
+}
+
+const findVarFunction = (source: string, offset: number): number => {
+  let quote: "\"" | "'" | null = null
+  for (let index = offset; index <= source.length - 4; index += 1) {
+    const character = source[index]!
+    if (quote !== null) {
+      if (character === "\\") index += 1
+      else if (character === quote) quote = null
+      continue
+    }
+    if (character === "\"" || character === "'") {
+      quote = character
+      continue
+    }
+    if (source.slice(index, index + 4).toLowerCase() !== "var(") continue
+    const previous = source[index - 1]
+    if (previous !== undefined && /[A-Za-z0-9_-]/.test(previous)) continue
+    return index
+  }
+  return -1
+}
+
+const matchingParenthesis = (source: string, open: number): number => {
+  let depth = 0
+  let quote: "\"" | "'" | null = null
+  for (let index = open; index < source.length; index += 1) {
+    const character = source[index]!
+    if (quote !== null) {
+      if (character === "\\") index += 1
+      else if (character === quote) quote = null
+      continue
+    }
+    if (character === "\"" || character === "'") {
+      quote = character
+      continue
+    }
+    if (character === "(") depth += 1
+    else if (character === ")") {
+      depth -= 1
+      if (depth === 0) return index
+      if (depth < 0) return -1
+    }
+  }
+  return -1
+}
+
+const splitVarArgument = (
+  source: string,
+): Readonly<{name: string; fallback: string | null}> | null => {
+  let depth = 0
+  let quote: "\"" | "'" | null = null
+  for (let index = 0; index < source.length; index += 1) {
+    const character = source[index]!
+    if (quote !== null) {
+      if (character === "\\") index += 1
+      else if (character === quote) quote = null
+      continue
+    }
+    if (character === "\"" || character === "'") {
+      quote = character
+      continue
+    }
+    if (character === "(") depth += 1
+    else if (character === ")") {
+      depth -= 1
+      if (depth < 0) return null
+    } else if (character === "," && depth === 0) {
+      return Object.freeze({
+        name: source.slice(0, index).trim(),
+        fallback: source.slice(index + 1),
+      })
+    }
+  }
+  if (quote !== null || depth !== 0) return null
+  return Object.freeze({name: source.trim(), fallback: null})
+}
 
 const applyDeclarations = (
   values: Map<string, CascadedValue>,
+  customValues: Map<string, CascadedValue>,
   declarations: DeclarationMap,
   specificity: readonly [number, number, number],
   order: number,
   sequence: CascadeSequence,
 ): void => {
   for (const [property, value] of Object.entries(declarations)) {
+    if (property.startsWith("--")) {
+      const next = Object.freeze({
+        specificity,
+        order,
+        sequence: sequence.value++,
+        value,
+      })
+      const current = customValues.get(property)
+      if (!current || comparePriority(current, next) <= 0) customValues.set(property, next)
+      continue
+    }
     for (const [expandedProperty, expandedValue] of expandDeclaration(
       property,
       value,
@@ -626,6 +942,11 @@ const expandDeclaration = (
   property: string,
   value: string,
 ): readonly (readonly [string, string])[] => {
+  if (hasVarFunction(value)) {
+    if (unsupportedVariableShorthandSet.has(property)) return []
+    if (deferredVariableShorthandSet.has(property)) return [[property, value]]
+    if (deferredVariablePropertySet.has(property)) return [[property, value]]
+  }
   switch (property) {
     case "inline-size":
       return [["width", value]]
@@ -1089,7 +1410,8 @@ const isSupportedPseudoClass = (value: string): value is SupportedPseudoClass =>
   value === "focus" ||
   value === "focus-within" ||
   value === "hover" ||
-  value === "indeterminate"
+  value === "indeterminate" ||
+  value === "root"
 
 const matchesSelector = (
   element: Element,
@@ -1173,6 +1495,8 @@ const matchesPseudoClass = (
         element.localName === "option" && readBooleanProperty(element, "selected")
     case "indeterminate":
       return element.localName === "input" && readBooleanProperty(element, "indeterminate")
+    case "root":
+      return element.ownerDocument?.documentElement === element
   }
 }
 
@@ -1304,7 +1628,7 @@ const validLineHeight = (value: string): boolean => {
   if (normalized === "normal") return true
   const number = transformNumber(normalized)
   if (number !== null) return number >= 0
-  const length = parseLength(normalized)
+  const length = parseLength(normalized, 16)
   return length !== null && length.value >= 0
 }
 
@@ -1318,7 +1642,7 @@ const parseLineHeight = (
   if (normalized === "normal") return "normal"
   const number = transformNumber(normalized)
   if (number !== null && number >= 0) return Object.freeze({kind: "number", value: number})
-  const length = parseLength(normalized)
+  const length = parseLength(normalized, fontSize)
   if (length === null || length.value < 0) return inherited
   return Object.freeze({
     kind: "length",
@@ -1336,15 +1660,19 @@ export const resolveLineHeight = (style: Pick<ComputedStyle, "fontSize" | "lineH
 const validLetterSpacing = (value: string): boolean => {
   const normalized = value.trim().toLowerCase()
   if (normalized === "normal") return true
-  const length = parseLength(normalized)
+  const length = parseLength(normalized, 16)
   return length !== null && length.unit === "px"
 }
 
-const parseLetterSpacing = (value: string | undefined, inherited: number): number => {
+const parseLetterSpacing = (
+  value: string | undefined,
+  inherited: number,
+  fontSize: number,
+): number => {
   const normalized = value?.trim().toLowerCase()
   if (normalized === undefined || normalized === "inherit") return inherited
   if (normalized === "normal") return 0
-  const length = parseLength(normalized)
+  const length = parseLength(normalized, fontSize)
   return length !== null && length.unit === "px" ? length.value : inherited
 }
 
@@ -1627,7 +1955,7 @@ const normalizeOverflowAxis = (value: RenderOverflow): RenderOverflow => {
   return value
 }
 
-const parseLength = (value: string | undefined): CSSLength | null => {
+const parseLength = (value: string | undefined, emBase?: number): CSSLength | null => {
   if (
     !value ||
     value.trim().toLowerCase() === "auto" ||
@@ -1635,13 +1963,135 @@ const parseLength = (value: string | undefined): CSSLength | null => {
   )
     return null
   const source = value.trim().toLowerCase()
+  const calculated = parseCalculatedLength(source, emBase)
+  if (calculated !== null) return calculated
   const numeric = Number.parseFloat(source)
   if (!Number.isFinite(numeric)) return null
-  if (/^-?(?:\d+|\d*\.\d+)%$/.test(source))
-    return Object.freeze({ unit: "percent", value: numeric })
-  if (/^-?(?:\d+|\d*\.\d+)(?:px)?$/.test(source))
-    return Object.freeze({ unit: "px", value: numeric })
+  if (/^-?(?:\d+|\d*\.\d+)%$/.test(source)) {
+    return Object.freeze({unit: "percent", value: numeric})
+  }
+  if (/^-?(?:\d+|\d*\.\d+)(?:px)?$/.test(source)) {
+    return Object.freeze({unit: "px", value: numeric})
+  }
+  if (/^-?(?:\d+|\d*\.\d+)em$/.test(source) && emBase !== undefined) {
+    return Object.freeze({unit: "px", value: numeric * emBase})
+  }
   return null
+}
+
+type CalculatedValue = Readonly<{
+  unit: "number" | "px" | "percent"
+  value: number
+}>
+
+const parseCalculatedLength = (source: string, emBase?: number): CSSLength | null => {
+  if (!source.startsWith("calc(") || !source.endsWith(")")) return null
+  const parser = new CalculationParser(source.slice(5, -1), emBase)
+  const value = parser.parse()
+  if (value === null || !Number.isFinite(value.value)) return null
+  if (value.unit === "number") {
+    return value.value === 0 ? Object.freeze({unit: "px", value: 0}) : null
+  }
+  return Object.freeze({unit: value.unit, value: value.value})
+}
+
+class CalculationParser {
+  private cursor = 0
+
+  constructor(
+    private readonly source: string,
+    private readonly emBase: number | undefined,
+  ) {}
+
+  parse(): CalculatedValue | null {
+    const value = this.sum()
+    this.whitespace()
+    return value !== null && this.cursor === this.source.length ? value : null
+  }
+
+  private sum(): CalculatedValue | null {
+    let value = this.product()
+    if (value === null) return null
+    while (true) {
+      this.whitespace()
+      const operator = this.source[this.cursor]
+      if (operator !== "+" && operator !== "-") return value
+      this.cursor += 1
+      const right = this.product()
+      if (right === null || right.unit !== value.unit) return null
+      value = Object.freeze({
+        unit: value.unit,
+        value: operator === "+" ? value.value + right.value : value.value - right.value,
+      })
+    }
+  }
+
+  private product(): CalculatedValue | null {
+    let value = this.unary()
+    if (value === null) return null
+    while (true) {
+      this.whitespace()
+      const operator = this.source[this.cursor]
+      if (operator !== "*" && operator !== "/") return value
+      this.cursor += 1
+      const right = this.unary()
+      if (right === null) return null
+      if (operator === "/") {
+        if (right.unit !== "number" || right.value === 0) return null
+        value = Object.freeze({unit: value.unit, value: value.value / right.value})
+        continue
+      }
+      if (value.unit === "number") {
+        value = Object.freeze({unit: right.unit, value: value.value * right.value})
+      } else if (right.unit === "number") {
+        value = Object.freeze({unit: value.unit, value: value.value * right.value})
+      } else return null
+    }
+  }
+
+  private unary(): CalculatedValue | null {
+    this.whitespace()
+    const operator = this.source[this.cursor]
+    if (operator !== "+" && operator !== "-") return this.primary()
+    this.cursor += 1
+    const value = this.unary()
+    return value === null || operator === "+"
+      ? value
+      : Object.freeze({unit: value.unit, value: -value.value})
+  }
+
+  private primary(): CalculatedValue | null {
+    this.whitespace()
+    if (this.source[this.cursor] === "(") {
+      this.cursor += 1
+      const value = this.sum()
+      this.whitespace()
+      if (value === null || this.source[this.cursor] !== ")") return null
+      this.cursor += 1
+      return value
+    }
+    const match = /^(?:\d+\.?\d*|\.\d+)(?:e[+-]?\d+)?/i.exec(this.source.slice(this.cursor))
+    if (match === null) return null
+    this.cursor += match[0].length
+    const numeric = Number(match[0])
+    if (!Number.isFinite(numeric)) return null
+    if (this.source[this.cursor] === "%") {
+      this.cursor += 1
+      return Object.freeze({unit: "percent", value: numeric})
+    }
+    const unit = /^[a-z]+/i.exec(this.source.slice(this.cursor))?.[0]?.toLowerCase()
+    if (unit !== undefined) this.cursor += unit.length
+    if (unit === undefined) return Object.freeze({unit: "number", value: numeric})
+    if (unit === "px") return Object.freeze({unit: "px", value: numeric})
+    if (unit === "em" && this.emBase !== undefined) {
+      return Object.freeze({unit: "px", value: numeric * this.emBase})
+    }
+    return null
+  }
+
+  private whitespace(): void {
+    while (/\s/.test(this.source[this.cursor] ?? "")) this.cursor += 1
+  }
 }
 
 const readValue = (
@@ -1704,6 +2154,23 @@ const nonNegativeNumber = (
   return Number.isFinite(numeric) ? Math.max(0, numeric) : fallback
 }
 
+const parseFontSize = (value: string | undefined, inherited: number): number => {
+  if (value === undefined || value.trim().toLowerCase() === "inherit") return inherited
+  const length = parseLength(value, inherited)
+  if (length === null) return inherited
+  const pixels = length.unit === "percent" ? inherited * length.value / 100 : length.value
+  return Math.max(0, pixels)
+}
+
+const nonNegativePixelLength = (
+  value: string | undefined,
+  fallback: number,
+  emBase: number,
+): number => {
+  const length = parseLength(value, emBase)
+  return length?.unit === "px" ? Math.max(0, length.value) : fallback
+}
+
 const unitNumber = (value: string | undefined, fallback: number): number => {
   if (!value) return fallback
   const numeric = Number.parseFloat(value)
@@ -1718,11 +2185,9 @@ const pixelNumber = (
   allowNegative: boolean,
 ): number => {
   if (!value) return fallback
-  const source = value.trim().toLowerCase()
-  if (!/^-?(?:\d+|\d*\.\d+)(?:px)?$/.test(source)) return fallback
-  const numeric = Number.parseFloat(source)
-  if (!Number.isFinite(numeric)) return fallback
-  return allowNegative ? numeric : Math.max(0, numeric)
+  const length = parseLength(value)
+  if (length === null || length.unit !== "px") return fallback
+  return allowNegative ? length.value : Math.max(0, length.value)
 }
 
 const parseBorderWidth = (value: string): number | null => {

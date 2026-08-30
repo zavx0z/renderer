@@ -7,6 +7,7 @@ import {
   HTMLSelectElement,
   HTMLTextAreaElement,
   getPopoverVisibilityState,
+  subscribeDocumentAuthorStyleSheets,
   subscribeDocumentCompiledStyleSheets,
   type Document,
   type Element,
@@ -16,6 +17,7 @@ import {
   type Text,
 } from "@zavx0z/dom"
 import {
+  EMPTY_CUSTOM_PROPERTIES,
   computeStyle,
   elementTag,
   resolveLength,
@@ -174,6 +176,7 @@ const ZERO_CLIP_RADII: RenderClipCornerRadii = Object.freeze({
 })
 
 const ROOT_STYLE: ComputedStyle = Object.freeze({
+  customProperties: EMPTY_CUSTOM_PROPERTIES,
   display: "block",
   boxSizing: "content-box",
   flexDirection: "row",
@@ -253,14 +256,19 @@ export const createDocumentRenderer = (
   const unsubscribeState = options.document.subscribeStateChanges(
     invalidateStateBatch,
   )
-  const unsubscribeStyleSheets = subscribeDocumentCompiledStyleSheets(
+  const invalidateStyleSheets = (): void => {
+    if (disposed) return
+    dirty.invalidate(options.root)
+    subtreeDirty.add(options.root)
+    blockFastPath()
+  }
+  const unsubscribeAuthorStyleSheets = subscribeDocumentAuthorStyleSheets(
     options.document,
-    () => {
-      if (disposed) return
-      dirty.invalidate(options.root)
-      subtreeDirty.add(options.root)
-      blockFastPath()
-    },
+    invalidateStyleSheets,
+  )
+  const unsubscribeCompiledStyleSheets = subscribeDocumentCompiledStyleSheets(
+    options.document,
+    invalidateStyleSheets,
   )
   const unsubscribeInteraction = options.interactionState?.subscribe(({elements}) => {
     if (disposed) return
@@ -307,7 +315,8 @@ export const createDocumentRenderer = (
       disposed = true
       unsubscribe()
       unsubscribeState()
-      unsubscribeStyleSheets()
+      unsubscribeAuthorStyleSheets()
+      unsubscribeCompiledStyleSheets()
       unsubscribeInteraction()
     },
   })
@@ -651,16 +660,19 @@ const subtreeOwnsOverflowClip = (layoutNode: LayoutNode): boolean => {
 
 const sameStyleExceptTransform = (left: ComputedStyle, right: ComputedStyle): boolean => {
   const {
+    customProperties: leftCustomProperties,
     transform: _leftTransform,
     transformOrigin: _leftOrigin,
     ...leftComparable
   } = left
   const {
+    customProperties: rightCustomProperties,
     transform: _rightTransform,
     transformOrigin: _rightOrigin,
     ...rightComparable
   } = right
-  return JSON.stringify(leftComparable) === JSON.stringify(rightComparable)
+  return leftCustomProperties === rightCustomProperties &&
+    JSON.stringify(leftComparable) === JSON.stringify(rightComparable)
 }
 
 const isTransformOnlyStyleMutation = (
@@ -681,7 +693,10 @@ const styleMutationSignatures = (
   for (const entry of value.split(";")) {
     const separator = entry.indexOf(":")
     if (separator < 0) continue
-    const property = entry.slice(0, separator).trim().replace(/([A-Z])/g, "-$1").toLowerCase()
+    const sourceProperty = entry.slice(0, separator).trim()
+    const property = sourceProperty.startsWith("--")
+      ? sourceProperty
+      : sourceProperty.replace(/([A-Z])/g, "-$1").toLowerCase()
     const declaration = `${property}:${entry.slice(separator + 1).trim()}`
     if (property === "transform" || property === "transform-origin") transform.push(declaration)
     else other.push(declaration)
@@ -981,6 +996,7 @@ const buildLayoutTree = (
         cached.style.letterSpacing !== style.letterSpacing ||
         cached.style.textAlign !== style.textAlign ||
         cached.style.whiteSpace !== style.whiteSpace ||
+        cached.style.customProperties !== style.customProperties ||
         cached.effectiveOpacity !== effectiveOpacity)
     const forceChildren = force || subtreeDirty.has(node) || inheritedChanged
     const layoutNode: LayoutNode = {
@@ -3724,6 +3740,7 @@ const hasLineBreak = (value: string): boolean => /[\r\n]/.test(value)
 
 const textStyle = (inherited: ComputedStyle): ComputedStyle =>
   Object.freeze({
+    customProperties: inherited.customProperties,
     display: "inline",
     boxSizing: "content-box",
     flexDirection: "row",

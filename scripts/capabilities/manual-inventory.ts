@@ -337,6 +337,7 @@ const reactSemantics: ManualDefinition[] = [
     ["server-external-store-snapshots", "Server snapshot behavior for useSyncExternalStore."],
     ["source-maps", "Authored TSX source maps through the Template compiler."],
     ["static-template-identity", "Stable compiled static template identity."],
+    ["root-stylesheet-snapshot", "Root-scoped compiled stylesheet metadata snapshot without Document/root mixing."],
     ["strict-mode-effect-replay", "StrictMode development effect replay."],
   ] as const).map(([id, description]) => ({ id, kind: "reference-semantics", description })),
 ]
@@ -407,7 +408,7 @@ const rendererFeatures: ManualDefinition[] = [
     "textarea-select-range", "z-index", "transforms", "shadows", "display-list", "hit-metadata", "invalidation",
     "incremental-patches", "tooltip-title", "pointer", "wheel", "default-activation", "popover-projection",
     "immutable-frame", "clean-frame-fast-path", "text-leaf-fast-path", "transform-subtree-fast-path", "performance-paths",
-    "projection-root-inheritance",
+    "projection-root-inheritance", "author-stylesheet-lifecycle",
     "compiled-stylesheet-lifecycle",
     "caret-selection-paint", "vector-path-display-item", "geometry-readback", "backend-neutral-diagnostics",
   ].map((id) => ({ id, kind: "renderer-stage", description: `CPU Renderer ${id.replaceAll("-", " ")} capability.` })),
@@ -421,7 +422,7 @@ const browserFeatures: ManualDefinition[] = [
     "camera-gestures", "cleanup", "error-boundaries", "lifecycle-boundaries", "animation-frame-coalescing",
     "native-browser-evidence", "same-document-input-identity", "number-input-proxy", "select-picker", "clipboard-proxy",
     "one-experience-topology", "direct-world-regions",
-    "compiled-stylesheet-scheduling",
+    "compiled-stylesheet-scheduling", "linked-author-stylesheets",
   ].map((id) => ({ id, kind: "browser-host", description: `Browser composition ${id.replaceAll("-", " ")} capability.` })),
 ]
 

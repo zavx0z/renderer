@@ -196,17 +196,29 @@
 - Dependencies: none
 - Forbidden local workarounds: Restoring create*Controller exports; Adding a second JSX runtime
 
-### P2 — gap.css.dynamic-pseudo-custom-properties
+### P2 — gap.css.linked-author-import
 
-- Capability: `css.features.custom-properties`
-- Reported by: ui/@ui/components/component-local dynamic pseudo styles — one Button hover value depends on props or component state
-- Expected: Template emits one shared static pseudo rule using var(--z-*), each instance supplies only an addressed inline custom-property value, and Renderer resolves ordinary cascade, inheritance and var() substitution without per-instance rules or runtime scanning.
-- Actual: Static pseudos are compiled, but CPU Renderer implements neither custom-property cascade nor var() substitution; direct props/state values inside a pseudo therefore fail at the Template compiler boundary.
+- Capability: `css.at-rules.at-import`
+- Reported by: renderer/@zavx0z/renderer-browser/native linked author theme — an explicitly supplied loaded theme contains @import or @font-face
+- Expected: A linked author stylesheet either carries imported/resource rules through their true owners or rejects the complete source before semantic publication.
+- Actual: The bounded host accepts flat CSSStyleRule records only and fails closed for @import, @font-face and other at-rules; it performs no second fetch and owns no Engine font loader.
+- Owner: renderer/@zavx0z/renderer-browser/browser-host
+- Minimal source: Pass an exact loaded link whose cssRules contain CSSImportRule or CSSFontFaceRule to the linked author stylesheet host.
+- Recommended conformance test: Assert host.ready/refresh rejects and no partial author snapshot is published.
+- Dependencies: `css.at-rules.at-font-face`
+- Forbidden local workarounds: A second consumer fetch of the same CSS URL; Copying imported rules or font declarations into component CSS
+
+### P2 — gap.css.linked-author-nesting
+
+- Capability: `css.features.nesting`
+- Reported by: renderer/@zavx0z/renderer-browser/native linked author theme — an explicitly supplied theme contains nested selectors
+- Expected: Nested rules preserve parent selector expansion, source order, specificity and pseudo behavior before semantic cascade.
+- Actual: The current CPU parser admits flat rules only; the linked host detects nested CSSStyleRule blocks and rejects the source atomically rather than flattening them incorrectly.
 - Owner: renderer/@zavx0z/renderer/cpu
-- Minimal source: Render two Buttons with style={{"--z-hover-background": props.hoverColor, ":hover": {background: "var(--z-hover-background)"}}} and different hoverColor values.
-- Recommended conformance test: Assert one shared compiled pseudo rule, two inline custom-property values, exact inherited/cascaded substitution on hover, and no per-instance stylesheet allocation.
-- Dependencies: `css.functions.var-function`
-- Forbidden local workarounds: A stylesheet or selector generated for every component instance; Runtime scanning of mounted style objects or DOM nodes; JavaScript hover/focus listeners or data-state pseudo emulation
+- Minimal source: Load a configured link containing button { &:hover { color:red } }.
+- Recommended conformance test: Assert refresh rejects with a nesting diagnostic and retains the previous exact snapshot.
+- Dependencies: none
+- Forbidden local workarounds: Regex flattening in a component or Storybook consumer; Silently dropping nested pseudo rules
 
 ### P2 — gap.css.named-color-transport
 
@@ -219,6 +231,18 @@
 - Recommended conformance test: Assert the pipeline normalizes or rejects at the CSS stage, never after emitting a supposedly valid frame.
 - Dependencies: none
 - Forbidden local workarounds: Per-component color normalization; Silent backend fallback color
+
+### P3 — gap.css.theme-math-functions
+
+- Capability: `css.functions.clamp-function`
+- Reported by: ui/@ui/components/foundation theme dimensional tokens — a component dimension uses min(), max(), clamp() or mixed-unit calc
+- Expected: Theme dimensions evaluate supported CSS math with compatible unit algebra and containing-block resolution.
+- Actual: Bounded calc() supports one compatible number/px/percent/resolved-em result; min(), max(), clamp() and mixed percent-plus-pixel sums reject instead of approximating.
+- Owner: renderer/@zavx0z/renderer/computed
+- Minimal source: Set width:min(10px,20px), height:max(...), clamp(...) and calc(100% - 4px) on a semantic Element.
+- Recommended conformance test: Assert current computed dimensions are absent and a future implementation resolves each without component-local arithmetic.
+- Dependencies: `css.functions.min-function`, `css.functions.max-function`
+- Forbidden local workarounds: Computing layout tokens in component JavaScript; Treating mixed units as pixels
 
 ## Complete prioritized non-implemented inventory
 
@@ -313,7 +337,7 @@
 | P3 | `css.at-rules.at-function` | unsupported | @zavx0z/renderer/cpu | 0 | No implementation of this pinned CSS feature was found. |
 | P3 | `css.at-rules.at-function.descriptors.result` | unsupported | @zavx0z/renderer/cpu | 0 | No implementation of this pinned CSS feature was found. |
 | P3 | `css.at-rules.at-historical-forms` | unsupported | @zavx0z/renderer/cpu | 0 | No implementation of this pinned CSS feature was found. |
-| P3 | `css.at-rules.at-import` | unsupported | @zavx0z/renderer/cpu | 0 | No implementation of this pinned CSS feature was found. |
+| P2 | `css.at-rules.at-import` | unsupported | @zavx0z/renderer/cpu | 0 | No implementation of this pinned CSS feature was found. |
 | P3 | `css.at-rules.at-keyframes` | unsupported | @zavx0z/renderer/cpu | 0 | No implementation of this pinned CSS feature was found. |
 | P3 | `css.at-rules.at-layer` | unsupported | @zavx0z/renderer/cpu | 0 | No implementation of this pinned CSS feature was found. |
 | P3 | `css.at-rules.at-left-bottom` | unsupported | @zavx0z/renderer/cpu | 0 | No implementation of this pinned CSS feature was found. |
@@ -1550,7 +1574,7 @@
 | P3 | `css.features.containment` | unsupported | @zavx0z/renderer/cpu | 0 | The current stylesheet/cascade/layout pipeline does not implement this CSS module capability. |
 | P3 | `css.features.counters` | unsupported | @zavx0z/renderer/cpu | 0 | The current stylesheet/cascade/layout pipeline does not implement this CSS module capability. |
 | P3 | `css.features.cssom` | unsupported | @zavx0z/renderer/cpu | 0 | The current stylesheet/cascade/layout pipeline does not implement this CSS module capability. |
-| P2 | `css.features.custom-properties` | unsupported | @zavx0z/renderer/cpu | 0 | The current stylesheet/cascade/layout pipeline does not implement this CSS module capability. |
+| P3 | `css.features.custom-properties` | partial | @zavx0z/renderer/cpu | 0 | Bounded to unescaped custom names and var() in admitted longhands, one border/border-color, one shadow and background/color/sizing/transform/calc paths; CSS-wide semantics, !important, @property, animation and other multi-value shorthands remain unsupported. |
 | P3 | `css.features.data-types` | partial | @zavx0z/renderer/cpu | 0 | Only the explicitly admitted values/algorithms are implemented. |
 | P3 | `css.features.declarations` | partial | @zavx0z/renderer/cpu | 0 | Only the explicitly admitted values/algorithms are implemented. |
 | P3 | `css.features.descriptors` | unsupported | @zavx0z/renderer/cpu | 0 | The current stylesheet/cascade/layout pipeline does not implement this CSS module capability. |
@@ -1574,7 +1598,7 @@
 | P3 | `css.features.masks` | unsupported | @zavx0z/renderer/cpu | 0 | The current stylesheet/cascade/layout pipeline does not implement this CSS module capability. |
 | P3 | `css.features.media-queries` | unsupported | @zavx0z/renderer/cpu | 0 | The current stylesheet/cascade/layout pipeline does not implement this CSS module capability. |
 | P3 | `css.features.multicol` | unsupported | @zavx0z/renderer/cpu | 0 | The current stylesheet/cascade/layout pipeline does not implement this CSS module capability. |
-| P3 | `css.features.nesting` | unsupported | @zavx0z/renderer/cpu | 0 | The current stylesheet/cascade/layout pipeline does not implement this CSS module capability. |
+| P2 | `css.features.nesting` | unsupported | @zavx0z/renderer/cpu | 0 | The current stylesheet/cascade/layout pipeline does not implement this CSS module capability. |
 | P3 | `css.features.object-fit` | partial | @zavx0z/renderer/cpu | 0 | Only the explicitly admitted values/algorithms are implemented. |
 | P3 | `css.features.object-position` | unsupported | @zavx0z/renderer/cpu | 0 | The current stylesheet/cascade/layout pipeline does not implement this CSS module capability. |
 | P3 | `css.features.opacity` | partial | @zavx0z/renderer/cpu | 0 | Only the explicitly admitted values/algorithms are implemented. |
@@ -1623,7 +1647,7 @@
 | P3 | `css.functions.attr-function` | unsupported | @zavx0z/renderer/cpu | 0 | No implementation of this pinned CSS feature was found. |
 | P3 | `css.functions.blur-function` | unsupported | @zavx0z/renderer/cpu | 0 | No implementation of this pinned CSS feature was found. |
 | P3 | `css.functions.brightness-function` | unsupported | @zavx0z/renderer/cpu | 0 | No implementation of this pinned CSS feature was found. |
-| P3 | `css.functions.calc-function` | unsupported | @zavx0z/renderer/cpu | 0 | No implementation of this pinned CSS feature was found. |
+| P3 | `css.functions.calc-function` | partial | @zavx0z/renderer/cpu | 0 | Bounded to finite arithmetic producing one compatible number/px/percent/resolved-em result; mixed-unit sums and adjacent CSS math functions remain unsupported. |
 | P3 | `css.functions.calc-interpolate-function` | unsupported | @zavx0z/renderer/cpu | 0 | No implementation of this pinned CSS feature was found. |
 | P3 | `css.functions.calc-mix-function` | unsupported | @zavx0z/renderer/cpu | 0 | No implementation of this pinned CSS feature was found. |
 | P3 | `css.functions.calc-size-function` | unsupported | @zavx0z/renderer/cpu | 0 | No implementation of this pinned CSS feature was found. |
@@ -1769,7 +1793,7 @@
 | P3 | `css.functions.type-function--2b022202` | unsupported | @zavx0z/renderer/cpu | 0 | No implementation of this pinned CSS feature was found. |
 | P3 | `css.functions.url-function` | unsupported | @zavx0z/renderer/cpu | 0 | No implementation of this pinned CSS feature was found. |
 | P3 | `css.functions.url-pattern-function` | unsupported | @zavx0z/renderer/cpu | 0 | No implementation of this pinned CSS feature was found. |
-| P3 | `css.functions.var-function` | unsupported | @zavx0z/renderer/cpu | 0 | No implementation of this pinned CSS feature was found. |
+| P3 | `css.functions.var-function` | partial | @zavx0z/renderer/cpu | 0 | Implemented for admitted longhands, one solid border/border-color, one shadow and current background/color/sizing/transform/calc paths; other multi-value shorthands, escaped names, @property and animation remain unsupported. |
 | P3 | `css.functions.vendor-webkit-image-set-function` | unsupported | @zavx0z/renderer/cpu | 0 | No implementation of this pinned CSS feature was found. |
 | P3 | `css.functions.view-function` | unsupported | @zavx0z/renderer/cpu | 0 | No implementation of this pinned CSS feature was found. |
 | P3 | `css.functions.wcag2-function` | unsupported | @zavx0z/renderer/cpu | 0 | No implementation of this pinned CSS feature was found. |
@@ -2680,7 +2704,7 @@
 | P3 | `css.selectors.pseudo-class-read-write` | unsupported | @zavx0z/renderer/cpu | 0 | Selector grammar is not admitted by the bounded parser. |
 | P3 | `css.selectors.pseudo-class-required` | unsupported | @zavx0z/renderer/cpu | 0 | Selector grammar is not admitted by the bounded parser. |
 | P3 | `css.selectors.pseudo-class-right` | unsupported | @zavx0z/renderer/cpu | 0 | Selector grammar is not admitted by the bounded parser. |
-| P3 | `css.selectors.pseudo-class-root` | unsupported | @zavx0z/renderer/cpu | 0 | Selector grammar is not admitted by the bounded parser. |
+| P3 | `css.selectors.pseudo-class-root` | partial | @zavx0z/renderer/cpu | 0 | Implemented for the one semantic Document root; Shadow DOM and the remaining selector grammar are absent. |
 | P3 | `css.selectors.pseudo-class-scope` | unsupported | @zavx0z/renderer/cpu | 0 | Selector grammar is not admitted by the bounded parser. |
 | P3 | `css.selectors.pseudo-class-seeking` | unsupported | @zavx0z/renderer/cpu | 0 | Selector grammar is not admitted by the bounded parser. |
 | P3 | `css.selectors.pseudo-class-snapped` | unsupported | @zavx0z/renderer/cpu | 0 | Selector grammar is not admitted by the bounded parser. |
@@ -7389,6 +7413,11 @@
 | P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.customevent` | unverified | @zavx0z/dom/semantic | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.customeventinit` | unverified | @zavx0z/dom/semantic | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.document` | partial | @zavx0z/dom/semantic | 0 | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. |
+| P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.documentauthorstylesheet` | unverified | @zavx0z/dom/semantic | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.documentauthorstylesheetchange` | unverified | @zavx0z/dom/semantic | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.documentauthorstylesheetowner` | unverified | @zavx0z/dom/semantic | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.documentauthorstylesheetsnapshot` | unverified | @zavx0z/dom/semantic | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.documentauthorstylesheetsubscriber` | unverified | @zavx0z/dom/semantic | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.documentcompiledstylesheet` | unverified | @zavx0z/dom/semantic | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.documentcompiledstylesheetchange` | unverified | @zavx0z/dom/semantic | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.documentcompiledstylesheetlease` | unverified | @zavx0z/dom/semantic | 0 | Export/type presence is not behavioral evidence. |
@@ -7515,13 +7544,11 @@
 | P4 | `platform.at-zavx0z-react.export-paths.root.symbols.compiledtemplateerror` | partial | @zavx0z/react/authoring-runtime | 0 | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. |
 | P4 | `platform.at-zavx0z-react.export-paths.root.symbols.componentkey` | unverified | @zavx0z/react/authoring-runtime | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-react.export-paths.root.symbols.componentroot` | unverified | @zavx0z/react/authoring-runtime | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-react.export-paths.root.symbols.componentrootstylesheetsnapshot` | unverified | @zavx0z/react/authoring-runtime | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-react.export-paths.root.symbols.componentruntimestats` | unverified | @zavx0z/react/authoring-runtime | 0 | Export/type presence is not behavioral evidence. |
-| P4 | `platform.at-zavx0z-react.export-paths.root.symbols.componentstyledefinition` | unverified | @zavx0z/react/authoring-runtime | 0 | Export/type presence is not behavioral evidence. |
-| P4 | `platform.at-zavx0z-react.export-paths.root.symbols.componentstylesheet` | unverified | @zavx0z/react/authoring-runtime | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-react.export-paths.root.symbols.componentvalue` | unverified | @zavx0z/react/authoring-runtime | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-react.export-paths.root.symbols.context` | unverified | @zavx0z/react/authoring-runtime | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-react.export-paths.root.symbols.contextconsumer` | unverified | @zavx0z/react/authoring-runtime | 0 | Export/type presence is not behavioral evidence. |
-| P4 | `platform.at-zavx0z-react.export-paths.root.symbols.cssproperties` | unverified | @zavx0z/react/authoring-runtime | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-react.export-paths.root.symbols.dependencylist` | unverified | @zavx0z/react/authoring-runtime | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-react.export-paths.root.symbols.dispatch` | unverified | @zavx0z/react/authoring-runtime | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-react.export-paths.root.symbols.effectcallback` | unverified | @zavx0z/react/authoring-runtime | 0 | Export/type presence is not behavioral evidence. |
@@ -7529,7 +7556,6 @@
 | P4 | `platform.at-zavx0z-react.export-paths.root.symbols.fc` | unverified | @zavx0z/react/authoring-runtime | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-react.export-paths.root.symbols.functioncomponent` | unverified | @zavx0z/react/authoring-runtime | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-react.export-paths.root.symbols.hookcontracterror` | partial | @zavx0z/react/authoring-runtime | 0 | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. |
-| P4 | `platform.at-zavx0z-react.export-paths.root.symbols.isstyletoken` | partial | @zavx0z/react/authoring-runtime | 0 | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. |
 | P4 | `platform.at-zavx0z-react.export-paths.root.symbols.keyedcomponentsvalue` | unverified | @zavx0z/react/authoring-runtime | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-react.export-paths.root.symbols.memocomparator` | unverified | @zavx0z/react/authoring-runtime | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-react.export-paths.root.symbols.mutablerefobject` | unverified | @zavx0z/react/authoring-runtime | 0 | Export/type presence is not behavioral evidence. |
@@ -7544,9 +7570,6 @@
 | P4 | `platform.at-zavx0z-react.export-paths.root.symbols.rootoptions` | unverified | @zavx0z/react/authoring-runtime | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-react.export-paths.root.symbols.setstateaction` | unverified | @zavx0z/react/authoring-runtime | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-react.export-paths.root.symbols.statedispatch` | unverified | @zavx0z/react/authoring-runtime | 0 | Export/type presence is not behavioral evidence. |
-| P4 | `platform.at-zavx0z-react.export-paths.root.symbols.styletoken` | unverified | @zavx0z/react/authoring-runtime | 0 | Export/type presence is not behavioral evidence. |
-| P4 | `platform.at-zavx0z-react.export-paths.root.symbols.stylevalue` | unverified | @zavx0z/react/authoring-runtime | 0 | Export/type presence is not behavioral evidence. |
-| P4 | `platform.at-zavx0z-react.export-paths.root.symbols.supportedstylepseudo` | unverified | @zavx0z/react/authoring-runtime | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-react.export-paths.root.symbols.unsupportedreactfeatureerror` | partial | @zavx0z/react/authoring-runtime | 0 | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. |
 | P4 | `platform.at-zavx0z-react.export-paths.root.symbols.use` | unsupported | @zavx0z/react/authoring-runtime | 0 | The export is an explicit fail-closed unsupported path. |
 | P4 | `platform.at-zavx0z-react.export-paths.root.symbols.useactionstate` | unsupported | @zavx0z/react/authoring-runtime | 0 | The export is an explicit fail-closed unsupported path. |
@@ -7554,6 +7577,10 @@
 | P4 | `platform.at-zavx0z-react.export-paths.root.symbols.useoptimistic` | unsupported | @zavx0z/react/authoring-runtime | 0 | The export is an explicit fail-closed unsupported path. |
 | P4 | `platform.at-zavx0z-react.export-paths.root.symbols.usetransition` | unsupported | @zavx0z/react/authoring-runtime | 0 | The export is an explicit fail-closed unsupported path. |
 | P4 | `platform.at-zavx0z-renderer-browser.export-paths.root` | partial | @zavx0z/renderer-browser/browser-host | 0 | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. |
+| P4 | `platform.at-zavx0z-renderer-browser.export-paths.root.symbols.browserlinkedauthorstylesheeterrorhandler` | unverified | @zavx0z/renderer-browser/browser-host | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-renderer-browser.export-paths.root.symbols.browserlinkedauthorstylesheethost` | unverified | @zavx0z/renderer-browser/browser-host | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-renderer-browser.export-paths.root.symbols.browserlinkedauthorstylesheetsource` | unverified | @zavx0z/renderer-browser/browser-host | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-renderer-browser.export-paths.root.symbols.createbrowserlinkedauthorstylesheethostoptions` | unverified | @zavx0z/renderer-browser/browser-host | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-renderer-browser.export-paths.root.symbols.createdocumentcanvasruntime` | partial | @zavx0z/renderer-browser/browser-host | 0 | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. |
 | P4 | `platform.at-zavx0z-renderer-browser.export-paths.root.symbols.createdocumentcanvasruntimeoptions` | unverified | @zavx0z/renderer-browser/browser-host | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-renderer-browser.export-paths.root.symbols.createdocumentnativeinputhost` | partial | @zavx0z/renderer-browser/browser-host | 0 | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. |
@@ -7646,7 +7673,7 @@
 | P4 | `platform.at-zavx0z-template.export-paths.compiled.symbols.bindingvalues` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-template.export-paths.compiled.symbols.childbinding` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-template.export-paths.compiled.symbols.compiledmount` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
-| P4 | `platform.at-zavx0z-template.export-paths.compiled.symbols.compiledstylesheet` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-template.export-paths.compiled.symbols.compiledstylesheetsource` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-template.export-paths.compiled.symbols.compiledtemplate` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-template.export-paths.compiled.symbols.compiledtemplatedefinition` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-template.export-paths.compiled.symbols.conditionalbinding` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
@@ -7660,6 +7687,7 @@
 | P4 | `platform.at-zavx0z-template.export-paths.compiler` | partial | @zavx0z/template/compiler | 0 | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. |
 | P4 | `platform.at-zavx0z-template.export-paths.compiler.symbols.jsxcompilersessionoptions` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-template.export-paths.compiler.symbols.jsxcompilerstats` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-template.export-paths.compiler.symbols.jsxtransformoptions` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-template.export-paths.compiler.symbols.jsxtransformsymbols` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-template.export-paths.jsx-dev-runtime` | partial | @zavx0z/template/compiler | 0 | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. |
 | P4 | `platform.at-zavx0z-template.export-paths.jsx-dev-runtime.symbols.fragment` | unsupported | @zavx0z/template/compiler | 0 | The export is an explicit fail-closed unsupported path. |
@@ -7667,6 +7695,7 @@
 | P4 | `platform.at-zavx0z-template.export-paths.jsx-dev-runtime.symbols.jsxdev` | unsupported | @zavx0z/template/compiler | 0 | The export is an explicit fail-closed unsupported path. |
 | P4 | `platform.at-zavx0z-template.export-paths.jsx-dev-runtime.symbols.jsxsourceelement` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-template.export-paths.jsx-runtime` | partial | @zavx0z/template/compiler | 0 | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. |
+| P4 | `platform.at-zavx0z-template.export-paths.jsx-runtime.symbols.csscompilerintrinsic` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-template.export-paths.jsx-runtime.symbols.element` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-template.export-paths.jsx-runtime.symbols.elementchildrenattribute` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-template.export-paths.jsx-runtime.symbols.elementtype` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
@@ -7678,6 +7707,11 @@
 | P4 | `platform.at-zavx0z-template.export-paths.jsx-runtime.symbols.jsxsourceelement` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-template.export-paths.root` | partial | @zavx0z/template/compiler | 0 | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. |
 | P4 | `platform.at-zavx0z-template.export-paths.root.symbols.attributes` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-template.export-paths.root.symbols.cssdeclarationvalue` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-template.export-paths.root.symbols.csssourcevalue` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-template.export-paths.root.symbols.cssstylevalue` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-template.export-paths.root.symbols.csstemplateresult` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-template.export-paths.root.symbols.csstemplatevalue` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-template.export-paths.root.symbols.node` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-template.export-paths.root.symbols.templatechild` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-template.export-paths.root.symbols.templateinstance` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |

@@ -78,11 +78,18 @@ the Document deduplicates equal ids, rejects conflicting content and publishes
 one transaction-coalesced revision of the active set. This opaque registry is
 not the standard CSSOM `Document.styleSheets` interface.
 
-CPU renderers merge the Document's compiled owner sheets before explicit
-caller-provided global/consumer sheets and share one parsed rule index for equal
-Document revision and explicit CSS. This preserves later consumer-token
-precedence during migration, while inline declarations remain highest. Every
-same-Document plane and overlay observes the same style-set revision. Component
+The same Document has a separate exclusive ordered author/theme registry.
+Renderer-browser may populate it from only explicitly supplied, already loaded,
+origin-clean native stylesheet links in the canvas realm; it neither scans all
+native sheets nor fetches CSS. The registry is not merged with compiled
+ownership and does not add a second Document or stylesheet realm.
+
+CPU renderers merge author/theme sheets, then compiled owner sheets, then
+explicit caller-provided global/consumer sheets and share one parsed rule index
+for equal author/compiled revisions and explicit CSS. This preserves component
+ownership and later consumer-token precedence during migration, while inline
+declarations remain highest. Every same-Document plane and overlay observes
+both style-set revisions. Component
 instances never scan DOM nodes or inject a stylesheet per instance; the last
 owning ComponentRoot release removes the compiled record.
 

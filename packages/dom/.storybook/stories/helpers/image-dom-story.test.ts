@@ -7,7 +7,6 @@ import {
 import {
   IMAGE_DOM_STORY_ARTWORK_SRC,
   createImageDomStory,
-  imageDomStoryCss,
   isImageDomStoryRoute,
 } from "./image-dom-story.ts"
 import {IMAGE_DOM_STORY_ROUTES} from "./dom-routes.ts"
@@ -25,12 +24,13 @@ describe("exact DOM image stories", () => {
       expect(story.refs.image, route).toBeInstanceOf(HTMLImageElement)
       expect(story.source.html, route).toContain("<img")
       expect(story.source.html, route).not.toContain("</img>")
-      expect(story.source.css, route).toBe(imageDomStoryCss)
       expect(story.source.typescript, route).toContain('from "@zavx0z/dom"')
       expect(story.source.typescript, route).toContain('document.createElement("img")')
       expect(story.source.typescript, route).toContain(story.refs.image.src)
       expect(Object.isFrozen(story.source), route).toBeTrue()
       expect(Object.isFrozen(story.refs), route).toBeTrue()
+      expect(story.componentRoot.readStyleSheets().styleSheets.every(sheet =>
+        sheet.source?.kind === "authored-css"), route).toBeTrue()
     }
     expect(isImageDomStoryRoute("elements/primitives/img/fit/stretch")).toBeFalse()
 
@@ -44,7 +44,6 @@ describe("exact DOM image stories", () => {
     ]) {
       expect(source).not.toContain(forbidden)
     }
-    expect(imageDomStoryCss).not.toContain("&")
   })
 
   test("uses explicit CSS boxes and object-fit for cover and contain", () => {
@@ -66,12 +65,12 @@ describe("exact DOM image stories", () => {
       expect(story.source.html).toContain('height="180"')
       expect(story.source.html).toContain('alt="Абстрактная сцена"')
     }
-    expect(cover.refs.image.className).toContain("image-dom-story__image--cover")
-    expect(contain.refs.image.className).toContain("image-dom-story__image--contain")
-    expect(imageDomStoryCss).toContain("width: 320px;")
-    expect(imageDomStoryCss).toContain("height: 180px;")
-    expect(imageDomStoryCss).toContain("object-fit: cover;")
-    expect(imageDomStoryCss).toContain("object-fit: contain;")
+    expect(cover.refs.image.getAttribute("data-image-fit")).toBe("cover")
+    expect(contain.refs.image.getAttribute("data-image-fit")).toBe("contain")
+    expect(cover.componentRoot.readStyleSheets().styleSheets.some(sheet =>
+      /object-fit:\s*cover/u.test(sheet.cssText))).toBeTrue()
+    expect(contain.componentRoot.readStyleSheets().styleSheets.some(sheet =>
+      /object-fit:\s*contain/u.test(sheet.cssText))).toBeTrue()
   })
 
   test("embeds the artwork source without network or package asset ownership", () => {

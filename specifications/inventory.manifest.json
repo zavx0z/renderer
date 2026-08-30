@@ -946,13 +946,13 @@
       "path": "html/interfaces/html.json"
     },
     {
-      "digest": "22f43af8007aae2b322f31313fb7e3b5389dbc21b47da91e5879a481ceede54a",
-      "entries": 32,
+      "digest": "b75dd8aa97a67412ae78a3e179a07db167f6fab8a3fd8831560176b6eac1c232",
+      "entries": 37,
       "path": "platform/browser-exports.json"
     },
     {
-      "digest": "30bf1a7f2d556f89dab6bea4e9c503e38bd3a2ca5f6bc573804d75fb65a83239",
-      "entries": 32,
+      "digest": "48c74952fb978cb3c11e503db0e086a7599348f4f46ae48956c21a3ea8aebe14",
+      "entries": 33,
       "path": "platform/browser-features.json"
     },
     {
@@ -966,8 +966,8 @@
       "path": "platform/devtools-features.json"
     },
     {
-      "digest": "551dfb87bb711afdbf9c86cd77bf43009a9f98fbe08202c6cd7d3b6655cd815c",
-      "entries": 240,
+      "digest": "0134d5c9b07f80da91821018b361345c874025d41421acb6ea4f562e9547903f",
+      "entries": 248,
       "path": "platform/dom-exports.json"
     },
     {
@@ -981,8 +981,8 @@
       "path": "platform/engine-features.json"
     },
     {
-      "digest": "6857311c9c46872a2c503a208b935e9a9b0e20c50d7ea4c4042350de367d9ade",
-      "entries": 71,
+      "digest": "5c670d69dff4912166d4933f682f2f153f73ca84cd2d10a6cabde9a5dd3db7aa",
+      "entries": 64,
       "path": "platform/react-exports.json"
     },
     {
@@ -991,13 +991,13 @@
       "path": "platform/renderer-exports.json"
     },
     {
-      "digest": "6d6a2928ea91179d15067802dc4c008c1241db387d3cab2513de2f6189418845",
-      "entries": 45,
+      "digest": "5b0b2486e946f60b1d090c99422fbf14680e925d73d4f02b985e2a1973a512f6",
+      "entries": 46,
       "path": "platform/renderer-features.json"
     },
     {
-      "digest": "86873c61296987167173aeec7d051e9f2611e30bd09bf507d788eb736b988b15",
-      "entries": 67,
+      "digest": "96b4ddc8cf84c7a5fe5698252db7cc051a424ff83042175a5292d705e4d74acf",
+      "entries": 79,
       "path": "platform/template-exports.json"
     },
     {
@@ -1051,8 +1051,8 @@
       "path": "react-19.2/react-dom.json"
     },
     {
-      "digest": "1c034b66033045ee236800064fb65b62e7509a4c0d49981b8537063fe10b4eca",
-      "entries": 65,
+      "digest": "3f107a7082402aa7897f4fe4b0af4e4b66b4fb8a38b03770ed174c7d58b6a9f6",
+      "entries": 66,
       "path": "react-19.2/semantics.json"
     },
     {
@@ -1073,5 +1073,5 @@
   ],
   "generatorVersion": "1.0.0",
   "schemaVersion": 1,
-  "totalEntries": 8714
+  "totalEntries": 8735
 }

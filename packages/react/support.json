@@ -136,7 +136,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "809",
+          "lines": "814",
           "path": "packages/react/src/compatibility.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -168,7 +168,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "816",
+          "lines": "821",
           "path": "packages/react/src/compatibility.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -302,7 +302,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "45",
+          "lines": "46",
           "path": "packages/react/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -341,7 +341,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "55",
+          "lines": "56",
           "path": "packages/react/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -410,6 +410,38 @@
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
           "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "ComponentRootStyleSheetSnapshot",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-react.export-paths.root.symbols.componentrootstylesheetsnapshot",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "27",
+          "path": "packages/react/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
           "symbol": "ComponentRuntimeStats",
           "type": "implementation"
         }
@@ -437,71 +469,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "66",
-          "path": "packages/react/src/index.ts",
-          "proves": "The public export exists at the pinned revision.",
-          "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "ComponentStyleDefinition",
-          "type": "implementation"
-        }
-      ],
-      "id": "platform.at-zavx0z-react.export-paths.root.symbols.componentstyledefinition",
-      "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
-      },
-      "limitations": [
-        "Export/type presence is not behavioral evidence."
-      ],
-      "owner": {
-        "package": "@zavx0z/react",
-        "repository": "renderer",
-        "stage": "authoring-runtime"
-      },
-      "status": "unverified"
-    },
-    {
-      "blockedBy": [],
-      "blocks": [],
-      "conformance": "unknown",
-      "consumers": [],
-      "evidence": [
-        {
-          "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "66",
-          "path": "packages/react/src/index.ts",
-          "proves": "The public export exists at the pinned revision.",
-          "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "ComponentStyleSheet",
-          "type": "implementation"
-        }
-      ],
-      "id": "platform.at-zavx0z-react.export-paths.root.symbols.componentstylesheet",
-      "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
-      },
-      "limitations": [
-        "Export/type presence is not behavioral evidence."
-      ],
-      "owner": {
-        "package": "@zavx0z/react",
-        "repository": "renderer",
-        "stage": "authoring-runtime"
-      },
-      "status": "unverified"
-    },
-    {
-      "blockedBy": [],
-      "blocks": [],
-      "conformance": "unknown",
-      "consumers": [],
-      "evidence": [
-        {
-          "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "55",
+          "lines": "56",
           "path": "packages/react/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -533,7 +501,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "55",
+          "lines": "56",
           "path": "packages/react/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -565,7 +533,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "55",
+          "lines": "56",
           "path": "packages/react/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -597,7 +565,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "45",
+          "lines": "46",
           "path": "packages/react/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -655,77 +623,6 @@
         }
       ],
       "id": "platform.at-zavx0z-react.export-paths.root.symbols.createroot",
-      "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
-      },
-      "limitations": [],
-      "owner": {
-        "package": "@zavx0z/react",
-        "repository": "renderer",
-        "stage": "authoring-runtime"
-      },
-      "status": "implemented"
-    },
-    {
-      "blockedBy": [],
-      "blocks": [],
-      "conformance": "unknown",
-      "consumers": [],
-      "evidence": [
-        {
-          "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "66",
-          "path": "packages/react/src/index.ts",
-          "proves": "The public export exists at the pinned revision.",
-          "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "CSSProperties",
-          "type": "implementation"
-        }
-      ],
-      "id": "platform.at-zavx0z-react.export-paths.root.symbols.cssproperties",
-      "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
-      },
-      "limitations": [
-        "Export/type presence is not behavioral evidence."
-      ],
-      "owner": {
-        "package": "@zavx0z/react",
-        "repository": "renderer",
-        "stage": "authoring-runtime"
-      },
-      "status": "unverified"
-    },
-    {
-      "blockedBy": [],
-      "blocks": [],
-      "conformance": "extension",
-      "consumers": [],
-      "evidence": [
-        {
-          "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "65",
-          "path": "packages/react/src/index.ts",
-          "proves": "The public export exists at the pinned revision.",
-          "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "defineStyles",
-          "type": "implementation"
-        },
-        {
-          "doesNotProve": "External-standard compatibility unless separately mapped.",
-          "path": "packages/react/test/runtime.test.ts",
-          "proves": "The bounded project API has behavioral coverage.",
-          "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "defineStyles",
-          "type": "unit-test"
-        }
-      ],
-      "id": "platform.at-zavx0z-react.export-paths.root.symbols.definestyles",
       "lastVerified": {
         "date": "2026-08-29",
         "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -874,7 +771,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "55",
+          "lines": "56",
           "path": "packages/react/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -906,7 +803,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "55",
+          "lines": "56",
           "path": "packages/react/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -970,39 +867,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "65",
-          "path": "packages/react/src/index.ts",
-          "proves": "The public export exists at the pinned revision.",
-          "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "isStyleToken",
-          "type": "implementation"
-        }
-      ],
-      "id": "platform.at-zavx0z-react.export-paths.root.symbols.isstyletoken",
-      "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
-      },
-      "limitations": [
-        "The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered."
-      ],
-      "owner": {
-        "package": "@zavx0z/react",
-        "repository": "renderer",
-        "stage": "authoring-runtime"
-      },
-      "status": "partial"
-    },
-    {
-      "blockedBy": [],
-      "blocks": [],
-      "conformance": "extension",
-      "consumers": [],
-      "evidence": [
-        {
-          "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "45",
+          "lines": "46",
           "path": "packages/react/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -1041,7 +906,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "55",
+          "lines": "56",
           "path": "packages/react/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -1073,7 +938,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "45",
+          "lines": "46",
           "path": "packages/react/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -1112,7 +977,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "55",
+          "lines": "56",
           "path": "packages/react/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -1176,7 +1041,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "45",
+          "lines": "46",
           "path": "packages/react/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -1215,7 +1080,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "53",
+          "lines": "54",
           "path": "packages/react/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -1247,7 +1112,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "54",
+          "lines": "55",
           "path": "packages/react/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -1545,102 +1410,6 @@
         }
       ],
       "id": "platform.at-zavx0z-react.export-paths.root.symbols.statedispatch",
-      "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
-      },
-      "limitations": [
-        "Export/type presence is not behavioral evidence."
-      ],
-      "owner": {
-        "package": "@zavx0z/react",
-        "repository": "renderer",
-        "stage": "authoring-runtime"
-      },
-      "status": "unverified"
-    },
-    {
-      "blockedBy": [],
-      "blocks": [],
-      "conformance": "unknown",
-      "consumers": [],
-      "evidence": [
-        {
-          "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "66",
-          "path": "packages/react/src/index.ts",
-          "proves": "The public export exists at the pinned revision.",
-          "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "StyleToken",
-          "type": "implementation"
-        }
-      ],
-      "id": "platform.at-zavx0z-react.export-paths.root.symbols.styletoken",
-      "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
-      },
-      "limitations": [
-        "Export/type presence is not behavioral evidence."
-      ],
-      "owner": {
-        "package": "@zavx0z/react",
-        "repository": "renderer",
-        "stage": "authoring-runtime"
-      },
-      "status": "unverified"
-    },
-    {
-      "blockedBy": [],
-      "blocks": [],
-      "conformance": "unknown",
-      "consumers": [],
-      "evidence": [
-        {
-          "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "66",
-          "path": "packages/react/src/index.ts",
-          "proves": "The public export exists at the pinned revision.",
-          "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "StyleValue",
-          "type": "implementation"
-        }
-      ],
-      "id": "platform.at-zavx0z-react.export-paths.root.symbols.stylevalue",
-      "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
-      },
-      "limitations": [
-        "Export/type presence is not behavioral evidence."
-      ],
-      "owner": {
-        "package": "@zavx0z/react",
-        "repository": "renderer",
-        "stage": "authoring-runtime"
-      },
-      "status": "unverified"
-    },
-    {
-      "blockedBy": [],
-      "blocks": [],
-      "conformance": "unknown",
-      "consumers": [],
-      "evidence": [
-        {
-          "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "66",
-          "path": "packages/react/src/index.ts",
-          "proves": "The public export exists at the pinned revision.",
-          "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "SupportedStylePseudo",
-          "type": "implementation"
-        }
-      ],
-      "id": "platform.at-zavx0z-react.export-paths.root.symbols.supportedstylepseudo",
       "lastVerified": {
         "date": "2026-08-29",
         "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -2401,7 +2170,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "45",
+          "lines": "46",
           "path": "packages/react/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -7033,6 +6802,44 @@
         "stage": "authoring-runtime"
       },
       "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Storybook navigation/UI behavior and native browser pixels.",
+          "path": "packages/react/src/runtime.ts",
+          "proves": "Stable immutable first-adoption snapshots preserve exact full Template sheet objects per root while Document execution ownership remains separate.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "ComponentRoot.readStyleSheets",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Compiler opt-in routing and live consumer integration.",
+          "path": "packages/react/test/compiled-style-sheet.test.ts",
+          "proves": "Empty/stable snapshots, one thousand instances, exact source metadata, isolated Workbench/story roots, shared Document deduplication, collision rollback and unmount inaccessibility.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "root stylesheet snapshot",
+          "type": "unit-test"
+        }
+      ],
+      "id": "react.semantics.root-stylesheet-snapshot",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/react",
+        "repository": "renderer",
+        "stage": "authoring-runtime"
+      },
+      "status": "implemented"
     },
     {
       "blockedBy": [],

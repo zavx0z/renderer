@@ -39,3 +39,10 @@ export type {
   DocumentNativeInputHost,
   DocumentNativeInputTarget,
 } from "./native-input-host.ts"
+export {createBrowserLinkedAuthorStyleSheetHost} from "./linked-author-style-sheet-host.ts"
+export type {
+  BrowserLinkedAuthorStyleSheetErrorHandler,
+  BrowserLinkedAuthorStyleSheetHost,
+  BrowserLinkedAuthorStyleSheetSource,
+  CreateBrowserLinkedAuthorStyleSheetHostOptions
+} from "./linked-author-style-sheet-host.ts"

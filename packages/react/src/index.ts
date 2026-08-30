@@ -26,6 +26,7 @@ export {
 } from "./runtime.ts"
 export type {
   ComponentRoot,
+  ComponentRootStyleSheetSnapshot,
   ComponentRuntimeStats,
   DependencyList,
   Dispatch,
@@ -62,12 +63,3 @@ export type {
   KeyedComponentsValue,
   MemoComparator
 } from "./composition.ts"
-export {defineStyles, isStyleToken} from "./style.ts"
-export type {
-  ComponentStyleDefinition,
-  ComponentStyleSheet,
-  CSSProperties,
-  StyleToken,
-  StyleValue,
-  SupportedStylePseudo
-} from "./style.ts"

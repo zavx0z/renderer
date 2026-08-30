@@ -3,7 +3,8 @@ import type {Document, Node} from "@zavx0z/dom"
 type OwnerStoryResult = Readonly<{
   story: Readonly<{
     element: Node
-    source: unknown
+    componentRoot: Readonly<{readStyleSheets(): unknown}>
+    source: Readonly<{html: string; typescript: string}>
     props?: Readonly<Record<string, unknown>>
     dispose?(): void
   }>
@@ -17,17 +18,20 @@ type OwnerStoryDescriptor = Readonly<{
 type RuntimeContext = Readonly<{
   document: Document
   signal: AbortSignal
-  mount(node: Node): void
-  publishInspector(value: unknown): void
-  publishSource(value: unknown): void
-  publishProps(value: unknown): void
+  present(value: Readonly<{
+    protocol: "story-presentation/1"
+    node: Node
+    componentRoot: Readonly<{readStyleSheets(): unknown}>
+    source: Readonly<{html: string; typescript: string}>
+    values: Readonly<{props: Readonly<Record<string, unknown>>}>
+  }>): void
   reportDiagnostic(value: unknown): void
 }>
 
 type RuntimeInput = Readonly<{route: string; story: unknown; signal: AbortSignal}>
 
 export const runtime = Object.freeze({
-  protocol: "storybook-runtime/1",
+  protocol: "storybook-runtime/3",
   create(context: RuntimeContext) {
     let current: OwnerStoryResult["story"] | null = null
     let disposed = false
@@ -49,10 +53,13 @@ export const runtime = Object.freeze({
         assertActive(disposed, context.signal, input.signal)
         const story = ownerStoryResult(result, context.document)
         current = story
-        context.mount(story.element)
-        context.publishSource(story.source)
-        context.publishProps(story.props ?? Object.freeze({}))
-        context.publishInspector(Object.freeze({route: input.route, props: story.props ?? null}))
+        context.present(Object.freeze({
+          protocol: "story-presentation/1",
+          node: story.element,
+          componentRoot: story.componentRoot,
+          source: story.source,
+          values: Object.freeze({props: story.props ?? Object.freeze({})}),
+        }))
       } catch (error) {
         context.reportDiagnostic(Object.freeze({
           phase: "runtime",
@@ -89,7 +96,9 @@ function ownerStoryResult(value: unknown, document: Document): OwnerStoryResult[
   const result = value as Partial<OwnerStoryResult>
   const story = result.story
   if (story === null || typeof story !== "object" ||
-    typeof story.element !== "object" || story.element.ownerDocument !== document) {
+    typeof story.element !== "object" || story.element.ownerDocument !== document ||
+    story.componentRoot === null || typeof story.componentRoot !== "object" ||
+    typeof story.componentRoot.readStyleSheets !== "function") {
     throw new TypeError("DOM owner story returned an incompatible DOM node")
   }
   return story

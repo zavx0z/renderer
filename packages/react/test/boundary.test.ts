@@ -2,6 +2,7 @@ import {describe, expect, it} from "bun:test"
 import {readFileSync} from "node:fs"
 import {join} from "node:path"
 import {reactCompatibility} from "../src/compatibility.ts"
+import * as publicReact from "../src/index.ts"
 import {jsxAuthoringProfile} from "@zavx0z/template/compiler"
 
 const packageRoot = join(import.meta.dir, "..")
@@ -48,6 +49,23 @@ describe("package boundary", () => {
     expect(reactCompatibility.features.tsxAuthoring).toBe("supported")
     expect(reactCompatibility.features.compilerExport).toBe("unsupported")
     expect(reactCompatibility.features.gpuInstancing).toBe("unsupported")
+  })
+
+  it("publishes no React-owned CSS authoring API", () => {
+    expect("defineStyles" in publicReact).toBeFalse()
+    expect("isStyleToken" in publicReact).toBeFalse()
+
+    const publicIndex = readFileSync(join(packageRoot, "src/index.ts"), "utf8")
+    for (const symbol of [
+      "ComponentStyleDefinition",
+      "ComponentStyleSheet",
+      "CSSProperties",
+      "StyleToken",
+      "StyleValue",
+      "SupportedStylePseudo"
+    ]) {
+      expect(publicIndex).not.toMatch(new RegExp(`\\b${symbol}\\b`))
+    }
   })
 
   it("matches the Template compiler hook profile exactly", () => {

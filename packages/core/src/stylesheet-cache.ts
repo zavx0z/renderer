@@ -1,11 +1,13 @@
 import {
+  readDocumentAuthorStyleSheets,
   readDocumentCompiledStyleSheets,
   type Document
 } from "@zavx0z/dom"
 import {parseStyleSheets, type StyleRuleIndex} from "./css.ts"
 
 type CacheEntry = Readonly<{
-  revision: number
+  authorRevision: number
+  compiledRevision: number
   rules: StyleRuleIndex
 }>
 
@@ -25,16 +27,25 @@ export function cachedDocumentStyleRules(
   document: Document,
   host: HostStyleSheetSet
 ): CacheEntry {
-  const snapshot = readDocumentCompiledStyleSheets(document)
+  const author = readDocumentAuthorStyleSheets(document)
+  const compiled = readDocumentCompiledStyleSheets(document)
   const cache = cacheByDocument.get(document) ?? createDocumentCache(document)
   const cached = cache.entries.get(host.key)
-  if (cached?.revision === snapshot.revision) return cached
+  if (
+    cached?.authorRevision === author.revision &&
+    cached.compiledRevision === compiled.revision
+  ) return cached
 
   const rules = parseStyleSheets([
-    ...snapshot.styleSheets.map(styleSheet => styleSheet.cssText),
+    ...author.styleSheets.map(styleSheet => styleSheet.cssText),
+    ...compiled.styleSheets.map(styleSheet => styleSheet.cssText),
     ...host.styleSheets
   ])
-  const entry = Object.freeze({revision: snapshot.revision, rules})
+  const entry = Object.freeze({
+    authorRevision: author.revision,
+    compiledRevision: compiled.revision,
+    rules
+  })
   cache.entries.set(host.key, entry)
   cache.parses += 1
   return entry

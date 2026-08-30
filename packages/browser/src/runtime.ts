@@ -5,6 +5,7 @@ import {
   type TrueTypeFont,
 } from "@engine/core"
 import {
+  subscribeDocumentAuthorStyleSheets,
   subscribeDocumentCompiledStyleSheets,
   type Document,
   type Node,
@@ -233,7 +234,8 @@ const createClaimedDocumentCanvasRuntime = async (
   let tooltipTimer: unknown | null = null
   let unsubscribeMutations = (): void => {}
   let unsubscribeStateChanges = (): void => {}
-  let unsubscribeStyleSheets = (): void => {}
+  let unsubscribeAuthorStyleSheets = (): void => {}
+  let unsubscribeCompiledStyleSheets = (): void => {}
   let inputHost: DocumentNativeInputHost | null = null
   let disposed = false
 
@@ -277,13 +279,15 @@ const createClaimedDocumentCanvasRuntime = async (
       inputHost?.synchronize()
       requestRender()
     })
-    unsubscribeStyleSheets = subscribeDocumentCompiledStyleSheets(options.document, requestRender)
+    unsubscribeAuthorStyleSheets = subscribeDocumentAuthorStyleSheets(options.document, requestRender)
+    unsubscribeCompiledStyleSheets = subscribeDocumentCompiledStyleSheets(options.document, requestRender)
   } catch (error) {
     if (requestedFrame !== null) seams.cancelFrame(requestedFrame)
     requestBackendPresentation = (): void => {}
     unsubscribeMutations()
     unsubscribeStateChanges()
-    unsubscribeStyleSheets()
+    unsubscribeAuthorStyleSheets()
+    unsubscribeCompiledStyleSheets()
     inputHost?.dispose()
     interaction.dispose()
     documentRenderer.dispose()
@@ -429,7 +433,8 @@ const createClaimedDocumentCanvasRuntime = async (
     subscribers.clear()
     unsubscribeMutations()
     unsubscribeStateChanges()
-    unsubscribeStyleSheets()
+    unsubscribeAuthorStyleSheets()
+    unsubscribeCompiledStyleSheets()
     inputHost?.dispose()
     inputHost = null
     interaction.dispose()
