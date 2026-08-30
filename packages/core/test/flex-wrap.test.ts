@@ -67,7 +67,10 @@ describe("flex-wrap", () => {
     expect(children.map((child) => nowrap.boxByNode.get(child)?.x)).toEqual([0, 50, 95])
     expect(children.map((child) => nowrap.boxByNode.get(child)?.y)).toEqual([0, 0, 0])
 
-    row.setAttribute("style", "display:flex; width:100px; flex-wrap:wrap; gap:5px")
+    row.setAttribute(
+      "style",
+      "display:flex; width:100px; flex-wrap:wrap; align-content:flex-start; gap:5px",
+    )
     const wrapped = renderer.flush()
     expect(wrapped.boxByNode.get(row)).toMatchObject({width: 100, height: 28})
     expect(wrapped.boxByNode.get(children[0]!)).toMatchObject({x: 0, y: 0, width: 40, height: 10})
@@ -87,7 +90,7 @@ describe("flex-wrap", () => {
     row.append(first, second, centered, shrinking)
     row.setAttribute(
       "style",
-      "display:flex; width:100px; flex-wrap:wrap; gap:10px; justify-content:center; align-items:center",
+      "display:flex; width:100px; flex-wrap:wrap; align-content:flex-start; gap:10px; justify-content:center; align-items:center",
     )
     first.setAttribute("style", "flex:1 1 40px; height:10px")
     second.setAttribute("style", "flex:1 1 40px; height:20px")
@@ -119,7 +122,10 @@ describe("flex-wrap", () => {
     column.append(row, after)
     row.append(...children)
     column.setAttribute("style", "display:flex; flex-direction:column; width:100px; height:100px")
-    row.setAttribute("style", "display:flex; flex:none; width:100px; flex-wrap:wrap; gap:5px")
+    row.setAttribute(
+      "style",
+      "display:flex; flex:none; width:100px; flex-wrap:wrap; align-content:flex-start; gap:5px",
+    )
     after.setAttribute("style", "flex:none; height:10px")
     for (const child of children) {
       child.setAttribute("style", "flex:none; width:40px; height:10px")
@@ -148,7 +154,7 @@ describe("flex-wrap", () => {
     column.append(...children)
     column.setAttribute(
       "style",
-      "display:flex; flex-direction:column; flex-wrap:wrap; width:50px; height:100px; gap:10px; align-items:flex-end",
+      "display:flex; flex-direction:column; flex-wrap:wrap; align-content:flex-start; width:50px; height:100px; gap:10px; align-items:flex-end",
     )
 
     const frame = createDocumentRenderer({
@@ -170,7 +176,7 @@ describe("flex-wrap", () => {
     column.append(...children)
     column.setAttribute(
       "style",
-      "display:flex; flex-direction:column; flex-wrap:wrap; width:40px; gap:10px",
+      "display:flex; flex-direction:column; flex-wrap:wrap; align-content:flex-start; width:40px; gap:10px",
     )
     for (const child of children) {
       child.setAttribute("style", "flex:none; width:10px; height:40px")
@@ -195,7 +201,7 @@ describe("flex-wrap", () => {
     row.append(...children)
     row.setAttribute(
       "style",
-      "display:flex; width:90px; height:50px; flex-wrap:wrap-reverse; gap:5px",
+      "display:flex; width:90px; height:50px; flex-wrap:wrap-reverse; align-content:flex-start; gap:5px",
     )
     for (const child of children) {
       child.setAttribute("style", "flex:none; width:40px; height:10px")

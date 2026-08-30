@@ -189,6 +189,7 @@ const ROOT_STYLE: ComputedStyle = Object.freeze({
   flexGrow: 0,
   flexShrink: 1,
   flexBasis: null,
+  alignContent: "normal",
   alignItems: "stretch",
   justifyContent: "flex-start",
   width: null,
@@ -1957,11 +1958,24 @@ const placeFlexChildren = (
     baseGap,
     wrap,
   )
-  let crossCursor = wrapReverse
-    ? (row ? y : x) + crossAvailable
-    : row ? y : x
+  const lineAlignment = wrap
+    ? alignFlexLines(
+        layoutNode.style.alignContent,
+        lines.map((line) => line.crossSize),
+        crossAvailable,
+        baseGap,
+      )
+    : Object.freeze({
+        lineSizes: Object.freeze(lines.map(() => crossAvailable)),
+        offset: 0,
+        extraGap: 0,
+      })
+  const crossOrigin = row ? y : x
+  let logicalCrossCursor = lineAlignment.offset
   let treeCursor = 0
-  for (const line of lines) {
+  for (let flexLineIndex = 0; flexLineIndex < lines.length; flexLineIndex++) {
+    const line = lines[flexLineIndex]
+    if (!line) continue
     const lineChildren = line.indices.map((index) => children[index]!)
     const lineBases = line.indices.map((index) => baseSizes[index] ?? 0)
     const lineMainMargins = lineChildren.map((child) =>
@@ -1992,10 +2006,10 @@ const placeFlexChildren = (
       Math.max(0, mainAvailable - usedOuter),
       lineChildren.length,
     )
-    const lineCrossSize = wrap ? line.crossSize : crossAvailable
+    const lineCrossSize = lineAlignment.lineSizes[flexLineIndex] ?? 0
     const lineCrossStart = wrapReverse
-      ? crossCursor - lineCrossSize
-      : crossCursor
+      ? crossOrigin + crossAvailable - logicalCrossCursor - lineCrossSize
+      : crossOrigin + logicalCrossCursor
     let mainCursor = (row ? x : y) + justify.offset
 
     for (let lineIndex = 0; lineIndex < line.indices.length; lineIndex++) {
@@ -2025,8 +2039,13 @@ const placeFlexChildren = (
         lineCrossStart,
         lineCrossSize,
         crossSize,
-        row ? margin.top : margin.left,
-        row ? margin.bottom : margin.right,
+        wrapReverse
+          ? row ? margin.bottom : margin.right
+          : row ? margin.top : margin.left,
+        wrapReverse
+          ? row ? margin.top : margin.left
+          : row ? margin.bottom : margin.right,
+        wrapReverse,
       )
       const mainStartMargin = row ? margin.left : margin.top
       const mainEndMargin = row ? margin.right : margin.bottom
@@ -2059,9 +2078,7 @@ const placeFlexChildren = (
       })
       mainCursor += mainSize + mainEndMargin + baseGap + justify.extraGap
     }
-    crossCursor = wrapReverse
-      ? lineCrossStart - baseGap
-      : lineCrossStart + lineCrossSize + baseGap
+    logicalCrossCursor += lineCrossSize + baseGap + lineAlignment.extraGap
   }
 
   for (let index = 0; index < layoutNode.children.length; index++) {
@@ -2135,13 +2152,19 @@ const flexAbsoluteStaticPosition = (
     Math.max(0, mainAvailable - mainSize - mainMargins),
     1,
   ).offset
+  const crossReverse = parent.style.flexWrap === "wrap-reverse"
   const crossPosition = alignCrossPosition(
     parent.style.alignItems,
     row ? y : x,
     row ? height : width,
     row ? childHeight : childWidth,
-    row ? margin.top : margin.left,
-    row ? margin.bottom : margin.right,
+    crossReverse
+      ? row ? margin.bottom : margin.right
+      : row ? margin.top : margin.left,
+    crossReverse
+      ? row ? margin.top : margin.left
+      : row ? margin.bottom : margin.right,
+    crossReverse,
   )
   return row
     ? Object.freeze({x: x + mainOffset + margin.left, y: crossPosition})
@@ -2553,6 +2576,66 @@ const justifyOffsets = (
   }
 }
 
+const alignFlexLines = (
+  align: ComputedStyle["alignContent"],
+  naturalLineSizes: readonly number[],
+  available: number,
+  gap: number,
+): Readonly<{
+  lineSizes: readonly number[]
+  offset: number
+  extraGap: number
+}> => {
+  const count = naturalLineSizes.length
+  const used = naturalLineSizes.reduce((sum, size) => sum + size, 0) +
+    Math.max(0, count - 1) * gap
+  const free = available - used
+  if ((align === "normal" || align === "stretch") && free > 0 && count > 0) {
+    const addition = free / count
+    return Object.freeze({
+      lineSizes: Object.freeze(naturalLineSizes.map((size) => size + addition)),
+      offset: 0,
+      extraGap: 0,
+    })
+  }
+
+  const lineSizes = Object.freeze([...naturalLineSizes])
+  switch (align) {
+    case "center":
+      if (free <= 0) {
+        return Object.freeze({lineSizes, offset: free / 2, extraGap: 0})
+      }
+      break
+    case "flex-end":
+      return Object.freeze({lineSizes, offset: free, extraGap: 0})
+    case "space-between":
+      if (free <= 0 || count <= 1) {
+        return Object.freeze({lineSizes, offset: 0, extraGap: 0})
+      }
+      return Object.freeze({
+        lineSizes,
+        offset: 0,
+        extraGap: free / (count - 1),
+      })
+    case "space-around":
+    case "space-evenly":
+      if (free <= 0) return Object.freeze({lineSizes, offset: 0, extraGap: 0})
+      break
+    default:
+      return Object.freeze({lineSizes, offset: 0, extraGap: 0})
+  }
+
+  if (align === "center") {
+    return Object.freeze({lineSizes, offset: free / 2, extraGap: 0})
+  }
+  if (align === "space-around") {
+    const space = count > 0 ? free / count : 0
+    return Object.freeze({lineSizes, offset: space / 2, extraGap: space})
+  }
+  const space = free / (count + 1)
+  return Object.freeze({lineSizes, offset: space, extraGap: space})
+}
+
 const alignCrossPosition = (
   align: ComputedStyle["alignItems"],
   start: number,
@@ -2560,8 +2643,19 @@ const alignCrossPosition = (
   size: number,
   startMargin: number,
   endMargin: number,
+  reverse = false,
 ): number => {
   const free = available - size - startMargin - endMargin
+  if (reverse) {
+    switch (align) {
+      case "center":
+        return start + endMargin + free / 2
+      case "flex-end":
+        return start + endMargin
+      default:
+        return start + available - startMargin - size
+    }
+  }
   switch (align) {
     case "center":
       return start + startMargin + free / 2
@@ -4050,6 +4144,7 @@ const textStyle = (inherited: ComputedStyle): ComputedStyle =>
     flexGrow: 0,
     flexShrink: 1,
     flexBasis: null,
+    alignContent: "normal",
     alignItems: "stretch",
     justifyContent: "flex-start",
     width: null,

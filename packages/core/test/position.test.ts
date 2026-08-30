@@ -181,6 +181,41 @@ describe("bounded positioned layout", () => {
     renderer.dispose()
   })
 
+  test("uses the reversed flex cross axis for an absolute child's static position", () => {
+    const document = createDocument()
+    const root = document.createElement("div")
+    const absolute = document.createElement("button")
+    document.appendChild(root)
+    root.appendChild(absolute)
+    root.setAttribute(
+      "style",
+      `${boxStyle(200, 40, "#111111")}; position:relative; display:flex; flex-wrap:wrap-reverse; justify-content:center; align-items:flex-start`,
+    )
+    absolute.setAttribute(
+      "style",
+      `${boxStyle(50, 20, "#ff0000")}; position:absolute; margin-top:4px; margin-bottom:3px`,
+    )
+    const renderer = createDocumentRenderer({
+      document,
+      root,
+      viewport: {width: 240, height: 80},
+    })
+
+    expect(renderer.flush().boxByNode.get(absolute)).toMatchObject({
+      x: 75,
+      y: 17,
+      width: 50,
+      height: 20,
+    })
+
+    root.setAttribute(
+      "style",
+      `${boxStyle(200, 40, "#111111")}; position:relative; display:flex; flex-wrap:wrap-reverse; justify-content:center; align-items:flex-end`,
+    )
+    expect(renderer.flush().boxByNode.get(absolute)).toMatchObject({x: 75, y: 4})
+    renderer.dispose()
+  })
+
   test("projects final absolute geometry through overflow, hits, scrolling and positioned z-index", () => {
     const document = createDocument()
     const root = document.createElement("div")

@@ -104,11 +104,29 @@ wrap-reverse`. A row wraps against its definite or auto-fill content width; a
 column wraps only when it has a definite content height. Each line independently
 applies grow, shrink, `justify-content` and `align-items`. One scalar `gap`
 separates items and lines. An oversized first item remains on its own line and
-uses the existing flex-shrink law. `wrap-reverse` reverses the cross-axis line
-stack from the cross end without changing source order. `balance`,
-`row-reverse`/`column-reverse`, `flex-flow`, `order`, `align-self`,
-`align-content`, separate `row-gap`/`column-gap`, and the complete intrinsic
-multi-line Flexbox algorithm remain outside this contract.
+uses the existing flex-shrink law. `wrap-reverse` reverses both the cross-axis
+line stack and the cross-start/cross-end interpretation of `align-items`, without
+changing source order.
+
+Wrapped containers admit `align-content: normal | stretch | flex-start |
+flex-end | center | space-between | space-around | space-evenly`, including when
+only one line is formed. `normal` behaves as `stretch`. For a definite cross
+size, positive free space is resolved after natural line sizes and scalar line
+gaps: stretch values enlarge every line equally, positional values offset the
+line stack, and distribution values add space between lines. An unconstrained
+auto cross size resolves to the natural line stack and therefore contributes no
+free space; an auto-authored flex item whose parent assigns a larger used cross
+size aligns within that assigned size. `nowrap` keeps its existing single-line
+behavior and ignores `align-content`.
+
+Negative cross free space is bounded explicitly: `flex-end` and `center` keep
+their unsafe offsets; `space-between`, `space-around` and `space-evenly` use
+their safe fallback at cross-start; `normal` and `stretch` also fall back to
+cross-start. This slice does not admit `start`/`end`, baseline alignment,
+author-specified `safe`/`unsafe` syntax, writing modes or animation. `balance`,
+`row-reverse`/`column-reverse`, `flex-flow`, `order`, `align-self`, separate
+`row-gap`/`column-gap`, and the complete intrinsic multi-line Flexbox algorithm
+remain outside this contract.
 
 ## `RENDERER-CPU-005` — built-in defaults
 
@@ -613,9 +631,10 @@ otherwise the bounded intrinsic size is used.
 When both insets on an axis are auto, the absolute box uses its static position
 without consuming a slot. A block child uses the current block cursor. A flex
 child uses `justify-content` and `align-items` as a hypothetical sole item while
-remaining absent from actual flex sizing. Margin remains outside the positioned
-border box. Positioned inline ancestors do not establish an absolute containing
-block in this bounded block/flex phase.
+remaining absent from actual flex sizing; `wrap-reverse` swaps that hypothetical
+item's cross-start and cross-end, including its corresponding physical margins.
+Margin remains outside the positioned border box. Positioned inline ancestors
+do not establish an absolute containing block in this bounded block/flex phase.
 
 All final positioned geometry enters the ordinary display, hit, overflow-clip
 and scroll-overflow projection before scrolling is applied. Scrolling shifts

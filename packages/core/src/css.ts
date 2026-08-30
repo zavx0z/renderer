@@ -1,6 +1,7 @@
 import type { Element, Node } from "@zavx0z/dom"
 import type {DocumentInteractionState} from "./pseudo-state.ts"
 import type {
+  RenderAlignContent,
   RenderAlignItems,
   RenderBorderColors,
   RenderBorderWidths,
@@ -75,6 +76,7 @@ export type ComputedStyle = Readonly<{
   flexGrow: number
   flexShrink: number
   flexBasis: CSSLength | null
+  alignContent: RenderAlignContent
   alignItems: RenderAlignItems
   justifyContent: RenderJustifyContent
   width: CSSLength | null
@@ -198,6 +200,7 @@ const CENTER_ORIGIN: ComputedTransformOrigin = Object.freeze({
 
 const customPropertyNamePattern = /^--(?:[A-Za-z_]|[^\x00-\x7f])(?:[A-Za-z0-9_-]|[^\x00-\x7f])*$/
 const deferredVariablePropertySet: ReadonlySet<string> = new Set([
+  "align-content",
   "flex-wrap",
   "scrollbar-width",
   "text-align",
@@ -411,6 +414,7 @@ export const computeStyle = (
     flexGrow: nonNegativeNumber(readValue(values, "flex-grow"), 0),
     flexShrink: nonNegativeNumber(readValue(values, "flex-shrink"), 1),
     flexBasis: parseLength(readValue(values, "flex-basis"), fontSize),
+    alignContent: parseAlignContent(readValue(values, "align-content")),
     alignItems: parseAlignItems(readValue(values, "align-items")),
     justifyContent: parseJustifyContent(readValue(values, "justify-content")),
     width: parseLength(readValue(values, "width"), fontSize),
@@ -952,6 +956,10 @@ const expandDeclaration = (
     if (deferredVariablePropertySet.has(property)) return [[property, value]]
   }
   switch (property) {
+    case "align-content":
+      return validAlignContent(value)
+        ? [["align-content", value.trim().toLowerCase()]]
+        : []
     case "flex-wrap":
       return validFlexWrap(value)
         ? [["flex-wrap", value.trim().toLowerCase()]]
@@ -1595,6 +1603,39 @@ const parseFlexWrap = (value: string | undefined): RenderFlexWrap => {
 const validFlexWrap = (value: string): boolean => {
   const normalized = value.trim().toLowerCase()
   return normalized === "nowrap" || normalized === "wrap" || normalized === "wrap-reverse"
+}
+
+const parseAlignContent = (value: string | undefined): RenderAlignContent => {
+  switch (value?.trim().toLowerCase()) {
+    case "stretch":
+      return "stretch"
+    case "flex-start":
+      return "flex-start"
+    case "center":
+      return "center"
+    case "flex-end":
+      return "flex-end"
+    case "space-between":
+      return "space-between"
+    case "space-around":
+      return "space-around"
+    case "space-evenly":
+      return "space-evenly"
+    default:
+      return "normal"
+  }
+}
+
+const validAlignContent = (value: string): boolean => {
+  const normalized = value.trim().toLowerCase()
+  return normalized === "normal" ||
+    normalized === "stretch" ||
+    normalized === "flex-start" ||
+    normalized === "center" ||
+    normalized === "flex-end" ||
+    normalized === "space-between" ||
+    normalized === "space-around" ||
+    normalized === "space-evenly"
 }
 
 const parseAlignItems = (value: string | undefined): RenderAlignItems => {

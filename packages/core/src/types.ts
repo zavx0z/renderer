@@ -18,6 +18,15 @@ export type RenderTransform = Readonly<{
 }>
 export type RenderOverflow = "visible" | "hidden" | "clip" | "auto" | "scroll"
 export type RenderBoxSizing = "content-box" | "border-box"
+export type RenderAlignContent =
+  | "normal"
+  | "stretch"
+  | "flex-start"
+  | "center"
+  | "flex-end"
+  | "space-between"
+  | "space-around"
+  | "space-evenly"
 export type RenderAlignItems = "stretch" | "flex-start" | "center" | "flex-end"
 export type RenderJustifyContent =
   | "flex-start"
