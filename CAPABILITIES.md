@@ -15,8 +15,8 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | interpreter | main | `4f02274a6e9f99a8717507fe5885301a33eec4dc` | no |
 | metafor | main | `92f4fb0510db5ea43cb03325ab3b3895d95b4899` | no |
 | node | main | `bd5af9a2cf6fca679a69de5245d107ea42318f54` | no |
-| renderer | main | `6aac3e2960ff04ff2450c605c25fd1c54dfc081e` | yes |
-| storybook | main | `035d5fbb559ddf886c38f5c212e0e6484c8d5e75` | yes |
+| renderer | main | `13241543ca2a06a8e145b20c3e8373411099b33f` | yes |
+| storybook | main | `d249503ce60513fd4073b5b35fda10c1d2e751d8` | yes |
 | template | main | `838a214a83950259f3f5d543e881e11402bc230c` | no |
 | ui | main | `45423d7b36f8796429a9e43c30af9bb89bb8af0e` | yes |
 
@@ -54,7 +54,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | Domain | Spec entries | Mapped | Implemented | Partial | Unsupported | Not applicable | Unverified | Missing |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | browser | 70 | 70 | 15 | 20 | 4 | 0 | 31 | 0 |
-| css | 3032 | 3032 | 0 | 176 | 2856 | 0 | 0 | 0 |
+| css | 3032 | 3032 | 0 | 177 | 2855 | 0 | 0 | 0 |
 | devtools | 31 | 31 | 13 | 0 | 5 | 0 | 13 | 0 |
 | dom | 1212 | 1212 | 75 | 242 | 713 | 0 | 182 | 0 |
 | engine | 151 | 151 | 13 | 34 | 5 | 0 | 99 | 0 |
@@ -72,7 +72,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | @zavx0z/dom | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 4941 |
 | @zavx0z/dom-devtools | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 31 |
 | @zavx0z/react | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 211 |
-| @zavx0z/renderer | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 3128 |
+| @zavx0z/renderer | renderer | `13241543ca2a06a8e145b20c3e8373411099b33f` | 3128 |
 | @zavx0z/renderer-browser | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 70 |
 | @zavx0z/renderer-webgpu | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 37 |
 | @zavx0z/template | template | `87d0ec3d2a9f19c3750d567ee20dc4bace995e90` | 166 |
@@ -1471,7 +1471,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `css.features.descriptors` | css-algorithm | unsupported | none | @zavx0z/renderer/cpu | The current stylesheet/cascade/layout pipeline does not implement this CSS module capability. | 1 | 0 |
 | `css.features.display-list-projection` | css-algorithm | partial | adapted | @zavx0z/renderer/cpu | Only the explicitly admitted values/algorithms are implemented. | 3 | 0 |
 | `css.features.filters` | css-algorithm | unsupported | none | @zavx0z/renderer/cpu | The current stylesheet/cascade/layout pipeline does not implement this CSS module capability. | 1 | 0 |
-| `css.features.flex-layout` | css-algorithm | partial | adapted | @zavx0z/renderer/cpu | Only the explicitly admitted values/algorithms are implemented. | 3 | 0 |
+| `css.features.flex-layout` | css-algorithm | partial | adapted | @zavx0z/renderer/cpu | The bounded CPU owner supports row/column single-line Flex, nowrap/wrap/wrap-reverse line formation, per-line grow/shrink/justification/align-items, admitted align-content cross-axis distribution, wrap-reverse cross-start semantics, and one scalar gap. balance, reverse main axes, flex-flow, order, align-self, separate row/column gaps, writing modes, and complete intrinsic multi-line Flexbox sizing remain unsupported. | 8 | 0 |
 | `css.features.floats` | css-algorithm | unsupported | none | @zavx0z/renderer/cpu | The current stylesheet/cascade/layout pipeline does not implement this CSS module capability. | 1 | 0 |
 | `css.features.fonts` | css-algorithm | partial | adapted | @zavx0z/renderer/cpu | Only the explicitly admitted values/algorithms are implemented. | 3 | 0 |
 | `css.features.fragmentation` | css-algorithm | unsupported | none | @zavx0z/renderer/cpu | The current stylesheet/cascade/layout pipeline does not implement this CSS module capability. | 1 | 0 |
@@ -1690,8 +1690,8 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `css.functions.wcag2-function` | function | unsupported | none | @zavx0z/renderer/cpu | No implementation of this pinned CSS feature was found. | 1 | 0 |
 | `css.functions.xywh-function` | function | unsupported | none | @zavx0z/renderer/cpu | No implementation of this pinned CSS feature was found. | 1 | 0 |
 | `css.properties.accent-color` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
-| `css.properties.align-content` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
-| `css.properties.align-items` | property | partial | adapted | @zavx0z/renderer/cpu | Balance, reverse main axes, flex-flow, order, align-self, align-content, separate row/column gaps, and complete intrinsic multi-line Flexbox sizing remain unsupported. | 3 | 0 |
+| `css.properties.align-content` | property | partial | adapted | @zavx0z/renderer/cpu | Bounded to normal, stretch, flex-start, flex-end, center, space-between, space-around, and space-evenly on the existing row/column wrap and wrap-reverse Flex subset. normal behaves as stretch; nowrap ignores the property; an unconstrained auto cross size uses the natural line stack while a larger parent-assigned used cross size is honored; explicit negative free space preserves unsafe flex-end/center offsets and uses cross-start fallbacks for the admitted distribution values. start/end, baseline alignment, author-specified safe/unsafe syntax, writing modes, CSS-wide keywords, animation, reverse main axes, separate row/column gaps, order, align-self, and complete intrinsic multi-line sizing remain unsupported. | 7 | 1 |
+| `css.properties.align-items` | property | partial | adapted | @zavx0z/renderer/cpu | Bounded to stretch, flex-start, center, and flex-end in the existing row/column Flex subset, including logical cross-start/cross-end under wrap-reverse. baseline, start/end, self-start/self-end, author-specified safe/unsafe syntax, writing modes, align-self, reverse main axes, order, and complete Flexbox alignment remain unsupported. | 6 | 0 |
 | `css.properties.align-self` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
 | `css.properties.alignment-baseline` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
 | `css.properties.all` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
@@ -1960,14 +1960,14 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `css.properties.fill-rule` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
 | `css.properties.fill-size` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
 | `css.properties.filter` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
-| `css.properties.flex` | property | partial | adapted | @zavx0z/renderer/cpu | Balance, reverse main axes, flex-flow, order, align-self, align-content, separate row/column gaps, and complete intrinsic multi-line Flexbox sizing remain unsupported. | 3 | 0 |
-| `css.properties.flex-basis` | property | partial | adapted | @zavx0z/renderer/cpu | Balance, reverse main axes, flex-flow, order, align-self, align-content, separate row/column gaps, and complete intrinsic multi-line Flexbox sizing remain unsupported. | 3 | 0 |
-| `css.properties.flex-direction` | property | partial | adapted | @zavx0z/renderer/cpu | Balance, reverse main axes, flex-flow, order, align-self, align-content, separate row/column gaps, and complete intrinsic multi-line Flexbox sizing remain unsupported. | 3 | 0 |
+| `css.properties.flex` | property | partial | adapted | @zavx0z/renderer/cpu | Balance, reverse main axes, flex-flow, order, align-self, separate row/column gaps, writing modes, and complete intrinsic multi-line Flexbox sizing remain unsupported. | 3 | 0 |
+| `css.properties.flex-basis` | property | partial | adapted | @zavx0z/renderer/cpu | Balance, reverse main axes, flex-flow, order, align-self, separate row/column gaps, writing modes, and complete intrinsic multi-line Flexbox sizing remain unsupported. | 3 | 0 |
+| `css.properties.flex-direction` | property | partial | adapted | @zavx0z/renderer/cpu | Balance, reverse main axes, flex-flow, order, align-self, separate row/column gaps, writing modes, and complete intrinsic multi-line Flexbox sizing remain unsupported. | 3 | 0 |
 | `css.properties.flex-flow` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
-| `css.properties.flex-grow` | property | partial | adapted | @zavx0z/renderer/cpu | Balance, reverse main axes, flex-flow, order, align-self, align-content, separate row/column gaps, and complete intrinsic multi-line Flexbox sizing remain unsupported. | 3 | 0 |
+| `css.properties.flex-grow` | property | partial | adapted | @zavx0z/renderer/cpu | Balance, reverse main axes, flex-flow, order, align-self, separate row/column gaps, writing modes, and complete intrinsic multi-line Flexbox sizing remain unsupported. | 3 | 0 |
 | `css.properties.flex-line-count` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
-| `css.properties.flex-shrink` | property | partial | adapted | @zavx0z/renderer/cpu | Balance, reverse main axes, flex-flow, order, align-self, align-content, separate row/column gaps, and complete intrinsic multi-line Flexbox sizing remain unsupported. | 3 | 0 |
-| `css.properties.flex-wrap` | property | partial | adapted | @zavx0z/renderer/cpu | Bounded to nowrap, wrap, and wrap-reverse on the existing row/column Flex subset: row wrapping uses its definite or auto-fill width, column wrapping requires a definite height, and one scalar gap serves both axes; balance and other invalid values are discarded before cascade priority, while align-content, row-gap/column-gap, flex-flow, row-reverse/column-reverse, order, align-self, and complete intrinsic multi-line sizing remain unsupported. | 6 | 1 |
+| `css.properties.flex-shrink` | property | partial | adapted | @zavx0z/renderer/cpu | Balance, reverse main axes, flex-flow, order, align-self, separate row/column gaps, writing modes, and complete intrinsic multi-line Flexbox sizing remain unsupported. | 3 | 0 |
+| `css.properties.flex-wrap` | property | partial | adapted | @zavx0z/renderer/cpu | Bounded to nowrap, wrap, and wrap-reverse on the existing row/column Flex subset: row wrapping uses its definite or auto-fill width, column wrapping requires a definite height, and one scalar gap serves both axes. balance and other invalid values are discarded before cascade priority, while row-gap/column-gap, flex-flow, row-reverse/column-reverse, order, align-self, and complete intrinsic multi-line sizing remain unsupported. | 6 | 1 |
 | `css.properties.float` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
 | `css.properties.float-defer` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
 | `css.properties.float-offset` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
@@ -2059,7 +2059,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `css.properties.interest-delay-start` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
 | `css.properties.interpolate-size` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
 | `css.properties.isolation` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
-| `css.properties.justify-content` | property | partial | adapted | @zavx0z/renderer/cpu | Balance, reverse main axes, flex-flow, order, align-self, align-content, separate row/column gaps, and complete intrinsic multi-line Flexbox sizing remain unsupported. | 3 | 0 |
+| `css.properties.justify-content` | property | partial | adapted | @zavx0z/renderer/cpu | Balance, reverse main axes, flex-flow, order, align-self, separate row/column gaps, writing modes, and complete intrinsic multi-line Flexbox sizing remain unsupported. | 3 | 0 |
 | `css.properties.justify-items` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
 | `css.properties.justify-self` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
 | `css.properties.left` | property | partial | adapted | @zavx0z/renderer/cpu | Only the explicitly admitted property values and bounded CPU/backend algorithms are implemented. | 3 | 0 |
@@ -8616,7 +8616,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `renderer.features.computed-style` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.default-activation` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Implemented for the bounded rendered-control set; complete browser Pointer Events and default actions remain outside Core. | 2 | 0 |
 | `renderer.features.display-list` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
-| `renderer.features.flex-layout` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The bounded owner supports row/column single-line Flex and nowrap/wrap/wrap-reverse multi-line packing with one scalar gap and per-line grow/shrink/justification/align-items; balance, reverse main axes, flex-flow, order, align-self, align-content, separate row/column gaps, and complete intrinsic multi-line Flexbox sizing remain unsupported. | 4 | 0 |
+| `renderer.features.flex-layout` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The bounded owner supports row/column single-line Flex and nowrap/wrap/wrap-reverse multi-line packing with one scalar gap, per-line grow/shrink/justification/align-items, admitted align-content distribution, and wrap-reverse cross-start semantics; balance, reverse main axes, flex-flow, order, align-self, separate row/column gaps, writing modes, and complete intrinsic multi-line Flexbox sizing remain unsupported. | 6 | 0 |
 | `renderer.features.form-control-projection` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.geometry-readback` | renderer-stage | unsupported | none | @zavx0z/renderer/cpu | The CPU renderer has no implementation of this internal platform capability. | 1 | 0 |
 | `renderer.features.hit-metadata` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |

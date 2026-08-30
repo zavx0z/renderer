@@ -244,6 +244,28 @@
       "subject": "Terminal"
     },
     {
+      "behavior": "Keep wrapped aggregate rows compact at flex cross-start inside the remaining-height grid instead of inheriting the standard stretching default.",
+      "capability": "css.properties.align-content",
+      "evidence": [
+        {
+          "doesNotProve": "Platform implementation or conformance.",
+          "lines": "98",
+          "path": "src/external/browser/aggregate-presentation.tsx",
+          "proves": "Keep wrapped aggregate rows compact at flex cross-start inside the remaining-height grid instead of inheriting the standard stretching default.",
+          "repository": "storybook",
+          "revision": "d249503ce60513fd4073b5b35fda10c1d2e751d8",
+          "symbol": "aggregate overview cross-axis packing",
+          "type": "consumer-usage"
+        }
+      ],
+      "line": 98,
+      "package": "@zavx0z/storybook",
+      "path": "src/external/browser/aggregate-presentation.tsx",
+      "repository": "storybook",
+      "scope": "storybook",
+      "subject": "aggregate overview cross-axis packing"
+    },
+    {
       "behavior": "Pack aggregate category and subject cards on shared flex lines while space remains, then move later cards to following lines without consumer-owned coordinates.",
       "capability": "css.properties.flex-wrap",
       "evidence": [
@@ -253,7 +275,7 @@
           "path": "src/external/browser/aggregate-presentation.tsx",
           "proves": "Pack aggregate category and subject cards on shared flex lines while space remains, then move later cards to following lines without consumer-owned coordinates.",
           "repository": "storybook",
-          "revision": "035d5fbb559ddf886c38f5c212e0e6484c8d5e75+dirty",
+          "revision": "5c1ed1ec54ba451f95ddfa19a61c8ecd81f3ac66",
           "symbol": "aggregate overview packing",
           "type": "consumer-usage"
         }

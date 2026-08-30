@@ -39,10 +39,15 @@ interface Classification {
 
 const verificationDate = "2026-08-29"
 const flexWrapVerification = {
-  revision: "6aac3e2960ff04ff2450c605c25fd1c54dfc081e+dirty",
+  revision: "74ea59fc8fa7c7156ebaeefceed459097f52b4dd",
   date: "2026-08-30",
 } as const
-const storybookAggregateRevision = "035d5fbb559ddf886c38f5c212e0e6484c8d5e75+dirty"
+const alignContentVerification = {
+  revision: "13241543ca2a06a8e145b20c3e8373411099b33f",
+  date: "2026-08-30",
+} as const
+const storybookAggregateRevision = "5c1ed1ec54ba451f95ddfa19a61c8ecd81f3ac66"
+const storybookAlignContentRevision = "d249503ce60513fd4073b5b35fda10c1d2e751d8"
 const revisions: Record<string, string> = {
   renderer: "3c91038c3f14ccc44616209fd82b1e59b7369408",
   template: "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
@@ -85,7 +90,9 @@ async function main(): Promise<void> {
     if (!output) throw new Error(`No support overlay path for ${packageName}`)
     const repository = packageEntries[0]?.ownerHint.repository
     if (!repository) throw new Error(`No repository for ${packageName}`)
-    const revision = revisions[repository]
+    const revision = packageName === "@zavx0z/renderer"
+      ? alignContentVerification.revision
+      : revisions[repository]
     if (!revision) throw new Error(`No revision for ${repository}`)
     const records = packageEntries
       .map((entry) => supportRecord(entry, classify(entry)))
@@ -96,7 +103,9 @@ async function main(): Promise<void> {
       repository,
       package: packageName,
       revision,
-      verificationDate,
+      verificationDate: packageName === "@zavx0z/renderer"
+        ? alignContentVerification.date
+        : verificationDate,
       records,
     }
     await writeJsonIfChanged(output, overlay)
@@ -352,12 +361,104 @@ function classifyCss(entry: CapabilityInventoryEntry): Classification {
   const defaultStages = cssDefaultStages()
   const external = externalEvidence(entry)
   if (entry.kind === "property") {
+    if (entry.id === "css.properties.align-content") {
+      return {
+        status: "partial",
+        conformance: "adapted",
+        limitations: [
+          "Bounded to normal, stretch, flex-start, flex-end, center, space-between, space-around, and space-evenly on the existing row/column wrap and wrap-reverse Flex subset. normal behaves as stretch; nowrap ignores the property; an unconstrained auto cross size uses the natural line stack while a larger parent-assigned used cross size is honored; explicit negative free space preserves unsafe flex-end/center offsets and uses cross-start fallbacks for the admitted distribution values. start/end, baseline alignment, author-specified safe/unsafe syntax, writing modes, CSS-wide keywords, animation, reverse main axes, separate row/column gaps, order, align-self, and complete intrinsic multi-line sizing remain unsupported.",
+        ],
+        evidence: [
+          external,
+          {
+            ...implementation("renderer", "packages/core/src/css.ts", "ComputedStyle.alignContent/parseAlignContent", undefined, "The computed-style stage admits the bounded keyword set, keeps normal as the initial value, substitutes variables, and discards invalid declarations before cascade priority.", "start/end, baseline, safe/unsafe syntax, writing modes, CSS-wide keywords, animation, and the complete Box Alignment grammar."),
+            revision: alignContentVerification.revision,
+          },
+          {
+            ...implementation("renderer", "packages/core/src/renderer.ts", "alignFlexLines/placeFlexChildren", undefined, "The CPU layout stage distributes positive and negative cross free space for row and column wrapped lines, applies normal as stretch, honors one-line wrapped containers, ignores nowrap, and reverses cross-start/cross-end for wrap-reverse line and item alignment.", "The excluded alignment values, separate row/column gaps, reverse main axes, and complete intrinsic multi-line Flexbox sizing."),
+            revision: alignContentVerification.revision,
+          },
+          {
+            ...test("renderer", "packages/core/test/align-content.test.ts", "align-content", "Observable computed values and frame boxes prove keyword validation, variable substitution, invalid-declaration fallback, positive and negative cross-space distribution, row/column symmetry, one-line wrapping, nowrap exclusion, auto and parent-allocated cross sizes, stretch interaction, and wrap-reverse cross-start semantics.", "Native browser pixels, writing modes, excluded values, and full CSS Box Alignment or Flexbox conformance."),
+            revision: alignContentVerification.revision,
+          },
+          {
+            ...test("renderer", "packages/core/test/position.test.ts", "absolute flex static position under wrap-reverse", "An absolutely positioned flex child derives its static cross position from the same reversed cross-start semantics without entering flex line formation.", "Every absolute-positioned Flexbox static-position algorithm or native browser behavior."),
+            revision: alignContentVerification.revision,
+          },
+          {
+            type: "integration-test",
+            repository: "storybook",
+            revision: storybookAlignContentRevision,
+            path: "src/external/browser/aggregate-presentation.test.tsx",
+            symbol: "external Storybook aggregate cross-axis packing",
+            proves: "The compiled aggregate owner explicitly requests flex-start cross-axis packing, preserves same-Document child roots, and keeps two 280px cards on the first row plus the next card exactly 8px below despite remaining cross space.",
+            doesNotProve: "Live WebGPU pixels, every aggregate route, wrap-reverse, excluded alignment values, or full CSS conformance.",
+          },
+          {
+            type: "visual-evidence",
+            repository: "external",
+            revision: "8395147bf85fa6e09532d94d",
+            path: "storybook://captures/capture_bcLDBIKxFG9Wf6ezQb7fYkKW",
+            symbol: "@ui/components/components/inputs",
+            proves: "The exact ready/presented inputs overview renders sixteen real owner roots in compact cross-start rows with 280 by 180 tiles, 8px mandatory gaps, one visible canvas, and empty diagnostics and console output.",
+            doesNotProve: "Positive free-space distribution at this viewport, other align-content values, wrap-reverse, excluded grammar, or native browser equivalence.",
+          },
+        ],
+        stages: {
+          parse: "partial",
+          cascade: "partial",
+          computed: "partial",
+          layout: "partial",
+          paint: "not-applicable",
+          "hit-test": "not-applicable",
+          webgpu: "not-applicable",
+          browser: "not-applicable",
+          evidence: "implemented",
+        },
+        lastVerified: alignContentVerification,
+      }
+    }
+    if (entry.id === "css.properties.align-items") {
+      return {
+        status: "partial",
+        conformance: "adapted",
+        limitations: [
+          "Bounded to stretch, flex-start, center, and flex-end in the existing row/column Flex subset, including logical cross-start/cross-end under wrap-reverse. baseline, start/end, self-start/self-end, author-specified safe/unsafe syntax, writing modes, align-self, reverse main axes, order, and complete Flexbox alignment remain unsupported.",
+        ],
+        evidence: [
+          external,
+          {
+            ...implementation("renderer", "packages/core/src/css.ts", "ComputedStyle.alignItems/parseAlignItems", undefined, "The computed-style stage admits the bounded align-items keyword set with stretch as the initial value.", "The complete Box Alignment grammar, writing modes, baseline alignment, overflow-position syntax, and animation."),
+            revision: alignContentVerification.revision,
+          },
+          {
+            ...implementation("renderer", "packages/core/src/renderer.ts", "alignCrossPosition/placeFlexChildren", undefined, "The CPU layout stage aligns fixed and auto-cross flex items inside single or multiple lines and swaps logical cross-start/cross-end under wrap-reverse.", "align-self, baseline alignment, writing modes, reverse main axes, or complete Flexbox alignment."),
+            revision: alignContentVerification.revision,
+          },
+          {
+            ...test("renderer", "packages/core/test/renderer.test.ts", "production CSS box and flex slice", "Observable frames prove bounded stretch, flex-start, center, and flex-end behavior in ordinary row and column Flex layout.", "Multi-line wrap-reverse behavior and full Box Alignment conformance."),
+            revision: alignContentVerification.revision,
+          },
+          {
+            ...test("renderer", "packages/core/test/align-content.test.ts", "wrap-reverse align-items cross-start", "Fixed and auto-cross items use the reversed logical cross axis inside stretched and positioned wrapped lines.", "Writing modes, excluded values, align-self, or native browser equivalence."),
+            revision: alignContentVerification.revision,
+          },
+          {
+            ...test("renderer", "packages/core/test/position.test.ts", "absolute flex static position under wrap-reverse", "The absolute-flex static-position path uses the same reversed align-items cross-start and physical margins.", "Every positioned Flexbox algorithm or native browser behavior."),
+            revision: alignContentVerification.revision,
+          },
+        ],
+        stages: cssPropertyStages(entry.name),
+        lastVerified: alignContentVerification,
+      }
+    }
     if (entry.id === "css.properties.flex-wrap") {
       return {
         status: "partial",
         conformance: "adapted",
         limitations: [
-          "Bounded to nowrap, wrap, and wrap-reverse on the existing row/column Flex subset: row wrapping uses its definite or auto-fill width, column wrapping requires a definite height, and one scalar gap serves both axes; balance and other invalid values are discarded before cascade priority, while align-content, row-gap/column-gap, flex-flow, row-reverse/column-reverse, order, align-self, and complete intrinsic multi-line sizing remain unsupported.",
+          "Bounded to nowrap, wrap, and wrap-reverse on the existing row/column Flex subset: row wrapping uses its definite or auto-fill width, column wrapping requires a definite height, and one scalar gap serves both axes. balance and other invalid values are discarded before cascade priority, while row-gap/column-gap, flex-flow, row-reverse/column-reverse, order, align-self, and complete intrinsic multi-line sizing remain unsupported.",
         ],
         evidence: [
           external,
@@ -366,7 +467,7 @@ function classifyCss(entry: CapabilityInventoryEntry): Classification {
             revision: flexWrapVerification.revision,
           },
           {
-            ...implementation("renderer", "packages/core/src/renderer.ts", "createFlexLines/placeFlexChildren", undefined, "The CPU layout stage forms bounded row or column flex lines, distributes main-axis flex sizing per line, and reverses the cross-axis line order for wrap-reverse.", "align-content, separate row/column gaps, reverse main axes, order/align-self, or complete intrinsic multi-line Flexbox sizing."),
+            ...implementation("renderer", "packages/core/src/renderer.ts", "createFlexLines/placeFlexChildren", undefined, "The CPU layout stage forms bounded row or column flex lines, distributes main-axis flex sizing per line, and reverses the cross-axis line order for wrap-reverse.", "Separate row/column gaps, reverse main axes, order/align-self, or complete intrinsic multi-line Flexbox sizing."),
             revision: flexWrapVerification.revision,
           },
           {
@@ -495,6 +596,68 @@ function classifyCssFeature(entry: CapabilityInventoryEntry, stages: Record<stri
       cssVariableStages(stages),
     )
   }
+  if (suffix === "flex-layout") {
+    return {
+      status: "partial",
+      conformance: "adapted",
+      limitations: [
+        "The bounded CPU owner supports row/column single-line Flex, nowrap/wrap/wrap-reverse line formation, per-line grow/shrink/justification/align-items, admitted align-content cross-axis distribution, wrap-reverse cross-start semantics, and one scalar gap. balance, reverse main axes, flex-flow, order, align-self, separate row/column gaps, writing modes, and complete intrinsic multi-line Flexbox sizing remain unsupported.",
+      ],
+      evidence: [
+        externalEvidence(entry),
+        {
+          type: "requirement",
+          repository: "renderer",
+          revision: alignContentVerification.revision,
+          path: "packages/core/requirements.md",
+          symbol: "RENDERER-CPU-004",
+          proves: "The owner contract defines the bounded single-line and multi-line Flex semantics, admitted alignment values, and explicit exclusions.",
+          doesNotProve: "Runtime behavior or full CSS Flexbox and Box Alignment conformance.",
+        },
+        {
+          ...implementation("renderer", "packages/core/src/css.ts", "ComputedStyle Flex properties", undefined, "The computed-style stage transports the admitted Flex sizing, direction, wrapping and alignment values.", "The complete Flexbox and Box Alignment grammars, CSSOM, animation, or writing modes."),
+          revision: alignContentVerification.revision,
+        },
+        {
+          ...implementation("renderer", "packages/core/src/renderer.ts", "createFlexLines/alignFlexLines/placeFlexChildren", undefined, "The CPU owner forms row or column lines, resolves per-line main-axis Flex sizing, distributes cross-axis free space, and places children with wrap-reverse cross-start semantics.", "Reverse main axes, order/align-self, separate gaps, or complete intrinsic Flexbox sizing."),
+          revision: alignContentVerification.revision,
+        },
+        {
+          ...test("renderer", "packages/core/test/renderer.test.ts", "production CSS box and flex slice", "Observable frames prove the bounded single-line grow/shrink/justification/alignment and scalar-gap contract.", "Multi-line behavior and full Flexbox conformance."),
+          revision: alignContentVerification.revision,
+        },
+        {
+          ...test("renderer", "packages/core/test/flex-wrap.test.ts", "flex-wrap", "Observable frame boxes prove row/column line formation, per-line sizing, definite-boundary handling, scalar gaps, and wrap-reverse line stacking.", "Full Flexbox conformance or the explicitly excluded values."),
+          revision: alignContentVerification.revision,
+        },
+        {
+          ...test("renderer", "packages/core/test/align-content.test.ts", "align-content", "Observable computed values and frame boxes prove the admitted cross-axis line alignment and distribution contract for rows, columns, auto/definite sizes, positive/negative free space, and wrap-reverse.", "Native browser pixels, writing modes, excluded values, or full conformance."),
+          revision: alignContentVerification.revision,
+        },
+        {
+          type: "integration-test",
+          repository: "storybook",
+          revision: storybookAlignContentRevision,
+          path: "src/external/browser/aggregate-presentation.test.tsx",
+          symbol: "external Storybook aggregate presentation",
+          proves: "A real compiled consumer uses row wrapping plus explicit cross-start line packing and validates resulting CPU geometry without coordinate authoring.",
+          doesNotProve: "Live WebGPU pixels, every route, reverse main axes, or complete Flexbox conformance.",
+        },
+      ],
+      stages: {
+        parse: "partial",
+        cascade: "partial",
+        computed: "partial",
+        layout: "partial",
+        paint: "not-applicable",
+        "hit-test": "not-applicable",
+        webgpu: "not-applicable",
+        browser: "not-applicable",
+        evidence: "implemented",
+      },
+      lastVerified: alignContentVerification,
+    }
+  }
   if (partial.has(suffix)) return partialClassification("adapted", [externalEvidence(entry), implementation("renderer", "packages/core/src/css.ts", entry.name, undefined, "Bounded CSS stage implementation.", "Complete CSS module algorithms."), test("renderer", "packages/core/test/renderer.test.ts", entry.name, "Current bounded behavior.", "Full conformance.")], "Only the explicitly admitted values/algorithms are implemented.", stages)
   return { status: "unsupported", conformance: "none", limitations: ["The current stylesheet/cascade/layout pipeline does not implement this CSS module capability."], evidence: [externalEvidence(entry)], stages }
 }
@@ -507,32 +670,40 @@ function classifyRenderer(entry: CapabilityInventoryEntry): Classification {
       status: "partial",
       conformance: "adapted",
       limitations: [
-        "The bounded owner supports row/column single-line Flex and nowrap/wrap/wrap-reverse multi-line packing with one scalar gap and per-line grow/shrink/justification/align-items; balance, reverse main axes, flex-flow, order, align-self, align-content, separate row/column gaps, and complete intrinsic multi-line Flexbox sizing remain unsupported.",
+        "The bounded owner supports row/column single-line Flex and nowrap/wrap/wrap-reverse multi-line packing with one scalar gap, per-line grow/shrink/justification/align-items, admitted align-content distribution, and wrap-reverse cross-start semantics; balance, reverse main axes, flex-flow, order, align-self, separate row/column gaps, writing modes, and complete intrinsic multi-line Flexbox sizing remain unsupported.",
       ],
       evidence: [
         {
           type: "requirement",
           repository: "renderer",
-          revision: flexWrapVerification.revision,
+          revision: alignContentVerification.revision,
           path: "packages/core/requirements.md",
           symbol: "RENDERER-CPU-004",
           proves: "The owner contract defines the bounded multi-line Flex semantics and explicit exclusions.",
           doesNotProve: "Runtime behavior or full CSS Flexbox conformance.",
         },
         {
-          ...implementation("renderer", "packages/core/src/renderer.ts", "createFlexLines/placeFlexChildren", undefined, "The CPU owner implements single-line and bounded multi-line row/column Flex placement.", "The excluded Flexbox values and complete standard algorithms."),
-          revision: flexWrapVerification.revision,
+          ...implementation("renderer", "packages/core/src/renderer.ts", "createFlexLines/alignFlexLines/placeFlexChildren", undefined, "The CPU owner implements single-line and bounded multi-line row/column Flex placement, cross-axis line distribution, and wrap-reverse cross-start semantics.", "The excluded Flexbox and Box Alignment values and complete standard algorithms."),
+          revision: alignContentVerification.revision,
         },
         {
           ...test("renderer", "packages/core/test/renderer.test.ts", "production CSS box and flex slice", "Observable frames prove the existing bounded single-line grow/shrink/justification/alignment contract.", "Multi-line packing and full CSS Flexbox conformance."),
-          revision: flexWrapVerification.revision,
+          revision: alignContentVerification.revision,
         },
         {
           ...test("renderer", "packages/core/test/flex-wrap.test.ts", "flex-wrap", "Observable computed values and frame boxes prove the bounded row/column nowrap, wrap, wrap-reverse, per-line sizing/alignment, gap, definite-boundary, and cross-axis reversal contract.", "Full CSS Flexbox conformance and the explicitly excluded values."),
-          revision: flexWrapVerification.revision,
+          revision: alignContentVerification.revision,
+        },
+        {
+          ...test("renderer", "packages/core/test/align-content.test.ts", "align-content", "Observable computed values and frame boxes prove bounded cross-axis alignment/distribution, auto/definite sizing, positive/negative free space, and wrap-reverse semantics.", "Full CSS Flexbox/Box Alignment conformance and the explicitly excluded values."),
+          revision: alignContentVerification.revision,
+        },
+        {
+          ...test("renderer", "packages/core/test/position.test.ts", "absolute flex static position under wrap-reverse", "The absolute-flex static-position path shares the corrected reversed cross-start semantics.", "Every positioned Flexbox algorithm or native browser behavior."),
+          revision: alignContentVerification.revision,
         },
       ],
-      lastVerified: flexWrapVerification,
+      lastVerified: alignContentVerification,
     }
   }
   if (name === "projection-root-inheritance") {
@@ -1044,7 +1215,7 @@ function cssPropertyLimitation(name: string): string {
   if (["color", "background", "background-color", "border-color"].includes(name)) return "CPU style can retain arbitrary/named colors, while the WebGPU transport accepts only transparent, hex, and rgb/rgba forms; unsupported resolved colors fail closed."
   if (name === "box-shadow") return "Only one bounded outer analytical shadow is parsed and transported."
   if (name.includes("border") || name.includes("radius")) return "Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed."
-  if (name.startsWith("flex") || name === "align-items" || name === "justify-content") return "Balance, reverse main axes, flex-flow, order, align-self, align-content, separate row/column gaps, and complete intrinsic multi-line Flexbox sizing remain unsupported."
+  if (name.startsWith("flex") || name === "align-items" || name === "align-content" || name === "justify-content") return "Balance, reverse main axes, flex-flow, order, align-self, separate row/column gaps, writing modes, and complete intrinsic multi-line Flexbox sizing remain unsupported."
   if (name === "transform" || name === "transform-origin") return "Only axis-aligned translate/scale transforms are supported; rotate/skew/matrix/3D are absent."
   return "Only the explicitly admitted property values and bounded CPU/backend algorithms are implemented."
 }
@@ -1055,7 +1226,7 @@ function cssTestPath(name: string): string {
   if (name.includes("z-index")) return "packages/core/test/z-index.test.ts"
   if (name.includes("shadow")) return "packages/core/test/box-shadow.test.ts"
   if (name.includes("border") || name.includes("background") || name === "color" || name === "opacity") return "packages/core/test/renderer.test.ts"
-  if (name.startsWith("flex") || name === "align-items" || name === "justify-content" || name === "gap") return "packages/core/test/renderer.test.ts"
+  if (name.startsWith("flex") || name === "align-items" || name === "align-content" || name === "justify-content" || name === "gap") return "packages/core/test/renderer.test.ts"
   return "packages/core/test/renderer.test.ts"
 }
 
@@ -1199,7 +1370,7 @@ function publicExportTestPath(entry: CapabilityInventoryEntry): string {
 }
 
 const supportedCssProperties = new Set([
-  "display", "box-sizing", "flex-direction", "flex-grow", "flex-shrink", "flex-basis", "flex", "align-items", "justify-content", "gap",
+  "display", "box-sizing", "flex-direction", "flex-grow", "flex-shrink", "flex-basis", "flex", "align-items", "align-content", "justify-content", "gap",
   "width", "height", "min-width", "min-height", "max-width", "max-height", "inline-size", "block-size", "min-inline-size", "min-block-size", "max-inline-size", "max-block-size",
   "position", "left", "top", "right", "bottom", "transform", "transform-origin", "box-shadow", "z-index",
   "margin", "margin-top", "margin-right", "margin-bottom", "margin-left", "margin-inline", "margin-block", "margin-inline-start", "margin-inline-end", "margin-block-start", "margin-block-end",

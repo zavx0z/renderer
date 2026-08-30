@@ -82,8 +82,20 @@
       "behavior": "Preserve source whitespace and prevent wrapping for read-only code lines."
     },
     {
+      "capability": "css.properties.align-content",
+      "repository": "storybook",
+      "revision": "d249503ce60513fd4073b5b35fda10c1d2e751d8",
+      "package": "@zavx0z/storybook",
+      "subject": "aggregate overview cross-axis packing",
+      "scope": "storybook",
+      "path": "src/external/browser/aggregate-presentation.tsx",
+      "anchor": "align-content: flex-start;",
+      "behavior": "Keep wrapped aggregate rows compact at flex cross-start inside the remaining-height grid instead of inheriting the standard stretching default."
+    },
+    {
       "capability": "css.properties.flex-wrap",
       "repository": "storybook",
+      "revision": "5c1ed1ec54ba451f95ddfa19a61c8ecd81f3ac66",
       "package": "@zavx0z/storybook",
       "subject": "aggregate overview packing",
       "scope": "storybook",

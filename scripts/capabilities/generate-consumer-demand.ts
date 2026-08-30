@@ -13,6 +13,7 @@ import type { ConsumerDemand, InventoryFile } from "./model.ts"
 interface DemandSource {
   capability: string
   repository: keyof typeof workspaceRoots
+  revision?: string
   package: string
   subject: string
   scope: ConsumerDemand["scope"]
@@ -46,11 +47,13 @@ for (const source of sources.entries) {
   if (!capabilityIds.has(source.capability)) throw new Error(`Unknown consumer-demand capability: ${source.capability}`)
   const root = workspaceRoots[source.repository]
   const absolutePath = resolve(root, source.path)
-  const text = await readFile(absolutePath, "utf8")
+  const text = source.revision === undefined
+    ? await readFile(absolutePath, "utf8")
+    : await committedSource(root, source.revision, source.path)
   const index = text.indexOf(source.anchor)
   if (index < 0) throw new Error(`Consumer-demand anchor not found: ${source.repository}:${source.path} -> ${source.anchor}`)
   const line = text.slice(0, index).split("\n").length
-  const revision = await repositoryRevision(source.repository, root)
+  const revision = source.revision ?? await repositoryRevision(source.repository, root)
   records.push({
     capability: source.capability,
     repository: source.repository,
@@ -80,6 +83,28 @@ await writeJsonIfChanged(resolve(specificationsRoot, "consumer-demand.json"), {
   generatorVersion: GENERATOR_VERSION,
   records,
 })
+
+async function committedSource(
+  root: string,
+  revision: string,
+  path: string,
+): Promise<string> {
+  const process = Bun.spawn(
+    ["git", "-C", root, "show", `${revision}:${path}`],
+    {stdout: "pipe", stderr: "pipe"},
+  )
+  const [stdout, stderr, exitCode] = await Promise.all([
+    new Response(process.stdout).text(),
+    new Response(process.stderr).text(),
+    process.exited,
+  ])
+  if (exitCode !== 0) {
+    throw new Error(
+      `Pinned consumer-demand source unavailable: ${revision}:${path}\n${stderr}`,
+    )
+  }
+  return stdout
+}
 
 async function repositoryRevision(repository: string, root: string): Promise<string> {
   const cached = revisionCache.get(repository)
