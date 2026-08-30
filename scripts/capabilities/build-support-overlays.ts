@@ -46,6 +46,10 @@ const alignContentVerification = {
   revision: "13241543ca2a06a8e145b20c3e8373411099b33f",
   date: "2026-08-30",
 } as const
+const flexGapVerification = {
+  revision: "72fa158b043408817725856ce2b8e26d6a0e4d18",
+  date: "2026-08-30",
+} as const
 const storybookAggregateRevision = "5c1ed1ec54ba451f95ddfa19a61c8ecd81f3ac66"
 const storybookAlignContentRevision = "d249503ce60513fd4073b5b35fda10c1d2e751d8"
 const revisions: Record<string, string> = {
@@ -91,7 +95,7 @@ async function main(): Promise<void> {
     const repository = packageEntries[0]?.ownerHint.repository
     if (!repository) throw new Error(`No repository for ${packageName}`)
     const revision = packageName === "@zavx0z/renderer"
-      ? alignContentVerification.revision
+      ? flexGapVerification.revision
       : revisions[repository]
     if (!revision) throw new Error(`No revision for ${repository}`)
     const records = packageEntries
@@ -104,7 +108,7 @@ async function main(): Promise<void> {
       package: packageName,
       revision,
       verificationDate: packageName === "@zavx0z/renderer"
-        ? alignContentVerification.date
+        ? flexGapVerification.date
         : verificationDate,
       records,
     }
@@ -366,7 +370,7 @@ function classifyCss(entry: CapabilityInventoryEntry): Classification {
         status: "partial",
         conformance: "adapted",
         limitations: [
-          "Bounded to normal, stretch, flex-start, flex-end, center, space-between, space-around, and space-evenly on the existing row/column wrap and wrap-reverse Flex subset. normal behaves as stretch; nowrap ignores the property; an unconstrained auto cross size uses the natural line stack while a larger parent-assigned used cross size is honored; explicit negative free space preserves unsafe flex-end/center offsets and uses cross-start fallbacks for the admitted distribution values. start/end, baseline alignment, author-specified safe/unsafe syntax, writing modes, CSS-wide keywords, animation, reverse main axes, separate row/column gaps, order, align-self, and complete intrinsic multi-line sizing remain unsupported.",
+          "Bounded to normal, stretch, flex-start, flex-end, center, space-between, space-around, and space-evenly on the existing row/column wrap and wrap-reverse Flex subset. normal behaves as stretch; nowrap ignores the property; an unconstrained auto cross size uses the natural line stack while a larger parent-assigned used cross size is honored; the direction-mapped cross gap remains mandatory before free-space distribution; explicit negative free space preserves unsafe flex-end/center offsets and uses cross-start fallbacks for the admitted distribution values. start/end, baseline alignment, author-specified safe/unsafe syntax, writing modes, CSS-wide keywords, animation, reverse main axes, gap decorations/rules, order, align-self, and complete intrinsic multi-line sizing remain unsupported.",
         ],
         evidence: [
           external,
@@ -375,12 +379,16 @@ function classifyCss(entry: CapabilityInventoryEntry): Classification {
             revision: alignContentVerification.revision,
           },
           {
-            ...implementation("renderer", "packages/core/src/renderer.ts", "alignFlexLines/placeFlexChildren", undefined, "The CPU layout stage distributes positive and negative cross free space for row and column wrapped lines, applies normal as stretch, honors one-line wrapped containers, ignores nowrap, and reverses cross-start/cross-end for wrap-reverse line and item alignment.", "The excluded alignment values, separate row/column gaps, reverse main axes, and complete intrinsic multi-line Flexbox sizing."),
+            ...implementation("renderer", "packages/core/src/renderer.ts", "alignFlexLines/placeFlexChildren", undefined, "The CPU layout stage distributes positive and negative cross free space for row and column wrapped lines, applies normal as stretch, honors one-line wrapped containers, ignores nowrap, and reverses cross-start/cross-end for wrap-reverse line and item alignment.", "The excluded alignment values, gap decorations/rules, reverse main axes, and complete intrinsic multi-line Flexbox sizing."),
             revision: alignContentVerification.revision,
           },
           {
             ...test("renderer", "packages/core/test/align-content.test.ts", "align-content", "Observable computed values and frame boxes prove keyword validation, variable substitution, invalid-declaration fallback, positive and negative cross-space distribution, row/column symmetry, one-line wrapping, nowrap exclusion, auto and parent-allocated cross sizes, stretch interaction, and wrap-reverse cross-start semantics.", "Native browser pixels, writing modes, excluded values, and full CSS Box Alignment or Flexbox conformance."),
             revision: alignContentVerification.revision,
+          },
+          {
+            ...test("renderer", "packages/core/test/gap.test.ts", "align-content with split cross gaps", "Direction-mapped cross gaps remain mandatory before stretch or positional free-space distribution in row and column wrapped containers.", "Gap decorations/rules, percentage gaps, writing modes, or full Box Alignment conformance."),
+            revision: flexGapVerification.revision,
           },
           {
             ...test("renderer", "packages/core/test/position.test.ts", "absolute flex static position under wrap-reverse", "An absolutely positioned flex child derives its static cross position from the same reversed cross-start semantics without entering flex line formation.", "Every absolute-positioned Flexbox static-position algorithm or native browser behavior."),
@@ -416,7 +424,7 @@ function classifyCss(entry: CapabilityInventoryEntry): Classification {
           browser: "not-applicable",
           evidence: "implemented",
         },
-        lastVerified: alignContentVerification,
+        lastVerified: flexGapVerification,
       }
     }
     if (entry.id === "css.properties.align-items") {
@@ -453,12 +461,19 @@ function classifyCss(entry: CapabilityInventoryEntry): Classification {
         lastVerified: alignContentVerification,
       }
     }
+    if (
+      entry.id === "css.properties.gap" ||
+      entry.id === "css.properties.row-gap" ||
+      entry.id === "css.properties.column-gap"
+    ) {
+      return classifyFlexGapProperty(entry, external)
+    }
     if (entry.id === "css.properties.flex-wrap") {
       return {
         status: "partial",
         conformance: "adapted",
         limitations: [
-          "Bounded to nowrap, wrap, and wrap-reverse on the existing row/column Flex subset: row wrapping uses its definite or auto-fill width, column wrapping requires a definite height, and one scalar gap serves both axes. balance and other invalid values are discarded before cascade priority, while row-gap/column-gap, flex-flow, row-reverse/column-reverse, order, align-self, and complete intrinsic multi-line sizing remain unsupported.",
+          "Bounded to nowrap, wrap, and wrap-reverse on the existing row/column Flex subset: row wrapping uses its definite or auto-fill width, column wrapping requires a definite height, and direction-mapped main/cross gaps participate in line formation and stacking. balance and other invalid values are discarded before cascade priority, while gap decorations/rules, flex-flow, row-reverse/column-reverse, order, align-self, and complete intrinsic multi-line sizing remain unsupported.",
         ],
         evidence: [
           external,
@@ -467,12 +482,16 @@ function classifyCss(entry: CapabilityInventoryEntry): Classification {
             revision: flexWrapVerification.revision,
           },
           {
-            ...implementation("renderer", "packages/core/src/renderer.ts", "createFlexLines/placeFlexChildren", undefined, "The CPU layout stage forms bounded row or column flex lines, distributes main-axis flex sizing per line, and reverses the cross-axis line order for wrap-reverse.", "Separate row/column gaps, reverse main axes, order/align-self, or complete intrinsic multi-line Flexbox sizing."),
+            ...implementation("renderer", "packages/core/src/renderer.ts", "createFlexLines/placeFlexChildren", undefined, "The CPU layout stage forms bounded row or column flex lines, distributes main-axis flex sizing per line, and reverses the cross-axis line order for wrap-reverse.", "Gap decorations/rules, reverse main axes, order/align-self, or complete intrinsic multi-line Flexbox sizing."),
             revision: flexWrapVerification.revision,
           },
           {
             ...test("renderer", "packages/core/test/flex-wrap.test.ts", "flex-wrap", "Observable computed values and frame boxes prove keyword validation, variable substitution, invalid-declaration cascade fallback, nowrap, definite-width row wrapping with auto cross growth, per-line grow/shrink/justification/alignment, definite-height column wrapping, auto-height non-wrapping, scalar gap, oversized-base line isolation, and wrap-reverse cross-end packing.", "Full CSS Flexbox conformance, native browser pixels, or the unsupported values and properties named in the limitation."),
             revision: flexWrapVerification.revision,
+          },
+          {
+            ...test("renderer", "packages/core/test/gap.test.ts", "split gaps with flex-wrap", "Row and column wrapping use their direction-mapped main gap for line formation and cross gap for line stacking, auto/intrinsic sizes, and align-content interaction.", "Gap decorations/rules, percentage gaps, reverse main axes, or full Flexbox conformance."),
+            revision: flexGapVerification.revision,
           },
           {
             type: "integration-test",
@@ -504,7 +523,7 @@ function classifyCss(entry: CapabilityInventoryEntry): Classification {
           browser: "not-applicable",
           evidence: "implemented",
         },
-        lastVerified: flexWrapVerification,
+        lastVerified: flexGapVerification,
       }
     }
     if (supportedCssProperties.has(entry.name)) {
@@ -538,17 +557,28 @@ function classifyCss(entry: CapabilityInventoryEntry): Classification {
       : { status: "unsupported", conformance: "none", limitations: ["Selector grammar is not admitted by the bounded parser."], evidence: [external], stages: defaultStages }
   }
   if (entry.id === "css.functions.var-function") {
-    return partial(
-      "adapted",
-      [
-        external,
-        implementation("renderer", "packages/core/src/css.ts", "CustomPropertyResolver/substituteVariables", undefined, "Case-sensitive inherited custom-property environments and cycle-aware var() substitution for admitted longhands, one border/shadow path and nested color/calc functions.", "The complete CSS Variables grammar, typed properties, animation and every variable-bearing shorthand."),
-        test("renderer", "packages/core/test/custom-properties.test.ts", "var()", "Nested fallback, cycles, casing, pseudo overrides, inline precedence, foundation/semantic/component aliases, focused border colors, rgb alpha, calc and one thousand instance values.", "Escaped names, every declaration grammar and full browser conformance."),
-        test("renderer", "packages/react/test/compiler.test.ts", "compiled custom-property pseudo", "Exact authored TSX executes through Template metadata, React adoption and CPU hover substitution with one shared pseudo sheet.", "Live browser/WebGPU pixels and unrelated Template syntax."),
-      ],
-      "Implemented for admitted longhands, one solid border/border-color, one shadow and current background/color/sizing/transform/calc paths; other multi-value shorthands, escaped names, @property and animation remain unsupported.",
-      cssVariableStages(defaultStages),
-    )
+    return {
+      ...partial(
+        "adapted",
+        [
+          external,
+          implementation("renderer", "packages/core/src/css.ts", "CustomPropertyResolver/substituteVariables", undefined, "Case-sensitive inherited custom-property environments and cycle-aware var() substitution for admitted longhands, one border/shadow path and nested color/calc functions.", "The complete CSS Variables grammar, typed properties, animation and every variable-bearing shorthand."),
+          test("renderer", "packages/core/test/custom-properties.test.ts", "var()", "Nested fallback, cycles, casing, pseudo overrides, inline precedence, foundation/semantic/component aliases, focused border colors, rgb alpha, calc and one thousand instance values.", "Escaped names, every declaration grammar and full browser conformance."),
+          test("renderer", "packages/react/test/compiler.test.ts", "compiled custom-property pseudo", "Exact authored TSX executes through Template metadata, React adoption and CPU hover substitution with one shared pseudo sheet.", "Live browser/WebGPU pixels and unrelated Template syntax."),
+          {
+            ...implementation("renderer", "packages/core/src/css.ts", "resolveCascadedVariables/expandGap", undefined, "A winning variable-bearing gap shorthand expands at its original specificity and source sequence, while missing or computed-invalid values invalidate both affected longhands without exposing lower-priority declarations.", "Other variable-bearing multi-value shorthands or full CSS Variables invalid-at-computed-value-time behavior."),
+            revision: flexGapVerification.revision,
+          },
+          {
+            ...test("renderer", "packages/core/test/gap.test.ts", "variable-bearing gap", "Valid one/two-value variables, longhand overrides, specificity preservation, missing variables and computed-invalid shorthand/longhand winners are observable through exact computed row/column gaps.", "Other shorthands, escaped names, @property, animation, or full browser conformance."),
+            revision: flexGapVerification.revision,
+          },
+        ],
+        "Implemented for admitted longhands, one solid border/border-color, one shadow, the one/two-value gap shorthand, and current background/color/sizing/transform/calc paths; other multi-value shorthands, escaped names, @property and animation remain unsupported.",
+        cssVariableStages(defaultStages),
+      ),
+      lastVerified: flexGapVerification,
+    }
   }
   if (entry.id === "css.functions.calc-function") {
     return partial(
@@ -573,6 +603,44 @@ function classifyCss(entry: CapabilityInventoryEntry): Classification {
   return { status: "unsupported", conformance: "none", limitations: ["No implementation of this pinned CSS feature was found."], evidence: [external], stages: defaultStages }
 }
 
+function classifyFlexGapProperty(
+  entry: CapabilityInventoryEntry,
+  external: EvidenceRecord,
+): Classification {
+  const shorthand = entry.id === "css.properties.gap"
+  const axis = entry.id === "css.properties.row-gap" ? "row" : "column"
+  const contract = shorthand
+    ? "The shorthand accepts one value for both axes or two values in row/column order and expands through ordinary declaration source order."
+    : `The ${axis}-gap longhand participates in ordinary shorthand/longhand source order and maps to the Flex main or cross axis according to flex-direction.`
+  const invalidComputed = shorthand
+    ? "an invalid winning variable-bearing shorthand invalidates both longhands at computed-value time without revealing a lower-priority declaration"
+    : `an invalid winning variable-bearing ${axis}-gap resets that longhand to its initial used value without revealing a lower-priority declaration`
+  return {
+    status: "partial",
+    conformance: "adapted",
+    limitations: [
+      `${contract} Flex used values are bounded to normal as zero and finite non-negative px, unitless, resolved em, or compatible calc() results. Direct invalid declarations are discarded before cascade priority; ${invalidComputed}. Negative values, percentages, mixed dimensions, CSS-wide keywords, animation, Grid/multicol gap semantics, and gap decorations/rules remain unsupported.`,
+    ],
+    evidence: [
+      external,
+      {
+        ...implementation("renderer", "packages/core/src/css.ts", shorthand ? "DeclarationEntry/expandGap/parseGapValue" : "ComputedStyle.rowGap/columnGap/parseGapValue", undefined, "The declaration and computed-style stages preserve repeated source order, expand one/two-value gap shorthand, retain longhand priority, resolve normal and bounded dimensions, defer variable-bearing shorthand expansion, and fail invalid computed winners closed.", "Percentages, CSS-wide keywords, animation, Grid/multicol gap computation, escaped declaration grammar, or full CSS Variables conformance."),
+        revision: flexGapVerification.revision,
+      },
+      {
+        ...implementation("renderer", "packages/core/src/renderer.ts", "flexMainGap/flexCrossGap", undefined, "The CPU Flex stage maps column-gap to a row main axis and row-gap to a column main axis, maps the other longhand to wrapped line stacking, and carries both through measurement, placement, intrinsic sizing, and align-content.", "Grid/multicol layout, gap decorations/rules, percentage gaps, writing modes, or reverse main axes."),
+        revision: flexGapVerification.revision,
+      },
+      {
+        ...test("renderer", "packages/core/test/gap.test.ts", shorthand ? "gap shorthand" : entry.name, "Observable computed values and frame boxes prove one/two-value transport, normal, dimensional validation, direct and variable invalid semantics, exact shorthand/longhand source order, row/column axis mapping, rendered-item counting, wrapping, intrinsic sizing, and align-content interaction.", "Grid/multicol gaps, percentage gaps, decorations/rules, writing modes, reverse main axes, or full CSS conformance."),
+        revision: flexGapVerification.revision,
+      },
+    ],
+    stages: cssPropertyStages(entry.name),
+    lastVerified: flexGapVerification,
+  }
+}
+
 function classifyCssFeature(entry: CapabilityInventoryEntry, stages: Record<string, CapabilityStatus>): Classification {
   const partial = new Set([
     "syntax", "tokenization", "declarations", "component-values", "data-types", "functions", "units", "selectors", "combinators",
@@ -583,56 +651,139 @@ function classifyCssFeature(entry: CapabilityInventoryEntry, stages: Record<stri
     "text-overflow", "computed-values", "used-values", "display-list-projection", "hit-test-projection", "webgpu-transport",
   ])
   const suffix = entry.id.slice("css.features.".length)
-  if (suffix === "custom-properties") {
-    return partialClassification(
-      "adapted",
-      [
-        externalEvidence(entry),
-        implementation("renderer", "packages/core/src/css.ts", "ComputedCustomProperties", undefined, "Ordinary case-sensitive custom-property cascade, sparse inheritance and cycle-aware substitution through admitted border, shadow, color and dimensional function paths.", "Full CSS Variables, CSSOM, typed custom properties and animation."),
-        test("renderer", "packages/core/test/custom-properties.test.ts", suffix, "Inheritance identity, aliases, fallback/cycles, casing, pseudo changes, border/shadow, rgb/calc, descendant invalidation, consumer precedence and one thousand instances.", "Every grammar and native browser behavior."),
-        test("renderer", "packages/react/test/compiler.test.ts", "exact dynamic pseudo authoring", "One shared compiled pseudo sheet consumes two instance-specific inline custom values and updates while hovered.", "Live browser/WebGPU pixels."),
+  if (suffix === "declarations") {
+    return {
+      status: "partial",
+      conformance: "adapted",
+      limitations: [
+        "The bounded flat declaration parser preserves every repeated declaration in authored source order, normalizes admitted property names, and fails invalid admitted values closed before or at the documented computed-value boundary. !important, declaration comments/escapes, CSS-wide keywords, full token-stream preservation, and arbitrary delimiter-bearing value grammar remain unsupported.",
       ],
-      "Bounded to unescaped custom names and var() in admitted longhands, one border/border-color, one shadow and background/color/sizing/transform/calc paths; CSS-wide semantics, !important, @property, animation and other multi-value shorthands remain unsupported.",
-      cssVariableStages(stages),
-    )
+      evidence: [
+        externalEvidence(entry),
+        {
+          ...implementation("renderer", "packages/core/src/css.ts", "DeclarationEntry/parseDeclarations/applyDeclarations", undefined, "Flat style rules and inline styles retain repeated declarations as ordered entries instead of collapsing them into an object map before shorthand expansion and cascade sequencing.", "The complete CSS declaration grammar, !important, escaped delimiters, comments, or CSSOM serialization."),
+          revision: flexGapVerification.revision,
+        },
+        {
+          ...test("renderer", "packages/core/test/gap.test.ts", "repeated declarations", "Repeated shorthand and longhand declarations in inline and stylesheet blocks resolve in exact source order, while invalid direct declarations cannot replace valid lower-priority values.", "Every property grammar, !important, cascade layers, or native CSS parser equivalence."),
+          revision: flexGapVerification.revision,
+        },
+      ],
+      stages: {
+        parse: "partial",
+        cascade: "partial",
+        computed: "partial",
+        layout: "not-applicable",
+        paint: "not-applicable",
+        "hit-test": "not-applicable",
+        webgpu: "not-applicable",
+        browser: "not-applicable",
+        evidence: "implemented",
+      },
+      lastVerified: flexGapVerification,
+    }
+  }
+  if (suffix === "cascade-order") {
+    return {
+      status: "partial",
+      conformance: "adapted",
+      limitations: [
+        "The bounded cascade preserves specificity, owner stylesheet order, repeated declaration source sequence, shorthand/longhand expansion order, deferred variable shorthand priority, and inline precedence. User origins, !important, cascade layers, scopes, revert/revert-layer/unset, animations/transitions, and the complete CSS cascade remain unsupported.",
+      ],
+      evidence: [
+        externalEvidence(entry),
+        {
+          ...implementation("renderer", "packages/core/src/css.ts", "applyDeclarations/comparePriority/resolveCascadedVariables", undefined, "Specificity, stylesheet order and per-declaration sequence determine winners; deferred variable shorthand expansion retains the original priority and invalid computed winners invalidate only targets they still own.", "User and important origins, cascade layers/scopes, CSS-wide rollback keywords, animations, or the complete cascade algorithm."),
+          revision: flexGapVerification.revision,
+        },
+        {
+          ...test("renderer", "packages/core/test/author-style-sheet.test.ts", "author/compiled/consumer/inline precedence", "Document author themes, compiled owner sheets, explicit consumer sheets and inline declarations preserve the bounded owner order.", "User origins, !important, layers/scopes, animation or native browser conformance."),
+          revision: flexGapVerification.revision,
+        },
+        {
+          ...test("renderer", "packages/core/test/gap.test.ts", "shorthand/longhand source order", "Repeated direct and variable-bearing gap shorthand/longhand declarations preserve exact sequence and specificity, including computed-invalid winner semantics.", "Every shorthand, CSS-wide keyword, layer/scope, or complete cascade conformance."),
+          revision: flexGapVerification.revision,
+        },
+      ],
+      stages: {
+        parse: "partial",
+        cascade: "partial",
+        computed: "partial",
+        layout: "not-applicable",
+        paint: "not-applicable",
+        "hit-test": "not-applicable",
+        webgpu: "not-applicable",
+        browser: "not-applicable",
+        evidence: "implemented",
+      },
+      lastVerified: flexGapVerification,
+    }
+  }
+  if (suffix === "custom-properties") {
+    return {
+      ...partialClassification(
+        "adapted",
+        [
+          externalEvidence(entry),
+          implementation("renderer", "packages/core/src/css.ts", "ComputedCustomProperties", undefined, "Ordinary case-sensitive custom-property cascade, sparse inheritance and cycle-aware substitution through admitted border, shadow, color and dimensional function paths.", "Full CSS Variables, CSSOM, typed custom properties and animation."),
+          test("renderer", "packages/core/test/custom-properties.test.ts", suffix, "Inheritance identity, aliases, fallback/cycles, casing, pseudo changes, border/shadow, rgb/calc, descendant invalidation, consumer precedence and one thousand instances.", "Every grammar and native browser behavior."),
+          test("renderer", "packages/react/test/compiler.test.ts", "exact dynamic pseudo authoring", "One shared compiled pseudo sheet consumes two instance-specific inline custom values and updates while hovered.", "Live browser/WebGPU pixels."),
+          {
+            ...implementation("renderer", "packages/core/src/css.ts", "resolveCascadedVariables/expandGap", undefined, "Variable substitution admits the bounded one/two-value gap shorthand with original cascade priority and invalid-at-computed-value-time reset of both longhands.", "Other multi-value shorthands, escaped names, @property, animation, or full CSS Variables semantics."),
+            revision: flexGapVerification.revision,
+          },
+          {
+            ...test("renderer", "packages/core/test/gap.test.ts", "custom-property gap shorthand", "Valid, missing, negative, percentage and specificity-sensitive variable values prove the bounded gap shorthand path and its longhand interactions.", "Other multi-value shorthands or full browser conformance."),
+            revision: flexGapVerification.revision,
+          },
+        ],
+        "Bounded to unescaped custom names and var() in admitted longhands, one border/border-color, one shadow, the one/two-value gap shorthand, and background/color/sizing/transform/calc paths; CSS-wide semantics, !important, @property, animation and other multi-value shorthands remain unsupported.",
+        cssVariableStages(stages),
+      ),
+      lastVerified: flexGapVerification,
+    }
   }
   if (suffix === "flex-layout") {
     return {
       status: "partial",
       conformance: "adapted",
       limitations: [
-        "The bounded CPU owner supports row/column single-line Flex, nowrap/wrap/wrap-reverse line formation, per-line grow/shrink/justification/align-items, admitted align-content cross-axis distribution, wrap-reverse cross-start semantics, and one scalar gap. balance, reverse main axes, flex-flow, order, align-self, separate row/column gaps, writing modes, and complete intrinsic multi-line Flexbox sizing remain unsupported.",
+        "The bounded CPU owner supports row/column single-line Flex, nowrap/wrap/wrap-reverse line formation, per-line grow/shrink/justification/align-items, admitted align-content cross-axis distribution, wrap-reverse cross-start semantics, and direction-mapped independent row/column gaps through measurement, intrinsic sizing and placement. balance, reverse main axes, flex-flow, order, align-self, gap decorations/rules, percentage gaps, writing modes, and complete intrinsic multi-line Flexbox sizing remain unsupported.",
       ],
       evidence: [
         externalEvidence(entry),
         {
           type: "requirement",
           repository: "renderer",
-          revision: alignContentVerification.revision,
+          revision: flexGapVerification.revision,
           path: "packages/core/requirements.md",
           symbol: "RENDERER-CPU-004",
           proves: "The owner contract defines the bounded single-line and multi-line Flex semantics, admitted alignment values, and explicit exclusions.",
           doesNotProve: "Runtime behavior or full CSS Flexbox and Box Alignment conformance.",
         },
         {
-          ...implementation("renderer", "packages/core/src/css.ts", "ComputedStyle Flex properties", undefined, "The computed-style stage transports the admitted Flex sizing, direction, wrapping and alignment values.", "The complete Flexbox and Box Alignment grammars, CSSOM, animation, or writing modes."),
-          revision: alignContentVerification.revision,
+          ...implementation("renderer", "packages/core/src/css.ts", "ComputedStyle Flex properties", undefined, "The computed-style stage transports admitted Flex sizing, direction, wrapping, alignment, and independent row/column gap used values with ordered shorthand/longhand cascade semantics.", "The complete Flexbox, Box Alignment and CSS Gaps grammars, CSSOM, animation, percentage gaps, or writing modes."),
+          revision: flexGapVerification.revision,
         },
         {
-          ...implementation("renderer", "packages/core/src/renderer.ts", "createFlexLines/alignFlexLines/placeFlexChildren", undefined, "The CPU owner forms row or column lines, resolves per-line main-axis Flex sizing, distributes cross-axis free space, and places children with wrap-reverse cross-start semantics.", "Reverse main axes, order/align-self, separate gaps, or complete intrinsic Flexbox sizing."),
-          revision: alignContentVerification.revision,
+          ...implementation("renderer", "packages/core/src/renderer.ts", "createFlexLines/alignFlexLines/flexMainGap/flexCrossGap/placeFlexChildren", undefined, "The CPU owner forms row or column lines, resolves per-line main-axis Flex sizing, maps independent main/cross gaps through measurement and intrinsic sizing, distributes cross-axis free space after mandatory gaps, and places children with wrap-reverse semantics.", "Reverse main axes, order/align-self, gap decorations/rules, percentage gaps, or complete intrinsic Flexbox sizing."),
+          revision: flexGapVerification.revision,
         },
         {
-          ...test("renderer", "packages/core/test/renderer.test.ts", "production CSS box and flex slice", "Observable frames prove the bounded single-line grow/shrink/justification/alignment and scalar-gap contract.", "Multi-line behavior and full Flexbox conformance."),
-          revision: alignContentVerification.revision,
+          ...test("renderer", "packages/core/test/renderer.test.ts", "production CSS box and flex slice", "Observable frames prove the bounded single-line grow/shrink/justification/alignment and one-value gap compatibility contract.", "Multi-line behavior and full Flexbox conformance."),
+          revision: flexGapVerification.revision,
         },
         {
           ...test("renderer", "packages/core/test/flex-wrap.test.ts", "flex-wrap", "Observable frame boxes prove row/column line formation, per-line sizing, definite-boundary handling, scalar gaps, and wrap-reverse line stacking.", "Full Flexbox conformance or the explicitly excluded values."),
-          revision: alignContentVerification.revision,
+          revision: flexGapVerification.revision,
         },
         {
           ...test("renderer", "packages/core/test/align-content.test.ts", "align-content", "Observable computed values and frame boxes prove the admitted cross-axis line alignment and distribution contract for rows, columns, auto/definite sizes, positive/negative free space, and wrap-reverse.", "Native browser pixels, writing modes, excluded values, or full conformance."),
-          revision: alignContentVerification.revision,
+          revision: flexGapVerification.revision,
+        },
+        {
+          ...test("renderer", "packages/core/test/gap.test.ts", "two-axis Flex gaps", "Observable computed values and frames prove shorthand/longhand cascade, bounded dimensions, row/column axis mapping, rendered-item counting, wrapping, intrinsic sizes, and align-content interaction.", "Grid/multicol gaps, percentage gaps, decorations/rules, reverse main axes, or full conformance."),
+          revision: flexGapVerification.revision,
         },
         {
           type: "integration-test",
@@ -655,7 +806,7 @@ function classifyCssFeature(entry: CapabilityInventoryEntry, stages: Record<stri
         browser: "not-applicable",
         evidence: "implemented",
       },
-      lastVerified: alignContentVerification,
+      lastVerified: flexGapVerification,
     }
   }
   if (partial.has(suffix)) return partialClassification("adapted", [externalEvidence(entry), implementation("renderer", "packages/core/src/css.ts", entry.name, undefined, "Bounded CSS stage implementation.", "Complete CSS module algorithms."), test("renderer", "packages/core/test/renderer.test.ts", entry.name, "Current bounded behavior.", "Full conformance.")], "Only the explicitly admitted values/algorithms are implemented.", stages)
@@ -665,45 +816,77 @@ function classifyCssFeature(entry: CapabilityInventoryEntry, stages: Record<stri
 function classifyRenderer(entry: CapabilityInventoryEntry): Classification {
   if (!entry.id.startsWith("renderer.features.")) return unsupported(entry, "No current CPU renderer evidence was mapped.")
   const name = entry.id.slice("renderer.features.".length)
+  if (name === "cascade") {
+    return {
+      status: "partial",
+      conformance: "adapted",
+      limitations: [
+        "The CPU style owner implements bounded UA/author/compiled/consumer/inline ordering, selector specificity, repeated declaration sequence, shorthand/longhand expansion, custom-property substitution, and computed-invalid winner handling. User origins, !important, cascade layers/scopes, CSS-wide rollback keywords, animations/transitions, CSSOM, and the complete browser cascade remain unsupported.",
+      ],
+      evidence: [
+        {
+          ...implementation("renderer", "packages/core/src/css.ts", "parseDeclarations/applyDeclarations/comparePriority/resolveCascadedVariables", undefined, "The CPU style pipeline preserves ordered declaration entries, compares specificity/owner order/sequence, expands shorthands at their original priority, and resolves or invalidates variable-bearing winners before computed values are consumed.", "User and important origins, layers/scopes, CSS-wide rollback keywords, animation, CSSOM, or the complete browser cascade."),
+          revision: flexGapVerification.revision,
+        },
+        {
+          ...test("renderer", "packages/core/test/renderer.test.ts", "UA/author/inline cascade", "Observable computed layout and paint prove the existing bounded specificity, inheritance, UA and inline precedence paths.", "The complete CSS cascade or every property grammar."),
+          revision: flexGapVerification.revision,
+        },
+        {
+          ...test("renderer", "packages/core/test/author-style-sheet.test.ts", "author/compiled/consumer/inline precedence", "Document theme, compiled component owner, explicit consumer and inline sheets resolve in the documented owner order.", "User origins, !important, layers/scopes, animation, or native CSSOM."),
+          revision: flexGapVerification.revision,
+        },
+        {
+          ...test("renderer", "packages/core/test/gap.test.ts", "ordered and variable-bearing declarations", "Repeated shorthand/longhand source order, specificity retention and invalid-at-computed-value-time target invalidation are observable through row/column gap used values.", "Every shorthand, CSS-wide keyword, cascade layer/scope, or full browser conformance."),
+          revision: flexGapVerification.revision,
+        },
+      ],
+      lastVerified: flexGapVerification,
+    }
+  }
   if (name === "flex-layout") {
     return {
       status: "partial",
       conformance: "adapted",
       limitations: [
-        "The bounded owner supports row/column single-line Flex and nowrap/wrap/wrap-reverse multi-line packing with one scalar gap, per-line grow/shrink/justification/align-items, admitted align-content distribution, and wrap-reverse cross-start semantics; balance, reverse main axes, flex-flow, order, align-self, separate row/column gaps, writing modes, and complete intrinsic multi-line Flexbox sizing remain unsupported.",
+        "The bounded owner supports row/column single-line Flex and nowrap/wrap/wrap-reverse multi-line packing with direction-mapped independent row/column gaps, per-line grow/shrink/justification/align-items, admitted align-content distribution after mandatory cross gaps, intrinsic/auto sizing, and wrap-reverse cross-start semantics; balance, reverse main axes, flex-flow, order, align-self, percentage gaps, gap decorations/rules, writing modes, and complete intrinsic multi-line Flexbox sizing remain unsupported.",
       ],
       evidence: [
         {
           type: "requirement",
           repository: "renderer",
-          revision: alignContentVerification.revision,
+          revision: flexGapVerification.revision,
           path: "packages/core/requirements.md",
           symbol: "RENDERER-CPU-004",
           proves: "The owner contract defines the bounded multi-line Flex semantics and explicit exclusions.",
           doesNotProve: "Runtime behavior or full CSS Flexbox conformance.",
         },
         {
-          ...implementation("renderer", "packages/core/src/renderer.ts", "createFlexLines/alignFlexLines/placeFlexChildren", undefined, "The CPU owner implements single-line and bounded multi-line row/column Flex placement, cross-axis line distribution, and wrap-reverse cross-start semantics.", "The excluded Flexbox and Box Alignment values and complete standard algorithms."),
-          revision: alignContentVerification.revision,
+          ...implementation("renderer", "packages/core/src/renderer.ts", "createFlexLines/alignFlexLines/flexMainGap/flexCrossGap/placeFlexChildren", undefined, "The CPU owner implements single-line and bounded multi-line row/column Flex placement, independent main/cross gap mapping through measurement and intrinsic sizing, cross-axis line distribution, and wrap-reverse semantics.", "The excluded Flexbox, Box Alignment and CSS Gaps values and complete standard algorithms."),
+          revision: flexGapVerification.revision,
         },
         {
           ...test("renderer", "packages/core/test/renderer.test.ts", "production CSS box and flex slice", "Observable frames prove the existing bounded single-line grow/shrink/justification/alignment contract.", "Multi-line packing and full CSS Flexbox conformance."),
-          revision: alignContentVerification.revision,
+          revision: flexGapVerification.revision,
         },
         {
           ...test("renderer", "packages/core/test/flex-wrap.test.ts", "flex-wrap", "Observable computed values and frame boxes prove the bounded row/column nowrap, wrap, wrap-reverse, per-line sizing/alignment, gap, definite-boundary, and cross-axis reversal contract.", "Full CSS Flexbox conformance and the explicitly excluded values."),
-          revision: alignContentVerification.revision,
+          revision: flexGapVerification.revision,
         },
         {
           ...test("renderer", "packages/core/test/align-content.test.ts", "align-content", "Observable computed values and frame boxes prove bounded cross-axis alignment/distribution, auto/definite sizing, positive/negative free space, and wrap-reverse semantics.", "Full CSS Flexbox/Box Alignment conformance and the explicitly excluded values."),
-          revision: alignContentVerification.revision,
+          revision: flexGapVerification.revision,
         },
         {
           ...test("renderer", "packages/core/test/position.test.ts", "absolute flex static position under wrap-reverse", "The absolute-flex static-position path shares the corrected reversed cross-start semantics.", "Every positioned Flexbox algorithm or native browser behavior."),
-          revision: alignContentVerification.revision,
+          revision: flexGapVerification.revision,
+        },
+        {
+          ...test("renderer", "packages/core/test/gap.test.ts", "two-axis Flex gaps", "Observable computed values and frame boxes prove direction-mapped main/cross gaps, shorthand/longhand order, item counting, wrapping, intrinsic sizes, and align-content interaction.", "Grid/multicol gaps, percentage gaps, decorations/rules, reverse main axes, or full conformance."),
+          revision: flexGapVerification.revision,
         },
       ],
-      lastVerified: alignContentVerification,
+      lastVerified: flexGapVerification,
     }
   }
   if (name === "projection-root-inheritance") {
@@ -1215,7 +1398,7 @@ function cssPropertyLimitation(name: string): string {
   if (["color", "background", "background-color", "border-color"].includes(name)) return "CPU style can retain arbitrary/named colors, while the WebGPU transport accepts only transparent, hex, and rgb/rgba forms; unsupported resolved colors fail closed."
   if (name === "box-shadow") return "Only one bounded outer analytical shadow is parsed and transported."
   if (name.includes("border") || name.includes("radius")) return "Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed."
-  if (name.startsWith("flex") || name === "align-items" || name === "align-content" || name === "justify-content") return "Balance, reverse main axes, flex-flow, order, align-self, separate row/column gaps, writing modes, and complete intrinsic multi-line Flexbox sizing remain unsupported."
+  if (name.startsWith("flex") || name === "align-items" || name === "align-content" || name === "justify-content") return "Balance, reverse main axes, flex-flow, order, align-self, percentage gaps, gap decorations/rules, writing modes, and complete intrinsic multi-line Flexbox sizing remain unsupported."
   if (name === "transform" || name === "transform-origin") return "Only axis-aligned translate/scale transforms are supported; rotate/skew/matrix/3D are absent."
   return "Only the explicitly admitted property values and bounded CPU/backend algorithms are implemented."
 }
@@ -1226,7 +1409,8 @@ function cssTestPath(name: string): string {
   if (name.includes("z-index")) return "packages/core/test/z-index.test.ts"
   if (name.includes("shadow")) return "packages/core/test/box-shadow.test.ts"
   if (name.includes("border") || name.includes("background") || name === "color" || name === "opacity") return "packages/core/test/renderer.test.ts"
-  if (name.startsWith("flex") || name === "align-items" || name === "align-content" || name === "justify-content" || name === "gap") return "packages/core/test/renderer.test.ts"
+  if (name === "gap" || name === "row-gap" || name === "column-gap") return "packages/core/test/gap.test.ts"
+  if (name.startsWith("flex") || name === "align-items" || name === "align-content" || name === "justify-content") return "packages/core/test/renderer.test.ts"
   return "packages/core/test/renderer.test.ts"
 }
 
@@ -1370,7 +1554,7 @@ function publicExportTestPath(entry: CapabilityInventoryEntry): string {
 }
 
 const supportedCssProperties = new Set([
-  "display", "box-sizing", "flex-direction", "flex-grow", "flex-shrink", "flex-basis", "flex", "align-items", "align-content", "justify-content", "gap",
+  "display", "box-sizing", "flex-direction", "flex-grow", "flex-shrink", "flex-basis", "flex", "align-items", "align-content", "justify-content", "gap", "row-gap", "column-gap",
   "width", "height", "min-width", "min-height", "max-width", "max-height", "inline-size", "block-size", "min-inline-size", "min-block-size", "max-inline-size", "max-block-size",
   "position", "left", "top", "right", "bottom", "transform", "transform-origin", "box-shadow", "z-index",
   "margin", "margin-top", "margin-right", "margin-bottom", "margin-left", "margin-inline", "margin-block", "margin-inline-start", "margin-inline-end", "margin-block-start", "margin-block-end",
