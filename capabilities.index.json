@@ -502063,7 +502063,7 @@
           "path": "package.json",
           "proves": "The package export path exists.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "./bun",
           "type": "implementation"
         }
@@ -502072,7 +502072,7 @@
       "kind": "package-export-path",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered."
@@ -502106,7 +502106,7 @@
         "anchor": "./compiler/bun.ts",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "partial"
     },
@@ -502124,7 +502124,7 @@
           "path": "compiler/bun.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "createTemplateJsxBunPlugin",
           "type": "implementation"
         },
@@ -502133,7 +502133,7 @@
           "path": "compiled.test.ts",
           "proves": "The bounded project API has behavioral coverage.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "createTemplateJsxBunPlugin",
           "type": "unit-test"
         }
@@ -502142,7 +502142,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -502168,7 +502168,7 @@
         "anchor": "template:compiler/bun.ts#L21",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "implemented"
     },
@@ -502186,7 +502186,7 @@
           "path": "compiler/bun.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "CreateTemplateJsxPluginOptions",
           "type": "implementation"
         }
@@ -502195,7 +502195,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -502223,7 +502223,7 @@
         "anchor": "template:compiler/bun.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -502240,7 +502240,7 @@
           "path": "package.json",
           "proves": "The package export path exists.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "./compiled",
           "type": "implementation"
         }
@@ -502249,7 +502249,7 @@
       "kind": "package-export-path",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered."
@@ -502283,7 +502283,7 @@
         "anchor": "./compiled.ts",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "partial"
     },
@@ -502301,7 +502301,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "bindChild",
           "type": "implementation"
         },
@@ -502310,7 +502310,7 @@
           "path": "compiled.test.ts",
           "proves": "The bounded project API has behavioral coverage.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "bindChild",
           "type": "unit-test"
         }
@@ -502319,7 +502319,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -502345,7 +502345,7 @@
         "anchor": "template:compiled.ts#L183",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "implemented"
     },
@@ -502363,7 +502363,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "bindConditional",
           "type": "implementation"
         },
@@ -502372,7 +502372,7 @@
           "path": "compiled.test.ts",
           "proves": "The bounded project API has behavioral coverage.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "bindConditional",
           "type": "unit-test"
         }
@@ -502381,7 +502381,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -502407,7 +502407,7 @@
         "anchor": "template:compiled.ts#L187",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "implemented"
     },
@@ -502425,7 +502425,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "bindEvent",
           "type": "implementation"
         },
@@ -502434,7 +502434,7 @@
           "path": "compiled.test.ts",
           "proves": "The bounded project API has behavioral coverage.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "bindEvent",
           "type": "unit-test"
         }
@@ -502443,7 +502443,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -502469,7 +502469,7 @@
         "anchor": "template:compiled.ts#L163",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "implemented"
     },
@@ -502487,7 +502487,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "BindingValues",
           "type": "implementation"
         }
@@ -502496,7 +502496,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -502524,7 +502524,7 @@
         "anchor": "template:compiled.ts#L18",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -502542,7 +502542,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "bindKeyed",
           "type": "implementation"
         },
@@ -502551,7 +502551,7 @@
           "path": "compiled.test.ts",
           "proves": "The bounded project API has behavioral coverage.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "bindKeyed",
           "type": "unit-test"
         }
@@ -502560,7 +502560,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -502586,7 +502586,7 @@
         "anchor": "template:compiled.ts#L191",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "implemented"
     },
@@ -502604,7 +502604,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "bindProperty",
           "type": "implementation"
         },
@@ -502613,7 +502613,7 @@
           "path": "compiled.test.ts",
           "proves": "The bounded project API has behavioral coverage.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "bindProperty",
           "type": "unit-test"
         }
@@ -502622,7 +502622,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -502648,7 +502648,7 @@
         "anchor": "template:compiled.ts#L148",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "implemented"
     },
@@ -502666,7 +502666,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "bindRef",
           "type": "implementation"
         },
@@ -502675,7 +502675,7 @@
           "path": "compiled.test.ts",
           "proves": "The bounded project API has behavioral coverage.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "bindRef",
           "type": "unit-test"
         }
@@ -502684,7 +502684,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -502710,7 +502710,7 @@
         "anchor": "template:compiled.ts#L179",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "implemented"
     },
@@ -502728,7 +502728,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "bindStyle",
           "type": "implementation"
         },
@@ -502737,7 +502737,7 @@
           "path": "compiled.test.ts",
           "proves": "The bounded project API has behavioral coverage.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "bindStyle",
           "type": "unit-test"
         }
@@ -502746,7 +502746,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -502772,7 +502772,7 @@
         "anchor": "template:compiled.ts#L159",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "implemented"
     },
@@ -502790,7 +502790,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "bindText",
           "type": "implementation"
         },
@@ -502799,7 +502799,7 @@
           "path": "compiled.test.ts",
           "proves": "The bounded project API has behavioral coverage.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "bindText",
           "type": "unit-test"
         }
@@ -502808,7 +502808,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -502834,7 +502834,7 @@
         "anchor": "template:compiled.ts#L144",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "implemented"
     },
@@ -502852,7 +502852,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "ChildBinding",
           "type": "implementation"
         }
@@ -502861,7 +502861,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -502889,7 +502889,7 @@
         "anchor": "template:compiled.ts#L95",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -502907,7 +502907,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "CompiledMount",
           "type": "implementation"
         }
@@ -502916,7 +502916,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -502944,7 +502944,7 @@
         "anchor": "template:compiled.ts#L20",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -502962,7 +502962,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "compiledStyleSheet",
           "type": "implementation"
         },
@@ -502971,7 +502971,7 @@
           "path": "compiled.test.ts",
           "proves": "The bounded project API has behavioral coverage.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "compiledStyleSheet",
           "type": "unit-test"
         }
@@ -502980,7 +502980,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -503007,7 +503007,7 @@
         "anchor": "template:compiled.ts#L55",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "implemented"
     },
@@ -503025,7 +503025,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "CompiledStyleSheetSource",
           "type": "implementation"
         }
@@ -503034,7 +503034,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -503062,7 +503062,7 @@
         "anchor": "template:compiled.ts#L31",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -503080,7 +503080,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "CompiledTemplate",
           "type": "implementation"
         }
@@ -503089,7 +503089,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -503117,7 +503117,7 @@
         "anchor": "template:compiled.ts#L46",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -503135,7 +503135,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "CompiledTemplateDefinition",
           "type": "implementation"
         }
@@ -503144,7 +503144,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -503172,7 +503172,7 @@
         "anchor": "template:compiled.ts#L38",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -503190,7 +503190,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "ConditionalBinding",
           "type": "implementation"
         }
@@ -503199,7 +503199,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -503227,7 +503227,7 @@
         "anchor": "template:compiled.ts#L101",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -503245,7 +503245,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "decodeCompiledStyleText",
           "type": "implementation"
         },
@@ -503254,7 +503254,7 @@
           "path": "compiled.test.ts",
           "proves": "The bounded project API has behavioral coverage.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "decodeCompiledStyleText",
           "type": "unit-test"
         }
@@ -503263,7 +503263,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -503289,7 +503289,7 @@
         "anchor": "template:compiled.ts#L9",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "implemented"
     },
@@ -503307,7 +503307,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "defineCompiledTemplate",
           "type": "implementation"
         },
@@ -503316,7 +503316,7 @@
           "path": "compiled.test.ts",
           "proves": "The bounded project API has behavioral coverage.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "defineCompiledTemplate",
           "type": "unit-test"
         }
@@ -503325,7 +503325,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -503351,7 +503351,7 @@
         "anchor": "template:compiled.ts#L123",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "implemented"
     },
@@ -503369,7 +503369,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "encodeCompiledStyleText",
           "type": "implementation"
         },
@@ -503378,7 +503378,7 @@
           "path": "compiled.test.ts",
           "proves": "The bounded project API has behavioral coverage.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "encodeCompiledStyleText",
           "type": "unit-test"
         }
@@ -503387,7 +503387,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -503413,7 +503413,7 @@
         "anchor": "template:compiled.ts#L9",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "implemented"
     },
@@ -503431,7 +503431,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "EventBinding",
           "type": "implementation"
         }
@@ -503440,7 +503440,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -503468,7 +503468,7 @@
         "anchor": "template:compiled.ts#L83",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -503486,7 +503486,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "HostBinding",
           "type": "implementation"
         }
@@ -503495,7 +503495,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -503523,7 +503523,7 @@
         "anchor": "template:compiled.ts#L113",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -503541,7 +503541,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "isCompiledTemplate",
           "type": "implementation"
         },
@@ -503550,7 +503550,7 @@
           "path": "compiled.test.ts",
           "proves": "The bounded project API has behavioral coverage.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "isCompiledTemplate",
           "type": "unit-test"
         }
@@ -503559,7 +503559,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -503585,7 +503585,7 @@
         "anchor": "template:compiled.ts#L202",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "implemented"
     },
@@ -503603,7 +503603,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "isHostBinding",
           "type": "implementation"
         },
@@ -503612,7 +503612,7 @@
           "path": "compiled.test.ts",
           "proves": "The bounded project API has behavioral coverage.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "isHostBinding",
           "type": "unit-test"
         }
@@ -503621,7 +503621,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -503647,7 +503647,7 @@
         "anchor": "template:compiled.ts#L207",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "implemented"
     },
@@ -503665,7 +503665,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "KeyedBinding",
           "type": "implementation"
         }
@@ -503674,7 +503674,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -503702,7 +503702,7 @@
         "anchor": "template:compiled.ts#L107",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -503720,7 +503720,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "PropertyBinding",
           "type": "implementation"
         }
@@ -503729,7 +503729,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -503757,7 +503757,7 @@
         "anchor": "template:compiled.ts#L72",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -503775,7 +503775,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "RefBinding",
           "type": "implementation"
         }
@@ -503784,7 +503784,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -503812,7 +503812,7 @@
         "anchor": "template:compiled.ts#L90",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -503830,7 +503830,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "StyleBinding",
           "type": "implementation"
         }
@@ -503839,7 +503839,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -503867,7 +503867,7 @@
         "anchor": "template:compiled.ts#L78",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -503885,7 +503885,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "TextBinding",
           "type": "implementation"
         }
@@ -503894,7 +503894,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -503922,7 +503922,7 @@
         "anchor": "template:compiled.ts#L67",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -503940,7 +503940,7 @@
           "path": "compiled.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "writeBinding",
           "type": "implementation"
         },
@@ -503949,7 +503949,7 @@
           "path": "compiled.test.ts",
           "proves": "The bounded project API has behavioral coverage.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "writeBinding",
           "type": "unit-test"
         }
@@ -503958,7 +503958,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -503984,7 +503984,7 @@
         "anchor": "template:compiled.ts#L195",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "implemented"
     },
@@ -504001,7 +504001,7 @@
           "path": "package.json",
           "proves": "The package export path exists.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "./compiler",
           "type": "implementation"
         }
@@ -504010,7 +504010,7 @@
       "kind": "package-export-path",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered."
@@ -504044,7 +504044,7 @@
         "anchor": "./compiler/index.ts",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "partial"
     },
@@ -504062,7 +504062,7 @@
           "path": "compiler/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "jsxAuthoringProfile",
           "type": "implementation"
         },
@@ -504071,7 +504071,7 @@
           "path": "compiled.test.ts",
           "proves": "The bounded project API has behavioral coverage.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "jsxAuthoringProfile",
           "type": "unit-test"
         }
@@ -504080,7 +504080,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -504106,7 +504106,7 @@
         "anchor": "template:compiler/index.ts#L4",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "implemented"
     },
@@ -504124,7 +504124,7 @@
           "path": "compiler/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "JsxCompileError",
           "type": "implementation"
         },
@@ -504133,7 +504133,7 @@
           "path": "compiled.test.ts",
           "proves": "The bounded project API has behavioral coverage.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "JsxCompileError",
           "type": "unit-test"
         }
@@ -504142,7 +504142,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -504168,7 +504168,7 @@
         "anchor": "template:compiler/index.ts#L1",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "implemented"
     },
@@ -504186,7 +504186,7 @@
           "path": "compiler/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "JsxCompilerSession",
           "type": "implementation"
         },
@@ -504195,7 +504195,7 @@
           "path": "compiled.test.ts",
           "proves": "The bounded project API has behavioral coverage.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "JsxCompilerSession",
           "type": "unit-test"
         }
@@ -504204,7 +504204,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -504230,7 +504230,7 @@
         "anchor": "template:compiler/index.ts#L2",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "implemented"
     },
@@ -504248,7 +504248,7 @@
           "path": "compiler/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "JsxCompilerSessionOptions",
           "type": "implementation"
         }
@@ -504257,7 +504257,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -504285,7 +504285,7 @@
         "anchor": "template:compiler/index.ts#L3",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -504303,7 +504303,7 @@
           "path": "compiler/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "JsxCompilerStats",
           "type": "implementation"
         }
@@ -504312,7 +504312,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -504340,7 +504340,7 @@
         "anchor": "template:compiler/index.ts#L3",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -504358,7 +504358,7 @@
           "path": "compiler/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "JsxTransformOptions",
           "type": "implementation"
         }
@@ -504367,7 +504367,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -504395,7 +504395,7 @@
         "anchor": "template:compiler/index.ts#L5",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -504413,7 +504413,7 @@
           "path": "compiler/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "JsxTransformSymbols",
           "type": "implementation"
         }
@@ -504422,7 +504422,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -504450,7 +504450,7 @@
         "anchor": "template:compiler/index.ts#L5",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -504468,7 +504468,7 @@
           "path": "compiler/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "transformJsxSourceFile",
           "type": "implementation"
         },
@@ -504477,7 +504477,7 @@
           "path": "compiled.test.ts",
           "proves": "The bounded project API has behavioral coverage.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "transformJsxSourceFile",
           "type": "unit-test"
         }
@@ -504486,7 +504486,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -504512,7 +504512,7 @@
         "anchor": "template:compiler/index.ts#L4",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "implemented"
     },
@@ -504529,7 +504529,7 @@
           "path": "package.json",
           "proves": "The package export path exists.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "./jsx-dev-runtime",
           "type": "implementation"
         }
@@ -504538,7 +504538,7 @@
       "kind": "package-export-path",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered."
@@ -504572,7 +504572,7 @@
         "anchor": "./jsx-dev-runtime.ts",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "partial"
     },
@@ -504590,7 +504590,7 @@
           "path": "jsx-dev-runtime.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "Fragment",
           "type": "implementation"
         }
@@ -504599,7 +504599,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The export is an explicit fail-closed unsupported path."
@@ -504627,7 +504627,7 @@
         "anchor": "template:jsx-dev-runtime.ts#L1",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unsupported"
     },
@@ -504645,7 +504645,7 @@
           "path": "jsx-dev-runtime.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "JSX",
           "type": "implementation"
         }
@@ -504654,7 +504654,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -504682,7 +504682,7 @@
         "anchor": "template:jsx-dev-runtime.ts#L3",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -504700,7 +504700,7 @@
           "path": "jsx-dev-runtime.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "jsxDEV",
           "type": "implementation"
         }
@@ -504709,7 +504709,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The export is an explicit fail-closed unsupported path."
@@ -504737,7 +504737,7 @@
         "anchor": "template:jsx-dev-runtime.ts#L1",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unsupported"
     },
@@ -504755,7 +504755,7 @@
           "path": "jsx-dev-runtime.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "JsxSourceElement",
           "type": "implementation"
         }
@@ -504764,7 +504764,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -504792,7 +504792,7 @@
         "anchor": "template:jsx-dev-runtime.ts#L2",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -504809,7 +504809,7 @@
           "path": "package.json",
           "proves": "The package export path exists.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "./jsx-runtime",
           "type": "implementation"
         }
@@ -504818,7 +504818,7 @@
       "kind": "package-export-path",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered."
@@ -504852,7 +504852,7 @@
         "anchor": "./jsx-runtime.ts",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "partial"
     },
@@ -504870,7 +504870,7 @@
           "path": "jsx-runtime.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "CssCompilerIntrinsic",
           "type": "implementation"
         }
@@ -504879,7 +504879,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -504907,7 +504907,7 @@
         "anchor": "template:jsx-runtime.ts#L16",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -504925,7 +504925,7 @@
           "path": "jsx-runtime.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "Element",
           "type": "implementation"
         }
@@ -504934,7 +504934,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -504962,7 +504962,7 @@
         "anchor": "template:jsx-runtime.ts#L28",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -504980,7 +504980,7 @@
           "path": "jsx-runtime.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "ElementChildrenAttribute",
           "type": "implementation"
         }
@@ -504989,7 +504989,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -505017,7 +505017,7 @@
         "anchor": "template:jsx-runtime.ts#L30",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -505035,7 +505035,7 @@
           "path": "jsx-runtime.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "ElementType",
           "type": "implementation"
         }
@@ -505044,7 +505044,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -505072,7 +505072,7 @@
         "anchor": "template:jsx-runtime.ts#L29",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -505090,7 +505090,7 @@
           "path": "jsx-runtime.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "Fragment",
           "type": "implementation"
         }
@@ -505099,7 +505099,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The export is an explicit fail-closed unsupported path."
@@ -505127,7 +505127,7 @@
         "anchor": "template:jsx-runtime.ts#L49",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unsupported"
     },
@@ -505145,7 +505145,7 @@
           "path": "jsx-runtime.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "IntrinsicAttributes",
           "type": "implementation"
         }
@@ -505154,7 +505154,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -505182,7 +505182,7 @@
         "anchor": "template:jsx-runtime.ts#L33",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -505200,7 +505200,7 @@
           "path": "jsx-runtime.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "IntrinsicElements",
           "type": "implementation"
         }
@@ -505209,7 +505209,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -505237,7 +505237,7 @@
         "anchor": "template:jsx-runtime.ts#L36",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -505255,7 +505255,7 @@
           "path": "jsx-runtime.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "jsx",
           "type": "implementation"
         }
@@ -505264,7 +505264,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The export is an explicit fail-closed unsupported path."
@@ -505292,7 +505292,7 @@
         "anchor": "template:jsx-runtime.ts#L41",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unsupported"
     },
@@ -505310,7 +505310,7 @@
           "path": "jsx-runtime.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "jsxs",
           "type": "implementation"
         }
@@ -505319,7 +505319,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The export is an explicit fail-closed unsupported path."
@@ -505347,7 +505347,7 @@
         "anchor": "template:jsx-runtime.ts#L45",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unsupported"
     },
@@ -505365,7 +505365,7 @@
           "path": "jsx-runtime.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "JsxSourceElement",
           "type": "implementation"
         }
@@ -505374,7 +505374,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -505402,7 +505402,7 @@
         "anchor": "template:jsx-runtime.ts#L7",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -505419,7 +505419,7 @@
           "path": "package.json",
           "proves": "The package export path exists.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": ".",
           "type": "implementation"
         }
@@ -505428,7 +505428,7 @@
       "kind": "package-export-path",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered."
@@ -505462,7 +505462,7 @@
         "anchor": "./dist/index.js",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "partial"
     },
@@ -505480,7 +505480,7 @@
           "path": "index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "Attributes",
           "type": "implementation"
         }
@@ -505489,7 +505489,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -505517,7 +505517,7 @@
         "anchor": "template:index.ts#L38",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -505535,7 +505535,7 @@
           "path": "index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "compile",
           "type": "implementation"
         },
@@ -505544,7 +505544,7 @@
           "path": "compiled.test.ts",
           "proves": "The bounded project API has behavioral coverage.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "compile",
           "type": "unit-test"
         }
@@ -505553,7 +505553,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -505579,7 +505579,7 @@
         "anchor": "template:index.ts#L28",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "implemented"
     },
@@ -505597,7 +505597,7 @@
           "path": "index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "css",
           "type": "implementation"
         },
@@ -505606,7 +505606,7 @@
           "path": "compiled.test.ts",
           "proves": "The bounded project API has behavioral coverage.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "css",
           "type": "unit-test"
         }
@@ -505615,7 +505615,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -505641,7 +505641,7 @@
         "anchor": "template:index.ts#L20",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "implemented"
     },
@@ -505659,7 +505659,7 @@
           "path": "index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "CssDeclarationValue",
           "type": "implementation"
         }
@@ -505668,7 +505668,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -505696,7 +505696,7 @@
         "anchor": "template:index.ts#L21",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -505714,7 +505714,7 @@
           "path": "index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "CssSourceValue",
           "type": "implementation"
         }
@@ -505723,7 +505723,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -505751,7 +505751,7 @@
         "anchor": "template:index.ts#L21",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -505769,7 +505769,7 @@
           "path": "index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "CssStyleValue",
           "type": "implementation"
         }
@@ -505778,7 +505778,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -505806,7 +505806,7 @@
         "anchor": "template:index.ts#L21",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -505824,7 +505824,7 @@
           "path": "index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "CssTemplateResult",
           "type": "implementation"
         }
@@ -505833,7 +505833,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -505861,7 +505861,7 @@
         "anchor": "template:index.ts#L21",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -505879,7 +505879,7 @@
           "path": "index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "CssTemplateValue",
           "type": "implementation"
         }
@@ -505888,7 +505888,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -505916,7 +505916,7 @@
         "anchor": "template:index.ts#L21",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -505934,7 +505934,7 @@
           "path": "index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "html",
           "type": "implementation"
         },
@@ -505943,7 +505943,7 @@
           "path": "compiled.test.ts",
           "proves": "The bounded project API has behavioral coverage.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "html",
           "type": "unit-test"
         }
@@ -505952,7 +505952,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -505978,7 +505978,7 @@
         "anchor": "template:index.ts#L28",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "implemented"
     },
@@ -505996,7 +505996,7 @@
           "path": "index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "isCssTemplateResult",
           "type": "implementation"
         },
@@ -506005,7 +506005,7 @@
           "path": "compiled.test.ts",
           "proves": "The bounded project API has behavioral coverage.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "isCssTemplateResult",
           "type": "unit-test"
         }
@@ -506014,7 +506014,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -506040,7 +506040,7 @@
         "anchor": "template:index.ts#L20",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "implemented"
     },
@@ -506058,7 +506058,7 @@
           "path": "index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "Node",
           "type": "implementation"
         }
@@ -506067,7 +506067,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -506095,7 +506095,7 @@
         "anchor": "template:index.ts#L37",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -506113,7 +506113,7 @@
           "path": "index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "parse",
           "type": "implementation"
         },
@@ -506122,7 +506122,7 @@
           "path": "compiled.test.ts",
           "proves": "The bounded project API has behavioral coverage.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "parse",
           "type": "unit-test"
         }
@@ -506131,7 +506131,7 @@
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -506157,7 +506157,7 @@
         "anchor": "template:index.ts#L73",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "implemented"
     },
@@ -506175,7 +506175,7 @@
           "path": "index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "TemplateChild",
           "type": "implementation"
         }
@@ -506184,7 +506184,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -506212,7 +506212,7 @@
         "anchor": "template:index.ts#L29",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -506230,7 +506230,7 @@
           "path": "index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "TemplateInstance",
           "type": "implementation"
         }
@@ -506239,7 +506239,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -506267,7 +506267,7 @@
         "anchor": "template:index.ts#L29",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -506285,7 +506285,7 @@
           "path": "index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "TemplateParameters",
           "type": "implementation"
         }
@@ -506294,7 +506294,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -506322,7 +506322,7 @@
         "anchor": "template:index.ts#L41",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -506340,7 +506340,7 @@
           "path": "index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "TemplateProgram",
           "type": "implementation"
         }
@@ -506349,7 +506349,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -506377,7 +506377,7 @@
         "anchor": "template:index.ts#L29",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -506395,7 +506395,7 @@
           "path": "index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "TemplateResult",
           "type": "implementation"
         }
@@ -506404,7 +506404,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -506432,7 +506432,7 @@
         "anchor": "template:index.ts#L29",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -506450,7 +506450,7 @@
           "path": "index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "TemplateView",
           "type": "implementation"
         }
@@ -506459,7 +506459,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -506487,7 +506487,7 @@
         "anchor": "template:index.ts#L29",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -506505,7 +506505,7 @@
           "path": "index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "ValueStyle",
           "type": "implementation"
         }
@@ -506514,7 +506514,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -506542,7 +506542,7 @@
         "anchor": "template:index.ts#L39",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -506560,7 +506560,7 @@
           "path": "index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "ValueStyleObject",
           "type": "implementation"
         }
@@ -506569,7 +506569,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Export/type presence is not behavioral evidence."
@@ -506597,7 +506597,7 @@
         "anchor": "template:index.ts#L39",
         "profile": "project-contract",
         "source": "@zavx0z/template-exports",
-        "version": "2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "version": "2.6.2 at 838a214a83950259f3f5d543e881e11402bc230c"
       },
       "status": "unverified"
     },
@@ -517149,7 +517149,7 @@
           "path": "compiler/transform.ts",
           "proves": "Bounded compiler/ABI branch.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "arrays",
           "type": "implementation"
         },
@@ -517158,7 +517158,7 @@
           "path": "compiler/component-children-runtime.test.ts",
           "proves": "Current keyed/fixed-slot behavior.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "arrays",
           "type": "unit-test"
         }
@@ -517167,7 +517167,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Only compiler-owned keyed component maps or partial ABI validation are supported."
@@ -517205,7 +517205,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "arrow component rejection",
           "type": "implementation"
         },
@@ -517214,7 +517214,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "arrow component rejection",
           "type": "unit-test"
         }
@@ -517223,7 +517223,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -517259,7 +517259,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "async component rejection",
           "type": "implementation"
         },
@@ -517268,7 +517268,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "async component rejection",
           "type": "unit-test"
         }
@@ -517277,7 +517277,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -517313,7 +517313,7 @@
           "path": "compiler/transform.ts",
           "proves": "Bounded compiler/ABI branch.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "binding range validation",
           "type": "implementation"
         },
@@ -517322,7 +517322,7 @@
           "path": "compiler/component-children-runtime.test.ts",
           "proves": "Current keyed/fixed-slot behavior.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "binding range validation",
           "type": "unit-test"
         }
@@ -517331,7 +517331,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Only compiler-owned keyed component maps or partial ABI validation are supported."
@@ -517369,7 +517369,7 @@
           "path": "compiler/transform.ts",
           "proves": "Bounded compiler/ABI branch.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "binding realm validation",
           "type": "implementation"
         },
@@ -517378,7 +517378,7 @@
           "path": "compiler/component-children-runtime.test.ts",
           "proves": "Current keyed/fixed-slot behavior.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "binding realm validation",
           "type": "unit-test"
         }
@@ -517387,7 +517387,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Only compiler-owned keyed component maps or partial ABI validation are supported."
@@ -517429,7 +517429,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "browser target build",
           "type": "implementation"
         },
@@ -517438,7 +517438,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "browser target build",
           "type": "unit-test"
         }
@@ -517447,7 +517447,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -517516,7 +517516,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "callback refs",
           "type": "implementation"
         },
@@ -517525,7 +517525,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "callback refs",
           "type": "unit-test"
         }
@@ -517534,7 +517534,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -517570,7 +517570,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "children",
           "type": "implementation"
         },
@@ -517579,7 +517579,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "children",
           "type": "unit-test"
         }
@@ -517588,7 +517588,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -517624,7 +517624,7 @@
           "path": "requirements.md",
           "proves": "The pinned project inventory contains tsx.compiler.class.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "class",
           "type": "requirement"
         }
@@ -517633,7 +517633,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The governed TSX compiler rejects this syntax or does not provide the requested diagnostic/source-map contract."
@@ -517671,7 +517671,7 @@
           "path": "requirements.md",
           "proves": "The pinned project inventory contains tsx.compiler.class-name.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "class name",
           "type": "requirement"
         }
@@ -517680,7 +517680,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The governed TSX compiler rejects this syntax or does not provide the requested diagnostic/source-map contract."
@@ -517718,7 +517718,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "compiler diagnostics",
           "type": "implementation"
         },
@@ -517727,7 +517727,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "compiler diagnostics",
           "type": "unit-test"
         }
@@ -517736,7 +517736,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -517772,7 +517772,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "component children",
           "type": "implementation"
         },
@@ -517781,7 +517781,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "component children",
           "type": "unit-test"
         }
@@ -517790,7 +517790,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -517826,7 +517826,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "component escape rejection",
           "type": "implementation"
         },
@@ -517835,7 +517835,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "component escape rejection",
           "type": "unit-test"
         }
@@ -517844,7 +517844,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -517880,7 +517880,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "conditional branches",
           "type": "implementation"
         },
@@ -517889,7 +517889,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "conditional branches",
           "type": "unit-test"
         }
@@ -517898,7 +517898,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -517934,7 +517934,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "custom hooks",
           "type": "implementation"
         },
@@ -517943,7 +517943,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "custom hooks",
           "type": "unit-test"
         }
@@ -517952,7 +517952,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -517988,7 +517988,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "dangerously set inner html rejection",
           "type": "implementation"
         },
@@ -517997,7 +517997,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "dangerously set inner html rejection",
           "type": "unit-test"
         }
@@ -518006,7 +518006,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -518042,7 +518042,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "dependency invalidation",
           "type": "implementation"
         },
@@ -518051,7 +518051,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "dependency invalidation",
           "type": "unit-test"
         }
@@ -518060,7 +518060,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -518096,7 +518096,7 @@
           "path": "requirements.md",
           "proves": "The pinned project inventory contains tsx.compiler.destructured-receivers.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "destructured receivers",
           "type": "requirement"
         }
@@ -518105,7 +518105,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The governed TSX compiler rejects this syntax or does not provide the requested diagnostic/source-map contract."
@@ -518143,7 +518143,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "dynamic import rejection",
           "type": "implementation"
         },
@@ -518152,7 +518152,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "dynamic import rejection",
           "type": "unit-test"
         }
@@ -518161,7 +518161,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -518197,7 +518197,7 @@
           "path": "requirements.md",
           "proves": "The pinned project inventory contains tsx.compiler.dynamic-tags.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "dynamic tags",
           "type": "requirement"
         }
@@ -518206,7 +518206,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The governed TSX compiler rejects this syntax or does not provide the requested diagnostic/source-map contract."
@@ -518244,7 +518244,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "early return rejection",
           "type": "implementation"
         },
@@ -518253,7 +518253,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "early return rejection",
           "type": "unit-test"
         }
@@ -518262,7 +518262,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -518298,7 +518298,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "event bindings",
           "type": "implementation"
         },
@@ -518307,7 +518307,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "event bindings",
           "type": "unit-test"
         }
@@ -518316,7 +518316,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -518352,7 +518352,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "event capture bindings",
           "type": "implementation"
         },
@@ -518361,7 +518361,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "event capture bindings",
           "type": "unit-test"
         }
@@ -518370,7 +518370,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -518406,7 +518406,7 @@
           "path": "requirements.md",
           "proves": "The pinned project inventory contains tsx.compiler.explicit-children-prop.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "explicit children prop",
           "type": "requirement"
         }
@@ -518415,7 +518415,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The governed TSX compiler rejects this syntax or does not provide the requested diagnostic/source-map contract."
@@ -518453,7 +518453,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "fixed slot abi",
           "type": "implementation"
         },
@@ -518462,7 +518462,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "fixed slot abi",
           "type": "unit-test"
         }
@@ -518471,7 +518471,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -518507,7 +518507,7 @@
           "path": "requirements.md",
           "proves": "The pinned project inventory contains tsx.compiler.fragments.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "fragments",
           "type": "requirement"
         }
@@ -518516,7 +518516,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The governed TSX compiler rejects this syntax or does not provide the requested diagnostic/source-map contract."
@@ -518554,7 +518554,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "function components",
           "type": "implementation"
         },
@@ -518563,7 +518563,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "function components",
           "type": "unit-test"
         }
@@ -518572,7 +518572,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -518608,7 +518608,7 @@
           "path": "requirements.md",
           "proves": "The pinned project inventory contains tsx.compiler.generic-components.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "generic components",
           "type": "requirement"
         }
@@ -518617,7 +518617,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The governed TSX compiler rejects this syntax or does not provide the requested diagnostic/source-map contract."
@@ -518655,7 +518655,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "hook order validation",
           "type": "implementation"
         },
@@ -518664,7 +518664,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "hook order validation",
           "type": "unit-test"
         }
@@ -518673,7 +518673,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -518709,7 +518709,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "intrinsic elements",
           "type": "implementation"
         },
@@ -518718,7 +518718,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "intrinsic elements",
           "type": "unit-test"
         }
@@ -518727,7 +518727,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -518763,7 +518763,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "keyed component map",
           "type": "implementation"
         },
@@ -518772,7 +518772,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "keyed component map",
           "type": "unit-test"
         }
@@ -518781,7 +518781,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -518817,7 +518817,7 @@
           "path": "compiler/transform.ts",
           "proves": "Bounded compiler/ABI branch.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "keys",
           "type": "implementation"
         },
@@ -518826,7 +518826,7 @@
           "path": "compiler/component-children-runtime.test.ts",
           "proves": "Current keyed/fixed-slot behavior.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "keys",
           "type": "unit-test"
         }
@@ -518835,7 +518835,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Only compiler-owned keyed component maps or partial ABI validation are supported."
@@ -518873,7 +518873,7 @@
           "path": "compiler/transform.ts",
           "proves": "Bounded compiler/ABI branch.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "map",
           "type": "implementation"
         },
@@ -518882,7 +518882,7 @@
           "path": "compiler/component-children-runtime.test.ts",
           "proves": "Current keyed/fixed-slot behavior.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "map",
           "type": "unit-test"
         }
@@ -518891,7 +518891,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Only compiler-owned keyed component maps or partial ABI validation are supported."
@@ -518929,7 +518929,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "memo components",
           "type": "implementation"
         },
@@ -518938,7 +518938,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "memo components",
           "type": "unit-test"
         }
@@ -518947,7 +518947,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -518983,7 +518983,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "multiple keyed children",
           "type": "implementation"
         },
@@ -518992,7 +518992,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "multiple keyed children",
           "type": "unit-test"
         }
@@ -519001,7 +519001,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -519037,7 +519037,7 @@
           "path": "requirements.md",
           "proves": "The pinned project inventory contains tsx.compiler.namespace-tags.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "namespace tags",
           "type": "requirement"
         }
@@ -519046,7 +519046,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The governed TSX compiler rejects this syntax or does not provide the requested diagnostic/source-map contract."
@@ -519084,7 +519084,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "nested components",
           "type": "implementation"
         },
@@ -519093,7 +519093,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "nested components",
           "type": "unit-test"
         }
@@ -519102,7 +519102,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -519138,7 +519138,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "object refs",
           "type": "implementation"
         },
@@ -519147,7 +519147,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "object refs",
           "type": "unit-test"
         }
@@ -519156,7 +519156,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -519192,7 +519192,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "primitive children",
           "type": "implementation"
         },
@@ -519201,7 +519201,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "primitive children",
           "type": "unit-test"
         }
@@ -519210,7 +519210,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -519246,7 +519246,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "property bindings",
           "type": "implementation"
         },
@@ -519255,7 +519255,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "property bindings",
           "type": "unit-test"
         }
@@ -519264,7 +519264,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -519300,7 +519300,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "props",
           "type": "implementation"
         },
@@ -519309,7 +519309,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "props",
           "type": "unit-test"
         }
@@ -519318,7 +519318,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -519354,7 +519354,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "react import rejection",
           "type": "implementation"
         },
@@ -519363,7 +519363,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "react import rejection",
           "type": "unit-test"
         }
@@ -519372,7 +519372,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -519408,7 +519408,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "refs",
           "type": "implementation"
         },
@@ -519417,7 +519417,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "refs",
           "type": "unit-test"
         }
@@ -519426,7 +519426,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -519462,7 +519462,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "root render",
           "type": "implementation"
         },
@@ -519471,7 +519471,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "root render",
           "type": "unit-test"
         }
@@ -519480,7 +519480,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -519516,7 +519516,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "runtime jsx fail closed",
           "type": "implementation"
         },
@@ -519525,7 +519525,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "runtime jsx fail closed",
           "type": "unit-test"
         }
@@ -519534,7 +519534,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -519570,7 +519570,7 @@
           "path": "compiler/transform.ts",
           "proves": "Bounded compiler/ABI branch.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "same parent anchor validation",
           "type": "implementation"
         },
@@ -519579,7 +519579,7 @@
           "path": "compiler/component-children-runtime.test.ts",
           "proves": "Current keyed/fixed-slot behavior.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "same parent anchor validation",
           "type": "unit-test"
         }
@@ -519588,7 +519588,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Only compiler-owned keyed component maps or partial ABI validation are supported."
@@ -519626,7 +519626,7 @@
           "path": "requirements.md",
           "proves": "The pinned project inventory contains tsx.compiler.semantic-diagnostics.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "semantic diagnostics",
           "type": "requirement"
         }
@@ -519635,7 +519635,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The governed TSX compiler rejects this syntax or does not provide the requested diagnostic/source-map contract."
@@ -519673,7 +519673,7 @@
           "path": "requirements.md",
           "proves": "The pinned project inventory contains tsx.compiler.source-maps.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "source maps",
           "type": "requirement"
         }
@@ -519682,7 +519682,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The governed TSX compiler rejects this syntax or does not provide the requested diagnostic/source-map contract."
@@ -519720,7 +519720,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "source roots",
           "type": "implementation"
         },
@@ -519729,7 +519729,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "source roots",
           "type": "unit-test"
         }
@@ -519738,7 +519738,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -519774,7 +519774,7 @@
           "path": "requirements.md",
           "proves": "The pinned project inventory contains tsx.compiler.spreads.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "spreads",
           "type": "requirement"
         }
@@ -519783,7 +519783,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The governed TSX compiler rejects this syntax or does not provide the requested diagnostic/source-map contract."
@@ -519823,7 +519823,7 @@
           "path": "compiler/style.ts",
           "proves": "Global css intrinsic rules, bounded attribute/pseudo selectors and nested fragments become one ordered compiled sheet with addressed markers.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "component-local css extraction",
           "type": "implementation"
         },
@@ -519832,7 +519832,7 @@
           "path": "compiled.ts",
           "proves": "Immutable stylesheet metadata crosses the compiled-template ABI with exact duplicate collapse and collision rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "CompiledTemplate.styleSheets",
           "type": "implementation"
         },
@@ -519841,7 +519841,7 @@
           "path": "compiler/style-compiler.test.ts",
           "proves": "Global intrinsic identity, css-only lowering, authored precedence, component base styles, residual caller style and exact fail-closed diagnostics.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "static-style-extraction",
           "type": "unit-test"
         },
@@ -519850,7 +519850,7 @@
           "path": "compiled-style-sheet.test.ts",
           "proves": "Compiled metadata reaches the runtime package without runtime JSX or defineStyles authoring.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "static-style-extraction",
           "type": "unit-test"
         }
@@ -519859,7 +519859,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -519908,7 +519908,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "style bindings",
           "type": "implementation"
         },
@@ -519917,7 +519917,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "style bindings",
           "type": "unit-test"
         }
@@ -519926,7 +519926,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -519962,7 +519962,7 @@
           "path": "compiler/transform.ts",
           "proves": "Governed TSX-to-fixed-slot ABI transform or explicit rejection.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "symbol resolution",
           "type": "implementation"
         },
@@ -519971,7 +519971,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Accepted/rejected syntax, symbol resolution, cache invalidation, and emitted ABI.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "symbol resolution",
           "type": "unit-test"
         }
@@ -519980,7 +519980,7 @@
       "kind": "tsx-compiler",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -520016,7 +520016,7 @@
           "path": "dom.ts",
           "proves": "Direct semantic DOM tagged-template implementation.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "arrays",
           "type": "implementation"
         },
@@ -520025,7 +520025,7 @@
           "path": "dom.test.ts",
           "proves": "Observable mount/update/identity/disposal/security behavior.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "arrays",
           "type": "unit-test"
         }
@@ -520034,7 +520034,7 @@
       "kind": "tagged-html",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -520070,7 +520070,7 @@
           "path": "dom.ts",
           "proves": "Direct semantic DOM tagged-template implementation.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "attributes",
           "type": "implementation"
         },
@@ -520079,7 +520079,7 @@
           "path": "dom.test.ts",
           "proves": "Observable mount/update/identity/disposal/security behavior.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "attributes",
           "type": "unit-test"
         }
@@ -520088,7 +520088,7 @@
       "kind": "tagged-html",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -520124,7 +520124,7 @@
           "path": "dom.ts",
           "proves": "Direct semantic DOM tagged-template implementation.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "boolean remove semantics",
           "type": "implementation"
         },
@@ -520133,7 +520133,7 @@
           "path": "dom.test.ts",
           "proves": "Observable mount/update/identity/disposal/security behavior.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "boolean remove semantics",
           "type": "unit-test"
         }
@@ -520142,7 +520142,7 @@
       "kind": "tagged-html",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -520178,7 +520178,7 @@
           "path": "requirements.md",
           "proves": "The pinned project inventory contains tsx.tagged-html.comments.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "comments",
           "type": "requirement"
         }
@@ -520187,7 +520187,7 @@
       "kind": "tagged-html",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The tagged-html parser fails closed or intentionally omits this grammar/reconciliation capability."
@@ -520225,7 +520225,7 @@
           "path": "dom.ts",
           "proves": "Direct semantic DOM tagged-template implementation.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "disposal",
           "type": "implementation"
         },
@@ -520234,7 +520234,7 @@
           "path": "dom.test.ts",
           "proves": "Observable mount/update/identity/disposal/security behavior.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "disposal",
           "type": "unit-test"
         }
@@ -520243,7 +520243,7 @@
       "kind": "tagged-html",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -520279,7 +520279,7 @@
           "path": "requirements.md",
           "proves": "The pinned project inventory contains tsx.tagged-html.doctypes.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "doctypes",
           "type": "requirement"
         }
@@ -520288,7 +520288,7 @@
       "kind": "tagged-html",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The tagged-html parser fails closed or intentionally omits this grammar/reconciliation capability."
@@ -520326,7 +520326,7 @@
           "path": "requirements.md",
           "proves": "The pinned project inventory contains tsx.tagged-html.dynamic-tags.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "dynamic tags",
           "type": "requirement"
         }
@@ -520335,7 +520335,7 @@
       "kind": "tagged-html",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The tagged-html parser fails closed or intentionally omits this grammar/reconciliation capability."
@@ -520373,7 +520373,7 @@
           "path": "dom.ts",
           "proves": "Direct semantic DOM tagged-template implementation.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "dynamic values",
           "type": "implementation"
         },
@@ -520382,7 +520382,7 @@
           "path": "dom.test.ts",
           "proves": "Observable mount/update/identity/disposal/security behavior.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "dynamic values",
           "type": "unit-test"
         }
@@ -520391,7 +520391,7 @@
       "kind": "tagged-html",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -520427,7 +520427,7 @@
           "path": "dom.ts",
           "proves": "Direct semantic DOM tagged-template implementation.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "events",
           "type": "implementation"
         },
@@ -520436,7 +520436,7 @@
           "path": "dom.test.ts",
           "proves": "Observable mount/update/identity/disposal/security behavior.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "events",
           "type": "unit-test"
         }
@@ -520445,7 +520445,7 @@
       "kind": "tagged-html",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -520481,7 +520481,7 @@
           "path": "requirements.md",
           "proves": "The owner contract or public export claims this bounded capability.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "failure rollback",
           "type": "requirement"
         }
@@ -520490,7 +520490,7 @@
       "kind": "tagged-html",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "Document.transaction gives one mutation batch, but no Template-owned rollback test proves restoration after a later part throws."
@@ -520528,7 +520528,7 @@
           "path": "requirements.md",
           "proves": "The pinned project inventory contains tsx.tagged-html.keyed-behavior.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "keyed behavior",
           "type": "requirement"
         }
@@ -520537,7 +520537,7 @@
       "kind": "tagged-html",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The tagged-html parser fails closed or intentionally omits this grammar/reconciliation capability."
@@ -520575,7 +520575,7 @@
           "path": "requirements.md",
           "proves": "The pinned project inventory contains tsx.tagged-html.namespace-tags.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "namespace tags",
           "type": "requirement"
         }
@@ -520584,7 +520584,7 @@
       "kind": "tagged-html",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The tagged-html parser fails closed or intentionally omits this grammar/reconciliation capability."
@@ -520622,7 +520622,7 @@
           "path": "dom.ts",
           "proves": "Direct semantic DOM tagged-template implementation.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "nested templates",
           "type": "implementation"
         },
@@ -520631,7 +520631,7 @@
           "path": "dom.test.ts",
           "proves": "Observable mount/update/identity/disposal/security behavior.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "nested templates",
           "type": "unit-test"
         }
@@ -520640,7 +520640,7 @@
       "kind": "tagged-html",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -520676,7 +520676,7 @@
           "path": "dom.ts",
           "proves": "Direct semantic DOM tagged-template implementation.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "positional reconciliation",
           "type": "implementation"
         },
@@ -520685,7 +520685,7 @@
           "path": "dom.test.ts",
           "proves": "Observable mount/update/identity/disposal/security behavior.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "positional reconciliation",
           "type": "unit-test"
         }
@@ -520694,7 +520694,7 @@
       "kind": "tagged-html",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -520730,7 +520730,7 @@
           "path": "requirements.md",
           "proves": "The pinned project inventory contains tsx.tagged-html.raw-text-elements.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "raw text elements",
           "type": "requirement"
         }
@@ -520739,7 +520739,7 @@
       "kind": "tagged-html",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The tagged-html parser fails closed or intentionally omits this grammar/reconciliation capability."
@@ -520777,7 +520777,7 @@
           "path": "dom.ts",
           "proves": "Direct semantic DOM tagged-template implementation.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "security injection",
           "type": "implementation"
         },
@@ -520786,7 +520786,7 @@
           "path": "dom.test.ts",
           "proves": "Observable mount/update/identity/disposal/security behavior.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "security injection",
           "type": "unit-test"
         }
@@ -520795,7 +520795,7 @@
       "kind": "tagged-html",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -520833,7 +520833,7 @@
           "path": "dom.ts",
           "proves": "Direct semantic DOM tagged-template implementation.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "static element names",
           "type": "implementation"
         },
@@ -520842,7 +520842,7 @@
           "path": "dom.test.ts",
           "proves": "Observable mount/update/identity/disposal/security behavior.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "static element names",
           "type": "unit-test"
         }
@@ -520851,7 +520851,7 @@
       "kind": "tagged-html",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {
@@ -520900,7 +520900,7 @@
           "path": "dom.ts",
           "proves": "Direct semantic DOM tagged-template implementation.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "transaction boundaries",
           "type": "implementation"
         },
@@ -520909,7 +520909,7 @@
           "path": "dom.test.ts",
           "proves": "Observable mount/update/identity/disposal/security behavior.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "transaction boundaries",
           "type": "unit-test"
         }
@@ -520918,7 +520918,7 @@
       "kind": "tagged-html",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [],
       "metadata": {},
@@ -520962,7 +520962,7 @@
           "path": "jsx-runtime.ts",
           "proves": "Type namespace/runtime boundary used by the project compiler.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "angle bracket assertion rejection",
           "type": "implementation"
         },
@@ -520971,7 +520971,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Current compiler typing/transform profile.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "angle bracket assertion rejection",
           "type": "unit-test"
         }
@@ -520980,7 +520980,7 @@
       "kind": "behavior",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "TypeScript typing is intentionally broader than the project compiler's accepted source profile."
@@ -521026,7 +521026,7 @@
           "path": "jsx-runtime.ts",
           "proves": "Type namespace/runtime boundary used by the project compiler.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "attribute type checking",
           "type": "implementation"
         },
@@ -521035,7 +521035,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Current compiler typing/transform profile.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "attribute type checking",
           "type": "unit-test"
         }
@@ -521044,7 +521044,7 @@
       "kind": "behavior",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "TypeScript typing is intentionally broader than the project compiler's accepted source profile."
@@ -521090,7 +521090,7 @@
           "path": "jsx-runtime.ts",
           "proves": "Type namespace/runtime boundary used by the project compiler.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "automatic runtime",
           "type": "implementation"
         },
@@ -521099,7 +521099,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Current compiler typing/transform profile.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "automatic runtime",
           "type": "unit-test"
         }
@@ -521108,7 +521108,7 @@
       "kind": "behavior",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "TypeScript typing is intentionally broader than the project compiler's accepted source profile."
@@ -521154,7 +521154,7 @@
           "path": "jsx-runtime.ts",
           "proves": "Type namespace/runtime boundary used by the project compiler.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "children type checking",
           "type": "implementation"
         },
@@ -521163,7 +521163,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Current compiler typing/transform profile.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "children type checking",
           "type": "unit-test"
         }
@@ -521172,7 +521172,7 @@
       "kind": "behavior",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "TypeScript typing is intentionally broader than the project compiler's accepted source profile."
@@ -521218,7 +521218,7 @@
       "kind": "behavior",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The syntax exists in TypeScript JSX but is rejected or not emitted by the project compiler profile."
@@ -521264,7 +521264,7 @@
           "path": "jsx-runtime.ts",
           "proves": "Type namespace/runtime boundary used by the project compiler.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "development runtime",
           "type": "implementation"
         },
@@ -521273,7 +521273,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Current compiler typing/transform profile.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "development runtime",
           "type": "unit-test"
         }
@@ -521282,7 +521282,7 @@
       "kind": "behavior",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "TypeScript typing is intentionally broader than the project compiler's accepted source profile."
@@ -521328,7 +521328,7 @@
           "path": "jsx-runtime.ts",
           "proves": "Type namespace/runtime boundary used by the project compiler.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "expression children",
           "type": "implementation"
         },
@@ -521337,7 +521337,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Current compiler typing/transform profile.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "expression children",
           "type": "unit-test"
         }
@@ -521346,7 +521346,7 @@
       "kind": "behavior",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "TypeScript typing is intentionally broader than the project compiler's accepted source profile."
@@ -521392,7 +521392,7 @@
       "kind": "behavior",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The syntax exists in TypeScript JSX but is rejected or not emitted by the project compiler profile."
@@ -521438,7 +521438,7 @@
       "kind": "behavior",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The syntax exists in TypeScript JSX but is rejected or not emitted by the project compiler profile."
@@ -521484,7 +521484,7 @@
           "path": "jsx-runtime.ts",
           "proves": "Type namespace/runtime boundary used by the project compiler.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "intrinsic elements",
           "type": "implementation"
         },
@@ -521493,7 +521493,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Current compiler typing/transform profile.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "intrinsic elements",
           "type": "unit-test"
         }
@@ -521502,7 +521502,7 @@
       "kind": "behavior",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "TypeScript typing is intentionally broader than the project compiler's accepted source profile."
@@ -521548,7 +521548,7 @@
           "path": "jsx-runtime.ts",
           "proves": "Type namespace/runtime boundary used by the project compiler.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "jsx namespace",
           "type": "implementation"
         },
@@ -521557,7 +521557,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Current compiler typing/transform profile.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "jsx namespace",
           "type": "unit-test"
         }
@@ -521566,7 +521566,7 @@
       "kind": "behavior",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "TypeScript typing is intentionally broader than the project compiler's accepted source profile."
@@ -521612,7 +521612,7 @@
       "kind": "behavior",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The syntax exists in TypeScript JSX but is rejected or not emitted by the project compiler profile."
@@ -521658,7 +521658,7 @@
       "kind": "behavior",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The syntax exists in TypeScript JSX but is rejected or not emitted by the project compiler profile."
@@ -521704,7 +521704,7 @@
       "kind": "behavior",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "The syntax exists in TypeScript JSX but is rejected or not emitted by the project compiler profile."
@@ -521750,7 +521750,7 @@
           "path": "jsx-runtime.ts",
           "proves": "Type namespace/runtime boundary used by the project compiler.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "tsx file syntax",
           "type": "implementation"
         },
@@ -521759,7 +521759,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Current compiler typing/transform profile.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "tsx file syntax",
           "type": "unit-test"
         }
@@ -521768,7 +521768,7 @@
       "kind": "behavior",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "TypeScript typing is intentionally broader than the project compiler's accepted source profile."
@@ -521814,7 +521814,7 @@
           "path": "jsx-runtime.ts",
           "proves": "Type namespace/runtime boundary used by the project compiler.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "value elements",
           "type": "implementation"
         },
@@ -521823,7 +521823,7 @@
           "path": "compiler/compiler.test.ts",
           "proves": "Current compiler typing/transform profile.",
           "repository": "template",
-          "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+          "revision": "838a214a83950259f3f5d543e881e11402bc230c",
           "symbol": "value elements",
           "type": "unit-test"
         }
@@ -521832,7 +521832,7 @@
       "kind": "behavior",
       "lastVerified": {
         "date": "2026-08-29",
-        "revision": "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+        "revision": "838a214a83950259f3f5d543e881e11402bc230c"
       },
       "limitations": [
         "TypeScript typing is intentionally broader than the project compiler's accepted source profile."
@@ -523359,7 +523359,7 @@
       "branch": "main",
       "dirty": true,
       "id": "renderer",
-      "revision": "35dc366d0de502320aec0343c802b3f1a8cea023"
+      "revision": "9ec3b8cb72d0e5517eee895b0dcbfd14b1204c05"
     },
     {
       "branch": "main",
@@ -523369,9 +523369,9 @@
     },
     {
       "branch": "main",
-      "dirty": true,
+      "dirty": false,
       "id": "template",
-      "revision": "838a214a83950259f3f5d543e881e11402bc230c"
+      "revision": "ad9f272844a876e178b6b0041153588111045764"
     },
     {
       "branch": "main",

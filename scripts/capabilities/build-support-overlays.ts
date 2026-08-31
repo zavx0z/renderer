@@ -50,6 +50,10 @@ const engineFontVerification = {
   revision: "31164f46bb3d5dd9a7df018203f0e13a8a383dc5",
   date: "2026-08-31",
 } as const
+const templateCssVerification = {
+  revision: "838a214a83950259f3f5d543e881e11402bc230c",
+  date: "2026-08-31",
+} as const
 const flexWrapVerification = {
   revision: "74ea59fc8fa7c7156ebaeefceed459097f52b4dd",
   date: "2026-08-30",
@@ -66,7 +70,7 @@ const storybookAggregateRevision = "5c1ed1ec54ba451f95ddfa19a61c8ecd81f3ac66"
 const storybookAlignContentRevision = "d249503ce60513fd4073b5b35fda10c1d2e751d8"
 const revisions: Record<string, string> = {
   renderer: "3c91038c3f14ccc44616209fd82b1e59b7369408",
-  template: "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+  template: templateCssVerification.revision,
   engine: engineFontVerification.revision,
   ui: "77a075a0069ff43e1551b3cdbfe174fe525177d3",
   node: "9f390945f51f88c6374d5fb8f3215cf5d776e571",
@@ -121,6 +125,8 @@ async function main(): Promise<void> {
       revision,
       verificationDate: packageName === "@zavx0z/renderer"
         ? flexGapVerification.date
+        : packageName === "@zavx0z/template"
+          ? templateCssVerification.date
         : packageName === "@engine/core"
           ? engineFontVerification.date
           : verificationDate,

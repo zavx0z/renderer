@@ -1139,7 +1139,7 @@ function cssSourceId(href: string | undefined): string {
 
 function ownerRevision(ownerHint: CapabilityOwner): string {
   if (ownerHint.repository === "renderer") return "258176181fe98b604935c38d71aaca5b93aaf4b3"
-  if (ownerHint.repository === "template") return "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
+  if (ownerHint.repository === "template") return "838a214a83950259f3f5d543e881e11402bc230c"
   if (ownerHint.repository === "engine") return "31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
   return "unknown"
 }

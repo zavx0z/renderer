@@ -15,9 +15,9 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | interpreter | main | `4f02274a6e9f99a8717507fe5885301a33eec4dc` | no |
 | metafor | main | `7611415474fae233cd88abc8b1fc14746316333c` | no |
 | node | main | `112ea769255b4b93ce8481e6283dda443f60d07a` | no |
-| renderer | main | `35dc366d0de502320aec0343c802b3f1a8cea023` | yes |
+| renderer | main | `9ec3b8cb72d0e5517eee895b0dcbfd14b1204c05` | yes |
 | storybook | main | `a7bcfd022d260392dda0695e095fc8db4896191d` | no |
-| template | main | `838a214a83950259f3f5d543e881e11402bc230c` | yes |
+| template | main | `ad9f272844a876e178b6b0041153588111045764` | no |
 | ui | main | `4ff57bc55c6b4336746e7d120912f85ab6224527` | no |
 
 ## Pinned external sources
@@ -75,7 +75,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | @zavx0z/renderer | renderer | `72fa158b043408817725856ce2b8e26d6a0e4d18` | 3128 |
 | @zavx0z/renderer-browser | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 70 |
 | @zavx0z/renderer-webgpu | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 37 |
-| @zavx0z/template | template | `87d0ec3d2a9f19c3750d567ee20dc4bace995e90` | 166 |
+| @zavx0z/template | template | `838a214a83950259f3f5d543e881e11402bc230c` | 166 |
 
 ## Complete matrix
 
