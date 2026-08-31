@@ -15,10 +15,10 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | interpreter | main | `4f02274a6e9f99a8717507fe5885301a33eec4dc` | no |
 | metafor | main | `7611415474fae233cd88abc8b1fc14746316333c` | no |
 | node | main | `112ea769255b4b93ce8481e6283dda443f60d07a` | no |
-| renderer | main | `cb601358332ac1b74ad64ccaf18405153b48d269` | yes |
+| renderer | main | `888a9966fffd222df7abe039d01f83ed96dbfd23` | yes |
 | storybook | main | `1edd2ceee8c63bdac983493aa8dfdb84a7687805` | no |
 | template | main | `838a214a83950259f3f5d543e881e11402bc230c` | yes |
-| ui | main | `b2d0ce5207c9ce2693ccd9dfa6a1f15ed5e5b812` | no |
+| ui | main | `1478f827be8c5606a336e41ea4b692d443dcad5b` | no |
 
 ## Pinned external sources
 
