@@ -3,9 +3,10 @@
   "schemaVersion": 1,
   "kind": "project",
   "id": "renderer",
-  "label": "Renderer",
+  "label": "Рендерер",
   "readme": "../README.md",
   "packages": [
-    {"declaration": "../packages/dom/.storybook/manifest.json"}
+    {"declaration": "../packages/dom/.storybook/manifest.json"},
+    {"declaration": "../packages/core/.storybook/manifest.json"}
   ]
 }

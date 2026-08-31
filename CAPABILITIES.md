@@ -15,7 +15,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | interpreter | main | `4f02274a6e9f99a8717507fe5885301a33eec4dc` | no |
 | metafor | main | `92f4fb0510db5ea43cb03325ab3b3895d95b4899` | no |
 | node | main | `bd5af9a2cf6fca679a69de5245d107ea42318f54` | no |
-| renderer | main | `72fa158b043408817725856ce2b8e26d6a0e4d18` | yes |
+| renderer | main | `2afe16c66ec1e2b6e01df87cd94ab60de8d37c85` | yes |
 | storybook | main | `d249503ce60513fd4073b5b35fda10c1d2e751d8` | yes |
 | template | main | `838a214a83950259f3f5d543e881e11402bc230c` | no |
 | ui | main | `45423d7b36f8796429a9e43c30af9bb89bb8af0e` | yes |

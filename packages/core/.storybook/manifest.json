@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/zavx0z/storybook/main/schemas/manifest.schema.json",
+  "schemaVersion": 1,
+  "kind": "package",
+  "id": "@zavx0z/renderer",
+  "label": "Рендерер",
+  "packageJson": "../package.json",
+  "readme": "../requirements.md",
+  "runtime": {"module": "./runtime.ts", "export": "runtime"},
+  "widgetContributions": {
+    "protocol": "widget-contribution/1",
+    "items": [{
+      "id": "flex-controls",
+      "kind": "component",
+      "label": "Параметры Flex",
+      "module": {"path": "./flex/controls.tsx", "export": "FlexControlsWidget"}
+    }]
+  },
+  "catalog": "./catalog.json"
+}

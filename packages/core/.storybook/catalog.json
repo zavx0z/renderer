@@ -1,0 +1,58 @@
+{
+  "$schema": "https://raw.githubusercontent.com/zavx0z/storybook/main/schemas/catalog.schema.json",
+  "schemaVersion": 1,
+  "categories": [{
+    "id": "css",
+    "label": "CSS",
+    "route": "css",
+    "subjects": [{
+      "id": "flex",
+      "kind": "capability",
+      "label": "Flex",
+      "apiName": "display: flex",
+      "route": "css/flex",
+      "presentation": {
+        "protocol": "story-presentation/1",
+        "projection": "display",
+        "widgets": ["flex-controls", "source", "diagnostics", "dom", "layout", "display"]
+      },
+      "variants": [{
+        "id": "packing",
+        "label": "Упаковка",
+        "group": {"id": "flow", "label": "Поток"},
+        "route": "css/flex/packing",
+        "module": {"path": "./flex/story.ts", "export": "packing"}
+      }, {
+        "id": "column",
+        "label": "Колонка",
+        "group": {"id": "flow", "label": "Поток"},
+        "route": "css/flex/column",
+        "module": {"path": "./flex/story.ts", "export": "column"}
+      }, {
+        "id": "wrap-reverse",
+        "label": "Обратный перенос",
+        "group": {"id": "flow", "label": "Поток"},
+        "route": "css/flex/wrap-reverse",
+        "module": {"path": "./flex/story.ts", "export": "wrapReverse"}
+      }, {
+        "id": "alignment",
+        "label": "Выравнивание",
+        "group": {"id": "alignment", "label": "Выравнивание"},
+        "route": "css/flex/alignment",
+        "module": {"path": "./flex/story.ts", "export": "alignment"}
+      }, {
+        "id": "sizing",
+        "label": "Размеры",
+        "group": {"id": "sizing", "label": "Размеры"},
+        "route": "css/flex/sizing",
+        "module": {"path": "./flex/story.ts", "export": "sizing"}
+      }, {
+        "id": "shrink",
+        "label": "Сжатие",
+        "group": {"id": "sizing", "label": "Размеры"},
+        "route": "css/flex/shrink",
+        "module": {"path": "./flex/story.ts", "export": "shrink"}
+      }]
+    }]
+  }]
+}

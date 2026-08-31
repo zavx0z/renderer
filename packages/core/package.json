@@ -13,7 +13,9 @@
   "scripts": {
     "test": "bun test test",
     "typecheck": "tsc --project tsconfig.json --pretty false",
-    "check": "bun run typecheck && bun run test"
+    "storybook:typecheck": "tsc --project .storybook/tsconfig.json --pretty false",
+    "storybook:test": "bun test --preload ./.storybook/test-preload.ts ./.storybook",
+    "check": "bun run typecheck && bun run storybook:typecheck && bun run test && bun run storybook:test"
   },
   "peerDependencies": {
     "@zavx0z/dom": "^0.1.0"

@@ -32,6 +32,8 @@ describe("renderer workspace retirement boundary", () => {
       private: true,
       workspaces: ["packages/*"],
     })
+    expect(root.scripts.typecheck).toBe("bun run --workspaces typecheck && bun run --cwd packages/core storybook:typecheck")
+    expect(root.scripts.test).toBe("bun test packages && bun run --cwd packages/core storybook:test")
     expect(root.scripts.check).toBe("bun run typecheck && bun run test && bun run capabilities:check")
     expect(root.scripts["capabilities:check"]).toBe("bun run capabilities:typecheck && bun test scripts/capabilities")
 
