@@ -76,7 +76,7 @@
           "path": "packages/components/inspector.tsx",
           "proves": "Focused numeric field editing inside nested scrollable Inspector groups.",
           "repository": "ui",
-          "revision": "1478f827be8c5606a336e41ea4b692d443dcad5b",
+          "revision": "4ff57bc55c6b4336746e7d120912f85ab6224527",
           "symbol": "Inspector numeric fields",
           "type": "consumer-usage"
         }
@@ -98,7 +98,7 @@
           "path": "packages/components/number-input.tsx",
           "proves": "Native typed number editing, focus, input/change, Escape rollback and selection through the exact semantic owner.",
           "repository": "ui",
-          "revision": "1478f827be8c5606a336e41ea4b692d443dcad5b",
+          "revision": "4ff57bc55c6b4336746e7d120912f85ab6224527",
           "symbol": "NumberInput",
           "type": "consumer-usage"
         }
@@ -296,7 +296,7 @@
           "path": "packages/components/code-editor.tsx",
           "proves": "Two-axis scrolling with clipping and stable retained line/token identity.",
           "repository": "ui",
-          "revision": "1478f827be8c5606a336e41ea4b692d443dcad5b",
+          "revision": "4ff57bc55c6b4336746e7d120912f85ab6224527",
           "symbol": "CodeEditor",
           "type": "consumer-usage"
         }
@@ -340,7 +340,7 @@
           "path": "packages/components/code-editor.tsx",
           "proves": "Preserve source whitespace and prevent wrapping for read-only code lines.",
           "repository": "ui",
-          "revision": "1478f827be8c5606a336e41ea4b692d443dcad5b",
+          "revision": "4ff57bc55c6b4336746e7d120912f85ab6224527",
           "symbol": "CodeEditor",
           "type": "consumer-usage"
         }
@@ -428,7 +428,7 @@
           "path": "packages/components/number-input.tsx",
           "proves": "A scrub gesture continues outside the control until pointerup/cancel without component-owned capture emulation.",
           "repository": "ui",
-          "revision": "1478f827be8c5606a336e41ea4b692d443dcad5b",
+          "revision": "4ff57bc55c6b4336746e7d120912f85ab6224527",
           "symbol": "NumberInput scrub",
           "type": "consumer-usage"
         }
@@ -490,16 +490,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "127",
+          "lines": "123",
           "path": "packages/components/color-input.tsx",
           "proves": "Stable controlled RGBA channels with range input/change semantics and analytical color paint.",
           "repository": "ui",
-          "revision": "1478f827be8c5606a336e41ea4b692d443dcad5b",
+          "revision": "4ff57bc55c6b4336746e7d120912f85ab6224527",
           "symbol": "ColorInput",
           "type": "consumer-usage"
         }
       ],
-      "line": 127,
+      "line": 123,
       "package": "@ui/components",
       "path": "packages/components/color-input.tsx",
       "repository": "ui",
@@ -512,16 +512,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "297",
+          "lines": "293",
           "path": "packages/components/color-input.tsx",
           "proves": "An anchored top-layer color picker with clipping, light dismiss, Escape and focus restoration instead of an inline hidden panel.",
           "repository": "ui",
-          "revision": "1478f827be8c5606a336e41ea4b692d443dcad5b",
+          "revision": "4ff57bc55c6b4336746e7d120912f85ab6224527",
           "symbol": "ColorInput",
           "type": "consumer-usage"
         }
       ],
-      "line": 297,
+      "line": 293,
       "package": "@ui/components",
       "path": "packages/components/color-input.tsx",
       "repository": "ui",
@@ -538,7 +538,7 @@
           "path": "packages/components/enum-input.tsx",
           "proves": "Open a collapsed select picker, navigate options by keyboard, activate one option and dispatch input/change.",
           "repository": "ui",
-          "revision": "1478f827be8c5606a336e41ea4b692d443dcad5b",
+          "revision": "4ff57bc55c6b4336746e7d120912f85ab6224527",
           "symbol": "EnumInput",
           "type": "consumer-usage"
         }
@@ -670,7 +670,7 @@
           "path": "packages/components/button.tsx",
           "proves": "Adopt the exact compiled Button stylesheet once per Document and make it visible to every same-Document projection without manual buttonCss or consumer styleSheets wiring.",
           "repository": "ui",
-          "revision": "1478f827be8c5606a336e41ea4b692d443dcad5b",
+          "revision": "4ff57bc55c6b4336746e7d120912f85ab6224527",
           "symbol": "Button automatic stylesheet adoption",
           "type": "consumer-usage"
         }
@@ -824,7 +824,7 @@
           "path": "packages/components/button.tsx",
           "proves": "Extract Button owner CSS, bounded attribute/native pseudo selectors and caller composition from the global css intrinsic without runtime object authoring or scanning.",
           "repository": "ui",
-          "revision": "1478f827be8c5606a336e41ea4b692d443dcad5b",
+          "revision": "4ff57bc55c6b4336746e7d120912f85ab6224527",
           "symbol": "Button component-local styles",
           "type": "consumer-usage"
         }
@@ -275342,7 +275342,7 @@
       "blocks": [],
       "conformance": "adapted",
       "consumers": [
-        "ui:@ui/components:ColorInput:packages/components/color-input.tsx:127"
+        "ui:@ui/components:ColorInput:packages/components/color-input.tsx:123"
       ],
       "description": "HTMLInputElement range state, sanitization, properties, events, and activation behavior.",
       "domain": "html",
@@ -275398,7 +275398,7 @@
           {
             "behavior": "Stable controlled RGBA channels with range input/change semantics and analytical color paint.",
             "capability": "html.behaviors.input-type-range",
-            "line": 127,
+            "line": 123,
             "package": "@ui/components",
             "path": "packages/components/color-input.tsx",
             "repository": "ui",
@@ -276153,7 +276153,7 @@
       "blocks": [],
       "conformance": "adapted",
       "consumers": [
-        "ui:@ui/components:ColorInput:packages/components/color-input.tsx:297"
+        "ui:@ui/components:ColorInput:packages/components/color-input.tsx:293"
       ],
       "description": "Popover state, top layer, invokers, light dismiss, focus, and toggle events.",
       "domain": "html",
@@ -276227,7 +276227,7 @@
           {
             "behavior": "An anchored top-layer color picker with clipping, light dismiss, Escape and focus restoration instead of an inline hidden panel.",
             "capability": "html.behaviors.popover",
-            "line": 297,
+            "line": 293,
             "package": "@ui/components",
             "path": "packages/components/color-input.tsx",
             "repository": "ui",
@@ -523359,13 +523359,13 @@
       "branch": "main",
       "dirty": true,
       "id": "renderer",
-      "revision": "888a9966fffd222df7abe039d01f83ed96dbfd23"
+      "revision": "35dc366d0de502320aec0343c802b3f1a8cea023"
     },
     {
       "branch": "main",
       "dirty": false,
       "id": "storybook",
-      "revision": "1edd2ceee8c63bdac983493aa8dfdb84a7687805"
+      "revision": "a7bcfd022d260392dda0695e095fc8db4896191d"
     },
     {
       "branch": "main",
@@ -523377,7 +523377,7 @@
       "branch": "main",
       "dirty": false,
       "id": "ui",
-      "revision": "1478f827be8c5606a336e41ea4b692d443dcad5b"
+      "revision": "4ff57bc55c6b4336746e7d120912f85ab6224527"
     }
   ],
   "schemaVersion": 1,
