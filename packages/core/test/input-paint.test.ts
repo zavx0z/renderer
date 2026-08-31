@@ -206,20 +206,43 @@ describe("checkbox and radio projection", () => {
     expect(initial.hits.get(radio)).toMatchObject({role: "radio"})
 
     checkbox.checked = true
-    checkbox.disabled = true
     const checked = renderer.flush()
-    expect(display(checked, checkbox, "indicator")).toMatchObject({
-      kind: "rect",
+    const checkedIndicator = display(checked, checkbox, "indicator")
+    expect(checkedIndicator).toMatchObject({
+      kind: "text",
+      key: "indicator",
+      node: checkbox,
+      text: "✓",
       color: "green",
+      opacity: 1,
+      letterSpacing: 0,
+    })
+    expect(checked.displayList.some(
+      (item) => item.node === checkbox && item.kind === "rect" && item.key === "indicator",
+    )).toBe(false)
+
+    checkbox.disabled = true
+    const disabled = renderer.flush()
+    expect(display(disabled, checkbox, "indicator")).toMatchObject({
+      kind: checkedIndicator.kind,
+      key: checkedIndicator.key,
+      node: checkedIndicator.node,
+      text: "✓",
+      x: checkedIndicator.x,
+      y: checkedIndicator.y,
+      fontSize: checkedIndicator.kind === "text" ? checkedIndicator.fontSize : undefined,
       opacity: 0.5,
     })
-    expect(checked.hits.get(checkbox)).toMatchObject({
+    expect(disabled.hits.get(checkbox)).toMatchObject({
       interactive: false,
       disabled: true,
       role: "checkbox",
     })
-    expect(checked.displayList.some(
-      (item) => item.node === checkbox && item.kind === "text",
+
+    checkbox.checked = false
+    const unchecked = renderer.flush()
+    expect(unchecked.displayList.some(
+      item => item.node === checkbox && item.key === "indicator",
     )).toBe(false)
     renderer.dispose()
   })
@@ -251,7 +274,7 @@ function display(
   frame: RenderFrame,
   node: Node,
   key: "background" | "indicator",
-): Extract<DisplayItem, {kind: "rect"}>
+): DisplayItem
 function display(frame: RenderFrame, node: Node, key: string): DisplayItem
 function display(frame: RenderFrame, node: Node, key: string): DisplayItem {
   const item = frame.displayList.find(

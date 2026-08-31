@@ -3460,18 +3460,23 @@ const emitSelectPresentation = (
   if (select.multiple || select.size > 1) {
     throw new Error("Select listbox rendering is not implemented for multiple or size > 1")
   }
+  if (box.contentWidth <= 0 || box.contentHeight <= 0) return
+  const disclosureWidth = Math.min(
+    box.contentWidth,
+    Math.min(16, Math.max(8, box.contentHeight)),
+  )
+  const labelWidth = Math.max(0, box.contentWidth - disclosureWidth - 4)
   const selectedIndex = select.selectedIndex
   const option = selectedIndex < 0 ? null : select.options.item(selectedIndex)
   const label = ellipsizeSingleLine(
     option?.label ?? "",
     layoutNode.style,
-    box.contentWidth,
+    labelWidth,
     true,
   )
-  if (label === "" || !hasPaintableText(label) || box.contentWidth <= 0 || box.contentHeight <= 0) return
   const lineHeight = resolveLineHeight(layoutNode.style)
-  state.displayList.push(
-    Object.freeze({
+  if (label !== "" && hasPaintableText(label) && labelWidth > 0) {
+    state.displayList.push(Object.freeze({
       kind: "text",
       key: "value",
       node: select,
@@ -3479,7 +3484,7 @@ const emitSelectPresentation = (
       x: alignedTextX(
         layoutNode.style,
         box.contentX,
-        box.contentWidth,
+        labelWidth,
         textAdvance(label, layoutNode.style),
       ),
       y: box.contentY + Math.max(0, (box.contentHeight - lineHeight) / 2),
@@ -3489,7 +3494,21 @@ const emitSelectPresentation = (
       opacity: layoutNode.effectiveOpacity,
       clips,
       transform: presentationFor(select, state),
-    }),
+    }))
+  }
+  emitControlGlyph(
+    select,
+    "disclosure-indicator",
+    "▾",
+    box.contentX + box.contentWidth - disclosureWidth,
+    box.contentY,
+    disclosureWidth,
+    box.contentHeight,
+    layoutNode.style.color,
+    layoutNode.effectiveOpacity,
+    clips,
+    presentationFor(select, state),
+    state,
   )
 }
 
@@ -4003,7 +4022,24 @@ const emitInputIndicator = (
   if (!input.checked) return
   const size = Math.max(0, Math.min(box.contentWidth, box.contentHeight) - 4)
   if (size <= 0) return
-  const radius = input.type === "radio" ? size / 2 : Math.min(1, size / 2)
+  if (input.type === "checkbox") {
+    emitControlGlyph(
+      input,
+      "indicator",
+      "✓",
+      box.contentX,
+      box.contentY,
+      box.contentWidth,
+      box.contentHeight,
+      layoutNode.style.color,
+      layoutNode.effectiveOpacity,
+      clips,
+      presentationFor(input, state),
+      state,
+    )
+    return
+  }
+  const radius = size / 2
   const colors = Object.freeze({
     top: layoutNode.style.color,
     right: layoutNode.style.color,
@@ -4037,6 +4073,39 @@ const emitInputIndicator = (
       transform: presentationFor(input, state),
     }),
   )
+}
+
+const emitControlGlyph = (
+  node: Element,
+  key: string,
+  glyph: string,
+  x: number,
+  y: number,
+  width: number,
+  height: number,
+  color: string,
+  opacity: number,
+  clips: readonly RenderClip[],
+  transform: RenderTransform,
+  state: BuildState,
+): void => {
+  if (width <= 0 || height <= 0) return
+  const fontSize = Math.max(0, Math.min(12, height, width / 0.6))
+  if (fontSize <= 0) return
+  state.displayList.push(Object.freeze({
+    kind: "text",
+    key,
+    node,
+    text: glyph,
+    x: x + Math.max(0, (width - fontSize * 0.6) / 2),
+    y: y + Math.max(0, (height - fontSize) / 2),
+    color,
+    fontSize,
+    letterSpacing: 0,
+    opacity,
+    clips,
+    transform,
+  }))
 }
 
 const graphemeCount = (value: string): number => {

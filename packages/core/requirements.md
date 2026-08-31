@@ -359,12 +359,17 @@ Placeholder text remains readable and uses resolved color with a deterministic
 UA opacity multiplier. CR/LF is flattened because these controls are
 single-line.
 
-Checked checkbox and radio controls emit no value text. They may emit one
-generic resolved Rect indicator keyed `indicator`; radio indicators use resolved
-round radii. Unchecked controls emit no indicator. This is renderer-owned generic
-presentation, not a textual check glyph. Specialized color, file and date picker
-chrome, selection, caret, composition and text editing remain separate
-form-control phases.
+Checked checkbox and radio controls emit no value text. A checked Checkbox emits
+one anonymous Text check glyph `✓` with composite identity `(input,
+"indicator")`; a checked Radio retains one circular Rect with the same key.
+Unchecked controls emit no indicator. The glyph is centered inside the resolved
+content box, bounded to 12 logical pixels, uses resolved current color, effective
+opacity, owner clips and the owner's final presentation transform. Checked and
+disabled state changes therefore preserve exact node/key/geometry while only
+changing admitted state and opacity. Indeterminate Checkbox chrome remains a
+separate unsupported state rather than being represented as a dot or check.
+Specialized color, file and date picker chrome, selection, caret, composition
+and text editing remain separate form-control phases.
 
 Live value/checked updates arrive through the generic Document state channel and
 invalidate the exact input/subtree. Disabled inputs remain painted but their hit
@@ -423,7 +428,12 @@ clip. Renderer reads `select.selectedIndex`, a current static `select.options`
 snapshot and exact `option.label`; it never binds to an undeclared `option.text`
 API. `select.value` may differ from the visible label and remains DOM state, not
 a second painted string. Explicit empty selection or an empty label emits no
-value Text.
+value Text. Every rendered collapsed Select additionally emits one anonymous
+Text disclosure glyph `▾` with stable identity `(select,
+"disclosure-indicator")`. Its bounded right-side slot is removed from the label
+width before ellipsis/alignment, so long or end-aligned labels cannot paint over
+the disclosure. The glyph remains present for an empty selection/label and
+inherits resolved color, effective disabled opacity, owner clips and transform.
 
 Author width, height, box-sizing, padding, border, background, color and font
 size replace UA values through normal CSS. Connected option selectedness and

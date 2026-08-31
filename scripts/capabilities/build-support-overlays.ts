@@ -395,14 +395,28 @@ function classifyHtmlBehavior(entry: CapabilityInventoryEntry): Classification {
       "Horizontal pointer drag and bounded keyboard defaults are implemented; vertical orientation, ticks, datalist, validity, public stepUp/stepDown and complete browser range behavior remain unsupported.",
     ))
   }
+  if (entry.id === "html.behaviors.input-type-checkbox") {
+    return recovered(partial(
+      "adapted",
+      [
+        implementation("renderer", "packages/dom/src/html-input-element.ts", "checkbox activation", undefined, "Checked state, cancellation rollback and input/change ordering remain owned by the semantic Checkbox.", "Forms, validation, accessibility and every browser default action."),
+        implementation("renderer", "packages/core/src/renderer.ts", "checkbox UA check glyph", undefined, "A checked Checkbox projects one stable current-color check glyph while Radio retains its circular Rect indicator.", "Indeterminate Checkbox chrome, native font pixels and accessibility projection."),
+        test("renderer", "packages/dom/test/input-activation.test.ts", "HTMLInputElement checkbox activation", "Checked-state activation, cancellation and event order.", "Forms, validation and native trusted activation."),
+        test("renderer", "packages/core/test/input-paint.test.ts", "checkbox and radio projection", "Unchecked absence, checked check-mark identity, Radio dot distinction and disabled opacity/hit behavior.", "Indeterminate chrome and live native font pixels."),
+      ],
+      "Checkbox live state, activation and a bounded checked check glyph are implemented; indeterminate chrome, forms, validation, accessibility and complete native browser behavior remain unsupported.",
+    ))
+  }
   if (entry.id === "html.behaviors.select-option-optgroup") {
     return recovered(partial(
       "adapted",
       [
         implementation("renderer", "packages/dom/src/select-picker-state.ts", "collapsed select picker state", undefined, "One Document-owned picker, keyboard selection and exact Option choice/event ordering.", "Multiple/listbox, optgroup, type-ahead and complete forms/accessibility semantics."),
+        implementation("renderer", "packages/core/src/renderer.ts", "collapsed select disclosure indicator", undefined, "Every collapsed Select reserves a bounded label-safe slot for one stable current-color disclosure glyph.", "Multiple/listbox, author-custom picker chrome and native accessibility projection."),
         test("renderer", "packages/dom/test/select-picker.test.ts", "collapsed select picker state", "Open/close, keyboard, exact option selection, input/change, blur and removal cleanup.", "Multiple/listbox, optgroup and native accessibility projection."),
+        test("renderer", "packages/core/test/select-paint.test.ts", "collapsed select disclosure indicator", "Stable indicator identity across selection, empty-label presence, author sizing/color and disabled opacity.", "Native font pixels, multiple/listbox and accessibility projection."),
       ],
-      "Collapsed single-select live state, picker ownership and bounded keyboard/pointer choice are implemented; multiple/listbox, optgroup, type-ahead, forms and accessibility projection remain unsupported.",
+      "Collapsed single-select live state, disclosure chrome, picker ownership and bounded keyboard/pointer choice are implemented; multiple/listbox, optgroup, type-ahead, forms and accessibility projection remain unsupported.",
     ))
   }
   const partialIds = new Set([
@@ -1027,11 +1041,12 @@ function classifyRenderer(entry: CapabilityInventoryEntry): Classification {
     return recovered(partial(
       "adapted",
       [
-        implementation("renderer", "packages/core/src/renderer.ts", "range and select picker projection", undefined, "Horizontal range paint and one top-layer collapsed select picker retain exact semantic control/option identities.", "Complete native form chrome, listboxes, accessibility and every input type."),
+        implementation("renderer", "packages/core/src/renderer.ts", "bounded native control projection", undefined, "Checkbox check glyph, Radio dot, Select disclosure/picker and horizontal Range paint retain exact semantic control/option identities.", "Complete native form chrome, indeterminate Checkbox, listboxes, accessibility and every input type."),
+        test("renderer", "packages/core/test/input-paint.test.ts", "checkbox and radio UA indicators", "Stable checked glyph/dot distinction, current color and disabled opacity/hit behavior.", "Indeterminate chrome and live native font pixels."),
         test("renderer", "packages/core/test/range-input.test.ts", "range input projection", "Stable range track/thumb paint and pointer behavior.", "Vertical/ticks/datalist and native pixels."),
-        test("renderer", "packages/core/test/select-paint.test.ts", "collapsed select picker projection", "Exact option boxes/hits, selected paint and presentation-coordinate viewport placement for translated/scaled Select owners.", "Scrolling/type-ahead/multiple/listbox/accessibility."),
+        test("renderer", "packages/core/test/select-paint.test.ts", "collapsed select and picker projection", "Stable disclosure identity, label-safe geometry, exact option boxes/hits and presentation-coordinate viewport placement.", "Scrolling/type-ahead/multiple/listbox/accessibility and native font pixels."),
       ],
-      "The bounded form-control set now includes horizontal Range interaction and a collapsed single-Select picker; multiple/listbox, type-ahead, accessibility projection and complete native form chrome remain unsupported.",
+      "The bounded form-control set includes checked Checkbox/Radio indicators, collapsed Select disclosure/picker and horizontal Range interaction; indeterminate Checkbox, multiple/listbox, type-ahead, accessibility projection and complete native form chrome remain unsupported.",
     ))
   }
   const implementedNames = new Set(["immutable-frame", "clean-frame-fast-path"])

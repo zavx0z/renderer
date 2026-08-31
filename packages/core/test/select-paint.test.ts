@@ -23,6 +23,7 @@ describe("collapsed select replaced-control paint", () => {
     const frame = renderer.flush()
     const outer = rect(frame, select, "background")
     const value = selectedValue(frame, select)
+    const disclosure = disclosureIndicator(frame, select)
 
     expect(select.selectedIndex).toBe(0)
     expect(select.value).toBe("first-value")
@@ -55,6 +56,16 @@ describe("collapsed select replaced-control paint", () => {
       opacity: 1,
     })
     expect(value.clips).toHaveLength(1)
+    expect(disclosure).toMatchObject({
+      node: select,
+      key: "disclosure-indicator",
+      text: "▾",
+      color: "#111827",
+      fontSize: 12,
+      letterSpacing: 0,
+      opacity: 1,
+    })
+    expect(disclosure.x).toBeGreaterThan(value.x)
     expect(frame.boxByNode.has(first)).toBeFalse()
     expect(frame.boxByNode.has(second)).toBeFalse()
     expect(frame.hits.has(first)).toBeFalse()
@@ -82,10 +93,12 @@ describe("collapsed select replaced-control paint", () => {
     })
     const firstFrame = renderer.flush()
     const firstValue = selectedValue(firstFrame, select)
+    const firstDisclosure = disclosureIndicator(firstFrame, select)
 
     select.value = "second-value"
     const secondFrame = renderer.flush()
     const secondValue = selectedValue(secondFrame, select)
+    const secondDisclosure = disclosureIndicator(secondFrame, select)
     expect(select.selectedIndex).toBe(1)
     expect(second.selected).toBeTrue()
     expect(first.selected).toBeFalse()
@@ -97,6 +110,14 @@ describe("collapsed select replaced-control paint", () => {
       y: firstValue.y,
     })
     expect(secondFrame.revision).toBe(firstFrame.revision + 1)
+    expect(secondDisclosure).toMatchObject({
+      node: firstDisclosure.node,
+      key: firstDisclosure.key,
+      text: firstDisclosure.text,
+      x: firstDisclosure.x,
+      y: firstDisclosure.y,
+      fontSize: firstDisclosure.fontSize,
+    })
     expect(events).toEqual([])
 
     second.label = "Renamed"
@@ -132,6 +153,7 @@ describe("collapsed select replaced-control paint", () => {
     expect(select.value).toBe("semantic-value")
     expect(option.label).toBe("")
     expect(frame.displayList.some((item) => item.node === select && item.key === "value")).toBeFalse()
+    expect(disclosureIndicator(frame, select).text).toBe("▾")
     renderer.dispose()
   })
 
@@ -170,6 +192,11 @@ describe("collapsed select replaced-control paint", () => {
       color: "#102030",
       fontSize: 16,
     })
+    expect(disclosureIndicator(frame, select)).toMatchObject({
+      text: "▾",
+      color: "#102030",
+      opacity: 1,
+    })
     renderer.dispose()
   })
 
@@ -186,6 +213,7 @@ describe("collapsed select replaced-control paint", () => {
 
     expect(rect(frame, select, "background").opacity).toBe(0.5)
     expect(selectedValue(frame, select).opacity).toBe(0.5)
+    expect(disclosureIndicator(frame, select).opacity).toBe(0.5)
     expect(frame.hits.get(select)).toMatchObject({
       role: "combobox",
       disabled: true,
@@ -304,6 +332,19 @@ function selectedValue(frame: RenderFrame, select: HTMLSelectElement): TextDispl
     candidate.kind === "text" && candidate.node === select && candidate.key === "value"
   )
   if (!item) throw new Error("Expected collapsed select value")
+  return item
+}
+
+function disclosureIndicator(
+  frame: RenderFrame,
+  select: HTMLSelectElement,
+): TextDisplayItem {
+  const item = frame.displayList.find((candidate): candidate is TextDisplayItem =>
+    candidate.kind === "text" &&
+    candidate.node === select &&
+    candidate.key === "disclosure-indicator"
+  )
+  if (!item) throw new Error("Expected collapsed select disclosure indicator")
   return item
 }
 
