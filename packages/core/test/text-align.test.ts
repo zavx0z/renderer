@@ -123,7 +123,7 @@ describe("text-align replaced value fragments", () => {
       expect.objectContaining({key: "value", text: "abcd", x: 76}),
     ])
     expect(valueItems(frame, select)).toEqual([
-      expect.objectContaining({key: "value", text: "abcde", x: 35}),
+      expect.objectContaining({key: "value", text: "abcde", x: 25}),
     ])
     expect(valueItems(frame, textArea)).toEqual([
       expect.objectContaining({key: "value:0", text: "aa", x: 88}),

@@ -66,6 +66,8 @@ describe("collapsed select replaced-control paint", () => {
       opacity: 1,
     })
     expect(disclosure.x).toBeGreaterThan(value.x)
+    expect(disclosure.clips).toBe(value.clips)
+    expect(disclosure.transform).toBe(value.transform)
     expect(frame.boxByNode.has(first)).toBeFalse()
     expect(frame.boxByNode.has(second)).toBeFalse()
     expect(frame.hits.has(first)).toBeFalse()

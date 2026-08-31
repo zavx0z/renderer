@@ -217,6 +217,8 @@ describe("checkbox and radio projection", () => {
       opacity: 1,
       letterSpacing: 0,
     })
+    if (checkedIndicator.kind !== "text") throw new Error("Expected Checkbox check Text")
+    expect(checkedIndicator.clips).toHaveLength(1)
     expect(checked.displayList.some(
       (item) => item.node === checkbox && item.kind === "rect" && item.key === "indicator",
     )).toBe(false)
@@ -230,7 +232,9 @@ describe("checkbox and radio projection", () => {
       text: "✓",
       x: checkedIndicator.x,
       y: checkedIndicator.y,
-      fontSize: checkedIndicator.kind === "text" ? checkedIndicator.fontSize : undefined,
+      fontSize: checkedIndicator.fontSize,
+      clips: checkedIndicator.clips,
+      transform: checkedIndicator.transform,
       opacity: 0.5,
     })
     expect(disabled.hits.get(checkbox)).toMatchObject({

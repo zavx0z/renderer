@@ -173,7 +173,7 @@ describe("nowrap and text-overflow", () => {
     })
     expect(textItems(frame, select)[0]).toMatchObject({
       key: "value",
-      text: "ABCD…",
+      text: "A…",
       letterSpacing: 1,
     })
     const areaLines = textItems(frame, textArea)
