@@ -137198,7 +137198,7 @@
           "path": "packages/core/src/interaction.ts",
           "proves": "Deepest dispatch, nearest control ownership, semantic capture retargeting, range drag and select option activation share one interaction owner.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "pointer capture and control default actions",
           "type": "implementation"
         },
@@ -137207,7 +137207,7 @@
           "path": "packages/core/test/interaction.test.ts",
           "proves": "Nested ownership, capture outside hits, select open/choice/light-dismiss and disabled/cancel cleanup.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "default-activation",
           "type": "unit-test"
         },
@@ -137216,7 +137216,7 @@
           "path": "packages/core/test/range-input.test.ts",
           "proves": "Rendered track geometry drives DOM range input/change semantics.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "range pointer default action",
           "type": "unit-test"
         }
@@ -137224,7 +137224,7 @@
       "id": "renderer.features.default-activation",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
+        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
       },
       "limitations": [
         "Implemented for the bounded rendered-control set including explicit semantic capture, horizontal Range and collapsed Select; implicit touch capture and complete Pointer Events/HTML default actions remain outside Core."
@@ -137368,40 +137368,49 @@
       "consumers": [],
       "evidence": [
         {
-          "doesNotProve": "Complete native form chrome, listboxes, accessibility and every input type.",
+          "doesNotProve": "Complete native form chrome, indeterminate Checkbox, listboxes, accessibility and every input type.",
           "path": "packages/core/src/renderer.ts",
-          "proves": "Horizontal range paint and one top-layer collapsed select picker retain exact semantic control/option identities.",
+          "proves": "Checkbox check glyph, Radio dot, Select disclosure/picker and horizontal Range paint retain exact semantic control/option identities.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
-          "symbol": "range and select picker projection",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "symbol": "bounded native control projection",
           "type": "implementation"
+        },
+        {
+          "doesNotProve": "Indeterminate chrome and live native font pixels.",
+          "path": "packages/core/test/input-paint.test.ts",
+          "proves": "Stable checked glyph/dot distinction, current color and disabled opacity/hit behavior.",
+          "repository": "renderer",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "symbol": "checkbox and radio UA indicators",
+          "type": "unit-test"
         },
         {
           "doesNotProve": "Vertical/ticks/datalist and native pixels.",
           "path": "packages/core/test/range-input.test.ts",
           "proves": "Stable range track/thumb paint and pointer behavior.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "range input projection",
           "type": "unit-test"
         },
         {
-          "doesNotProve": "Scrolling/type-ahead/multiple/listbox/accessibility.",
+          "doesNotProve": "Scrolling/type-ahead/multiple/listbox/accessibility and native font pixels.",
           "path": "packages/core/test/select-paint.test.ts",
-          "proves": "Exact option boxes/hits, selected paint and presentation-coordinate viewport placement for translated/scaled Select owners.",
+          "proves": "Stable disclosure identity, label-safe geometry, exact option boxes/hits and presentation-coordinate viewport placement.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
-          "symbol": "collapsed select picker projection",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "symbol": "collapsed select and picker projection",
           "type": "unit-test"
         }
       ],
       "id": "renderer.features.form-control-projection",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
+        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
       },
       "limitations": [
-        "The bounded form-control set now includes horizontal Range interaction and a collapsed single-Select picker; multiple/listbox, type-ahead, accessibility projection and complete native form chrome remain unsupported."
+        "The bounded form-control set includes checked Checkbox/Radio indicators, collapsed Select disclosure/picker and horizontal Range interaction; indeterminate Checkbox, multiple/listbox, type-ahead, accessibility projection and complete native form chrome remain unsupported."
       ],
       "owner": {
         "package": "@zavx0z/renderer",
@@ -137850,7 +137859,7 @@
           "path": "packages/core/src/interaction.ts",
           "proves": "Deepest dispatch, nearest control ownership, semantic capture retargeting, range drag and select option activation share one interaction owner.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "pointer capture and control default actions",
           "type": "implementation"
         },
@@ -137859,7 +137868,7 @@
           "path": "packages/core/test/interaction.test.ts",
           "proves": "Nested ownership, capture outside hits, select open/choice/light-dismiss and disabled/cancel cleanup.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "pointer",
           "type": "unit-test"
         },
@@ -137868,7 +137877,7 @@
           "path": "packages/core/test/range-input.test.ts",
           "proves": "Rendered track geometry drives DOM range input/change semantics.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "range pointer default action",
           "type": "unit-test"
         }
@@ -137876,7 +137885,7 @@
       "id": "renderer.features.pointer",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
+        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
       },
       "limitations": [
         "Implemented for the bounded rendered-control set including explicit semantic capture, horizontal Range and collapsed Select; implicit touch capture and complete Pointer Events/HTML default actions remain outside Core."

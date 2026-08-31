@@ -33,7 +33,7 @@
           "path": "cosmos/internal/visual/main/index.ts",
           "proves": "Attach the Cosmos main root from the shared Experience Document to a stable world plane with the intended stylesheet and camera gestures.",
           "repository": "metafor",
-          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899",
+          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899+dirty",
           "symbol": "Cosmos display plane",
           "type": "consumer-usage"
         }
@@ -95,7 +95,7 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "56",
+          "lines": "55",
           "path": "packages/components/number-input.tsx",
           "proves": "Native typed number editing, focus, input/change, Escape rollback and selection through the exact semantic owner.",
           "repository": "ui",
@@ -104,7 +104,7 @@
           "type": "consumer-usage"
         }
       ],
-      "line": 56,
+      "line": 55,
       "package": "@ui/components",
       "path": "packages/components/number-input.tsx",
       "repository": "ui",
@@ -165,7 +165,7 @@
           "path": "cosmos/internal/visual/main/index.ts",
           "proves": "Own one semantic Document, Canvas, Engine Renderer and Space for the Cosmos main plane and dock HUD projection.",
           "repository": "metafor",
-          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899",
+          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899+dirty",
           "symbol": "Cosmos presentation host",
           "type": "consumer-usage"
         }
@@ -187,7 +187,7 @@
           "path": "cosmos/internal/visual/main/index.ts",
           "proves": "Attach the dock sibling root from the same Experience Document to a camera-locked overlay using the host stylesheet realm.",
           "repository": "metafor",
-          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899",
+          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899+dirty",
           "symbol": "Cosmos display dock",
           "type": "consumer-usage"
         }
@@ -209,7 +209,7 @@
           "path": "quantum/bulk/dom/overlay-runtime.ts",
           "proves": "Compose the HUD through the shared browser overlay owner rather than reimplementing pointer mapping, capture, hit and lifecycle.",
           "repository": "metafor",
-          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899",
+          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899+dirty",
           "symbol": "Bulk DOM overlay",
           "type": "consumer-usage"
         }
@@ -425,7 +425,7 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "73",
+          "lines": "72",
           "path": "packages/components/number-input.tsx",
           "proves": "A scrub gesture continues outside the control until pointerup/cancel without component-owned capture emulation.",
           "repository": "ui",
@@ -434,7 +434,7 @@
           "type": "consumer-usage"
         }
       ],
-      "line": 73,
+      "line": 72,
       "package": "@ui/components",
       "path": "packages/components/number-input.tsx",
       "repository": "ui",
@@ -803,7 +803,7 @@
           "path": "cosmos/internal/visual/main/index.ts",
           "proves": "Compile linked .tsx component exports and remove stale imperative createButton usage without restoring legacy APIs.",
           "repository": "metafor",
-          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899",
+          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899+dirty",
           "symbol": "Compiled dock migration",
           "type": "consumer-usage"
         }
@@ -847,7 +847,7 @@
           "path": "create-metafor/dsl/matter.ts",
           "proves": "Parse the bounded meta/log/conditional/map source contract without treating ordinary HTML as executable DOM UI.",
           "repository": "metafor",
-          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899",
+          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899+dirty",
           "symbol": "Matter source parser",
           "type": "consumer-usage"
         }

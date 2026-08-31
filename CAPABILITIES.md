@@ -13,9 +13,9 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | demo | main | `470c70a70b436fb3e3ae121b3ab81fa410ef3255` | no |
 | engine | main | `9bcfec9fbe7f808c56b85eb6acf2bcae6276db2b` | no |
 | interpreter | main | `4f02274a6e9f99a8717507fe5885301a33eec4dc` | no |
-| metafor | main | `92f4fb0510db5ea43cb03325ab3b3895d95b4899` | no |
+| metafor | main | `92f4fb0510db5ea43cb03325ab3b3895d95b4899` | yes |
 | node | main | `bd5af9a2cf6fca679a69de5245d107ea42318f54` | yes |
-| renderer | main | `4a77909f5de4784751b073840f68b0460ade65f8` | yes |
+| renderer | main | `0baaca60804990dc731fbc880515614ee89901c2` | yes |
 | storybook | main | `35eb3779a8233d23c7426260162b10d1b1d92e16` | yes |
 | template | main | `838a214a83950259f3f5d543e881e11402bc230c` | yes |
 | ui | main | `1c2f83c8fcaca3c78cee09e2fa9e9f1ad295056d` | yes |
@@ -4777,7 +4777,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `html.behaviors.input-selection` | behavior | partial | adapted | @zavx0z/dom/semantic | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. | 2 | 0 |
 | `html.behaviors.input-step` | behavior | unsupported | none | @zavx0z/dom/semantic | The current semantic DOM has no implementation of this HTML algorithm. | 1 | 0 |
 | `html.behaviors.input-type-button` | input-type | partial | adapted | @zavx0z/dom/semantic | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. | 2 | 0 |
-| `html.behaviors.input-type-checkbox` | input-type | partial | adapted | @zavx0z/dom/semantic | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. | 2 | 0 |
+| `html.behaviors.input-type-checkbox` | input-type | partial | adapted | @zavx0z/dom/semantic | Checkbox live state, activation and a bounded checked check glyph are implemented; indeterminate chrome, forms, validation, accessibility and complete native browser behavior remain unsupported. | 4 | 0 |
 | `html.behaviors.input-type-color` | input-type | unsupported | none | @zavx0z/dom/semantic | The current semantic DOM has no implementation of this HTML algorithm. | 1 | 0 |
 | `html.behaviors.input-type-date` | input-type | unsupported | none | @zavx0z/dom/semantic | The current semantic DOM has no implementation of this HTML algorithm. | 1 | 0 |
 | `html.behaviors.input-type-datetime-local` | input-type | unsupported | none | @zavx0z/dom/semantic | The current semantic DOM has no implementation of this HTML algorithm. | 1 | 0 |
@@ -4807,7 +4807,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `html.behaviors.popover` | behavior | partial | adapted | @zavx0z/dom/semantic | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. | 2 | 1 |
 | `html.behaviors.progress-meter` | behavior | partial | adapted | @zavx0z/dom/semantic | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. | 2 | 0 |
 | `html.behaviors.resource-loading` | behavior | not-applicable | none | @zavx0z/dom/semantic | The capability belongs to a full browsing user agent rather than the accepted semantic DOM to CPU Renderer to retained WebGPU platform. | 1 | 0 |
-| `html.behaviors.select-option-optgroup` | behavior | partial | adapted | @zavx0z/dom/semantic | Collapsed single-select live state, picker ownership and bounded keyboard/pointer choice are implemented; multiple/listbox, optgroup, type-ahead, forms and accessibility projection remain unsupported. | 2 | 1 |
+| `html.behaviors.select-option-optgroup` | behavior | partial | adapted | @zavx0z/dom/semantic | Collapsed single-select live state, disclosure chrome, picker ownership and bounded keyboard/pointer choice are implemented; multiple/listbox, optgroup, type-ahead, forms and accessibility projection remain unsupported. | 4 | 1 |
 | `html.behaviors.sequential-focus-navigation` | behavior | unsupported | none | @zavx0z/dom/semantic | The current semantic DOM has no implementation of this HTML algorithm. | 1 | 0 |
 | `html.behaviors.tables` | behavior | unsupported | none | @zavx0z/dom/semantic | The current semantic DOM has no implementation of this HTML algorithm. | 1 | 0 |
 | `html.behaviors.textarea` | behavior | partial | adapted | @zavx0z/dom/semantic | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. | 2 | 0 |
@@ -8618,7 +8618,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `renderer.features.default-activation` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Implemented for the bounded rendered-control set including explicit semantic capture, horizontal Range and collapsed Select; implicit touch capture and complete Pointer Events/HTML default actions remain outside Core. | 3 | 0 |
 | `renderer.features.display-list` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.flex-layout` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The bounded owner supports row/column single-line Flex and nowrap/wrap/wrap-reverse multi-line packing with direction-mapped independent row/column gaps, per-line grow/shrink/justification/align-items, admitted align-content distribution after mandatory cross gaps, intrinsic/auto sizing, and wrap-reverse cross-start semantics; balance, reverse main axes, flex-flow, order, align-self, percentage gaps, gap decorations/rules, writing modes, and complete intrinsic multi-line Flexbox sizing remain unsupported. | 7 | 0 |
-| `renderer.features.form-control-projection` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The bounded form-control set now includes horizontal Range interaction and a collapsed single-Select picker; multiple/listbox, type-ahead, accessibility projection and complete native form chrome remain unsupported. | 3 | 0 |
+| `renderer.features.form-control-projection` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The bounded form-control set includes checked Checkbox/Radio indicators, collapsed Select disclosure/picker and horizontal Range interaction; indeterminate Checkbox, multiple/listbox, type-ahead, accessibility projection and complete native form chrome remain unsupported. | 4 | 0 |
 | `renderer.features.geometry-readback` | renderer-stage | unsupported | none | @zavx0z/renderer/cpu | The CPU renderer has no implementation of this internal platform capability. | 1 | 0 |
 | `renderer.features.hit-metadata` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.images` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 1 |

@@ -746,7 +746,7 @@
           "path": "packages/browser/src/native-input-host.ts",
           "proves": "One reusable native input mirrors focused semantic number/range value, min, max and step without fabricated selection and routes keyboard/beforeinput/input/change with cancellation rollback.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "number and range input proxy",
           "type": "implementation"
         },
@@ -755,7 +755,7 @@
           "path": "packages/browser/test/native-input-host.test.ts",
           "proves": "Exact target/proxy identity, min/max/step and sanitized value sync, native Arrow default seam, cancellation, keyboard routing and input/change order.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "number and range proxy",
           "type": "unit-test"
         }
@@ -763,7 +763,7 @@
       "id": "browser.features.number-input-proxy",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
+        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
       },
       "limitations": [],
       "owner": {
@@ -878,7 +878,7 @@
           "path": "packages/browser/src/runtime.ts",
           "proves": "Native canvas capture retains host delivery while Core retargets through the exact semantic Document override.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "canvas and semantic pointer capture",
           "type": "implementation"
         },
@@ -887,7 +887,7 @@
           "path": "packages/browser/test/runtime.test.ts",
           "proves": "Host capture lifecycle and cleanup.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "canvas pointer capture",
           "type": "unit-test"
         },
@@ -896,7 +896,7 @@
           "path": "packages/core/test/interaction.test.ts",
           "proves": "Captured Element receives move/up outside its hit and emits got/lost in order.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "semantic pointer capture",
           "type": "unit-test"
         }
@@ -904,7 +904,7 @@
       "id": "browser.features.pointer-capture",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
+        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
       },
       "limitations": [
         "Native canvas delivery and explicit semantic capture are integrated; implicit touch capture and live native browser acceptance remain outside this evidence."
@@ -1043,7 +1043,7 @@
           "path": "packages/browser/src/native-input-host.ts",
           "proves": "The reusable native select is a keyboard owner while semantic/Core own selection and in-canvas picker paint.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "select keyboard proxy",
           "type": "implementation"
         },
@@ -1052,7 +1052,7 @@
           "path": "packages/core/src/renderer.ts",
           "proves": "One edge-aware top-layer picker projects exact Option identities in the shared frame.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "emitSelectPicker",
           "type": "implementation"
         },
@@ -1061,7 +1061,7 @@
           "path": "packages/browser/test/native-input-host.test.ts",
           "proves": "Arrow selection, Space open, Escape close and input/change ordering.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "select keyboard host",
           "type": "unit-test"
         },
@@ -1070,7 +1070,7 @@
           "path": "packages/core/test/interaction.test.ts",
           "proves": "Pointer open, exact option choice and outside light-dismiss.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "select picker interaction",
           "type": "unit-test"
         }
@@ -1078,7 +1078,7 @@
       "id": "browser.features.select-picker",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
+        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
       },
       "limitations": [
         "Collapsed single-select pointer/keyboard picker behavior is implemented; scrolling beyond eight visible options, multiple/listbox, type-ahead and native accessibility projection remain unsupported."

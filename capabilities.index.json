@@ -32,7 +32,7 @@
           "path": "cosmos/internal/visual/main/index.ts",
           "proves": "Attach the Cosmos main root from the shared Experience Document to a stable world plane with the intended stylesheet and camera gestures.",
           "repository": "metafor",
-          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899",
+          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899+dirty",
           "symbol": "Cosmos display plane",
           "type": "consumer-usage"
         }
@@ -94,7 +94,7 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "56",
+          "lines": "55",
           "path": "packages/components/number-input.tsx",
           "proves": "Native typed number editing, focus, input/change, Escape rollback and selection through the exact semantic owner.",
           "repository": "ui",
@@ -103,7 +103,7 @@
           "type": "consumer-usage"
         }
       ],
-      "line": 56,
+      "line": 55,
       "package": "@ui/components",
       "path": "packages/components/number-input.tsx",
       "repository": "ui",
@@ -164,7 +164,7 @@
           "path": "cosmos/internal/visual/main/index.ts",
           "proves": "Own one semantic Document, Canvas, Engine Renderer and Space for the Cosmos main plane and dock HUD projection.",
           "repository": "metafor",
-          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899",
+          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899+dirty",
           "symbol": "Cosmos presentation host",
           "type": "consumer-usage"
         }
@@ -186,7 +186,7 @@
           "path": "cosmos/internal/visual/main/index.ts",
           "proves": "Attach the dock sibling root from the same Experience Document to a camera-locked overlay using the host stylesheet realm.",
           "repository": "metafor",
-          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899",
+          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899+dirty",
           "symbol": "Cosmos display dock",
           "type": "consumer-usage"
         }
@@ -208,7 +208,7 @@
           "path": "quantum/bulk/dom/overlay-runtime.ts",
           "proves": "Compose the HUD through the shared browser overlay owner rather than reimplementing pointer mapping, capture, hit and lifecycle.",
           "repository": "metafor",
-          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899",
+          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899+dirty",
           "symbol": "Bulk DOM overlay",
           "type": "consumer-usage"
         }
@@ -424,7 +424,7 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "73",
+          "lines": "72",
           "path": "packages/components/number-input.tsx",
           "proves": "A scrub gesture continues outside the control until pointerup/cancel without component-owned capture emulation.",
           "repository": "ui",
@@ -433,7 +433,7 @@
           "type": "consumer-usage"
         }
       ],
-      "line": 73,
+      "line": 72,
       "package": "@ui/components",
       "path": "packages/components/number-input.tsx",
       "repository": "ui",
@@ -802,7 +802,7 @@
           "path": "cosmos/internal/visual/main/index.ts",
           "proves": "Compile linked .tsx component exports and remove stale imperative createButton usage without restoring legacy APIs.",
           "repository": "metafor",
-          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899",
+          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899+dirty",
           "symbol": "Compiled dock migration",
           "type": "consumer-usage"
         }
@@ -846,7 +846,7 @@
           "path": "create-metafor/dsl/matter.ts",
           "proves": "Parse the bounded meta/log/conditional/map source contract without treating ordinary HTML as executable DOM UI.",
           "repository": "metafor",
-          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899",
+          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899+dirty",
           "symbol": "Matter source parser",
           "type": "consumer-usage"
         }
@@ -2754,7 +2754,7 @@
       "conformance": "extension",
       "consumers": [
         "ui:@ui/components:Inspector numeric fields:packages/components/inspector.tsx:89",
-        "ui:@ui/components:NumberInput:packages/components/number-input.tsx:56"
+        "ui:@ui/components:NumberInput:packages/components/number-input.tsx:55"
       ],
       "description": "Browser composition number input proxy capability.",
       "domain": "browser",
@@ -2764,7 +2764,7 @@
           "path": "packages/browser/src/native-input-host.ts",
           "proves": "One reusable native input mirrors focused semantic number/range value, min, max and step without fabricated selection and routes keyboard/beforeinput/input/change with cancellation rollback.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "number and range input proxy",
           "type": "implementation"
         },
@@ -2773,7 +2773,7 @@
           "path": "packages/browser/test/native-input-host.test.ts",
           "proves": "Exact target/proxy identity, min/max/step and sanitized value sync, native Arrow default seam, cancellation, keyboard routing and input/change order.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "number and range proxy",
           "type": "unit-test"
         }
@@ -2782,7 +2782,7 @@
       "kind": "browser-host",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
+        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
       },
       "limitations": [],
       "metadata": {
@@ -2800,7 +2800,7 @@
           {
             "behavior": "Native typed number editing, focus, input/change, Escape rollback and selection through the exact semantic owner.",
             "capability": "browser.features.number-input-proxy",
-            "line": 56,
+            "line": 55,
             "package": "@ui/components",
             "path": "packages/components/number-input.tsx",
             "repository": "ui",
@@ -3030,7 +3030,7 @@
           "path": "packages/browser/src/runtime.ts",
           "proves": "Native canvas capture retains host delivery while Core retargets through the exact semantic Document override.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "canvas and semantic pointer capture",
           "type": "implementation"
         },
@@ -3039,7 +3039,7 @@
           "path": "packages/browser/test/runtime.test.ts",
           "proves": "Host capture lifecycle and cleanup.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "canvas pointer capture",
           "type": "unit-test"
         },
@@ -3048,7 +3048,7 @@
           "path": "packages/core/test/interaction.test.ts",
           "proves": "Captured Element receives move/up outside its hit and emits got/lost in order.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "semantic pointer capture",
           "type": "unit-test"
         }
@@ -3057,7 +3057,7 @@
       "kind": "browser-host",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
+        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
       },
       "limitations": [
         "Native canvas delivery and explicit semantic capture are integrated; implicit touch capture and live native browser acceptance remain outside this evidence."
@@ -3259,7 +3259,7 @@
           "path": "packages/browser/src/native-input-host.ts",
           "proves": "The reusable native select is a keyboard owner while semantic/Core own selection and in-canvas picker paint.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "select keyboard proxy",
           "type": "implementation"
         },
@@ -3268,7 +3268,7 @@
           "path": "packages/core/src/renderer.ts",
           "proves": "One edge-aware top-layer picker projects exact Option identities in the shared frame.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "emitSelectPicker",
           "type": "implementation"
         },
@@ -3277,7 +3277,7 @@
           "path": "packages/browser/test/native-input-host.test.ts",
           "proves": "Arrow selection, Space open, Escape close and input/change ordering.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "select keyboard host",
           "type": "unit-test"
         },
@@ -3286,7 +3286,7 @@
           "path": "packages/core/test/interaction.test.ts",
           "proves": "Pointer open, exact option choice and outside light-dismiss.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "select picker interaction",
           "type": "unit-test"
         }
@@ -3295,7 +3295,7 @@
       "kind": "browser-host",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
+        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
       },
       "limitations": [
         "Collapsed single-select pointer/keyboard picker behavior is implemented; scrolling beyond eight visible options, multiple/listbox, type-ahead and native accessibility projection remain unsupported."
@@ -210527,7 +210527,7 @@
           "path": "packages/dom/src/pointer-capture.ts",
           "proves": "Per-Document active/pending/effective capture ownership and got/lost ordering.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "pending pointer capture override",
           "type": "implementation"
         },
@@ -210536,7 +210536,7 @@
           "path": "packages/dom/test/pointer-capture.test.ts",
           "proves": "Pending override processing, transfer, explicit/implicit release, inactive-id errors and disconnect cleanup.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "Element pointer capture",
           "type": "unit-test"
         },
@@ -210545,7 +210545,7 @@
           "path": "packages/core/test/interaction.test.ts",
           "proves": "Move/up remain targeted at the exact captured Element outside its hit box.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "semantic pointer-capture retargeting",
           "type": "unit-test"
         }
@@ -210554,7 +210554,7 @@
       "kind": "behavior",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
+        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
       },
       "limitations": [
         "Explicit semantic capture, pending overrides and got/lost ordering are implemented; implicit touch capture and the complete native Pointer Events device model remain outside this bounded host."
@@ -216096,7 +216096,7 @@
           "path": "packages/dom/src/pointer-capture.ts",
           "proves": "Pending override processing dispatches the exact capture transition event in standard lost-before-got order.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "gotpointercapture",
           "type": "implementation"
         },
@@ -216105,7 +216105,7 @@
           "path": "packages/dom/test/pointer-capture.test.ts",
           "proves": "Transfer, explicit release and implicit pointer-end ordering are observed.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "gotpointercapture",
           "type": "unit-test"
         }
@@ -216114,7 +216114,7 @@
       "kind": "event",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
+        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
       },
       "limitations": [
         "Semantic transition dispatch and ordering are proven; trusted native provenance and implicit touch capture remain outside this bounded host."
@@ -216522,7 +216522,7 @@
           "path": "packages/dom/src/pointer-capture.ts",
           "proves": "Pending override processing dispatches the exact capture transition event in standard lost-before-got order.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "lostpointercapture",
           "type": "implementation"
         },
@@ -216531,7 +216531,7 @@
           "path": "packages/dom/test/pointer-capture.test.ts",
           "proves": "Transfer, explicit release and implicit pointer-end ordering are observed.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "lostpointercapture",
           "type": "unit-test"
         }
@@ -216540,7 +216540,7 @@
       "kind": "event",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
+        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
       },
       "limitations": [
         "Semantic transition dispatch and ordering are proven; trusted native provenance and implicit touch capture remain outside this bounded host."
@@ -228753,7 +228753,7 @@
           "path": "packages/dom/src/element.ts",
           "proves": "The standard Element method delegates to the exact Document pointer-capture owner.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "hasPointerCapture",
           "type": "implementation"
         },
@@ -228762,7 +228762,7 @@
           "path": "packages/dom/test/pointer-capture.test.ts",
           "proves": "Method errors, pending ownership, transfer and release are observed through exact Element identity.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "hasPointerCapture",
           "type": "unit-test"
         }
@@ -228771,7 +228771,7 @@
       "kind": "operation",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
+        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
       },
       "limitations": [
         "The explicit Element method contract is behaviorally proven; implicit touch capture and live native browser provenance remain outside this evidence."
@@ -228813,7 +228813,7 @@
           "path": "packages/dom/src/element.ts",
           "proves": "The standard Element method delegates to the exact Document pointer-capture owner.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "releasePointerCapture",
           "type": "implementation"
         },
@@ -228822,7 +228822,7 @@
           "path": "packages/dom/test/pointer-capture.test.ts",
           "proves": "Method errors, pending ownership, transfer and release are observed through exact Element identity.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "releasePointerCapture",
           "type": "unit-test"
         }
@@ -228831,7 +228831,7 @@
       "kind": "operation",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
+        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
       },
       "limitations": [
         "The explicit Element method contract is behaviorally proven; implicit touch capture and live native browser provenance remain outside this evidence."
@@ -228865,7 +228865,7 @@
       "blocks": [],
       "conformance": "adapted",
       "consumers": [
-        "ui:@ui/components:NumberInput scrub:packages/components/number-input.tsx:73"
+        "ui:@ui/components:NumberInput scrub:packages/components/number-input.tsx:72"
       ],
       "description": "Element.setPointerCapture Web IDL operation.",
       "domain": "dom",
@@ -228875,7 +228875,7 @@
           "path": "packages/dom/src/element.ts",
           "proves": "The standard Element method delegates to the exact Document pointer-capture owner.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "setPointerCapture",
           "type": "implementation"
         },
@@ -228884,7 +228884,7 @@
           "path": "packages/dom/test/pointer-capture.test.ts",
           "proves": "Method errors, pending ownership, transfer and release are observed through exact Element identity.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "setPointerCapture",
           "type": "unit-test"
         }
@@ -228893,7 +228893,7 @@
       "kind": "operation",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
+        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
       },
       "limitations": [
         "The explicit Element method contract is behaviorally proven; implicit touch capture and live native browser provenance remain outside this evidence."
@@ -228903,7 +228903,7 @@
           {
             "behavior": "A scrub gesture continues outside the control until pointerup/cancel without component-owned capture emulation.",
             "capability": "dom.extensions.pointerevents.interfaces.element.methods.setpointercapture",
-            "line": 73,
+            "line": 72,
             "package": "@ui/components",
             "path": "packages/components/number-input.tsx",
             "repository": "ui",
@@ -267974,7 +267974,7 @@
           "path": "packages/dom/src/html-element.ts",
           "proves": "Boolean presence reflection and hidden-ancestor focus suppression use the exact semantic attribute owner.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "HTMLElement.hidden",
           "type": "implementation"
         },
@@ -267983,7 +267983,7 @@
           "path": "packages/dom/test/tree.test.ts",
           "proves": "Presence reflection and descendant focus suppression.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "HTMLElement.hidden",
           "type": "unit-test"
         },
@@ -267992,7 +267992,7 @@
           "path": "packages/core/test/renderer.test.ts",
           "proves": "A hidden subtree stays absent from boxes, paint and hits despite author and inline display.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "hidden author-display precedence",
           "type": "unit-test"
         }
@@ -268001,7 +268001,7 @@
       "kind": "global-attribute",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
+        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
       },
       "limitations": [
         "Boolean hidden presence and fully-hidden rendering/focus are implemented; until-found, beforematch, find-in-page reveal and accessibility projection remain unsupported."
@@ -274396,7 +274396,7 @@
           "path": "packages/core/src/css.ts",
           "proves": "Any present semantic hidden attribute forces used display:none after author cascade.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "hidden used display",
           "type": "implementation"
         },
@@ -274405,7 +274405,7 @@
           "path": "packages/dom/src/html-element.ts",
           "proves": "The semantic boolean reflection and ancestor focus law share the content attribute.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "HTMLElement.hidden",
           "type": "implementation"
         },
@@ -274414,7 +274414,7 @@
           "path": "packages/core/test/renderer.test.ts",
           "proves": "Author/compiled/inline display cannot reveal boxes, paint or hits; removal restores rendering.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "HTML hidden projection",
           "type": "unit-test"
         },
@@ -274423,7 +274423,7 @@
           "path": "packages/dom/test/tree.test.ts",
           "proves": "Hidden owners and descendants do not become the active element.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "hidden focusability",
           "type": "unit-test"
         }
@@ -274432,7 +274432,7 @@
       "kind": "behavior",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
+        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
       },
       "limitations": [
         "The fully-hidden state is behaviorally enforced; hidden=until-found, beforematch, find-in-page reveal, containment and accessibility projection remain unsupported."
@@ -274772,32 +274772,50 @@
       "domain": "html",
       "evidence": [
         {
-          "doesNotProve": "The complete referenced standard algorithm.",
+          "doesNotProve": "Forms, validation, accessibility and every browser default action.",
           "path": "packages/dom/src/html-input-element.ts",
-          "proves": "The bounded semantic DOM implementation exists.",
+          "proves": "Checked state, cancellation rollback and input/change ordering remain owned by the semantic Checkbox.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "input type=checkbox",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "symbol": "checkbox activation",
           "type": "implementation"
         },
         {
-          "doesNotProve": "The complete HTML algorithm, forms, picker, or browser integration.",
-          "path": "packages/dom/test/html-input-element.test.ts",
-          "proves": "The bounded UI/control slice has behavioral tests.",
+          "doesNotProve": "Indeterminate Checkbox chrome, native font pixels and accessibility projection.",
+          "path": "packages/core/src/renderer.ts",
+          "proves": "A checked Checkbox projects one stable current-color check glyph while Radio retains its circular Rect indicator.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "input type=checkbox",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "symbol": "checkbox UA check glyph",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Forms, validation and native trusted activation.",
+          "path": "packages/dom/test/input-activation.test.ts",
+          "proves": "Checked-state activation, cancellation and event order.",
+          "repository": "renderer",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "symbol": "HTMLInputElement checkbox activation",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Indeterminate chrome and live native font pixels.",
+          "path": "packages/core/test/input-paint.test.ts",
+          "proves": "Unchecked absence, checked check-mark identity, Radio dot distinction and disabled opacity/hit behavior.",
+          "repository": "renderer",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "symbol": "checkbox and radio projection",
           "type": "unit-test"
         }
       ],
       "id": "html.behaviors.input-type-checkbox",
       "kind": "input-type",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
       },
       "limitations": [
-        "Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed."
+        "Checkbox live state, activation and a bounded checked check glyph are implemented; indeterminate chrome, forms, validation, accessibility and complete native browser behavior remain unsupported."
       ],
       "metadata": {},
       "name": "input type=checkbox",
@@ -275370,7 +275388,7 @@
           "path": "packages/dom/src/html-input-element.ts",
           "proves": "Arrow/Home/End/Page defaults write through the DOM range value owner and emit input/change only on effective changes.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "applyRangeKeyboardDefault",
           "type": "implementation"
         },
@@ -275379,7 +275397,7 @@
           "path": "packages/core/src/interaction.ts",
           "proves": "Pointer drag uses the rendered track geometry and DOM numeric semantics without consumer coordinates.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "range pointer default action",
           "type": "implementation"
         },
@@ -275388,7 +275406,7 @@
           "path": "packages/dom/test/input-numeric-state.test.ts",
           "proves": "Keyboard stepping, clamping and event order.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "range keyboard defaults",
           "type": "unit-test"
         },
@@ -275397,7 +275415,7 @@
           "path": "packages/core/test/range-input.test.ts",
           "proves": "Pointer geometry, min/max/step ownership and input/change order.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "range pointer drag",
           "type": "unit-test"
         }
@@ -275406,7 +275424,7 @@
       "kind": "input-type",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
+        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
       },
       "limitations": [
         "Horizontal pointer drag and bounded keyboard defaults are implemented; vertical orientation, ticks, datalist, validity, public stepUp/stepDown and complete browser range behavior remain unsupported."
@@ -276353,8 +276371,17 @@
           "path": "packages/dom/src/select-picker-state.ts",
           "proves": "One Document-owned picker, keyboard selection and exact Option choice/event ordering.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "collapsed select picker state",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Multiple/listbox, author-custom picker chrome and native accessibility projection.",
+          "path": "packages/core/src/renderer.ts",
+          "proves": "Every collapsed Select reserves a bounded label-safe slot for one stable current-color disclosure glyph.",
+          "repository": "renderer",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "symbol": "collapsed select disclosure indicator",
           "type": "implementation"
         },
         {
@@ -276362,8 +276389,17 @@
           "path": "packages/dom/test/select-picker.test.ts",
           "proves": "Open/close, keyboard, exact option selection, input/change, blur and removal cleanup.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "collapsed select picker state",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Native font pixels, multiple/listbox and accessibility projection.",
+          "path": "packages/core/test/select-paint.test.ts",
+          "proves": "Stable indicator identity across selection, empty-label presence, author sizing/color and disabled opacity.",
+          "repository": "renderer",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "symbol": "collapsed select disclosure indicator",
           "type": "unit-test"
         }
       ],
@@ -276371,10 +276407,10 @@
       "kind": "behavior",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
+        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
       },
       "limitations": [
-        "Collapsed single-select live state, picker ownership and bounded keyboard/pointer choice are implemented; multiple/listbox, optgroup, type-ahead, forms and accessibility projection remain unsupported."
+        "Collapsed single-select live state, disclosure chrome, picker ownership and bounded keyboard/pointer choice are implemented; multiple/listbox, optgroup, type-ahead, forms and accessibility projection remain unsupported."
       ],
       "metadata": {
         "consumerDemand": [
@@ -491631,7 +491667,7 @@
           "path": "packages/dom/src/state-change.ts",
           "proves": "The public discriminated state record carries exact Select identity and open old/new values.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "SelectPickerStateChange",
           "type": "implementation"
         },
@@ -491640,7 +491676,7 @@
           "path": "packages/dom/test/select-picker.test.ts",
           "proves": "Open, owner transfer, close, blur and removal publish observable state through the Document channel.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "select picker state records",
           "type": "unit-test"
         }
@@ -491649,7 +491685,7 @@
       "kind": "type-export",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
+        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
       },
       "limitations": [],
       "metadata": {
@@ -514598,7 +514634,7 @@
           "path": "packages/core/src/interaction.ts",
           "proves": "Deepest dispatch, nearest control ownership, semantic capture retargeting, range drag and select option activation share one interaction owner.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "pointer capture and control default actions",
           "type": "implementation"
         },
@@ -514607,7 +514643,7 @@
           "path": "packages/core/test/interaction.test.ts",
           "proves": "Nested ownership, capture outside hits, select open/choice/light-dismiss and disabled/cancel cleanup.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "default-activation",
           "type": "unit-test"
         },
@@ -514616,7 +514652,7 @@
           "path": "packages/core/test/range-input.test.ts",
           "proves": "Rendered track geometry drives DOM range input/change semantics.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "range pointer default action",
           "type": "unit-test"
         }
@@ -514625,7 +514661,7 @@
       "kind": "renderer-stage",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
+        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
       },
       "limitations": [
         "Implemented for the bounded rendered-control set including explicit semantic capture, horizontal Range and collapsed Select; implicit touch capture and complete Pointer Events/HTML default actions remain outside Core."
@@ -514816,30 +514852,39 @@
       "domain": "renderer",
       "evidence": [
         {
-          "doesNotProve": "Complete native form chrome, listboxes, accessibility and every input type.",
+          "doesNotProve": "Complete native form chrome, indeterminate Checkbox, listboxes, accessibility and every input type.",
           "path": "packages/core/src/renderer.ts",
-          "proves": "Horizontal range paint and one top-layer collapsed select picker retain exact semantic control/option identities.",
+          "proves": "Checkbox check glyph, Radio dot, Select disclosure/picker and horizontal Range paint retain exact semantic control/option identities.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
-          "symbol": "range and select picker projection",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "symbol": "bounded native control projection",
           "type": "implementation"
+        },
+        {
+          "doesNotProve": "Indeterminate chrome and live native font pixels.",
+          "path": "packages/core/test/input-paint.test.ts",
+          "proves": "Stable checked glyph/dot distinction, current color and disabled opacity/hit behavior.",
+          "repository": "renderer",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "symbol": "checkbox and radio UA indicators",
+          "type": "unit-test"
         },
         {
           "doesNotProve": "Vertical/ticks/datalist and native pixels.",
           "path": "packages/core/test/range-input.test.ts",
           "proves": "Stable range track/thumb paint and pointer behavior.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "range input projection",
           "type": "unit-test"
         },
         {
-          "doesNotProve": "Scrolling/type-ahead/multiple/listbox/accessibility.",
+          "doesNotProve": "Scrolling/type-ahead/multiple/listbox/accessibility and native font pixels.",
           "path": "packages/core/test/select-paint.test.ts",
-          "proves": "Exact option boxes/hits, selected paint and presentation-coordinate viewport placement for translated/scaled Select owners.",
+          "proves": "Stable disclosure identity, label-safe geometry, exact option boxes/hits and presentation-coordinate viewport placement.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
-          "symbol": "collapsed select picker projection",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "symbol": "collapsed select and picker projection",
           "type": "unit-test"
         }
       ],
@@ -514847,10 +514892,10 @@
       "kind": "renderer-stage",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
+        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
       },
       "limitations": [
-        "The bounded form-control set now includes horizontal Range interaction and a collapsed single-Select picker; multiple/listbox, type-ahead, accessibility projection and complete native form chrome remain unsupported."
+        "The bounded form-control set includes checked Checkbox/Radio indicators, collapsed Select disclosure/picker and horizontal Range interaction; indeterminate Checkbox, multiple/listbox, type-ahead, accessibility projection and complete native form chrome remain unsupported."
       ],
       "metadata": {},
       "name": "form control projection",
@@ -515505,7 +515550,7 @@
           "path": "packages/core/src/interaction.ts",
           "proves": "Deepest dispatch, nearest control ownership, semantic capture retargeting, range drag and select option activation share one interaction owner.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "pointer capture and control default actions",
           "type": "implementation"
         },
@@ -515514,7 +515559,7 @@
           "path": "packages/core/test/interaction.test.ts",
           "proves": "Nested ownership, capture outside hits, select open/choice/light-dismiss and disabled/cancel cleanup.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "pointer",
           "type": "unit-test"
         },
@@ -515523,7 +515568,7 @@
           "path": "packages/core/test/range-input.test.ts",
           "proves": "Rendered track geometry drives DOM range input/change semantics.",
           "repository": "renderer",
-          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
           "symbol": "range pointer default action",
           "type": "unit-test"
         }
@@ -515532,7 +515577,7 @@
       "kind": "renderer-stage",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
+        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
       },
       "limitations": [
         "Implemented for the bounded rendered-control set including explicit semantic capture, horizontal Range and collapsed Select; implicit touch capture and complete Pointer Events/HTML default actions remain outside Core."
@@ -522901,7 +522946,7 @@
     },
     {
       "branch": "main",
-      "dirty": false,
+      "dirty": true,
       "id": "metafor",
       "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899"
     },
@@ -522915,7 +522960,7 @@
       "branch": "main",
       "dirty": true,
       "id": "renderer",
-      "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
+      "revision": "0baaca60804990dc731fbc880515614ee89901c2"
     },
     {
       "branch": "main",
