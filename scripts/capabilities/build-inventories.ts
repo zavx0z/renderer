@@ -1138,8 +1138,8 @@ function cssSourceId(href: string | undefined): string {
 }
 
 function ownerRevision(ownerHint: CapabilityOwner): string {
-  if (ownerHint.repository === "renderer") return "3c91038c3f14ccc44616209fd82b1e59b7369408"
+  if (ownerHint.repository === "renderer") return "258176181fe98b604935c38d71aaca5b93aaf4b3"
   if (ownerHint.repository === "template") return "87d0ec3d2a9f19c3750d567ee20dc4bace995e90"
-  if (ownerHint.repository === "engine") return "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+  if (ownerHint.repository === "engine") return "31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
   return "unknown"
 }

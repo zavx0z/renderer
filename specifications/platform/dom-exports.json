@@ -20,7 +20,7 @@
         "anchor": "./src/character-data.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -46,7 +46,7 @@
         "anchor": "renderer:packages/dom/src/character-data.ts#L6",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -69,7 +69,7 @@
         "anchor": "./src/comment.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -95,7 +95,7 @@
         "anchor": "renderer:packages/dom/src/comment.ts#L5",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -118,7 +118,7 @@
         "anchor": "./src/composition-event.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -144,7 +144,7 @@
         "anchor": "renderer:packages/dom/src/composition-event.ts#L8",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -170,7 +170,7 @@
         "anchor": "renderer:packages/dom/src/composition-event.ts#L4",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -193,7 +193,7 @@
         "anchor": "./src/document.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -216,7 +216,7 @@
         "anchor": "./src/document-fragment.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -242,7 +242,7 @@
         "anchor": "renderer:packages/dom/src/document-fragment.ts#L8",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -252,7 +252,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": "./document",
-        "line": 842,
+        "line": 900,
         "path": "renderer:packages/dom/src/document.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -265,10 +265,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.document",
       "spec": {
-        "anchor": "renderer:packages/dom/src/document.ts#L842",
+        "anchor": "renderer:packages/dom/src/document.ts#L900",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -278,7 +278,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": "./document",
-        "line": 151,
+        "line": 166,
         "path": "renderer:packages/dom/src/document.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -291,10 +291,36 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.document",
       "spec": {
-        "anchor": "renderer:packages/dom/src/document.ts#L151",
+        "anchor": "renderer:packages/dom/src/document.ts#L166",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      }
+    },
+    {
+      "description": "@zavx0z/dom/document public type export DocumentTextControlSelection.",
+      "domain": "dom",
+      "id": "platform.at-zavx0z-dom.export-paths.document.symbols.documenttextcontrolselection",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": "./document",
+        "line": 157,
+        "path": "renderer:packages/dom/src/document.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DocumentTextControlSelection",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "platform.at-zavx0z-dom.export-paths.document",
+      "spec": {
+        "anchor": "renderer:packages/dom/src/document.ts#L157",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -304,7 +330,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": "./document",
-        "line": 119,
+        "line": 123,
         "path": "renderer:packages/dom/src/document.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -317,10 +343,36 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.document",
       "spec": {
-        "anchor": "renderer:packages/dom/src/document.ts#L119",
+        "anchor": "renderer:packages/dom/src/document.ts#L123",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      }
+    },
+    {
+      "description": "@zavx0z/dom/document public type export TextControlSelectionTarget.",
+      "domain": "dom",
+      "id": "platform.at-zavx0z-dom.export-paths.document.symbols.textcontrolselectiontarget",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": "./document",
+        "line": 155,
+        "path": "renderer:packages/dom/src/document.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "TextControlSelectionTarget",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "platform.at-zavx0z-dom.export-paths.document",
+      "spec": {
+        "anchor": "renderer:packages/dom/src/document.ts#L155",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -343,7 +395,7 @@
         "anchor": "./src/element.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -369,7 +421,7 @@
         "anchor": "renderer:packages/dom/src/element.ts#L24",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -392,7 +444,7 @@
         "anchor": "./src/event.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -415,7 +467,7 @@
         "anchor": "./src/event-target.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -441,7 +493,7 @@
         "anchor": "renderer:packages/dom/src/event-target.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -467,7 +519,7 @@
         "anchor": "renderer:packages/dom/src/event-target.ts#L9",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -493,7 +545,7 @@
         "anchor": "renderer:packages/dom/src/event-target.ts#L5",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -519,7 +571,7 @@
         "anchor": "renderer:packages/dom/src/event-target.ts#L17",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -545,7 +597,7 @@
         "anchor": "renderer:packages/dom/src/event-target.ts#L33",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -571,7 +623,7 @@
         "anchor": "renderer:packages/dom/src/event.ts#L72",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -597,7 +649,7 @@
         "anchor": "renderer:packages/dom/src/event.ts#L68",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -623,7 +675,7 @@
         "anchor": "renderer:packages/dom/src/event.ts#L9",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -649,7 +701,7 @@
         "anchor": "renderer:packages/dom/src/event.ts#L3",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -672,7 +724,7 @@
         "anchor": "./src/focus-event.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -698,7 +750,7 @@
         "anchor": "renderer:packages/dom/src/focus-event.ts#L9",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -724,7 +776,7 @@
         "anchor": "renderer:packages/dom/src/focus-event.ts#L5",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -747,7 +799,7 @@
         "anchor": "./src/html-button-element.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -773,7 +825,7 @@
         "anchor": "renderer:packages/dom/src/html-button-element.ts#L9",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -796,7 +848,7 @@
         "anchor": "./src/html-div-element.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -822,7 +874,7 @@
         "anchor": "renderer:packages/dom/src/html-div-element.ts#L4",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -845,7 +897,7 @@
         "anchor": "./src/html-element.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -855,7 +907,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": "./html-element",
-        "line": 57,
+        "line": 59,
         "path": "renderer:packages/dom/src/html-element.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -868,10 +920,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.html-element",
       "spec": {
-        "anchor": "renderer:packages/dom/src/html-element.ts#L57",
+        "anchor": "renderer:packages/dom/src/html-element.ts#L59",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -881,7 +933,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": "./html-element",
-        "line": 70,
+        "line": 72,
         "path": "renderer:packages/dom/src/html-element.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -894,10 +946,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.html-element",
       "spec": {
-        "anchor": "renderer:packages/dom/src/html-element.ts#L70",
+        "anchor": "renderer:packages/dom/src/html-element.ts#L72",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -907,7 +959,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": "./html-element",
-        "line": 23,
+        "line": 25,
         "path": "renderer:packages/dom/src/html-element.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -920,10 +972,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.html-element",
       "spec": {
-        "anchor": "renderer:packages/dom/src/html-element.ts#L23",
+        "anchor": "renderer:packages/dom/src/html-element.ts#L25",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -933,7 +985,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": "./html-element",
-        "line": 25,
+        "line": 27,
         "path": "renderer:packages/dom/src/html-element.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -946,10 +998,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.html-element",
       "spec": {
-        "anchor": "renderer:packages/dom/src/html-element.ts#L25",
+        "anchor": "renderer:packages/dom/src/html-element.ts#L27",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -959,7 +1011,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": "./html-element",
-        "line": 62,
+        "line": 64,
         "path": "renderer:packages/dom/src/html-element.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -972,10 +1024,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.html-element",
       "spec": {
-        "anchor": "renderer:packages/dom/src/html-element.ts#L62",
+        "anchor": "renderer:packages/dom/src/html-element.ts#L64",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -985,7 +1037,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": "./html-element",
-        "line": 66,
+        "line": 68,
         "path": "renderer:packages/dom/src/html-element.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -998,10 +1050,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.html-element",
       "spec": {
-        "anchor": "renderer:packages/dom/src/html-element.ts#L66",
+        "anchor": "renderer:packages/dom/src/html-element.ts#L68",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1024,7 +1076,7 @@
         "anchor": "./src/html-field-set-element.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1050,7 +1102,7 @@
         "anchor": "renderer:packages/dom/src/html-field-set-element.ts#L4",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1073,7 +1125,7 @@
         "anchor": "./src/html-heading-element.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1099,7 +1151,7 @@
         "anchor": "renderer:packages/dom/src/html-heading-element.ts#L6",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1125,7 +1177,7 @@
         "anchor": "renderer:packages/dom/src/html-heading-element.ts#L4",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1148,7 +1200,7 @@
         "anchor": "./src/html-image-element.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1174,7 +1226,7 @@
         "anchor": "renderer:packages/dom/src/html-image-element.ts#L5",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1197,7 +1249,7 @@
         "anchor": "./src/html-input-element.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1223,7 +1275,7 @@
         "anchor": "renderer:packages/dom/src/html-input-element.ts#L94",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1246,7 +1298,7 @@
         "anchor": "./src/html-label-element.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1272,7 +1324,7 @@
         "anchor": "renderer:packages/dom/src/html-label-element.ts#L33",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1295,7 +1347,7 @@
         "anchor": "./src/html-legend-element.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1321,7 +1373,7 @@
         "anchor": "renderer:packages/dom/src/html-legend-element.ts#L4",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1344,7 +1396,7 @@
         "anchor": "./src/html-li-element.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1370,7 +1422,7 @@
         "anchor": "renderer:packages/dom/src/html-li-element.ts#L4",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1393,7 +1445,7 @@
         "anchor": "./src/html-meter-element.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1419,7 +1471,7 @@
         "anchor": "renderer:packages/dom/src/html-meter-element.ts#L9",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1442,7 +1494,7 @@
         "anchor": "./src/html-option-element.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1468,7 +1520,7 @@
         "anchor": "renderer:packages/dom/src/html-option-element.ts#L29",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1491,7 +1543,7 @@
         "anchor": "./src/html-paragraph-element.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1517,7 +1569,7 @@
         "anchor": "renderer:packages/dom/src/html-paragraph-element.ts#L4",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1540,7 +1592,7 @@
         "anchor": "./src/html-progress-element.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1566,7 +1618,7 @@
         "anchor": "renderer:packages/dom/src/html-progress-element.ts#L9",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1589,7 +1641,7 @@
         "anchor": "./src/html-select-element.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1615,7 +1667,7 @@
         "anchor": "renderer:packages/dom/src/html-select-element.ts#L40",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1638,7 +1690,7 @@
         "anchor": "./src/html-span-element.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1664,7 +1716,7 @@
         "anchor": "renderer:packages/dom/src/html-span-element.ts#L4",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1687,7 +1739,7 @@
         "anchor": "./src/html-table-cell-element.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1713,7 +1765,7 @@
         "anchor": "renderer:packages/dom/src/html-table-cell-element.ts#L25",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1739,7 +1791,7 @@
         "anchor": "renderer:packages/dom/src/html-table-cell-element.ts#L5",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1762,7 +1814,7 @@
         "anchor": "./src/html-table-element.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1788,7 +1840,7 @@
         "anchor": "renderer:packages/dom/src/html-table-element.ts#L4",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1811,7 +1863,7 @@
         "anchor": "./src/html-table-row-element.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1837,7 +1889,7 @@
         "anchor": "renderer:packages/dom/src/html-table-row-element.ts#L4",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1860,7 +1912,7 @@
         "anchor": "./src/html-table-section-element.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1886,7 +1938,7 @@
         "anchor": "renderer:packages/dom/src/html-table-section-element.ts#L6",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1912,7 +1964,7 @@
         "anchor": "renderer:packages/dom/src/html-table-section-element.ts#L4",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1935,7 +1987,7 @@
         "anchor": "./src/html-text-area-element.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1961,7 +2013,7 @@
         "anchor": "renderer:packages/dom/src/html-text-area-element.ts#L36",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -1984,7 +2036,7 @@
         "anchor": "./src/html-u-list-element.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2010,7 +2062,7 @@
         "anchor": "renderer:packages/dom/src/html-u-list-element.ts#L4",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2033,7 +2085,7 @@
         "anchor": "./src/input-event.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2059,7 +2111,7 @@
         "anchor": "renderer:packages/dom/src/input-event.ts#L12",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2085,7 +2137,7 @@
         "anchor": "renderer:packages/dom/src/input-event.ts#L5",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2108,7 +2160,7 @@
         "anchor": "./src/keyboard-event.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2134,7 +2186,7 @@
         "anchor": "renderer:packages/dom/src/keyboard-event.ts#L20",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2160,7 +2212,7 @@
         "anchor": "renderer:packages/dom/src/keyboard-event.ts#L12",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2183,7 +2235,7 @@
         "anchor": "./src/mouse-event.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2209,7 +2261,7 @@
         "anchor": "renderer:packages/dom/src/mouse-event.ts#L13",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2235,7 +2287,7 @@
         "anchor": "renderer:packages/dom/src/mouse-event.ts#L27",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2261,7 +2313,7 @@
         "anchor": "renderer:packages/dom/src/mouse-event.ts#L15",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2284,7 +2336,7 @@
         "anchor": "./src/mutation.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2310,7 +2362,7 @@
         "anchor": "renderer:packages/dom/src/mutation.ts#L15",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2336,7 +2388,7 @@
         "anchor": "renderer:packages/dom/src/mutation.ts#L23",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2362,7 +2414,7 @@
         "anchor": "renderer:packages/dom/src/mutation.ts#L6",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2388,7 +2440,7 @@
         "anchor": "renderer:packages/dom/src/mutation.ts#L30",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2414,7 +2466,7 @@
         "anchor": "renderer:packages/dom/src/mutation.ts#L32",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2440,7 +2492,7 @@
         "anchor": "renderer:packages/dom/src/mutation.ts#L38",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2463,7 +2515,7 @@
         "anchor": "./src/node.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2489,7 +2541,7 @@
         "anchor": "renderer:packages/dom/src/node.ts#L20",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2515,7 +2567,7 @@
         "anchor": "renderer:packages/dom/src/node.ts#L18",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2538,7 +2590,7 @@
         "anchor": "./src/pointer-event.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2564,7 +2616,7 @@
         "anchor": "renderer:packages/dom/src/pointer-event.ts#L28",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2590,7 +2642,7 @@
         "anchor": "renderer:packages/dom/src/pointer-event.ts#L5",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2613,7 +2665,33 @@
         "anchor": "./src/popover-state.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      }
+    },
+    {
+      "description": "@zavx0z/dom/popover-state public runtime export getPopoverSource.",
+      "domain": "dom",
+      "id": "platform.at-zavx0z-dom.export-paths.popover-state.symbols.getpopoversource",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": "./popover-state",
+        "line": 5,
+        "path": "renderer:packages/dom/src/popover-state.ts",
+        "repository": "renderer",
+        "typeOnly": false
+      },
+      "name": "getPopoverSource",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "platform.at-zavx0z-dom.export-paths.popover-state",
+      "spec": {
+        "anchor": "renderer:packages/dom/src/popover-state.ts#L5",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2639,7 +2717,7 @@
         "anchor": "renderer:packages/dom/src/popover-state.ts#L4",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2665,7 +2743,7 @@
         "anchor": "renderer:packages/dom/src/popover-state.ts#L1",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2691,7 +2769,7 @@
         "anchor": "renderer:packages/dom/src/popover-state.ts#L2",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2714,7 +2792,7 @@
         "anchor": "./src/index.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2724,7 +2802,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 34,
+        "line": 38,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -2737,10 +2815,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L34",
+        "anchor": "renderer:packages/dom/src/index.ts#L38",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2750,7 +2828,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 46,
+        "line": 50,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -2763,10 +2841,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L46",
+        "anchor": "renderer:packages/dom/src/index.ts#L50",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2792,7 +2870,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L22",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2802,7 +2880,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 104,
+        "line": 108,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -2815,10 +2893,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L104",
+        "anchor": "renderer:packages/dom/src/index.ts#L108",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2828,7 +2906,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 59,
+        "line": 63,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -2841,10 +2919,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L59",
+        "anchor": "renderer:packages/dom/src/index.ts#L63",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2854,7 +2932,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 104,
+        "line": 108,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -2867,10 +2945,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L104",
+        "anchor": "renderer:packages/dom/src/index.ts#L108",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2880,7 +2958,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 104,
+        "line": 108,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -2893,10 +2971,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L104",
+        "anchor": "renderer:packages/dom/src/index.ts#L108",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2906,7 +2984,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 61,
+        "line": 65,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -2919,10 +2997,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L61",
+        "anchor": "renderer:packages/dom/src/index.ts#L65",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2948,7 +3026,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L13",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -2974,7 +3052,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L14",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3000,7 +3078,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L32",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3026,7 +3104,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L1",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3052,7 +3130,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L2",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3078,7 +3156,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L32",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3088,7 +3166,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 39,
+        "line": 43,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -3101,10 +3179,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L39",
+        "anchor": "renderer:packages/dom/src/index.ts#L43",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3114,7 +3192,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 39,
+        "line": 43,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -3127,10 +3205,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L39",
+        "anchor": "renderer:packages/dom/src/index.ts#L43",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3140,7 +3218,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 39,
+        "line": 43,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -3153,10 +3231,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L39",
+        "anchor": "renderer:packages/dom/src/index.ts#L43",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3166,7 +3244,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 39,
+        "line": 43,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -3179,10 +3257,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L39",
+        "anchor": "renderer:packages/dom/src/index.ts#L43",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3192,7 +3270,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 39,
+        "line": 43,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -3205,10 +3283,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L39",
+        "anchor": "renderer:packages/dom/src/index.ts#L43",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3218,7 +3296,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 51,
+        "line": 55,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -3231,10 +3309,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L51",
+        "anchor": "renderer:packages/dom/src/index.ts#L55",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3244,7 +3322,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 51,
+        "line": 55,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -3257,10 +3335,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L51",
+        "anchor": "renderer:packages/dom/src/index.ts#L55",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3270,7 +3348,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 51,
+        "line": 55,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -3283,10 +3361,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L51",
+        "anchor": "renderer:packages/dom/src/index.ts#L55",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3296,7 +3374,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 51,
+        "line": 55,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -3309,10 +3387,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L51",
+        "anchor": "renderer:packages/dom/src/index.ts#L55",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3322,7 +3400,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 51,
+        "line": 55,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -3335,10 +3413,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L51",
+        "anchor": "renderer:packages/dom/src/index.ts#L55",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3348,7 +3426,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 58,
+        "line": 62,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -3361,10 +3439,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L58",
+        "anchor": "renderer:packages/dom/src/index.ts#L62",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3374,7 +3452,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 104,
+        "line": 108,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -3387,10 +3465,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L104",
+        "anchor": "renderer:packages/dom/src/index.ts#L108",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3400,7 +3478,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 112,
+        "line": 116,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -3413,10 +3491,36 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L112",
+        "anchor": "renderer:packages/dom/src/index.ts#L116",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      }
+    },
+    {
+      "description": "@zavx0z/dom public type export DocumentTextControlSelection.",
+      "domain": "dom",
+      "id": "platform.at-zavx0z-dom.export-paths.root.symbols.documenttextcontrolselection",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 33,
+        "path": "renderer:packages/dom/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DocumentTextControlSelection",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "platform.at-zavx0z-dom.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/dom/src/index.ts#L33",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3442,7 +3546,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L31",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3452,7 +3556,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 62,
+        "line": 66,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -3465,10 +3569,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L62",
+        "anchor": "renderer:packages/dom/src/index.ts#L66",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3494,7 +3598,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L1",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3520,7 +3624,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L2",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3546,7 +3650,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L22",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3572,7 +3676,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L22",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3598,7 +3702,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L22",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3624,7 +3728,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L16",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3650,7 +3754,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L21",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3676,7 +3780,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L7",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3702,7 +3806,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L8",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3712,7 +3816,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 64,
+        "line": 68,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -3725,10 +3829,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L64",
+        "anchor": "renderer:packages/dom/src/index.ts#L68",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3738,7 +3842,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 112,
+        "line": 116,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -3751,10 +3855,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L112",
+        "anchor": "renderer:packages/dom/src/index.ts#L116",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3764,7 +3868,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 71,
+        "line": 75,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -3777,10 +3881,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L71",
+        "anchor": "renderer:packages/dom/src/index.ts#L75",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3790,7 +3894,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 81,
+        "line": 85,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -3803,10 +3907,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L81",
+        "anchor": "renderer:packages/dom/src/index.ts#L85",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3816,7 +3920,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 76,
+        "line": 80,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -3829,10 +3933,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L76",
+        "anchor": "renderer:packages/dom/src/index.ts#L80",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3842,7 +3946,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 63,
+        "line": 67,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -3855,10 +3959,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L63",
+        "anchor": "renderer:packages/dom/src/index.ts#L67",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3884,7 +3988,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L33",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3894,7 +3998,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 77,
+        "line": 81,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -3907,10 +4011,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L77",
+        "anchor": "renderer:packages/dom/src/index.ts#L81",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3920,7 +4024,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 78,
+        "line": 82,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -3933,10 +4037,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L78",
+        "anchor": "renderer:packages/dom/src/index.ts#L82",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3946,7 +4050,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 79,
+        "line": 83,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -3959,10 +4063,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L79",
+        "anchor": "renderer:packages/dom/src/index.ts#L83",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3972,7 +4076,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 87,
+        "line": 91,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -3985,10 +4089,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L87",
+        "anchor": "renderer:packages/dom/src/index.ts#L91",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -3998,7 +4102,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 82,
+        "line": 86,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -4011,10 +4115,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L82",
+        "anchor": "renderer:packages/dom/src/index.ts#L86",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4024,7 +4128,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 88,
+        "line": 92,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -4037,10 +4141,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L88",
+        "anchor": "renderer:packages/dom/src/index.ts#L92",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4050,7 +4154,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 90,
+        "line": 94,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -4063,10 +4167,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L90",
+        "anchor": "renderer:packages/dom/src/index.ts#L94",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4076,7 +4180,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 89,
+        "line": 93,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -4089,10 +4193,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L89",
+        "anchor": "renderer:packages/dom/src/index.ts#L93",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4102,7 +4206,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 91,
+        "line": 95,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -4115,10 +4219,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L91",
+        "anchor": "renderer:packages/dom/src/index.ts#L95",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4128,7 +4232,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 92,
+        "line": 96,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -4141,10 +4245,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L92",
+        "anchor": "renderer:packages/dom/src/index.ts#L96",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4154,7 +4258,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 93,
+        "line": 97,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -4167,10 +4271,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L93",
+        "anchor": "renderer:packages/dom/src/index.ts#L97",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4180,7 +4284,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 94,
+        "line": 98,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -4193,10 +4297,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L94",
+        "anchor": "renderer:packages/dom/src/index.ts#L98",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4206,7 +4310,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 95,
+        "line": 99,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -4219,10 +4323,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L95",
+        "anchor": "renderer:packages/dom/src/index.ts#L99",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4232,7 +4336,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 80,
+        "line": 84,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -4245,10 +4349,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L80",
+        "anchor": "renderer:packages/dom/src/index.ts#L84",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4258,7 +4362,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 96,
+        "line": 100,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -4271,10 +4375,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L96",
+        "anchor": "renderer:packages/dom/src/index.ts#L100",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4284,7 +4388,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 97,
+        "line": 101,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -4297,10 +4401,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L97",
+        "anchor": "renderer:packages/dom/src/index.ts#L101",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4310,7 +4414,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 98,
+        "line": 102,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -4323,10 +4427,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L98",
+        "anchor": "renderer:packages/dom/src/index.ts#L102",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4336,7 +4440,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 99,
+        "line": 103,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -4349,10 +4453,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L99",
+        "anchor": "renderer:packages/dom/src/index.ts#L103",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4362,7 +4466,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 100,
+        "line": 104,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -4375,10 +4479,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L100",
+        "anchor": "renderer:packages/dom/src/index.ts#L104",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4388,7 +4492,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 101,
+        "line": 105,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -4401,10 +4505,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L101",
+        "anchor": "renderer:packages/dom/src/index.ts#L105",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4414,7 +4518,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 102,
+        "line": 106,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -4427,10 +4531,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L102",
+        "anchor": "renderer:packages/dom/src/index.ts#L106",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4440,7 +4544,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 103,
+        "line": 107,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -4453,10 +4557,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L103",
+        "anchor": "renderer:packages/dom/src/index.ts#L107",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4466,7 +4570,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 112,
+        "line": 116,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -4479,10 +4583,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L112",
+        "anchor": "renderer:packages/dom/src/index.ts#L116",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4508,7 +4612,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L9",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4534,7 +4638,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L10",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4544,7 +4648,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 112,
+        "line": 116,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -4557,10 +4661,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L112",
+        "anchor": "renderer:packages/dom/src/index.ts#L116",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4570,7 +4674,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 112,
+        "line": 116,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -4583,10 +4687,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L112",
+        "anchor": "renderer:packages/dom/src/index.ts#L116",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4596,7 +4700,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 112,
+        "line": 116,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -4609,10 +4713,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L112",
+        "anchor": "renderer:packages/dom/src/index.ts#L116",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4622,7 +4726,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 112,
+        "line": 116,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -4635,10 +4739,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L112",
+        "anchor": "renderer:packages/dom/src/index.ts#L116",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4664,7 +4768,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4690,7 +4794,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L12",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4716,7 +4820,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L15",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4742,7 +4846,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L16",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4752,7 +4856,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 104,
+        "line": 108,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -4765,10 +4869,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L104",
+        "anchor": "renderer:packages/dom/src/index.ts#L108",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4778,7 +4882,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 104,
+        "line": 108,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -4791,10 +4895,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L104",
+        "anchor": "renderer:packages/dom/src/index.ts#L108",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4820,7 +4924,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L28",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4846,7 +4950,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L30",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4872,7 +4976,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L29",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4882,7 +4986,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 112,
+        "line": 116,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -4895,10 +4999,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L112",
+        "anchor": "renderer:packages/dom/src/index.ts#L116",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4924,7 +5028,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L19",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4950,7 +5054,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L20",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4960,7 +5064,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 112,
+        "line": 116,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -4973,10 +5077,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L112",
+        "anchor": "renderer:packages/dom/src/index.ts#L116",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -4986,7 +5090,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 72,
+        "line": 76,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -4999,10 +5103,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L72",
+        "anchor": "renderer:packages/dom/src/index.ts#L76",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5012,7 +5116,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 72,
+        "line": 76,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -5025,10 +5129,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L72",
+        "anchor": "renderer:packages/dom/src/index.ts#L76",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5038,7 +5142,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 34,
+        "line": 38,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -5051,10 +5155,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L34",
+        "anchor": "renderer:packages/dom/src/index.ts#L38",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5064,7 +5168,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 46,
+        "line": 50,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -5077,10 +5181,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L46",
+        "anchor": "renderer:packages/dom/src/index.ts#L50",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5090,7 +5194,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 64,
+        "line": 68,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -5103,10 +5207,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L64",
+        "anchor": "renderer:packages/dom/src/index.ts#L68",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5116,7 +5220,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 112,
+        "line": 116,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -5129,10 +5233,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L112",
+        "anchor": "renderer:packages/dom/src/index.ts#L116",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5142,7 +5246,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 64,
+        "line": 68,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -5155,10 +5259,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L64",
+        "anchor": "renderer:packages/dom/src/index.ts#L68",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5168,7 +5272,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 64,
+        "line": 68,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -5181,10 +5285,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L64",
+        "anchor": "renderer:packages/dom/src/index.ts#L68",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5194,7 +5298,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 112,
+        "line": 116,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -5207,10 +5311,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L112",
+        "anchor": "renderer:packages/dom/src/index.ts#L116",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5220,7 +5324,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 112,
+        "line": 116,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -5233,10 +5337,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L112",
+        "anchor": "renderer:packages/dom/src/index.ts#L116",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5246,7 +5350,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 34,
+        "line": 38,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -5259,10 +5363,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L34",
+        "anchor": "renderer:packages/dom/src/index.ts#L38",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5272,7 +5376,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 46,
+        "line": 50,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -5285,10 +5389,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L46",
+        "anchor": "renderer:packages/dom/src/index.ts#L50",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5298,7 +5402,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 60,
+        "line": 64,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -5311,10 +5415,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L60",
+        "anchor": "renderer:packages/dom/src/index.ts#L64",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5324,7 +5428,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 112,
+        "line": 116,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -5337,10 +5441,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L112",
+        "anchor": "renderer:packages/dom/src/index.ts#L116",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5350,7 +5454,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 112,
+        "line": 116,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -5363,10 +5467,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L112",
+        "anchor": "renderer:packages/dom/src/index.ts#L116",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5376,7 +5480,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 112,
+        "line": 116,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -5389,10 +5493,36 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L112",
+        "anchor": "renderer:packages/dom/src/index.ts#L116",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      }
+    },
+    {
+      "description": "@zavx0z/dom public type export TextControlSelectionTarget.",
+      "domain": "dom",
+      "id": "platform.at-zavx0z-dom.export-paths.root.symbols.textcontrolselectiontarget",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 33,
+        "path": "renderer:packages/dom/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "TextControlSelectionTarget",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "platform.at-zavx0z-dom.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/dom/src/index.ts#L33",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5402,7 +5532,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 83,
+        "line": 87,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -5415,10 +5545,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L83",
+        "anchor": "renderer:packages/dom/src/index.ts#L87",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5428,7 +5558,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 83,
+        "line": 87,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -5441,10 +5571,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L83",
+        "anchor": "renderer:packages/dom/src/index.ts#L87",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5470,7 +5600,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L3",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5496,7 +5626,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L4",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5506,7 +5636,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 64,
+        "line": 68,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -5519,10 +5649,10 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L64",
+        "anchor": "renderer:packages/dom/src/index.ts#L68",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5548,7 +5678,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L5",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5574,7 +5704,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L6",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5600,7 +5730,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L17",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5626,7 +5756,7 @@
         "anchor": "renderer:packages/dom/src/index.ts#L18",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5649,7 +5779,7 @@
         "anchor": "./src/state-change.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5675,7 +5805,7 @@
         "anchor": "renderer:packages/dom/src/state-change.ts#L108",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5701,7 +5831,7 @@
         "anchor": "renderer:packages/dom/src/state-change.ts#L9",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5727,7 +5857,7 @@
         "anchor": "renderer:packages/dom/src/state-change.ts#L34",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5753,7 +5883,7 @@
         "anchor": "renderer:packages/dom/src/state-change.ts#L42",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5779,7 +5909,7 @@
         "anchor": "renderer:packages/dom/src/state-change.ts#L50",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5805,7 +5935,7 @@
         "anchor": "renderer:packages/dom/src/state-change.ts#L58",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5831,7 +5961,7 @@
         "anchor": "renderer:packages/dom/src/state-change.ts#L26",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5857,7 +5987,7 @@
         "anchor": "renderer:packages/dom/src/state-change.ts#L64",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5883,7 +6013,7 @@
         "anchor": "renderer:packages/dom/src/state-change.ts#L92",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5909,7 +6039,7 @@
         "anchor": "renderer:packages/dom/src/state-change.ts#L17",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5935,7 +6065,7 @@
         "anchor": "renderer:packages/dom/src/state-change.ts#L100",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5961,7 +6091,7 @@
         "anchor": "renderer:packages/dom/src/state-change.ts#L117",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -5987,7 +6117,7 @@
         "anchor": "renderer:packages/dom/src/state-change.ts#L123",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -6013,7 +6143,7 @@
         "anchor": "renderer:packages/dom/src/state-change.ts#L80",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -6039,7 +6169,7 @@
         "anchor": "renderer:packages/dom/src/state-change.ts#L88",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -6065,7 +6195,7 @@
         "anchor": "renderer:packages/dom/src/state-change.ts#L72",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -6088,7 +6218,7 @@
         "anchor": "./src/text.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -6114,7 +6244,7 @@
         "anchor": "renderer:packages/dom/src/text.ts#L5",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -6137,7 +6267,7 @@
         "anchor": "./src/toggle-event.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -6163,7 +6293,7 @@
         "anchor": "renderer:packages/dom/src/toggle-event.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -6189,7 +6319,7 @@
         "anchor": "renderer:packages/dom/src/toggle-event.ts#L5",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -6212,7 +6342,7 @@
         "anchor": "./src/ui-event.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -6238,7 +6368,7 @@
         "anchor": "renderer:packages/dom/src/ui-event.ts#L10",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -6264,7 +6394,7 @@
         "anchor": "renderer:packages/dom/src/ui-event.ts#L5",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -6287,7 +6417,7 @@
         "anchor": "./src/wheel-event.ts",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -6313,7 +6443,7 @@
         "anchor": "renderer:packages/dom/src/wheel-event.ts#L12",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     },
     {
@@ -6339,7 +6469,7 @@
         "anchor": "renderer:packages/dom/src/wheel-event.ts#L5",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
-        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       }
     }
   ],

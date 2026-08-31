@@ -39,7 +39,11 @@ interface Classification {
 
 const verificationDate = "2026-08-29"
 const recoveryVerification = {
-  revision: "0baaca60804990dc731fbc880515614ee89901c2",
+  revision: "258176181fe98b604935c38d71aaca5b93aaf4b3",
+  date: "2026-08-31",
+} as const
+const engineFontVerification = {
+  revision: "31164f46bb3d5dd9a7df018203f0e13a8a383dc5",
   date: "2026-08-31",
 } as const
 const flexWrapVerification = {
@@ -59,7 +63,7 @@ const storybookAlignContentRevision = "d249503ce60513fd4073b5b35fda10c1d2e751d8"
 const revisions: Record<string, string> = {
   renderer: "3c91038c3f14ccc44616209fd82b1e59b7369408",
   template: "87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
-  engine: "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e",
+  engine: engineFontVerification.revision,
   ui: "77a075a0069ff43e1551b3cdbfe174fe525177d3",
   node: "9f390945f51f88c6374d5fb8f3215cf5d776e571",
   metafor: "603d5604ac550b044ad809d5be27190cba9118aa",
@@ -113,7 +117,9 @@ async function main(): Promise<void> {
       revision,
       verificationDate: packageName === "@zavx0z/renderer"
         ? flexGapVerification.date
-        : verificationDate,
+        : packageName === "@engine/core"
+          ? engineFontVerification.date
+          : verificationDate,
       records,
     }
     await writeJsonIfChanged(output, overlay)
@@ -154,6 +160,18 @@ function classify(entry: CapabilityInventoryEntry): Classification {
 }
 
 function classifyDomHtml(entry: CapabilityInventoryEntry): Classification {
+  if (["DocumentTextControlSelection", "TextControlSelectionTarget"].includes(entry.name)) {
+    return recovered(implemented("extension", [
+      implementation("renderer", "packages/dom/src/document.ts", entry.name, undefined, "The exported type describes the exact active text-control selection adapter without a second range store.", "Standard DOM Selection/Range, contenteditable and ordinary Text-node selection."),
+      test("renderer", "packages/dom/test/text-selection.test.ts", "active text-control selection snapshot", "Exact target, offsets, direction, collapsed state, text and immutable snapshots.", "Standard DOM Selection/Range and multi-range semantics."),
+    ]))
+  }
+  if (entry.name === "getPopoverSource" && entry.id.includes("popover-state")) {
+    return recovered(implemented("extension", [
+      implementation("renderer", "packages/dom/src/popover-state.ts", "getPopoverSource", undefined, "The opaque renderer adapter exposes only the exact retained source identity while a popover is showing.", "Geometry, z-order, implicit invoker discovery or accessibility projection."),
+      test("renderer", "packages/dom/test/popover.test.ts", "retained popover source", "Source identity persists through showing and clears on close.", "Geometry and implicit invoker discovery."),
+    ]))
+  }
   if (entry.id === "platform.at-zavx0z-dom.export-paths.state-change.symbols.selectpickerstatechange") {
     return recovered(implemented("extension", [
       implementation("renderer", "packages/dom/src/state-change.ts", "SelectPickerStateChange", undefined, "The public discriminated state record carries exact Select identity and open old/new values.", "Complete select/form/accessibility behavior."),
@@ -166,6 +184,18 @@ function classifyDomHtml(entry: CapabilityInventoryEntry): Classification {
 }
 
 function classifyDom(entry: CapabilityInventoryEntry): Classification {
+  if (entry.id === "dom.algorithms.selection") {
+    return recovered(partial(
+      "adapted",
+      [
+        implementation("renderer", "packages/dom/src/document.ts", "readTextControlSelection", undefined, "Document derives one immutable snapshot from the canonical active Input/TextArea offsets and direction.", "Standard Selection/Range, ordinary Text nodes, contenteditable, multi-range and general mutation adjustment."),
+        implementation("renderer", "packages/core/src/interaction.ts", "textarea pointer selection default", undefined, "Renderer metrics map pointer drag into the same semantic textarea offsets without component coordinates.", "Soft wrap, bidi, grapheme and ordinary DOM selection."),
+        test("renderer", "packages/dom/test/text-selection.test.ts", "active text-control selection snapshot", "Snapshot identity, offsets, direction, collapsed state and selected text.", "Standard Selection/Range and ordinary DOM Text selection."),
+        test("renderer", "packages/core/test/interaction.test.ts", "textarea pointer selection", "Pointer drag updates one forward semantic range and select events through exact render metrics.", "Soft wrap, bidi, grapheme and multi-range selection."),
+      ],
+      "Active Input/TextArea selection, immutable snapshots and bounded pre/wrap-off pointer mapping are implemented; standard DOM Selection/Range, contenteditable, ordinary Text-node, multi-range and general mutation-adjusted selection remain unsupported.",
+    ))
+  }
   if (entry.id === "dom.algorithms.pointer-capture") {
     return recovered(partial(
       "adapted",
@@ -371,6 +401,30 @@ function classifyHtmlAttribute(entry: CapabilityInventoryEntry): Classification 
 }
 
 function classifyHtmlBehavior(entry: CapabilityInventoryEntry): Classification {
+  if (entry.id === "html.behaviors.clipboard") {
+    return recovered(partial(
+      "adapted",
+      [
+        implementation("renderer", "packages/browser/src/native-input-host.ts", "mirrored native copy default", undefined, "Exact active text-control value/selection remains on the native proxy; semantic copy cancellation gates its plain-text platform default.", "ClipboardEvent/DataTransfer, cut, paste, async Clipboard API, HTML payload and permissions."),
+        test("renderer", "packages/browser/test/native-input-host.test.ts", "readonly text-control copy", "Selected substring copy and semantic cancellation through the exact mirrored textarea.", "Live OS clipboard contents, cut/paste, DataTransfer and permissions."),
+      ],
+      "Plain-text copy for the exact mirrored active Input/TextArea selection is implemented with semantic cancellation; ClipboardEvent/DataTransfer, cut, paste, async Clipboard API, HTML payloads and permissions remain unsupported.",
+    ))
+  }
+  if (entry.id === "html.behaviors.popover") {
+    return recovered(partial(
+      "adapted",
+      [
+        implementation("renderer", "packages/dom/src/internal/popover.ts", "source, light dismiss, Escape and focus return", undefined, "Showing state retains exact source/focus owners; Auto stacks apply target-related light dismiss and topmost Escape closure.", "Hint stacks, implicit invokers, autofocus, accessibility and complete HTML popover behavior."),
+        implementation("renderer", "packages/core/src/renderer.ts", "anchored popover top layer", undefined, "Renderer derives transformed source bounds, flips/clamps an explicit-source popover and applies one viewport clip without ancestor overflow.", "Arbitrary CSS Anchor Positioning grammar and popover-root transforms."),
+        implementation("renderer", "packages/browser/src/native-input-host.ts", "generic Escape keyboard owner", undefined, "A read-only native keyboard proxy routes cancellable Escape from any focused semantic HTMLElement to the Document Auto-popover default.", "Live native browser pixels and complete keyboard navigation."),
+        test("renderer", "packages/dom/test/popover.test.ts", "popover source/dismiss/focus", "Exact source lifetime, related-target light dismiss, topmost Escape, Manual preservation and focus return.", "Hint/implicit invoker/accessibility behavior."),
+        test("renderer", "packages/core/test/popover-paint.test.ts", "anchored viewport top layer", "Transformed source placement, flip, clamp, viewport clip and ancestor-overflow escape.", "Arbitrary CSS Anchor Positioning and popover-root transforms."),
+        test("renderer", "packages/browser/test/native-input-host.test.ts", "cancellable popover Escape", "Generic focused owner, cancellation, close and focus restoration through the browser host.", "Live native browser execution."),
+      ],
+      "Explicit-source Auto popovers have anchored/clamped top-layer paint, viewport clipping, light dismiss, cancellable Escape and focus restoration; Hint, implicit invokers, autofocus, arbitrary CSS Anchor Positioning and accessibility remain unsupported.",
+    ))
+  }
   if (entry.id === "html.behaviors.hidden") {
     return recovered(partial(
       "adapted",
@@ -929,6 +983,29 @@ function classifyCssFeature(entry: CapabilityInventoryEntry, stages: Record<stri
 function classifyRenderer(entry: CapabilityInventoryEntry): Classification {
   if (!entry.id.startsWith("renderer.features.")) return unsupported(entry, "No current CPU renderer evidence was mapped.")
   const name = entry.id.slice("renderer.features.".length)
+  if (name === "caret-selection-paint") {
+    return recovered(partial(
+      "adapted",
+      [
+        implementation("renderer", "packages/core/src/renderer.ts", "textarea caret/selection Rects", undefined, "Focused exact-profile textarea offsets project stable caret or per-line selection Rects before transparent value text.", "Soft wrap, tabs, proportional glyph metrics, local scroll offsets, bidi, graphemes, IME and ordinary DOM ranges."),
+        implementation("renderer", "packages/core/src/interaction.ts", "textarea pointer offset mapping", undefined, "Hit metadata supplies line/character metrics for one pre/wrap-off semantic pointer selection owner.", "Soft wrap, bidi, graphemes and multi-range selection."),
+        test("renderer", "packages/core/test/textarea-paint.test.ts", "transparent readonly selection/caret", "Multiline selection, collapsed caret, stable keys, geometry, clips, paint order and disabled suppression.", "Live native pixels and unsupported text-layout modes."),
+        test("renderer", "packages/core/test/interaction.test.ts", "textarea pointer selection", "Pointer drag updates semantic offsets and produces corresponding selection items.", "Soft wrap, bidi, graphemes and multiple ranges."),
+      ],
+      "Focused textarea caret/selection paint and pointer mapping are implemented for white-space:pre plus wrap=off; soft wrap, tabs, proportional glyph metrics, local scroll offsets, bidi, graphemes, IME, inactive and ordinary DOM selection remain unsupported.",
+    ))
+  }
+  if (name === "popover-projection") {
+    return recovered(partial(
+      "adapted",
+      [
+        implementation("renderer", "packages/core/src/renderer.ts", "explicit-source popover projection", undefined, "One source-derived below/above placement is viewport-clamped and clipped after ordinary document paint.", "Arbitrary CSS Anchor Positioning grammar, popover-root transforms and native pixels."),
+        test("renderer", "packages/core/test/popover-paint.test.ts", "anchored viewport top layer", "Centered fallback, transformed anchor, flip, clamp, viewport clip, atomic stacking and hit order.", "Arbitrary anchor grammar and live native pixels."),
+        test("renderer", "packages/core/test/interaction.test.ts", "Auto popover light dismiss", "Inside hits retain the popover and outside pointer focus follows DOM light dismiss.", "Native trusted events and every nested top-layer mode."),
+      ],
+      "Explicit source anchoring, viewport clipping and pointer light dismiss are implemented; arbitrary CSS Anchor Positioning, root transforms, backdrop, Hint and live native pixels remain unsupported.",
+    ))
+  }
   if (name === "cascade") {
     return {
       status: "partial",
@@ -1069,9 +1146,28 @@ function classifyRenderer(entry: CapabilityInventoryEntry): Classification {
 function classifyBrowser(entry: CapabilityInventoryEntry): Classification {
   if (entry.id.startsWith("platform.")) return classifyPublicExport(entry, browserExportStatus(entry))
   const name = entry.id.slice("browser.features.".length)
+  if (name === "keyboard") {
+    return recovered(partial(
+      "adapted",
+      [
+        implementation("renderer", "packages/browser/src/native-input-host.ts", "generic semantic keyboard owner", undefined, "One read-only native input hosts keydown/keyup for any focused semantic HTMLElement without mirroring unrelated control state.", "Complete browser key layout, sequential navigation and live native acceptance."),
+        test("renderer", "packages/browser/test/native-input-host.test.ts", "generic Escape keyboard host", "Exact focused target, semantic cancellation, Auto-popover close and focus restoration.", "Live native browser execution and complete keyboard navigation."),
+      ],
+      "Focused semantic keyboard dispatch and bounded control/popover defaults are implemented through one host; complete key layout, sequential navigation and live native browser acceptance remain unsupported.",
+    ))
+  }
   if (name === "native-browser-evidence") return unverified(entry, "All current Browser tests use Bun seams/fakes; no live browser console, pixels, native IME, or real ResizeObserver/rAF evidence was reproduced.")
   if (name === "error-boundaries") return unsupported(entry, "The browser composition owner has lifecycle validation but no general application error-boundary contract.")
-  if (name === "clipboard-proxy") return unsupported(entry, "The native host intentionally exposes only the current text input/textarea proxy subset; this control/browser integration is absent.")
+  if (name === "clipboard-proxy") {
+    return recovered(partial(
+      "adapted",
+      [
+        implementation("renderer", "packages/browser/src/native-input-host.ts", "native text-control copy proxy", undefined, "The exact mirrored value/range performs native plain-text copy after one cancellable semantic copy Event.", "ClipboardEvent/DataTransfer, cut, paste, async API, permissions and live OS evidence."),
+        test("renderer", "packages/browser/test/native-input-host.test.ts", "readonly textarea copy", "Selected substring and semantic cancellation through the exact proxy.", "Live OS clipboard, DataTransfer, cut/paste and permissions."),
+      ],
+      "Bounded native plain-text copy is implemented for the exact active Input/TextArea selection; ClipboardEvent/DataTransfer, cut, paste, async API, permissions and live OS acceptance remain unsupported.",
+    ))
+  }
   if (name === "number-input-proxy") {
     return recovered(implemented("extension", [
       implementation("renderer", "packages/browser/src/native-input-host.ts", "number and range input proxy", undefined, "One reusable native input mirrors focused semantic number/range value, min, max and step without fabricated selection and routes keyboard/beforeinput/input/change with cancellation rollback.", "Live native browser execution, forms and validity UI."),
@@ -1254,6 +1350,15 @@ function classifyDevtools(entry: CapabilityInventoryEntry): Classification {
 }
 
 function classifyEngine(entry: CapabilityInventoryEntry): Classification {
+  if (entry.id === "platform.at-engine-core.export-paths.fonts-inter-regular.ttf") {
+    return {
+      ...implemented("extension", [
+        implementation("engine", "packages/core/package.json", "./fonts/inter-regular.ttf", undefined, "The package exports the exact Engine-owned Blender Inter asset.", "Browser route wiring and rendered pixels."),
+        test("engine", "packages/core/src/text/default-font-asset.test.ts", "Engine-owned default font asset", "Pinned Blender source/output hashes, OFL provenance, cmap coverage, outlines and tabular digits.", "Live external Storybook activation and rendered glyph pixels."),
+      ]),
+      lastVerified: engineFontVerification,
+    }
+  }
   if (entry.id.startsWith("platform.")) return classifyPublicExport(entry, engineExportStatus(entry))
   const name = entry.id.slice("engine.features.".length)
   if (name === "bounded-multi-view-frame") {

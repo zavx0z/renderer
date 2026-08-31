@@ -277,33 +277,42 @@
     {
       "blockedBy": [],
       "blocks": [],
-      "conformance": "none",
+      "conformance": "adapted",
       "consumers": [],
       "evidence": [
         {
-          "doesNotProve": "Runtime implementation or observable conformance.",
-          "path": "packages/browser/requirements.md",
-          "proves": "The pinned project inventory contains browser.features.clipboard-proxy.",
+          "doesNotProve": "ClipboardEvent/DataTransfer, cut, paste, async API, permissions and live OS evidence.",
+          "path": "packages/browser/src/native-input-host.ts",
+          "proves": "The exact mirrored value/range performs native plain-text copy after one cancellable semantic copy Event.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "clipboard proxy",
-          "type": "requirement"
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "symbol": "native text-control copy proxy",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live OS clipboard, DataTransfer, cut/paste and permissions.",
+          "path": "packages/browser/test/native-input-host.test.ts",
+          "proves": "Selected substring and semantic cancellation through the exact proxy.",
+          "repository": "renderer",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "symbol": "readonly textarea copy",
+          "type": "unit-test"
         }
       ],
       "id": "browser.features.clipboard-proxy",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3"
       },
       "limitations": [
-        "The native host intentionally exposes only the current text input/textarea proxy subset; this control/browser integration is absent."
+        "Bounded native plain-text copy is implemented for the exact active Input/TextArea selection; ClipboardEvent/DataTransfer, cut, paste, async API, permissions and live OS acceptance remain unsupported."
       ],
       "owner": {
         "package": "@zavx0z/renderer-browser",
         "repository": "renderer",
         "stage": "browser-host"
       },
-      "status": "unsupported"
+      "status": "partial"
     },
     {
       "blockedBy": [],
@@ -546,31 +555,31 @@
       "consumers": [],
       "evidence": [
         {
-          "doesNotProve": "Complete browser-host semantics.",
+          "doesNotProve": "Complete browser key layout, sequential navigation and live native acceptance.",
           "path": "packages/browser/src/native-input-host.ts",
-          "proves": "The bounded host slice exists.",
+          "proves": "One read-only native input hosts keydown/keyup for any focused semantic HTMLElement without mirroring unrelated control state.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "keyboard",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "symbol": "generic semantic keyboard owner",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Live browser/native input/WebGPU acceptance.",
+          "doesNotProve": "Live native browser execution and complete keyboard navigation.",
           "path": "packages/browser/test/native-input-host.test.ts",
-          "proves": "Current adapter behavior.",
+          "proves": "Exact focused target, semantic cancellation, Auto-popover close and focus restoration.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "keyboard",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "symbol": "generic Escape keyboard host",
           "type": "unit-test"
         }
       ],
       "id": "browser.features.keyboard",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3"
       },
       "limitations": [
-        "Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout."
+        "Focused semantic keyboard dispatch and bounded control/popover defaults are implemented through one host; complete key layout, sequential navigation and live native browser acceptance remain unsupported."
       ],
       "owner": {
         "package": "@zavx0z/renderer-browser",
@@ -746,7 +755,7 @@
           "path": "packages/browser/src/native-input-host.ts",
           "proves": "One reusable native input mirrors focused semantic number/range value, min, max and step without fabricated selection and routes keyboard/beforeinput/input/change with cancellation rollback.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "number and range input proxy",
           "type": "implementation"
         },
@@ -755,7 +764,7 @@
           "path": "packages/browser/test/native-input-host.test.ts",
           "proves": "Exact target/proxy identity, min/max/step and sanitized value sync, native Arrow default seam, cancellation, keyboard routing and input/change order.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "number and range proxy",
           "type": "unit-test"
         }
@@ -763,7 +772,7 @@
       "id": "browser.features.number-input-proxy",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
+        "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3"
       },
       "limitations": [],
       "owner": {
@@ -878,7 +887,7 @@
           "path": "packages/browser/src/runtime.ts",
           "proves": "Native canvas capture retains host delivery while Core retargets through the exact semantic Document override.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "canvas and semantic pointer capture",
           "type": "implementation"
         },
@@ -887,7 +896,7 @@
           "path": "packages/browser/test/runtime.test.ts",
           "proves": "Host capture lifecycle and cleanup.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "canvas pointer capture",
           "type": "unit-test"
         },
@@ -896,7 +905,7 @@
           "path": "packages/core/test/interaction.test.ts",
           "proves": "Captured Element receives move/up outside its hit and emits got/lost in order.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "semantic pointer capture",
           "type": "unit-test"
         }
@@ -904,7 +913,7 @@
       "id": "browser.features.pointer-capture",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
+        "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3"
       },
       "limitations": [
         "Native canvas delivery and explicit semantic capture are integrated; implicit touch capture and live native browser acceptance remain outside this evidence."
@@ -1043,7 +1052,7 @@
           "path": "packages/browser/src/native-input-host.ts",
           "proves": "The reusable native select is a keyboard owner while semantic/Core own selection and in-canvas picker paint.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "select keyboard proxy",
           "type": "implementation"
         },
@@ -1052,7 +1061,7 @@
           "path": "packages/core/src/renderer.ts",
           "proves": "One edge-aware top-layer picker projects exact Option identities in the shared frame.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "emitSelectPicker",
           "type": "implementation"
         },
@@ -1061,7 +1070,7 @@
           "path": "packages/browser/test/native-input-host.test.ts",
           "proves": "Arrow selection, Space open, Escape close and input/change ordering.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "select keyboard host",
           "type": "unit-test"
         },
@@ -1070,7 +1079,7 @@
           "path": "packages/core/test/interaction.test.ts",
           "proves": "Pointer open, exact option choice and outside light-dismiss.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "select picker interaction",
           "type": "unit-test"
         }
@@ -1078,7 +1087,7 @@
       "id": "browser.features.select-picker",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
+        "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3"
       },
       "limitations": [
         "Collapsed single-select pointer/keyboard picker behavior is implemented; scrolling beyond eight visible options, multiple/listbox, type-ahead and native accessibility projection remain unsupported."

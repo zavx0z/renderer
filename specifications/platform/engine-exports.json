@@ -20,7 +20,7 @@
         "anchor": "./src/text/default-font.ts",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -46,7 +46,7 @@
         "anchor": "engine:packages/core/src/text/default-font.ts#L13",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -72,7 +72,7 @@
         "anchor": "engine:packages/core/src/text/default-font.ts#L15",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -98,7 +98,7 @@
         "anchor": "engine:packages/core/src/text/default-font.ts#L35",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -124,7 +124,7 @@
         "anchor": "engine:packages/core/src/text/default-font.ts#L81",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -150,7 +150,30 @@
         "anchor": "engine:packages/core/src/text/default-font.ts#L58",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
+      }
+    },
+    {
+      "description": "@engine/core package export ./fonts/inter-regular.ttf.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.fonts-inter-regular.ttf",
+      "kind": "package-export-path",
+      "metadata": {
+        "package": "@engine/core",
+        "sourceTarget": "static/fonts/inter-regular.ttf",
+        "target": "./static/fonts/inter-regular.ttf"
+      },
+      "name": "./fonts/inter-regular.ttf",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "./static/fonts/inter-regular.ttf",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -173,7 +196,7 @@
         "anchor": "./static/fonts/jetbrains-mono-bold.ttf",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -196,7 +219,7 @@
         "anchor": "./src/index.ts",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -222,7 +245,7 @@
         "anchor": "engine:packages/core/src/animation/animation-action.ts#L19",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -248,7 +271,7 @@
         "anchor": "engine:packages/core/src/animation/animation-clip.ts#L3",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -274,7 +297,7 @@
         "anchor": "engine:packages/core/src/animation/animation-mixer.ts#L5",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -300,7 +323,7 @@
         "anchor": "engine:packages/core/src/helpers/axes-helper.ts#L6",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -326,7 +349,7 @@
         "anchor": "engine:packages/core/src/geometries/box-geometry.ts#L13",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -352,7 +375,7 @@
         "anchor": "engine:packages/core/src/geometries/box-geometry.ts#L4",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -378,7 +401,7 @@
         "anchor": "engine:packages/core/src/core/buffer-geometry.ts#L4",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -404,7 +427,7 @@
         "anchor": "engine:packages/core/src/core/buffer-geometry.ts#L5",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -430,7 +453,7 @@
         "anchor": "engine:packages/core/src/core/buffer-geometry.ts#L11",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -456,7 +479,7 @@
         "anchor": "engine:packages/core/src/objects/text.ts#L404",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -482,7 +505,7 @@
         "anchor": "engine:packages/core/src/math/color.ts#L4",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -508,7 +531,7 @@
         "anchor": "engine:packages/core/src/materials/color-picker-material.ts#L21",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -534,7 +557,7 @@
         "anchor": "engine:packages/core/src/materials/color-picker-material.ts#L4",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -560,7 +583,7 @@
         "anchor": "engine:packages/core/src/materials/color-picker-material.ts#L6",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -586,7 +609,7 @@
         "anchor": "engine:packages/core/src/layout/layout-types.ts#L29",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -612,7 +635,7 @@
         "anchor": "engine:packages/core/src/loaders/texture-loader.ts#L35",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -638,7 +661,7 @@
         "anchor": "engine:packages/core/src/core/buffer-geometry.ts#L4",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -664,7 +687,7 @@
         "anchor": "engine:packages/core/src/loaders/gltf-loader.ts#L123",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -690,7 +713,7 @@
         "anchor": "engine:packages/core/src/loaders/gltf-loader.ts#L114",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -716,7 +739,7 @@
         "anchor": "engine:packages/core/src/helpers/grid-helper.ts#L10",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -742,7 +765,7 @@
         "anchor": "engine:packages/core/src/materials/holographic-material.ts#L64",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -768,7 +791,7 @@
         "anchor": "engine:packages/core/src/materials/holographic-material.ts#L4",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -794,7 +817,7 @@
         "anchor": "engine:packages/core/src/materials/image-material.ts#L4",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -820,7 +843,7 @@
         "anchor": "engine:packages/core/src/materials/image-material.ts#L23",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -846,7 +869,7 @@
         "anchor": "engine:packages/core/src/materials/image-material.ts#L13",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -872,7 +895,7 @@
         "anchor": "engine:packages/core/src/materials/image-material.ts#L6",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -898,7 +921,7 @@
         "anchor": "engine:packages/core/src/core/instanced-mesh.ts#L6",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -924,7 +947,7 @@
         "anchor": "engine:packages/core/src/core/instanced-rounded-rect.ts#L71",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -950,7 +973,7 @@
         "anchor": "engine:packages/core/src/core/instance-layer.ts#L6",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -976,7 +999,7 @@
         "anchor": "engine:packages/core/src/core/instance-layer.ts#L51",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1002,7 +1025,7 @@
         "anchor": "engine:packages/core/src/core/instance-layer.ts#L11",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1028,7 +1051,7 @@
         "anchor": "engine:packages/core/src/core/raycaster.ts#L5",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1054,7 +1077,7 @@
         "anchor": "engine:packages/core/src/animation/keyframe-track.ts#L1",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1080,7 +1103,7 @@
         "anchor": "engine:packages/core/src/layout/layout-types.ts#L1",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1106,7 +1129,7 @@
         "anchor": "engine:packages/core/src/lights/light.ts#L8",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1132,7 +1155,7 @@
         "anchor": "engine:packages/core/src/objects/line.ts#L9",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1158,7 +1181,7 @@
         "anchor": "engine:packages/core/src/materials/line-basic-material.ts#L23",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1184,7 +1207,7 @@
         "anchor": "engine:packages/core/src/materials/line-basic-material.ts#L7",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1210,7 +1233,7 @@
         "anchor": "engine:packages/core/src/materials/line-glow-material.ts#L66",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1236,7 +1259,7 @@
         "anchor": "engine:packages/core/src/materials/line-glow-material.ts#L9",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1262,7 +1285,7 @@
         "anchor": "engine:packages/core/src/objects/line-segments.ts#L8",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1288,7 +1311,7 @@
         "anchor": "engine:packages/core/src/materials/line-glow-material.ts#L4",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1314,7 +1337,7 @@
         "anchor": "engine:packages/core/src/materials/material.ts#L20",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1340,7 +1363,7 @@
         "anchor": "engine:packages/core/src/materials/material.ts#L4",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1366,7 +1389,7 @@
         "anchor": "engine:packages/core/src/math/matrix-4.ts#L7",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1392,7 +1415,7 @@
         "anchor": "engine:packages/core/src/core/mesh.ts#L26",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1418,7 +1441,7 @@
         "anchor": "engine:packages/core/src/materials/mesh-basic-material.ts#L18",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1444,7 +1467,7 @@
         "anchor": "engine:packages/core/src/materials/mesh-basic-material.ts#L7",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1470,7 +1493,7 @@
         "anchor": "engine:packages/core/src/materials/mesh-lambert-material.ts#L19",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1496,7 +1519,7 @@
         "anchor": "engine:packages/core/src/materials/mesh-lambert-material.ts#L7",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1522,7 +1545,7 @@
         "anchor": "engine:packages/core/src/loaders/texture-loader.ts#L401",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1548,7 +1571,7 @@
         "anchor": "engine:packages/core/src/core/object-3d.ts#L18",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1574,7 +1597,7 @@
         "anchor": "engine:packages/core/src/text/true-type-font.ts#L5",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1600,7 +1623,7 @@
         "anchor": "engine:packages/core/src/loaders/gltf-loader.ts#L118",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1626,7 +1649,7 @@
         "anchor": "engine:packages/core/src/loaders/texture-loader.ts#L21",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1652,7 +1675,7 @@
         "anchor": "engine:packages/core/src/geometries/plane-geometry.ts#L10",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1678,7 +1701,7 @@
         "anchor": "engine:packages/core/src/geometries/plane-geometry.ts#L3",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1704,7 +1727,7 @@
         "anchor": "engine:packages/core/src/core/presentation-clip.ts#L10",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1730,7 +1753,7 @@
         "anchor": "engine:packages/core/src/math/quaternion.ts#L7",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1756,7 +1779,7 @@
         "anchor": "engine:packages/core/src/materials/radial-backdrop-material.ts#L4",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1782,7 +1805,7 @@
         "anchor": "engine:packages/core/src/materials/radial-backdrop-material.ts#L24",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1808,7 +1831,7 @@
         "anchor": "engine:packages/core/src/materials/radial-backdrop-material.ts#L16",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1834,7 +1857,7 @@
         "anchor": "engine:packages/core/src/math/ray.ts#L6",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1860,7 +1883,7 @@
         "anchor": "engine:packages/core/src/core/raycaster.ts#L13",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1886,7 +1909,7 @@
         "anchor": "engine:packages/core/src/renderer/index.ts#L79",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1912,7 +1935,7 @@
         "anchor": "engine:packages/core/src/renderer/index.ts#L79",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1938,7 +1961,7 @@
         "anchor": "engine:packages/core/src/renderer/index.ts#L178",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1964,7 +1987,7 @@
         "anchor": "engine:packages/core/src/renderer/index.ts#L79",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -1990,7 +2013,7 @@
         "anchor": "engine:packages/core/src/core/object-3d.ts#L7",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2016,7 +2039,7 @@
         "anchor": "engine:packages/core/src/renderer/index.ts#L79",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2042,7 +2065,7 @@
         "anchor": "engine:packages/core/src/loaders/texture-loader.ts#L29",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2068,7 +2091,7 @@
         "anchor": "engine:packages/core/src/core/instanced-rounded-rect.ts#L11",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2094,7 +2117,7 @@
         "anchor": "engine:packages/core/src/core/instanced-rounded-rect.ts#L7",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2120,7 +2143,7 @@
         "anchor": "engine:packages/core/src/core/instanced-rounded-rect.ts#L6",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2146,7 +2169,7 @@
         "anchor": "engine:packages/core/src/materials/rounded-rect-material.ts#L42",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2172,7 +2195,7 @@
         "anchor": "engine:packages/core/src/core/instanced-rounded-rect.ts#L35",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2198,7 +2221,7 @@
         "anchor": "engine:packages/core/src/core/instanced-rounded-rect.ts#L22",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2224,7 +2247,7 @@
         "anchor": "engine:packages/core/src/materials/rounded-rect-material.ts#L52",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2250,7 +2273,7 @@
         "anchor": "engine:packages/core/src/materials/rounded-rect-material.ts#L20",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2276,7 +2299,7 @@
         "anchor": "engine:packages/core/src/animation/skeleton.ts#L4",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2302,7 +2325,7 @@
         "anchor": "engine:packages/core/src/core/skinned-mesh.ts#L15",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2328,7 +2351,7 @@
         "anchor": "engine:packages/core/src/scenes/space.ts#L7",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2354,7 +2377,7 @@
         "anchor": "engine:packages/core/src/geometries/sphere-geometry.ts#L36",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2380,7 +2403,7 @@
         "anchor": "engine:packages/core/src/geometries/sphere-geometry.ts#L30",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2406,7 +2429,7 @@
         "anchor": "engine:packages/core/src/text/true-type-font.ts#L3",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2432,7 +2455,7 @@
         "anchor": "engine:packages/core/src/objects/text.ts#L139",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2458,7 +2481,7 @@
         "anchor": "engine:packages/core/src/materials/text-material.ts#L32",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2484,7 +2507,7 @@
         "anchor": "engine:packages/core/src/materials/text-material.ts#L7",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2510,7 +2533,7 @@
         "anchor": "engine:packages/core/src/geometries/textured-plane-geometry.ts#L8",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2536,7 +2559,7 @@
         "anchor": "engine:packages/core/src/geometries/textured-plane-geometry.ts#L3",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2562,7 +2585,7 @@
         "anchor": "engine:packages/core/src/loaders/texture-loader.ts#L3",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2588,7 +2611,7 @@
         "anchor": "engine:packages/core/src/loaders/texture-loader.ts#L42",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2614,7 +2637,7 @@
         "anchor": "engine:packages/core/src/loaders/texture-loader.ts#L1",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2640,7 +2663,7 @@
         "anchor": "engine:packages/core/src/materials/thin-film-material.ts#L54",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2666,7 +2689,7 @@
         "anchor": "engine:packages/core/src/materials/thin-film-material.ts#L4",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2692,7 +2715,7 @@
         "anchor": "engine:packages/core/src/geometries/torus-geometry.ts#L39",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2718,7 +2741,7 @@
         "anchor": "engine:packages/core/src/geometries/torus-geometry.ts#L28",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2744,7 +2767,7 @@
         "anchor": "engine:packages/core/src/text/true-type-font.ts#L15",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2770,7 +2793,7 @@
         "anchor": "engine:packages/core/src/core/buffer-geometry.ts#L5",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2796,7 +2819,7 @@
         "anchor": "engine:packages/core/src/math/vector-3.ts#L7",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2822,7 +2845,7 @@
         "anchor": "engine:packages/core/src/core/view-point.ts#L116",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2848,7 +2871,7 @@
         "anchor": "engine:packages/core/src/core/view-point.ts#L66",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2874,7 +2897,7 @@
         "anchor": "engine:packages/core/src/core/view-point.ts#L64",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2900,7 +2923,7 @@
         "anchor": "engine:packages/core/src/core/view-point.ts#L8",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     },
     {
@@ -2926,7 +2949,7 @@
         "anchor": "engine:packages/core/src/core/wireframe-instanced-mesh.ts#L7",
         "profile": "project-contract",
         "source": "@engine/core-exports",
-        "version": "0.0.1 at 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       }
     }
   ],

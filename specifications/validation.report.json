@@ -4,21 +4,21 @@
   "duplicateCapabilityIds": 0,
   "generatorVersion": "1.0.0",
   "inventoryFiles": 214,
-  "mappedEntries": 8736,
+  "mappedEntries": 8742,
   "missing": 0,
   "schemaErrors": 0,
   "schemaVersion": 1,
   "sourceArtifacts": 75,
-  "specEntries": 8736,
+  "specEntries": 8742,
   "statistics": {
     "browser": {
       "implemented": 16,
       "mappedEntries": 70,
       "missing": 0,
       "not-applicable": 0,
-      "partial": 21,
+      "partial": 22,
       "specEntries": 70,
-      "unsupported": 2,
+      "unsupported": 1,
       "unverified": 31
     },
     "css": {
@@ -42,22 +42,22 @@
       "unverified": 13
     },
     "dom": {
-      "implemented": 76,
-      "mappedEntries": 1213,
+      "implemented": 81,
+      "mappedEntries": 1218,
       "missing": 0,
       "not-applicable": 0,
-      "partial": 248,
-      "specEntries": 1213,
-      "unsupported": 707,
+      "partial": 249,
+      "specEntries": 1218,
+      "unsupported": 706,
       "unverified": 182
     },
     "engine": {
-      "implemented": 13,
-      "mappedEntries": 151,
+      "implemented": 14,
+      "mappedEntries": 152,
       "missing": 0,
       "not-applicable": 0,
       "partial": 34,
-      "specEntries": 151,
+      "specEntries": 152,
       "unsupported": 5,
       "unverified": 99
     },
@@ -66,9 +66,9 @@
       "mappedEntries": 3729,
       "missing": 0,
       "not-applicable": 787,
-      "partial": 995,
+      "partial": 996,
       "specEntries": 3729,
-      "unsupported": 1947,
+      "unsupported": 1946,
       "unverified": 0
     },
     "react": {
@@ -86,9 +86,9 @@
       "mappedEntries": 96,
       "missing": 0,
       "not-applicable": 0,
-      "partial": 41,
+      "partial": 42,
       "specEntries": 96,
-      "unsupported": 4,
+      "unsupported": 3,
       "unverified": 45
     },
     "tsx": {

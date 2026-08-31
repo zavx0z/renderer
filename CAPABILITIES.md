@@ -11,14 +11,14 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | Repository | Branch | Revision | Dirty at generation |
 |---|---|---|---:|
 | demo | main | `470c70a70b436fb3e3ae121b3ab81fa410ef3255` | no |
-| engine | main | `9bcfec9fbe7f808c56b85eb6acf2bcae6276db2b` | no |
+| engine | main | `cfca4063afd78f8edf6060876ad20b465a4400d7` | no |
 | interpreter | main | `4f02274a6e9f99a8717507fe5885301a33eec4dc` | no |
 | metafor | main | `92f4fb0510db5ea43cb03325ab3b3895d95b4899` | yes |
-| node | main | `bd5af9a2cf6fca679a69de5245d107ea42318f54` | yes |
-| renderer | main | `0baaca60804990dc731fbc880515614ee89901c2` | yes |
+| node | main | `112ea769255b4b93ce8481e6283dda443f60d07a` | no |
+| renderer | main | `258176181fe98b604935c38d71aaca5b93aaf4b3` | yes |
 | storybook | main | `35eb3779a8233d23c7426260162b10d1b1d92e16` | yes |
 | template | main | `838a214a83950259f3f5d543e881e11402bc230c` | yes |
-| ui | main | `1c2f83c8fcaca3c78cee09e2fa9e9f1ad295056d` | yes |
+| ui | main | `f3a4233c5a74fb411b210b1cd7c3b15429d8c6a3` | no |
 
 ## Pinned external sources
 
@@ -53,14 +53,14 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 
 | Domain | Spec entries | Mapped | Implemented | Partial | Unsupported | Not applicable | Unverified | Missing |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| browser | 70 | 70 | 16 | 21 | 2 | 0 | 31 | 0 |
+| browser | 70 | 70 | 16 | 22 | 1 | 0 | 31 | 0 |
 | css | 3032 | 3032 | 0 | 179 | 2853 | 0 | 0 | 0 |
 | devtools | 31 | 31 | 13 | 0 | 5 | 0 | 13 | 0 |
-| dom | 1213 | 1213 | 76 | 248 | 707 | 0 | 182 | 0 |
-| engine | 151 | 151 | 13 | 34 | 5 | 0 | 99 | 0 |
-| html | 3729 | 3729 | 0 | 995 | 1947 | 787 | 0 | 0 |
+| dom | 1218 | 1218 | 81 | 249 | 706 | 0 | 182 | 0 |
+| engine | 152 | 152 | 14 | 34 | 5 | 0 | 99 | 0 |
+| html | 3729 | 3729 | 0 | 996 | 1946 | 787 | 0 | 0 |
 | react | 211 | 211 | 28 | 49 | 70 | 35 | 29 | 0 |
-| renderer | 96 | 96 | 6 | 41 | 4 | 0 | 45 | 0 |
+| renderer | 96 | 96 | 6 | 42 | 3 | 0 | 45 | 0 |
 | tsx | 166 | 166 | 72 | 22 | 28 | 0 | 44 | 0 |
 | webgpu | 37 | 37 | 18 | 11 | 1 | 0 | 7 | 0 |
 
@@ -68,8 +68,8 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 
 | Package | Repository | Revision | Records |
 |---|---|---|---:|
-| @engine/core | engine | `18c55d6c3dc68d1f2ab257378a505e5bac2eea3e` | 151 |
-| @zavx0z/dom | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 4942 |
+| @engine/core | engine | `31164f46bb3d5dd9a7df018203f0e13a8a383dc5` | 152 |
+| @zavx0z/dom | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 4947 |
 | @zavx0z/dom-devtools | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 31 |
 | @zavx0z/react | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 211 |
 | @zavx0z/renderer | renderer | `72fa158b043408817725856ce2b8e26d6a0e4d18` | 3128 |
@@ -90,14 +90,14 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `browser.features.canvas-lifecycle` | browser-host | partial | adapted | @zavx0z/renderer-browser/browser-host | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. | 2 | 0 |
 | `browser.features.capture` | browser-host | partial | adapted | @zavx0z/renderer-browser/browser-host | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. | 2 | 0 |
 | `browser.features.cleanup` | browser-host | implemented | extension | @zavx0z/renderer-browser/browser-host | — | 2 | 0 |
-| `browser.features.clipboard-proxy` | browser-host | unsupported | none | @zavx0z/renderer-browser/browser-host | The native host intentionally exposes only the current text input/textarea proxy subset; this control/browser integration is absent. | 1 | 0 |
+| `browser.features.clipboard-proxy` | browser-host | partial | adapted | @zavx0z/renderer-browser/browser-host | Bounded native plain-text copy is implemented for the exact active Input/TextArea selection; ClipboardEvent/DataTransfer, cut, paste, async API, permissions and live OS acceptance remain unsupported. | 2 | 0 |
 | `browser.features.compiled-stylesheet-scheduling` | browser-host | implemented | extension | @zavx0z/renderer-browser/browser-host | — | 2 | 0 |
 | `browser.features.composition-ime` | browser-host | partial | adapted | @zavx0z/renderer-browser/browser-host | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. | 2 | 0 |
 | `browser.features.device-pixel-ratio` | browser-host | partial | adapted | @zavx0z/renderer-browser/browser-host | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. | 2 | 0 |
 | `browser.features.direct-world-regions` | browser-host | implemented | extension | @zavx0z/renderer-browser/browser-host | — | 3 | 0 |
 | `browser.features.document-plane` | browser-host | implemented | extension | @zavx0z/renderer-browser/browser-host | — | 2 | 2 |
 | `browser.features.error-boundaries` | browser-host | unsupported | none | @zavx0z/renderer-browser/browser-host | The browser composition owner has lifecycle validation but no general application error-boundary contract. | 1 | 0 |
-| `browser.features.keyboard` | browser-host | partial | adapted | @zavx0z/renderer-browser/browser-host | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. | 2 | 0 |
+| `browser.features.keyboard` | browser-host | partial | adapted | @zavx0z/renderer-browser/browser-host | Focused semantic keyboard dispatch and bounded control/popover defaults are implemented through one host; complete key layout, sequential navigation and live native browser acceptance remain unsupported. | 2 | 0 |
 | `browser.features.lifecycle-boundaries` | browser-host | partial | adapted | @zavx0z/renderer-browser/browser-host | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. | 2 | 0 |
 | `browser.features.linked-author-stylesheets` | browser-host | implemented | extension | @zavx0z/renderer-browser/browser-host | — | 3 | 0 |
 | `browser.features.multiple-planes` | browser-host | implemented | extension | @zavx0z/renderer-browser/browser-host | — | 2 | 1 |
@@ -3257,7 +3257,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `dom.algorithms.parsing-boundary` | behavior | unsupported | none | @zavx0z/dom/semantic | The accepted semantic DOM architecture has no implementation for this observable algorithm in the current checkout. | 1 | 0 |
 | `dom.algorithms.pointer-capture` | behavior | partial | adapted | @zavx0z/dom/semantic | Explicit semantic capture, pending overrides and got/lost ordering are implemented; implicit touch capture and the complete native Pointer Events device model remain outside this bounded host. | 3 | 0 |
 | `dom.algorithms.range-boundaries` | behavior | unsupported | none | @zavx0z/dom/semantic | The accepted semantic DOM architecture has no implementation for this observable algorithm in the current checkout. | 1 | 0 |
-| `dom.algorithms.selection` | behavior | unsupported | none | @zavx0z/dom/semantic | The accepted semantic DOM architecture has no implementation for this observable algorithm in the current checkout. | 1 | 2 |
+| `dom.algorithms.selection` | behavior | partial | adapted | @zavx0z/dom/semantic | Active Input/TextArea selection, immutable snapshots and bounded pre/wrap-off pointer mapping are implemented; standard DOM Selection/Range, contenteditable, ordinary Text-node, multi-range and general mutation-adjusted selection remain unsupported. | 4 | 2 |
 | `dom.algorithms.selectors` | behavior | partial | adapted | @zavx0z/dom/semantic | The runtime implements a bounded subset and intentionally omits remaining standard branches. | 2 | 0 |
 | `dom.algorithms.serialization-boundary` | behavior | unsupported | none | @zavx0z/dom/semantic | The accepted semantic DOM architecture has no implementation for this observable algorithm in the current checkout. | 1 | 0 |
 | `dom.algorithms.shadow-tree` | behavior | unsupported | none | @zavx0z/dom/semantic | The accepted semantic DOM architecture has no implementation for this observable algorithm in the current checkout. | 1 | 0 |
@@ -4207,7 +4207,9 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `platform.at-zavx0z-dom.export-paths.document-fragment.symbols.documentfragment` | runtime-export | partial | extension | @zavx0z/dom/semantic | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.document.symbols.createdocument` | runtime-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.document.symbols.document` | runtime-export | partial | extension | @zavx0z/dom/semantic | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
+| `platform.at-zavx0z-dom.export-paths.document.symbols.documenttextcontrolselection` | type-export | implemented | extension | @zavx0z/dom/semantic | — | 2 | 0 |
 | `platform.at-zavx0z-dom.export-paths.document.symbols.htmlelementtagnamemap` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-zavx0z-dom.export-paths.document.symbols.textcontrolselectiontarget` | type-export | implemented | extension | @zavx0z/dom/semantic | — | 2 | 0 |
 | `platform.at-zavx0z-dom.export-paths.element` | package-export-path | partial | extension | @zavx0z/dom/semantic | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.element.symbols.element` | runtime-export | partial | extension | @zavx0z/dom/semantic | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.event` | package-export-path | partial | extension | @zavx0z/dom/semantic | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
@@ -4300,6 +4302,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `platform.at-zavx0z-dom.export-paths.pointer-event.symbols.pointerevent` | runtime-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.pointer-event.symbols.pointereventinit` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.popover-state` | package-export-path | partial | extension | @zavx0z/dom/semantic | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
+| `platform.at-zavx0z-dom.export-paths.popover-state.symbols.getpopoversource` | runtime-export | implemented | extension | @zavx0z/dom/semantic | — | 2 | 0 |
 | `platform.at-zavx0z-dom.export-paths.popover-state.symbols.getpopovervisibilitystate` | runtime-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.popover-state.symbols.popovervalue` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.popover-state.symbols.popovervisibilitystate` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
@@ -4331,6 +4334,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `platform.at-zavx0z-dom.export-paths.root.symbols.documentfragment` | runtime-export | partial | extension | @zavx0z/dom/semantic | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.documentmutation` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.documentstatechange` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-zavx0z-dom.export-paths.root.symbols.documenttextcontrolselection` | type-export | implemented | extension | @zavx0z/dom/semantic | — | 2 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.domtokenlist` | runtime-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.element` | runtime-export | partial | extension | @zavx0z/dom/semantic | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.event` | runtime-export | partial | extension | @zavx0z/dom/semantic | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
@@ -4407,6 +4411,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `platform.at-zavx0z-dom.export-paths.root.symbols.textareaselectionstatechange` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.textareastatechange` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.textareavaluestatechange` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-zavx0z-dom.export-paths.root.symbols.textcontrolselectiontarget` | type-export | implemented | extension | @zavx0z/dom/semantic | — | 2 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.textselection` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.textselectiondirection` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.toggleevent` | runtime-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
@@ -4493,6 +4498,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `platform.at-engine-core.export-paths.default-font.symbols.documentdefaultfonturl` | runtime-export | unverified | unknown | @engine/core/gpu-scene-resource | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-engine-core.export-paths.default-font.symbols.loaddocumentdefaultfont` | runtime-export | unverified | unknown | @engine/core/gpu-scene-resource | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-engine-core.export-paths.default-font.symbols.loadsharedfont` | runtime-export | unverified | unknown | @engine/core/gpu-scene-resource | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-engine-core.export-paths.fonts-inter-regular.ttf` | package-export-path | implemented | extension | @engine/core/gpu-scene-resource | — | 2 | 0 |
 | `platform.at-engine-core.export-paths.fonts-jetbrains-mono-bold.ttf` | package-export-path | partial | extension | @engine/core/gpu-scene-resource | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
 | `platform.at-engine-core.export-paths.root` | package-export-path | partial | extension | @engine/core/gpu-scene-resource | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
 | `platform.at-engine-core.export-paths.root.symbols.animationaction` | runtime-export | unverified | unknown | @engine/core/gpu-scene-resource | Export/type presence is not behavioral evidence. | 1 | 0 |
@@ -4756,7 +4762,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `html.behaviors.attribute-property-reflection` | behavior | partial | adapted | @zavx0z/dom/semantic | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. | 2 | 0 |
 | `html.behaviors.button` | behavior | partial | adapted | @zavx0z/dom/semantic | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. | 2 | 0 |
 | `html.behaviors.canvas` | behavior | not-applicable | none | @zavx0z/dom/semantic | Engine/WebGPU presentation owns the host canvas; semantic HTML Canvas2D/WebGL context APIs would create a parallel rendering surface and are outside the accepted architecture. | 1 | 0 |
-| `html.behaviors.clipboard` | behavior | unsupported | none | @zavx0z/dom/semantic | The current semantic DOM has no implementation of this HTML algorithm. | 1 | 1 |
+| `html.behaviors.clipboard` | behavior | partial | adapted | @zavx0z/dom/semantic | Plain-text copy for the exact mirrored active Input/TextArea selection is implemented with semantic cancellation; ClipboardEvent/DataTransfer, cut, paste, async Clipboard API, HTML payloads and permissions remain unsupported. | 2 | 1 |
 | `html.behaviors.constraint-validation` | behavior | unsupported | none | @zavx0z/dom/semantic | The current semantic DOM has no implementation of this HTML algorithm. | 1 | 0 |
 | `html.behaviors.content-categories` | behavior | unsupported | none | @zavx0z/dom/semantic | The current semantic DOM has no implementation of this HTML algorithm. | 1 | 0 |
 | `html.behaviors.content-model` | behavior | unsupported | none | @zavx0z/dom/semantic | The current semantic DOM has no implementation of this HTML algorithm. | 1 | 0 |
@@ -4804,7 +4810,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `html.behaviors.live-state-vs-content-attributes` | behavior | partial | adapted | @zavx0z/dom/semantic | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. | 2 | 0 |
 | `html.behaviors.load-error-events` | behavior | unsupported | none | @zavx0z/dom/semantic | The current semantic DOM has no implementation of this HTML algorithm. | 1 | 0 |
 | `html.behaviors.media` | behavior | not-applicable | none | @zavx0z/dom/semantic | This platform is a WebGPU UI renderer, not an HTML media playback user agent; media resource selection/playback/tracks remain outside the accepted owner graph. | 1 | 0 |
-| `html.behaviors.popover` | behavior | partial | adapted | @zavx0z/dom/semantic | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. | 2 | 1 |
+| `html.behaviors.popover` | behavior | partial | adapted | @zavx0z/dom/semantic | Explicit-source Auto popovers have anchored/clamped top-layer paint, viewport clipping, light dismiss, cancellable Escape and focus restoration; Hint, implicit invokers, autofocus, arbitrary CSS Anchor Positioning and accessibility remain unsupported. | 6 | 1 |
 | `html.behaviors.progress-meter` | behavior | partial | adapted | @zavx0z/dom/semantic | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. | 2 | 0 |
 | `html.behaviors.resource-loading` | behavior | not-applicable | none | @zavx0z/dom/semantic | The capability belongs to a full browsing user agent rather than the accepted semantic DOM to CPU Renderer to retained WebGPU platform. | 1 | 0 |
 | `html.behaviors.select-option-optgroup` | behavior | partial | adapted | @zavx0z/dom/semantic | Collapsed single-select live state, disclosure chrome, picker ownership and bounded keyboard/pointer choice are implemented; multiple/listbox, optgroup, type-ahead, forms and accessibility projection remain unsupported. | 4 | 1 |
@@ -8609,7 +8615,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `renderer.features.backend-neutral-diagnostics` | renderer-stage | unsupported | none | @zavx0z/renderer/cpu | The CPU renderer has no implementation of this internal platform capability. | 1 | 1 |
 | `renderer.features.block-layout` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.box-model` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
-| `renderer.features.caret-selection-paint` | renderer-stage | unsupported | none | @zavx0z/renderer/cpu | The CPU renderer has no implementation of this internal platform capability. | 1 | 1 |
+| `renderer.features.caret-selection-paint` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Focused textarea caret/selection paint and pointer mapping are implemented for white-space:pre plus wrap=off; soft wrap, tabs, proportional glyph metrics, local scroll offsets, bidi, graphemes, IME, inactive and ordinary DOM selection remain unsupported. | 4 | 1 |
 | `renderer.features.cascade` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU style owner implements bounded UA/author/compiled/consumer/inline ordering, selector specificity, repeated declaration sequence, shorthand/longhand expansion, custom-property substitution, and computed-invalid winner handling. User origins, !important, cascade layers/scopes, CSS-wide rollback keywords, animations/transitions, CSSOM, and the complete browser cascade remain unsupported. | 4 | 0 |
 | `renderer.features.clean-frame-fast-path` | renderer-stage | implemented | extension | @zavx0z/renderer/cpu | — | 2 | 0 |
 | `renderer.features.clip-stacks` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
@@ -8631,7 +8637,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `renderer.features.overflow` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.performance-paths` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.pointer` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Implemented for the bounded rendered-control set including explicit semantic capture, horizontal Range and collapsed Select; implicit touch capture and complete Pointer Events/HTML default actions remain outside Core. | 3 | 0 |
-| `renderer.features.popover-projection` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
+| `renderer.features.popover-projection` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Explicit source anchoring, viewport clipping and pointer light dismiss are implemented; arbitrary CSS Anchor Positioning, root transforms, backdrop, Hint and live native pixels remain unsupported. | 3 | 0 |
 | `renderer.features.positioning` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.progress-meter` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.projection-root-inheritance` | renderer-stage | implemented | extension | @zavx0z/renderer/cpu | — | 2 | 0 |

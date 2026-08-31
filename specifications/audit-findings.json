@@ -434,53 +434,6 @@
     },
     {
       "schemaVersion": 1,
-      "id": "gap.renderer.caret-selection-paint",
-      "capability": "renderer.features.caret-selection-paint",
-      "reportedBy": {
-        "repository": "interpreter",
-        "package": "@metafor/interpreter",
-        "subject": "SourceEditor",
-        "scenario": "transparent textarea over token presentation"
-      },
-      "expected": {
-        "reference": "HTML editing/selection and CPU Renderer paint contract",
-        "behavior": "Caret and selected range are painted at exact text geometry and synchronized with semantic selection."
-      },
-      "actual": {
-        "behavior": "Selection offsets exist, but CPU Renderer does not emit caret/selection display items; the transparent textarea cannot supply visible selection.",
-        "evidence": [
-          {
-            "type": "consumer-usage",
-            "repository": "interpreter",
-            "revision": "879b4e01a4abd12756f86228784421e26270f485+dirty",
-            "path": "packages/interpreter/web/dom/source-editor.tsx",
-            "symbol": "createSourceEditor",
-            "lines": "170-434",
-            "proves": "The editor separates editable textarea state from token presentation and needs synchronized visual selection.",
-            "doesNotProve": "A generic renderer implementation."
-          }
-        ]
-      },
-      "minimalReproduction": {
-        "source": "Select a range in the semantic source-editor textarea while token presentation remains visible.",
-        "test": "Assert RenderFrame contains caret/selection items aligned to measured text and clips."
-      },
-      "suspectedOwner": {
-        "repository": "renderer",
-        "package": "@zavx0z/renderer",
-        "stage": "paint"
-      },
-      "severity": "P1",
-      "dependencies": [
-        "dom.algorithms.selection"
-      ],
-      "forbiddenLocalWorkarounds": [
-        "Component-owned caret coordinates",
-        "Private canvas text selection paint"
-      ]
-    },
-    {
-      "schemaVersion": 1,
       "id": "gap.dom.geometry-readback",
       "capability": "dom.extensions.cssom-view.interfaces.element.methods.getboundingclientrect",
       "reportedBy": {
@@ -522,53 +475,6 @@
       "forbiddenLocalWorkarounds": [
         "Hard-coded line height",
         "A component-owned layout tree"
-      ]
-    },
-    {
-      "schemaVersion": 1,
-      "id": "gap.html.anchored-popover",
-      "capability": "html.behaviors.popover",
-      "reportedBy": {
-        "repository": "ui",
-        "package": "@ui/components",
-        "subject": "ColorInput",
-        "scenario": "open the picker beside its trigger"
-      },
-      "expected": {
-        "reference": "HTML popover and CSS positioning",
-        "behavior": "A top-layer popover is anchored, clipped correctly, light-dismissed and restores focus."
-      },
-      "actual": {
-        "behavior": "Bounded Auto/Manual popover visibility exists, but ColorInput uses an inline display:none panel; anchor, light-dismiss, Escape and focus policy are absent."
-      , "evidence": [
-          {
-            "type": "consumer-usage",
-            "repository": "ui",
-            "revision": "2148fa46d41efdc6ece993a6298b4adb2ade0b19+dirty",
-            "path": "packages/components/color-input.tsx",
-            "symbol": "ColorInput presentation",
-            "lines": "142-181",
-            "proves": "The component hides an inline panel instead of using the semantic popover path.",
-            "doesNotProve": "The final anchored positioning API."
-          }
-        ]
-      },
-      "minimalReproduction": {
-        "source": "Open ColorInput near viewport edges and click/focus outside it.",
-        "test": "Assert top-layer placement, clipping, light dismiss, Escape and focus restoration."
-      },
-      "suspectedOwner": {
-        "repository": "renderer",
-        "package": "@zavx0z/renderer-browser",
-        "stage": "popover-host"
-      },
-      "severity": "P1",
-      "dependencies": [
-        "renderer.features.popover-projection"
-      ],
-      "forbiddenLocalWorkarounds": [
-        "Inline hidden panel",
-        "Component-owned viewport coordinates"
       ]
     },
     {

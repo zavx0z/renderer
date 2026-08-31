@@ -970,7 +970,7 @@
           "path": "packages/dom/src/pointer-capture.ts",
           "proves": "Per-Document active/pending/effective capture ownership and got/lost ordering.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "pending pointer capture override",
           "type": "implementation"
         },
@@ -979,7 +979,7 @@
           "path": "packages/dom/test/pointer-capture.test.ts",
           "proves": "Pending override processing, transfer, explicit/implicit release, inactive-id errors and disconnect cleanup.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "Element pointer capture",
           "type": "unit-test"
         },
@@ -988,7 +988,7 @@
           "path": "packages/core/test/interaction.test.ts",
           "proves": "Move/up remain targeted at the exact captured Element outside its hit box.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "semantic pointer-capture retargeting",
           "type": "unit-test"
         }
@@ -996,7 +996,7 @@
       "id": "dom.algorithms.pointer-capture",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
+        "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3"
       },
       "limitations": [
         "Explicit semantic capture, pending overrides and got/lost ordering are implemented; implicit touch capture and the complete native Pointer Events device model remain outside this bounded host."
@@ -1041,32 +1041,60 @@
     {
       "blockedBy": [],
       "blocks": [],
-      "conformance": "none",
+      "conformance": "adapted",
       "consumers": [],
       "evidence": [
         {
-          "doesNotProve": "Runtime implementation or observable conformance.",
-          "path": "whatwg-dom#selection",
-          "proves": "The pinned standard inventory contains dom.algorithms.selection.",
-          "repository": "external",
-          "revision": "commit a2331a45360129e8645ef7e0a04740241b6e3726",
-          "type": "external-spec"
+          "doesNotProve": "Standard Selection/Range, ordinary Text nodes, contenteditable, multi-range and general mutation adjustment.",
+          "path": "packages/dom/src/document.ts",
+          "proves": "Document derives one immutable snapshot from the canonical active Input/TextArea offsets and direction.",
+          "repository": "renderer",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "symbol": "readTextControlSelection",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Soft wrap, bidi, grapheme and ordinary DOM selection.",
+          "path": "packages/core/src/interaction.ts",
+          "proves": "Renderer metrics map pointer drag into the same semantic textarea offsets without component coordinates.",
+          "repository": "renderer",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "symbol": "textarea pointer selection default",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Standard Selection/Range and ordinary DOM Text selection.",
+          "path": "packages/dom/test/text-selection.test.ts",
+          "proves": "Snapshot identity, offsets, direction, collapsed state and selected text.",
+          "repository": "renderer",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "symbol": "active text-control selection snapshot",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Soft wrap, bidi, grapheme and multi-range selection.",
+          "path": "packages/core/test/interaction.test.ts",
+          "proves": "Pointer drag updates one forward semantic range and select events through exact render metrics.",
+          "repository": "renderer",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "symbol": "textarea pointer selection",
+          "type": "unit-test"
         }
       ],
       "id": "dom.algorithms.selection",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3"
       },
       "limitations": [
-        "The accepted semantic DOM architecture has no implementation for this observable algorithm in the current checkout."
+        "Active Input/TextArea selection, immutable snapshots and bounded pre/wrap-off pointer mapping are implemented; standard DOM Selection/Range, contenteditable, ordinary Text-node, multi-range and general mutation-adjusted selection remain unsupported."
       ],
       "owner": {
         "package": "@zavx0z/dom",
         "repository": "renderer",
         "stage": "semantic"
       },
-      "status": "unsupported"
+      "status": "partial"
     },
     {
       "blockedBy": [],
@@ -4234,7 +4262,7 @@
           "path": "packages/dom/src/pointer-capture.ts",
           "proves": "Pending override processing dispatches the exact capture transition event in standard lost-before-got order.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "gotpointercapture",
           "type": "implementation"
         },
@@ -4243,7 +4271,7 @@
           "path": "packages/dom/test/pointer-capture.test.ts",
           "proves": "Transfer, explicit release and implicit pointer-end ordering are observed.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "gotpointercapture",
           "type": "unit-test"
         }
@@ -4251,7 +4279,7 @@
       "id": "dom.events.gotpointercapture",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
+        "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3"
       },
       "limitations": [
         "Semantic transition dispatch and ordering are proven; trusted native provenance and implicit touch capture remain outside this bounded host."
@@ -4454,7 +4482,7 @@
           "path": "packages/dom/src/pointer-capture.ts",
           "proves": "Pending override processing dispatches the exact capture transition event in standard lost-before-got order.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "lostpointercapture",
           "type": "implementation"
         },
@@ -4463,7 +4491,7 @@
           "path": "packages/dom/test/pointer-capture.test.ts",
           "proves": "Transfer, explicit release and implicit pointer-end ordering are observed.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "lostpointercapture",
           "type": "unit-test"
         }
@@ -4471,7 +4499,7 @@
       "id": "dom.events.lostpointercapture",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
+        "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3"
       },
       "limitations": [
         "Semantic transition dispatch and ordering are proven; trusted native provenance and implicit touch capture remain outside this bounded host."
@@ -11354,7 +11382,7 @@
           "path": "packages/dom/src/element.ts",
           "proves": "The standard Element method delegates to the exact Document pointer-capture owner.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "hasPointerCapture",
           "type": "implementation"
         },
@@ -11363,7 +11391,7 @@
           "path": "packages/dom/test/pointer-capture.test.ts",
           "proves": "Method errors, pending ownership, transfer and release are observed through exact Element identity.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "hasPointerCapture",
           "type": "unit-test"
         }
@@ -11371,7 +11399,7 @@
       "id": "dom.extensions.pointerevents.interfaces.element.methods.haspointercapture",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
+        "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3"
       },
       "limitations": [
         "The explicit Element method contract is behaviorally proven; implicit touch capture and live native browser provenance remain outside this evidence."
@@ -11394,7 +11422,7 @@
           "path": "packages/dom/src/element.ts",
           "proves": "The standard Element method delegates to the exact Document pointer-capture owner.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "releasePointerCapture",
           "type": "implementation"
         },
@@ -11403,7 +11431,7 @@
           "path": "packages/dom/test/pointer-capture.test.ts",
           "proves": "Method errors, pending ownership, transfer and release are observed through exact Element identity.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "releasePointerCapture",
           "type": "unit-test"
         }
@@ -11411,7 +11439,7 @@
       "id": "dom.extensions.pointerevents.interfaces.element.methods.releasepointercapture",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
+        "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3"
       },
       "limitations": [
         "The explicit Element method contract is behaviorally proven; implicit touch capture and live native browser provenance remain outside this evidence."
@@ -11434,7 +11462,7 @@
           "path": "packages/dom/src/element.ts",
           "proves": "The standard Element method delegates to the exact Document pointer-capture owner.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "setPointerCapture",
           "type": "implementation"
         },
@@ -11443,7 +11471,7 @@
           "path": "packages/dom/test/pointer-capture.test.ts",
           "proves": "Method errors, pending ownership, transfer and release are observed through exact Element identity.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "setPointerCapture",
           "type": "unit-test"
         }
@@ -11451,7 +11479,7 @@
       "id": "dom.extensions.pointerevents.interfaces.element.methods.setpointercapture",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
+        "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3"
       },
       "limitations": [
         "The explicit Element method contract is behaviorally proven; implicit touch capture and live native browser provenance remain outside this evidence."
@@ -33971,7 +33999,7 @@
           "path": "packages/dom/src/html-element.ts",
           "proves": "Boolean presence reflection and hidden-ancestor focus suppression use the exact semantic attribute owner.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "HTMLElement.hidden",
           "type": "implementation"
         },
@@ -33980,7 +34008,7 @@
           "path": "packages/dom/test/tree.test.ts",
           "proves": "Presence reflection and descendant focus suppression.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "HTMLElement.hidden",
           "type": "unit-test"
         },
@@ -33989,7 +34017,7 @@
           "path": "packages/core/test/renderer.test.ts",
           "proves": "A hidden subtree stays absent from boxes, paint and hits despite author and inline display.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "hidden author-display precedence",
           "type": "unit-test"
         }
@@ -33997,7 +34025,7 @@
       "id": "html.attributes.hidden",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
+        "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3"
       },
       "limitations": [
         "Boolean hidden presence and fully-hidden rendering/focus are implemented; until-found, beforematch, find-in-page reveal and accessibility projection remain unsupported."
@@ -37631,32 +37659,42 @@
     {
       "blockedBy": [],
       "blocks": [],
-      "conformance": "none",
+      "conformance": "adapted",
       "consumers": [],
       "evidence": [
         {
-          "doesNotProve": "Runtime implementation or observable conformance.",
-          "path": "whatwg-html#clipboard",
-          "proves": "The pinned standard inventory contains html.behaviors.clipboard.",
-          "repository": "external",
-          "revision": "commit 4aa7694b585e4d551a11cfe6dece823105fdf0a8",
-          "type": "external-spec"
+          "doesNotProve": "ClipboardEvent/DataTransfer, cut, paste, async Clipboard API, HTML payload and permissions.",
+          "path": "packages/browser/src/native-input-host.ts",
+          "proves": "Exact active text-control value/selection remains on the native proxy; semantic copy cancellation gates its plain-text platform default.",
+          "repository": "renderer",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "symbol": "mirrored native copy default",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live OS clipboard contents, cut/paste, DataTransfer and permissions.",
+          "path": "packages/browser/test/native-input-host.test.ts",
+          "proves": "Selected substring copy and semantic cancellation through the exact mirrored textarea.",
+          "repository": "renderer",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "symbol": "readonly text-control copy",
+          "type": "unit-test"
         }
       ],
       "id": "html.behaviors.clipboard",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3"
       },
       "limitations": [
-        "The current semantic DOM has no implementation of this HTML algorithm."
+        "Plain-text copy for the exact mirrored active Input/TextArea selection is implemented with semantic cancellation; ClipboardEvent/DataTransfer, cut, paste, async Clipboard API, HTML payloads and permissions remain unsupported."
       ],
       "owner": {
         "package": "@zavx0z/dom",
         "repository": "renderer",
         "stage": "semantic"
       },
-      "status": "unsupported"
+      "status": "partial"
     },
     {
       "blockedBy": [],
@@ -38089,7 +38127,7 @@
           "path": "packages/core/src/css.ts",
           "proves": "Any present semantic hidden attribute forces used display:none after author cascade.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "hidden used display",
           "type": "implementation"
         },
@@ -38098,7 +38136,7 @@
           "path": "packages/dom/src/html-element.ts",
           "proves": "The semantic boolean reflection and ancestor focus law share the content attribute.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "HTMLElement.hidden",
           "type": "implementation"
         },
@@ -38107,7 +38145,7 @@
           "path": "packages/core/test/renderer.test.ts",
           "proves": "Author/compiled/inline display cannot reveal boxes, paint or hits; removal restores rendering.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "HTML hidden projection",
           "type": "unit-test"
         },
@@ -38116,7 +38154,7 @@
           "path": "packages/dom/test/tree.test.ts",
           "proves": "Hidden owners and descendants do not become the active element.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "hidden focusability",
           "type": "unit-test"
         }
@@ -38124,7 +38162,7 @@
       "id": "html.behaviors.hidden",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
+        "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3"
       },
       "limitations": [
         "The fully-hidden state is behaviorally enforced; hidden=until-found, beforematch, find-in-page reveal, containment and accessibility projection remain unsupported."
@@ -38357,7 +38395,7 @@
           "path": "packages/dom/src/html-input-element.ts",
           "proves": "Checked state, cancellation rollback and input/change ordering remain owned by the semantic Checkbox.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "checkbox activation",
           "type": "implementation"
         },
@@ -38366,7 +38404,7 @@
           "path": "packages/core/src/renderer.ts",
           "proves": "A checked Checkbox projects one stable current-color check glyph while Radio retains its circular Rect indicator.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "checkbox UA check glyph",
           "type": "implementation"
         },
@@ -38375,7 +38413,7 @@
           "path": "packages/dom/test/input-activation.test.ts",
           "proves": "Checked-state activation, cancellation and event order.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "HTMLInputElement checkbox activation",
           "type": "unit-test"
         },
@@ -38384,7 +38422,7 @@
           "path": "packages/core/test/input-paint.test.ts",
           "proves": "Unchecked absence, checked check-mark identity, Radio dot distinction and disabled opacity/hit behavior.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "checkbox and radio projection",
           "type": "unit-test"
         }
@@ -38392,7 +38430,7 @@
       "id": "html.behaviors.input-type-checkbox",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
+        "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3"
       },
       "limitations": [
         "Checkbox live state, activation and a bounded checked check glyph are implemented; indeterminate chrome, forms, validation, accessibility and complete native browser behavior remain unsupported."
@@ -38775,7 +38813,7 @@
           "path": "packages/dom/src/html-input-element.ts",
           "proves": "Arrow/Home/End/Page defaults write through the DOM range value owner and emit input/change only on effective changes.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "applyRangeKeyboardDefault",
           "type": "implementation"
         },
@@ -38784,7 +38822,7 @@
           "path": "packages/core/src/interaction.ts",
           "proves": "Pointer drag uses the rendered track geometry and DOM numeric semantics without consumer coordinates.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "range pointer default action",
           "type": "implementation"
         },
@@ -38793,7 +38831,7 @@
           "path": "packages/dom/test/input-numeric-state.test.ts",
           "proves": "Keyboard stepping, clamping and event order.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "range keyboard defaults",
           "type": "unit-test"
         },
@@ -38802,7 +38840,7 @@
           "path": "packages/core/test/range-input.test.ts",
           "proves": "Pointer geometry, min/max/step ownership and input/change order.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "range pointer drag",
           "type": "unit-test"
         }
@@ -38810,7 +38848,7 @@
       "id": "html.behaviors.input-type-range",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
+        "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3"
       },
       "limitations": [
         "Horizontal pointer drag and bounded keyboard defaults are implemented; vertical orientation, ticks, datalist, validity, public stepUp/stepDown and complete browser range behavior remain unsupported."
@@ -39327,31 +39365,67 @@
       "consumers": [],
       "evidence": [
         {
-          "doesNotProve": "The complete referenced standard algorithm.",
+          "doesNotProve": "Hint stacks, implicit invokers, autofocus, accessibility and complete HTML popover behavior.",
           "path": "packages/dom/src/internal/popover.ts",
-          "proves": "The bounded semantic DOM implementation exists.",
+          "proves": "Showing state retains exact source/focus owners; Auto stacks apply target-related light dismiss and topmost Escape closure.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "popover",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "symbol": "source, light dismiss, Escape and focus return",
           "type": "implementation"
         },
         {
-          "doesNotProve": "The complete HTML algorithm, forms, picker, or browser integration.",
-          "path": "packages/dom/test/popover.test.ts",
-          "proves": "The bounded UI/control slice has behavioral tests.",
+          "doesNotProve": "Arbitrary CSS Anchor Positioning grammar and popover-root transforms.",
+          "path": "packages/core/src/renderer.ts",
+          "proves": "Renderer derives transformed source bounds, flips/clamps an explicit-source popover and applies one viewport clip without ancestor overflow.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "popover",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "symbol": "anchored popover top layer",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live native browser pixels and complete keyboard navigation.",
+          "path": "packages/browser/src/native-input-host.ts",
+          "proves": "A read-only native keyboard proxy routes cancellable Escape from any focused semantic HTMLElement to the Document Auto-popover default.",
+          "repository": "renderer",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "symbol": "generic Escape keyboard owner",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Hint/implicit invoker/accessibility behavior.",
+          "path": "packages/dom/test/popover.test.ts",
+          "proves": "Exact source lifetime, related-target light dismiss, topmost Escape, Manual preservation and focus return.",
+          "repository": "renderer",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "symbol": "popover source/dismiss/focus",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Arbitrary CSS Anchor Positioning and popover-root transforms.",
+          "path": "packages/core/test/popover-paint.test.ts",
+          "proves": "Transformed source placement, flip, clamp, viewport clip and ancestor-overflow escape.",
+          "repository": "renderer",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "symbol": "anchored viewport top layer",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Live native browser execution.",
+          "path": "packages/browser/test/native-input-host.test.ts",
+          "proves": "Generic focused owner, cancellation, close and focus restoration through the browser host.",
+          "repository": "renderer",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "symbol": "cancellable popover Escape",
           "type": "unit-test"
         }
       ],
       "id": "html.behaviors.popover",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3"
       },
       "limitations": [
-        "Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed."
+        "Explicit-source Auto popovers have anchored/clamped top-layer paint, viewport clipping, light dismiss, cancellable Escape and focus restoration; Hint, implicit invokers, autofocus, arbitrary CSS Anchor Positioning and accessibility remain unsupported."
       ],
       "owner": {
         "package": "@zavx0z/dom",
@@ -39440,7 +39514,7 @@
           "path": "packages/dom/src/select-picker-state.ts",
           "proves": "One Document-owned picker, keyboard selection and exact Option choice/event ordering.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "collapsed select picker state",
           "type": "implementation"
         },
@@ -39449,7 +39523,7 @@
           "path": "packages/core/src/renderer.ts",
           "proves": "Every collapsed Select reserves a bounded label-safe slot for one stable current-color disclosure glyph.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "collapsed select disclosure indicator",
           "type": "implementation"
         },
@@ -39458,7 +39532,7 @@
           "path": "packages/dom/test/select-picker.test.ts",
           "proves": "Open/close, keyboard, exact option selection, input/change, blur and removal cleanup.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "collapsed select picker state",
           "type": "unit-test"
         },
@@ -39467,7 +39541,7 @@
           "path": "packages/core/test/select-paint.test.ts",
           "proves": "Stable indicator identity across selection, empty-label presence, author sizing/color and disabled opacity.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "collapsed select disclosure indicator",
           "type": "unit-test"
         }
@@ -39475,7 +39549,7 @@
       "id": "html.behaviors.select-option-optgroup",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
+        "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3"
       },
       "limitations": [
         "Collapsed single-select live state, disclosure chrome, picker ownership and bounded keyboard/pointer choice are implemented; multiple/listbox, optgroup, type-ahead, forms and accessibility projection remain unsupported."
@@ -153160,7 +153234,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "842",
+          "lines": "900",
           "path": "packages/dom/src/document.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -153192,7 +153266,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "151",
+          "lines": "166",
           "path": "packages/dom/src/document.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -153219,12 +153293,50 @@
     {
       "blockedBy": [],
       "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Standard DOM Selection/Range, contenteditable and ordinary Text-node selection.",
+          "path": "packages/dom/src/document.ts",
+          "proves": "The exported type describes the exact active text-control selection adapter without a second range store.",
+          "repository": "renderer",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "symbol": "DocumentTextControlSelection",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Standard DOM Selection/Range and multi-range semantics.",
+          "path": "packages/dom/test/text-selection.test.ts",
+          "proves": "Exact target, offsets, direction, collapsed state, text and immutable snapshots.",
+          "repository": "renderer",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "symbol": "active text-control selection snapshot",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom.export-paths.document.symbols.documenttextcontrolselection",
+      "lastVerified": {
+        "date": "2026-08-31",
+        "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
       "conformance": "unknown",
       "consumers": [],
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "119",
+          "lines": "123",
           "path": "packages/dom/src/document.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -153247,6 +153359,44 @@
         "stage": "semantic"
       },
       "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Standard DOM Selection/Range, contenteditable and ordinary Text-node selection.",
+          "path": "packages/dom/src/document.ts",
+          "proves": "The exported type describes the exact active text-control selection adapter without a second range store.",
+          "repository": "renderer",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "symbol": "TextControlSelectionTarget",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Standard DOM Selection/Range and multi-range semantics.",
+          "path": "packages/dom/test/text-selection.test.ts",
+          "proves": "Exact target, offsets, direction, collapsed state, text and immutable snapshots.",
+          "repository": "renderer",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "symbol": "active text-control selection snapshot",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom.export-paths.document.symbols.textcontrolselectiontarget",
+      "lastVerified": {
+        "date": "2026-08-31",
+        "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "status": "implemented"
     },
     {
       "blockedBy": [],
@@ -153921,7 +154071,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "57",
+          "lines": "59",
           "path": "packages/dom/src/html-element.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -153953,7 +154103,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "70",
+          "lines": "72",
           "path": "packages/dom/src/html-element.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -153985,7 +154135,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "23",
+          "lines": "25",
           "path": "packages/dom/src/html-element.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -154017,7 +154167,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "25",
+          "lines": "27",
           "path": "packages/dom/src/html-element.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -154049,7 +154199,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "62",
+          "lines": "64",
           "path": "packages/dom/src/html-element.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -154081,7 +154231,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "66",
+          "lines": "68",
           "path": "packages/dom/src/html-element.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -156162,6 +156312,44 @@
     {
       "blockedBy": [],
       "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Geometry, z-order, implicit invoker discovery or accessibility projection.",
+          "path": "packages/dom/src/popover-state.ts",
+          "proves": "The opaque renderer adapter exposes only the exact retained source identity while a popover is showing.",
+          "repository": "renderer",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "symbol": "getPopoverSource",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Geometry and implicit invoker discovery.",
+          "path": "packages/dom/test/popover.test.ts",
+          "proves": "Source identity persists through showing and clears on close.",
+          "repository": "renderer",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "symbol": "retained popover source",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom.export-paths.popover-state.symbols.getpopoversource",
+      "lastVerified": {
+        "date": "2026-08-31",
+        "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
       "conformance": "unknown",
       "consumers": [],
       "evidence": [
@@ -156294,7 +156482,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "34",
+          "lines": "38",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -156333,7 +156521,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "46",
+          "lines": "50",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -156404,7 +156592,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "104",
+          "lines": "108",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -156436,7 +156624,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "59",
+          "lines": "63",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -156468,7 +156656,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "104",
+          "lines": "108",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -156500,7 +156688,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "104",
+          "lines": "108",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -156532,7 +156720,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "61",
+          "lines": "65",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -156756,7 +156944,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "39",
+          "lines": "43",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -156788,7 +156976,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "39",
+          "lines": "43",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -156820,7 +157008,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "39",
+          "lines": "43",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -156852,7 +157040,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "39",
+          "lines": "43",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -156884,7 +157072,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "39",
+          "lines": "43",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -156916,7 +157104,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "51",
+          "lines": "55",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -156948,7 +157136,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "51",
+          "lines": "55",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -156980,7 +157168,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "51",
+          "lines": "55",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -157012,7 +157200,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "51",
+          "lines": "55",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -157044,7 +157232,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "51",
+          "lines": "55",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -157076,7 +157264,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "58",
+          "lines": "62",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -157108,7 +157296,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "104",
+          "lines": "108",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -157140,7 +157328,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "112",
+          "lines": "116",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -157163,6 +157351,44 @@
         "stage": "semantic"
       },
       "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Standard DOM Selection/Range, contenteditable and ordinary Text-node selection.",
+          "path": "packages/dom/src/document.ts",
+          "proves": "The exported type describes the exact active text-control selection adapter without a second range store.",
+          "repository": "renderer",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "symbol": "DocumentTextControlSelection",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Standard DOM Selection/Range and multi-range semantics.",
+          "path": "packages/dom/test/text-selection.test.ts",
+          "proves": "Exact target, offsets, direction, collapsed state, text and immutable snapshots.",
+          "repository": "renderer",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "symbol": "active text-control selection snapshot",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom.export-paths.root.symbols.documenttextcontrolselection",
+      "lastVerified": {
+        "date": "2026-08-31",
+        "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "status": "implemented"
     },
     {
       "blockedBy": [],
@@ -157204,7 +157430,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "62",
+          "lines": "66",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -157524,7 +157750,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "64",
+          "lines": "68",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -157556,7 +157782,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "112",
+          "lines": "116",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -157588,7 +157814,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "71",
+          "lines": "75",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -157620,7 +157846,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "81",
+          "lines": "85",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -157652,7 +157878,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "76",
+          "lines": "80",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -157684,7 +157910,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "63",
+          "lines": "67",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -157748,7 +157974,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "77",
+          "lines": "81",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -157780,7 +158006,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "78",
+          "lines": "82",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -157812,7 +158038,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "79",
+          "lines": "83",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -157844,7 +158070,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "87",
+          "lines": "91",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -157876,7 +158102,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "82",
+          "lines": "86",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -157908,7 +158134,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "88",
+          "lines": "92",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -157940,7 +158166,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "90",
+          "lines": "94",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -157972,7 +158198,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "89",
+          "lines": "93",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -158004,7 +158230,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "91",
+          "lines": "95",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -158036,7 +158262,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "92",
+          "lines": "96",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -158068,7 +158294,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "93",
+          "lines": "97",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -158100,7 +158326,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "94",
+          "lines": "98",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -158132,7 +158358,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "95",
+          "lines": "99",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -158164,7 +158390,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "80",
+          "lines": "84",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -158196,7 +158422,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "96",
+          "lines": "100",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -158228,7 +158454,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "97",
+          "lines": "101",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -158260,7 +158486,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "98",
+          "lines": "102",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -158292,7 +158518,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "99",
+          "lines": "103",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -158324,7 +158550,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "100",
+          "lines": "104",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -158356,7 +158582,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "101",
+          "lines": "105",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -158388,7 +158614,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "102",
+          "lines": "106",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -158420,7 +158646,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "103",
+          "lines": "107",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -158452,7 +158678,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "112",
+          "lines": "116",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -158548,7 +158774,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "112",
+          "lines": "116",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -158580,7 +158806,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "112",
+          "lines": "116",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -158612,7 +158838,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "112",
+          "lines": "116",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -158644,7 +158870,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "112",
+          "lines": "116",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -158804,7 +159030,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "104",
+          "lines": "108",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -158836,7 +159062,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "104",
+          "lines": "108",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -158964,7 +159190,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "112",
+          "lines": "116",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159060,7 +159286,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "112",
+          "lines": "116",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159092,7 +159318,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "72",
+          "lines": "76",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159124,7 +159350,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "72",
+          "lines": "76",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159156,7 +159382,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "34",
+          "lines": "38",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159195,7 +159421,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "46",
+          "lines": "50",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159234,7 +159460,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "64",
+          "lines": "68",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159266,7 +159492,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "112",
+          "lines": "116",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159298,7 +159524,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "64",
+          "lines": "68",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159330,7 +159556,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "64",
+          "lines": "68",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159362,7 +159588,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "112",
+          "lines": "116",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159394,7 +159620,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "112",
+          "lines": "116",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159426,7 +159652,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "34",
+          "lines": "38",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159465,7 +159691,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "46",
+          "lines": "50",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159504,7 +159730,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "60",
+          "lines": "64",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159536,7 +159762,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "112",
+          "lines": "116",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159568,7 +159794,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "112",
+          "lines": "116",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159600,7 +159826,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "112",
+          "lines": "116",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159627,12 +159853,50 @@
     {
       "blockedBy": [],
       "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Standard DOM Selection/Range, contenteditable and ordinary Text-node selection.",
+          "path": "packages/dom/src/document.ts",
+          "proves": "The exported type describes the exact active text-control selection adapter without a second range store.",
+          "repository": "renderer",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "symbol": "TextControlSelectionTarget",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Standard DOM Selection/Range and multi-range semantics.",
+          "path": "packages/dom/test/text-selection.test.ts",
+          "proves": "Exact target, offsets, direction, collapsed state, text and immutable snapshots.",
+          "repository": "renderer",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "symbol": "active text-control selection snapshot",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom.export-paths.root.symbols.textcontrolselectiontarget",
+      "lastVerified": {
+        "date": "2026-08-31",
+        "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
       "conformance": "unknown",
       "consumers": [],
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "83",
+          "lines": "87",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159664,7 +159928,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "83",
+          "lines": "87",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159760,7 +160024,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "64",
+          "lines": "68",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -160274,7 +160538,7 @@
           "path": "packages/dom/src/state-change.ts",
           "proves": "The public discriminated state record carries exact Select identity and open old/new values.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "SelectPickerStateChange",
           "type": "implementation"
         },
@@ -160283,7 +160547,7 @@
           "path": "packages/dom/test/select-picker.test.ts",
           "proves": "Open, owner transfer, close, blur and removal publish observable state through the Document channel.",
           "repository": "renderer",
-          "revision": "0baaca60804990dc731fbc880515614ee89901c2",
+          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
           "symbol": "select picker state records",
           "type": "unit-test"
         }
@@ -160291,7 +160555,7 @@
       "id": "platform.at-zavx0z-dom.export-paths.state-change.symbols.selectpickerstatechange",
       "lastVerified": {
         "date": "2026-08-31",
-        "revision": "0baaca60804990dc731fbc880515614ee89901c2"
+        "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3"
       },
       "limitations": [],
       "owner": {
