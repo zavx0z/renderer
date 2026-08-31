@@ -527,59 +527,6 @@
     },
     {
       "schemaVersion": 1,
-      "id": "gap.css.named-color-transport",
-      "capability": "css.properties.color",
-      "reportedBy": {
-        "repository": "renderer",
-        "package": "@zavx0z/renderer-webgpu",
-        "subject": "resolved display color transport",
-        "scenario": "color:red reaches retained backend"
-      },
-      "expected": {
-        "reference": "CSS Color plus resolved display-list ABI",
-        "behavior": "Any CPU-admitted resolved color is either normalized to the backend ABI or rejected before a frame is emitted."
-      },
-      "actual": {
-        "behavior": "CPU emits the named color red; backend fails closed with Unsupported resolved display color: red."
-      , "evidence": [
-          {
-            "type": "implementation",
-            "repository": "renderer",
-            "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-            "path": "packages/core/src/css.ts",
-            "symbol": "resolvedColor",
-            "proves": "CPU can retain a named color string.",
-            "doesNotProve": "Backend transport."
-          },
-          {
-            "type": "negative-test",
-            "repository": "renderer",
-            "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-            "path": "packages/webgpu/src/webgpu-backend.ts",
-            "symbol": "parseResolvedColor",
-            "proves": "Backend accepts only transparent, hex and rgb/rgba and rejects red.",
-            "doesNotProve": "The chosen normalization owner."
-          }
-        ]
-      },
-      "minimalReproduction": {
-        "source": "Render <div style=\"background:red\"> through DOM, CPU Renderer and WebGPU backend.",
-        "test": "Assert the pipeline normalizes or rejects at the CSS stage, never after emitting a supposedly valid frame."
-      },
-      "suspectedOwner": {
-        "repository": "renderer",
-        "package": "@zavx0z/renderer",
-        "stage": "computed-color"
-      },
-      "severity": "P2",
-      "dependencies": [],
-      "forbiddenLocalWorkarounds": [
-        "Per-component color normalization",
-        "Silent backend fallback color"
-      ]
-    },
-    {
-      "schemaVersion": 1,
       "id": "gap.css.linked-author-import",
       "capability": "css.at-rules.at-import",
       "reportedBy": {

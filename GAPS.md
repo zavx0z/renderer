@@ -160,18 +160,6 @@
 - Dependencies: none
 - Forbidden local workarounds: Regex flattening in a component or Storybook consumer; Silently dropping nested pseudo rules
 
-### P2 — gap.css.named-color-transport
-
-- Capability: `css.properties.color`
-- Reported by: renderer/@zavx0z/renderer-webgpu/resolved display color transport — color:red reaches retained backend
-- Expected: Any CPU-admitted resolved color is either normalized to the backend ABI or rejected before a frame is emitted.
-- Actual: CPU emits the named color red; backend fails closed with Unsupported resolved display color: red.
-- Owner: renderer/@zavx0z/renderer/computed-color
-- Minimal source: Render <div style="background:red"> through DOM, CPU Renderer and WebGPU backend.
-- Recommended conformance test: Assert the pipeline normalizes or rejects at the CSS stage, never after emitting a supposedly valid frame.
-- Dependencies: none
-- Forbidden local workarounds: Per-component color normalization; Silent backend fallback color
-
 ### P3 — gap.css.theme-math-functions
 
 - Capability: `css.functions.clamp-function`
@@ -1767,11 +1755,11 @@
 | P3 | `css.properties.aspect-ratio` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.backdrop-filter` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.backface-visibility` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
-| P3 | `css.properties.background` | partial | @zavx0z/renderer/cpu | 0 | CPU style can retain arbitrary/named colors, while the WebGPU transport accepts only transparent, hex, and rgb/rgba forms; unsupported resolved colors fail closed. |
+| P3 | `css.properties.background` | partial | @zavx0z/renderer/cpu | 0 | The computed/display transport is bounded to currentColor, transparent, hex, legacy comma and modern space/slash rgb()/rgba(), plus the sixteen basic named colors normalized to hex. Direct malformed colors are discarded before cascade priority and malformed variable substitutions use invalid-at-computed-value-time inherited/initial behavior. Extended named colors, system colors, other color functions/spaces, relative colors, interpolation and color management remain unsupported. |
 | P3 | `css.properties.background-attachment` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.background-blend-mode` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.background-clip` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
-| P3 | `css.properties.background-color` | partial | @zavx0z/renderer/cpu | 0 | CPU style can retain arbitrary/named colors, while the WebGPU transport accepts only transparent, hex, and rgb/rgba forms; unsupported resolved colors fail closed. |
+| P3 | `css.properties.background-color` | partial | @zavx0z/renderer/cpu | 0 | The computed/display transport is bounded to currentColor, transparent, hex, legacy comma and modern space/slash rgb()/rgba(), plus the sixteen basic named colors normalized to hex. Direct malformed colors are discarded before cascade priority and malformed variable substitutions use invalid-at-computed-value-time inherited/initial behavior. Extended named colors, system colors, other color functions/spaces, relative colors, interpolation and color management remain unsupported. |
 | P3 | `css.properties.background-image` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.background-origin` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.background-position` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
@@ -1818,7 +1806,7 @@
 | P3 | `css.properties.border-block-width` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.border-bottom` | partial | @zavx0z/renderer/cpu | 0 | Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed. |
 | P3 | `css.properties.border-bottom-clip` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
-| P3 | `css.properties.border-bottom-color` | partial | @zavx0z/renderer/cpu | 0 | Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed. |
+| P3 | `css.properties.border-bottom-color` | partial | @zavx0z/renderer/cpu | 0 | The computed/display transport is bounded to currentColor, transparent, hex, legacy comma and modern space/slash rgb()/rgba(), plus the sixteen basic named colors normalized to hex. Direct malformed colors are discarded before cascade priority and malformed variable substitutions use invalid-at-computed-value-time inherited/initial behavior. Extended named colors, system colors, other color functions/spaces, relative colors, interpolation and color management remain unsupported. |
 | P3 | `css.properties.border-bottom-left-radius` | partial | @zavx0z/renderer/cpu | 0 | Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed. |
 | P3 | `css.properties.border-bottom-radius` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.border-bottom-right-radius` | partial | @zavx0z/renderer/cpu | 0 | Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed. |
@@ -1827,7 +1815,7 @@
 | P3 | `css.properties.border-boundary` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.border-clip` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.border-collapse` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
-| P3 | `css.properties.border-color` | partial | @zavx0z/renderer/cpu | 0 | CPU style can retain arbitrary/named colors, while the WebGPU transport accepts only transparent, hex, and rgb/rgba forms; unsupported resolved colors fail closed. |
+| P3 | `css.properties.border-color` | partial | @zavx0z/renderer/cpu | 0 | The computed/display transport is bounded to currentColor, transparent, hex, legacy comma and modern space/slash rgb()/rgba(), plus the sixteen basic named colors normalized to hex. Direct malformed colors are discarded before cascade priority and malformed variable substitutions use invalid-at-computed-value-time inherited/initial behavior. Extended named colors, system colors, other color functions/spaces, relative colors, interpolation and color management remain unsupported. |
 | P3 | `css.properties.border-end-end-radius` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.border-end-start-radius` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.border-image` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
@@ -1855,7 +1843,7 @@
 | P3 | `css.properties.border-inline-width` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.border-left` | partial | @zavx0z/renderer/cpu | 0 | Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed. |
 | P3 | `css.properties.border-left-clip` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
-| P3 | `css.properties.border-left-color` | partial | @zavx0z/renderer/cpu | 0 | Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed. |
+| P3 | `css.properties.border-left-color` | partial | @zavx0z/renderer/cpu | 0 | The computed/display transport is bounded to currentColor, transparent, hex, legacy comma and modern space/slash rgb()/rgba(), plus the sixteen basic named colors normalized to hex. Direct malformed colors are discarded before cascade priority and malformed variable substitutions use invalid-at-computed-value-time inherited/initial behavior. Extended named colors, system colors, other color functions/spaces, relative colors, interpolation and color management remain unsupported. |
 | P3 | `css.properties.border-left-radius` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.border-left-style` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.border-left-width` | partial | @zavx0z/renderer/cpu | 0 | Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed. |
@@ -1863,7 +1851,7 @@
 | P3 | `css.properties.border-radius` | partial | @zavx0z/renderer/cpu | 0 | Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed. |
 | P3 | `css.properties.border-right` | partial | @zavx0z/renderer/cpu | 0 | Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed. |
 | P3 | `css.properties.border-right-clip` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
-| P3 | `css.properties.border-right-color` | partial | @zavx0z/renderer/cpu | 0 | Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed. |
+| P3 | `css.properties.border-right-color` | partial | @zavx0z/renderer/cpu | 0 | The computed/display transport is bounded to currentColor, transparent, hex, legacy comma and modern space/slash rgb()/rgba(), plus the sixteen basic named colors normalized to hex. Direct malformed colors are discarded before cascade priority and malformed variable substitutions use invalid-at-computed-value-time inherited/initial behavior. Extended named colors, system colors, other color functions/spaces, relative colors, interpolation and color management remain unsupported. |
 | P3 | `css.properties.border-right-radius` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.border-right-style` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.border-right-width` | partial | @zavx0z/renderer/cpu | 0 | Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed. |
@@ -1874,7 +1862,7 @@
 | P3 | `css.properties.border-style` | partial | @zavx0z/renderer/cpu | 0 | Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed. |
 | P3 | `css.properties.border-top` | partial | @zavx0z/renderer/cpu | 0 | Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed. |
 | P3 | `css.properties.border-top-clip` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
-| P3 | `css.properties.border-top-color` | partial | @zavx0z/renderer/cpu | 0 | Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed. |
+| P3 | `css.properties.border-top-color` | partial | @zavx0z/renderer/cpu | 0 | The computed/display transport is bounded to currentColor, transparent, hex, legacy comma and modern space/slash rgb()/rgba(), plus the sixteen basic named colors normalized to hex. Direct malformed colors are discarded before cascade priority and malformed variable substitutions use invalid-at-computed-value-time inherited/initial behavior. Extended named colors, system colors, other color functions/spaces, relative colors, interpolation and color management remain unsupported. |
 | P3 | `css.properties.border-top-left-radius` | partial | @zavx0z/renderer/cpu | 0 | Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed. |
 | P3 | `css.properties.border-top-radius` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.border-top-right-radius` | partial | @zavx0z/renderer/cpu | 0 | Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed. |
@@ -1903,7 +1891,7 @@
 | P3 | `css.properties.clip` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.clip-path` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.clip-rule` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
-| P2 | `css.properties.color` | partial | @zavx0z/renderer/cpu | 0 | CPU style can retain arbitrary/named colors, while the WebGPU transport accepts only transparent, hex, and rgb/rgba forms; unsupported resolved colors fail closed. |
+| P3 | `css.properties.color` | partial | @zavx0z/renderer/cpu | 0 | The computed/display transport is bounded to currentColor, transparent, hex, legacy comma and modern space/slash rgb()/rgba(), plus the sixteen basic named colors normalized to hex. Direct malformed colors are discarded before cascade priority and malformed variable substitutions use invalid-at-computed-value-time inherited/initial behavior. Extended named colors, system colors, other color functions/spaces, relative colors, interpolation and color management remain unsupported. |
 | P3 | `css.properties.color-adjust` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.color-interpolation` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.color-interpolation-filters` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |

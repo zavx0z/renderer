@@ -42,6 +42,10 @@ const recoveryVerification = {
   revision: "258176181fe98b604935c38d71aaca5b93aaf4b3",
   date: "2026-08-31",
 } as const
+const computedColorVerification = {
+  revision: "cb601358332ac1b74ad64ccaf18405153b48d269",
+  date: "2026-08-31",
+} as const
 const engineFontVerification = {
   revision: "31164f46bb3d5dd9a7df018203f0e13a8a383dc5",
   date: "2026-08-31",
@@ -532,6 +536,37 @@ function classifyCss(entry: CapabilityInventoryEntry): Classification {
   const defaultStages = cssDefaultStages()
   const external = externalEvidence(entry)
   if (entry.kind === "property") {
+    if (computedColorPropertyIds.has(entry.id)) {
+      return {
+        status: "partial",
+        conformance: "adapted",
+        limitations: [
+          "The computed/display transport is bounded to currentColor, transparent, hex, legacy comma and modern space/slash rgb()/rgba(), plus the sixteen basic named colors normalized to hex. Direct malformed colors are discarded before cascade priority and malformed variable substitutions use invalid-at-computed-value-time inherited/initial behavior. Extended named colors, system colors, other color functions/spaces, relative colors, interpolation and color management remain unsupported.",
+        ],
+        evidence: [
+          external,
+          {
+            ...implementation("renderer", "packages/core/src/css.ts", "normalizeSpecifiedColor/resolvedColor", undefined, "The computed style owner validates and canonicalizes every admitted text, background and border color before display projection.", "The unsupported CSS Color grammar, interpolation, color management or native browser equivalence."),
+            revision: computedColorVerification.revision,
+          },
+          {
+            ...test("renderer", "packages/core/test/computed-color.test.ts", "computed color transport", "Basic named-color normalization, direct invalid-declaration fallback and variable invalid-at-computed-value-time behavior are observable in computed styles and display items.", "The unsupported CSS Color grammar or native browser equivalence."),
+            revision: computedColorVerification.revision,
+          },
+          {
+            type: "integration-test",
+            repository: "renderer",
+            revision: computedColorVerification.revision,
+            path: "packages/webgpu/test/webgpu-backend.test.ts",
+            symbol: "receives only canonical colors from the computed CSS pipeline",
+            proves: "An exact semantic Document and CPU Renderer normalize a named color, omit a malformed variable-derived color and apply the resulting frame through the retained WebGPU backend without a late color failure.",
+            doesNotProve: "Live browser pixels, the unsupported CSS Color grammar or consumer-specific visual acceptance.",
+          },
+        ],
+        stages: cssPropertyStages(entry.name),
+        lastVerified: computedColorVerification,
+      }
+    }
     if (entry.id === "css.properties.align-content") {
       return {
         status: "partial",
@@ -1665,7 +1700,7 @@ function cssPropertyStages(name: string): Record<string, CapabilityStatus> {
 }
 
 function cssPropertyLimitation(name: string): string {
-  if (["color", "background", "background-color", "border-color"].includes(name)) return "CPU style can retain arbitrary/named colors, while the WebGPU transport accepts only transparent, hex, and rgb/rgba forms; unsupported resolved colors fail closed."
+  if (["color", "background", "background-color", "border-color"].includes(name)) return "Only the bounded canonical computed-color transport is implemented; unsupported CSS Color forms are discarded before display projection."
   if (name === "box-shadow") return "Only one bounded outer analytical shadow is parsed and transported."
   if (name.includes("border") || name.includes("radius")) return "Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed."
   if (name.startsWith("flex") || name === "align-items" || name === "align-content" || name === "justify-content") return "Balance, reverse main axes, flex-flow, order, align-self, percentage gaps, gap decorations/rules, writing modes, and complete intrinsic multi-line Flexbox sizing remain unsupported."
@@ -1832,6 +1867,17 @@ const supportedCssProperties = new Set([
   "border", "border-top", "border-right", "border-bottom", "border-left", "border-width", "border-top-width", "border-right-width", "border-bottom-width", "border-left-width",
   "border-color", "border-top-color", "border-right-color", "border-bottom-color", "border-left-color", "border-style", "border-radius", "border-top-left-radius", "border-top-right-radius", "border-bottom-right-radius", "border-bottom-left-radius",
   "background", "background-color", "color", "font-size", "line-height", "letter-spacing", "opacity", "overflow", "overflow-x", "overflow-y", "scrollbar-width", "object-fit", "text-align", "text-overflow", "white-space",
+])
+
+const computedColorPropertyIds = new Set([
+  "css.properties.background",
+  "css.properties.background-color",
+  "css.properties.color",
+  "css.properties.border-color",
+  "css.properties.border-top-color",
+  "css.properties.border-right-color",
+  "css.properties.border-bottom-color",
+  "css.properties.border-left-color",
 ])
 
 const layoutProperties = new Set([...supportedCssProperties].filter((name) => !["background", "background-color", "color", "opacity", "box-shadow", "border-color", "border-top-color", "border-right-color", "border-bottom-color", "border-left-color"].includes(name)))

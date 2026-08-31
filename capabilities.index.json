@@ -32,7 +32,7 @@
           "path": "cosmos/internal/visual/main/index.ts",
           "proves": "Attach the Cosmos main root from the shared Experience Document to a stable world plane with the intended stylesheet and camera gestures.",
           "repository": "metafor",
-          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899+dirty",
+          "revision": "7611415474fae233cd88abc8b1fc14746316333c",
           "symbol": "Cosmos display plane",
           "type": "consumer-usage"
         }
@@ -76,7 +76,7 @@
           "path": "packages/components/inspector.tsx",
           "proves": "Focused numeric field editing inside nested scrollable Inspector groups.",
           "repository": "ui",
-          "revision": "f3a4233c5a74fb411b210b1cd7c3b15429d8c6a3",
+          "revision": "b2d0ce5207c9ce2693ccd9dfa6a1f15ed5e5b812",
           "symbol": "Inspector numeric fields",
           "type": "consumer-usage"
         }
@@ -98,7 +98,7 @@
           "path": "packages/components/number-input.tsx",
           "proves": "Native typed number editing, focus, input/change, Escape rollback and selection through the exact semantic owner.",
           "repository": "ui",
-          "revision": "f3a4233c5a74fb411b210b1cd7c3b15429d8c6a3",
+          "revision": "b2d0ce5207c9ce2693ccd9dfa6a1f15ed5e5b812",
           "symbol": "NumberInput",
           "type": "consumer-usage"
         }
@@ -164,7 +164,7 @@
           "path": "cosmos/internal/visual/main/index.ts",
           "proves": "Own one semantic Document, Canvas, Engine Renderer and Space for the Cosmos main plane and dock HUD projection.",
           "repository": "metafor",
-          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899+dirty",
+          "revision": "7611415474fae233cd88abc8b1fc14746316333c",
           "symbol": "Cosmos presentation host",
           "type": "consumer-usage"
         }
@@ -186,7 +186,7 @@
           "path": "cosmos/internal/visual/main/index.ts",
           "proves": "Attach the dock sibling root from the same Experience Document to a camera-locked overlay using the host stylesheet realm.",
           "repository": "metafor",
-          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899+dirty",
+          "revision": "7611415474fae233cd88abc8b1fc14746316333c",
           "symbol": "Cosmos display dock",
           "type": "consumer-usage"
         }
@@ -208,7 +208,7 @@
           "path": "quantum/bulk/dom/overlay-runtime.ts",
           "proves": "Compose the HUD through the shared browser overlay owner rather than reimplementing pointer mapping, capture, hit and lifecycle.",
           "repository": "metafor",
-          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899+dirty",
+          "revision": "7611415474fae233cd88abc8b1fc14746316333c",
           "symbol": "Bulk DOM overlay",
           "type": "consumer-usage"
         }
@@ -296,7 +296,7 @@
           "path": "packages/components/code-editor.tsx",
           "proves": "Two-axis scrolling with clipping and stable retained line/token identity.",
           "repository": "ui",
-          "revision": "f3a4233c5a74fb411b210b1cd7c3b15429d8c6a3",
+          "revision": "b2d0ce5207c9ce2693ccd9dfa6a1f15ed5e5b812",
           "symbol": "CodeEditor",
           "type": "consumer-usage"
         }
@@ -340,7 +340,7 @@
           "path": "packages/components/code-editor.tsx",
           "proves": "Preserve source whitespace and prevent wrapping for read-only code lines.",
           "repository": "ui",
-          "revision": "f3a4233c5a74fb411b210b1cd7c3b15429d8c6a3",
+          "revision": "b2d0ce5207c9ce2693ccd9dfa6a1f15ed5e5b812",
           "symbol": "CodeEditor",
           "type": "consumer-usage"
         }
@@ -428,7 +428,7 @@
           "path": "packages/components/number-input.tsx",
           "proves": "A scrub gesture continues outside the control until pointerup/cancel without component-owned capture emulation.",
           "repository": "ui",
-          "revision": "f3a4233c5a74fb411b210b1cd7c3b15429d8c6a3",
+          "revision": "b2d0ce5207c9ce2693ccd9dfa6a1f15ed5e5b812",
           "symbol": "NumberInput scrub",
           "type": "consumer-usage"
         }
@@ -494,7 +494,7 @@
           "path": "packages/components/color-input.tsx",
           "proves": "Stable controlled RGBA channels with range input/change semantics and analytical color paint.",
           "repository": "ui",
-          "revision": "f3a4233c5a74fb411b210b1cd7c3b15429d8c6a3",
+          "revision": "b2d0ce5207c9ce2693ccd9dfa6a1f15ed5e5b812",
           "symbol": "ColorInput",
           "type": "consumer-usage"
         }
@@ -516,7 +516,7 @@
           "path": "packages/components/color-input.tsx",
           "proves": "An anchored top-layer color picker with clipping, light dismiss, Escape and focus restoration instead of an inline hidden panel.",
           "repository": "ui",
-          "revision": "f3a4233c5a74fb411b210b1cd7c3b15429d8c6a3",
+          "revision": "b2d0ce5207c9ce2693ccd9dfa6a1f15ed5e5b812",
           "symbol": "ColorInput",
           "type": "consumer-usage"
         }
@@ -538,7 +538,7 @@
           "path": "packages/components/enum-input.tsx",
           "proves": "Open a collapsed select picker, navigate options by keyboard, activate one option and dispatch input/change.",
           "repository": "ui",
-          "revision": "f3a4233c5a74fb411b210b1cd7c3b15429d8c6a3",
+          "revision": "b2d0ce5207c9ce2693ccd9dfa6a1f15ed5e5b812",
           "symbol": "EnumInput",
           "type": "consumer-usage"
         }
@@ -670,7 +670,7 @@
           "path": "packages/components/button.tsx",
           "proves": "Adopt the exact compiled Button stylesheet once per Document and make it visible to every same-Document projection without manual buttonCss or consumer styleSheets wiring.",
           "repository": "ui",
-          "revision": "f3a4233c5a74fb411b210b1cd7c3b15429d8c6a3",
+          "revision": "b2d0ce5207c9ce2693ccd9dfa6a1f15ed5e5b812",
           "symbol": "Button automatic stylesheet adoption",
           "type": "consumer-usage"
         }
@@ -802,7 +802,7 @@
           "path": "cosmos/internal/visual/main/index.ts",
           "proves": "Compile linked .tsx component exports and remove stale imperative createButton usage without restoring legacy APIs.",
           "repository": "metafor",
-          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899+dirty",
+          "revision": "7611415474fae233cd88abc8b1fc14746316333c",
           "symbol": "Compiled dock migration",
           "type": "consumer-usage"
         }
@@ -824,7 +824,7 @@
           "path": "packages/components/button.tsx",
           "proves": "Extract Button owner CSS, bounded attribute/native pseudo selectors and caller composition from the global css intrinsic without runtime object authoring or scanning.",
           "repository": "ui",
-          "revision": "f3a4233c5a74fb411b210b1cd7c3b15429d8c6a3",
+          "revision": "b2d0ce5207c9ce2693ccd9dfa6a1f15ed5e5b812",
           "symbol": "Button component-local styles",
           "type": "consumer-usage"
         }
@@ -846,7 +846,7 @@
           "path": "create-metafor/dsl/matter.ts",
           "proves": "Parse the bounded meta/log/conditional/map source contract without treating ordinary HTML as executable DOM UI.",
           "repository": "metafor",
-          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899+dirty",
+          "revision": "7611415474fae233cd88abc8b1fc14746316333c",
           "symbol": "Matter source parser",
           "type": "consumer-usage"
         }
@@ -1381,59 +1381,6 @@
         "package": "@zavx0z/renderer",
         "repository": "renderer",
         "stage": "display-list"
-      }
-    },
-    {
-      "actual": {
-        "behavior": "CPU emits the named color red; backend fails closed with Unsupported resolved display color: red.",
-        "evidence": [
-          {
-            "doesNotProve": "Backend transport.",
-            "path": "packages/core/src/css.ts",
-            "proves": "CPU can retain a named color string.",
-            "repository": "renderer",
-            "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-            "symbol": "resolvedColor",
-            "type": "implementation"
-          },
-          {
-            "doesNotProve": "The chosen normalization owner.",
-            "path": "packages/webgpu/src/webgpu-backend.ts",
-            "proves": "Backend accepts only transparent, hex and rgb/rgba and rejects red.",
-            "repository": "renderer",
-            "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-            "symbol": "parseResolvedColor",
-            "type": "negative-test"
-          }
-        ]
-      },
-      "capability": "css.properties.color",
-      "dependencies": [],
-      "expected": {
-        "behavior": "Any CPU-admitted resolved color is either normalized to the backend ABI or rejected before a frame is emitted.",
-        "reference": "CSS Color plus resolved display-list ABI"
-      },
-      "forbiddenLocalWorkarounds": [
-        "Per-component color normalization",
-        "Silent backend fallback color"
-      ],
-      "id": "gap.css.named-color-transport",
-      "minimalReproduction": {
-        "source": "Render <div style=\"background:red\"> through DOM, CPU Renderer and WebGPU backend.",
-        "test": "Assert the pipeline normalizes or rejects at the CSS stage, never after emitting a supposedly valid frame."
-      },
-      "reportedBy": {
-        "package": "@zavx0z/renderer-webgpu",
-        "repository": "renderer",
-        "scenario": "color:red reaches retained backend",
-        "subject": "resolved display color transport"
-      },
-      "schemaVersion": 1,
-      "severity": "P2",
-      "suspectedOwner": {
-        "package": "@zavx0z/renderer",
-        "repository": "renderer",
-        "stage": "computed-color"
       }
     },
     {
@@ -102710,33 +102657,41 @@
           "type": "external-spec"
         },
         {
-          "doesNotProve": "The complete grammar/value space and all downstream stages.",
-          "lines": "280-738",
+          "doesNotProve": "The unsupported CSS Color grammar, interpolation, color management or native browser equivalence.",
           "path": "packages/core/src/css.ts",
-          "proves": "The bounded parser/cascade/computed value stage for this property.",
+          "proves": "The computed style owner validates and canonicalizes every admitted text, background and border color before display projection.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "background",
+          "revision": "cb601358332ac1b74ad64ccaf18405153b48d269",
+          "symbol": "normalizeSpecifiedColor/resolvedColor",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Every standard value and combination.",
-          "path": "packages/core/test/renderer.test.ts",
-          "proves": "Observable bounded layout/paint behavior.",
+          "doesNotProve": "The unsupported CSS Color grammar or native browser equivalence.",
+          "path": "packages/core/test/computed-color.test.ts",
+          "proves": "Basic named-color normalization, direct invalid-declaration fallback and variable invalid-at-computed-value-time behavior are observable in computed styles and display items.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "background",
+          "revision": "cb601358332ac1b74ad64ccaf18405153b48d269",
+          "symbol": "computed color transport",
           "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Live browser pixels, the unsupported CSS Color grammar or consumer-specific visual acceptance.",
+          "path": "packages/webgpu/test/webgpu-backend.test.ts",
+          "proves": "An exact semantic Document and CPU Renderer normalize a named color, omit a malformed variable-derived color and apply the resulting frame through the retained WebGPU backend without a late color failure.",
+          "repository": "renderer",
+          "revision": "cb601358332ac1b74ad64ccaf18405153b48d269",
+          "symbol": "receives only canonical colors from the computed CSS pipeline",
+          "type": "integration-test"
         }
       ],
       "id": "css.properties.background",
       "kind": "property",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "cb601358332ac1b74ad64ccaf18405153b48d269"
       },
       "limitations": [
-        "CPU style can retain arbitrary/named colors, while the WebGPU transport accepts only transparent, hex, and rgb/rgba forms; unsupported resolved colors fail closed."
+        "The computed/display transport is bounded to currentColor, transparent, hex, legacy comma and modern space/slash rgb()/rgba(), plus the sixteen basic named colors normalized to hex. Direct malformed colors are discarded before cascade priority and malformed variable substitutions use invalid-at-computed-value-time inherited/initial behavior. Extended named colors, system colors, other color functions/spaces, relative colors, interpolation and color management remain unsupported."
       ],
       "metadata": {
         "animationType": "see individual properties",
@@ -103052,33 +103007,41 @@
           "type": "external-spec"
         },
         {
-          "doesNotProve": "The complete grammar/value space and all downstream stages.",
-          "lines": "280-738",
+          "doesNotProve": "The unsupported CSS Color grammar, interpolation, color management or native browser equivalence.",
           "path": "packages/core/src/css.ts",
-          "proves": "The bounded parser/cascade/computed value stage for this property.",
+          "proves": "The computed style owner validates and canonicalizes every admitted text, background and border color before display projection.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "background-color",
+          "revision": "cb601358332ac1b74ad64ccaf18405153b48d269",
+          "symbol": "normalizeSpecifiedColor/resolvedColor",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Every standard value and combination.",
-          "path": "packages/core/test/renderer.test.ts",
-          "proves": "Observable bounded layout/paint behavior.",
+          "doesNotProve": "The unsupported CSS Color grammar or native browser equivalence.",
+          "path": "packages/core/test/computed-color.test.ts",
+          "proves": "Basic named-color normalization, direct invalid-declaration fallback and variable invalid-at-computed-value-time behavior are observable in computed styles and display items.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "background-color",
+          "revision": "cb601358332ac1b74ad64ccaf18405153b48d269",
+          "symbol": "computed color transport",
           "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Live browser pixels, the unsupported CSS Color grammar or consumer-specific visual acceptance.",
+          "path": "packages/webgpu/test/webgpu-backend.test.ts",
+          "proves": "An exact semantic Document and CPU Renderer normalize a named color, omit a malformed variable-derived color and apply the resulting frame through the retained WebGPU backend without a late color failure.",
+          "repository": "renderer",
+          "revision": "cb601358332ac1b74ad64ccaf18405153b48d269",
+          "symbol": "receives only canonical colors from the computed CSS pipeline",
+          "type": "integration-test"
         }
       ],
       "id": "css.properties.background-color",
       "kind": "property",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "cb601358332ac1b74ad64ccaf18405153b48d269"
       },
       "limitations": [
-        "CPU style can retain arbitrary/named colors, while the WebGPU transport accepts only transparent, hex, and rgb/rgba forms; unsupported resolved colors fail closed."
+        "The computed/display transport is bounded to currentColor, transparent, hex, legacy comma and modern space/slash rgb()/rgba(), plus the sixteen basic named colors normalized to hex. Direct malformed colors are discarded before cascade priority and malformed variable substitutions use invalid-at-computed-value-time inherited/initial behavior. Extended named colors, system colors, other color functions/spaces, relative colors, interpolation and color management remain unsupported."
       ],
       "metadata": {
         "animationType": "by computed value",
@@ -106926,33 +106889,41 @@
           "type": "external-spec"
         },
         {
-          "doesNotProve": "The complete grammar/value space and all downstream stages.",
-          "lines": "280-738",
+          "doesNotProve": "The unsupported CSS Color grammar, interpolation, color management or native browser equivalence.",
           "path": "packages/core/src/css.ts",
-          "proves": "The bounded parser/cascade/computed value stage for this property.",
+          "proves": "The computed style owner validates and canonicalizes every admitted text, background and border color before display projection.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "border-bottom-color",
+          "revision": "cb601358332ac1b74ad64ccaf18405153b48d269",
+          "symbol": "normalizeSpecifiedColor/resolvedColor",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Every standard value and combination.",
-          "path": "packages/core/test/renderer.test.ts",
-          "proves": "Observable bounded layout/paint behavior.",
+          "doesNotProve": "The unsupported CSS Color grammar or native browser equivalence.",
+          "path": "packages/core/test/computed-color.test.ts",
+          "proves": "Basic named-color normalization, direct invalid-declaration fallback and variable invalid-at-computed-value-time behavior are observable in computed styles and display items.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "border-bottom-color",
+          "revision": "cb601358332ac1b74ad64ccaf18405153b48d269",
+          "symbol": "computed color transport",
           "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Live browser pixels, the unsupported CSS Color grammar or consumer-specific visual acceptance.",
+          "path": "packages/webgpu/test/webgpu-backend.test.ts",
+          "proves": "An exact semantic Document and CPU Renderer normalize a named color, omit a malformed variable-derived color and apply the resulting frame through the retained WebGPU backend without a late color failure.",
+          "repository": "renderer",
+          "revision": "cb601358332ac1b74ad64ccaf18405153b48d269",
+          "symbol": "receives only canonical colors from the computed CSS pipeline",
+          "type": "integration-test"
         }
       ],
       "id": "css.properties.border-bottom-color",
       "kind": "property",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "cb601358332ac1b74ad64ccaf18405153b48d269"
       },
       "limitations": [
-        "Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed."
+        "The computed/display transport is bounded to currentColor, transparent, hex, legacy comma and modern space/slash rgb()/rgba(), plus the sixteen basic named colors normalized to hex. Direct malformed colors are discarded before cascade priority and malformed variable substitutions use invalid-at-computed-value-time inherited/initial behavior. Extended named colors, system colors, other color functions/spaces, relative colors, interpolation and color management remain unsupported."
       ],
       "metadata": {
         "animationType": "see prose",
@@ -107697,33 +107668,41 @@
           "type": "external-spec"
         },
         {
-          "doesNotProve": "The complete grammar/value space and all downstream stages.",
-          "lines": "280-738",
+          "doesNotProve": "The unsupported CSS Color grammar, interpolation, color management or native browser equivalence.",
           "path": "packages/core/src/css.ts",
-          "proves": "The bounded parser/cascade/computed value stage for this property.",
+          "proves": "The computed style owner validates and canonicalizes every admitted text, background and border color before display projection.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "border-color",
+          "revision": "cb601358332ac1b74ad64ccaf18405153b48d269",
+          "symbol": "normalizeSpecifiedColor/resolvedColor",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Every standard value and combination.",
-          "path": "packages/core/test/renderer.test.ts",
-          "proves": "Observable bounded layout/paint behavior.",
+          "doesNotProve": "The unsupported CSS Color grammar or native browser equivalence.",
+          "path": "packages/core/test/computed-color.test.ts",
+          "proves": "Basic named-color normalization, direct invalid-declaration fallback and variable invalid-at-computed-value-time behavior are observable in computed styles and display items.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "border-color",
+          "revision": "cb601358332ac1b74ad64ccaf18405153b48d269",
+          "symbol": "computed color transport",
           "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Live browser pixels, the unsupported CSS Color grammar or consumer-specific visual acceptance.",
+          "path": "packages/webgpu/test/webgpu-backend.test.ts",
+          "proves": "An exact semantic Document and CPU Renderer normalize a named color, omit a malformed variable-derived color and apply the resulting frame through the retained WebGPU backend without a late color failure.",
+          "repository": "renderer",
+          "revision": "cb601358332ac1b74ad64ccaf18405153b48d269",
+          "symbol": "receives only canonical colors from the computed CSS pipeline",
+          "type": "integration-test"
         }
       ],
       "id": "css.properties.border-color",
       "kind": "property",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "cb601358332ac1b74ad64ccaf18405153b48d269"
       },
       "limitations": [
-        "CPU style can retain arbitrary/named colors, while the WebGPU transport accepts only transparent, hex, and rgb/rgba forms; unsupported resolved colors fail closed."
+        "The computed/display transport is bounded to currentColor, transparent, hex, legacy comma and modern space/slash rgb()/rgba(), plus the sixteen basic named colors normalized to hex. Direct malformed colors are discarded before cascade priority and malformed variable substitutions use invalid-at-computed-value-time inherited/initial behavior. Extended named colors, system colors, other color functions/spaces, relative colors, interpolation and color management remain unsupported."
       ],
       "metadata": {
         "animationType": "see individual properties",
@@ -110022,33 +110001,41 @@
           "type": "external-spec"
         },
         {
-          "doesNotProve": "The complete grammar/value space and all downstream stages.",
-          "lines": "280-738",
+          "doesNotProve": "The unsupported CSS Color grammar, interpolation, color management or native browser equivalence.",
           "path": "packages/core/src/css.ts",
-          "proves": "The bounded parser/cascade/computed value stage for this property.",
+          "proves": "The computed style owner validates and canonicalizes every admitted text, background and border color before display projection.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "border-left-color",
+          "revision": "cb601358332ac1b74ad64ccaf18405153b48d269",
+          "symbol": "normalizeSpecifiedColor/resolvedColor",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Every standard value and combination.",
-          "path": "packages/core/test/renderer.test.ts",
-          "proves": "Observable bounded layout/paint behavior.",
+          "doesNotProve": "The unsupported CSS Color grammar or native browser equivalence.",
+          "path": "packages/core/test/computed-color.test.ts",
+          "proves": "Basic named-color normalization, direct invalid-declaration fallback and variable invalid-at-computed-value-time behavior are observable in computed styles and display items.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "border-left-color",
+          "revision": "cb601358332ac1b74ad64ccaf18405153b48d269",
+          "symbol": "computed color transport",
           "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Live browser pixels, the unsupported CSS Color grammar or consumer-specific visual acceptance.",
+          "path": "packages/webgpu/test/webgpu-backend.test.ts",
+          "proves": "An exact semantic Document and CPU Renderer normalize a named color, omit a malformed variable-derived color and apply the resulting frame through the retained WebGPU backend without a late color failure.",
+          "repository": "renderer",
+          "revision": "cb601358332ac1b74ad64ccaf18405153b48d269",
+          "symbol": "receives only canonical colors from the computed CSS pipeline",
+          "type": "integration-test"
         }
       ],
       "id": "css.properties.border-left-color",
       "kind": "property",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "cb601358332ac1b74ad64ccaf18405153b48d269"
       },
       "limitations": [
-        "Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed."
+        "The computed/display transport is bounded to currentColor, transparent, hex, legacy comma and modern space/slash rgb()/rgba(), plus the sixteen basic named colors normalized to hex. Direct malformed colors are discarded before cascade priority and malformed variable substitutions use invalid-at-computed-value-time inherited/initial behavior. Extended named colors, system colors, other color functions/spaces, relative colors, interpolation and color management remain unsupported."
       ],
       "metadata": {
         "animationType": "see prose",
@@ -110717,33 +110704,41 @@
           "type": "external-spec"
         },
         {
-          "doesNotProve": "The complete grammar/value space and all downstream stages.",
-          "lines": "280-738",
+          "doesNotProve": "The unsupported CSS Color grammar, interpolation, color management or native browser equivalence.",
           "path": "packages/core/src/css.ts",
-          "proves": "The bounded parser/cascade/computed value stage for this property.",
+          "proves": "The computed style owner validates and canonicalizes every admitted text, background and border color before display projection.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "border-right-color",
+          "revision": "cb601358332ac1b74ad64ccaf18405153b48d269",
+          "symbol": "normalizeSpecifiedColor/resolvedColor",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Every standard value and combination.",
-          "path": "packages/core/test/renderer.test.ts",
-          "proves": "Observable bounded layout/paint behavior.",
+          "doesNotProve": "The unsupported CSS Color grammar or native browser equivalence.",
+          "path": "packages/core/test/computed-color.test.ts",
+          "proves": "Basic named-color normalization, direct invalid-declaration fallback and variable invalid-at-computed-value-time behavior are observable in computed styles and display items.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "border-right-color",
+          "revision": "cb601358332ac1b74ad64ccaf18405153b48d269",
+          "symbol": "computed color transport",
           "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Live browser pixels, the unsupported CSS Color grammar or consumer-specific visual acceptance.",
+          "path": "packages/webgpu/test/webgpu-backend.test.ts",
+          "proves": "An exact semantic Document and CPU Renderer normalize a named color, omit a malformed variable-derived color and apply the resulting frame through the retained WebGPU backend without a late color failure.",
+          "repository": "renderer",
+          "revision": "cb601358332ac1b74ad64ccaf18405153b48d269",
+          "symbol": "receives only canonical colors from the computed CSS pipeline",
+          "type": "integration-test"
         }
       ],
       "id": "css.properties.border-right-color",
       "kind": "property",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "cb601358332ac1b74ad64ccaf18405153b48d269"
       },
       "limitations": [
-        "Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed."
+        "The computed/display transport is bounded to currentColor, transparent, hex, legacy comma and modern space/slash rgb()/rgba(), plus the sixteen basic named colors normalized to hex. Direct malformed colors are discarded before cascade priority and malformed variable substitutions use invalid-at-computed-value-time inherited/initial behavior. Extended named colors, system colors, other color functions/spaces, relative colors, interpolation and color management remain unsupported."
       ],
       "metadata": {
         "animationType": "see prose",
@@ -111654,33 +111649,41 @@
           "type": "external-spec"
         },
         {
-          "doesNotProve": "The complete grammar/value space and all downstream stages.",
-          "lines": "280-738",
+          "doesNotProve": "The unsupported CSS Color grammar, interpolation, color management or native browser equivalence.",
           "path": "packages/core/src/css.ts",
-          "proves": "The bounded parser/cascade/computed value stage for this property.",
+          "proves": "The computed style owner validates and canonicalizes every admitted text, background and border color before display projection.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "border-top-color",
+          "revision": "cb601358332ac1b74ad64ccaf18405153b48d269",
+          "symbol": "normalizeSpecifiedColor/resolvedColor",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Every standard value and combination.",
-          "path": "packages/core/test/renderer.test.ts",
-          "proves": "Observable bounded layout/paint behavior.",
+          "doesNotProve": "The unsupported CSS Color grammar or native browser equivalence.",
+          "path": "packages/core/test/computed-color.test.ts",
+          "proves": "Basic named-color normalization, direct invalid-declaration fallback and variable invalid-at-computed-value-time behavior are observable in computed styles and display items.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "border-top-color",
+          "revision": "cb601358332ac1b74ad64ccaf18405153b48d269",
+          "symbol": "computed color transport",
           "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Live browser pixels, the unsupported CSS Color grammar or consumer-specific visual acceptance.",
+          "path": "packages/webgpu/test/webgpu-backend.test.ts",
+          "proves": "An exact semantic Document and CPU Renderer normalize a named color, omit a malformed variable-derived color and apply the resulting frame through the retained WebGPU backend without a late color failure.",
+          "repository": "renderer",
+          "revision": "cb601358332ac1b74ad64ccaf18405153b48d269",
+          "symbol": "receives only canonical colors from the computed CSS pipeline",
+          "type": "integration-test"
         }
       ],
       "id": "css.properties.border-top-color",
       "kind": "property",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "cb601358332ac1b74ad64ccaf18405153b48d269"
       },
       "limitations": [
-        "Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed."
+        "The computed/display transport is bounded to currentColor, transparent, hex, legacy comma and modern space/slash rgb()/rgba(), plus the sixteen basic named colors normalized to hex. Direct malformed colors are discarded before cascade priority and malformed variable substitutions use invalid-at-computed-value-time inherited/initial behavior. Extended named colors, system colors, other color functions/spaces, relative colors, interpolation and color management remain unsupported."
       ],
       "metadata": {
         "animationType": "see prose",
@@ -114075,33 +114078,41 @@
           "type": "external-spec"
         },
         {
-          "doesNotProve": "The complete grammar/value space and all downstream stages.",
-          "lines": "280-738",
+          "doesNotProve": "The unsupported CSS Color grammar, interpolation, color management or native browser equivalence.",
           "path": "packages/core/src/css.ts",
-          "proves": "The bounded parser/cascade/computed value stage for this property.",
+          "proves": "The computed style owner validates and canonicalizes every admitted text, background and border color before display projection.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "color",
+          "revision": "cb601358332ac1b74ad64ccaf18405153b48d269",
+          "symbol": "normalizeSpecifiedColor/resolvedColor",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Every standard value and combination.",
-          "path": "packages/core/test/renderer.test.ts",
-          "proves": "Observable bounded layout/paint behavior.",
+          "doesNotProve": "The unsupported CSS Color grammar or native browser equivalence.",
+          "path": "packages/core/test/computed-color.test.ts",
+          "proves": "Basic named-color normalization, direct invalid-declaration fallback and variable invalid-at-computed-value-time behavior are observable in computed styles and display items.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "color",
+          "revision": "cb601358332ac1b74ad64ccaf18405153b48d269",
+          "symbol": "computed color transport",
           "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Live browser pixels, the unsupported CSS Color grammar or consumer-specific visual acceptance.",
+          "path": "packages/webgpu/test/webgpu-backend.test.ts",
+          "proves": "An exact semantic Document and CPU Renderer normalize a named color, omit a malformed variable-derived color and apply the resulting frame through the retained WebGPU backend without a late color failure.",
+          "repository": "renderer",
+          "revision": "cb601358332ac1b74ad64ccaf18405153b48d269",
+          "symbol": "receives only canonical colors from the computed CSS pipeline",
+          "type": "integration-test"
         }
       ],
       "id": "css.properties.color",
       "kind": "property",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "cb601358332ac1b74ad64ccaf18405153b48d269"
       },
       "limitations": [
-        "CPU style can retain arbitrary/named colors, while the WebGPU transport accepts only transparent, hex, and rgb/rgba forms; unsupported resolved colors fail closed."
+        "The computed/display transport is bounded to currentColor, transparent, hex, legacy comma and modern space/slash rgb()/rgba(), plus the sixteen basic named colors normalized to hex. Direct malformed colors are discarded before cascade priority and malformed variable substitutions use invalid-at-computed-value-time inherited/initial behavior. Extended named colors, system colors, other color functions/spaces, relative colors, interpolation and color management remain unsupported."
       ],
       "metadata": {
         "animationType": "by computed value type",
@@ -523334,9 +523345,9 @@
     },
     {
       "branch": "main",
-      "dirty": true,
+      "dirty": false,
       "id": "metafor",
-      "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899"
+      "revision": "7611415474fae233cd88abc8b1fc14746316333c"
     },
     {
       "branch": "main",
@@ -523348,13 +523359,13 @@
       "branch": "main",
       "dirty": true,
       "id": "renderer",
-      "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3"
+      "revision": "cb601358332ac1b74ad64ccaf18405153b48d269"
     },
     {
       "branch": "main",
-      "dirty": true,
+      "dirty": false,
       "id": "storybook",
-      "revision": "35eb3779a8233d23c7426260162b10d1b1d92e16"
+      "revision": "1edd2ceee8c63bdac983493aa8dfdb84a7687805"
     },
     {
       "branch": "main",
@@ -523366,7 +523377,7 @@
       "branch": "main",
       "dirty": false,
       "id": "ui",
-      "revision": "f3a4233c5a74fb411b210b1cd7c3b15429d8c6a3"
+      "revision": "b2d0ce5207c9ce2693ccd9dfa6a1f15ed5e5b812"
     }
   ],
   "schemaVersion": 1,

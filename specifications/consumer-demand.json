@@ -33,7 +33,7 @@
           "path": "cosmos/internal/visual/main/index.ts",
           "proves": "Attach the Cosmos main root from the shared Experience Document to a stable world plane with the intended stylesheet and camera gestures.",
           "repository": "metafor",
-          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899+dirty",
+          "revision": "7611415474fae233cd88abc8b1fc14746316333c",
           "symbol": "Cosmos display plane",
           "type": "consumer-usage"
         }
@@ -77,7 +77,7 @@
           "path": "packages/components/inspector.tsx",
           "proves": "Focused numeric field editing inside nested scrollable Inspector groups.",
           "repository": "ui",
-          "revision": "f3a4233c5a74fb411b210b1cd7c3b15429d8c6a3",
+          "revision": "b2d0ce5207c9ce2693ccd9dfa6a1f15ed5e5b812",
           "symbol": "Inspector numeric fields",
           "type": "consumer-usage"
         }
@@ -99,7 +99,7 @@
           "path": "packages/components/number-input.tsx",
           "proves": "Native typed number editing, focus, input/change, Escape rollback and selection through the exact semantic owner.",
           "repository": "ui",
-          "revision": "f3a4233c5a74fb411b210b1cd7c3b15429d8c6a3",
+          "revision": "b2d0ce5207c9ce2693ccd9dfa6a1f15ed5e5b812",
           "symbol": "NumberInput",
           "type": "consumer-usage"
         }
@@ -165,7 +165,7 @@
           "path": "cosmos/internal/visual/main/index.ts",
           "proves": "Own one semantic Document, Canvas, Engine Renderer and Space for the Cosmos main plane and dock HUD projection.",
           "repository": "metafor",
-          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899+dirty",
+          "revision": "7611415474fae233cd88abc8b1fc14746316333c",
           "symbol": "Cosmos presentation host",
           "type": "consumer-usage"
         }
@@ -187,7 +187,7 @@
           "path": "cosmos/internal/visual/main/index.ts",
           "proves": "Attach the dock sibling root from the same Experience Document to a camera-locked overlay using the host stylesheet realm.",
           "repository": "metafor",
-          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899+dirty",
+          "revision": "7611415474fae233cd88abc8b1fc14746316333c",
           "symbol": "Cosmos display dock",
           "type": "consumer-usage"
         }
@@ -209,7 +209,7 @@
           "path": "quantum/bulk/dom/overlay-runtime.ts",
           "proves": "Compose the HUD through the shared browser overlay owner rather than reimplementing pointer mapping, capture, hit and lifecycle.",
           "repository": "metafor",
-          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899+dirty",
+          "revision": "7611415474fae233cd88abc8b1fc14746316333c",
           "symbol": "Bulk DOM overlay",
           "type": "consumer-usage"
         }
@@ -297,7 +297,7 @@
           "path": "packages/components/code-editor.tsx",
           "proves": "Two-axis scrolling with clipping and stable retained line/token identity.",
           "repository": "ui",
-          "revision": "f3a4233c5a74fb411b210b1cd7c3b15429d8c6a3",
+          "revision": "b2d0ce5207c9ce2693ccd9dfa6a1f15ed5e5b812",
           "symbol": "CodeEditor",
           "type": "consumer-usage"
         }
@@ -341,7 +341,7 @@
           "path": "packages/components/code-editor.tsx",
           "proves": "Preserve source whitespace and prevent wrapping for read-only code lines.",
           "repository": "ui",
-          "revision": "f3a4233c5a74fb411b210b1cd7c3b15429d8c6a3",
+          "revision": "b2d0ce5207c9ce2693ccd9dfa6a1f15ed5e5b812",
           "symbol": "CodeEditor",
           "type": "consumer-usage"
         }
@@ -429,7 +429,7 @@
           "path": "packages/components/number-input.tsx",
           "proves": "A scrub gesture continues outside the control until pointerup/cancel without component-owned capture emulation.",
           "repository": "ui",
-          "revision": "f3a4233c5a74fb411b210b1cd7c3b15429d8c6a3",
+          "revision": "b2d0ce5207c9ce2693ccd9dfa6a1f15ed5e5b812",
           "symbol": "NumberInput scrub",
           "type": "consumer-usage"
         }
@@ -495,7 +495,7 @@
           "path": "packages/components/color-input.tsx",
           "proves": "Stable controlled RGBA channels with range input/change semantics and analytical color paint.",
           "repository": "ui",
-          "revision": "f3a4233c5a74fb411b210b1cd7c3b15429d8c6a3",
+          "revision": "b2d0ce5207c9ce2693ccd9dfa6a1f15ed5e5b812",
           "symbol": "ColorInput",
           "type": "consumer-usage"
         }
@@ -517,7 +517,7 @@
           "path": "packages/components/color-input.tsx",
           "proves": "An anchored top-layer color picker with clipping, light dismiss, Escape and focus restoration instead of an inline hidden panel.",
           "repository": "ui",
-          "revision": "f3a4233c5a74fb411b210b1cd7c3b15429d8c6a3",
+          "revision": "b2d0ce5207c9ce2693ccd9dfa6a1f15ed5e5b812",
           "symbol": "ColorInput",
           "type": "consumer-usage"
         }
@@ -539,7 +539,7 @@
           "path": "packages/components/enum-input.tsx",
           "proves": "Open a collapsed select picker, navigate options by keyboard, activate one option and dispatch input/change.",
           "repository": "ui",
-          "revision": "f3a4233c5a74fb411b210b1cd7c3b15429d8c6a3",
+          "revision": "b2d0ce5207c9ce2693ccd9dfa6a1f15ed5e5b812",
           "symbol": "EnumInput",
           "type": "consumer-usage"
         }
@@ -671,7 +671,7 @@
           "path": "packages/components/button.tsx",
           "proves": "Adopt the exact compiled Button stylesheet once per Document and make it visible to every same-Document projection without manual buttonCss or consumer styleSheets wiring.",
           "repository": "ui",
-          "revision": "f3a4233c5a74fb411b210b1cd7c3b15429d8c6a3",
+          "revision": "b2d0ce5207c9ce2693ccd9dfa6a1f15ed5e5b812",
           "symbol": "Button automatic stylesheet adoption",
           "type": "consumer-usage"
         }
@@ -803,7 +803,7 @@
           "path": "cosmos/internal/visual/main/index.ts",
           "proves": "Compile linked .tsx component exports and remove stale imperative createButton usage without restoring legacy APIs.",
           "repository": "metafor",
-          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899+dirty",
+          "revision": "7611415474fae233cd88abc8b1fc14746316333c",
           "symbol": "Compiled dock migration",
           "type": "consumer-usage"
         }
@@ -825,7 +825,7 @@
           "path": "packages/components/button.tsx",
           "proves": "Extract Button owner CSS, bounded attribute/native pseudo selectors and caller composition from the global css intrinsic without runtime object authoring or scanning.",
           "repository": "ui",
-          "revision": "f3a4233c5a74fb411b210b1cd7c3b15429d8c6a3",
+          "revision": "b2d0ce5207c9ce2693ccd9dfa6a1f15ed5e5b812",
           "symbol": "Button component-local styles",
           "type": "consumer-usage"
         }
@@ -847,7 +847,7 @@
           "path": "create-metafor/dsl/matter.ts",
           "proves": "Parse the bounded meta/log/conditional/map source contract without treating ordinary HTML as executable DOM UI.",
           "repository": "metafor",
-          "revision": "92f4fb0510db5ea43cb03325ab3b3895d95b4899+dirty",
+          "revision": "7611415474fae233cd88abc8b1fc14746316333c",
           "symbol": "Matter source parser",
           "type": "consumer-usage"
         }
