@@ -71,6 +71,7 @@ describe("document canvas browser runtime", () => {
     expect(harness.calls.aspects).toEqual([2])
     expect(harness.calls.engineFrames).toHaveLength(1)
     expect(harness.calls.observed).toEqual([harness.canvas.element])
+    expect(harness.calls.textMeasurers).toEqual([harness.backend.textMeasurer])
 
     const observed: RenderFrame[] = []
     const unsubscribe = runtime.subscribe((frame) => observed.push(frame))
@@ -108,6 +109,10 @@ describe("document canvas browser runtime", () => {
     expect(harness.calls.overlayResizes).toEqual([{width: 300, height: 100}])
     expect(harness.calls.sizes.at(-1)).toEqual([300, 100])
     expect(harness.calls.aspects.at(-1)).toBe(3)
+    expect(harness.calls.textMeasurers).toEqual([
+      harness.backend.textMeasurer,
+      harness.backend.textMeasurer,
+    ])
 
     runtime.requestRender()
     harness.canvas.emit("pointerdown", pointer({clientX: 20, clientY: 30, pointerId: 8}))
@@ -776,6 +781,7 @@ function createHarness(rect: Rect) {
     wheels: [] as WheelInput[],
     timerDelays: [] as number[],
     cancelledFrames: [] as unknown[],
+    textMeasurers: [] as unknown[],
   }
   const capture = new Blob(["frame"], {type: "image/png"})
   const engineRenderer = {
@@ -804,6 +810,9 @@ function createHarness(rect: Rect) {
   } as unknown as ViewPoint
   const backend = {
     root: new Object3D(),
+    textMeasurer: Object.freeze({
+      measureTextAdvance: () => 0,
+    }),
     applyFrame() {},
     dispose() {
       calls.backendDisposals += 1
@@ -819,6 +828,7 @@ function createHarness(rect: Rect) {
   const createFakeDocumentRenderer = (
     options: Parameters<DocumentCanvasRuntimeSeams["createDocumentRenderer"]>[0],
   ): DocumentRenderer => {
+    calls.textMeasurers.push(options.textMeasurer)
     let disposed = false
     const flush = (): RenderFrame => {
       if (disposed) throw new Error("fake renderer disposed")
@@ -1066,6 +1076,8 @@ function nativeComposition(values: Partial<CompositionEvent> = {}): CompositionE
 function fakeFont(): TrueTypeFont {
   return {
     unitsPerEm: 1_000,
+    ascent: 800,
+    descent: 200,
     mapCharToGlyph: () => 0,
     getGlyphOutline: () => ({
       points: new Float32Array(),

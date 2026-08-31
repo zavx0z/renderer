@@ -25,6 +25,7 @@ import type {
   RectDisplayItem,
   RenderClip,
   RenderFrame,
+  RenderTextMeasurer,
   RenderTransform,
   TextDisplayItem,
 } from "@zavx0z/renderer"
@@ -94,6 +95,7 @@ type PreparedRectPayload = Omit<PreparedRectItem, "token">
 type PreparedTextItem = Readonly<{
   kind: "text"
   item: TextDisplayItem
+  baselineY: number
   color: Color
   opacity: number
   clips: readonly PreparedClip[]
@@ -196,6 +198,7 @@ const NO_PREPARED_CLIPS: readonly PreparedClip[] = Object.freeze([])
 const DEFAULT_MAX_RECT_INSTANCES = 1_048_576
 const RECT_RUN_INDEX_CELL_SIZE = 64
 const MAX_RECT_RUN_INDEX_CELLS = 256
+const FONT_ADVANCE_CACHE_LIMIT = 4_096
 
 /**
  * Retained projection of resolved Rect/Text/Image display items into Engine objects.
@@ -206,8 +209,11 @@ const MAX_RECT_RUN_INDEX_CELLS = 256
  */
 export class RendererWebGpuBackend {
   public readonly root = new Object3D()
+  /** Exact bounded inline-advance owner for the backend font, when present. */
+  public readonly textMeasurer: RenderTextMeasurer | undefined
 
   readonly #font: TrueTypeFont | undefined
+  readonly #fontBaselineCenterRatio: number | undefined
   readonly #invalidateGeometry: (geometry: BufferGeometry) => void
   readonly #requestPresentation: (() => void) | undefined
   readonly #rectInstancing: "safe" | "disabled"
@@ -233,6 +239,14 @@ export class RendererWebGpuBackend {
 
   constructor(options: RendererWebGpuBackendOptions) {
     this.#font = options.font
+    if (options.font === undefined) {
+      this.#fontBaselineCenterRatio = undefined
+      this.textMeasurer = undefined
+    } else {
+      const metrics = readFontMetrics(options.font)
+      this.#fontBaselineCenterRatio = metrics.baselineCenterRatio
+      this.textMeasurer = createFontTextMeasurer(options.font, metrics.unitsPerEm)
+    }
     this.#invalidateGeometry = options.invalidateGeometry
     this.#requestPresentation = options.requestPresentation
     this.#rectInstancing = options.rectInstancing ?? "safe"
@@ -686,15 +700,20 @@ export class RendererWebGpuBackend {
       this.#validateTransform(item.transform, `${label}.transform`)
 
       if (item.kind === "text") {
-        if (this.#font === undefined) {
+        if (this.#font === undefined || this.#fontBaselineCenterRatio === undefined) {
           throw new Error(`Text display item at index ${index} requires RendererWebGpuBackendOptions.font`)
         }
         assertFiniteNonNegative(item.fontSize, `${label}.fontSize`)
+        assertFiniteNonNegative(item.lineHeight, `${label}.lineHeight`)
         assertFinite(item.letterSpacing, `${label}.letterSpacing`)
         const opacity = assertUnitOpacity(item.opacity, `${label}.opacity`)
+        const baselineY = item.y + item.lineHeight / 2 +
+          item.fontSize * this.#fontBaselineCenterRatio
+        assertFinite(baselineY, `${label}.baselineY`)
         prepared.push(Object.freeze({
           kind: "text",
           item,
+          baselineY,
           color: parseDisplayColor(item.color || WHITE),
           opacity,
           clips: this.#prepareClips(item.clips, frame, label),
@@ -940,7 +959,7 @@ export class RendererWebGpuBackend {
       clipSpaces: [],
     }
     this.#updateClips(entry, value.clips)
-    positionText(node, item)
+    positionText(node, item, value.baselineY)
     return entry
   }
 
@@ -1011,7 +1030,7 @@ export class RendererWebGpuBackend {
       entry.material.color.copy(value.color)
       entry.material.opacity = value.opacity
       this.#updateClips(entry, value.clips)
-      positionText(entry.node, value.item)
+      positionText(entry.node, value.item, value.baselineY)
       return
     }
 
@@ -1338,8 +1357,8 @@ function positionPlane(
   node.scale.set(item.transform.scaleX, item.transform.scaleY, 1)
 }
 
-function positionText(node: CachedText, item: TextDisplayItem): void {
-  const origin = applyRenderTransform(item.transform, item.x, item.y + item.fontSize)
+function positionText(node: CachedText, item: TextDisplayItem, baselineY: number): void {
+  const origin = applyRenderTransform(item.transform, item.x, baselineY)
   node.position.set(origin.x, -origin.y, 0)
   node.scale.set(item.transform.scaleX, item.transform.scaleY, 1)
 }
@@ -1602,4 +1621,54 @@ function assertUnitOpacity(value: number, label: string): number {
   assertFinite(value, label)
   if (value < 0 || value > 1) throw new Error(`${label} must be between 0 and 1`)
   return value
+}
+
+function readFontMetrics(font: TrueTypeFont): Readonly<{
+  unitsPerEm: number
+  baselineCenterRatio: number
+}> {
+  const unitsPerEm = font.unitsPerEm
+  const ascent = font.ascent
+  const descent = font.descent
+  assertFinitePositive(unitsPerEm, "RendererWebGpuBackendOptions.font.unitsPerEm")
+  assertFiniteNonNegative(ascent, "RendererWebGpuBackendOptions.font.ascent")
+  assertFiniteNonNegative(descent, "RendererWebGpuBackendOptions.font.descent")
+  return Object.freeze({
+    unitsPerEm,
+    baselineCenterRatio: (ascent - descent) / (2 * unitsPerEm),
+  })
+}
+
+function createFontTextMeasurer(
+  font: TrueTypeFont,
+  unitsPerEm: number,
+): RenderTextMeasurer {
+  const normalizedAdvanceByCodePoint = new Map<number, number>()
+  return Object.freeze({
+    measureTextAdvance(value: string, fontSize: number, letterSpacing: number): number {
+      assertFiniteNonNegative(fontSize, "fontSize")
+      assertFinite(letterSpacing, "letterSpacing")
+      let width = 0
+      let hasPrevious = false
+      for (const character of value) {
+        if (hasPrevious) width += letterSpacing
+        hasPrevious = true
+        const codePoint = character.codePointAt(0)!
+        let normalizedAdvance = normalizedAdvanceByCodePoint.get(codePoint)
+        if (normalizedAdvance === undefined) {
+          normalizedAdvance = character === " "
+            ? 0.3
+            : font.getHMetric(font.mapCharToGlyph(codePoint)).advanceWidth / unitsPerEm
+          assertFiniteNonNegative(normalizedAdvance, "font glyph advance")
+          if (normalizedAdvanceByCodePoint.size >= FONT_ADVANCE_CACHE_LIMIT) {
+            normalizedAdvanceByCodePoint.clear()
+          }
+          normalizedAdvanceByCodePoint.set(codePoint, normalizedAdvance)
+        }
+        width += normalizedAdvance * fontSize
+      }
+      if (!Number.isFinite(width)) throw new Error("measured text advance must be finite")
+      return Math.max(0, width)
+    },
+  })
 }

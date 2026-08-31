@@ -20,8 +20,13 @@ accessibility или input semantics.
    нечисловая geometry, opacity вне finite `0..1` и malformed border завершают
    `applyFrame()` ошибкой до изменения retained tree.
 3. Координаты display list являются top-left: Rect и Image materialize-ятся центром в
-   `(x + width / 2, -(y + height / 2), 0)`, Text — baseline-позицией
-   `(x, -(y + fontSize), 0)`. Paint order задаётся порядком `displayList` и
+   `(x + width / 2, -(y + height / 2), 0)`. Для Text `y` является верхом
+   разрешённого line box, а alphabetic baseline вычисляется по exact Engine TTF
+   metrics как
+   `y + lineHeight / 2 + fontSize × (ascent - descent) / (2 × unitsPerEm)`.
+   Поэтому положительный либо отрицательный half-leading распределяется
+   симметрично, а `hhea.lineGap` повторно не добавляется поверх уже разрешённого
+   CSS `line-height`. Paint order задаётся порядком `displayList` и
    `root.children` под Engine `renderLayer = "ui"`.
 4. `color` уже разрешён и проверен upstream. Core не выпускает malformed CSS
    color в display list: direct invalid declaration отбрасывается до cascade,
@@ -45,6 +50,16 @@ accessibility или input semantics.
    не требуют парсинга невидимого border color.
 7. Text требует один `TrueTypeFont`, переданный при создании backend. Кадр с
    Text без font завершается явной ошибкой до мутации retained tree.
+   `unitsPerEm`, `ascent` и положительная глубина `descent` проверяются и
+   сворачиваются в один baseline ratio ровно один раз в constructor; per-item
+   prepare выполняет только одно умножение и сложения. `fontSize` и
+   `lineHeight` должны быть finite non-negative.
+   Backend также публично предоставляет один immutable `textMeasurer` exact
+   этого font. Он использует TTF advance каждого code point, Engine space
+   advance `0.3em` и межсимвольный `letterSpacing`; до 4096 встреченных
+   codepoint advances кэшируются без string-array allocation на вызов. Browser
+   composition передаёт тот же экземпляр CPU Renderer и сохраняет его при
+   resize.
    `TextDisplayItem.opacity` напрямую записывается в `TextMaterial.opacity`, а
    finite signed `letterSpacing` — в exact `CachedText.letterSpacing`.
 8. Image требует непустой `src`, positive finite content-box dimensions,
@@ -76,6 +91,8 @@ accessibility или input semantics.
 3. Изменение Text content, `fontSize` либо `letterSpacing` сохраняет
    `CachedText` и material, вызывая только `updateGeometry()`. Color и opacity
    изменяются на том же `TextMaterial` без пересборки text geometry.
+   Изменение только `lineHeight` пересчитывает baseline position на том же
+   `CachedText` и не перестраивает, не инвалидирует и не загружает geometry.
 4. Image использует один `Mesh`, `PlaneGeometry` и `ImageMaterial`. При
    сохранении `(node, key, kind)` source, `fit`, `boxAspect`, opacity,
    presentation clips, position и plane vertices обновляются in place без

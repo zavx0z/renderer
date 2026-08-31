@@ -24,6 +24,11 @@ Document/page может владеть своим независимым Experi
 
 DOM, Renderer, WebGPU backend и Engine являются peers. Package не содержит
 копий их types, compatibility aliases или скрытой загрузки font.
+После создания backend runtime передаёт его exact immutable `textMeasurer`
+каждому CPU `DocumentRenderer`, включая viewport-bound замену при resize.
+Поэтому layout, alignment, ellipsis и retained glyph geometry используют один
+font owner; отсутствие measurer при обязательном font завершает создание
+runtime fail closed.
 
 ## `RENDERER-BROWSER-002` — viewport и presentation
 

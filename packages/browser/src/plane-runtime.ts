@@ -121,6 +121,7 @@ export function createDocumentPlaneRuntimeWithSeams(
   const interactionState = options.interactionState ?? createDocumentInteractionState(options.document)
   let requestBackendPresentation = (): void => {}
   let backend: RendererWebGpuBackend | null = null
+  let textMeasurer: NonNullable<CreateDocumentRendererOptions["textMeasurer"]> | null = null
   let plane: RendererWebGpuDocumentPlane | null = null
   let renderer: DocumentRenderer | null = null
   let interaction: DocumentInteractionController | null = null
@@ -163,6 +164,8 @@ export function createDocumentPlaneRuntimeWithSeams(
       invalidateGeometry: options.invalidateGeometry,
       requestPresentation: () => requestBackendPresentation(),
     })
+    textMeasurer = backend.textMeasurer ?? null
+    if (textMeasurer === null) throw new Error("Document plane font has no text measurer")
     plane = seams.createPlane({
       content: backend.root,
       viewport: options.viewport,
@@ -174,6 +177,7 @@ export function createDocumentPlaneRuntimeWithSeams(
       viewport: options.viewport,
       styleSheets,
       interactionState,
+      textMeasurer,
     })
     interaction = seams.createInteraction({
       document: options.document,
@@ -198,10 +202,12 @@ export function createDocumentPlaneRuntimeWithSeams(
   const requiredInteraction = interaction
   if (
     requiredBackend === null ||
+    textMeasurer === null ||
     requiredPlane === null ||
     requiredRenderer === null ||
     requiredInteraction === null
   ) throw new Error("Document plane runtime owners were not created")
+  const requiredTextMeasurer = textMeasurer
 
   const flush = (): RenderFrame => {
     assertActive(disposed)
@@ -232,6 +238,7 @@ export function createDocumentPlaneRuntimeWithSeams(
         viewport,
         styleSheets,
         interactionState,
+        textMeasurer: requiredTextMeasurer,
       })
     }
     try {

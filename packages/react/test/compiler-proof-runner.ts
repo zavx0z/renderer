@@ -48,6 +48,8 @@ function rowMap(root: import("@zavx0z/dom").HTMLElement): Map<string, import("@z
 function fakeFont(): TrueTypeFont {
   return {
     unitsPerEm: 1_000,
+    ascent: 800,
+    descent: 200,
     mapCharToGlyph: () => 0,
     getGlyphOutline: () => ({
       points: new Float32Array(),

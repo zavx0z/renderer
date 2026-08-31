@@ -1015,6 +1015,7 @@ const tooltipDisplayItems = (
       y: tooltip.y + 6 + index * lineHeight,
       color,
       fontSize,
+      lineHeight,
       letterSpacing: 0,
       opacity: 1,
       clips: NO_CLIPS,

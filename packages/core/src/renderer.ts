@@ -51,6 +51,7 @@ import type {
   RenderFrame,
   RenderPadding,
   RenderScrollMetrics,
+  RenderTextMeasurer,
   RenderTransform,
   RenderViewport,
 } from "./types.ts"
@@ -98,6 +99,7 @@ type BuildState = {
   readonly scrolls: Map<Element, RenderScrollMetrics>
   readonly transforms: Map<Node, RenderTransform>
   readonly measured: WeakMap<LayoutNode, Map<string, Size>>
+  readonly textMeasurer: CreateDocumentRendererOptions["textMeasurer"]
 }
 
 type FrameCollectionIndexes = Readonly<{
@@ -375,6 +377,7 @@ export const createDocumentRenderer = (
             frame,
             target,
             layoutCache,
+            options.textMeasurer,
             revision + 1,
           )
       if (incremental !== null) {
@@ -396,6 +399,7 @@ export const createDocumentRenderer = (
       subtreeDirty,
       layoutCache,
       options.interactionState,
+      options.textMeasurer,
     )
     revision++
     frame = next
@@ -483,6 +487,7 @@ const tryBuildCharacterDataFrame = (
   previous: RenderFrame,
   target: Text,
   layoutCache: WeakMap<Node, LayoutNode>,
+  textMeasurer: CreateDocumentRendererOptions["textMeasurer"],
   revision: number,
 ): RenderFrame | null => {
   const layoutNode = layoutCache.get(target)
@@ -509,13 +514,13 @@ const tryBuildCharacterDataFrame = (
     hasLineBreak(nextText)
   )
     return null
-  const metrics = measureText(nextText, layoutNode.style)
+  const metrics = measureText(nextText, layoutNode.style, textMeasurer)
   const width = metrics.width
   const height = metrics.height
   if (height !== previousBox.height) return null
   const parentBox = previous.boxByNode.get(parent.node)
   const displayText = parentBox
-    ? ellipsizeSingleLine(nextText, parent.style, parentBox.contentWidth)
+    ? ellipsizeSingleLine(nextText, parent.style, parentBox.contentWidth, false, textMeasurer)
     : nextText
   if (displayText === "" || !hasPaintableText(displayText)) return null
 
@@ -532,7 +537,7 @@ const tryBuildCharacterDataFrame = (
           layoutNode.style,
           parentBox.contentX,
           parentBox.contentWidth,
-          textAdvance(displayText, layoutNode.style),
+          textAdvance(displayText, layoutNode.style, textMeasurer),
         )
       : previousItem.x,
   })
@@ -791,6 +796,7 @@ const buildFrame = (
   subtreeDirty: ReadonlySet<Node>,
   layoutCache: WeakMap<Node, LayoutNode>,
   interactionState: CreateDocumentRendererOptions["interactionState"],
+  textMeasurer: CreateDocumentRendererOptions["textMeasurer"],
 ): RenderFrame => {
   const popoverInheritedStyles = new WeakMap<HTMLElement, ComputedStyle>()
   const inheritedStyle = projectionRootInheritedStyle(root, rules, interactionState)
@@ -817,6 +823,7 @@ const buildFrame = (
     scrolls: new Map(),
     transforms: new Map(),
     measured: new WeakMap(),
+    textMeasurer,
   }
   const margin = tree.style.margin
   const availableWidth = Math.max(0, viewport.width - horizontal(margin))
@@ -941,7 +948,9 @@ const popoverTopLayerPlacement = (
   viewport: RenderViewport,
   state: BuildState,
 ): Readonly<{x: number; y: number}> => {
-  const source = popover[getPopoverSource]()
+  const source = (popover as HTMLElement & {
+    [getPopoverSource](): HTMLElement | null
+  })[getPopoverSource]()
   const sourceBox = source === null ? undefined : state.boxByNode.get(source)
   if (sourceBox === undefined) {
     return Object.freeze({
@@ -1156,7 +1165,7 @@ const measure = (
     return rememberSize(layoutNode, availableWidth, availableHeight, 0, 0, state)
 
   if (layoutNode.text !== null) {
-    const {width, height} = measureText(layoutNode.text, layoutNode.style)
+    const {width, height} = measureText(layoutNode.text, layoutNode.style, state.textMeasurer)
     return rememberSize(
       layoutNode,
       availableWidth,
@@ -3454,7 +3463,13 @@ const emitReplacedControlPresentation = (
   const rawText = input.type === "password" && liveValue !== ""
     ? "•".repeat(graphemeCount(liveValue))
     : source.replace(/[\r\n]+/g, " ")
-  const text = ellipsizeSingleLine(rawText, layoutNode.style, box.contentWidth, true)
+  const text = ellipsizeSingleLine(
+    rawText,
+    layoutNode.style,
+    box.contentWidth,
+    true,
+    state.textMeasurer,
+  )
   if (text === "" || !hasPaintableText(text)) return
   const lineHeight = resolveLineHeight(layoutNode.style)
   state.displayList.push(
@@ -3467,11 +3482,12 @@ const emitReplacedControlPresentation = (
         layoutNode.style,
         box.contentX,
         box.contentWidth,
-        textAdvance(text, layoutNode.style),
+        textAdvance(text, layoutNode.style, state.textMeasurer),
       ),
       y: box.contentY + Math.max(0, (box.contentHeight - lineHeight) / 2),
       color: layoutNode.style.color,
       fontSize: layoutNode.style.fontSize,
+      lineHeight,
       letterSpacing: layoutNode.style.letterSpacing,
       opacity: layoutNode.effectiveOpacity * (placeholder ? 0.55 : 1),
       clips,
@@ -3530,6 +3546,7 @@ const emitSelectPresentation = (
     layoutNode.style,
     labelWidth,
     true,
+    state.textMeasurer,
   )
   const lineHeight = resolveLineHeight(layoutNode.style)
   if (label !== "" && hasPaintableText(label) && labelWidth > 0) {
@@ -3542,11 +3559,12 @@ const emitSelectPresentation = (
         layoutNode.style,
         box.contentX,
         labelWidth,
-        textAdvance(label, layoutNode.style),
+        textAdvance(label, layoutNode.style, state.textMeasurer),
       ),
       y: box.contentY + Math.max(0, (box.contentHeight - lineHeight) / 2),
       color: layoutNode.style.color,
       fontSize: layoutNode.style.fontSize,
+      lineHeight,
       letterSpacing: layoutNode.style.letterSpacing,
       opacity: layoutNode.effectiveOpacity,
       clips,
@@ -3692,6 +3710,7 @@ const emitSelectPicker = (
       layoutNode.style,
       optionBox.contentWidth,
       true,
+      state.textMeasurer,
     )
     if (label !== "" && hasPaintableText(label)) {
       state.displayList.push(Object.freeze({
@@ -3703,6 +3722,7 @@ const emitSelectPicker = (
         y: optionBox.contentY + Math.max(0, (optionBox.contentHeight - lineHeight) / 2),
         color: layoutNode.style.color,
         fontSize: layoutNode.style.fontSize,
+        lineHeight,
         letterSpacing: layoutNode.style.letterSpacing,
         opacity: layoutNode.effectiveOpacity * (option.disabled ? 0.5 : 1),
         clips: NO_CLIPS,
@@ -3788,11 +3808,12 @@ const emitTextAreaPresentation = (
         layoutNode.style,
         box.contentX,
         box.contentWidth,
-        textAdvance(line, layoutNode.style),
+        textAdvance(line, layoutNode.style, state.textMeasurer),
       ),
       y: box.contentY + index * lineHeight,
       color: layoutNode.style.color,
       fontSize: layoutNode.style.fontSize,
+      lineHeight,
       letterSpacing: layoutNode.style.letterSpacing,
       opacity: layoutNode.effectiveOpacity * (placeholder ? 0.55 : 1),
       clips,
@@ -3827,13 +3848,17 @@ const emitTextAreaSelection = (
       layoutNode.style,
       box.contentX,
       box.contentWidth,
-      textAdvance(line, layoutNode.style),
+      textAdvance(line, layoutNode.style, state.textMeasurer),
     )
     state.displayList.push(Object.freeze({
       kind: "rect",
       key: "caret",
       node: textArea,
-      x: lineX + textAdvance(line.slice(0, position.column), layoutNode.style),
+      x: lineX + textAdvance(
+        line.slice(0, position.column),
+        layoutNode.style,
+        state.textMeasurer,
+      ),
       y: box.contentY + position.line * lineHeight,
       width: 1,
       height: lineHeight,
@@ -3860,10 +3885,18 @@ const emitTextAreaSelection = (
         layoutNode.style,
         box.contentX,
         box.contentWidth,
-        textAdvance(line, layoutNode.style),
+        textAdvance(line, layoutNode.style, state.textMeasurer),
       )
-      const x = lineX + textAdvance(line.slice(0, startColumn), layoutNode.style)
-      const selectedWidth = textAdvance(line.slice(startColumn, endColumn), layoutNode.style)
+      const x = lineX + textAdvance(
+        line.slice(0, startColumn),
+        layoutNode.style,
+        state.textMeasurer,
+      )
+      const selectedWidth = textAdvance(
+        line.slice(startColumn, endColumn),
+        layoutNode.style,
+        state.textMeasurer,
+      )
       state.displayList.push(Object.freeze({
         kind: "rect",
         key: `selection:${index}`,
@@ -4262,6 +4295,7 @@ const emitControlGlyph = (
     y: y + Math.max(0, (height - fontSize) / 2),
     color,
     fontSize,
+    lineHeight: fontSize,
     letterSpacing: 0,
     opacity,
     clips,
@@ -4471,11 +4505,15 @@ const normalizeText = (value: string, style: ComputedStyle): string => {
   return collapsed.trim() === "" ? "" : collapsed
 }
 
-const measureText = (value: string, style: ComputedStyle): Size => {
+const measureText = (
+  value: string,
+  style: ComputedStyle,
+  textMeasurer?: RenderTextMeasurer,
+): Size => {
   if (value === "") return Object.freeze({width: 0, height: 0})
   const lines = splitTextLines(value)
   const width = lines.reduce(
-    (maximum, line) => Math.max(maximum, textAdvance(line, style)),
+    (maximum, line) => Math.max(maximum, textAdvance(line, style, textMeasurer)),
     0,
   )
   return Object.freeze({
@@ -4484,9 +4522,24 @@ const measureText = (value: string, style: ComputedStyle): Size => {
   })
 }
 
-const textAdvance = (value: string, style: ComputedStyle): number => {
+const textAdvance = (
+  value: string,
+  style: ComputedStyle,
+  textMeasurer?: RenderTextMeasurer,
+): number => {
   const count = Array.from(value).length
   if (count === 0) return 0
+  if (textMeasurer !== undefined) {
+    const measured = textMeasurer.measureTextAdvance(
+      value,
+      style.fontSize,
+      style.letterSpacing,
+    )
+    if (!Number.isFinite(measured) || measured < 0) {
+      throw new Error("textMeasurer.measureTextAdvance() must return a finite non-negative number")
+    }
+    return measured
+  }
   return Math.max(
     0,
     count * style.fontSize * 0.6 + Math.max(0, count - 1) * style.letterSpacing,
@@ -4505,22 +4558,23 @@ const ellipsizeSingleLine = (
   style: ComputedStyle,
   availableWidth: number,
   singleLineControl = false,
+  textMeasurer?: RenderTextMeasurer,
 ): string => {
   if (
     style.textOverflow !== "ellipsis" ||
     style.overflowX !== "hidden" ||
     (!singleLineControl && style.whiteSpace !== "nowrap") ||
-    textAdvance(value, style) <= availableWidth
+    textAdvance(value, style, textMeasurer) <= availableWidth
   ) return value
   const ellipsis = "…"
-  if (textAdvance(ellipsis, style) > availableWidth) return ""
+  if (textAdvance(ellipsis, style, textMeasurer) > availableWidth) return ""
   const characters = Array.from(value)
   let low = 0
   let high = characters.length
   while (low < high) {
     const middle = Math.ceil((low + high) / 2)
     const candidate = `${characters.slice(0, middle).join("")}${ellipsis}`
-    if (textAdvance(candidate, style) <= availableWidth) low = middle
+    if (textAdvance(candidate, style, textMeasurer) <= availableWidth) low = middle
     else high = middle - 1
   }
   return `${characters.slice(0, low).join("")}${ellipsis}`
@@ -4558,7 +4612,13 @@ const emitTextItems = (
     const line = lines[index]
     if (!line) continue
     const displayLine = !multiline
-      ? ellipsizeSingleLine(line, overflowStyle, alignmentWidth)
+      ? ellipsizeSingleLine(
+          line,
+          overflowStyle,
+          alignmentWidth,
+          false,
+          state.textMeasurer,
+        )
       : line
     if (displayLine === "" || !hasPaintableText(displayLine)) continue
     state.displayList.push(
@@ -4571,11 +4631,12 @@ const emitTextItems = (
           layoutNode.style,
           x,
           alignmentWidth,
-          textAdvance(displayLine, layoutNode.style),
+          textAdvance(displayLine, layoutNode.style, state.textMeasurer),
         ),
         y: y + index * lineHeight,
         color: layoutNode.style.color,
         fontSize: layoutNode.style.fontSize,
+        lineHeight,
         letterSpacing: layoutNode.style.letterSpacing,
         opacity: layoutNode.effectiveOpacity,
         clips,

@@ -297,10 +297,83 @@ describe("RendererWebGpuBackend", () => {
     expect(label.text).toBe("Two")
     expect(label.fontSize).toBe(16)
     expect(label.letterSpacing).toBe(2)
-    expect(label.position).toMatchObject({x: 5, y: -22, z: 0})
+    expect(label.position).toMatchObject({x: 5, y: -18.8, z: 0})
     expect(label.material.color).toMatchObject({r: 0, g: 1, b: 0, a: 0x88 / 255})
     expect(label.material.opacity).toBe(0.4)
     expect(invalidated).toEqual([])
+  })
+
+  test("positions the alphabetic baseline from the line box without rebuilding text geometry", () => {
+    const fixture = renderFixture()
+    const textNode = fixture.document.createTextNode("Baseline")
+    fixture.root.appendChild(textNode)
+    const invalidated: BufferGeometry[] = []
+    const backend = new RendererWebGpuBackend({
+      font: fakeFont(),
+      invalidateGeometry: (geometry) => invalidated.push(geometry),
+    })
+    expect(backend.textMeasurer?.measureTextAdvance("A A", 10, 2)).toBe(17)
+    backend.applyFrame(frame(fixture.document, fixture.root, [
+      Object.freeze({
+        ...text(textNode, "Baseline", {x: 4, y: 6, fontSize: 10}),
+        lineHeight: 10,
+      }),
+    ]))
+    const label = requireCachedText(backend.root.children[0])
+    const stencilGeometry = label.stencilGeometry
+    const coverGeometry = label.coverGeometry
+    const updateGeometry = label.updateGeometry.bind(label)
+    let geometryUpdates = 0
+    label.updateGeometry = () => {
+      geometryUpdates += 1
+      updateGeometry()
+    }
+
+    expect(label.position).toMatchObject({x: 4, y: -14, z: 0})
+
+    backend.applyFrame(frame(fixture.document, fixture.root, [
+      Object.freeze({
+        ...text(textNode, "Baseline", {x: 4, y: 6, fontSize: 10}),
+        lineHeight: 20,
+      }),
+    ], 2))
+
+    expect(backend.root.children[0]).toBe(label)
+    expect(label.stencilGeometry).toBe(stencilGeometry)
+    expect(label.coverGeometry).toBe(coverGeometry)
+    expect(label.position).toMatchObject({x: 4, y: -19, z: 0})
+    expect(geometryUpdates).toBe(0)
+    expect(invalidated).toEqual([])
+  })
+
+  test("caches repeated font advances by code point", () => {
+    let mapCalls = 0
+    let metricCalls = 0
+    const font = {
+      unitsPerEm: 1_000,
+      ascent: 800,
+      descent: 200,
+      mapCharToGlyph(codePoint: number) {
+        mapCalls += 1
+        return codePoint
+      },
+      getHMetric() {
+        metricCalls += 1
+        return {advanceWidth: 500, lsb: 0}
+      },
+    } as unknown as TrueTypeFont
+    const backend = new RendererWebGpuBackend({font, invalidateGeometry() {}})
+    const measurer = backend.textMeasurer
+    if (measurer === undefined) throw new Error("Expected font text measurer")
+
+    let measured = 0
+    for (let index = 0; index < 1_000; index += 1) {
+      measured = measurer.measureTextAdvance("SVG", 10, 0)
+    }
+
+    expect(measured).toBe(15)
+    expect(mapCalls).toBe(3)
+    expect(metricCalls).toBe(3)
   })
 
   test("keeps Text and Image geometry/material identity for transform-only frames", () => {
@@ -699,15 +772,26 @@ describe("RendererWebGpuBackend", () => {
       text(fixture.root, "invalid", {letterSpacing: Number.NaN}),
     ], 5))).toThrow("letterSpacing must be finite")
     expect(() => backend.applyFrame(frame(fixture.document, fixture.root, [
+      text(fixture.root, "invalid", {lineHeight: -1}),
+    ], 6))).toThrow("lineHeight must be non-negative")
+    expect(() => backend.applyFrame(frame(fixture.document, fixture.root, [
+      text(fixture.root, "invalid", {
+        x: Number.MAX_VALUE,
+        y: Number.MAX_VALUE,
+        fontSize: Number.MAX_VALUE,
+        lineHeight: Number.MAX_VALUE,
+      }),
+    ], 7))).toThrow("baselineY must be finite")
+    expect(() => backend.applyFrame(frame(fixture.document, fixture.root, [
       rect(fixture.root, {
         transform: {scaleX: Number.NaN, scaleY: 1, translateX: 0, translateY: 0},
       }),
-    ], 6))).toThrow("transform.scaleX must be finite")
+    ], 8))).toThrow("transform.scaleX must be finite")
     expect(() => backend.applyFrame(frame(fixture.document, fixture.root, [
       rect(fixture.root, {
         shadow: {blurRadius: -1, spreadRadius: 0},
       }),
-    ], 7))).toThrow("shadow.blurRadius must be non-negative")
+    ], 9))).toThrow("shadow.blurRadius must be non-negative")
     expect(backend.root.children).toEqual([stable])
   })
 
@@ -1221,6 +1305,7 @@ function text(
     color: "#ffffff",
     text: value,
     fontSize: 14,
+    lineHeight: values.lineHeight ?? values.fontSize ?? 14,
     opacity: 1,
     clips: Object.freeze([]),
     ...values,
@@ -1363,6 +1448,8 @@ function ellipticalClipRadii(x: number, y: number): RenderClip["radii"] {
 function fakeFont(): TrueTypeFont {
   return {
     unitsPerEm: 1000,
+    ascent: 800,
+    descent: 200,
     mapCharToGlyph: () => 0,
     getGlyphOutline: () => ({
       points: new Float32Array(),

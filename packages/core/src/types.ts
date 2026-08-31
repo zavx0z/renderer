@@ -10,6 +10,11 @@ export type RenderObjectFit = "cover" | "contain"
 export type RenderPosition = "static" | "relative" | "absolute"
 export type RenderZIndex = "auto" | number
 
+export type RenderTextMeasurer = Readonly<{
+  /** Returns one finite non-negative inline advance for the exact resolved font. */
+  measureTextAdvance(value: string, fontSize: number, letterSpacing: number): number
+}>
+
 export type RenderTransform = Readonly<{
   scaleX: number
   scaleY: number
@@ -144,6 +149,8 @@ export type TextDisplayItem = Readonly<{
   y: number
   color: string
   fontSize: number
+  /** Resolved line-box height; `y` is the line-box top, not the alphabetic baseline. */
+  lineHeight: number
   letterSpacing: number
   opacity: number
   clips: readonly RenderClip[]
@@ -217,6 +224,7 @@ export type CreateDocumentRendererOptions = Readonly<{
   viewport: RenderViewport
   styleSheets?: readonly string[]
   interactionState?: DocumentInteractionState
+  textMeasurer?: RenderTextMeasurer
 }>
 
 export interface DocumentRenderer {

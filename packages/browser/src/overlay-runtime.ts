@@ -116,6 +116,7 @@ export function createDocumentOverlayRuntimeWithSeams(
   const interactionState = options.interactionState ?? createDocumentInteractionState(options.document)
   let requestBackendPresentation = (): void => {}
   let backend: RendererWebGpuBackend | null = null
+  let textMeasurer: NonNullable<CreateDocumentRendererOptions["textMeasurer"]> | null = null
   let overlay: RendererWebGpuScreenOverlay | null = null
   let renderer: DocumentRenderer | null = null
   let interaction: DocumentInteractionController | null = null
@@ -158,6 +159,8 @@ export function createDocumentOverlayRuntimeWithSeams(
       invalidateGeometry: options.invalidateGeometry,
       requestPresentation: () => requestBackendPresentation(),
     })
+    textMeasurer = backend.textMeasurer ?? null
+    if (textMeasurer === null) throw new Error("Document overlay font has no text measurer")
     overlay = seams.createOverlay({
       content: backend.root,
       viewport: options.viewport,
@@ -169,6 +172,7 @@ export function createDocumentOverlayRuntimeWithSeams(
       viewport: options.viewport,
       styleSheets,
       interactionState,
+      textMeasurer,
     })
     interaction = seams.createInteraction({
       document: options.document,
@@ -193,10 +197,12 @@ export function createDocumentOverlayRuntimeWithSeams(
   const requiredInteraction = interaction
   if (
     requiredBackend === null ||
+    textMeasurer === null ||
     requiredOverlay === null ||
     requiredRenderer === null ||
     requiredInteraction === null
   ) throw new Error("Document overlay runtime owners were not created")
+  const requiredTextMeasurer = textMeasurer
 
   const flush = (): RenderFrame => {
     assertActive(disposed)
@@ -221,6 +227,7 @@ export function createDocumentOverlayRuntimeWithSeams(
       viewport,
       styleSheets,
       interactionState,
+      textMeasurer: requiredTextMeasurer,
     })
     try {
       requiredOverlay.resize(viewport)

@@ -36,6 +36,7 @@ export type {
   RenderPosition,
   RenderScrollMetrics,
   RenderTextAlign,
+  RenderTextMeasurer,
   RenderTransform,
   RenderViewport,
   RenderWhiteSpace,

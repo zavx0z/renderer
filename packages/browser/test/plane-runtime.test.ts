@@ -222,6 +222,7 @@ describe("createDocumentPlaneRuntime", () => {
     expect(harness.calls.renderers).toBe(1)
     expect(harness.calls.interactions).toBe(1)
     expect(harness.calls.applied).toBe(1)
+    expect(harness.calls.textMeasurers).toEqual([runtime.backend.textMeasurer])
     expect(presentations).toBe(1)
 
     root.title = "Changed"
@@ -242,6 +243,10 @@ describe("createDocumentPlaneRuntime", () => {
     expect(runtime.renderer).not.toBe(firstRenderer)
     expect(harness.calls.rendererDisposals).toBe(1)
     expect(harness.calls.renderers).toBe(2)
+    expect(harness.calls.textMeasurers).toEqual([
+      runtime.backend.textMeasurer,
+      runtime.backend.textMeasurer,
+    ])
 
     runtime.dispose()
     runtime.dispose()
@@ -324,11 +329,15 @@ function createHarness(
     interactionDisposals: 0,
     pointerMoves: [] as PointerInput[],
     wheels: [] as WheelInput[],
+    textMeasurers: [] as unknown[],
   }
   let backendOptions: RendererWebGpuBackendOptions | null = null
   let revision = 0
   const backend = {
     root: new Object3D(),
+    textMeasurer: Object.freeze({
+      measureTextAdvance: () => 0,
+    }),
     applyFrame() { calls.applied += 1 },
     dispose() { calls.backendDisposals += 1 },
   } as unknown as RendererWebGpuBackend
@@ -337,6 +346,7 @@ function createHarness(
     options: Parameters<DocumentPlaneRuntimeSeams["createDocumentRenderer"]>[0],
   ): DocumentRenderer => {
     calls.renderers += 1
+    calls.textMeasurers.push(options.textMeasurer)
     let disposed = false
     const flush = (): RenderFrame => {
       if (disposed) throw new Error("renderer disposed")
@@ -456,6 +466,8 @@ function wheel(values: Partial<WheelInput> = {}): WheelInput {
 function fakeFont(): TrueTypeFont {
   return {
     unitsPerEm: 1_000,
+    ascent: 800,
+    descent: 200,
     mapCharToGlyph: () => 0,
     getGlyphOutline: () => ({
       points: new Float32Array(),

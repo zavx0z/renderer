@@ -789,17 +789,27 @@ computed against the declaring element's font size and inherits as that
 absolute length; px is likewise absolute.
 
 `letter-spacing` is inherited and accepts `normal` or a finite px length,
-including negative values. `normal` resolves to zero. CPU width is deliberately
-deterministic rather than a shaping claim: every Unicode code point contributes
-`0.6 × font-size`, and letter spacing is added exactly between adjacent code
-points, never after the last. Width is clamped non-negative. Multiline height
-and Y placement use the resolved line height; line fragment keys remain
-`text:<line-index>`.
+including negative values. `normal` resolves to zero. A production composition
+supplies one `RenderTextMeasurer` owned by its exact resolved font. Intrinsic
+width, alignment, control values, selection geometry, incremental character
+patches and ellipsis all use that same finite non-negative inline advance.
+Letter spacing is added exactly between adjacent code points, never after the
+last. A renderer created without a measurer retains the deterministic
+`0.6 × font-size` headless fallback; it is not valid evidence for font-backed
+pixel equivalence. Multiline height and Y placement use the resolved line
+height; line fragment keys remain `text:<line-index>`.
+
+Every `TextDisplayItem` transports that finite non-negative resolved
+`lineHeight`. Its `y` is the top of the line box, not a guessed alphabetic
+baseline. A font-owning backend derives the baseline from the exact font ascent
+and descent by distributing the difference between the line height and the
+font metric height equally above and below the glyph area. Core does not invent
+font metrics or bake one backend font into the neutral display list.
 
 `white-space: nowrap` uses the same ASCII whitespace collapsing as `normal` but
 produces one line. `text-overflow` is non-inherited with initial `clip` and also
 accepts `ellipsis`. For a single nowrap line in an `overflow-x:hidden` content
-box, ellipsis replaces the maximum Unicode prefix whose deterministic advance
+box, ellipsis replaces the maximum Unicode prefix whose resolved advance
 plus `…` fits the content width. The existing `text` composite key is retained.
 `clip` keeps the complete text and relies on the ordinary overflow clip. No
 ellipsis is fabricated when the marker itself cannot fit.
@@ -814,9 +824,11 @@ state laws remain unchanged.
 The fixed-row character-data patch measures with the same metrics, recomputes
 ellipsis from the unchanged parent content width and remains equivalent to a
 forced full frame while preserving stable keys and untouched records.
-Selection, caret, glyph shaping, kerning, bidi, font fallback, ligatures,
-grapheme-cluster truncation and browser-exact font metrics remain explicit
-future text-engine phases; this slice creates none of them implicitly.
+Glyph shaping, kerning, bidi, font fallback, ligatures, grapheme-cluster
+truncation, proportional textarea soft-wrap and complete browser inline
+formatting remain explicit future text-engine phases. The current font-owned
+measurer is exact for the unshaped per-codepoint advances consumed by the same
+Engine `CachedText` owner.
 
 ## `RENDERER-CPU-028` — Document compiled stylesheet lifecycle
 

@@ -135,6 +135,8 @@ function fakeViewPoint(): ViewPoint {
 function fakeFont(): TrueTypeFont {
   return {
     unitsPerEm: 1_000,
+    ascent: 800,
+    descent: 200,
     mapCharToGlyph: () => 0,
     getGlyphOutline: () => ({
       points: new Float32Array(),

@@ -7,6 +7,38 @@ import {
 } from "../src/index.ts"
 
 describe("inherited line-height and letter-spacing", () => {
+  test("uses one supplied font advance owner for intrinsic width and ellipsis", () => {
+    const document = createDocument()
+    const root = document.createElement("div")
+    const text = document.createTextNode("SVG")
+    document.appendChild(root)
+    root.appendChild(text)
+    root.setAttribute(
+      "style",
+      "box-sizing:border-box; display:block; width:22px; height:20px; overflow:hidden; white-space:nowrap; text-overflow:ellipsis; font-size:10px; line-height:12px",
+    )
+    const textMeasurer = Object.freeze({
+      measureTextAdvance(value: string, fontSize: number, letterSpacing: number): number {
+        const characters = Array.from(value)
+        return characters.reduce((width, character, index) =>
+          width + (character === "…" ? 0.6 : 0.8) * fontSize +
+            (index + 1 < characters.length ? letterSpacing : 0), 0)
+      },
+    })
+    const options = {
+      document,
+      root,
+      viewport: {width: 40, height: 30},
+      textMeasurer,
+    }
+    const renderer = createDocumentRenderer(options)
+    const frame = renderer.flush()
+
+    expect(frame.boxByNode.get(text)).toMatchObject({width: 24, height: 12})
+    expect(textItems(frame, text)[0]).toMatchObject({text: "SV…"})
+    renderer.dispose()
+  })
+
   test("keeps whitespace layout while omitting non-painting text items", () => {
     const document = createDocument()
     const root = document.createElement("span")
@@ -49,14 +81,15 @@ describe("inherited line-height and letter-spacing", () => {
 
     const frame = renderer.flush()
     expect(frame.boxByNode.get(text)).toMatchObject({width: 22, height: 30})
-    expect(textItems(frame, text).map(({key, text: value, y, letterSpacing}) => ({
+    expect(textItems(frame, text).map(({key, text: value, y, lineHeight, letterSpacing}) => ({
       key,
       value,
       y,
+      lineHeight,
       letterSpacing,
     }))).toEqual([
-      {key: "text:0", value: "ABC", y: 0, letterSpacing: 2},
-      {key: "text:1", value: "D", y: 15, letterSpacing: 2},
+      {key: "text:0", value: "ABC", y: 0, lineHeight: 15, letterSpacing: 2},
+      {key: "text:1", value: "D", y: 15, lineHeight: 15, letterSpacing: 2},
     ])
 
     root.setAttribute(
@@ -125,6 +158,7 @@ describe("nowrap and text-overflow", () => {
       text: "ABCDE…",
       x: 0,
       y: 0,
+      lineHeight: 20,
       letterSpacing: 2,
     })
 
@@ -169,11 +203,13 @@ describe("nowrap and text-overflow", () => {
       key: "value",
       text: "ABCD…",
       y: 5,
+      lineHeight: 20,
       letterSpacing: 1,
     })
     expect(textItems(frame, select)[0]).toMatchObject({
       key: "value",
       text: "A…",
+      lineHeight: 20,
       letterSpacing: 1,
     })
     const areaLines = textItems(frame, textArea)

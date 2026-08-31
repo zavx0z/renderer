@@ -211,6 +211,8 @@ const createClaimedDocumentCanvasRuntime = async (
     invalidateGeometry: (geometry) => engineRenderer.invalidateGeometry(geometry),
     requestPresentation: () => requestBackendPresentation(),
   })
+  const textMeasurer = backend.textMeasurer
+  if (textMeasurer === undefined) throw new Error("Document canvas font has no text measurer")
   let viewport = readViewport(options.canvas, seams)
   const interactionState = createDocumentInteractionState(options.document)
   let documentRenderer = seams.createDocumentRenderer({
@@ -219,6 +221,7 @@ const createClaimedDocumentCanvasRuntime = async (
     viewport,
     styleSheets,
     interactionState,
+    textMeasurer,
   })
   const interaction = seams.createInteraction({
     document: options.document,
@@ -310,6 +313,7 @@ const createClaimedDocumentCanvasRuntime = async (
         viewport: next,
         styleSheets,
         interactionState,
+        textMeasurer,
       })
       viewport = next
       overlay.resize(next)
