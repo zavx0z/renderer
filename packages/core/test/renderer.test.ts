@@ -112,7 +112,7 @@ describe("CPU document renderer", () => {
       kind: "text",
       key: "text",
       text: "Output",
-      color: "red",
+      color: "#ff0000",
       fontSize: 10,
     })
     expect(buttonBox?.padding).toEqual({ top: 4, right: 4, bottom: 4, left: 4 })
@@ -359,21 +359,21 @@ describe("CPU document renderer", () => {
     expect(
       renderer.flush().displayList.find((item) => item.kind === "text"),
     ).toMatchObject({
-      color: "red",
+      color: "#ff0000",
     })
 
     secondParent.appendChild(label)
     expect(
       renderer.flush().displayList.find((item) => item.kind === "text"),
     ).toMatchObject({
-      color: "blue",
+      color: "#0000ff",
     })
 
     secondParent.className = "selected"
     expect(
       renderer.flush().displayList.find((item) => item.kind === "text"),
     ).toMatchObject({
-      color: "purple",
+      color: "#800080",
     })
   })
 
@@ -580,7 +580,7 @@ describe("production CSS box and flex slice", () => {
       opacity: 0.5,
       border: {
         widths: {top: 2, right: 4, bottom: 2, left: 2},
-        colors: {top: "red", right: "green", bottom: "blue", left: "black"},
+        colors: {top: "#ff0000", right: "#008000", bottom: "#0000ff", left: "#000000"},
         radii: {topLeft: 12, topRight: 8, bottomRight: 4, bottomLeft: 2},
       },
     })

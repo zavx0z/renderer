@@ -931,3 +931,25 @@ metrics, textarea-local scroll offsets, bidi, grapheme clusters,
 IME/composition ranges, inactive selection, multiple ranges and ordinary DOM
 Text selection remain unsupported. They fail closed by omitting
 caret/selection items and pointer offset mutation.
+
+## `RENDERER-CPU-033` — bounded computed color transport
+
+The computed style stage admits `currentColor`, `transparent`, three/four/six/
+eight-digit hex, legacy comma and modern space/slash `rgb()`/`rgba()`, plus the
+sixteen basic named colors. Named colors are normalized to lowercase hex and
+all other admitted values are serialized into the bounded transport grammar
+before any Rect or Text display item is emitted. `currentColor` resolves at
+the semantic owner, including inherited text, background, border and the one
+analytical shadow.
+
+A malformed direct color declaration is discarded before cascade priority, so
+a valid lower declaration remains observable. A custom-property substitution
+that produces a malformed color is invalid at computed-value time: it uses the
+property's inherited or initial behavior and does not reveal a lower cascade
+declaration. In particular, a component token such as `48 48 48` is not a CSS
+color by itself and can never enter the display-list ABI or reach WebGPU.
+
+This remains an adapted color subset. The extended named-color table, system
+colors, `hsl()`/`hwb()`/`lab()`/`lch()`/`oklab()`/`oklch()`, `color()`,
+`color-mix()`, relative colors, missing components, interpolation and color
+management are unsupported rather than approximated.

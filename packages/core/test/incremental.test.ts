@@ -104,7 +104,7 @@ describe("characterData incremental frame", () => {
     expect(requireBox(styleFrame, fixture.rows[0]!)).not.toBe(unchangedBox)
     expect(requireTextItem(styleFrame, target)).toMatchObject({
       text: "Changed",
-      color: "red",
+      color: "#ff0000",
     })
 
     const beforeMultiple = styleFrame

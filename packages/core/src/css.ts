@@ -204,6 +204,13 @@ const CENTER_ORIGIN: ComputedTransformOrigin = Object.freeze({
 
 const customPropertyNamePattern = /^--(?:[A-Za-z_]|[^\x00-\x7f])(?:[A-Za-z0-9_-]|[^\x00-\x7f])*$/
 const deferredVariablePropertySet: ReadonlySet<string> = new Set([
+  "background",
+  "background-color",
+  "color",
+  "border-top-color",
+  "border-right-color",
+  "border-bottom-color",
+  "border-left-color",
   "align-content",
   "row-gap",
   "column-gap",
@@ -398,7 +405,7 @@ export const computeStyle = (
   values = resolveCascadedVariables(values, customProperties)
 
   const inheritedColor = parent?.color ?? "#000000"
-  const color = resolvedColor(readValue(values, "color"), inheritedColor)
+  const color = resolvedColor(readValue(values, "color"), inheritedColor) ?? inheritedColor
   const backgroundValue =
     readValue(values, "background-color") ??
     readValue(values, "background")
@@ -704,7 +711,10 @@ const resolveCascadedVariables = (
       invalidateDeferredShorthand(resolved, property, cascaded)
       continue
     }
-    if (deferredVariableShorthandSet.has(property)) {
+    if (
+      deferredVariableShorthandSet.has(property) ||
+      deferredVariablePropertySet.has(property)
+    ) {
       resolved ??= new Map(values)
       resolved.delete(property)
       const expanded = expandDeclaration(property, value)
@@ -743,7 +753,9 @@ const invalidateDeferredShorthand = (
       ? ["border-top-color", "border-right-color", "border-bottom-color", "border-left-color"]
       : property === "gap"
         ? ["row-gap", "column-gap"]
-        : []
+        : property === "background"
+          ? ["background-color"]
+          : []
   for (const target of targets) {
     const current = values.get(target)
     if (current !== undefined && comparePriority(current, cascaded) <= 0) values.delete(target)
@@ -1054,11 +1066,25 @@ const expandDeclaration = (
       const zIndex = validZIndex(value)
       return zIndex === null ? [] : [["z-index", zIndex]]
     }
+    case "background": {
+      const color = normalizeSpecifiedColor(value)
+      return color === null ? [] : [["background-color", color]]
+    }
+    case "background-color":
+    case "color":
+    case "border-top-color":
+    case "border-right-color":
+    case "border-bottom-color":
+    case "border-left-color": {
+      const color = normalizeSpecifiedColor(value)
+      return color === null ? [] : [[property, color]]
+    }
     case "margin":
     case "padding":
     case "border-width":
-    case "border-color":
       return expandQuad(property, value)
+    case "border-color":
+      return expandColorQuad(value)
     case "margin-inline":
     case "padding-inline":
       return expandPair(property.replace("-inline", ""), "left", "right", value)
@@ -1121,6 +1147,25 @@ const expandQuad = (
     [name("right"), right],
     [name("bottom"), bottom],
     [name("left"), left],
+  ]
+}
+
+const expandColorQuad = (
+  value: string,
+): readonly (readonly [string, string])[] => {
+  const parts = splitCssComponents(value)
+  if (parts.length < 1 || parts.length > 4) return []
+  const [top, right = top, bottom = top, left = right] = parts
+  if (top === undefined || right === undefined || bottom === undefined || left === undefined) {
+    return []
+  }
+  const colors = [top, right, bottom, left].map(normalizeSpecifiedColor)
+  if (colors.some((color) => color === null)) return []
+  return [
+    ["border-top-color", colors[0]!],
+    ["border-right-color", colors[1]!],
+    ["border-bottom-color", colors[2]!],
+    ["border-left-color", colors[3]!],
   ]
 }
 
@@ -1303,9 +1348,11 @@ const parseBorder = (
     }
     color = color === null ? part : `${color} ${part}`
   }
+  const resolved = normalizeSpecifiedColor(color ?? "currentcolor")
+  if (resolved === null) return null
   return Object.freeze({
     width: disabled ? "0" : (width ?? "0"),
-    color: color ?? "currentcolor",
+    color: resolved,
   })
 }
 
@@ -1977,21 +2024,14 @@ const hasTopLevelComma = (value: string): boolean => {
 }
 
 const isBoxShadowColor = (value: string): boolean => {
-  const normalized = value.trim().toLowerCase()
-  return normalized === "currentcolor" ||
-    normalized === "transparent" ||
-    normalized in BOX_SHADOW_NAMED_COLORS ||
-    /^#[0-9a-f]{3,4}(?:[0-9a-f]{3,4})?$/i.test(normalized) ||
-    /^(?:rgb|rgba)\([^()]+\)$/i.test(normalized)
+  return normalizeSpecifiedColor(value) !== null
 }
 
 const resolveBoxShadowColor = (value: string, currentColor: string): string => {
-  const normalized = value.trim().toLowerCase()
-  if (normalized === "currentcolor") return currentColor
-  return BOX_SHADOW_NAMED_COLORS[normalized] ?? value.trim()
+  return resolvedColor(value, currentColor) ?? currentColor
 }
 
-const BOX_SHADOW_NAMED_COLORS: Readonly<Record<string, string>> = Object.freeze({
+const BASIC_NAMED_COLORS: Readonly<Record<string, string>> = Object.freeze({
   black: "#000000",
   silver: "#c0c0c0",
   gray: "#808080",
@@ -2009,6 +2049,55 @@ const BOX_SHADOW_NAMED_COLORS: Readonly<Record<string, string>> = Object.freeze(
   teal: "#008080",
   aqua: "#00ffff",
 })
+
+const normalizeSpecifiedColor = (value: string): string | null => {
+  const normalized = value.trim().toLowerCase()
+  if (normalized === "currentcolor" || normalized === "transparent") return normalized
+  const named = BASIC_NAMED_COLORS[normalized]
+  if (named !== undefined) return named
+  if (/^#(?:[0-9a-f]{3,4}|[0-9a-f]{6}|[0-9a-f]{8})$/.test(normalized)) {
+    return normalized
+  }
+
+  const functional = /^(rgb|rgba)\((.*)\)$/.exec(normalized)
+  if (functional === null) return null
+  const functionName = functional[1]!
+  const body = functional[2]!
+  const commaSeparated = body.includes(",")
+  if (commaSeparated) {
+    const parts = body.split(",").map((part) => part.trim())
+    const expected = functionName === "rgba" ? 4 : 3
+    if (parts.length !== expected || parts.some((part) => !validColorChannel(part))) return null
+    const channels = parts.slice(0, 3)
+    const alpha = parts[3]
+    if (!channelsShareUnit(channels) || alpha !== undefined && !validAlphaChannel(alpha)) {
+      return null
+    }
+    return `${functionName}(${parts.join(", ")})`
+  }
+
+  const slash = body.split("/")
+  if (slash.length > 2) return null
+  const channels = slash[0]?.trim().split(/\s+/).filter(Boolean) ?? []
+  const alpha = slash[1]?.trim()
+  if (
+    channels.length !== 3 ||
+    channels.some((channel) => !validColorChannel(channel)) ||
+    alpha === "" ||
+    alpha !== undefined && !validAlphaChannel(alpha)
+  ) return null
+  return `${functionName}(${channels.join(" ")}${alpha === undefined ? "" : ` / ${alpha}`})`
+}
+
+const colorNumberPattern = /^[+-]?(?:\d+\.?\d*|\.\d+)(?:e[+-]?\d+)?%?$/i
+
+const validColorChannel = (value: string): boolean => colorNumberPattern.test(value)
+
+const validAlphaChannel = (value: string): boolean => colorNumberPattern.test(value)
+
+const channelsShareUnit = (channels: readonly string[]): boolean =>
+  channels.every((channel) => channel.endsWith("%")) ||
+  channels.every((channel) => !channel.endsWith("%"))
 
 const validTextAlign = (value: string): boolean => {
   const normalized = value.trim().toLowerCase()
@@ -2240,10 +2329,10 @@ const readBorderColors = (
   currentColor: string,
 ): RenderBorderColors =>
   Object.freeze({
-    top: resolvedColor(readValue(values, "border-top-color"), currentColor),
-    right: resolvedColor(readValue(values, "border-right-color"), currentColor),
-    bottom: resolvedColor(readValue(values, "border-bottom-color"), currentColor),
-    left: resolvedColor(readValue(values, "border-left-color"), currentColor),
+    top: resolvedColor(readValue(values, "border-top-color"), currentColor) ?? currentColor,
+    right: resolvedColor(readValue(values, "border-right-color"), currentColor) ?? currentColor,
+    bottom: resolvedColor(readValue(values, "border-bottom-color"), currentColor) ?? currentColor,
+    left: resolvedColor(readValue(values, "border-left-color"), currentColor) ?? currentColor,
   })
 
 const readBorderRadii = (
@@ -2320,9 +2409,9 @@ const parseBorderWidth = (value: string): number | null => {
   }
 }
 
-const resolvedColor = (value: string | undefined, currentColor: string): string => {
+const resolvedColor = (value: string | undefined, currentColor: string): string | null => {
   if (!value || value.trim().toLowerCase() === "currentcolor") return currentColor
-  return value.trim()
+  return normalizeSpecifiedColor(value)
 }
 
 const isUnitlessNumber = (value: string): boolean =>

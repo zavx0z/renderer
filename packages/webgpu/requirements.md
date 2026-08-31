@@ -23,7 +23,10 @@ accessibility или input semantics.
    `(x + width / 2, -(y + height / 2), 0)`, Text — baseline-позицией
    `(x, -(y + fontSize), 0)`. Paint order задаётся порядком `displayList` и
    `root.children` под Engine `renderLayer = "ui"`.
-4. `color` уже разрешён upstream. Backend поддерживает только транспортные
+4. `color` уже разрешён и проверен upstream. Core не выпускает malformed CSS
+   color в display list: direct invalid declaration отбрасывается до cascade,
+   а invalid-at-computed-value-time `var()` использует inherited/initial law.
+   Backend поддерживает только транспортные
    формы `#rgb`, `#rgba`, `#rrggbb`, `#rrggbbaa`, legacy comma и modern
    space/slash формы `rgb(...)`/`rgba(...)`, а также `transparent`. Внутренний
    белый fallback защищает только от structurally malformed external frame;

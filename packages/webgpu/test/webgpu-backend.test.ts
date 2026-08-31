@@ -13,10 +13,42 @@ import {
   type TrueTypeFont,
 } from "@engine/core"
 import {createDocument, type Node} from "@zavx0z/dom"
-import type {DisplayItem, RenderClip, RenderFrame} from "@zavx0z/renderer"
+import {
+  createDocumentRenderer,
+  type DisplayItem,
+  type RenderClip,
+  type RenderFrame,
+} from "@zavx0z/renderer"
 import {RendererWebGpuBackend} from "../src/index.ts"
 
 describe("RendererWebGpuBackend", () => {
+  test("receives only canonical colors from the computed CSS pipeline", () => {
+    const document = createDocument()
+    const root = document.createElement("main")
+    const canonical = document.createElement("div")
+    const malformed = document.createElement("div")
+    document.appendChild(root)
+    root.append(canonical, malformed)
+    root.setAttribute("style", "display:flex;width:40px;height:20px")
+    canonical.setAttribute("style", "width:20px;height:20px;background:red")
+    malformed.setAttribute(
+      "style",
+      "--surface:48 48 48;width:20px;height:20px;background:var(--surface)",
+    )
+    const frame = createDocumentRenderer({
+      document,
+      root,
+      viewport: {width: 40, height: 20},
+    }).flush()
+    const rectangles = frame.displayList.filter((item) => item.kind === "rect")
+    const backend = new RendererWebGpuBackend({invalidateGeometry() {}})
+
+    expect(rectangles).toHaveLength(1)
+    expect(rectangles[0]).toMatchObject({node: canonical, color: "#ff0000"})
+    expect(() => backend.applyFrame(frame)).not.toThrow()
+    expect(backend.root.children).toHaveLength(1)
+  })
+
   test("maps a Rect into one stable Engine Mesh using top-left coordinates", () => {
     const fixture = renderFixture()
     const invalidated: BufferGeometry[] = []

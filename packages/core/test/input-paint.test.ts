@@ -47,7 +47,7 @@ describe("input replaced-control paint", () => {
       text: "Hello",
       x: 4,
       y: 9,
-      color: "blue",
+      color: "#0000ff",
       fontSize: 10,
       opacity: 1,
     })
@@ -156,9 +156,9 @@ describe("input replaced-control paint", () => {
     )
     const authored = renderer.flush()
     expect(authored.boxByNode.get(input)).toMatchObject({width: 90, height: 18})
-    expect(display(authored, input, "background")).toMatchObject({color: "green"})
+    expect(display(authored, input, "background")).toMatchObject({color: "#008000"})
     expect(display(authored, input, "value")).toMatchObject({
-      color: "white",
+      color: "#ffffff",
       fontSize: 8,
     })
     renderer.dispose()
@@ -193,7 +193,7 @@ describe("checkbox and radio projection", () => {
       (item) => item.node === checkbox && item.kind === "text",
     )).toBe(false)
     const radioIndicator = display(initial, radio, "indicator")
-    expect(radioIndicator).toMatchObject({kind: "rect", color: "blue"})
+    expect(radioIndicator).toMatchObject({kind: "rect", color: "#0000ff"})
     if (radioIndicator.kind !== "rect") throw new Error("Expected radio Rect")
     expect(radioIndicator.border.radii.topLeft).toBe(
       radioIndicator.width / 2,
@@ -213,7 +213,7 @@ describe("checkbox and radio projection", () => {
       key: "indicator",
       node: checkbox,
       text: "✓",
-      color: "green",
+      color: "#008000",
       opacity: 1,
       letterSpacing: 0,
     })
