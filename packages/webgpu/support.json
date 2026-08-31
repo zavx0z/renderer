@@ -548,33 +548,42 @@
     {
       "blockedBy": [],
       "blocks": [],
-      "conformance": "unknown",
+      "conformance": "extension",
       "consumers": [],
       "evidence": [
         {
-          "doesNotProve": "Observable implementation behavior.",
-          "path": "packages/webgpu/requirements.md",
-          "proves": "The owner contract or public export claims this bounded capability.",
+          "doesNotProve": "Successful GPU submission, readback, every display kind or every device.",
+          "path": "packages/webgpu/src/webgpu-backend.ts",
+          "proves": "The production adapter materializes the exact resolved frame text into retained Engine geometry and transforms used by the live canvas path.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "device pixel evidence",
-          "type": "requirement"
+          "revision": "9af61ff761a249a22d1ce22d61a7f2c3855f0c89",
+          "symbol": "RendererWebGpuBackend text materialization",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Every display kind, font, GPU adapter, viewport, clipping combination or device-loss path.",
+          "path": "storybook://captures/capture_kIyZqHyIxkZgmDu4DCMIa7Er",
+          "proves": "The production retained WebGPU path presents the exact SVG label with complete final-glyph pixels, font-owned advance and baseline on one visible canvas with empty diagnostics and console output.",
+          "repository": "external",
+          "revision": "ead10e484f57705410ce58e9",
+          "symbol": "@ui/components/components/foundation/button/icon/svg",
+          "type": "visual-evidence"
         }
       ],
       "id": "webgpu.features.device-pixel-evidence",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-09-01",
+        "revision": "9af61ff761a249a22d1ce22d61a7f2c3855f0c89"
       },
       "limitations": [
-        "Renderer WebGPU tests exercise Engine objects and fake fonts, not GPUDevice submission/readback or browser canvas pixels."
+        "Actual browser canvas pixels are proven for the exact default-font text route; the remaining display kinds, devices, fonts and failure modes do not yet have complete pixel evidence."
       ],
       "owner": {
         "package": "@zavx0z/renderer-webgpu",
         "repository": "renderer",
         "stage": "webgpu"
       },
-      "status": "unverified"
+      "status": "partial"
     },
     {
       "blockedBy": [],
@@ -1201,31 +1210,40 @@
       "consumers": [],
       "evidence": [
         {
-          "doesNotProve": "Complete CSS paint semantics and actual GPU pixels.",
+          "doesNotProve": "Font-family selection, fallback, shaping, bidi, vertical writing or every device.",
           "path": "packages/webgpu/src/webgpu-backend.ts",
-          "proves": "The bounded materialization path.",
+          "proves": "One exact Engine font owns the cached baseline ratio and a bounded per-codepoint advance cache shared with CPU layout; retained text uses the same font and letter spacing.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "text",
+          "revision": "9af61ff761a249a22d1ce22d61a7f2c3855f0c89",
+          "symbol": "readFontMetrics/createFontTextMeasurer/positionText",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Every CSS combination and device output.",
+          "doesNotProve": "Every real font, glyph and GPU adapter.",
           "path": "packages/webgpu/test/webgpu-backend.test.ts",
-          "proves": "Current retained Engine-object behavior.",
+          "proves": "Different line heights preserve retained geometry, spaces receive between-character spacing, and one thousand repeated SVG measures map each code point only once.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "text",
+          "revision": "9af61ff761a249a22d1ce22d61a7f2c3855f0c89",
+          "symbol": "alphabetic baseline and cached font advances",
           "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Font selection/fallback, shaping, every script, size, clip chain, device or native-browser equivalence.",
+          "path": "storybook://captures/capture_kIyZqHyIxkZgmDu4DCMIa7Er",
+          "proves": "Real default-font SVG glyph pixels use the corrected baseline, exact 22.854px advance and a complete final G on the exact one-canvas route with zero console errors.",
+          "repository": "external",
+          "revision": "ead10e484f57705410ce58e9",
+          "symbol": "@ui/components/components/foundation/button/icon/svg",
+          "type": "visual-evidence"
         }
       ],
       "id": "webgpu.features.text",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-09-01",
+        "revision": "9af61ff761a249a22d1ce22d61a7f2c3855f0c89"
       },
       "limitations": [
-        "Requires one external TrueTypeFont and does not prove real glyph pixels in this checkout."
+        "The backend owns one resolved TrueTypeFont, a bounded per-codepoint advance cache and a metric-derived alphabetic baseline proven in real pixels; font-family selection, fallback, shaping, bidi and complete multi-font CSS text remain unsupported."
       ],
       "owner": {
         "package": "@zavx0z/renderer-webgpu",
@@ -1385,7 +1403,7 @@
     }
   ],
   "repository": "renderer",
-  "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+  "revision": "9af61ff761a249a22d1ce22d61a7f2c3855f0c89",
   "schemaVersion": 1,
-  "verificationDate": "2026-08-29"
+  "verificationDate": "2026-09-01"
 }

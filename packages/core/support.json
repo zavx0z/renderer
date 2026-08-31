@@ -84045,32 +84045,58 @@
           "type": "external-spec"
         },
         {
-          "doesNotProve": "The complete grammar/value space and all downstream stages.",
-          "lines": "280-738",
+          "doesNotProve": "The complete CSS grammar, font selection, shaping or browser-exact typography.",
           "path": "packages/core/src/css.ts",
-          "proves": "The bounded parser/cascade/computed value stage for this property.",
+          "proves": "The bounded cascade preserves unitless inheritance and resolves admitted line-height values to finite non-negative line-box heights.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "line-height",
+          "revision": "9af61ff761a249a22d1ce22d61a7f2c3855f0c89",
+          "symbol": "parseLineHeight/resolveLineHeight",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Every standard value and combination.",
-          "path": "packages/core/test/renderer.test.ts",
-          "proves": "Observable bounded layout/paint behavior.",
+          "doesNotProve": "Backend font selection, glyph geometry or GPU pixels.",
+          "path": "packages/core/src/renderer.ts",
+          "proves": "Every ordinary, control, textarea and renderer-owned text fragment transports resolved line height with y as the line-box top.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "line-height",
+          "revision": "9af61ff761a249a22d1ce22d61a7f2c3855f0c89",
+          "symbol": "TextDisplayItem.lineHeight",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Font shaping, fallback, bidi, vertical writing or complete CSS Inline conformance.",
+          "path": "packages/core/test/typography.test.ts",
+          "proves": "Observable frames prove unitless inheritance, absolute values, multiline placement and lineHeight transport on stable text fragments.",
+          "repository": "renderer",
+          "revision": "9af61ff761a249a22d1ce22d61a7f2c3855f0c89",
+          "symbol": "inherited line-height and letter-spacing",
           "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Other fonts, shaping, fallback or every live device.",
+          "path": "packages/webgpu/test/webgpu-backend.test.ts",
+          "proves": "Exact TTF ascent/descent metrics position the alphabetic baseline, and a line-height-only update preserves CachedText and both geometries.",
+          "repository": "renderer",
+          "revision": "9af61ff761a249a22d1ce22d61a7f2c3855f0c89",
+          "symbol": "alphabetic baseline from the line box",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Every font, size, line-height, script, viewport or complete native-browser typography equivalence.",
+          "path": "storybook://captures/capture_KPaxDthim-pACzG87gJloyan",
+          "proves": "The exact ready/presented DOM route renders the 11px Cyrillic navigation label with its descender inside the unchanged 22px control on one visible canvas and with zero console errors.",
+          "repository": "external",
+          "revision": "cf68da24a7f5d70053f480d3",
+          "symbol": "@zavx0z/dom/elements/primitives/status-bar/content/statistics",
+          "type": "visual-evidence"
         }
       ],
       "id": "css.properties.line-height",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-09-01",
+        "revision": "9af61ff761a249a22d1ce22d61a7f2c3855f0c89"
       },
       "limitations": [
-        "Only the explicitly admitted property values and bounded CPU/backend algorithms are implemented."
+        "The admitted normal, finite non-negative number, px, percentage and compatible calc() subset now transports exact resolved line-box height through CPU paint and positions one backend-resolved TTF on its alphabetic baseline. Font-family selection, fallback, shaping, kerning, bidi, vertical writing, CSS-wide keywords, animation and complete browser typography remain unsupported."
       ],
       "owner": {
         "package": "@zavx0z/renderer",
@@ -135268,7 +135294,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "45",
+          "lines": "46",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135428,7 +135454,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "45",
+          "lines": "46",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135460,7 +135486,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "53",
+          "lines": "54",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135492,7 +135518,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "53",
+          "lines": "54",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135524,7 +135550,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "53",
+          "lines": "54",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135684,7 +135710,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "45",
+          "lines": "46",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136479,6 +136505,38 @@
     {
       "blockedBy": [],
       "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "9",
+          "path": "packages/core/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "9af61ff761a249a22d1ce22d61a7f2c3855f0c89",
+          "symbol": "RenderTextMeasurer",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.rendertextmeasurer",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "9af61ff761a249a22d1ce22d61a7f2c3855f0c89"
+      },
+      "limitations": [
+        "The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
       "conformance": "unknown",
       "consumers": [],
       "evidence": [
@@ -136715,7 +136773,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "45",
+          "lines": "46",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136747,7 +136805,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "45",
+          "lines": "46",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136779,7 +136837,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "45",
+          "lines": "46",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -137826,31 +137884,67 @@
       "consumers": [],
       "evidence": [
         {
-          "doesNotProve": "The complete CSS/browser algorithm.",
-          "path": "packages/core/src/renderer.ts",
-          "proves": "The bounded CPU frame stage exists.",
+          "doesNotProve": "Font selection, shaping or browser-wide inline formatting.",
+          "path": "packages/core/src/types.ts",
+          "proves": "The neutral CPU contract admits one exact resolved-font inline-advance owner without importing Engine into Core.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "line-breaking",
+          "revision": "9af61ff761a249a22d1ce22d61a7f2c3855f0c89",
+          "symbol": "RenderTextMeasurer",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Unsupported values and general incremental coverage.",
-          "path": "packages/core/test/renderer.test.ts",
-          "proves": "Observable behavior for the bounded subset.",
+          "doesNotProve": "Kerning, shaping, bidi, fallback or proportional textarea soft-wrap.",
+          "path": "packages/core/src/renderer.ts",
+          "proves": "Intrinsic measurement, alignment, control text, selection geometry, incremental character patches and ellipsis consume the same supplied font advance.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "line-breaking",
+          "revision": "9af61ff761a249a22d1ce22d61a7f2c3855f0c89",
+          "symbol": "textAdvance/measureText/ellipsizeSingleLine",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Non-browser manual composition or multi-font CSS selection.",
+          "path": "packages/browser/src/runtime.ts",
+          "proves": "Browser composition passes the exact backend font measurer to every CPU renderer and preserves it across resize replacement.",
+          "repository": "renderer",
+          "revision": "9af61ff761a249a22d1ce22d61a7f2c3855f0c89",
+          "symbol": "Canvas/Plane/Overlay textMeasurer ownership",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Shaping, kerning, fallback, bidi or native browser equivalence.",
+          "path": "packages/core/test/typography.test.ts",
+          "proves": "A proportional supplied advance changes intrinsic width and the exact ellipsis prefix instead of using the 0.6em fallback.",
+          "repository": "renderer",
+          "revision": "9af61ff761a249a22d1ce22d61a7f2c3855f0c89",
+          "symbol": "supplied font advance owner",
           "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Every external host or multi-font composition.",
+          "path": "packages/browser/test/runtime.test.ts",
+          "proves": "Canvas and Plane seams preserve the identical backend measurer on initial CPU construction and viewport replacement.",
+          "repository": "renderer",
+          "revision": "9af61ff761a249a22d1ce22d61a7f2c3855f0c89",
+          "symbol": "exact backend text measurer across resize",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Every font, script, size, shaping mode, textarea wrap or browser implementation.",
+          "path": "storybook://captures/capture_kIyZqHyIxkZgmDu4DCMIa7Er",
+          "proves": "The exact UI SVG variant presents its final G with the font-owned 22.854px span width and no right-edge loss on one canvas with zero console errors.",
+          "repository": "external",
+          "revision": "ead10e484f57705410ce58e9",
+          "symbol": "@ui/components/components/foundation/button/icon/svg",
+          "type": "visual-evidence"
         }
       ],
       "id": "renderer.features.line-breaking",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-09-01",
+        "revision": "9af61ff761a249a22d1ce22d61a7f2c3855f0c89"
       },
       "limitations": [
-        "Text measurement is an adapted fixed advance model without shaping, kerning, bidi, fallback, or full inline formatting."
+        "Production Canvas/Plane/Overlay composition now uses one exact font-owned unshaped per-codepoint advance owner for intrinsic width, alignment, controls, selection geometry, incremental text and ellipsis. Headless CPU rendering retains the deterministic 0.6em fallback. Kerning, shaping, ligatures, bidi, fallback, grapheme truncation, proportional textarea soft-wrap and complete inline formatting remain unsupported."
       ],
       "owner": {
         "package": "@zavx0z/renderer",
@@ -138642,31 +138736,67 @@
       "consumers": [],
       "evidence": [
         {
-          "doesNotProve": "The complete CSS/browser algorithm.",
-          "path": "packages/core/src/renderer.ts",
-          "proves": "The bounded CPU frame stage exists.",
+          "doesNotProve": "Font selection, shaping or browser-wide inline formatting.",
+          "path": "packages/core/src/types.ts",
+          "proves": "The neutral CPU contract admits one exact resolved-font inline-advance owner without importing Engine into Core.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "typography",
+          "revision": "9af61ff761a249a22d1ce22d61a7f2c3855f0c89",
+          "symbol": "RenderTextMeasurer",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Unsupported values and general incremental coverage.",
-          "path": "packages/core/test/renderer.test.ts",
-          "proves": "Observable behavior for the bounded subset.",
+          "doesNotProve": "Kerning, shaping, bidi, fallback or proportional textarea soft-wrap.",
+          "path": "packages/core/src/renderer.ts",
+          "proves": "Intrinsic measurement, alignment, control text, selection geometry, incremental character patches and ellipsis consume the same supplied font advance.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "typography",
+          "revision": "9af61ff761a249a22d1ce22d61a7f2c3855f0c89",
+          "symbol": "textAdvance/measureText/ellipsizeSingleLine",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Non-browser manual composition or multi-font CSS selection.",
+          "path": "packages/browser/src/runtime.ts",
+          "proves": "Browser composition passes the exact backend font measurer to every CPU renderer and preserves it across resize replacement.",
+          "repository": "renderer",
+          "revision": "9af61ff761a249a22d1ce22d61a7f2c3855f0c89",
+          "symbol": "Canvas/Plane/Overlay textMeasurer ownership",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Shaping, kerning, fallback, bidi or native browser equivalence.",
+          "path": "packages/core/test/typography.test.ts",
+          "proves": "A proportional supplied advance changes intrinsic width and the exact ellipsis prefix instead of using the 0.6em fallback.",
+          "repository": "renderer",
+          "revision": "9af61ff761a249a22d1ce22d61a7f2c3855f0c89",
+          "symbol": "supplied font advance owner",
           "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Every external host or multi-font composition.",
+          "path": "packages/browser/test/runtime.test.ts",
+          "proves": "Canvas and Plane seams preserve the identical backend measurer on initial CPU construction and viewport replacement.",
+          "repository": "renderer",
+          "revision": "9af61ff761a249a22d1ce22d61a7f2c3855f0c89",
+          "symbol": "exact backend text measurer across resize",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Every font, script, size, shaping mode, textarea wrap or browser implementation.",
+          "path": "storybook://captures/capture_kIyZqHyIxkZgmDu4DCMIa7Er",
+          "proves": "The exact UI SVG variant presents its final G with the font-owned 22.854px span width and no right-edge loss on one canvas with zero console errors.",
+          "repository": "external",
+          "revision": "ead10e484f57705410ce58e9",
+          "symbol": "@ui/components/components/foundation/button/icon/svg",
+          "type": "visual-evidence"
         }
       ],
       "id": "renderer.features.typography",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-09-01",
+        "revision": "9af61ff761a249a22d1ce22d61a7f2c3855f0c89"
       },
       "limitations": [
-        "Text measurement is an adapted fixed advance model without shaping, kerning, bidi, fallback, or full inline formatting."
+        "Production Canvas/Plane/Overlay composition now uses one exact font-owned unshaped per-codepoint advance owner for intrinsic width, alignment, controls, selection geometry, incremental text and ellipsis. Headless CPU rendering retains the deterministic 0.6em fallback. Kerning, shaping, ligatures, bidi, fallback, grapheme truncation, proportional textarea soft-wrap and complete inline formatting remain unsupported."
       ],
       "owner": {
         "package": "@zavx0z/renderer",
@@ -138788,7 +138918,7 @@
     }
   ],
   "repository": "renderer",
-  "revision": "72fa158b043408817725856ce2b8e26d6a0e4d18",
+  "revision": "9af61ff761a249a22d1ce22d61a7f2c3855f0c89",
   "schemaVersion": 1,
-  "verificationDate": "2026-08-30"
+  "verificationDate": "2026-09-01"
 }

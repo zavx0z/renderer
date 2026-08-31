@@ -971,7 +971,7 @@
       "path": "platform/dom-exports.json"
     },
     {
-      "digest": "10500b881297e7fa69e479ca98b4e91a9ad41ef4b9b45455814e3fdc269181f1",
+      "digest": "7cc0ae49c7bb0781c5c491656f730a0865eb83aa90baacfa0ada5369c22a8937",
       "entries": 114,
       "path": "platform/engine-exports.json"
     },
@@ -986,8 +986,8 @@
       "path": "platform/react-exports.json"
     },
     {
-      "digest": "bde0f9ded8c0279ca10f16b842f90e8786545b27c2cfcb5a0d08f5d6d48e89cd",
-      "entries": 50,
+      "digest": "5dce4c69681cdf3a05df08bf6ade35dc6607b1e52a01c99e129a1c864aac4655",
+      "entries": 51,
       "path": "platform/renderer-exports.json"
     },
     {
@@ -1073,5 +1073,5 @@
   ],
   "generatorVersion": "1.0.0",
   "schemaVersion": 1,
-  "totalEntries": 8742
+  "totalEntries": 8743
 }

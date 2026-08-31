@@ -1,52 +1,7 @@
 {
   "schemaVersion": 1,
-  "verificationDate": "2026-08-29",
+  "verificationDate": "2026-09-01",
   "gaps": [
-    {
-      "schemaVersion": 1,
-      "id": "gap.engine.glyph-cache-font-identity",
-      "capability": "engine.features.glyph-cache-identity",
-      "reportedBy": {
-        "repository": "renderer",
-        "package": "@zavx0z/renderer-webgpu",
-        "subject": "retained text materialization",
-        "scenario": "two fonts reuse the same glyph id"
-      },
-      "expected": {
-        "reference": "@engine/core text/resource contract",
-        "behavior": "Glyph geometry cache identity includes the exact font and glyph so different fonts cannot share incompatible outlines."
-      },
-      "actual": {
-        "behavior": "The static glyph cache is keyed only by gid; a diagnostic probe produced identical geometry for two fonts with the same gid and different outlines.",
-        "evidence": [
-          {
-            "type": "implementation",
-            "repository": "engine",
-            "revision": "18c55d6c3dc68d1f2ab257378a505e5bac2eea3e",
-            "path": "packages/core/src/objects/text.ts",
-            "symbol": "glyphGeometryCache",
-            "lines": "159-268",
-            "proves": "Cache lookup and insertion use gid without font identity.",
-            "doesNotProve": "The eventual generic cache design."
-          }
-        ]
-      },
-      "minimalReproduction": {
-        "source": "Create two fake fonts that return the same gid but different outlines, then construct Text geometry for each.",
-        "test": "Assert the second geometry differs from the first; current code returns the first geometry."
-      },
-      "suspectedOwner": {
-        "repository": "engine",
-        "package": "@engine/core",
-        "stage": "text-resource"
-      },
-      "severity": "P0",
-      "dependencies": [],
-      "forbiddenLocalWorkarounds": [
-        "Changing glyph ids in Renderer or components",
-        "Per-component Text caches"
-      ]
-    },
     {
       "schemaVersion": 1,
       "id": "gap.engine.texture-cache-device-identity",

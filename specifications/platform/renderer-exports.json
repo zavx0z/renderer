@@ -56,7 +56,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 45,
+        "line": 46,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -69,7 +69,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L45",
+        "anchor": "renderer:packages/core/src/index.ts#L46",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -186,7 +186,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 45,
+        "line": 46,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -199,7 +199,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L45",
+        "anchor": "renderer:packages/core/src/index.ts#L46",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -212,7 +212,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 53,
+        "line": 54,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -225,7 +225,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L53",
+        "anchor": "renderer:packages/core/src/index.ts#L54",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -238,7 +238,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 53,
+        "line": 54,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -251,7 +251,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L53",
+        "anchor": "renderer:packages/core/src/index.ts#L54",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -264,7 +264,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 53,
+        "line": 54,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -277,7 +277,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L53",
+        "anchor": "renderer:packages/core/src/index.ts#L54",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -394,7 +394,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 45,
+        "line": 46,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -407,7 +407,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L45",
+        "anchor": "renderer:packages/core/src/index.ts#L46",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -1038,6 +1038,32 @@
       }
     },
     {
+      "description": "@zavx0z/renderer public type export RenderTextMeasurer.",
+      "domain": "renderer",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.rendertextmeasurer",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 9,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderTextMeasurer",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      }
+    },
+    {
       "description": "@zavx0z/renderer public type export RenderTransform.",
       "domain": "renderer",
       "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.rendertransform",
@@ -1226,7 +1252,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 45,
+        "line": 46,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -1239,7 +1265,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L45",
+        "anchor": "renderer:packages/core/src/index.ts#L46",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -1252,7 +1278,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 45,
+        "line": 46,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -1265,7 +1291,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L45",
+        "anchor": "renderer:packages/core/src/index.ts#L46",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -1278,7 +1304,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 45,
+        "line": 46,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -1291,7 +1317,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L45",
+        "anchor": "renderer:packages/core/src/index.ts#L46",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"

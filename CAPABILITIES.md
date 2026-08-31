@@ -11,11 +11,11 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | Repository | Branch | Revision | Dirty at generation |
 |---|---|---|---:|
 | demo | main | `470c70a70b436fb3e3ae121b3ab81fa410ef3255` | no |
-| engine | main | `cfca4063afd78f8edf6060876ad20b465a4400d7` | no |
+| engine | main | `0d63eeaf4e2057316212a1a8f5ff31684f22e2b2` | yes |
 | interpreter | main | `4f02274a6e9f99a8717507fe5885301a33eec4dc` | no |
 | metafor | main | `7611415474fae233cd88abc8b1fc14746316333c` | no |
 | node | main | `112ea769255b4b93ce8481e6283dda443f60d07a` | no |
-| renderer | main | `9ec3b8cb72d0e5517eee895b0dcbfd14b1204c05` | yes |
+| renderer | main | `9af61ff761a249a22d1ce22d61a7f2c3855f0c89` | yes |
 | storybook | main | `a7bcfd022d260392dda0695e095fc8db4896191d` | no |
 | template | main | `ad9f272844a876e178b6b0041153588111045764` | no |
 | ui | main | `4ff57bc55c6b4336746e7d120912f85ab6224527` | no |
@@ -57,24 +57,24 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | css | 3032 | 3032 | 0 | 179 | 2853 | 0 | 0 | 0 |
 | devtools | 31 | 31 | 13 | 0 | 5 | 0 | 13 | 0 |
 | dom | 1218 | 1218 | 81 | 249 | 706 | 0 | 182 | 0 |
-| engine | 152 | 152 | 14 | 34 | 5 | 0 | 99 | 0 |
+| engine | 152 | 152 | 15 | 34 | 4 | 0 | 99 | 0 |
 | html | 3729 | 3729 | 0 | 996 | 1946 | 787 | 0 | 0 |
 | react | 211 | 211 | 28 | 49 | 70 | 35 | 29 | 0 |
-| renderer | 96 | 96 | 6 | 42 | 3 | 0 | 45 | 0 |
+| renderer | 97 | 97 | 6 | 43 | 3 | 0 | 45 | 0 |
 | tsx | 166 | 166 | 72 | 22 | 28 | 0 | 44 | 0 |
-| webgpu | 37 | 37 | 18 | 11 | 1 | 0 | 7 | 0 |
+| webgpu | 37 | 37 | 18 | 12 | 1 | 0 | 6 | 0 |
 
 ## Owner overlays
 
 | Package | Repository | Revision | Records |
 |---|---|---|---:|
-| @engine/core | engine | `31164f46bb3d5dd9a7df018203f0e13a8a383dc5` | 152 |
+| @engine/core | engine | `0d63eeaf4e2057316212a1a8f5ff31684f22e2b2` | 152 |
 | @zavx0z/dom | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 4947 |
 | @zavx0z/dom-devtools | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 31 |
 | @zavx0z/react | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 211 |
-| @zavx0z/renderer | renderer | `72fa158b043408817725856ce2b8e26d6a0e4d18` | 3128 |
+| @zavx0z/renderer | renderer | `9af61ff761a249a22d1ce22d61a7f2c3855f0c89` | 3129 |
 | @zavx0z/renderer-browser | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 70 |
-| @zavx0z/renderer-webgpu | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 37 |
+| @zavx0z/renderer-webgpu | renderer | `9af61ff761a249a22d1ce22d61a7f2c3855f0c89` | 37 |
 | @zavx0z/template | template | `838a214a83950259f3f5d543e881e11402bc230c` | 166 |
 
 ## Complete matrix
@@ -2069,7 +2069,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `css.properties.line-clamp` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
 | `css.properties.line-fit-edge` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
 | `css.properties.line-grid` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
-| `css.properties.line-height` | property | partial | adapted | @zavx0z/renderer/cpu | Only the explicitly admitted property values and bounded CPU/backend algorithms are implemented. | 3 | 0 |
+| `css.properties.line-height` | property | partial | adapted | @zavx0z/renderer/cpu | The admitted normal, finite non-negative number, px, percentage and compatible calc() subset now transports exact resolved line-box height through CPU paint and positions one backend-resolved TTF on its alphabetic baseline. Font-family selection, fallback, shaping, kerning, bidi, vertical writing, CSS-wide keywords, animation and complete browser typography remain unsupported. | 6 | 0 |
 | `css.properties.line-height-step` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
 | `css.properties.line-padding` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
 | `css.properties.line-snap` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
@@ -4467,10 +4467,10 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `engine.features.dirty-intervals` | engine-contract | implemented | extension | @engine/core/gpu-scene-resource | — | 2 | 0 |
 | `engine.features.dom-css-ownership-boundary` | engine-contract | unsupported | none | @engine/core/gpu-scene-resource | @engine/core publicly owns CSS-like LayoutProps/ComputedLayout on Object3D, violating the accepted platform boundary. | 1 | 0 |
 | `engine.features.draw-range-views` | engine-contract | implemented | extension | @engine/core/gpu-scene-resource | — | 2 | 0 |
-| `engine.features.font-loading` | engine-contract | partial | extension | @engine/core/gpu-scene-resource | No shaping, kerning, ligatures, bidi, multiline layout, or direct Text geometry behavioral suite; cache identity also has a font-key correctness gap. | 2 | 0 |
+| `engine.features.font-loading` | engine-contract | partial | extension | @engine/core/gpu-scene-resource | Exact font/glyph cache identity, advance-cell cover geometry and between-codepoint spacing are behaviorally proven; shaping, kerning, ligatures, bidi, fallback and multiline text layout remain unsupported. | 3 | 0 |
 | `engine.features.geometry` | engine-contract | partial | extension | @engine/core/gpu-scene-resource | Implementation exists, but the public lifecycle/value space or focused behavioral evidence is incomplete. | 2 | 0 |
 | `engine.features.gltf` | engine-contract | partial | extension | @engine/core/gpu-scene-resource | A bounded implementation exists without focused behavioral tests for many admitted branches. | 2 | 0 |
-| `engine.features.glyph-cache-identity` | engine-contract | unsupported | none | @engine/core/gpu-scene-resource | Glyph geometry cache keys only by gid, so different fonts with the same glyph ID reuse incorrect geometry. | 1 | 0 |
+| `engine.features.glyph-cache-identity` | engine-contract | implemented | extension | @engine/core/gpu-scene-resource | — | 2 | 0 |
 | `engine.features.gpu-device-evidence` | engine-contract | implemented | extension | @engine/core/gpu-scene-resource | — | 2 | 0 |
 | `engine.features.index-buffer-format` | engine-contract | unverified | unknown | @engine/core/gpu-scene-resource | setIndex accepts arbitrary typed arrays while Renderer binds every non-Uint32 index as uint16; invalid inputs are not rejected. | 1 | 0 |
 | `engine.features.instance-layer` | engine-contract | implemented | extension | @engine/core/gpu-scene-resource | — | 2 | 0 |
@@ -4485,7 +4485,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `engine.features.resource-lifetime` | engine-contract | partial | extension | @engine/core/gpu-scene-resource | No whole-renderer/texture-cache teardown or device-loss recovery contract exists. | 2 | 0 |
 | `engine.features.scene-graph` | engine-contract | partial | extension | @engine/core/gpu-scene-resource | Implementation exists, but the public lifecycle/value space or focused behavioral evidence is incomplete. | 2 | 0 |
 | `engine.features.space` | engine-contract | partial | extension | @engine/core/gpu-scene-resource | Implementation exists, but the public lifecycle/value space or focused behavioral evidence is incomplete. | 2 | 0 |
-| `engine.features.text` | engine-contract | partial | extension | @engine/core/gpu-scene-resource | No shaping, kerning, ligatures, bidi, multiline layout, or direct Text geometry behavioral suite; cache identity also has a font-key correctness gap. | 2 | 0 |
+| `engine.features.text` | engine-contract | partial | extension | @engine/core/gpu-scene-resource | Exact font/glyph cache identity, advance-cell cover geometry and between-codepoint spacing are behaviorally proven; shaping, kerning, ligatures, bidi, fallback and multiline text layout remain unsupported. | 3 | 0 |
 | `engine.features.texture-device-identity` | engine-contract | unsupported | none | @engine/core/gpu-scene-resource | Texture and fallback caches are process-global by src rather than scoped by GPUDevice. | 1 | 0 |
 | `engine.features.texture-image-loading` | engine-contract | partial | extension | @engine/core/gpu-scene-resource | Implementation exists, but the public lifecycle/value space or focused behavioral evidence is incomplete. | 2 | 0 |
 | `engine.features.transforms` | engine-contract | partial | extension | @engine/core/gpu-scene-resource | Implementation exists, but the public lifecycle/value space or focused behavioral evidence is incomplete. | 2 | 0 |
@@ -8601,6 +8601,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.renderposition` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.renderscrollmetrics` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.rendertextalign` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-zavx0z-renderer.export-paths.root.symbols.rendertextmeasurer` | type-export | partial | extension | @zavx0z/renderer/cpu | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.rendertransform` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.renderviewport` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.renderwhitespace` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
@@ -8633,7 +8634,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `renderer.features.inheritance` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.inline-layout` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.invalidation` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Dirty bookkeeping exists, but general dirty frames still remeasure/place/re-emit; only narrow Text and transform fast paths reuse records. | 2 | 0 |
-| `renderer.features.line-breaking` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Text measurement is an adapted fixed advance model without shaping, kerning, bidi, fallback, or full inline formatting. | 2 | 0 |
+| `renderer.features.line-breaking` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Production Canvas/Plane/Overlay composition now uses one exact font-owned unshaped per-codepoint advance owner for intrinsic width, alignment, controls, selection geometry, incremental text and ellipsis. Headless CPU rendering retains the deterministic 0.6em fallback. Kerning, shaping, ligatures, bidi, fallback, grapheme truncation, proportional textarea soft-wrap and complete inline formatting remain unsupported. | 6 | 0 |
 | `renderer.features.overflow` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.performance-paths` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.pointer` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Implemented for the bounded rendered-control set including explicit semantic capture, horizontal Range and collapsed Select; implicit touch capture and complete Pointer Events/HTML default actions remain outside Core. | 3 | 0 |
@@ -8653,7 +8654,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `renderer.features.tooltip-title` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.transform-subtree-fast-path` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Dirty bookkeeping exists, but general dirty frames still remeasure/place/re-emit; only narrow Text and transform fast paths reuse records. | 2 | 0 |
 | `renderer.features.transforms` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
-| `renderer.features.typography` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Text measurement is an adapted fixed advance model without shaping, kerning, bidi, fallback, or full inline formatting. | 2 | 0 |
+| `renderer.features.typography` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Production Canvas/Plane/Overlay composition now uses one exact font-owned unshaped per-codepoint advance owner for intrinsic width, alignment, controls, selection geometry, incremental text and ellipsis. Headless CPU rendering retains the deterministic 0.6em fallback. Kerning, shaping, ligatures, bidi, fallback, grapheme truncation, proportional textarea soft-wrap and complete inline formatting remain unsupported. | 6 | 0 |
 | `renderer.features.vector-path-display-item` | renderer-stage | unsupported | none | @zavx0z/renderer/cpu | The CPU renderer has no implementation of this internal platform capability. | 1 | 2 |
 | `renderer.features.wheel` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.z-index` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
@@ -8848,7 +8849,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `webgpu.features.cleanup` | webgpu-backend | implemented | extension | @zavx0z/renderer-webgpu/webgpu | — | 2 | 0 |
 | `webgpu.features.clipping` | webgpu-backend | partial | adapted | @zavx0z/renderer-webgpu/webgpu | Implemented only for display-list values admitted by frame validation and retained materialization. | 2 | 0 |
 | `webgpu.features.colors` | webgpu-backend | partial | adapted | @zavx0z/renderer-webgpu/webgpu | Transport accepts transparent, hex, and rgb/rgba only; it is not a CSS Color implementation. | 2 | 0 |
-| `webgpu.features.device-pixel-evidence` | webgpu-backend | unverified | unknown | @zavx0z/renderer-webgpu/webgpu | Renderer WebGPU tests exercise Engine objects and fake fonts, not GPUDevice submission/readback or browser canvas pixels. | 1 | 0 |
+| `webgpu.features.device-pixel-evidence` | webgpu-backend | partial | extension | @zavx0z/renderer-webgpu/webgpu | Actual browser canvas pixels are proven for the exact default-font text route; the remaining display kinds, devices, fonts and failure modes do not yet have complete pixel evidence. | 2 | 0 |
 | `webgpu.features.diagnostics` | webgpu-backend | implemented | extension | @zavx0z/renderer-webgpu/webgpu | — | 2 | 0 |
 | `webgpu.features.document-plane` | webgpu-backend | implemented | extension | @zavx0z/renderer-webgpu/webgpu | — | 2 | 0 |
 | `webgpu.features.frame-validation` | webgpu-backend | implemented | extension | @zavx0z/renderer-webgpu/webgpu | — | 2 | 0 |
@@ -8865,7 +8866,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `webgpu.features.screen-overlay` | webgpu-backend | implemented | extension | @zavx0z/renderer-webgpu/webgpu | — | 2 | 0 |
 | `webgpu.features.shadows` | webgpu-backend | partial | adapted | @zavx0z/renderer-webgpu/webgpu | Implemented only for display-list values admitted by frame validation and retained materialization. | 2 | 0 |
 | `webgpu.features.stable-slots` | webgpu-backend | implemented | extension | @zavx0z/renderer-webgpu/webgpu | — | 2 | 0 |
-| `webgpu.features.text` | webgpu-backend | partial | adapted | @zavx0z/renderer-webgpu/webgpu | Requires one external TrueTypeFont and does not prove real glyph pixels in this checkout. | 2 | 0 |
+| `webgpu.features.text` | webgpu-backend | partial | adapted | @zavx0z/renderer-webgpu/webgpu | The backend owns one resolved TrueTypeFont, a bounded per-codepoint advance cache and a metric-derived alphabetic baseline proven in real pixels; font-family selection, fallback, shaping, bidi and complete multi-font CSS text remain unsupported. | 3 | 0 |
 | `webgpu.features.texture-readiness` | webgpu-backend | partial | adapted | @zavx0z/renderer-webgpu/webgpu | Image readiness is signaled by the Engine/host and actual fetch/decode remains outside the backend. | 2 | 0 |
 | `webgpu.features.transforms` | webgpu-backend | partial | adapted | @zavx0z/renderer-webgpu/webgpu | Implemented only for display-list values admitted by frame validation and retained materialization. | 2 | 0 |
 | `webgpu.features.unsupported-combinations` | webgpu-backend | implemented | extension | @zavx0z/renderer-webgpu/webgpu | — | 2 | 0 |

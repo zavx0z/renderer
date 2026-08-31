@@ -40,18 +40,6 @@
 - Dependencies: none
 - Forbidden local workarounds: Moving CSS computation into materials; Creating a second layout tree on Object3D
 
-### P0 — gap.engine.glyph-cache-font-identity
-
-- Capability: `engine.features.glyph-cache-identity`
-- Reported by: renderer/@zavx0z/renderer-webgpu/retained text materialization — two fonts reuse the same glyph id
-- Expected: Glyph geometry cache identity includes the exact font and glyph so different fonts cannot share incompatible outlines.
-- Actual: The static glyph cache is keyed only by gid; a diagnostic probe produced identical geometry for two fonts with the same gid and different outlines.
-- Owner: engine/@engine/core/text-resource
-- Minimal source: Create two fake fonts that return the same gid but different outlines, then construct Text geometry for each.
-- Recommended conformance test: Assert the second geometry differs from the first; current code returns the first geometry.
-- Dependencies: none
-- Forbidden local workarounds: Changing glyph ids in Renderer or components; Per-component Text caches
-
 ### P0 — gap.engine.index-buffer-format
 
 - Capability: `engine.features.index-buffer-format`
@@ -2105,7 +2093,7 @@
 | P3 | `css.properties.line-clamp` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.line-fit-edge` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.line-grid` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
-| P3 | `css.properties.line-height` | partial | @zavx0z/renderer/cpu | 0 | Only the explicitly admitted property values and bounded CPU/backend algorithms are implemented. |
+| P3 | `css.properties.line-height` | partial | @zavx0z/renderer/cpu | 0 | The admitted normal, finite non-negative number, px, percentage and compatible calc() subset now transports exact resolved line-box height through CPU paint and positions one backend-resolved TTF on its alphabetic baseline. Font-family selection, fallback, shaping, kerning, bidi, vertical writing, CSS-wide keywords, animation and complete browser typography remain unsupported. |
 | P3 | `css.properties.line-height-step` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.line-padding` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.line-snap` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
@@ -4134,10 +4122,9 @@
 | P4 | `engine.features.culling` | partial | @engine/core/gpu-scene-resource | 0 | Implementation exists, but the public lifecycle/value space or focused behavioral evidence is incomplete. |
 | P4 | `engine.features.device-loss` | partial | @engine/core/gpu-scene-resource | 0 | No whole-renderer/texture-cache teardown or device-loss recovery contract exists. |
 | P0 | `engine.features.dom-css-ownership-boundary` | unsupported | @engine/core/gpu-scene-resource | 0 | @engine/core publicly owns CSS-like LayoutProps/ComputedLayout on Object3D, violating the accepted platform boundary. |
-| P4 | `engine.features.font-loading` | partial | @engine/core/gpu-scene-resource | 0 | No shaping, kerning, ligatures, bidi, multiline layout, or direct Text geometry behavioral suite; cache identity also has a font-key correctness gap. |
+| P4 | `engine.features.font-loading` | partial | @engine/core/gpu-scene-resource | 0 | Exact font/glyph cache identity, advance-cell cover geometry and between-codepoint spacing are behaviorally proven; shaping, kerning, ligatures, bidi, fallback and multiline text layout remain unsupported. |
 | P4 | `engine.features.geometry` | partial | @engine/core/gpu-scene-resource | 0 | Implementation exists, but the public lifecycle/value space or focused behavioral evidence is incomplete. |
 | P4 | `engine.features.gltf` | partial | @engine/core/gpu-scene-resource | 0 | A bounded implementation exists without focused behavioral tests for many admitted branches. |
-| P0 | `engine.features.glyph-cache-identity` | unsupported | @engine/core/gpu-scene-resource | 0 | Glyph geometry cache keys only by gid, so different fonts with the same glyph ID reuse incorrect geometry. |
 | P0 | `engine.features.index-buffer-format` | unverified | @engine/core/gpu-scene-resource | 0 | setIndex accepts arbitrary typed arrays while Renderer binds every non-Uint32 index as uint16; invalid inputs are not rejected. |
 | P4 | `engine.features.legacy-ui-display-flag` | partial | @engine/core/gpu-scene-resource | 0 | Implementation exists, but the public lifecycle/value space or focused behavioral evidence is incomplete. |
 | P4 | `engine.features.loaders` | partial | @engine/core/gpu-scene-resource | 0 | Implementation exists, but the public lifecycle/value space or focused behavioral evidence is incomplete. |
@@ -4149,7 +4136,7 @@
 | P4 | `engine.features.resource-lifetime` | partial | @engine/core/gpu-scene-resource | 0 | No whole-renderer/texture-cache teardown or device-loss recovery contract exists. |
 | P4 | `engine.features.scene-graph` | partial | @engine/core/gpu-scene-resource | 0 | Implementation exists, but the public lifecycle/value space or focused behavioral evidence is incomplete. |
 | P4 | `engine.features.space` | partial | @engine/core/gpu-scene-resource | 0 | Implementation exists, but the public lifecycle/value space or focused behavioral evidence is incomplete. |
-| P4 | `engine.features.text` | partial | @engine/core/gpu-scene-resource | 0 | No shaping, kerning, ligatures, bidi, multiline layout, or direct Text geometry behavioral suite; cache identity also has a font-key correctness gap. |
+| P4 | `engine.features.text` | partial | @engine/core/gpu-scene-resource | 0 | Exact font/glyph cache identity, advance-cell cover geometry and between-codepoint spacing are behaviorally proven; shaping, kerning, ligatures, bidi, fallback and multiline text layout remain unsupported. |
 | P0 | `engine.features.texture-device-identity` | unsupported | @engine/core/gpu-scene-resource | 0 | Texture and fallback caches are process-global by src rather than scoped by GPUDevice. |
 | P4 | `engine.features.texture-image-loading` | partial | @engine/core/gpu-scene-resource | 0 | Implementation exists, but the public lifecycle/value space or focused behavioral evidence is incomplete. |
 | P4 | `engine.features.transforms` | partial | @engine/core/gpu-scene-resource | 0 | Implementation exists, but the public lifecycle/value space or focused behavioral evidence is incomplete. |
@@ -7585,6 +7572,7 @@
 | P4 | `platform.at-zavx0z-renderer.export-paths.root.symbols.renderposition` | unverified | @zavx0z/renderer/cpu | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-renderer.export-paths.root.symbols.renderscrollmetrics` | unverified | @zavx0z/renderer/cpu | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-renderer.export-paths.root.symbols.rendertextalign` | unverified | @zavx0z/renderer/cpu | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-renderer.export-paths.root.symbols.rendertextmeasurer` | partial | @zavx0z/renderer/cpu | 0 | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. |
 | P4 | `platform.at-zavx0z-renderer.export-paths.root.symbols.rendertransform` | unverified | @zavx0z/renderer/cpu | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-renderer.export-paths.root.symbols.renderviewport` | unverified | @zavx0z/renderer/cpu | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-renderer.export-paths.root.symbols.renderwhitespace` | unverified | @zavx0z/renderer/cpu | 0 | Export/type presence is not behavioral evidence. |
@@ -7772,7 +7760,7 @@
 | P4 | `renderer.features.inheritance` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
 | P4 | `renderer.features.inline-layout` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
 | P4 | `renderer.features.invalidation` | partial | @zavx0z/renderer/cpu | 0 | Dirty bookkeeping exists, but general dirty frames still remeasure/place/re-emit; only narrow Text and transform fast paths reuse records. |
-| P4 | `renderer.features.line-breaking` | partial | @zavx0z/renderer/cpu | 0 | Text measurement is an adapted fixed advance model without shaping, kerning, bidi, fallback, or full inline formatting. |
+| P4 | `renderer.features.line-breaking` | partial | @zavx0z/renderer/cpu | 0 | Production Canvas/Plane/Overlay composition now uses one exact font-owned unshaped per-codepoint advance owner for intrinsic width, alignment, controls, selection geometry, incremental text and ellipsis. Headless CPU rendering retains the deterministic 0.6em fallback. Kerning, shaping, ligatures, bidi, fallback, grapheme truncation, proportional textarea soft-wrap and complete inline formatting remain unsupported. |
 | P4 | `renderer.features.overflow` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
 | P4 | `renderer.features.performance-paths` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
 | P4 | `renderer.features.pointer` | partial | @zavx0z/renderer/cpu | 0 | Implemented for the bounded rendered-control set including explicit semantic capture, horizontal Range and collapsed Select; implicit touch capture and complete Pointer Events/HTML default actions remain outside Core. |
@@ -7791,7 +7779,7 @@
 | P4 | `renderer.features.tooltip-title` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
 | P4 | `renderer.features.transform-subtree-fast-path` | partial | @zavx0z/renderer/cpu | 0 | Dirty bookkeeping exists, but general dirty frames still remeasure/place/re-emit; only narrow Text and transform fast paths reuse records. |
 | P4 | `renderer.features.transforms` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
-| P4 | `renderer.features.typography` | partial | @zavx0z/renderer/cpu | 0 | Text measurement is an adapted fixed advance model without shaping, kerning, bidi, fallback, or full inline formatting. |
+| P4 | `renderer.features.typography` | partial | @zavx0z/renderer/cpu | 0 | Production Canvas/Plane/Overlay composition now uses one exact font-owned unshaped per-codepoint advance owner for intrinsic width, alignment, controls, selection geometry, incremental text and ellipsis. Headless CPU rendering retains the deterministic 0.6em fallback. Kerning, shaping, ligatures, bidi, fallback, grapheme truncation, proportional textarea soft-wrap and complete inline formatting remain unsupported. |
 | P1 | `renderer.features.vector-path-display-item` | unsupported | @zavx0z/renderer/cpu | 2 | The CPU renderer has no implementation of this internal platform capability. |
 | P4 | `renderer.features.wheel` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
 | P4 | `renderer.features.z-index` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
@@ -7838,13 +7826,13 @@
 | P4 | `webgpu.features.borders` | partial | @zavx0z/renderer-webgpu/webgpu | 0 | Different visible border colors, nonuniform rounded borders, and elliptical clips can fail closed. |
 | P4 | `webgpu.features.clipping` | partial | @zavx0z/renderer-webgpu/webgpu | 0 | Implemented only for display-list values admitted by frame validation and retained materialization. |
 | P4 | `webgpu.features.colors` | partial | @zavx0z/renderer-webgpu/webgpu | 0 | Transport accepts transparent, hex, and rgb/rgba only; it is not a CSS Color implementation. |
-| P4 | `webgpu.features.device-pixel-evidence` | unverified | @zavx0z/renderer-webgpu/webgpu | 0 | Renderer WebGPU tests exercise Engine objects and fake fonts, not GPUDevice submission/readback or browser canvas pixels. |
+| P4 | `webgpu.features.device-pixel-evidence` | partial | @zavx0z/renderer-webgpu/webgpu | 0 | Actual browser canvas pixels are proven for the exact default-font text route; the remaining display kinds, devices, fonts and failure modes do not yet have complete pixel evidence. |
 | P4 | `webgpu.features.image` | partial | @zavx0z/renderer-webgpu/webgpu | 0 | Image readiness is signaled by the Engine/host and actual fetch/decode remains outside the backend. |
 | P4 | `webgpu.features.radii` | partial | @zavx0z/renderer-webgpu/webgpu | 0 | Different visible border colors, nonuniform rounded borders, and elliptical clips can fail closed. |
 | P4 | `webgpu.features.rect` | partial | @zavx0z/renderer-webgpu/webgpu | 0 | Implemented only for display-list values admitted by frame validation and retained materialization. |
 | P4 | `webgpu.features.resource-lifetime` | partial | @zavx0z/renderer-webgpu/webgpu | 0 | Implemented only for display-list values admitted by frame validation and retained materialization. |
 | P4 | `webgpu.features.shadows` | partial | @zavx0z/renderer-webgpu/webgpu | 0 | Implemented only for display-list values admitted by frame validation and retained materialization. |
-| P4 | `webgpu.features.text` | partial | @zavx0z/renderer-webgpu/webgpu | 0 | Requires one external TrueTypeFont and does not prove real glyph pixels in this checkout. |
+| P4 | `webgpu.features.text` | partial | @zavx0z/renderer-webgpu/webgpu | 0 | The backend owns one resolved TrueTypeFont, a bounded per-codepoint advance cache and a metric-derived alphabetic baseline proven in real pixels; font-family selection, fallback, shaping, bidi and complete multi-font CSS text remain unsupported. |
 | P4 | `webgpu.features.texture-readiness` | partial | @zavx0z/renderer-webgpu/webgpu | 0 | Image readiness is signaled by the Engine/host and actual fetch/decode remains outside the backend. |
 | P4 | `webgpu.features.transforms` | partial | @zavx0z/renderer-webgpu/webgpu | 0 | Implemented only for display-list values admitted by frame validation and retained materialization. |
 | P4 | `webgpu.features.vector-path` | unsupported | @zavx0z/renderer-webgpu/webgpu | 0 | RenderFrame and retained backend admit Rect, Text, and Image only; no generic vector/path display item exists. |

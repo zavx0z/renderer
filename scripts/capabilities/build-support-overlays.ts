@@ -50,6 +50,15 @@ const engineFontVerification = {
   revision: "31164f46bb3d5dd9a7df018203f0e13a8a383dc5",
   date: "2026-08-31",
 } as const
+const textBaselineVerification = {
+  revision: "9af61ff761a249a22d1ce22d61a7f2c3855f0c89",
+  date: "2026-09-01",
+} as const
+const textAdvanceVerification = textBaselineVerification
+const engineTextVerification = {
+  revision: "0d63eeaf4e2057316212a1a8f5ff31684f22e2b2",
+  date: "2026-09-01",
+} as const
 const templateCssVerification = {
   revision: "838a214a83950259f3f5d543e881e11402bc230c",
   date: "2026-08-31",
@@ -110,8 +119,10 @@ async function main(): Promise<void> {
     if (!output) throw new Error(`No support overlay path for ${packageName}`)
     const repository = packageEntries[0]?.ownerHint.repository
     if (!repository) throw new Error(`No repository for ${packageName}`)
-    const revision = packageName === "@zavx0z/renderer"
-      ? flexGapVerification.revision
+    const revision = packageName === "@engine/core"
+      ? engineTextVerification.revision
+      : packageName === "@zavx0z/renderer" || packageName === "@zavx0z/renderer-webgpu"
+      ? textBaselineVerification.revision
       : revisions[repository]
     if (!revision) throw new Error(`No revision for ${repository}`)
     const records = packageEntries
@@ -123,8 +134,10 @@ async function main(): Promise<void> {
       repository,
       package: packageName,
       revision,
-      verificationDate: packageName === "@zavx0z/renderer"
-        ? flexGapVerification.date
+      verificationDate: packageName === "@engine/core"
+        ? engineTextVerification.date
+        : packageName === "@zavx0z/renderer" || packageName === "@zavx0z/renderer-webgpu"
+        ? textBaselineVerification.date
         : packageName === "@zavx0z/template"
           ? templateCssVerification.date
         : packageName === "@engine/core"
@@ -533,6 +546,17 @@ function classifyHtmlIdl(entry: CapabilityInventoryEntry): Classification {
 }
 
 function classifyCssRenderer(entry: CapabilityInventoryEntry): Classification {
+  if (entry.id === "platform.at-zavx0z-renderer.export-paths.root.symbols.rendertextmeasurer") {
+    const classification = classifyPublicExport(entry, "partial")
+    return {
+      ...classification,
+      evidence: classification.evidence.map((record) => ({
+        ...record,
+        revision: textAdvanceVerification.revision,
+      })),
+      lastVerified: textAdvanceVerification,
+    }
+  }
   if (entry.id.startsWith("platform.")) return classifyPublicExport(entry, rendererExportStatus(entry))
   if (entry.domain === "css") return classifyCss(entry)
   return classifyRenderer(entry)
@@ -675,6 +699,45 @@ function classifyCss(entry: CapabilityInventoryEntry): Classification {
       entry.id === "css.properties.column-gap"
     ) {
       return classifyFlexGapProperty(entry, external)
+    }
+    if (entry.id === "css.properties.line-height") {
+      return {
+        status: "partial",
+        conformance: "adapted",
+        limitations: [
+          "The admitted normal, finite non-negative number, px, percentage and compatible calc() subset now transports exact resolved line-box height through CPU paint and positions one backend-resolved TTF on its alphabetic baseline. Font-family selection, fallback, shaping, kerning, bidi, vertical writing, CSS-wide keywords, animation and complete browser typography remain unsupported.",
+        ],
+        evidence: [
+          external,
+          {
+            ...implementation("renderer", "packages/core/src/css.ts", "parseLineHeight/resolveLineHeight", undefined, "The bounded cascade preserves unitless inheritance and resolves admitted line-height values to finite non-negative line-box heights.", "The complete CSS grammar, font selection, shaping or browser-exact typography."),
+            revision: textAdvanceVerification.revision,
+          },
+          {
+            ...implementation("renderer", "packages/core/src/renderer.ts", "TextDisplayItem.lineHeight", undefined, "Every ordinary, control, textarea and renderer-owned text fragment transports resolved line height with y as the line-box top.", "Backend font selection, glyph geometry or GPU pixels."),
+            revision: textBaselineVerification.revision,
+          },
+          {
+            ...test("renderer", "packages/core/test/typography.test.ts", "inherited line-height and letter-spacing", "Observable frames prove unitless inheritance, absolute values, multiline placement and lineHeight transport on stable text fragments.", "Font shaping, fallback, bidi, vertical writing or complete CSS Inline conformance."),
+            revision: textBaselineVerification.revision,
+          },
+          {
+            ...test("renderer", "packages/webgpu/test/webgpu-backend.test.ts", "alphabetic baseline from the line box", "Exact TTF ascent/descent metrics position the alphabetic baseline, and a line-height-only update preserves CachedText and both geometries.", "Other fonts, shaping, fallback or every live device."),
+            revision: textBaselineVerification.revision,
+          },
+          {
+            type: "visual-evidence",
+            repository: "external",
+            revision: "cf68da24a7f5d70053f480d3",
+            path: "storybook://captures/capture_KPaxDthim-pACzG87gJloyan",
+            symbol: "@zavx0z/dom/elements/primitives/status-bar/content/statistics",
+            proves: "The exact ready/presented DOM route renders the 11px Cyrillic navigation label with its descender inside the unchanged 22px control on one visible canvas and with zero console errors.",
+            doesNotProve: "Every font, size, line-height, script, viewport or complete native-browser typography equivalence.",
+          },
+        ],
+        stages: cssPropertyStages(entry.name),
+        lastVerified: textBaselineVerification,
+      }
     }
     if (entry.id === "css.properties.flex-wrap") {
       return {
@@ -1024,6 +1087,47 @@ function classifyCssFeature(entry: CapabilityInventoryEntry, stages: Record<stri
 function classifyRenderer(entry: CapabilityInventoryEntry): Classification {
   if (!entry.id.startsWith("renderer.features.")) return unsupported(entry, "No current CPU renderer evidence was mapped.")
   const name = entry.id.slice("renderer.features.".length)
+  if (name === "typography" || name === "line-breaking") {
+    return {
+      status: "partial",
+      conformance: "adapted",
+      limitations: [
+        "Production Canvas/Plane/Overlay composition now uses one exact font-owned unshaped per-codepoint advance owner for intrinsic width, alignment, controls, selection geometry, incremental text and ellipsis. Headless CPU rendering retains the deterministic 0.6em fallback. Kerning, shaping, ligatures, bidi, fallback, grapheme truncation, proportional textarea soft-wrap and complete inline formatting remain unsupported.",
+      ],
+      evidence: [
+        {
+          ...implementation("renderer", "packages/core/src/types.ts", "RenderTextMeasurer", undefined, "The neutral CPU contract admits one exact resolved-font inline-advance owner without importing Engine into Core.", "Font selection, shaping or browser-wide inline formatting."),
+          revision: textAdvanceVerification.revision,
+        },
+        {
+          ...implementation("renderer", "packages/core/src/renderer.ts", "textAdvance/measureText/ellipsizeSingleLine", undefined, "Intrinsic measurement, alignment, control text, selection geometry, incremental character patches and ellipsis consume the same supplied font advance.", "Kerning, shaping, bidi, fallback or proportional textarea soft-wrap."),
+          revision: textAdvanceVerification.revision,
+        },
+        {
+          ...implementation("renderer", "packages/browser/src/runtime.ts", "Canvas/Plane/Overlay textMeasurer ownership", undefined, "Browser composition passes the exact backend font measurer to every CPU renderer and preserves it across resize replacement.", "Non-browser manual composition or multi-font CSS selection."),
+          revision: textAdvanceVerification.revision,
+        },
+        {
+          ...test("renderer", "packages/core/test/typography.test.ts", "supplied font advance owner", "A proportional supplied advance changes intrinsic width and the exact ellipsis prefix instead of using the 0.6em fallback.", "Shaping, kerning, fallback, bidi or native browser equivalence."),
+          revision: textAdvanceVerification.revision,
+        },
+        {
+          ...test("renderer", "packages/browser/test/runtime.test.ts", "exact backend text measurer across resize", "Canvas and Plane seams preserve the identical backend measurer on initial CPU construction and viewport replacement.", "Every external host or multi-font composition."),
+          revision: textAdvanceVerification.revision,
+        },
+        {
+          type: "visual-evidence",
+          repository: "external",
+          revision: "ead10e484f57705410ce58e9",
+          path: "storybook://captures/capture_kIyZqHyIxkZgmDu4DCMIa7Er",
+          symbol: "@ui/components/components/foundation/button/icon/svg",
+          proves: "The exact UI SVG variant presents its final G with the font-owned 22.854px span width and no right-edge loss on one canvas with zero console errors.",
+          doesNotProve: "Every font, script, size, shaping mode, textarea wrap or browser implementation.",
+        },
+      ],
+      lastVerified: textAdvanceVerification,
+    }
+  }
   if (name === "caret-selection-paint") {
     return recovered(partial(
       "adapted",
@@ -1294,8 +1398,59 @@ function classifyBrowser(entry: CapabilityInventoryEntry): Classification {
 function classifyWebgpu(entry: CapabilityInventoryEntry): Classification {
   if (entry.id.startsWith("platform.")) return classifyPublicExport(entry, webgpuExportStatus(entry))
   const name = entry.id.slice("webgpu.features.".length)
-  if (name === "device-pixel-evidence") return unverified(entry, "Renderer WebGPU tests exercise Engine objects and fake fonts, not GPUDevice submission/readback or browser canvas pixels.")
+  if (name === "device-pixel-evidence") {
+    return {
+      ...partial(
+        "extension",
+        [
+          {
+            ...implementation("renderer", "packages/webgpu/src/webgpu-backend.ts", "RendererWebGpuBackend text materialization", undefined, "The production adapter materializes the exact resolved frame text into retained Engine geometry and transforms used by the live canvas path.", "Successful GPU submission, readback, every display kind or every device."),
+            revision: textBaselineVerification.revision,
+          },
+          {
+            type: "visual-evidence",
+            repository: "external",
+            revision: "ead10e484f57705410ce58e9",
+            path: "storybook://captures/capture_kIyZqHyIxkZgmDu4DCMIa7Er",
+            symbol: "@ui/components/components/foundation/button/icon/svg",
+            proves: "The production retained WebGPU path presents the exact SVG label with complete final-glyph pixels, font-owned advance and baseline on one visible canvas with empty diagnostics and console output.",
+            doesNotProve: "Every display kind, font, GPU adapter, viewport, clipping combination or device-loss path.",
+          },
+        ],
+        "Actual browser canvas pixels are proven for the exact default-font text route; the remaining display kinds, devices, fonts and failure modes do not yet have complete pixel evidence.",
+      ),
+      lastVerified: textAdvanceVerification,
+    }
+  }
   if (name === "vector-path") return unsupported(entry, "RenderFrame and retained backend admit Rect, Text, and Image only; no generic vector/path display item exists.")
+  if (name === "text") {
+    return {
+      ...partial(
+        "adapted",
+        [
+          {
+            ...implementation("renderer", "packages/webgpu/src/webgpu-backend.ts", "readFontMetrics/createFontTextMeasurer/positionText", undefined, "One exact Engine font owns the cached baseline ratio and a bounded per-codepoint advance cache shared with CPU layout; retained text uses the same font and letter spacing.", "Font-family selection, fallback, shaping, bidi, vertical writing or every device."),
+            revision: textAdvanceVerification.revision,
+          },
+          {
+            ...test("renderer", "packages/webgpu/test/webgpu-backend.test.ts", "alphabetic baseline and cached font advances", "Different line heights preserve retained geometry, spaces receive between-character spacing, and one thousand repeated SVG measures map each code point only once.", "Every real font, glyph and GPU adapter."),
+            revision: textAdvanceVerification.revision,
+          },
+          {
+            type: "visual-evidence",
+            repository: "external",
+            revision: "ead10e484f57705410ce58e9",
+            path: "storybook://captures/capture_kIyZqHyIxkZgmDu4DCMIa7Er",
+            symbol: "@ui/components/components/foundation/button/icon/svg",
+            proves: "Real default-font SVG glyph pixels use the corrected baseline, exact 22.854px advance and a complete final G on the exact one-canvas route with zero console errors.",
+            doesNotProve: "Font selection/fallback, shaping, every script, size, clip chain, device or native-browser equivalence.",
+          },
+        ],
+        "The backend owns one resolved TrueTypeFont, a bounded per-codepoint advance cache and a metric-derived alphabetic baseline proven in real pixels; font-family selection, fallback, shaping, bidi and complete multi-font CSS text remain unsupported.",
+      ),
+      lastVerified: textAdvanceVerification,
+    }
+  }
   const implementedNames = new Set(["frame-validation", "scalar-retained-path", "automatic-rect-instancing", "run-barriers", "overlap-law", "stable-slots", "partial-record-uploads", "paint-order", "cleanup", "geometry-invalidation", "diagnostics", "unsupported-combinations", "screen-overlay", "document-plane"])
   if (implementedNames.has(name)) {
     return implemented("extension", [implementation("renderer", "packages/webgpu/src/webgpu-backend.ts", name, undefined, "The bounded retained backend contract.", "Actual device pixels and unsupported combinations."), test("renderer", "packages/webgpu/test/webgpu-backend.test.ts", name, "Retained identity, planning, updates, fail-closed validation, and cleanup.", "Actual GPU submission/readback.")])
@@ -1417,9 +1572,51 @@ function classifyEngine(entry: CapabilityInventoryEntry): Classification {
       },
     ])
   }
+  if (name === "glyph-cache-identity") {
+    return {
+      ...implemented("extension", [
+        {
+          ...implementation("engine", "packages/core/src/objects/text.ts", "font-keyed glyph geometry cache", undefined, "A WeakMap owns one glyph-id geometry map per exact TrueTypeFont identity, so equal gids from different fonts cannot share outlines or cover bounds.", "Shaping, fallback selection or cross-process cache behavior."),
+          revision: engineTextVerification.revision,
+        },
+        {
+          ...test("engine", "packages/core/src/objects/text.test.ts", "exact font identity and glyph id", "Two fake fonts with the same glyph id and different outlines retain different stencil geometry.", "Every real font file or shaping engine."),
+          revision: engineTextVerification.revision,
+        },
+      ]),
+      lastVerified: engineTextVerification,
+    }
+  }
+  if (name === "text" || name === "font-loading") {
+    return {
+      ...partial(
+        "extension",
+        [
+          {
+            ...implementation("engine", "packages/core/src/objects/text.ts", "font-owned Text geometry and advance-cell cover", undefined, "Text uses exact font/glyph cache identity, inserts letter spacing only between code points and covers the complete horizontal advance cell including side bearings.", "Kerning, shaping, ligatures, bidi, fallback or multiline layout."),
+            revision: engineTextVerification.revision,
+          },
+          {
+            ...test("engine", "packages/core/src/objects/text.test.ts", "Text font-owned geometry", "The final cover reaches advanceWidth rather than ink xMax and equal gids from different fonts preserve distinct outlines.", "Every real glyph, transform, GPU adapter or shaping mode."),
+            revision: engineTextVerification.revision,
+          },
+          {
+            type: "visual-evidence",
+            repository: "external",
+            revision: "ead10e484f57705410ce58e9",
+            path: "storybook://captures/capture_kIyZqHyIxkZgmDu4DCMIa7Er",
+            symbol: "@ui/components/components/foundation/button/icon/svg",
+            proves: "The default Inter SVG label presents its complete final G through the production Engine text cover on one canvas with zero console errors.",
+            doesNotProve: "Every font, glyph, size, transform, device, shaping or fallback path.",
+          },
+        ],
+        "Exact font/glyph cache identity, advance-cell cover geometry and between-codepoint spacing are behaviorally proven; shaping, kerning, ligatures, bidi, fallback and multiline text layout remain unsupported.",
+      ),
+      lastVerified: engineTextVerification,
+    }
+  }
   const implementedNames = new Set(["buffer-attributes", "dirty-intervals", "instance-layer", "instanced-rounded-rectangles", "draw-range-views", "clipping", "gpu-device-evidence"])
   if (implementedNames.has(name)) return implemented("extension", [implementation("engine", engineSourcePath(name), name, undefined, "Bounded Engine ABI implementation.", "DOM/CSS semantics and unsupported renderables."), test("engine", engineTestPath(name), name, "Behavioral and, where applicable, real GPU pipeline/pixel evidence.", "Browser integration and unrelated Engine features.")])
-  if (name === "glyph-cache-identity") return unsupportedGap(entry, "Glyph geometry cache keys only by gid, so different fonts with the same glyph ID reuse incorrect geometry.", "gap.engine.glyph-cache-font-identity")
   if (name === "texture-device-identity") return unsupportedGap(entry, "Texture and fallback caches are process-global by src rather than scoped by GPUDevice.", "gap.engine.texture-cache-device-identity")
   if (name === "renderer-disposal") return unsupportedGap(entry, "Renderer and TextureLoader have no whole-owner teardown for GPU resources, caches, callbacks, pipelines, or attachments.", "gap.engine.renderer-resource-teardown")
   if (name === "dom-css-ownership-boundary") return unsupportedGap(entry, "@engine/core publicly owns CSS-like LayoutProps/ComputedLayout on Object3D, violating the accepted platform boundary.", "gap.engine.css-layout-ownership")

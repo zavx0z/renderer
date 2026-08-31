@@ -463,7 +463,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 404,
+        "line": 418,
         "path": "engine:packages/core/src/objects/text.ts",
         "repository": "engine",
         "typeOnly": false
@@ -476,7 +476,7 @@
       },
       "parent": "platform.at-engine-core.export-paths.root",
       "spec": {
-        "anchor": "engine:packages/core/src/objects/text.ts#L404",
+        "anchor": "engine:packages/core/src/objects/text.ts#L418",
         "profile": "project-contract",
         "source": "@engine/core-exports",
         "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
