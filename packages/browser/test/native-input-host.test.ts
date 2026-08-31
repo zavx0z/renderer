@@ -4,6 +4,7 @@ import {
   InputEvent as SemanticInputEvent,
   KeyboardEvent as SemanticKeyboardEvent,
   createDocument,
+  getPopoverVisibilityState,
 } from "@zavx0z/dom"
 import {createDocumentNativeInputHost} from "../src/index.ts"
 import {
@@ -231,7 +232,29 @@ describe("DocumentNativeInputHost", () => {
     host.dispose()
   })
 
-  test("does not mirror checkbox, radio or non-selection input types", () => {
+  test("copies the exact mirrored readonly textarea selection and honors semantic cancellation", () => {
+    const harness = createHarness()
+    const host = createDocumentNativeInputHostWithSeams({requestFrame() {}}, harness.seams)
+    const document = createDocument()
+    const textArea = document.createElement("textarea")
+    textArea.value = "copy selected text"
+    textArea.readOnly = true
+    textArea.setSelectionRange(5, 13, "forward")
+    document.appendChild(textArea)
+    textArea.focus()
+    host.setActiveDocument(document, "readonly-editor")
+    const events: string[] = []
+    textArea.addEventListener("copy", event => events.push(`${event.type}:${event.cancelable}`))
+
+    expect(harness.textarea.copySelection()).toBe("selected")
+    expect(events).toEqual(["copy:true"])
+    textArea.addEventListener("copy", event => event.preventDefault(), {once: true})
+    expect(harness.textarea.copySelection()).toBeNull()
+    expect(events).toEqual(["copy:true", "copy:true"])
+    host.dispose()
+  })
+
+  test("uses a read-only keyboard host without mirroring non-text control state", () => {
     const harness = createHarness()
     const host = createDocumentNativeInputHostWithSeams({requestFrame() {}}, harness.seams)
     const document = createDocument()
@@ -241,18 +264,68 @@ describe("DocumentNativeInputHost", () => {
     checkbox.focus()
     host.setActiveDocument(document, "plane")
     expect(document.activeElement).toBe(checkbox)
-    expect(host.inputTarget).toBeNull()
-    expect(host.activeProxy).toBeNull()
-    expect(harness.input.focused).toBeFalse()
+    expect(host.inputTarget).toBe(checkbox)
+    expect(host.activeProxy).toBe("input")
+    expect(harness.input).toMatchObject({type: "text", value: "", readOnly: true, focused: true})
 
     checkbox.type = "email"
     host.synchronize()
-    expect(host.inputTarget).toBeNull()
-    expect(harness.input.focused).toBeFalse()
+    expect(host.inputTarget).toBe(checkbox)
+    expect(harness.input).toMatchObject({type: "text", value: "", readOnly: true, focused: true})
     checkbox.type = "text"
     host.synchronize()
     expect(host.inputTarget).toBe(checkbox)
     expect(harness.input.focused).toBeTrue()
+    host.dispose()
+  })
+
+  test("routes cancellable Escape through a generic focused owner and restores popover focus", () => {
+    const harness = createHarness()
+    let frames = 0
+    const host = createDocumentNativeInputHostWithSeams({
+      requestFrame() { frames += 1 },
+    }, harness.seams)
+    const document = createDocument()
+    const root = document.createElement("div")
+    const source = document.createElement("button")
+    const popover = document.createElement("div")
+    const inside = document.createElement("button")
+    popover.popover = "auto"
+    popover.appendChild(inside)
+    root.append(source, popover)
+    document.appendChild(root)
+    source.focus()
+    popover.showPopover({source})
+    inside.focus()
+    host.setActiveDocument(document, "popover")
+    const keys: string[] = []
+    inside.addEventListener("keydown", event => keys.push((event as SemanticKeyboardEvent).key))
+    let prevented = 0
+
+    expect(host.inputTarget).toBe(inside)
+    expect(host.activeProxy).toBe("input")
+    expect(harness.input).toMatchObject({type: "text", value: "", readOnly: true, focused: true})
+    harness.input.emit("keydown", nativeKeyboard({
+      key: "Escape",
+      preventDefault() { prevented += 1 },
+    }))
+    expect(keys).toEqual(["Escape"])
+    expect(prevented).toBe(1)
+    expect(popover[getPopoverVisibilityState]()).toBe("hidden")
+    expect(document.activeElement).toBe(source)
+    expect(host.inputTarget).toBe(source)
+    expect(frames).toBe(1)
+
+    popover.showPopover({source})
+    inside.focus()
+    inside.addEventListener("keydown", event => event.preventDefault(), {once: true})
+    harness.input.emit("keydown", nativeKeyboard({
+      key: "Escape",
+      preventDefault() { prevented += 1 },
+    }))
+    expect(prevented).toBe(2)
+    expect(popover[getPopoverVisibilityState]()).toBe("showing")
+    popover.hidePopover()
     host.dispose()
   })
 
@@ -512,6 +585,18 @@ class FakeTextProxy extends FakeEventTarget {
     )
     this.value = String(next)
     this.emit("input", nativeInput({inputType: "stepUp"}))
+  }
+
+  copySelection(): string | null {
+    let prevented = false
+    this.emit("copy", {
+      type: "copy",
+      cancelable: true,
+      preventDefault() { prevented = true },
+    })
+    return prevented
+      ? null
+      : this.value.slice(this.selectionStart, this.selectionEnd)
   }
 }
 

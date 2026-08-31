@@ -5,6 +5,7 @@ import {changeFocus, isProgrammaticallyFocusable} from "./internal/focus.ts"
 import {
   hidePopover,
   popoverAttributeChanged,
+  readPopoverSource,
   readPopoverVisibilityState,
   reflectedPopoverValue,
   showPopover,
@@ -15,6 +16,7 @@ import {parseHTMLInteger, toLong} from "./internal/web-idl.ts"
 import {
   getPopoverVisibilityState
 } from "./popover-state.ts"
+import {getPopoverSource} from "./popover-state.ts"
 import type {
   PopoverValue,
   PopoverVisibilityState
@@ -195,6 +197,10 @@ export class HTMLElement extends Element {
 
   [getPopoverVisibilityState](): PopoverVisibilityState {
     return readPopoverVisibilityState(this)
+  }
+
+  [getPopoverSource](): HTMLElement | null {
+    return readPopoverSource(this)
   }
 
   override setAttribute(name: string, value: string): void {

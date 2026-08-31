@@ -8,6 +8,7 @@ import {
   createDocument,
   getPopoverVisibilityState
 } from "../src/index.ts"
+import {getPopoverSource} from "../src/popover-state.ts"
 
 function nextTask(): Promise<void> {
   return new Promise(resolve => setTimeout(resolve, 5))
@@ -289,6 +290,47 @@ describe("popover transitions", () => {
       first,
       second
     ])
+    await nextTask()
+  })
+
+  it("retains the exact source, light-dismisses Auto and restores focus on dismissal", async () => {
+    const document = createDocument()
+    const root = document.createElement("div")
+    const source = document.createElement("button")
+    const outside = document.createElement("button")
+    const popover = document.createElement("div")
+    const inside = document.createElement("input")
+    const manual = document.createElement("div")
+    popover.popover = "auto"
+    manual.popover = "manual"
+    popover.appendChild(inside)
+    root.append(source, outside, popover, manual)
+    document.appendChild(root)
+
+    source.focus()
+    popover.showPopover({source})
+    expect(popover[getPopoverSource]()).toBe(source)
+    inside.focus()
+    expect(document.lightDismissPopovers(inside)).toBeFalse()
+    expect(document.lightDismissPopovers(source)).toBeFalse()
+    expect(popover[getPopoverVisibilityState]()).toBe("showing")
+
+    expect(document.lightDismissPopovers(outside)).toBeTrue()
+    expect(popover[getPopoverVisibilityState]()).toBe("hidden")
+    expect(popover[getPopoverSource]()).toBeNull()
+    expect(document.activeElement).toBe(source)
+
+    popover.showPopover({source})
+    inside.focus()
+    expect(document.dismissTopmostAutoPopover()).toBeTrue()
+    expect(popover[getPopoverVisibilityState]()).toBe("hidden")
+    expect(document.activeElement).toBe(source)
+    expect(document.dismissTopmostAutoPopover()).toBeFalse()
+
+    manual.showPopover({source})
+    expect(document.dismissTopmostAutoPopover()).toBeFalse()
+    expect(manual[getPopoverVisibilityState]()).toBe("showing")
+    manual.hidePopover()
     await nextTask()
   })
 

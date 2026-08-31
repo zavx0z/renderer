@@ -1,6 +1,7 @@
 import {
   CompositionEvent as SemanticCompositionEvent,
   Event as SemanticEvent,
+  HTMLElement as SemanticHTMLElement,
   HTMLInputElement as SemanticHTMLInputElement,
   HTMLSelectElement as SemanticHTMLSelectElement,
   HTMLTextAreaElement as SemanticHTMLTextAreaElement,
@@ -9,10 +10,7 @@ import {
   type Document as SemanticDocument,
 } from "@zavx0z/dom"
 
-export type DocumentNativeInputTarget =
-  | SemanticHTMLInputElement
-  | SemanticHTMLSelectElement
-  | SemanticHTMLTextAreaElement
+export type DocumentNativeInputTarget = SemanticHTMLElement
 
 type NativeInputProxy = HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
 type NativeTextProxy = HTMLInputElement | HTMLTextAreaElement
@@ -116,14 +114,12 @@ export function createDocumentNativeInputHostWithSeams(
       !active.disabled &&
       (active.selectionStart !== null || active.type === "number" || active.type === "range")
     ) return active
+    if (active instanceof SemanticHTMLElement && !targetDisabled(active)) return active
     return null
   }
 
   const isSupportedTarget = (candidate: DocumentNativeInputTarget): boolean =>
-    candidate instanceof SemanticHTMLTextAreaElement ||
-    candidate instanceof SemanticHTMLSelectElement && !candidate.multiple && candidate.size <= 1 ||
-    candidate instanceof SemanticHTMLInputElement &&
-      (candidate.selectionStart !== null || candidate.type === "number" || candidate.type === "range")
+    !(candidate instanceof SemanticHTMLSelectElement) || !candidate.multiple && candidate.size <= 1
 
   const blurProxies = (except: NativeInputProxy | null = null): void => {
     if (except !== proxies.input) proxies.input.blur()
@@ -135,10 +131,8 @@ export function createDocumentNativeInputHostWithSeams(
     if (disposed || synchronizing) return
     const active = document?.activeElement
     const disabledActive =
-      active instanceof SemanticHTMLInputElement ||
-      active instanceof SemanticHTMLSelectElement ||
-      active instanceof SemanticHTMLTextAreaElement
-        ? active.disabled ? active : null
+      active instanceof SemanticHTMLElement
+        ? targetDisabled(active) ? active : null
         : null
     const next = targetForActiveDocument()
     synchronizing = true
@@ -165,7 +159,7 @@ export function createDocumentNativeInputHostWithSeams(
   ): DocumentNativeInputTarget | null => {
     if (proxy !== activeNativeProxy(proxies, activeProxy)) return null
     const active = document?.activeElement
-    if (target !== null && active === target && !target.disabled && isSupportedTarget(target)) return target
+    if (target !== null && active === target && !targetDisabled(target) && isSupportedTarget(target)) return target
     synchronize()
     return proxy === activeNativeProxy(proxies, activeProxy) ? target : null
   }
@@ -287,6 +281,15 @@ export function createDocumentNativeInputHostWithSeams(
     ) {
       event.preventDefault()
       options.requestFrame()
+      return
+    }
+    if (
+      type === "keydown" &&
+      event.key === "Escape" &&
+      document?.dismissTopmostAutoPopover() === true
+    ) {
+      event.preventDefault()
+      options.requestFrame()
     }
   }
 
@@ -295,7 +298,7 @@ export function createDocumentNativeInputHostWithSeams(
     event: InputEvent,
   ): void => {
     const current = activeTarget(proxy)
-    if (current === null || current instanceof SemanticHTMLSelectElement) return
+    if (current === null || !isTextEntryTarget(current)) return
     const accepted = current.dispatchEvent(new SemanticInputEvent("beforeinput", {
       bubbles: true,
       cancelable: event.cancelable,
@@ -313,7 +316,7 @@ export function createDocumentNativeInputHostWithSeams(
     event: InputEvent,
   ): void => {
     const current = activeTarget(proxy)
-    if (current === null || current instanceof SemanticHTMLSelectElement) return
+    if (current === null || !isTextEntryTarget(current)) return
     const previousValue = current.value
     const previousSelection = selectionOf(current)
     const nextValue = proxy.value
@@ -346,9 +349,20 @@ export function createDocumentNativeInputHostWithSeams(
 
   const onChange = (proxy: NativeTextProxy): void => {
     const current = activeTarget(proxy)
-    if (current === null || current instanceof SemanticHTMLSelectElement) return
+    if (current === null || !isTextEntryTarget(current)) return
     current.dispatchEvent(new SemanticEvent("change", {bubbles: true}))
     options.requestFrame()
+  }
+
+  const onCopy = (proxy: NativeTextProxy, event: Event): void => {
+    const current = activeTarget(proxy)
+    if (current === null || !isTextEntryTarget(current)) return
+    const accepted = current.dispatchEvent(new SemanticEvent("copy", {
+      bubbles: true,
+      cancelable: event.cancelable,
+      composed: true,
+    }))
+    if (!accepted) event.preventDefault()
   }
 
   const dispatchComposition = (
@@ -357,7 +371,7 @@ export function createDocumentNativeInputHostWithSeams(
     type: "compositionstart" | "compositionupdate" | "compositionend",
   ): void => {
     const current = activeTarget(proxy)
-    if (current === null || current instanceof SemanticHTMLSelectElement) return
+    if (current === null || !isTextEntryTarget(current)) return
     const accepted = current.dispatchEvent(new SemanticCompositionEvent(type, {
       bubbles: true,
       cancelable: event.cancelable,
@@ -373,7 +387,7 @@ export function createDocumentNativeInputHostWithSeams(
   ): void => {
     if (disposed || synchronizing) return
     const current = activeTarget(proxy)
-    if (current === null || current instanceof SemanticHTMLSelectElement) return
+    if (current === null || !isTextEntryTarget(current)) return
     const previous = selectionOf(current)
     const next = selectionOf(proxy)
     const changed = previous !== null && next !== null && !sameSelection(previous, next)
@@ -394,6 +408,7 @@ export function createDocumentNativeInputHostWithSeams(
       beforeinput: (event: Event) => onBeforeInput(proxy, event as InputEvent),
       input: (event: Event) => onInput(proxy, event as InputEvent),
       change: () => onChange(proxy),
+      copy: (event: Event) => onCopy(proxy, event),
       compositionstart: (event: Event) => dispatchComposition(proxy, event as CompositionEvent, "compositionstart"),
       compositionupdate: (event: Event) => dispatchComposition(proxy, event as CompositionEvent, "compositionupdate"),
       compositionend: (event: Event) => dispatchComposition(proxy, event as CompositionEvent, "compositionend"),
@@ -487,7 +502,7 @@ const applySelection = (
   target: DocumentNativeInputTarget,
   selection: SelectionSnapshot,
 ): void => {
-  if (target instanceof SemanticHTMLSelectElement) return
+  if (!isTextEntryTarget(target)) return
   target.setSelectionRange(selection.start, selection.end, selection.direction)
 }
 
@@ -501,6 +516,18 @@ const mirrorProxy = (
   if (target instanceof SemanticHTMLSelectElement) {
     const nativeSelect = proxy as HTMLSelectElement
     nativeSelect.disabled = target.disabled
+    return
+  }
+  if (!isTextEntryTarget(target)) {
+    const nativeInput = proxy as HTMLInputElement
+    nativeInput.type = "text"
+    nativeInput.min = ""
+    nativeInput.max = ""
+    nativeInput.step = ""
+    nativeInput.readOnly = true
+    nativeInput.disabled = false
+    nativeInput.value = ""
+    nativeInput.setSelectionRange(0, 0, "none")
     return
   }
   if (target instanceof SemanticHTMLInputElement) {
@@ -573,3 +600,13 @@ const modifierState = (event: KeyboardEvent, key: string): boolean => {
     return false
   }
 }
+
+const isTextEntryTarget = (
+  target: DocumentNativeInputTarget,
+): target is SemanticHTMLInputElement | SemanticHTMLTextAreaElement =>
+  target instanceof SemanticHTMLTextAreaElement ||
+  target instanceof SemanticHTMLInputElement &&
+    (target.selectionStart !== null || target.type === "number" || target.type === "range")
+
+const targetDisabled = (target: SemanticHTMLElement): boolean =>
+  "disabled" in target && (target as SemanticHTMLElement & {disabled?: unknown}).disabled === true

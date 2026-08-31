@@ -557,8 +557,11 @@ element throws `InvalidStateError`. Repeating show while already showing and
 hide while already hidden are no-ops after the standard expected-state check.
 The boolean and dictionary force forms of `togglePopover()` validate even when
 the requested state already matches and return the final showing state.
-`source` must be an `HTMLElement` from this realm and is carried only for an
-opening transition.
+`source` must be an `HTMLElement` from this realm. The showing popover retains
+that exact source through the opaque `getPopoverSource` renderer adapter until
+it closes; no id lookup, copied coordinates or second owner relation is stored.
+Opening also records the exact previously focused HTMLElement, when one exists,
+as the bounded focus-return owner.
 
 Opening fires one non-bubbling, cancelable `beforetoggle` ToggleEvent from
 `closed` to `open`; cancellation leaves the popover hidden and emits no state
@@ -575,6 +578,14 @@ popover to a different reflected state closes it, with transition events;
 removing its subtree closes it without fabricated transition events. These are
 semantic visibility laws only, not renderer behavior.
 
+Document host adapters apply light dismiss against the exact pointer target:
+an Auto popover is retained for hits inside itself or its source chain, while
+unrelated Auto popovers above that relation close top-down. An uncanceled
+Escape default closes only the topmost Auto popover. Manual popovers are
+unaffected by both defaults. Explicit hide, light dismiss and Escape restore
+the exact pre-open focus owner when it remains focusable; a subsequent outside
+pointer focus may ordinarily replace that restoration.
+
 Core and other renderer owners read the exact internal visibility through the
 public renderer contract
 `element[getPopoverVisibilityState](): "hidden" | "showing"`. Each connected
@@ -582,12 +593,11 @@ effective change also publishes a synchronous, transaction-coalesced
 `PopoverStateChange` with `type: "popover"`, `property: "open"` and boolean
 old/new values. There is deliberately no non-standard `popoverOpen` property.
 
-Top-layer ordering and paint, `:popover-open` selector matching, light dismiss,
-close requests/watchers, invoker and command attributes, implicit anchors,
-autofocus/focus restoration, accessibility projection, Hint stacks, fullscreen
-and modal-dialog interaction are unsupported. A renderer consumes the
-visibility contract and state records; the DOM does not fabricate callbacks,
-geometry, z-order or UI.
+`:popover-open` selector matching, close requests/watchers, invoker and command
+attributes, implicit anchors without an explicit `source`, autofocus,
+accessibility projection, Hint stacks, fullscreen and modal-dialog interaction
+are unsupported. A renderer consumes source identity, visibility and state
+records; the DOM does not fabricate geometry, z-order or UI.
 
 ## DOM-CORE-025 — bounded image author attributes
 
@@ -685,3 +695,24 @@ string `until-found`, as fully hidden. It does not implement the until-found
 layout-containment, `beforematch`, find-in-page reveal or accessibility
 branches. Those branches must be added as one explicit future capability and
 cannot be approximated by allowing author `display` to reveal the subtree.
+
+## DOM-CORE-031 — bounded active text-control selection and copy
+
+Input/textarea `selectionStart`, `selectionEnd` and `selectionDirection` remain
+the only canonical mutable selection state. `Document.readTextControlSelection()`
+derives one immutable snapshot from the exact active selection-applicable Input
+or TextArea: target identity, normalized offsets, direction, collapsed state and
+selected substring. It allocates no second range store and returns null for an
+unfocused/non-text control. Existing value/selection state records remain the
+only invalidation channel.
+
+This is an adapted text-control boundary, not a fabricated implementation of
+standard `Document.getSelection()`, `Selection` or `Range`. Ordinary Text-node,
+contenteditable, multi-range, shadow/composed-tree and general mutation-adjusted
+Selection semantics remain unsupported.
+
+The Browser owner may dispatch one ordinary bubbling, cancelable semantic
+`copy` Event to the active text control before allowing its exact mirrored
+native selection to perform the platform copy default. Semantic cancellation
+prevents that native default. ClipboardEvent/DataTransfer access, cut, paste,
+async Clipboard API, HTML payloads and permission policy remain unsupported.

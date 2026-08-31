@@ -101,7 +101,8 @@ Text-like `HTMLInputElement` ограничен standard selection-applicable ty
 input proxy без fabricated selection. `HTMLTextAreaElement` использует textarea
 proxy. Collapsed single `HTMLSelectElement` использует select только как
 keyboard owner; picker/option paint остаётся в одном WebGPU frame. Checkbox,
-radio и остальные input types остаются DOM-owned activation и не зеркалируются.
+radio, Button и остальные focused HTMLElement используют input proxy только как
+read-only keyboard owner; их value/checked/activation state не зеркалируется.
 
 Host закрепляет один exact active semantic Document и optional projection owner
 id. В SpaceRuntime Document остаётся одним и тем же, а accepted pointer focus
@@ -130,10 +131,18 @@ Native `change` map-ится в один semantic `change`. Для Range и Sele
 после uncanceled `keydown` предотвращает native off-screen default и вызывает
 DOM-owned bounded default action; поэтому значение, picker state и event order
 не зависят от невидимой browser chrome.
+Для любого focused semantic HTMLElement uncanceled `Escape` закрывает topmost
+Auto popover через Document owner и восстанавливает pre-open focus. Canceled
+semantic keydown оставляет popover открытым и предотвращает native default.
 
-V1 не заявляет caret paint/geometry, clipboard, DataTransfer, forms, select
-type-ahead/multiple listbox или IME candidate UI. Host является bounded
-input/control adapter, а не обещанием полного browser form control.
+Для selection-applicable Input/TextArea exact mirrored native value and range
+perform the platform's ordinary plain-text copy default. Перед ним host
+dispatches semantic bubbling/cancelable `copy`; cancellation prevents native
+copy. ClipboardEvent/DataTransfer, cut, paste, async Clipboard API, HTML payload,
+forms, select type-ahead/multiple listbox и IME candidate UI не заявляются.
+Caret/selection geometry принадлежит CPU Renderer bounded pre/wrap-off profile.
+Host остаётся bounded input/control adapter, а не обещанием полного browser form
+control или editing stack.
 
 ## `RENDERER-BROWSER-005` — capture и lifecycle
 

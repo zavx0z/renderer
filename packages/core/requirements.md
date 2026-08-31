@@ -596,16 +596,26 @@ removed from its DOM flow position, then materialized once in a viewport-owned
 top layer after ordinary document boxes, display items and hit order.
 
 Author CSS owns the popover's width, height, box-sizing, margin data, padding,
-border, background, typography, opacity and nested layout. The top-level border
-box remains deterministically centered in the viewport and clamped to viewport
-dimensions; its own `position` and physical inset declarations do not replace
-this bounded top-layer law. Nested descendants use ordinary supported
-positioning. An auto-width block fills the available viewport. Anchor
-positioning and author callbacks remain unsupported rather than being
-interpreted approximately.
+border, background, typography, opacity and nested layout. Without a rendered
+source the top-level border box remains deterministically centered. With an
+exact `showPopover({source})` whose RenderBox belongs to the current projection,
+Renderer derives the source's final axis-aligned transformed border bounds,
+places the popover below its visual start edge with a 4px gap, flips above when
+below cannot fit and above has more room, then clamps both axes to the logical
+viewport. Missing/foreign-projection source geometry falls back to centering;
+no coordinates enter DOM or consumer state.
+
+The top-level box remains clamped to viewport dimensions; its own `position`
+and physical inset declarations do not replace this bounded top-layer law.
+Nested descendants use ordinary supported positioning. An auto-width block
+fills the available viewport. Arbitrary CSS Anchor Positioning grammar and
+popover-root transforms are not claimed by this bounded explicit-source policy.
 
 Top-layer roots receive no DOM-ancestor overflow clip and are not shifted by an
-ancestor scroll offset. Their own overflow still clips nested content normally.
+ancestor scroll offset. The complete subtree receives one identity-transform
+logical viewport clip, preventing its own or overflow-visible descendant paint
+and hits from escaping the application viewport. Its own overflow still adds
+ordinary nested clips.
 Each popover subtree remains atomic and internally preserves flex z-index,
 display and hit order. Multiple showing popovers are projected in deterministic
 DOM tree order because the bounded DOM exposes visibility, not a public mutable
@@ -614,10 +624,11 @@ top-layer collection; later projected peers paint and hit-test later.
 Popover state records use the generic Document state invalidation path. A
 successful show/hide or DOM-owned Auto peer closure produces a new frame; a
 canceled `beforetoggle` changes no state and preserves exact clean frame
-identity. Renderer fabricates no `beforetoggle`/`toggle`, focus movement, light
-dismiss, Escape handling, source/anchor geometry, backdrop, or activation
-callback. Semantic node identity and ordinary DOM event ownership remain
-unchanged.
+identity. Core pointer interaction requests DOM light dismiss before outside
+focus; Browser keyboard projection applies the DOM Escape default only after an
+uncanceled semantic keydown. Renderer fabricates no `beforetoggle`/`toggle`,
+focus state, backdrop or activation callback. Semantic node identity and
+ordinary DOM event ownership remain unchanged.
 
 ## `RENDERER-CPU-023` — image replaced-element projection
 
@@ -895,3 +906,28 @@ This is the bounded fully-hidden HTML state, not a CSS specificity rule.
 `hidden="until-found"`, `beforematch`, find-in-page reveal and layout
 containment remain unsupported and are treated as fully hidden until their
 complete standard contract is implemented.
+
+## `RENDERER-CPU-032` — bounded text-control selection and caret projection
+
+Textarea HitMetadata carries renderer-derived line height, character advance
+and an exact-offset flag. The exact mapping is admitted only for
+`white-space:pre` plus `wrap="off"`; Core pointer down/move/up inverse-maps the
+current hit transform, line and column into the same semantic textarea offsets,
+preserves forward/backward direction and dispatches ordinary `select` when the
+effective range changes. Canvas pointer capture keeps that exact owner during a
+drag; no component coordinate map or second text tree is created.
+
+A focused enabled textarea in that profile paints either `(textarea, "caret")`
+or one `(textarea, "selection:<line-index>")` Rect per intersected source line,
+before its value Text. Geometry uses the same content box, alignment, font-size,
+letter-spacing, line-height, clips and final transform as value projection.
+The deterministic UA color is `#2563eb`; selection opacity is `0.35` and caret
+opacity is `1`. These UA chrome items intentionally remain visible over an
+author-transparent text layer so one separately tokenized same-Document
+presentation can remain readable while the semantic textarea owns selection.
+
+Soft wrapping, collapsed-whitespace offset mapping, tabs, proportional glyph
+metrics, textarea-local scroll offsets, bidi, grapheme clusters,
+IME/composition ranges, inactive selection, multiple ranges and ordinary DOM
+Text selection remain unsupported. They fail closed by omitting
+caret/selection items and pointer offset mutation.

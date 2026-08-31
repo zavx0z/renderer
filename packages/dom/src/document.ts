@@ -52,6 +52,10 @@ import {
   isProgrammaticallyFocusable
 } from "./internal/focus.ts"
 import {
+  dismissTopmostAutoPopover,
+  lightDismissPopovers
+} from "./internal/popover.ts"
+import {
   recordFocusStateChange,
   recordInputStateChange,
   recordOptionStateChange,
@@ -147,6 +151,17 @@ export interface HTMLElementTagNameMap {
   tr: HTMLTableRowElement
   ul: HTMLUListElement
 }
+
+export type TextControlSelectionTarget = HTMLInputElement | HTMLTextAreaElement
+
+export type DocumentTextControlSelection = Readonly<{
+  target: TextControlSelectionTarget
+  start: number
+  end: number
+  direction: "forward" | "backward" | "none"
+  collapsed: boolean
+  text: string
+}>
 
 export class Document extends Node {
   private transactionDepth = 0
@@ -278,6 +293,35 @@ export class Document extends Node {
 
   closeSelectPickerOutside(target: Element | null): boolean {
     return closeSelectPickerOutside(this, target)
+  }
+
+  readTextControlSelection(): DocumentTextControlSelection | null {
+    const active = this.activeElement
+    if (active instanceof HTMLTextAreaElement) {
+      return textControlSelection(
+        active,
+        active.selectionStart,
+        active.selectionEnd,
+        active.selectionDirection,
+      )
+    }
+    if (active instanceof HTMLInputElement && active.selectionStart !== null) {
+      return textControlSelection(
+        active,
+        active.selectionStart,
+        active.selectionEnd ?? active.selectionStart,
+        active.selectionDirection ?? "none",
+      )
+    }
+    return null
+  }
+
+  lightDismissPopovers(target: Element | null): boolean {
+    return lightDismissPopovers(this, target)
+  }
+
+  dismissTopmostAutoPopover(): boolean {
+    return dismissTopmostAutoPopover(this)
   }
 
   transaction<Result>(callback: () => Result): Result {
@@ -774,6 +818,20 @@ export class Document extends Node {
     }
   }
 }
+
+const textControlSelection = (
+  target: TextControlSelectionTarget,
+  start: number,
+  end: number,
+  direction: "forward" | "backward" | "none",
+): DocumentTextControlSelection => Object.freeze({
+  target,
+  start,
+  end,
+  direction,
+  collapsed: start === end,
+  text: target.value.slice(start, end),
+})
 
 const normalizeAuthorStyleSheets = (
   styleSheets: readonly DocumentAuthorStyleSheet[]

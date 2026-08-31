@@ -1,5 +1,10 @@
 import {describe, expect, test} from "bun:test"
-import {MouseEvent, PointerEvent, createDocument} from "@zavx0z/dom"
+import {
+  MouseEvent,
+  PointerEvent,
+  createDocument,
+  getPopoverVisibilityState,
+} from "@zavx0z/dom"
 import {
   createDocumentInteractionController,
   createDocumentRenderer,
@@ -312,6 +317,90 @@ describe("document interaction bridge", () => {
     interaction.pointerDown(reopened, {clientX: 110, clientY: 90})
     expect(select.pickerVisibilityState).toBe("closed")
     interaction.pointerCancel(renderer.flush(), {clientX: 110, clientY: 90})
+    renderer.dispose()
+  })
+
+  test("preserves an Auto popover for inside hits and light-dismisses before outside focus", () => {
+    const document = createDocument()
+    const root = document.createElement("div")
+    const source = document.createElement("button")
+    const outside = document.createElement("button")
+    const popover = document.createElement("div")
+    const inside = document.createElement("button")
+    document.appendChild(root)
+    root.append(source, outside, popover)
+    popover.appendChild(inside)
+    root.setAttribute("style", "display:flex; width:200px; height:100px")
+    source.setAttribute("style", "width:80px; height:20px")
+    outside.setAttribute("style", "width:80px; height:20px")
+    popover.popover = "auto"
+    popover.setAttribute("style", "width:80px; height:40px; background:#111111")
+    inside.setAttribute("style", "width:80px; height:40px")
+    source.focus()
+    popover.showPopover({source})
+    const renderer = createDocumentRenderer({
+      document,
+      root,
+      viewport: {width: 200, height: 100},
+    })
+    const interaction = createDocumentInteractionController({document})
+    const shown = renderer.flush()
+
+    interaction.pointerDown(shown, center(shown.boxByNode.get(inside)!))
+    expect(popover[getPopoverVisibilityState]()).toBe("showing")
+    expect(shown.boxByNode.has(popover)).toBeTrue()
+    interaction.pointerCancel(shown, center(shown.boxByNode.get(inside)!))
+
+    const outsidePoint = center(shown.boxByNode.get(outside)!)
+    interaction.pointerDown(shown, outsidePoint)
+    expect(popover[getPopoverVisibilityState]()).toBe("hidden")
+    expect(document.activeElement).toBe(outside)
+    expect(renderer.flush().boxByNode.has(popover)).toBeFalse()
+    interaction.pointerCancel(renderer.flush(), outsidePoint)
+    interaction.dispose()
+    renderer.dispose()
+  })
+
+  test("maps pointer drag through textarea metrics into one semantic selection", () => {
+    const document = createDocument()
+    const textArea = document.createElement("textarea")
+    textArea.value = "abcd\nefgh"
+    textArea.readOnly = true
+    textArea.wrap = "off"
+    textArea.setAttribute(
+      "style",
+      "box-sizing:border-box; width:100px; height:40px; padding:0; border:0; font-size:10px; line-height:16px; white-space:pre",
+    )
+    document.appendChild(textArea)
+    const renderer = createDocumentRenderer({
+      document,
+      root: textArea,
+      viewport: {width: 120, height: 60},
+    })
+    const interaction = createDocumentInteractionController({document})
+    const frame = renderer.flush()
+    const events: string[] = []
+    textArea.addEventListener("select", () => events.push("select"))
+
+    interaction.pointerDown(frame, {clientX: 6, clientY: 2, pointerId: 8, buttons: 1})
+    interaction.pointerMove(frame, {clientX: 12, clientY: 18, pointerId: 8, buttons: 1})
+    interaction.pointerUp(frame, {clientX: 12, clientY: 18, pointerId: 8})
+
+    expect([textArea.selectionStart, textArea.selectionEnd, textArea.selectionDirection])
+      .toEqual([1, 7, "forward"])
+    expect(document.readTextControlSelection()).toMatchObject({
+      target: textArea,
+      start: 1,
+      end: 7,
+      direction: "forward",
+      collapsed: false,
+      text: "bcd\nef",
+    })
+    expect(events).toEqual(["select", "select"])
+    expect(renderer.flush().displayList.filter(item =>
+      item.node === textArea && item.key.startsWith("selection:")
+    )).toHaveLength(2)
+    interaction.dispose()
     renderer.dispose()
   })
 })

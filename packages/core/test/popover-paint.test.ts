@@ -137,12 +137,68 @@ describe("popover top-layer projection", () => {
     const childPaint = rect(frame, child)
 
     expect(frame.boxByNode.get(popover)).toMatchObject({x: 50, y: 20, width: 100, height: 60})
-    expect(popoverPaint.clips).toEqual([])
-    expect(childPaint.clips).toEqual([])
+    expect(popoverPaint.clips).toHaveLength(1)
+    expect(popoverPaint.clips[0]).toMatchObject({
+      x: 0,
+      y: 0,
+      width: 200,
+      height: 100,
+      clipX: true,
+      clipY: true,
+    })
+    expect(childPaint.clips).toEqual(popoverPaint.clips)
     expect(paintIndex(frame, popover)).toBeGreaterThan(paintIndex(frame, underlay))
     expect(paintIndex(frame, child)).toBeGreaterThan(paintIndex(frame, popover))
     expect(hitTest(frame, 120, 30)?.node).toBe(child)
     expect([...frame.hits.values()].at(-1)?.node).toBe(child)
+    renderer.dispose()
+  })
+
+  test("anchors to transformed source geometry, flips above and clamps to the viewport", () => {
+    const document = createDocument()
+    const root = document.createElement("div")
+    const source = document.createElement("button")
+    const popover = document.createElement("div")
+    const overflow = document.createElement("div")
+    document.appendChild(root)
+    root.append(source, popover)
+    popover.appendChild(overflow)
+    root.setAttribute("style", "position:relative; width:200px; height:120px")
+    source.setAttribute(
+      "style",
+      "position:absolute; left:150px; top:70px; box-sizing:border-box; width:40px; height:20px; padding:0; border:0; transform:translate(10px, 10px) scale(1.25); transform-origin:0 0",
+    )
+    popover.popover = "auto"
+    popover.setAttribute(
+      "style",
+      "box-sizing:border-box; width:80px; height:50px; padding:0; border:0; background:#ff0000",
+    )
+    overflow.setAttribute("style", "width:240px; height:80px; background:#00ff00")
+    source.focus()
+    popover.showPopover({source})
+    const renderer = createDocumentRenderer({
+      document,
+      root,
+      viewport: {width: 200, height: 120},
+    })
+    const frame = renderer.flush()
+    const sourceBox = frame.boxByNode.get(source)!
+    const sourceBounds = visualBounds(sourceBox)
+    const popoverBox = frame.boxByNode.get(popover)!
+
+    expect(sourceBounds.left).toBeGreaterThan(120)
+    expect(sourceBounds.bottom + 4 + 50).toBeGreaterThan(120)
+    expect(popoverBox).toMatchObject({
+      x: 120,
+      y: Math.max(0, sourceBounds.top - 4 - 50),
+      width: 80,
+      height: 50,
+    })
+    const popoverPaint = rect(frame, popover)
+    const overflowPaint = rect(frame, overflow)
+    expect(popoverPaint.clips).toHaveLength(1)
+    expect(overflowPaint.clips).toEqual(popoverPaint.clips)
+    expect(popoverPaint.clips[0]).toMatchObject({width: 200, height: 120})
     renderer.dispose()
   })
 
@@ -217,4 +273,28 @@ function paintIndex(frame: RenderFrame, node: Element): number {
   return frame.displayList.findIndex((item) =>
     item.kind === "rect" && item.node === node && item.key === "background"
   )
+}
+
+function visualBounds(box: Readonly<{
+  x: number
+  y: number
+  width: number
+  height: number
+  transform: Readonly<{
+    scaleX: number
+    scaleY: number
+    translateX: number
+    translateY: number
+  }>
+}>) {
+  const firstX = box.x * box.transform.scaleX + box.transform.translateX
+  const secondX = (box.x + box.width) * box.transform.scaleX + box.transform.translateX
+  const firstY = box.y * box.transform.scaleY + box.transform.translateY
+  const secondY = (box.y + box.height) * box.transform.scaleY + box.transform.translateY
+  return {
+    left: Math.min(firstX, secondX),
+    top: Math.min(firstY, secondY),
+    right: Math.max(firstX, secondX),
+    bottom: Math.max(firstY, secondY),
+  }
 }

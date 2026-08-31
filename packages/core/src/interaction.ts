@@ -4,6 +4,7 @@ import {
   HTMLInputElement,
   HTMLOptionElement,
   HTMLSelectElement,
+  HTMLTextAreaElement,
   MouseEvent,
   PointerEvent,
   WheelEvent,
@@ -129,6 +130,11 @@ export const createDocumentInteractionController = (
     pointerId: number
     changed: boolean
   }> | null = null
+  let textSelectionDrag: Readonly<{
+    textArea: HTMLTextAreaElement
+    pointerId: number
+    anchor: number
+  }> | null = null
   let titleCandidate: TitleCandidate | null = null
   let hoverStartedAt = 0
   let pointerX = 0
@@ -162,11 +168,13 @@ export const createDocumentInteractionController = (
       const now = input.timeStamp ?? Date.now()
       const id = pointerIdOf(input)
       const target = rangeDrag?.pointerId === id ? rangeDrag.input :
+        textSelectionDrag?.pointerId === id ? textSelectionDrag.textArea :
         options.document.readPointerCaptureTarget(id) ??
         hitTest(frame, pointerX, pointerY)?.node ?? null
       transitionHover(target, input, now)
       const accepted = target?.dispatchEvent(pointerEvent("pointermove", input, null, true, true)) ?? true
       if (accepted && rangeDrag?.pointerId === id) updateRangeDrag(frame, input)
+      if (accepted && textSelectionDrag?.pointerId === id) updateTextSelectionDrag(frame, input)
       invalidatePresentation()
       return target
     },
@@ -182,6 +190,7 @@ export const createDocumentInteractionController = (
       options.document.beginPointer(id)
       activePointers.add(id)
       const hit = hitTest(frame, pointerX, pointerY)
+      options.document.lightDismissPopovers(hit?.node ?? null)
       options.document.closeSelectPickerOutside(hit?.node ?? null)
       const ownerHit = resolvePointerOwnerHit(frame, hit)
       transitionHover(hit?.node ?? null, input, now)
@@ -200,6 +209,12 @@ export const createDocumentInteractionController = (
           if (ownerHit.node instanceof HTMLInputElement && ownerHit.node.type === "range") {
             rangeDrag = Object.freeze({input: ownerHit.node, pointerId: id, changed: false})
             updateRangeDrag(frame, input)
+          } else if (ownerHit.node instanceof HTMLTextAreaElement && (input.button ?? 0) === 0) {
+            const anchor = textAreaOffsetAtPoint(frame, ownerHit.node, input)
+            if (anchor !== null) {
+              textSelectionDrag = Object.freeze({textArea: ownerHit.node, pointerId: id, anchor})
+              updateTextSelectionDrag(frame, input)
+            }
           }
         }
       }
@@ -217,7 +232,11 @@ export const createDocumentInteractionController = (
       const hit = hitTest(frame, pointerX, pointerY)
       const id = pointerIdOf(input)
       const captured = options.document.readPointerCaptureTarget(id)
-      const released = rangeDrag?.pointerId === id ? rangeDrag.input : captured ?? hit?.node ?? null
+      const released = rangeDrag?.pointerId === id
+        ? rangeDrag.input
+        : textSelectionDrag?.pointerId === id
+          ? textSelectionDrag.textArea
+          : captured ?? hit?.node ?? null
       const ownerHit = resolvePointerOwnerHitForTarget(frame, released, hit)
       transitionHover(released, input, now)
       const releasedOwner = ownerHit?.node ?? released
@@ -225,6 +244,7 @@ export const createDocumentInteractionController = (
       try {
         const accepted = released?.dispatchEvent(pointerEvent("pointerup", input, null, true, true)) ?? true
         if (accepted && rangeDrag?.pointerId === id) updateRangeDrag(frame, input)
+        if (accepted && textSelectionDrag?.pointerId === id) updateTextSelectionDrag(frame, input)
         if (
           releasedOwner !== null &&
           releasedOwner === pressedOwner &&
@@ -237,6 +257,7 @@ export const createDocumentInteractionController = (
           )
         }
         finishRangeDrag(id, true)
+        finishTextSelectionDrag(id)
       } finally {
         options.document.endPointer(id)
         activePointers.delete(id)
@@ -255,11 +276,13 @@ export const createDocumentInteractionController = (
       validatePointer(input)
       const id = pointerIdOf(input)
       const target = rangeDrag?.pointerId === id ? rangeDrag.input :
+        textSelectionDrag?.pointerId === id ? textSelectionDrag.textArea :
         options.document.readPointerCaptureTarget(id) ?? pressedTarget ?? hovered
       try {
         target?.dispatchEvent(pointerEvent("pointercancel", input, null, true, false))
       } finally {
         finishRangeDrag(id, false)
+        finishTextSelectionDrag(id)
         options.document.endPointer(id)
         activePointers.delete(id)
         pressedTarget = null
@@ -345,6 +368,7 @@ export const createDocumentInteractionController = (
       for (const pointerId of activePointers) options.document.endPointer(pointerId)
       activePointers.clear()
       rangeDrag = null
+      textSelectionDrag = null
       hovered = null
       pressedTarget = null
       pressedOwner = null
@@ -460,6 +484,27 @@ export const createDocumentInteractionController = (
       drag.input.dispatchEvent(new Event("change", {bubbles: true}))
     }
   }
+
+  function updateTextSelectionDrag(frame: RenderFrame, input: PointerInput): void {
+    const drag = textSelectionDrag
+    if (drag === null || drag.pointerId !== pointerIdOf(input)) return
+    const focus = textAreaOffsetAtPoint(frame, drag.textArea, input)
+    if (focus === null) return
+    const start = Math.min(drag.anchor, focus)
+    const end = Math.max(drag.anchor, focus)
+    const direction = focus < drag.anchor ? "backward" : focus > drag.anchor ? "forward" : "none"
+    if (
+      drag.textArea.selectionStart === start &&
+      drag.textArea.selectionEnd === end &&
+      drag.textArea.selectionDirection === direction
+    ) return
+    drag.textArea.setSelectionRange(start, end, direction)
+    drag.textArea.dispatchEvent(new Event("select", {bubbles: true, composed: true}))
+  }
+
+  function finishTextSelectionDrag(pointerId: number): void {
+    if (textSelectionDrag?.pointerId === pointerId) textSelectionDrag = null
+  }
 }
 
 const rangeEndpointPattern = /^-?(?:\d+(?:\.\d+)?|\.\d+)(?:[eE][+-]?\d+)?$/
@@ -468,6 +513,35 @@ const rangeEndpoint = (value: string): number | null => {
   if (!rangeEndpointPattern.test(value)) return null
   const number = Number(value)
   return Number.isFinite(number) ? number : null
+}
+
+const textAreaOffsetAtPoint = (
+  frame: RenderFrame,
+  textArea: HTMLTextAreaElement,
+  input: PointerInput,
+): number | null => {
+  const hit = frame.hits.get(textArea)
+  const metrics = hit?.textControl
+  const box = frame.boxByNode.get(textArea)
+  if (!hit || !metrics?.exactOffsetMapping || !box || metrics.lineHeight <= 0) return null
+  const point = inverseTransformPoint(hit.transform, input.clientX, input.clientY)
+  if (point === null) return null
+  const lines = textArea.value.split("\n")
+  const lineIndex = Math.max(
+    0,
+    Math.min(lines.length - 1, Math.floor((point.y - box.contentY) / metrics.lineHeight)),
+  )
+  const line = lines[lineIndex] ?? ""
+  const lineItem = frame.displayList.find((item): item is Extract<DisplayItem, {kind: "text"}> =>
+    item.kind === "text" && item.node === textArea && item.key === `value:${lineIndex}`
+  )
+  const lineX = lineItem?.x ?? box.contentX
+  const column = metrics.characterAdvance <= 0
+    ? 0
+    : Math.max(0, Math.min(line.length, Math.round((point.x - lineX) / metrics.characterAdvance)))
+  let offset = column
+  for (let index = 0; index < lineIndex; index += 1) offset += (lines[index]?.length ?? 0) + 1
+  return offset
 }
 
 export const hitTest = (

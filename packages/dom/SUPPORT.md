@@ -22,10 +22,10 @@ that is not implemented yet from appearing type-safe by accident.
 | Tree | `EventTarget`, `Node`, `Document`, `DocumentFragment` | Stable identity, ordered mutation, adoption, connected state, ParentNode and ChildNode convenience mutation |
 | Data | `CharacterData`, `Text`, `Comment` | Live data, `textContent`, mutation records and invisible comment anchors |
 | Collections | `NodeList`, `DOMTokenList` | Static query snapshots and lazy reflected class tokens; no live collection claim |
-| Elements | `Element`, `HTMLElement` | String attributes, `id`, `className`, `classList`, selector subset, `title`, `tabIndex`, focus, blur, explicit pointer capture, lazy requested scroll offsets and bounded Auto/Manual popover visibility |
+| Elements | `Element`, `HTMLElement` | String attributes, `id`, `className`, `classList`, selector subset, `title`, `tabIndex`, focus, blur, explicit pointer capture, lazy requested scroll offsets and bounded Auto/Manual popover source/dismiss/focus visibility |
 | HTML | `HTMLDivElement`, `HTMLSpanElement`, `HTMLButtonElement`, `HTMLInputElement`, `HTMLImageElement`, `HTMLSelectElement`, `HTMLOptionElement`, `HTMLProgressElement`, `HTMLMeterElement`, `HTMLTextAreaElement`, `HTMLLabelElement`, `HTMLFieldSetElement`, `HTMLLegendElement`, `HTMLUListElement`, `HTMLLIElement`, `HTMLHeadingElement`, `HTMLParagraphElement`, `HTMLTableElement`, `HTMLTableSectionElement`, `HTMLTableRowElement`, `HTMLTableCellElement` | Exact prototypes plus form-control live state, checkbox/radio click activation, bounded Range keyboard defaults, collapsed Select picker state/choice, reflected image author attributes, normalized gauges, label resolution, bounded fieldset disabledness and bounded table-cell reflection |
 | Events | `Event`, `CustomEvent`, `ToggleEvent`, `UIEvent`, `FocusEvent`, `MouseEvent`, `PointerEvent`, `WheelEvent`, `KeyboardEvent`, `InputEvent`, `CompositionEvent` | Capture/target/bubble, cancellation and practical toggle, pointer, wheel, keyboard, text-input and composition data; host input remains responsible for external native keyboard/IME projection |
-| Renderer adapters | `Document.transaction`, `Document.subscribeMutations`, `Document.subscribeStateChanges`, pointer-capture host bridge, `getPopoverVisibilityState`, select-picker state | Separate synchronous mutation, live-state and host-interaction channels, deliberately distinct from `MutationObserver` |
+| Renderer adapters | `Document.transaction`, `Document.subscribeMutations`, `Document.subscribeStateChanges`, pointer-capture host bridge, active text-control selection snapshot, popover source/visibility, select-picker state | Separate synchronous mutation, live-state and host-interaction channels, deliberately distinct from `MutationObserver` and standard DOM Range/Selection |
 
 Every omitted member is unsupported. The package never installs a stub that
 silently returns a fabricated value.
@@ -39,19 +39,19 @@ event.
 
 - parsing, serialization, `DOMParser`, `XMLSerializer` and `innerHTML`;
 - `Window`, browsing contexts, navigation, history, storage and networking;
-- namespaces, `DocumentType`, `Attr`, `NamedNodeMap`, `Range` and `Selection`;
+- namespaces, `DocumentType`, `Attr`, `NamedNodeMap`, standard `Range` and `Selection`; bounded active Input/TextArea selection remains separate;
 - `MutationObserver`, Shadow DOM, slots, custom elements and `ElementInternals`;
 - selector lists, combinators other than descendant, pseudo-selectors, namespaces and CSS escapes;
 - live `NodeList`, `HTMLCollection`, `dataset` and CSSOM;
 - scroll layout metrics, range clamping, smooth scrolling and synthesized scroll lifecycle events;
-- `:popover-open`, Hint mode/stacks, light dismiss, close watchers,
-  invoker/command attributes, implicit anchors, focus restoration and
+- `:popover-open`, Hint mode/stacks, close watchers,
+  invoker/command attributes, implicit anchors, autofocus and
   accessibility projection; the renderer already owns bounded showing
-  popover top-layer paint/order;
-- forms, validation, editing, clipboard, drag-and-drop and accessibility tree;
+  popover source anchoring/top-layer paint/order while DOM owns Auto light dismiss, Escape and focus return;
+- forms, validation, general editing, ClipboardEvent/DataTransfer, cut/paste/async clipboard, drag-and-drop and accessibility tree; bounded native plain-text text-control copy is supported;
 - select form submission/validity/reset, optgroup, selectedcontent and live `HTMLOptionsCollection`;
 - image URL resolution, fetching, decoding, load/error events, currentSrc, complete and intrinsic metrics;
-- textarea caret paint/geometry, textLength, hard-wrap submission, validity, form and remaining native editing APIs;
+- textarea soft-wrap/proportional/bidi/grapheme/IME selection geometry, textLength, hard-wrap submission, validity, form and remaining native editing APIs; bounded pre/wrap-off caret/selection belongs to Renderer;
 - label activation/reverse labels and fieldset elements/form/validity/reset APIs;
 - table collections, caption/section helpers, row/cell insertion algorithms,
   cell indices, table-model/header assignment, list numbering and legacy

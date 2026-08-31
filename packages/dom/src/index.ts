@@ -30,7 +30,11 @@ export type {NodeOrString} from "./node.ts"
 export {NodeList} from "./node-list.ts"
 export {DOMTokenList} from "./dom-token-list.ts"
 export {Document, createDocument} from "./document.ts"
-export type {HTMLElementTagNameMap} from "./document.ts"
+export type {
+  DocumentTextControlSelection,
+  HTMLElementTagNameMap,
+  TextControlSelectionTarget
+} from "./document.ts"
 export {
   acquireDocumentAuthorStyleSheetOwner,
   readDocumentAuthorStyleSheets,

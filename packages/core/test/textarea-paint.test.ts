@@ -5,6 +5,7 @@ import {
 } from "@zavx0z/dom"
 import {
   createDocumentRenderer,
+  type RectDisplayItem,
   type RenderFrame,
   type TextDisplayItem,
 } from "../src/index.ts"
@@ -221,10 +222,76 @@ describe("textarea replaced-control paint", () => {
     expect(document.activeElement).toBeNull()
     renderer.dispose()
   })
+
+  test("paints bounded multiline selection and caret chrome over transparent readonly content", () => {
+    const document = createDocument()
+    const textArea = document.createElement("textarea")
+    textArea.value = "abcd\nefgh"
+    textArea.readOnly = true
+    textArea.wrap = "off"
+    textArea.setAttribute(
+      "style",
+      "box-sizing:border-box; width:100px; height:40px; padding:0; border:0; font-size:10px; line-height:16px; white-space:pre; color:#00000000; opacity:0",
+    )
+    document.appendChild(textArea)
+    const renderer = createDocumentRenderer({
+      document,
+      root: textArea,
+      viewport: {width: 120, height: 60},
+    })
+    textArea.focus()
+    textArea.setSelectionRange(1, 7, "forward")
+    const selected = renderer.flush()
+    const selection = selectionRects(selected, textArea)
+
+    expect(selection.map(({key, x, y, width, height, color, opacity}) => ({
+      key,
+      x,
+      y,
+      width,
+      height,
+      color,
+      opacity,
+    }))).toEqual([
+      {key: "selection:0", x: 6, y: 0, width: 18, height: 16, color: "#2563eb", opacity: 0.35},
+      {key: "selection:1", x: 0, y: 16, width: 12, height: 16, color: "#2563eb", opacity: 0.35},
+    ])
+    expect(selection.every(item => item.clips.length === 1)).toBeTrue()
+    expect(valueLines(selected, textArea).every(item => item.opacity === 0)).toBeTrue()
+    expect(selected.displayList.indexOf(selection[0]!))
+      .toBeLessThan(selected.displayList.indexOf(valueLines(selected, textArea)[0]!))
+
+    textArea.setSelectionRange(5, 5, "none")
+    const collapsed = renderer.flush()
+    const caret = collapsed.displayList.find((item): item is RectDisplayItem =>
+      item.kind === "rect" && item.node === textArea && item.key === "caret"
+    )
+    expect(caret).toMatchObject({
+      x: 0,
+      y: 16,
+      width: 1,
+      height: 16,
+      color: "#2563eb",
+      opacity: 1,
+    })
+    expect(selectionRects(collapsed, textArea)).toEqual([])
+
+    textArea.disabled = true
+    expect(renderer.flush().displayList.some(item =>
+      item.node === textArea && (item.key === "caret" || item.key.startsWith("selection:"))
+    )).toBeFalse()
+    renderer.dispose()
+  })
 })
 
 function valueLines(frame: RenderFrame, textArea: HTMLTextAreaElement): TextDisplayItem[] {
   return frame.displayList.filter((item): item is TextDisplayItem =>
     item.kind === "text" && item.node === textArea && item.key.startsWith("value:")
+  )
+}
+
+function selectionRects(frame: RenderFrame, textArea: HTMLTextAreaElement): RectDisplayItem[] {
+  return frame.displayList.filter((item): item is RectDisplayItem =>
+    item.kind === "rect" && item.node === textArea && item.key.startsWith("selection:")
   )
 }

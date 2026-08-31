@@ -178,6 +178,11 @@ export type HitMetadata = Readonly<{
   role: string | null
   clips: readonly RenderClip[]
   transform: RenderTransform
+  textControl?: Readonly<{
+    lineHeight: number
+    characterAdvance: number
+    exactOffsetMapping: boolean
+  }>
 }>
 
 export type RenderScrollMetrics = Readonly<{

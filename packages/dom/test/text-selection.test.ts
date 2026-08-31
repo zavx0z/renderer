@@ -89,4 +89,39 @@ describe("input and textarea selection state", () => {
     })
     expect(states).toEqual([])
   })
+
+  test("derives one immutable active text-control selection without parallel state", () => {
+    const document = createDocument()
+    const root = document.createElement("div")
+    const textArea = document.createElement("textarea")
+    const button = document.createElement("button")
+    textArea.value = "alpha\nbeta"
+    root.append(textArea, button)
+    document.appendChild(root)
+
+    expect(document.readTextControlSelection()).toBeNull()
+    textArea.focus()
+    textArea.setSelectionRange(2, 8, "backward")
+    const snapshot = document.readTextControlSelection()
+    expect(snapshot).toEqual({
+      target: textArea,
+      start: 2,
+      end: 8,
+      direction: "backward",
+      collapsed: false,
+      text: "pha\nbe",
+    })
+    expect(Object.isFrozen(snapshot)).toBeTrue()
+
+    textArea.setSelectionRange(5, 5, "none")
+    expect(document.readTextControlSelection()).toMatchObject({
+      target: textArea,
+      start: 5,
+      end: 5,
+      collapsed: true,
+      text: "",
+    })
+    button.focus()
+    expect(document.readTextControlSelection()).toBeNull()
+  })
 })

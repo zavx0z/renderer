@@ -16,6 +16,7 @@ import {
   type StateChangeBatch,
   type Text,
 } from "@zavx0z/dom"
+import {getPopoverSource} from "@zavx0z/dom/popover-state"
 import {
   EMPTY_CUSTOM_PROPERTIES,
   computeStyle,
@@ -168,6 +169,7 @@ const PROGRESS_INDETERMINATE_COLOR = "#60a5fa"
 const METER_OPTIMUM_COLOR = "#16a34a"
 const METER_SUBOPTIMUM_COLOR = "#d97706"
 const METER_EVEN_LESS_GOOD_COLOR = "#dc2626"
+const TEXT_SELECTION_COLOR = "#2563eb"
 const rangeBoundaryPattern = /^-?(?:\d+(?:\.\d+)?|\.\d+)(?:[eE][+-]?\d+)?$/
 const graphemeSegmenter = typeof Intl.Segmenter === "function"
   ? new Intl.Segmenter(undefined, {granularity: "grapheme"})
@@ -879,15 +881,22 @@ const buildFrame = (
     const size = measure(topTree, viewport.width, viewport.height, state)
     const width = Math.min(viewport.width, size.width)
     const height = Math.min(viewport.height, size.height)
+    const placement = popoverTopLayerPlacement(
+      popover,
+      width,
+      height,
+      viewport,
+      state,
+    )
     place(
       topTree,
-      (viewport.width - width) / 2,
-      (viewport.height - height) / 2,
+      placement.x,
+      placement.y,
       viewport.width,
       viewport.height,
       width,
       height,
-      NO_CLIPS,
+      viewportTopLayerClips(viewport),
       0,
       state,
       viewportContext,
@@ -924,6 +933,53 @@ const buildFrame = (
   })
   return frame
 }
+
+const popoverTopLayerPlacement = (
+  popover: HTMLElement,
+  width: number,
+  height: number,
+  viewport: RenderViewport,
+  state: BuildState,
+): Readonly<{x: number; y: number}> => {
+  const source = popover[getPopoverSource]()
+  const sourceBox = source === null ? undefined : state.boxByNode.get(source)
+  if (sourceBox === undefined) {
+    return Object.freeze({
+      x: Math.max(0, (viewport.width - width) / 2),
+      y: Math.max(0, (viewport.height - height) / 2),
+    })
+  }
+  const anchor = transformedRectBounds(
+    sourceBox.x,
+    sourceBox.y,
+    sourceBox.width,
+    sourceBox.height,
+    sourceBox.transform,
+  )
+  const gap = 4
+  const availableBelow = Math.max(0, viewport.height - anchor.bottom - gap)
+  const availableAbove = Math.max(0, anchor.top - gap)
+  const placeBelow = height <= availableBelow || availableBelow >= availableAbove
+  const requestedY = placeBelow
+    ? anchor.bottom + gap
+    : anchor.top - gap - height
+  return Object.freeze({
+    x: Math.max(0, Math.min(Math.max(0, viewport.width - width), anchor.left)),
+    y: Math.max(0, Math.min(Math.max(0, viewport.height - height), requestedY)),
+  })
+}
+
+const viewportTopLayerClips = (viewport: RenderViewport): readonly RenderClip[] =>
+  Object.freeze([Object.freeze({
+    x: 0,
+    y: 0,
+    width: viewport.width,
+    height: viewport.height,
+    radii: ZERO_CLIP_RADII,
+    clipX: true,
+    clipY: true,
+    transform: IDENTITY_TRANSFORM,
+  })])
 
 const projectionRootInheritedStyle = (
   root: Node,
@@ -1791,6 +1847,7 @@ const place = (
         height,
         clips,
         presentation,
+        layoutNode.style,
       ),
     )
     state.hitOrder.push(layoutNode.node)
@@ -3708,15 +3765,17 @@ const emitTextAreaPresentation = (
   const liveValue = textArea.value
   const placeholder = liveValue === "" ? textArea.placeholder : ""
   const source = liveValue || placeholder
-  if (source === "") return
   const capacity = textCapacity(layoutNode.style, box.contentWidth)
-  const lines = textAreaVisualLines(
-    source,
-    layoutNode.style.whiteSpace,
-    textArea.wrap,
-    capacity,
-  )
+  const lines = source === ""
+    ? Object.freeze([])
+    : textAreaVisualLines(
+        source,
+        layoutNode.style.whiteSpace,
+        textArea.wrap,
+        capacity,
+      )
   const lineHeight = resolveLineHeight(layoutNode.style)
+  emitTextAreaSelection(textArea, layoutNode, box, clips, lineHeight, state)
   for (let index = 0; index < lines.length; index++) {
     const line = lines[index]
     if (!line || !hasPaintableText(line)) continue
@@ -3740,6 +3799,108 @@ const emitTextAreaPresentation = (
       transform: presentationFor(textArea, state),
     }))
   }
+}
+
+const emitTextAreaSelection = (
+  textArea: HTMLTextAreaElement,
+  layoutNode: LayoutNode,
+  box: RenderBox,
+  clips: readonly RenderClip[],
+  lineHeight: number,
+  state: BuildState,
+): void => {
+  if (
+    textArea.disabled ||
+    textArea.ownerDocument?.activeElement !== textArea ||
+    textArea.wrap !== "off" ||
+    layoutNode.style.whiteSpace !== "pre" ||
+    lineHeight <= 0
+  ) return
+  const lines = textArea.value.split("\n")
+  const start = textArea.selectionStart
+  const end = textArea.selectionEnd
+  const transform = presentationFor(textArea, state)
+  if (start === end) {
+    const position = textAreaLinePosition(lines, end)
+    const line = lines[position.line] ?? ""
+    const lineX = alignedTextX(
+      layoutNode.style,
+      box.contentX,
+      box.contentWidth,
+      textAdvance(line, layoutNode.style),
+    )
+    state.displayList.push(Object.freeze({
+      kind: "rect",
+      key: "caret",
+      node: textArea,
+      x: lineX + textAdvance(line.slice(0, position.column), layoutNode.style),
+      y: box.contentY + position.line * lineHeight,
+      width: 1,
+      height: lineHeight,
+      color: TEXT_SELECTION_COLOR,
+      opacity: 1,
+      border: ZERO_BORDER,
+      shadow: null,
+      clips,
+      transform,
+    }))
+    return
+  }
+  let lineStart = 0
+  for (let index = 0; index < lines.length; index += 1) {
+    const line = lines[index] ?? ""
+    const lineEnd = lineStart + line.length
+    const selectionStart = Math.max(start, lineStart)
+    const selectionEnd = Math.min(end, lineEnd)
+    const includesNewline = index < lines.length - 1 && start <= lineEnd && end > lineEnd
+    if (selectionStart < selectionEnd || includesNewline) {
+      const startColumn = Math.max(0, selectionStart - lineStart)
+      const endColumn = Math.max(startColumn, selectionEnd - lineStart)
+      const lineX = alignedTextX(
+        layoutNode.style,
+        box.contentX,
+        box.contentWidth,
+        textAdvance(line, layoutNode.style),
+      )
+      const x = lineX + textAdvance(line.slice(0, startColumn), layoutNode.style)
+      const selectedWidth = textAdvance(line.slice(startColumn, endColumn), layoutNode.style)
+      state.displayList.push(Object.freeze({
+        kind: "rect",
+        key: `selection:${index}`,
+        node: textArea,
+        x,
+        y: box.contentY + index * lineHeight,
+        width: Math.max(includesNewline ? 2 : 1, selectedWidth),
+        height: lineHeight,
+        color: TEXT_SELECTION_COLOR,
+        opacity: 0.35,
+        border: ZERO_BORDER,
+        shadow: null,
+        clips,
+        transform,
+      }))
+    }
+    lineStart = lineEnd + 1
+  }
+}
+
+const textAreaLinePosition = (
+  lines: readonly string[],
+  offset: number,
+): Readonly<{line: number; column: number}> => {
+  let lineStart = 0
+  for (let index = 0; index < lines.length; index += 1) {
+    const line = lines[index] ?? ""
+    const lineEnd = lineStart + line.length
+    if (offset <= lineEnd || index === lines.length - 1) {
+      return Object.freeze({
+        line: index,
+        column: Math.max(0, Math.min(line.length, offset - lineStart)),
+      })
+    }
+    lineStart = lineEnd + 1
+  }
+  return Object.freeze({line: 0, column: 0})
 }
 
 const textAreaVisualLines = (
@@ -4160,6 +4321,7 @@ const createHit = (
   height: number,
   clips: readonly RenderClip[],
   transform: RenderTransform,
+  style: ComputedStyle,
 ): HitMetadata => {
   const disabled = node.hasAttribute("disabled")
   const tabIndex = Number.parseInt(node.getAttribute("tabindex") ?? "-1", 10)
@@ -4191,6 +4353,15 @@ const createHit = (
     role,
     clips,
     transform,
+    ...(node instanceof HTMLTextAreaElement
+      ? {
+          textControl: Object.freeze({
+            lineHeight: resolveLineHeight(style),
+            characterAdvance: Math.max(0, style.fontSize * 0.6 + style.letterSpacing),
+            exactOffsetMapping: node.wrap === "off" && style.whiteSpace === "pre",
+          }),
+        }
+      : {}),
   })
 }
 

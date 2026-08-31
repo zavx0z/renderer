@@ -11,6 +11,8 @@ import {recordPopoverStateChange} from "./state-change.ts"
 
 type OpenPopoverState = Readonly<{
   mode: Exclude<PopoverValue, null>
+  source: HTMLElement | null
+  focusReturn: HTMLElement | null
 }>
 
 type DocumentPopoverState = {
@@ -44,6 +46,10 @@ export function readPopoverVisibilityState(element: HTMLElement): PopoverVisibil
   return openPopovers.has(element) ? "showing" : "hidden"
 }
 
+export function readPopoverSource(element: HTMLElement): HTMLElement | null {
+  return openPopovers.get(element)?.source ?? null
+}
+
 export function showPopover(element: HTMLElement, source: HTMLElement | null): void {
   const document = element.ownerDocument!
   document.transaction(() => showPopoverSteps(element, source))
@@ -51,7 +57,7 @@ export function showPopover(element: HTMLElement, source: HTMLElement | null): v
 
 export function hidePopover(element: HTMLElement): void {
   const document = element.ownerDocument!
-  document.transaction(() => hidePopoverSteps(element, true, true, null, false))
+  document.transaction(() => hidePopoverSteps(element, true, true, null, false, true))
 }
 
 export function togglePopover(
@@ -63,7 +69,7 @@ export function togglePopover(
   return document.transaction(() => {
     const showing = openPopovers.has(element)
     if (showing && (force === null || force === false)) {
-      hidePopoverSteps(element, true, true, null, false)
+      hidePopoverSteps(element, true, true, null, false, true)
     } else if (force === null || force === true) {
       showPopoverSteps(element, source)
     } else {
@@ -80,7 +86,53 @@ export function popoverAttributeChanged(
 ): void {
   if (!openPopovers.has(element)) return
   if (reflectedPopoverValue(oldValue) === reflectedPopoverValue(newValue)) return
-  hidePopoverSteps(element, true, false, null, true)
+  hidePopoverSteps(element, true, false, null, true, false)
+}
+
+export function lightDismissPopovers(
+  document: Document,
+  target: import("../element.ts").Element | null
+): boolean {
+  const documentState = documentStates.get(document)
+  if (!documentState || documentState.autoStack.length === 0) return false
+  let retainedIndex = -1
+  if (target !== null) {
+    for (let index = documentState.autoStack.length - 1; index >= 0; index -= 1) {
+      const candidate = documentState.autoStack[index]
+      const source = candidate ? openPopovers.get(candidate)?.source ?? null : null
+      if (
+        candidate &&
+        (candidate.contains(target) || source?.contains(target) === true)
+      ) {
+        retainedIndex = index
+        break
+      }
+    }
+  }
+  const popovers = documentState.autoStack.slice(retainedIndex + 1).reverse()
+  if (popovers.length === 0) return false
+  document.transaction(() => {
+    for (let index = 0; index < popovers.length; index += 1) {
+      hidePopoverSteps(
+        popovers[index]!,
+        true,
+        false,
+        null,
+        false,
+        index === popovers.length - 1,
+      )
+    }
+  })
+  return true
+}
+
+export function dismissTopmostAutoPopover(document: Document): boolean {
+  const popover = documentStates.get(document)?.autoStack.at(-1) ?? null
+  if (popover === null) return false
+  document.transaction(() => {
+    hidePopoverSteps(popover, true, false, null, false, true)
+  })
+  return true
 }
 
 export function closePopoversInSubtree(root: Node): void {
@@ -120,7 +172,15 @@ function showPopoverSteps(element: HTMLElement, source: HTMLElement | null): voi
       if (!validityResult(element, false, true)) return
     }
 
-    openPopovers.set(element, Object.freeze({mode}))
+    const active = document.activeElement
+    const focusReturn = active !== null && typeof (active as Partial<HTMLElement>).focus === "function"
+      ? active as HTMLElement
+      : null
+    openPopovers.set(element, Object.freeze({
+      mode,
+      source,
+      focusReturn,
+    }))
     if (mode === "auto") documentState.autoStack.push(element)
     publishOpenState(element, false, true)
     queueToggleEvent(element, "closed", "open", source)
@@ -135,7 +195,8 @@ function hidePopoverSteps(
   fireEvents: boolean,
   throwExceptions: boolean,
   source: HTMLElement | null,
-  attributeChange: boolean
+  attributeChange: boolean,
+  restoreFocus: boolean
 ): void {
   if (!attributeChange && !validityResult(element, true, throwExceptions)) return
   if (attributeChange && !openPopovers.has(element)) return
@@ -162,7 +223,7 @@ function hidePopoverSteps(
     }
 
     if (!openPopovers.has(element)) return
-    closePopoverState(element)
+    closePopoverState(element, restoreFocus)
     if (fireEvents) queueToggleEvent(element, "open", "closed", source)
   } finally {
     documentState.hidingCount -= 1
@@ -173,10 +234,10 @@ function hidePopoverSteps(
 
 function closePopoverWithoutEvents(element: HTMLElement): void {
   if (!openPopovers.has(element)) return
-  closePopoverState(element)
+  closePopoverState(element, false)
 }
 
-function closePopoverState(element: HTMLElement): void {
+function closePopoverState(element: HTMLElement, restoreFocus: boolean): void {
   const openState = openPopovers.get(element)
   if (!openState) return
   openPopovers.delete(element)
@@ -189,6 +250,7 @@ function closePopoverState(element: HTMLElement): void {
     }
   }
   publishOpenState(element, true, false)
+  if (restoreFocus) openState.focusReturn?.focus({preventScroll: true})
 }
 
 function checkPopoverValidity(element: HTMLElement, expectedToBeShowing: boolean): boolean {
@@ -249,7 +311,7 @@ function hideUnrelatedAutoPopovers(
 
   const popoversToHide = documentState.autoStack.slice(ancestorIndex + 1).reverse()
   for (const popover of popoversToHide) {
-    hidePopoverSteps(popover, true, false, null, false)
+    hidePopoverSteps(popover, true, false, null, false, false)
   }
 }
 
