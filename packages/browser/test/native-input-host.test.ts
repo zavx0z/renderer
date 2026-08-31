@@ -12,7 +12,7 @@ import {
 } from "../src/native-input-host.ts"
 
 describe("DocumentNativeInputHost", () => {
-  test("owns exactly one input and textarea proxy and switches exact semantic Documents", () => {
+  test("owns one input, select and textarea proxy and switches exact semantic Documents", () => {
     const harness = createHarness()
     let frames = 0
     const host = createDocumentNativeInputHostWithSeams({
@@ -256,6 +256,119 @@ describe("DocumentNativeInputHost", () => {
     host.dispose()
   })
 
+  test("mirrors number and range values without fabricating text selection", () => {
+    const harness = createHarness()
+    const host = createDocumentNativeInputHostWithSeams({requestFrame() {}}, harness.seams)
+    const document = createDocument()
+    const input = document.createElement("input")
+    input.type = "number"
+    input.valueAsNumber = 12.5
+    input.min = "-10"
+    input.max = "100"
+    input.step = "0.25"
+    document.appendChild(input)
+    input.focus()
+    host.setActiveDocument(document, "numeric")
+    const events: string[] = []
+    input.addEventListener("keydown", event => events.push(`keydown:${(event as SemanticKeyboardEvent).key}`))
+    input.addEventListener("input", () => events.push(`input:${input.value}`))
+    input.addEventListener("change", () => events.push(`change:${input.value}`))
+
+    expect(host.inputTarget).toBe(input)
+    expect(host.activeProxy).toBe("input")
+    expect(harness.input).toMatchObject({
+      type: "number",
+      value: "12.5",
+      min: "-10",
+      max: "100",
+      step: "0.25",
+      focused: true,
+    })
+    let numberPrevented = 0
+    harness.input.emit("keydown", nativeKeyboard({
+      key: "ArrowUp",
+      preventDefault() { numberPrevented += 1 },
+    }))
+    harness.input.applyArrowDefault("ArrowUp")
+    harness.input.emit("change", {type: "change"})
+    expect(numberPrevented).toBe(0)
+    expect(input.valueAsNumber).toBe(12.75)
+    expect(events).toEqual(["keydown:ArrowUp", "input:12.75", "change:12.75"])
+    events.length = 0
+    harness.input.value = "42.25"
+    harness.input.emit("input", nativeInput({inputType: "insertText"}))
+    harness.input.emit("change", {type: "change"})
+    expect(input.valueAsNumber).toBe(42.25)
+    expect(events).toEqual(["input:42.25", "change:42.25"])
+
+    input.type = "range"
+    input.min = "0"
+    input.max = "10"
+    input.step = "2"
+    host.synchronize()
+    expect(harness.input).toMatchObject({type: "range", min: "0", max: "10", step: "2"})
+    let prevented = 0
+    harness.input.emit("keydown", nativeKeyboard({
+      key: "ArrowRight",
+      preventDefault() { prevented += 1 },
+    }))
+    expect(input.valueAsNumber).toBe(10)
+    expect(prevented).toBe(1)
+    input.valueAsNumber = 4
+    host.synchronize()
+    harness.input.value = "9"
+    harness.input.emit("input", nativeInput())
+    expect(input.valueAsNumber).toBe(10)
+    expect(harness.input.value).toBe("10")
+    host.dispose()
+  })
+
+  test("uses the select proxy as a keyboard host for the in-canvas picker", () => {
+    const harness = createHarness()
+    let frames = 0
+    const host = createDocumentNativeInputHostWithSeams({requestFrame() { frames += 1 }}, harness.seams)
+    const document = createDocument()
+    const select = document.createElement("select")
+    const first = document.createElement("option")
+    const disabled = document.createElement("option")
+    const third = document.createElement("option")
+    first.value = "first"
+    disabled.value = "disabled"
+    disabled.disabled = true
+    third.value = "third"
+    select.append(first, disabled, third)
+    document.appendChild(select)
+    select.focus()
+    host.setActiveDocument(document, "select")
+    const events: string[] = []
+    select.addEventListener("input", () => events.push(`input:${select.value}`))
+    select.addEventListener("change", () => events.push(`change:${select.value}`))
+    let prevented = 0
+
+    expect(host.inputTarget).toBe(select)
+    expect(host.activeProxy).toBe("select")
+    expect(harness.select.focused).toBeTrue()
+    harness.select.emit("keydown", nativeKeyboard({
+      key: "ArrowDown",
+      preventDefault() { prevented += 1 },
+    }))
+    expect(select.value).toBe("third")
+    expect(events).toEqual(["input:third", "change:third"])
+    harness.select.emit("keydown", nativeKeyboard({
+      key: " ",
+      preventDefault() { prevented += 1 },
+    }))
+    expect(select.pickerVisibilityState).toBe("open")
+    harness.select.emit("keydown", nativeKeyboard({
+      key: "Escape",
+      preventDefault() { prevented += 1 },
+    }))
+    expect(select.pickerVisibilityState).toBe("closed")
+    expect(prevented).toBe(3)
+    expect(frames).toBe(3)
+    host.dispose()
+  })
+
   test("blurs on deactivation and removes both proxies and every listener", () => {
     const harness = createHarness()
     let frames = 0
@@ -278,8 +391,10 @@ describe("DocumentNativeInputHost", () => {
     expect(host.document).toBeNull()
     expect(host.ownerId).toBeNull()
     expect(harness.input.removed).toBeTrue()
+    expect(harness.select.removed).toBeTrue()
     expect(harness.textarea.removed).toBeTrue()
     expect(harness.input.listenerCount()).toBe(0)
+    expect(harness.select.listenerCount()).toBe(0)
     expect(harness.textarea.listenerCount()).toBe(0)
     expect(harness.selectionTarget.listenerCount()).toBe(0)
     expect(() => host.setActiveDocument(document)).toThrow("disposed")
@@ -291,6 +406,7 @@ describe("DocumentNativeInputHost", () => {
 
     expect(index).toContain('export {createDocumentNativeInputHost} from "./native-input-host.ts"')
     expect(source.match(/browserDocument\.createElement\("input"\)/gu)).toHaveLength(1)
+    expect(source.match(/browserDocument\.createElement\("select"\)/gu)).toHaveLength(1)
     expect(source.match(/browserDocument\.createElement\("textarea"\)/gu)).toHaveLength(1)
     expect(source).toContain("SemanticHTMLInputElement")
     expect(source).toContain("SemanticHTMLTextAreaElement")
@@ -308,16 +424,18 @@ describe("DocumentNativeInputHost", () => {
 
 function createHarness() {
   const input = new FakeTextProxy("input")
+  const select = new FakeTextProxy("select")
   const textarea = new FakeTextProxy("textarea")
   const selectionTarget = new FakeEventTarget()
   const seams: DocumentNativeInputHostSeams = Object.freeze({
     createProxies: () => ({
       input: input.element as HTMLInputElement,
+      select: select.element as unknown as HTMLSelectElement,
       textarea: textarea.element as HTMLTextAreaElement,
       selectionTarget,
     }),
   })
-  return {input, textarea, selectionTarget, seams}
+  return {input, select, textarea, selectionTarget, seams}
 }
 
 class FakeEventTarget {
@@ -353,6 +471,9 @@ class FakeTextProxy extends FakeEventTarget {
   value = ""
   readOnly = false
   disabled = false
+  min = ""
+  max = ""
+  step = ""
   selectionStart = 0
   selectionEnd = 0
   selectionDirection: "forward" | "backward" | "none" = "none"
@@ -362,7 +483,7 @@ class FakeTextProxy extends FakeEventTarget {
   autocomplete = ""
   readonly attributes = new Map<string, string>()
 
-  constructor(readonly kind: "input" | "textarea") {
+  constructor(readonly kind: "input" | "select" | "textarea") {
     super()
   }
 
@@ -378,6 +499,19 @@ class FakeTextProxy extends FakeEventTarget {
     this.selectionStart = Math.max(0, Math.min(this.value.length, start))
     this.selectionEnd = Math.max(this.selectionStart, Math.min(this.value.length, end))
     this.selectionDirection = direction
+  }
+
+  applyArrowDefault(key: "ArrowDown" | "ArrowUp"): void {
+    const step = Number(this.step) > 0 ? Number(this.step) : 1
+    const minimum = this.min === "" ? Number.NEGATIVE_INFINITY : Number(this.min)
+    const maximum = this.max === "" ? Number.POSITIVE_INFINITY : Number(this.max)
+    const current = Number(this.value)
+    const next = Math.max(
+      minimum,
+      Math.min(maximum, current + (key === "ArrowUp" ? step : -step)),
+    )
+    this.value = String(next)
+    this.emit("input", nativeInput({inputType: "stepUp"}))
   }
 }
 

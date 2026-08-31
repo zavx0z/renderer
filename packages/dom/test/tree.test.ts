@@ -274,4 +274,22 @@ describe("attributes and reflection", () => {
     button.disabled = true
     expect(button.getAttribute("disabled")).toBe("")
   })
+
+  it("reflects hidden and removes hidden owners and descendants from focusability", () => {
+    const document = createDocument()
+    const owner = document.createElement("div")
+    const button = document.createElement("button")
+    owner.appendChild(button)
+    document.appendChild(owner)
+
+    expect(owner.hidden).toBeFalse()
+    owner.hidden = true
+    expect(owner.getAttribute("hidden")).toBe("")
+    expect(owner.hidden).toBeTrue()
+    button.focus()
+    expect(document.activeElement).toBeNull()
+    owner.hidden = false
+    button.focus()
+    expect(document.activeElement).toBe(button)
+  })
 })

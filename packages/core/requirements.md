@@ -218,6 +218,12 @@ Platform adapters supply pointer coordinates and state. DOM listeners remain
 the only author-facing event API; renderer consumers do not register callbacks
 on boxes, surfaces or Engine objects.
 
+Before move/up/cancel dispatch, the controller processes the Document pending
+pointer-capture override. A captured Element remains the exact event target
+outside its hit box until explicit or implicit release; `gotpointercapture` and
+`lostpointercapture` ordering stays in the DOM owner. Controller disposal
+releases only its active pointer ids.
+
 ## `RENDERER-CPU-009` — `title` advisory presentation
 
 `HTMLElement.title` remains a reflected DOM attribute. On hover, the renderer
@@ -392,9 +398,15 @@ identity while preserving `track` identity. Disabled ranges remain painted
 through resolved UA opacity and expose disabled, non-interactive slider hit
 metadata.
 
-Range dragging, keyboard stepping, ticks, vertical orientation and datalist
-marks remain later interaction/form-control phases. This paint slice introduces
-no component callbacks or synthetic DOM children.
+An uncanceled pointer-down on the enabled range starts a Core-owned
+default-action drag. Pointer coordinates are inverse-transformed through the
+same track display geometry, clamped to its center-to-center travel and written
+through DOM `.valueAsNumber`; Core never reimplements step rounding. Effective
+changes dispatch `input`, and a changed pointer-up dispatches one `change`.
+Browser keyboard input delegates Arrow/Home/End/Page keys to the DOM range
+default action after semantic key cancellation. Ticks, vertical orientation
+and datalist marks remain later phases. This slice introduces no component
+callbacks or synthetic DOM children.
 
 ## `RENDERER-CPU-017` — collapsed select projection
 
@@ -422,10 +434,20 @@ metadata and follow the DOM focus law.
 
 `multiple` or `size > 1` requires listbox layout and interaction that this slice
 does not define; renderer therefore fails closed before committing a frame.
-Popup/picker UI, disclosure indicators, option activation, keyboard selection,
-listbox scrolling and open state remain later host/form-control phases. Paint
-never fabricates `input` or `change` events and creates no synthetic option
-nodes.
+One open collapsed picker is projected after ordinary document and popover
+paint. Viewport placement and clamping are solved in final presentation
+coordinates and inverse-mapped to owner-local geometry, so translated/scaled
+Selects cannot push the picker outside the logical viewport. It shows at most
+eight exact current Option identities,
+adds option-owned top-layer boxes/hits and uses deterministic selected/ordinary
+UA backgrounds. Pointer activation selects an enabled exact Option, emits
+`input` then `change`, closes and restores focus to the Select. Outside pointer
+down light-dismisses. Keyboard Arrow/Home/End and Space/Enter/Escape are owned
+by the semantic/Browser control bridge. No synthetic option nodes are created.
+
+V1 does not implement multiple/size>1 listbox layout, picker scrolling,
+type-ahead search, optgroup presentation, native accessibility projection or
+author styling of anonymous picker chrome.
 
 ## `RENDERER-CPU-018` — progress and meter gauge projection
 
@@ -849,3 +871,17 @@ same-Document CPU projection and blocks clean/incremental reuse before the next
 flush. Multiple planes/HUD projections with equal explicit CSS reuse one parse;
 release clears theme rules without replacing semantic nodes. No stage scans
 Elements, native stylesheets, Component instances or style attributes.
+
+## `RENDERER-CPU-031` — HTML hidden projection law
+
+After ordinary cascade and variable resolution, a present semantic `hidden`
+attribute forces the used display to `none`. Author, compiled, theme and inline
+`display` declarations cannot reveal that subtree. Hidden owners and
+descendants therefore produce no RenderBox, display item, hit metadata or
+scroll owner; removing the attribute invalidates through the ordinary mutation
+path and restores the author-computed display on the next frame.
+
+This is the bounded fully-hidden HTML state, not a CSS specificity rule.
+`hidden="until-found"`, `beforematch`, find-in-page reveal and layout
+containment remain unsupported and are treated as fully hidden until their
+complete standard contract is implemented.

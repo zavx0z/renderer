@@ -895,6 +895,11 @@ const buildFrame = (
     )
   }
 
+  const openSelect = document.readOpenSelectPicker()
+  if (openSelect !== null && (root === openSelect || root.contains(openSelect))) {
+    emitSelectPicker(openSelect, viewport, layoutCache, state)
+  }
+
   const boxes = immutableArray(state.boxes)
   const displayList = immutableArray(state.displayList)
   const boxByNode = immutableNodeMap(state.boxByNode)
@@ -3487,6 +3492,191 @@ const emitSelectPresentation = (
     }),
   )
 }
+
+const emitSelectPicker = (
+  select: HTMLSelectElement,
+  viewport: RenderViewport,
+  layoutCache: WeakMap<Node, LayoutNode>,
+  state: BuildState,
+): void => {
+  const box = state.boxByNode.get(select)
+  const layoutNode = layoutCache.get(select)
+  const options = [...select.options]
+  if (box === undefined || layoutNode === undefined || options.length === 0) return
+  const transform = box.transform
+  const scaleX = Math.abs(transform.scaleX)
+  const scaleY = Math.abs(transform.scaleY)
+  if (scaleX === 0 || scaleY === 0) return
+  const lineHeight = resolveLineHeight(layoutNode.style)
+  const rowHeight = Math.max(box.height, lineHeight + 8)
+  const visualSelect = transformedRectBounds(
+    box.x,
+    box.y,
+    box.width,
+    box.height,
+    transform,
+  )
+  const visualRowHeight = rowHeight * scaleY
+  const rowsBelow = Math.max(
+    0,
+    Math.floor((viewport.height - visualSelect.bottom) / visualRowHeight),
+  )
+  const rowsAbove = Math.max(0, Math.floor(visualSelect.top / visualRowHeight))
+  const maximumRows = Math.min(options.length, 8)
+  const placeBelow = rowsBelow >= maximumRows || rowsBelow >= rowsAbove
+  const visibleRows = Math.max(1, Math.min(maximumRows, placeBelow ? rowsBelow : rowsAbove))
+  const selectedIndex = Math.max(0, select.selectedIndex)
+  const firstIndex = Math.max(
+    0,
+    Math.min(options.length - visibleRows, selectedIndex - Math.floor(visibleRows / 2)),
+  )
+  const visibleOptions = options.slice(firstIndex, firstIndex + visibleRows)
+  const pickerHeight = visibleOptions.length * rowHeight
+  const visualPickerWidth = box.width * scaleX
+  const visualPickerHeight = pickerHeight * scaleY
+  const visualPickerX = Math.max(
+    0,
+    Math.min(Math.max(0, viewport.width - visualPickerWidth), visualSelect.left),
+  )
+  const visualPickerY = placeBelow
+    ? Math.max(0, Math.min(viewport.height - visualPickerHeight, visualSelect.bottom))
+    : Math.max(0, visualSelect.top - visualPickerHeight)
+  const pickerX = localRectStart(
+    visualPickerX,
+    visualPickerWidth,
+    transform.scaleX,
+    transform.translateX,
+  )
+  const pickerY = localRectStart(
+    visualPickerY,
+    visualPickerHeight,
+    transform.scaleY,
+    transform.translateY,
+  )
+  const pickerColor = "#111827"
+  const selectedColor = "#2563eb"
+  const ordinaryColor = "#1f2937"
+  state.displayList.push(Object.freeze({
+    kind: "rect",
+    key: "picker-background",
+    node: select,
+    x: pickerX,
+    y: pickerY,
+    width: box.width,
+    height: pickerHeight,
+    color: pickerColor,
+    opacity: layoutNode.effectiveOpacity,
+    border: roundRectPaintBorder(2, pickerColor),
+    shadow: null,
+    clips: NO_CLIPS,
+    transform,
+  }))
+  for (let visibleIndex = 0; visibleIndex < visibleOptions.length; visibleIndex += 1) {
+    const option = visibleOptions[visibleIndex]!
+    const optionIndex = firstIndex + visibleIndex
+    const y = pickerY + visibleIndex * rowHeight
+    const optionBox: RenderBox = Object.freeze({
+      node: option,
+      parent: select,
+      depth: box.depth + 1,
+      display: "block",
+      x: pickerX,
+      y,
+      width: box.width,
+      height: rowHeight,
+      contentX: pickerX + 6,
+      contentY: y + 4,
+      contentWidth: Math.max(0, box.width - 12),
+      contentHeight: Math.max(0, rowHeight - 8),
+      margin: ZERO_EDGES,
+      padding: Object.freeze({top: 4, right: 6, bottom: 4, left: 6}),
+      border: ZERO_BORDER,
+      transform,
+    })
+    state.boxes.push(optionBox)
+    state.boxByNode.set(option, optionBox)
+    const background = optionIndex === select.selectedIndex ? selectedColor : ordinaryColor
+    state.displayList.push(Object.freeze({
+      kind: "rect",
+      key: "picker-option-background",
+      node: option,
+      x: pickerX,
+      y,
+      width: box.width,
+      height: rowHeight,
+      color: background,
+      opacity: layoutNode.effectiveOpacity * (option.disabled ? 0.5 : 1),
+      border: ZERO_BORDER,
+      shadow: null,
+      clips: NO_CLIPS,
+      transform,
+    }))
+    const label = ellipsizeSingleLine(
+      option.label,
+      layoutNode.style,
+      optionBox.contentWidth,
+      true,
+    )
+    if (label !== "" && hasPaintableText(label)) {
+      state.displayList.push(Object.freeze({
+        kind: "text",
+        key: "picker-option-label",
+        node: option,
+        text: label,
+        x: optionBox.contentX,
+        y: optionBox.contentY + Math.max(0, (optionBox.contentHeight - lineHeight) / 2),
+        color: layoutNode.style.color,
+        fontSize: layoutNode.style.fontSize,
+        letterSpacing: layoutNode.style.letterSpacing,
+        opacity: layoutNode.effectiveOpacity * (option.disabled ? 0.5 : 1),
+        clips: NO_CLIPS,
+        transform,
+      }))
+    }
+    const hit: HitMetadata = Object.freeze({
+      node: option,
+      x: pickerX,
+      y,
+      width: box.width,
+      height: rowHeight,
+      interactive: !option.disabled,
+      disabled: option.disabled,
+      role: "option",
+      clips: NO_CLIPS,
+      transform,
+    })
+    state.hits.set(option, hit)
+    state.hitOrder.push(option)
+  }
+}
+
+const transformedRectBounds = (
+  x: number,
+  y: number,
+  width: number,
+  height: number,
+  transform: RenderTransform,
+): Readonly<{left: number; top: number; right: number; bottom: number}> => {
+  const firstX = x * transform.scaleX + transform.translateX
+  const secondX = (x + width) * transform.scaleX + transform.translateX
+  const firstY = y * transform.scaleY + transform.translateY
+  const secondY = (y + height) * transform.scaleY + transform.translateY
+  return Object.freeze({
+    left: Math.min(firstX, secondX),
+    top: Math.min(firstY, secondY),
+    right: Math.max(firstX, secondX),
+    bottom: Math.max(firstY, secondY),
+  })
+}
+
+const localRectStart = (
+  visualStart: number,
+  visualSize: number,
+  scale: number,
+  translate: number,
+): number => scale > 0
+  ? (visualStart - translate) / scale
+  : (visualStart + visualSize - translate) / scale
 
 const emitTextAreaPresentation = (
   textArea: HTMLTextAreaElement,

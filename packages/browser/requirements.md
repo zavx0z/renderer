@@ -59,8 +59,9 @@ Canvas `pointermove`, `pointerdown`, `pointerup`, `pointercancel` и `wheel`
 собственный cumulative RenderTransform/clip chain; runtime не применяет CSS
 scale/translate повторно и semantic PointerEvent сохраняет logical viewport
 `clientX/clientY`, а не element-local coordinates.
-Pointer capture остаётся у canvas. Wheel delta и modifiers передаются exact
-Core `DocumentInteractionController.wheel()`; Core выбирает scroll owner и
+Native pointer capture остаётся у canvas, а semantic capture independently
+retargets Core events through the exact Document pending override. Wheel delta
+и modifiers передаются exact Core `DocumentInteractionController.wheel()`; Core выбирает scroll owner и
 меняет standard DOM `scrollTop`/`scrollLeft`, после чего runtime выполняет один
 новый frame. Browser package не реализует собственный scroll law.
 
@@ -88,16 +89,19 @@ focus back from the semantic `HTMLInputElement`.
 Tooltip timeout только запрашивает следующий presentation frame после
 `tooltipDelayMs`; содержимое и timing decision остаются у Core interaction.
 
-## `RENDERER-BROWSER-004` — reusable native text-input host
+## `RENDERER-BROWSER-004` — reusable native input/control host
 
-`DocumentNativeInputHost` создаёт ровно два off-screen browser owners: один
+`DocumentNativeInputHost` создаёт ровно три off-screen browser owners: один
 `input[data-renderer-input-proxy]` и один
+`select[data-renderer-select-proxy]` и один
 `textarea[data-renderer-textarea-proxy]`. Активен только proxy exact focused
 semantic target. Это keyboard/IME event host, а не HTML mirror semantic tree.
 Text-like `HTMLInputElement` ограничен standard selection-applicable types
-`text/search/tel/url/password`; `HTMLTextAreaElement` использует textarea proxy.
-Checkbox/radio и остальные input types остаются DOM-owned activation и никогда
-не зеркалируются.
+`text/search/tel/url/password`; `number` и horizontal `range` используют тот же
+input proxy без fabricated selection. `HTMLTextAreaElement` использует textarea
+proxy. Collapsed single `HTMLSelectElement` использует select только как
+keyboard owner; picker/option paint остаётся в одном WebGPU frame. Checkbox,
+radio и остальные input types остаются DOM-owned activation и не зеркалируются.
 
 Host закрепляет один exact active semantic Document и optional projection owner
 id. В SpaceRuntime Document остаётся одним и тем же, а accepted pointer focus
@@ -106,8 +110,11 @@ Deactivation, empty hit, active projection removal и runtime dispose выпол
 blur/cleanup. Canvas предоставляет readonly
 `inputTarget`; SpaceRuntime также предоставляет readonly `activeInputPlaneId`.
 
-Input proxy отражает `type`, оба proxy — live `value`, `readOnly`, `disabled` и
-standard `selectionStart/selectionEnd/selectionDirection`. Native `select` и
+Input proxy отражает `type`; text/number/range owners отражают live `value`,
+`readOnly` и `disabled`, numeric owners также отражают `min`/`max`/`step`, а
+selection зеркалируется только когда она применима.
+Textarea отражает live `value`, `readOnly`, `disabled` и standard
+`selectionStart/selectionEnd/selectionDirection`. Native `select` и
 `selectionchange` обновляют только semantic selection state; `select` map-ится
 в один ordinary semantic `select` event. Programmatic semantic
 value/type/selection changes возвращаются в active proxy через общий
@@ -119,10 +126,14 @@ active Document. Для native `input` value и selection записываютс
 dispatch, поэтому listener видит новый state. Cancelable rejection атомарно
 возвращает semantic и native value+selection; coalesced state channel не
 публикует отменённый intermediate state и host не создаёт второй `input` event.
+Native `change` map-ится в один semantic `change`. Для Range и Select host
+после uncanceled `keydown` предотвращает native off-screen default и вызывает
+DOM-owned bounded default action; поэтому значение, picker state и event order
+не зависят от невидимой browser chrome.
 
-V1 не заявляет caret paint/geometry, clipboard, DataTransfer, forms или IME
-candidate UI. Host является bounded text-entry adapter, а не обещанием полного
-browser form control.
+V1 не заявляет caret paint/geometry, clipboard, DataTransfer, forms, select
+type-ahead/multiple listbox или IME candidate UI. Host является bounded
+input/control adapter, а не обещанием полного browser form control.
 
 ## `RENDERER-BROWSER-005` — capture и lifecycle
 

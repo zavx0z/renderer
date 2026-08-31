@@ -308,6 +308,10 @@ export class HTMLInputElement extends HTMLElement {
     this.recordSelectionChange(previous, next)
   }
 
+  applyRangeKeyboardDefault(key: string): boolean {
+    return applyRangeKeyboardDefault(this, key)
+  }
+
   click(): void {
     if (this.disabled || disabledByAncestorFieldSet(this)) return
     const ownerDocument = this.ownerDocument!
@@ -532,4 +536,40 @@ export class HTMLInputElement extends HTMLElement {
       newValue
     }))
   }
+}
+
+function applyRangeKeyboardDefault(
+  input: HTMLInputElement,
+  key: string,
+): boolean {
+  if (input.type !== "range" || input.disabled || disabledByAncestorFieldSet(input)) return false
+  const minimum = parseHTMLFloatingPointNumber(input.min) ?? 0
+  const declaredMaximum = parseHTMLFloatingPointNumber(input.max) ?? 100
+  const maximum = Math.max(minimum, declaredMaximum)
+  const parsedStep = parseHTMLFloatingPointNumber(input.step)
+  const step = parsedStep !== null && parsedStep > 0 ? parsedStep : 1
+  const current = Number.isFinite(input.valueAsNumber)
+    ? input.valueAsNumber
+    : minimum + (maximum - minimum) / 2
+  const requested = key === "ArrowUp" || key === "ArrowRight"
+    ? current + step
+    : key === "ArrowDown" || key === "ArrowLeft"
+      ? current - step
+      : key === "PageUp"
+        ? current + step * 10
+        : key === "PageDown"
+          ? current - step * 10
+          : key === "Home"
+            ? minimum
+            : key === "End"
+              ? maximum
+              : null
+  if (requested === null) return false
+  const previous = input.value
+  input.valueAsNumber = requested
+  if (input.value !== previous) {
+    input.dispatchEvent(new Event("input", {bubbles: true, composed: true}))
+    input.dispatchEvent(new Event("change", {bubbles: true}))
+  }
+  return true
 }

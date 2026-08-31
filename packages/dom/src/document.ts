@@ -57,6 +57,7 @@ import {
   recordOptionStateChange,
   recordPopoverStateChange,
   recordScrollStateChange,
+  recordSelectPickerStateChange,
   recordTextAreaStateChange
 } from "./internal/state-change.ts"
 import type {DocumentMutation, MutationBatch, MutationSubscriber} from "./mutation.ts"
@@ -64,6 +65,15 @@ import {Node} from "./node.ts"
 import type {NodeOrString} from "./node.ts"
 import type {NodeList} from "./node-list.ts"
 import {findElementById, queryAll, queryFirst} from "./selectors.ts"
+import {
+  beginDocumentPointer,
+  endDocumentPointer,
+  readDocumentPointerCaptureTarget
+} from "./pointer-capture.ts"
+import {
+  closeSelectPickerOutside,
+  readOpenSelectPicker
+} from "./select-picker-state.ts"
 import type {
   DocumentStateChange,
   FocusStateChange,
@@ -71,6 +81,7 @@ import type {
   OptionSelectedStateChange,
   PopoverStateChange,
   ScrollStateChange,
+  SelectPickerStateChange,
   StateChangeBatch,
   StateChangeSubscriber,
   TextAreaStateChange
@@ -247,6 +258,26 @@ export class Document extends Node {
 
   querySelectorAll(selectors: string): NodeList<Element> {
     return queryAll(this, selectors)
+  }
+
+  beginPointer(pointerId: number): void {
+    beginDocumentPointer(this, pointerId)
+  }
+
+  readPointerCaptureTarget(pointerId: number): Element | null {
+    return readDocumentPointerCaptureTarget(this, pointerId)
+  }
+
+  endPointer(pointerId: number): void {
+    endDocumentPointer(this, pointerId)
+  }
+
+  readOpenSelectPicker(): HTMLSelectElement | null {
+    return readOpenSelectPicker(this)
+  }
+
+  closeSelectPickerOutside(target: Element | null): boolean {
+    return closeSelectPickerOutside(this, target)
   }
 
   transaction<Result>(callback: () => Result): Result {
@@ -487,6 +518,24 @@ export class Document extends Node {
     const current = targetChanges.get(key) as PopoverStateChange | undefined
     const next: PopoverStateChange = Object.freeze({
       type: "popover",
+      target: change.target,
+      property: "open",
+      oldValue: current?.oldValue ?? change.oldValue,
+      newValue: change.newValue
+    })
+    if (next.oldValue === next.newValue) targetChanges.delete(key)
+    else targetChanges.set(key, next)
+    this.updatePendingTarget(state, change.target, targetChanges)
+    if (this.transactionDepth === 0) this.flushStateChanges()
+  }
+
+  [recordSelectPickerStateChange](change: SelectPickerStateChange): void {
+    const state = this.ensureStateChangeState()
+    const targetChanges = state.pending.get(change.target) ?? new Map<string, DocumentStateChange>()
+    const key = "select-picker:open"
+    const current = targetChanges.get(key) as SelectPickerStateChange | undefined
+    const next: SelectPickerStateChange = Object.freeze({
+      type: "select-picker",
       target: change.target,
       property: "open",
       oldValue: current?.oldValue ?? change.oldValue,

@@ -2,6 +2,7 @@ import {EventTarget} from "./event-target.ts"
 import {domError} from "./internal/errors.ts"
 import {clearFocusInSubtree} from "./internal/focus.ts"
 import {closePopoversInSubtree} from "./internal/popover.ts"
+import {closeSelectPickersInSubtree} from "./select-picker-state.ts"
 import type {Document} from "./document.ts"
 import type {Element} from "./element.ts"
 import type {ChildListMutation} from "./mutation.ts"
@@ -374,6 +375,7 @@ export abstract class Node extends EventTarget {
     if (!preservesDocumentState) {
       document?.[clearFocusInSubtree](this)
       closePopoversInSubtree(this)
+      closeSelectPickersInSubtree(this)
     }
     const previous = this.previous
     const next = this.next

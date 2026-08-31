@@ -1,5 +1,9 @@
 import {
+  Event,
   HTMLElement,
+  HTMLInputElement,
+  HTMLOptionElement,
+  HTMLSelectElement,
   MouseEvent,
   PointerEvent,
   WheelEvent,
@@ -120,11 +124,17 @@ export const createDocumentInteractionController = (
   let pressedTarget: Element | null = null
   let pressedOwner: Element | null = null
   let pressedOwnerDisabled = false
+  let rangeDrag: Readonly<{
+    input: HTMLInputElement
+    pointerId: number
+    changed: boolean
+  }> | null = null
   let titleCandidate: TitleCandidate | null = null
   let hoverStartedAt = 0
   let pointerX = 0
   let pointerY = 0
   let hasPointerPosition = false
+  const activePointers = new Set<number>()
   let currentTooltip: TitleTooltip | null = null
   let cachedBase: RenderFrame | null = null
   let cachedSignature = ""
@@ -150,9 +160,13 @@ export const createDocumentInteractionController = (
       pointerY = input.clientY
       hasPointerPosition = true
       const now = input.timeStamp ?? Date.now()
-      const target = hitTest(frame, pointerX, pointerY)?.node ?? null
+      const id = pointerIdOf(input)
+      const target = rangeDrag?.pointerId === id ? rangeDrag.input :
+        options.document.readPointerCaptureTarget(id) ??
+        hitTest(frame, pointerX, pointerY)?.node ?? null
       transitionHover(target, input, now)
-      target?.dispatchEvent(pointerEvent("pointermove", input, null, true, true))
+      const accepted = target?.dispatchEvent(pointerEvent("pointermove", input, null, true, true)) ?? true
+      if (accepted && rangeDrag?.pointerId === id) updateRangeDrag(frame, input)
       invalidatePresentation()
       return target
     },
@@ -164,7 +178,11 @@ export const createDocumentInteractionController = (
       pointerY = input.clientY
       hasPointerPosition = true
       const now = input.timeStamp ?? Date.now()
+      const id = pointerIdOf(input)
+      options.document.beginPointer(id)
+      activePointers.add(id)
       const hit = hitTest(frame, pointerX, pointerY)
+      options.document.closeSelectPickerOutside(hit?.node ?? null)
       const ownerHit = resolvePointerOwnerHit(frame, hit)
       transitionHover(hit?.node ?? null, input, now)
       pressedTarget = hit?.node ?? null
@@ -179,6 +197,10 @@ export const createDocumentInteractionController = (
         )
         if (accepted && ownerHit?.interactive === true && !ownerHit.disabled) {
           focusElement(ownerHit.node)
+          if (ownerHit.node instanceof HTMLInputElement && ownerHit.node.type === "range") {
+            rangeDrag = Object.freeze({input: ownerHit.node, pointerId: id, changed: false})
+            updateRangeDrag(frame, input)
+          }
         }
       }
       invalidatePresentation()
@@ -193,13 +215,16 @@ export const createDocumentInteractionController = (
       hasPointerPosition = true
       const now = input.timeStamp ?? Date.now()
       const hit = hitTest(frame, pointerX, pointerY)
-      const ownerHit = resolvePointerOwnerHit(frame, hit)
-      transitionHover(hit?.node ?? null, input, now)
-      const released = hit?.node ?? null
+      const id = pointerIdOf(input)
+      const captured = options.document.readPointerCaptureTarget(id)
+      const released = rangeDrag?.pointerId === id ? rangeDrag.input : captured ?? hit?.node ?? null
+      const ownerHit = resolvePointerOwnerHitForTarget(frame, released, hit)
+      transitionHover(released, input, now)
       const releasedOwner = ownerHit?.node ?? released
       const releasedOwnerDisabled = ownerHit?.disabled ?? hit?.disabled ?? false
       try {
-        released?.dispatchEvent(pointerEvent("pointerup", input, null, true, true))
+        const accepted = released?.dispatchEvent(pointerEvent("pointerup", input, null, true, true)) ?? true
+        if (accepted && rangeDrag?.pointerId === id) updateRangeDrag(frame, input)
         if (
           releasedOwner !== null &&
           releasedOwner === pressedOwner &&
@@ -211,7 +236,10 @@ export const createDocumentInteractionController = (
             input,
           )
         }
+        finishRangeDrag(id, true)
       } finally {
+        options.document.endPointer(id)
+        activePointers.delete(id)
         pressedTarget = null
         pressedOwner = null
         pressedOwnerDisabled = false
@@ -225,10 +253,15 @@ export const createDocumentInteractionController = (
       assertActive()
       validateFrame(frame)
       validatePointer(input)
-      const target = pressedTarget ?? hovered
+      const id = pointerIdOf(input)
+      const target = rangeDrag?.pointerId === id ? rangeDrag.input :
+        options.document.readPointerCaptureTarget(id) ?? pressedTarget ?? hovered
       try {
         target?.dispatchEvent(pointerEvent("pointercancel", input, null, true, false))
       } finally {
+        finishRangeDrag(id, false)
+        options.document.endPointer(id)
+        activePointers.delete(id)
         pressedTarget = null
         pressedOwner = null
         pressedOwnerDisabled = false
@@ -309,6 +342,9 @@ export const createDocumentInteractionController = (
     dispose() {
       if (disposed) return
       disposed = true
+      for (const pointerId of activePointers) options.document.endPointer(pointerId)
+      activePointers.clear()
+      rangeDrag = null
       hovered = null
       pressedTarget = null
       pressedOwner = null
@@ -395,6 +431,43 @@ export const createDocumentInteractionController = (
     cachedSignature = ""
     cachedPresentation = null
   }
+
+  function updateRangeDrag(frame: RenderFrame, input: PointerInput): void {
+    const drag = rangeDrag
+    if (drag === null || drag.pointerId !== pointerIdOf(input)) return
+    const track = frame.displayList.find((item): item is Extract<DisplayItem, {kind: "rect"}> =>
+      item.kind === "rect" && item.node === drag.input && item.key === "track"
+    )
+    if (track === undefined) return
+    const point = inverseTransformPoint(track.transform, input.clientX, input.clientY)
+    if (point === null) return
+    const ratio = track.width <= 0 ? 0 : clamp((point.x - track.x) / track.width, 0, 1)
+    const minimum = rangeEndpoint(drag.input.min) ?? 0
+    const declaredMaximum = rangeEndpoint(drag.input.max) ?? 100
+    const maximum = Math.max(minimum, declaredMaximum)
+    const previous = drag.input.value
+    drag.input.valueAsNumber = minimum + (maximum - minimum) * ratio
+    if (drag.input.value === previous) return
+    rangeDrag = Object.freeze({...drag, changed: true})
+    drag.input.dispatchEvent(new Event("input", {bubbles: true, composed: true}))
+  }
+
+  function finishRangeDrag(pointerId: number, commit: boolean): void {
+    const drag = rangeDrag
+    if (drag === null || drag.pointerId !== pointerId) return
+    rangeDrag = null
+    if (commit && drag.changed) {
+      drag.input.dispatchEvent(new Event("change", {bubbles: true}))
+    }
+  }
+}
+
+const rangeEndpointPattern = /^-?(?:\d+(?:\.\d+)?|\.\d+)(?:[eE][+-]?\d+)?$/
+
+const rangeEndpoint = (value: string): number | null => {
+  if (!rangeEndpointPattern.test(value)) return null
+  const number = Number(value)
+  return Number.isFinite(number) ? number : null
 }
 
 export const hitTest = (
@@ -430,6 +503,24 @@ export const resolvePointerOwnerHit = (
   if (hit === null) return null
   for (
     let element: Element | null = hit.node;
+    element !== null;
+    element = element.parentElement
+  ) {
+    const candidate = frame.hits.get(element)
+    if (candidate?.interactive === true || candidate?.disabled === true) return candidate
+  }
+  return null
+}
+
+const resolvePointerOwnerHitForTarget = (
+  frame: RenderFrame,
+  target: Element | null,
+  hit: HitMetadata | null,
+): HitMetadata | null => {
+  if (target === null) return null
+  if (hit?.node === target) return resolvePointerOwnerHit(frame, hit)
+  for (
+    let element: Element | null = target;
     element !== null;
     element = element.parentElement
   ) {
@@ -557,6 +648,8 @@ const pointerEvent = (
     relatedTarget,
   })
 
+const pointerIdOf = (input: PointerInput): number => input.pointerId ?? 1
+
 const wheelEvent = (input: WheelInput): WheelEvent =>
   new WheelEvent("wheel", {
     bubbles: true,
@@ -672,6 +765,28 @@ const wheelDelta = (
 }
 
 const activateElement = (element: Element, input: PointerInput): void => {
+  if (element instanceof HTMLOptionElement) {
+    const select = selectOwner(element)
+    if (select !== null) {
+      select.choosePickerOption(element)
+      return
+    }
+  }
+  if (element instanceof HTMLSelectElement) {
+    const accepted = element.dispatchEvent(new MouseEvent("click", {
+      bubbles: true,
+      cancelable: true,
+      composed: true,
+      clientX: input.clientX,
+      clientY: input.clientY,
+      button: input.button ?? 0,
+      buttons: input.buttons ?? 0,
+    }))
+    if (!accepted) return
+    if (element.pickerVisibilityState === "open") element.hidePicker()
+    else element.showPicker()
+    return
+  }
   const activation = (element as Element & {click?: () => void}).click
   if (typeof activation === "function") {
     activation.call(element)
@@ -686,6 +801,13 @@ const activateElement = (element: Element, input: PointerInput): void => {
     button: input.button ?? 0,
     buttons: input.buttons ?? 0,
   }))
+}
+
+const selectOwner = (option: HTMLOptionElement): HTMLSelectElement | null => {
+  for (let current = option.parentElement; current !== null; current = current.parentElement) {
+    if (current instanceof HTMLSelectElement) return current
+  }
+  return null
 }
 
 const focusElement = (element: Element): void => {

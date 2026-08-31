@@ -38,6 +38,10 @@ interface Classification {
 }
 
 const verificationDate = "2026-08-29"
+const recoveryVerification = {
+  revision: "28a4ce08e94231bf6f2fd144f8e54bd8975946f3+dirty",
+  date: "2026-08-31",
+} as const
 const flexWrapVerification = {
   revision: "74ea59fc8fa7c7156ebaeefceed459097f52b4dd",
   date: "2026-08-30",
@@ -150,12 +154,42 @@ function classify(entry: CapabilityInventoryEntry): Classification {
 }
 
 function classifyDomHtml(entry: CapabilityInventoryEntry): Classification {
+  if (entry.id === "platform.at-zavx0z-dom.export-paths.state-change.symbols.selectpickerstatechange") {
+    return recovered(implemented("extension", [
+      implementation("renderer", "packages/dom/src/state-change.ts", "SelectPickerStateChange", undefined, "The public discriminated state record carries exact Select identity and open old/new values.", "Complete select/form/accessibility behavior."),
+      test("renderer", "packages/dom/test/select-picker.test.ts", "select picker state records", "Open, owner transfer, close, blur and removal publish observable state through the Document channel.", "Multiple/listbox and native accessibility projection."),
+    ]))
+  }
   if (entry.id.startsWith("platform.")) return classifyPublicExport(entry, domExportStatus(entry))
   if (entry.domain === "dom") return classifyDom(entry)
   return classifyHtml(entry)
 }
 
 function classifyDom(entry: CapabilityInventoryEntry): Classification {
+  if (entry.id === "dom.algorithms.pointer-capture") {
+    return recovered(partial(
+      "adapted",
+      [
+        implementation("renderer", "packages/dom/src/pointer-capture.ts", "pending pointer capture override", undefined, "Per-Document active/pending/effective capture ownership and got/lost ordering.", "Implicit touch capture, trusted native generation and the complete Pointer Events device model."),
+        test("renderer", "packages/dom/test/pointer-capture.test.ts", "Element pointer capture", "Pending override processing, transfer, explicit/implicit release, inactive-id errors and disconnect cleanup.", "Implicit touch capture and live native devices."),
+        test("renderer", "packages/core/test/interaction.test.ts", "semantic pointer-capture retargeting", "Move/up remain targeted at the exact captured Element outside its hit box.", "Native browser trusted-event execution."),
+      ],
+      "Explicit semantic capture, pending overrides and got/lost ordering are implemented; implicit touch capture and the complete native Pointer Events device model remain outside this bounded host.",
+    ))
+  }
+  if (
+    entry.id.startsWith("dom.extensions.pointerevents.interfaces.element.methods.") &&
+    ["hasPointerCapture", "releasePointerCapture", "setPointerCapture"].includes(entry.name)
+  ) {
+    return recovered(partial(
+      "adapted",
+      [
+        implementation("renderer", "packages/dom/src/element.ts", entry.name, undefined, "The standard Element method delegates to the exact Document pointer-capture owner.", "Implicit touch capture and trusted native event provenance."),
+        test("renderer", "packages/dom/test/pointer-capture.test.ts", entry.name, "Method errors, pending ownership, transfer and release are observed through exact Element identity.", "Every native device and implicit-capture branch."),
+      ],
+      "The explicit Element method contract is behaviorally proven; implicit touch capture and live native browser provenance remain outside this evidence.",
+    ))
+  }
   const coreImplementedAlgorithms = new Set([
     "dom.algorithms.one-semantic-tree",
     "dom.algorithms.event-listener-registration",
@@ -212,6 +246,16 @@ function classifyDom(entry: CapabilityInventoryEntry): Classification {
   if (/dom\.extensions\.(uievents|pointerevents|input-events).*\.(interfaces|mixins)\.(uievent|mouseevent|pointerevent|wheelevent|focusevent|inputevent|keyboardevent|compositionevent)/.test(id)) {
     return partial("adapted", [implementation("renderer", eventSourcePath(entry), entry.name, undefined, "Bounded event interface implementation.", "All browser initialization and trusted-event semantics."), test("renderer", "packages/dom/test/input.test.ts", "input event hierarchy tests", "Current event constructor and property behavior.", "Native browser dispatch.")], "The event object hierarchy is implemented, while browser-owned trusted dispatch and the complete standard member set remain outside this evidence.")
   }
+  if (id === "dom.events.gotpointercapture" || id === "dom.events.lostpointercapture") {
+    return recovered(partial(
+      "adapted",
+      [
+        implementation("renderer", "packages/dom/src/pointer-capture.ts", entry.name, undefined, "Pending override processing dispatches the exact capture transition event in standard lost-before-got order.", "Trusted native provenance and implicit touch capture."),
+        test("renderer", "packages/dom/test/pointer-capture.test.ts", entry.name, "Transfer, explicit release and implicit pointer-end ordering are observed.", "Live native devices and implicit capture."),
+      ],
+      "Semantic transition dispatch and ordering are proven; trusted native provenance and implicit touch capture remain outside this bounded host.",
+    ))
+  }
   if (id.startsWith("dom.events.")) {
     const supported = new Set(["click", "input", "beforeinput", "change", "focus", "blur", "focusin", "focusout", "keydown", "keyup", "compositionstart", "compositionupdate", "compositionend", "pointerdown", "pointermove", "pointerup", "pointercancel", "wheel"])
     if (supported.has(entry.name)) return partial("adapted", [implementation("renderer", "packages/dom/src/event-target.ts", "dispatchEvent", undefined, "Semantic dispatch for the event type.", "Browser trust and every default action."), test("renderer", "packages/dom/test/input.test.ts", entry.name, "Bounded semantic event behavior.", "Complete browser-host event generation.")], "Only the platform's bounded semantic dispatch and owner default actions are implemented.")
@@ -241,6 +285,16 @@ function classifyDocumentMember(entry: CapabilityInventoryEntry): Classification
 }
 
 function classifyElementMember(entry: CapabilityInventoryEntry): Classification {
+  if (["hasPointerCapture", "releasePointerCapture", "setPointerCapture"].includes(entry.name)) {
+    return recovered(partial(
+      "adapted",
+      [
+        implementation("renderer", "packages/dom/src/element.ts", entry.name, undefined, "The standard Element method delegates to the exact Document pointer-capture owner.", "Implicit touch capture and trusted native event provenance."),
+        test("renderer", "packages/dom/test/pointer-capture.test.ts", entry.name, "Method errors, pending ownership, transfer and release are observed through exact Element identity.", "Every native device and implicit-capture branch."),
+      ],
+      "The explicit Element method contract is behaviorally proven; implicit touch capture and live native browser provenance remain outside this evidence.",
+    ))
+  }
   const exact = new Set(["Element", "Element inherits Node", "localName", "tagName", "id", "className", "classList", "getAttribute", "getAttributeNames", "hasAttribute", "hasAttributes", "setAttribute", "removeAttribute", "toggleAttribute", "matches", "closest"])
   if (exact.has(entry.name)) {
     return partial("adapted", [implementation("renderer", "packages/dom/src/element.ts", entry.name, "19-184", "String attributes, tag identity, class token list, and bounded selectors.", "Attr-node identity, namespaces, and the complete selector grammar."), test("renderer", "packages/dom/test/selectors.test.ts", entry.name, "Current attribute and selector behavior.", "Unimplemented namespace and Attr object semantics.")], "String-backed attributes and the bounded selector grammar differ from the complete Attr/namespace/Selectors contracts.")
@@ -298,6 +352,17 @@ function classifyHtmlElement(entry: CapabilityInventoryEntry): Classification {
 }
 
 function classifyHtmlAttribute(entry: CapabilityInventoryEntry): Classification {
+  if (entry.id === "html.attributes.hidden") {
+    return recovered(partial(
+      "adapted",
+      [
+        implementation("renderer", "packages/dom/src/html-element.ts", "HTMLElement.hidden", undefined, "Boolean presence reflection and hidden-ancestor focus suppression use the exact semantic attribute owner.", "Until-found, beforematch, find-in-page and accessibility behavior."),
+        test("renderer", "packages/dom/test/tree.test.ts", "HTMLElement.hidden", "Presence reflection and descendant focus suppression.", "Until-found, beforematch, find-in-page and accessibility behavior."),
+        test("renderer", "packages/core/test/renderer.test.ts", "hidden author-display precedence", "A hidden subtree stays absent from boxes, paint and hits despite author and inline display.", "Until-found reveal and accessibility projection."),
+      ],
+      "Boolean hidden presence and fully-hidden rendering/focus are implemented; until-found, beforematch, find-in-page reveal and accessibility projection remain unsupported.",
+    ))
+  }
   const implemented = new Set(["id", "class", "title", "tabindex", "hidden", "popover", "disabled", "checked", "value", "type", "selected", "src", "alt", "width", "height"])
   if (implemented.has(entry.name.toLowerCase())) {
     return partial("adapted", [implementation("renderer", "packages/dom/src/element.ts", entry.name, undefined, "Content-attribute storage and selected reflected state.", "The full attribute-specific HTML algorithm."), test("renderer", "packages/dom/test/html-input-element.test.ts", entry.name, "Bounded reflected/control behavior.", "All elements and attribute modes.")], "The platform implements selected reflection/live-state branches, not the complete attribute contract on every applicable element.")
@@ -306,6 +371,40 @@ function classifyHtmlAttribute(entry: CapabilityInventoryEntry): Classification 
 }
 
 function classifyHtmlBehavior(entry: CapabilityInventoryEntry): Classification {
+  if (entry.id === "html.behaviors.hidden") {
+    return recovered(partial(
+      "adapted",
+      [
+        implementation("renderer", "packages/core/src/css.ts", "hidden used display", undefined, "Any present semantic hidden attribute forces used display:none after author cascade.", "Until-found, beforematch, find-in-page and accessibility behavior."),
+        implementation("renderer", "packages/dom/src/html-element.ts", "HTMLElement.hidden", undefined, "The semantic boolean reflection and ancestor focus law share the content attribute.", "Until-found and accessibility projection."),
+        test("renderer", "packages/core/test/renderer.test.ts", "HTML hidden projection", "Author/compiled/inline display cannot reveal boxes, paint or hits; removal restores rendering.", "Until-found reveal and accessibility projection."),
+        test("renderer", "packages/dom/test/tree.test.ts", "hidden focusability", "Hidden owners and descendants do not become the active element.", "Sequential navigation and accessibility projection."),
+      ],
+      "The fully-hidden state is behaviorally enforced; hidden=until-found, beforematch, find-in-page reveal, containment and accessibility projection remain unsupported.",
+    ))
+  }
+  if (entry.id === "html.behaviors.input-type-range") {
+    return recovered(partial(
+      "adapted",
+      [
+        implementation("renderer", "packages/dom/src/html-input-element.ts", "applyRangeKeyboardDefault", undefined, "Arrow/Home/End/Page defaults write through the DOM range value owner and emit input/change only on effective changes.", "Vertical orientation, ticks, datalist, validity and public stepUp/stepDown."),
+        implementation("renderer", "packages/core/src/interaction.ts", "range pointer default action", undefined, "Pointer drag uses the rendered track geometry and DOM numeric semantics without consumer coordinates.", "Vertical orientation, touch-specific implicit capture and every browser range behavior."),
+        test("renderer", "packages/dom/test/input-numeric-state.test.ts", "range keyboard defaults", "Keyboard stepping, clamping and event order.", "Live native browser keys and omitted range modes."),
+        test("renderer", "packages/core/test/range-input.test.ts", "range pointer drag", "Pointer geometry, min/max/step ownership and input/change order.", "Vertical/tick/datalist behavior."),
+      ],
+      "Horizontal pointer drag and bounded keyboard defaults are implemented; vertical orientation, ticks, datalist, validity, public stepUp/stepDown and complete browser range behavior remain unsupported.",
+    ))
+  }
+  if (entry.id === "html.behaviors.select-option-optgroup") {
+    return recovered(partial(
+      "adapted",
+      [
+        implementation("renderer", "packages/dom/src/select-picker-state.ts", "collapsed select picker state", undefined, "One Document-owned picker, keyboard selection and exact Option choice/event ordering.", "Multiple/listbox, optgroup, type-ahead and complete forms/accessibility semantics."),
+        test("renderer", "packages/dom/test/select-picker.test.ts", "collapsed select picker state", "Open/close, keyboard, exact option selection, input/change, blur and removal cleanup.", "Multiple/listbox, optgroup and native accessibility projection."),
+      ],
+      "Collapsed single-select live state, picker ownership and bounded keyboard/pointer choice are implemented; multiple/listbox, optgroup, type-ahead, forms and accessibility projection remain unsupported.",
+    ))
+  }
   const partialIds = new Set([
     "html.behaviors.attribute-property-reflection",
     "html.behaviors.live-state-vs-content-attributes",
@@ -914,14 +1013,26 @@ function classifyRenderer(entry: CapabilityInventoryEntry): Classification {
     ])
   }
   if (name === "pointer" || name === "default-activation") {
-    return partial(
+    return recovered(partial(
       "adapted",
       [
-        implementation("renderer", "packages/core/src/interaction.ts", "resolvePointerOwnerHit", undefined, "Deepest pointer targets retain ordinary dispatch while nearest interactive/disabled ancestors own focus, disabled state and cross-descendant activation continuity.", "The complete Pointer Events hit-testing, capture and browser default-action standards."),
-        test("renderer", "packages/core/test/interaction.test.ts", name, "Nested target bubbling, same-descendant click target, cross-descendant owner activation, disabled suppression, ordinary noninteractive click and cancel cleanup.", "Native browser trusted events and every interactive HTML element."),
+        implementation("renderer", "packages/core/src/interaction.ts", "pointer capture and control default actions", undefined, "Deepest dispatch, nearest control ownership, semantic capture retargeting, range drag and select option activation share one interaction owner.", "The complete Pointer Events device model and every HTML default action."),
+        test("renderer", "packages/core/test/interaction.test.ts", name, "Nested ownership, capture outside hits, select open/choice/light-dismiss and disabled/cancel cleanup.", "Native trusted-event provenance and every HTML control."),
+        test("renderer", "packages/core/test/range-input.test.ts", "range pointer default action", "Rendered track geometry drives DOM range input/change semantics.", "Vertical/tick/datalist behavior."),
       ],
-      "Implemented for the bounded rendered-control set; complete browser Pointer Events and default actions remain outside Core.",
-    )
+      "Implemented for the bounded rendered-control set including explicit semantic capture, horizontal Range and collapsed Select; implicit touch capture and complete Pointer Events/HTML default actions remain outside Core.",
+    ))
+  }
+  if (name === "form-control-projection") {
+    return recovered(partial(
+      "adapted",
+      [
+        implementation("renderer", "packages/core/src/renderer.ts", "range and select picker projection", undefined, "Horizontal range paint and one top-layer collapsed select picker retain exact semantic control/option identities.", "Complete native form chrome, listboxes, accessibility and every input type."),
+        test("renderer", "packages/core/test/range-input.test.ts", "range input projection", "Stable range track/thumb paint and pointer behavior.", "Vertical/ticks/datalist and native pixels."),
+        test("renderer", "packages/core/test/select-paint.test.ts", "collapsed select picker projection", "Exact option boxes/hits, selected paint and presentation-coordinate viewport placement for translated/scaled Select owners.", "Scrolling/type-ahead/multiple/listbox/accessibility."),
+      ],
+      "The bounded form-control set now includes horizontal Range interaction and a collapsed single-Select picker; multiple/listbox, type-ahead, accessibility projection and complete native form chrome remain unsupported.",
+    ))
   }
   const implementedNames = new Set(["immutable-frame", "clean-frame-fast-path"])
   if (implementedNames.has(name)) {
@@ -945,7 +1056,36 @@ function classifyBrowser(entry: CapabilityInventoryEntry): Classification {
   const name = entry.id.slice("browser.features.".length)
   if (name === "native-browser-evidence") return unverified(entry, "All current Browser tests use Bun seams/fakes; no live browser console, pixels, native IME, or real ResizeObserver/rAF evidence was reproduced.")
   if (name === "error-boundaries") return unsupported(entry, "The browser composition owner has lifecycle validation but no general application error-boundary contract.")
-  if (["number-input-proxy", "select-picker", "clipboard-proxy"].includes(name)) return unsupported(entry, "The native host intentionally exposes only the current text input/textarea proxy subset; this control/browser integration is absent.")
+  if (name === "clipboard-proxy") return unsupported(entry, "The native host intentionally exposes only the current text input/textarea proxy subset; this control/browser integration is absent.")
+  if (name === "number-input-proxy") {
+    return recovered(implemented("extension", [
+      implementation("renderer", "packages/browser/src/native-input-host.ts", "number and range input proxy", undefined, "One reusable native input mirrors focused semantic number/range value, min, max and step without fabricated selection and routes keyboard/beforeinput/input/change with cancellation rollback.", "Live native browser execution, forms and validity UI."),
+      test("renderer", "packages/browser/test/native-input-host.test.ts", "number and range proxy", "Exact target/proxy identity, min/max/step and sanitized value sync, native Arrow default seam, cancellation, keyboard routing and input/change order.", "Live native browser behavior and visual chrome."),
+    ]))
+  }
+  if (name === "select-picker") {
+    return recovered(partial(
+      "adapted",
+      [
+        implementation("renderer", "packages/browser/src/native-input-host.ts", "select keyboard proxy", undefined, "The reusable native select is a keyboard owner while semantic/Core own selection and in-canvas picker paint.", "Native accessibility projection, multiple/listbox and type-ahead."),
+        implementation("renderer", "packages/core/src/renderer.ts", "emitSelectPicker", undefined, "One edge-aware top-layer picker projects exact Option identities in the shared frame.", "Scrolling, multiple/listbox, type-ahead and native accessibility."),
+        test("renderer", "packages/browser/test/native-input-host.test.ts", "select keyboard host", "Arrow selection, Space open, Escape close and input/change ordering.", "Live native browser execution and omitted picker modes."),
+        test("renderer", "packages/core/test/interaction.test.ts", "select picker interaction", "Pointer open, exact option choice and outside light-dismiss.", "Multiple/listbox, scrolling and accessibility."),
+      ],
+      "Collapsed single-select pointer/keyboard picker behavior is implemented; scrolling beyond eight visible options, multiple/listbox, type-ahead and native accessibility projection remain unsupported.",
+    ))
+  }
+  if (name === "pointer-capture") {
+    return recovered(partial(
+      "adapted",
+      [
+        implementation("renderer", "packages/browser/src/runtime.ts", "canvas and semantic pointer capture", undefined, "Native canvas capture retains host delivery while Core retargets through the exact semantic Document override.", "Live native devices and implicit touch capture."),
+        test("renderer", "packages/browser/test/runtime.test.ts", "canvas pointer capture", "Host capture lifecycle and cleanup.", "Live native browser execution."),
+        test("renderer", "packages/core/test/interaction.test.ts", "semantic pointer capture", "Captured Element receives move/up outside its hit and emits got/lost in order.", "Implicit touch capture and live devices."),
+      ],
+      "Native canvas delivery and explicit semantic capture are integrated; implicit touch capture and live native browser acceptance remain outside this evidence.",
+    ))
+  }
   if (name === "one-experience-topology") {
     return implemented("extension", [
       implementation("renderer", "packages/browser/src/space-runtime.ts", name, undefined, "One exact semantic Document/style/font/interaction owner is shared by every projection in one Space host.", "Live native browser execution."),
@@ -1214,6 +1354,16 @@ function engineExportStatus(entry: CapabilityInventoryEntry): CapabilityStatus {
 
 function implemented(conformance: CapabilityConformance, evidence: EvidenceRecord[]): Classification {
   return { status: "implemented", conformance, limitations: [], evidence }
+}
+
+function recovered(classification: Classification): Classification {
+  return {
+    ...classification,
+    evidence: classification.evidence.map((record) => record.repository === "renderer"
+      ? {...record, revision: recoveryVerification.revision}
+      : record),
+    lastVerified: recoveryVerification,
+  }
 }
 
 function partial(

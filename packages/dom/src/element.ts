@@ -6,6 +6,11 @@ import {Node} from "./node.ts"
 import type {NodeOrString} from "./node.ts"
 import type {NodeList} from "./node-list.ts"
 import {
+  hasElementPointerCapture,
+  releaseElementPointerCapture,
+  setElementPointerCapture
+} from "./pointer-capture.ts"
+import {
   closestMatch,
   matchesSelector,
   queryAll,
@@ -110,6 +115,18 @@ export class Element extends Node {
       return true
     }
     return present
+  }
+
+  setPointerCapture(pointerId: number): void {
+    setElementPointerCapture(this, pointerId)
+  }
+
+  releasePointerCapture(pointerId: number): void {
+    releaseElementPointerCapture(this, pointerId)
+  }
+
+  hasPointerCapture(pointerId: number): boolean {
+    return hasElementPointerCapture(this, pointerId)
   }
 
   append(...nodes: NodeOrString[]): void {

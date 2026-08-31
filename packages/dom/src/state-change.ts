@@ -3,6 +3,7 @@ import type {HTMLElement} from "./html-element.ts"
 import type {HTMLInputElement} from "./html-input-element.ts"
 import type {HTMLOptionElement} from "./html-option-element.ts"
 import type {HTMLTextAreaElement} from "./html-text-area-element.ts"
+import type {HTMLSelectElement} from "./html-select-element.ts"
 import type {TextSelection} from "./internal/text-selection.ts"
 
 export type FocusStateChange = Readonly<{
@@ -96,12 +97,21 @@ export type PopoverStateChange = Readonly<{
   newValue: boolean
 }>
 
+export type SelectPickerStateChange = Readonly<{
+  type: "select-picker"
+  target: HTMLSelectElement
+  property: "open"
+  oldValue: boolean
+  newValue: boolean
+}>
+
 export type DocumentStateChange =
   | FocusStateChange
   | ScrollStateChange
   | InputStateChange
   | OptionSelectedStateChange
   | PopoverStateChange
+  | SelectPickerStateChange
   | TextAreaStateChange
 
 export type StateChangeBatch = Readonly<{

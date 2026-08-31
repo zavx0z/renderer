@@ -753,6 +753,7 @@ class FakeNativeInput {
 function createHarness(rect: Rect) {
   const canvas = new FakeCanvas(rect)
   const nativeInput = new FakeNativeInput()
+  const nativeSelect = new FakeNativeInput()
   const nativeTextarea = new FakeNativeInput()
   const nativeSelectionTarget = new FakeNativeInput()
   const calls = {
@@ -889,6 +890,7 @@ function createHarness(rect: Rect) {
       return createDocumentNativeInputHostWithSeams(options, {
         createProxies: () => ({
           input: nativeInput.element,
+          select: nativeSelect.element as unknown as HTMLSelectElement,
           textarea: nativeTextarea.element as unknown as HTMLTextAreaElement,
           selectionTarget: nativeSelectionTarget.element,
         }),
@@ -930,6 +932,7 @@ function createHarness(rect: Rect) {
   return {
     canvas,
     nativeInput,
+    nativeSelect,
     nativeTextarea,
     nativeSelectionTarget,
     calls,

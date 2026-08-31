@@ -217,6 +217,68 @@ describe("collapsed select replaced-control paint", () => {
     expect(recovered.revision).toBe(collapsed.revision + 1)
     renderer.dispose()
   })
+
+  test("projects an open picker as top-layer option boxes with exact option hits", () => {
+    const {document, select, first, second} = selectFixture()
+    select.setAttribute("style", "width:160px; height:22px")
+    document.appendChild(select)
+    const renderer = createDocumentRenderer({
+      document,
+      root: select,
+      viewport: {width: 200, height: 80},
+    })
+    const closed = renderer.flush()
+    select.showPicker()
+    const open = renderer.flush()
+
+    expect(open.revision).toBe(closed.revision + 1)
+    expect(rect(open, select, "picker-background")).toMatchObject({
+      x: 0,
+      y: 22,
+      width: 160,
+      height: 47.2,
+    })
+    expect(open.boxByNode.get(first)).toMatchObject({
+      parent: select,
+      x: 0,
+      y: 22,
+      width: 160,
+      height: 23.6,
+    })
+    expect(open.boxByNode.get(second)).toMatchObject({y: 45.6, height: 23.6})
+    expect(open.hits.get(first)).toMatchObject({role: "option", interactive: true})
+    expect(open.hits.get(second)).toMatchObject({role: "option", interactive: true})
+    expect(open.displayList.filter(item => item.key === "picker-option-label").map(item => item.node))
+      .toEqual([first, second])
+    expect(open.displayList.at(-1)?.node).toBe(second)
+    renderer.dispose()
+  })
+
+  test("clamps picker geometry in presentation coordinates for a transformed select", () => {
+    const {document, select} = selectFixture()
+    select.setAttribute(
+      "style",
+      "width:100px; height:22px; transform:translate(80px, 20px) scale(1.5); transform-origin:0px 0px",
+    )
+    document.appendChild(select)
+    const renderer = createDocumentRenderer({
+      document,
+      root: select,
+      viewport: {width: 220, height: 160},
+    })
+    select.showPicker()
+    const frame = renderer.flush()
+    const collapsed = rect(frame, select, "background")
+    const picker = rect(frame, select, "picker-background")
+
+    expect(visualBounds(collapsed)).toEqual({left: 80, top: 20, right: 230, bottom: 53})
+    const bounds = visualBounds(picker)
+    expect(bounds.left).toBeCloseTo(70)
+    expect(bounds.right).toBeCloseTo(220)
+    expect(bounds.top).toBeCloseTo(53)
+    expect(bounds.bottom).toBeLessThanOrEqual(160)
+    renderer.dispose()
+  })
 })
 
 function selectFixture(): Readonly<{
@@ -255,4 +317,17 @@ function rect(
   )
   if (!item) throw new Error(`Expected select ${key}`)
   return item
+}
+
+function visualBounds(item: RectDisplayItem) {
+  const firstX = item.x * item.transform.scaleX + item.transform.translateX
+  const secondX = (item.x + item.width) * item.transform.scaleX + item.transform.translateX
+  const firstY = item.y * item.transform.scaleY + item.transform.translateY
+  const secondY = (item.y + item.height) * item.transform.scaleY + item.transform.translateY
+  return {
+    left: Math.min(firstX, secondX),
+    top: Math.min(firstY, secondY),
+    right: Math.max(firstX, secondX),
+    bottom: Math.max(firstY, secondY),
+  }
 }

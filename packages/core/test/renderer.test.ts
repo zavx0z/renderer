@@ -401,6 +401,43 @@ describe("CPU document renderer", () => {
     ).toBe(false)
   })
 
+  it("keeps the HTML hidden state undiscoverable despite author display declarations", () => {
+    const document = createDocument()
+    const root = document.createElement("div")
+    const field = document.createElement("div")
+    const child = document.createElement("button")
+    document.appendChild(root)
+    root.appendChild(field)
+    field.appendChild(child)
+    field.id = "field"
+    field.hidden = true
+    field.setAttribute("style", "display:flex; width:100px; height:20px")
+    child.textContent = "X"
+    const renderer = createDocumentRenderer({
+      document,
+      root,
+      viewport: {width: 200, height: 100},
+      styleSheets: ["#field[hidden] { display:flex; }"],
+    })
+
+    const hidden = renderer.flush()
+    expect(hidden.boxByNode.has(field)).toBeFalse()
+    expect(hidden.boxByNode.has(child)).toBeFalse()
+    expect(hidden.hits.has(field)).toBeFalse()
+    expect(hidden.hits.has(child)).toBeFalse()
+    expect(hidden.displayList.some(item => item.node === field || item.node === child)).toBeFalse()
+
+    field.removeAttribute("hidden")
+    const visible = renderer.flush()
+    expect(visible.boxByNode.has(field)).toBeTrue()
+    expect(visible.boxByNode.has(child)).toBeTrue()
+
+    field.setAttribute("hidden", "until-found")
+    const untilFound = renderer.flush()
+    expect(untilFound.boxByNode.has(field)).toBeFalse()
+    renderer.dispose()
+  })
+
   it("ignores Comment anchors and collapses formatting-only HTML whitespace", () => {
     const document = createDocument()
     const root = document.createElement("div")

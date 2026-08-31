@@ -414,7 +414,9 @@ export const computeStyle = (
 
   return Object.freeze({
     customProperties,
-    display: parseDisplay(readValue(values, "display"), tag),
+    display: element.hasAttribute("hidden")
+      ? "none"
+      : parseDisplay(readValue(values, "display"), tag),
     boxSizing: parseBoxSizing(readValue(values, "box-sizing")),
     flexDirection: parseFlexDirection(readValue(values, "flex-direction")),
     flexWrap: parseFlexWrap(readValue(values, "flex-wrap")),

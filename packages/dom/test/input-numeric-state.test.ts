@@ -101,6 +101,33 @@ describe("HTMLInputElement.valueAsNumber", () => {
     input.max = "20"
     expect(input.valueAsNumber).toBe(80)
   })
+
+  it("applies bounded range keyboard defaults through DOM value and events", () => {
+    const document = createDocument()
+    const input = document.createElement("input")
+    input.type = "range"
+    input.min = "10"
+    input.max = "20"
+    input.step = "2"
+    input.valueAsNumber = 14
+    document.appendChild(input)
+    const events: string[] = []
+    input.addEventListener("input", () => events.push(`input:${input.value}`))
+    input.addEventListener("change", () => events.push(`change:${input.value}`))
+
+    expect(input.applyRangeKeyboardDefault("ArrowRight")).toBeTrue()
+    expect(input.valueAsNumber).toBe(16)
+    expect(input.applyRangeKeyboardDefault("End")).toBeTrue()
+    expect(input.valueAsNumber).toBe(20)
+    expect(input.applyRangeKeyboardDefault("ArrowRight")).toBeTrue()
+    expect(input.applyRangeKeyboardDefault("x")).toBeFalse()
+    expect(events).toEqual([
+      "input:16",
+      "change:16",
+      "input:20",
+      "change:20",
+    ])
+  })
 })
 
 describe("numeric and check live state records", () => {

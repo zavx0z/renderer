@@ -13,6 +13,14 @@ import {
 import {parseHTMLInteger, toLong} from "./internal/web-idl.ts"
 import {createStaticNodeList} from "./node-list.ts"
 import type {NodeList} from "./node-list.ts"
+import {
+  applySelectKeyboardDefault,
+  chooseSelectPickerOption,
+  closeSelectPicker,
+  getSelectPickerVisibilityState,
+  openSelectPicker,
+  type SelectPickerVisibilityState
+} from "./select-picker-state.ts"
 
 type SelectState = {
   allowEmpty: boolean
@@ -90,6 +98,31 @@ export class HTMLSelectElement extends HTMLElement {
     const options = this.optionSnapshot()
     this.normalizeOptions(options, false)
     return options.find(option => option[getOptionSelectedness]())?.value ?? ""
+  }
+
+  showPicker(): void {
+    openSelectPicker(this)
+  }
+
+  hidePicker(): void {
+    closeSelectPicker(this)
+  }
+
+  get pickerVisibilityState(): SelectPickerVisibilityState {
+    return getSelectPickerVisibilityState(this)
+  }
+
+  applyPickerKeyboardDefault(key: string): boolean {
+    return applySelectKeyboardDefault(this, key)
+  }
+
+  choosePickerOption(option: HTMLOptionElement): boolean {
+    return chooseSelectPickerOption(this, option)
+  }
+
+  override blur(): void {
+    closeSelectPicker(this)
+    super.blur()
   }
 
   set value(value: string) {

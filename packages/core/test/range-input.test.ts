@@ -1,6 +1,7 @@
 import {describe, expect, test} from "bun:test"
 import {createDocument, type HTMLInputElement} from "@zavx0z/dom"
 import {
+  createDocumentInteractionController,
   createDocumentRenderer,
   type RectDisplayItem,
   type RenderFrame,
@@ -184,6 +185,52 @@ describe("range input replaced-control paint", () => {
     })
     expect(track).toMatchObject({x: 18, y: 13, width: 164, height: 4, color: "#d1d5db"})
     expect(thumb).toMatchObject({x: 94, y: 9, width: 12, height: 12, color: "#2563eb"})
+    renderer.dispose()
+  })
+
+  test("runs pointer drag default actions through DOM value semantics and input/change", () => {
+    const document = createDocument()
+    const input = range(document)
+    input.min = "10"
+    input.max = "20"
+    input.step = "2"
+    input.setAttribute("style", "width:200px; height:30px")
+    document.appendChild(input)
+    const renderer = createDocumentRenderer({
+      document,
+      root: input,
+      viewport: {width: 240, height: 60},
+    })
+    const interaction = createDocumentInteractionController({document})
+    const initial = renderer.flush()
+    const track = rangePaint(initial, input)[0]
+    const events: string[] = []
+    input.addEventListener("input", () => events.push(`input:${input.value}`))
+    input.addEventListener("change", () => events.push(`change:${input.value}`))
+
+    interaction.pointerDown(initial, {
+      clientX: track.x,
+      clientY: track.y + track.height / 2,
+      pointerId: 4,
+      buttons: 1,
+    })
+    expect(input.valueAsNumber).toBe(10)
+    interaction.pointerMove(initial, {
+      clientX: track.x + track.width + 100,
+      clientY: track.y + track.height / 2,
+      pointerId: 4,
+      buttons: 1,
+    })
+    expect(input.valueAsNumber).toBe(20)
+    interaction.pointerUp(initial, {
+      clientX: track.x + track.width + 100,
+      clientY: track.y + track.height / 2,
+      pointerId: 4,
+    })
+
+    expect(events).toEqual(["input:10", "input:20", "change:20"])
+    expect(rangePaint(renderer.flush(), input)[1].x).toBe(track.x + track.width - 6)
+    interaction.dispose()
     renderer.dispose()
   })
 })

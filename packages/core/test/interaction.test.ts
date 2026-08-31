@@ -232,6 +232,88 @@ describe("document interaction bridge", () => {
     interaction.pointerUp(frame, center(frame.boxByNode.get(plain)!))
     expect(plainClicks).toBe(1)
   })
+
+  test("retargets move/up to an exact semantic pointer-capture owner outside its hit box", () => {
+    const document = createDocument()
+    const root = document.createElement("div")
+    const capture = document.createElement("div")
+    const outside = document.createElement("div")
+    document.appendChild(root)
+    root.setAttribute("style", "display:flex; width:100px; height:20px")
+    capture.setAttribute("style", "width:50px; height:20px")
+    outside.setAttribute("style", "width:50px; height:20px")
+    root.append(capture, outside)
+    const frame = createDocumentRenderer({
+      document,
+      root,
+      viewport: {width: 100, height: 20},
+    }).flush()
+    const interaction = createDocumentInteractionController({document})
+    const events: string[] = []
+    capture.addEventListener("pointerdown", event => {
+      capture.setPointerCapture((event as PointerEvent).pointerId)
+      events.push("down")
+    })
+    capture.addEventListener("gotpointercapture", () => events.push("got"))
+    capture.addEventListener("pointermove", () => events.push("move"))
+    capture.addEventListener("pointerup", () => events.push("up"))
+    capture.addEventListener("lostpointercapture", () => events.push("lost"))
+    outside.addEventListener("pointermove", () => events.push("outside:move"))
+    outside.addEventListener("pointerup", () => events.push("outside:up"))
+
+    interaction.pointerDown(frame, {clientX: 10, clientY: 10, pointerId: 12})
+    expect(interaction.pointerMove(frame, {clientX: 90, clientY: 10, pointerId: 12})).toBe(capture)
+    expect(interaction.pointerUp(frame, {clientX: 90, clientY: 10, pointerId: 12})).toBe(capture)
+
+    expect(events).toEqual(["down", "got", "move", "up", "lost"])
+    expect(capture.hasPointerCapture(12)).toBeFalse()
+    interaction.dispose()
+  })
+
+  test("opens, chooses and light-dismisses the owner-controlled select picker", () => {
+    const document = createDocument()
+    const root = document.createElement("div")
+    const select = document.createElement("select")
+    const first = document.createElement("option")
+    const second = document.createElement("option")
+    const outside = document.createElement("button")
+    first.value = "first"
+    first.append("First")
+    second.value = "second"
+    second.append("Second")
+    select.append(first, second)
+    select.setAttribute("style", "width:100px; height:22px")
+    outside.setAttribute("style", "width:100px; height:22px")
+    root.append(select, outside)
+    document.append(root)
+    const renderer = createDocumentRenderer({
+      document,
+      root,
+      viewport: {width: 120, height: 100},
+    })
+    const interaction = createDocumentInteractionController({document})
+    const events: string[] = []
+    select.addEventListener("input", () => events.push(`input:${select.value}`))
+    select.addEventListener("change", () => events.push(`change:${select.value}`))
+
+    interaction.pointerDown(renderer.flush(), {clientX: 10, clientY: 10})
+    interaction.pointerUp(renderer.flush(), {clientX: 10, clientY: 10})
+    expect(select.pickerVisibilityState).toBe("open")
+    const open = renderer.flush()
+    const secondBox = open.boxByNode.get(second)!
+    interaction.pointerDown(open, center(secondBox))
+    interaction.pointerUp(open, center(secondBox))
+    expect(select.value).toBe("second")
+    expect(select.pickerVisibilityState).toBe("closed")
+    expect(events).toEqual(["input:second", "change:second"])
+
+    select.showPicker()
+    const reopened = renderer.flush()
+    interaction.pointerDown(reopened, {clientX: 110, clientY: 90})
+    expect(select.pickerVisibilityState).toBe("closed")
+    interaction.pointerCancel(renderer.flush(), {clientX: 110, clientY: 90})
+    renderer.dispose()
+  })
 })
 
 function center(box: Readonly<{x: number; y: number; width: number; height: number}>) {

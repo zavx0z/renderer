@@ -356,8 +356,12 @@ Range has default minimum `0`, maximum `100` and value `50`. Missing or invalid
 live/default values use the midpoint, or the minimum when maximum is below
 minimum. Values clamp to the declared range and use practical HTML step
 rounding, preferring the value toward positive infinity on a tie. `step="any"`
-disables rounding. This slice does not add `stepUp()`, `stepDown()`, validity,
-picker UI or rendered slider geometry.
+disables value-assignment rounding. The host-facing
+`applyRangeKeyboardDefault()` handles Arrow, Home/End and Page keys only after
+an uncanceled semantic `keydown`, writes through `.valueAsNumber`, and emits
+`input` then `change` only for an effective value change. This slice does not
+add public `stepUp()`, `stepDown()`, validity, vertical orientation, ticks or
+rendered slider geometry.
 
 `indeterminate` is a live, non-reflected boolean input property, used by
 checkbox presentation. Its default is false; a false no-op allocates nothing,
@@ -404,9 +408,19 @@ a host interaction adapter performs cancellation-aware user selection and
 dispatch separately. Enabled connected selects are programmatically focusable
 with default `tabIndex === 0`; disabled selects ignore `focus()`.
 
+For an enabled connected collapsed single select, `showPicker()` opens one
+Document-owned picker state and focuses the exact select. Opening another
+picker closes the previous owner. Outside dismissal, Escape, blur and subtree
+removal close it without replacing Select or Option identities.
+`applySelectKeyboardDefault()` handles Arrow/Home/End selection and
+Space/Enter/Escape open state after uncanceled host `keydown`. An effective
+user choice writes standard selectedness and emits `input` then `change`;
+programmatic selectedness still fabricates no events.
+
 This slice does not implement form ownership/submission, required/validity,
-reset, picker UI, `selectedOptions`, live `HTMLOptionsCollection`, indexed
-collection mutation, optgroup or selectedcontent.
+reset, `selectedOptions`, live `HTMLOptionsCollection`, indexed collection
+mutation, optgroup, selectedcontent, type-ahead search or multiple/listbox
+picker behavior.
 
 ## DOM-CORE-020 — progress and meter numeric semantics
 
@@ -640,3 +654,34 @@ outer `Document.transaction()`. Idempotent `release()` clears the active author
 set and permits a later Experience-level host to acquire ownership. This is an
 opaque semantic rendering channel, not `Document.styleSheets`,
 `adoptedStyleSheets` or another semantic/stylesheet realm.
+
+## DOM-CORE-029 — semantic pointer capture
+
+Every `Element` exposes `setPointerCapture()`, `releasePointerCapture()` and
+`hasPointerCapture()` for pointer ids made active by the host bridge. Setting an
+inactive id throws `NotFoundError`; a detached target cannot acquire capture.
+The Document keeps the pending target override separate from the effective
+override. Before the next pointer event, Core processes the pending change,
+dispatches bubbling `lostpointercapture` before `gotpointercapture`, and then
+retargets move/up/cancel to the exact captured Element through ordinary DOM
+propagation.
+
+Pointer up/cancel implicitly releases capture after dispatch and emits the
+final `lostpointercapture`. Disconnecting a pending target drops it before
+retargeting. Capture state is Document-owned host state, not an attribute,
+component-global pointer map, second semantic tree or Renderer box property.
+Multi-pointer storage is independent by integer pointer id; gesture semantics
+and implicit touch capture remain outside this bounded contract.
+
+## DOM-CORE-030 — HTML hidden state
+
+`HTMLElement.hidden` reflects the presence of the standard `hidden` content
+attribute as a boolean. The state remains one ordinary attribute/mutation
+owner; no parallel visibility flag is allocated. A hidden Element and every
+descendant are not programmatically focusable.
+
+The current bounded profile treats every present hidden value, including the
+string `until-found`, as fully hidden. It does not implement the until-found
+layout-containment, `beforematch`, find-in-page reveal or accessibility
+branches. Those branches must be added as one explicit future capability and
+cannot be approximated by allowing author `display` to reveal the subtree.

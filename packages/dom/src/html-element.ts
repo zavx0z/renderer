@@ -80,6 +80,15 @@ export class HTMLElement extends Element {
     this.setAttribute("title", value)
   }
 
+  get hidden(): boolean {
+    return this.hasAttribute("hidden")
+  }
+
+  set hidden(value: boolean) {
+    if (value) this.setAttribute("hidden", "")
+    else this.removeAttribute("hidden")
+  }
+
   get popover(): PopoverValue {
     return reflectedPopoverValue(this.getAttribute("popover"))
   }
@@ -215,6 +224,10 @@ export class HTMLElement extends Element {
 
   [isProgrammaticallyFocusable](): boolean {
     if (!this.isConnected) return false
+    for (let current: HTMLElement | null = this; current !== null;) {
+      if (current.hidden) return false
+      current = current.parentElement instanceof HTMLElement ? current.parentElement : null
+    }
     const explicitTabIndex = this.hasAttribute("tabindex") &&
       parseHTMLInteger(this.getAttribute("tabindex") ?? "") !== null
     return explicitTabIndex || this.defaultTabIndex >= 0
