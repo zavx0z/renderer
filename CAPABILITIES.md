@@ -14,11 +14,11 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | engine | main | `9bcfec9fbe7f808c56b85eb6acf2bcae6276db2b` | no |
 | interpreter | main | `4f02274a6e9f99a8717507fe5885301a33eec4dc` | no |
 | metafor | main | `92f4fb0510db5ea43cb03325ab3b3895d95b4899` | no |
-| node | main | `bd5af9a2cf6fca679a69de5245d107ea42318f54` | no |
-| renderer | main | `2afe16c66ec1e2b6e01df87cd94ab60de8d37c85` | yes |
-| storybook | main | `d249503ce60513fd4073b5b35fda10c1d2e751d8` | yes |
-| template | main | `838a214a83950259f3f5d543e881e11402bc230c` | no |
-| ui | main | `45423d7b36f8796429a9e43c30af9bb89bb8af0e` | yes |
+| node | main | `bd5af9a2cf6fca679a69de5245d107ea42318f54` | yes |
+| renderer | main | `4a77909f5de4784751b073840f68b0460ade65f8` | yes |
+| storybook | main | `35eb3779a8233d23c7426260162b10d1b1d92e16` | yes |
+| template | main | `838a214a83950259f3f5d543e881e11402bc230c` | yes |
+| ui | main | `1c2f83c8fcaca3c78cee09e2fa9e9f1ad295056d` | yes |
 
 ## Pinned external sources
 
@@ -53,10 +53,10 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 
 | Domain | Spec entries | Mapped | Implemented | Partial | Unsupported | Not applicable | Unverified | Missing |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| browser | 70 | 70 | 15 | 20 | 4 | 0 | 31 | 0 |
+| browser | 70 | 70 | 16 | 21 | 2 | 0 | 31 | 0 |
 | css | 3032 | 3032 | 0 | 179 | 2853 | 0 | 0 | 0 |
 | devtools | 31 | 31 | 13 | 0 | 5 | 0 | 13 | 0 |
-| dom | 1212 | 1212 | 75 | 242 | 713 | 0 | 182 | 0 |
+| dom | 1213 | 1213 | 76 | 248 | 707 | 0 | 182 | 0 |
 | engine | 151 | 151 | 13 | 34 | 5 | 0 | 99 | 0 |
 | html | 3729 | 3729 | 0 | 995 | 1947 | 787 | 0 | 0 |
 | react | 211 | 211 | 28 | 49 | 70 | 35 | 29 | 0 |
@@ -69,7 +69,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | Package | Repository | Revision | Records |
 |---|---|---|---:|
 | @engine/core | engine | `18c55d6c3dc68d1f2ab257378a505e5bac2eea3e` | 151 |
-| @zavx0z/dom | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 4941 |
+| @zavx0z/dom | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 4942 |
 | @zavx0z/dom-devtools | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 31 |
 | @zavx0z/react | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 211 |
 | @zavx0z/renderer | renderer | `72fa158b043408817725856ce2b8e26d6a0e4d18` | 3128 |
@@ -102,14 +102,14 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `browser.features.linked-author-stylesheets` | browser-host | implemented | extension | @zavx0z/renderer-browser/browser-host | — | 3 | 0 |
 | `browser.features.multiple-planes` | browser-host | implemented | extension | @zavx0z/renderer-browser/browser-host | — | 2 | 1 |
 | `browser.features.native-browser-evidence` | browser-host | unverified | unknown | @zavx0z/renderer-browser/browser-host | All current Browser tests use Bun seams/fakes; no live browser console, pixels, native IME, or real ResizeObserver/rAF evidence was reproduced. | 1 | 0 |
-| `browser.features.number-input-proxy` | browser-host | unsupported | none | @zavx0z/renderer-browser/browser-host | The native host intentionally exposes only the current text input/textarea proxy subset; this control/browser integration is absent. | 1 | 2 |
+| `browser.features.number-input-proxy` | browser-host | implemented | extension | @zavx0z/renderer-browser/browser-host | — | 2 | 2 |
 | `browser.features.one-experience-topology` | browser-host | implemented | extension | @zavx0z/renderer-browser/browser-host | — | 4 | 3 |
 | `browser.features.overlays` | browser-host | implemented | extension | @zavx0z/renderer-browser/browser-host | — | 2 | 2 |
-| `browser.features.pointer-capture` | browser-host | partial | adapted | @zavx0z/renderer-browser/browser-host | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. | 2 | 0 |
+| `browser.features.pointer-capture` | browser-host | partial | adapted | @zavx0z/renderer-browser/browser-host | Native canvas delivery and explicit semantic capture are integrated; implicit touch capture and live native browser acceptance remain outside this evidence. | 3 | 0 |
 | `browser.features.pointer-mapping` | browser-host | implemented | extension | @zavx0z/renderer-browser/browser-host | — | 2 | 0 |
 | `browser.features.resize` | browser-host | partial | adapted | @zavx0z/renderer-browser/browser-host | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. | 2 | 0 |
 | `browser.features.same-document-input-identity` | browser-host | implemented | extension | @zavx0z/renderer-browser/browser-host | — | 2 | 0 |
-| `browser.features.select-picker` | browser-host | unsupported | none | @zavx0z/renderer-browser/browser-host | The native host intentionally exposes only the current text input/textarea proxy subset; this control/browser integration is absent. | 1 | 0 |
+| `browser.features.select-picker` | browser-host | partial | adapted | @zavx0z/renderer-browser/browser-host | Collapsed single-select pointer/keyboard picker behavior is implemented; scrolling beyond eight visible options, multiple/listbox, type-ahead and native accessibility projection remain unsupported. | 4 | 0 |
 | `browser.features.selection-synchronization` | browser-host | implemented | extension | @zavx0z/renderer-browser/browser-host | — | 2 | 0 |
 | `browser.features.semantic-pointer-events` | browser-host | partial | adapted | @zavx0z/renderer-browser/browser-host | Implemented through the bounded one-Experience host; live native browser acceptance remains separate. | 2 | 0 |
 | `browser.features.text-input-proxy` | browser-host | partial | adapted | @zavx0z/renderer-browser/browser-host | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. | 2 | 1 |
@@ -3255,7 +3255,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `dom.algorithms.one-semantic-tree` | behavior | implemented | exact | @zavx0z/dom/semantic | — | 3 | 0 |
 | `dom.algorithms.parent-node-mixins` | behavior | partial | adapted | @zavx0z/dom/semantic | The runtime implements a bounded subset and intentionally omits remaining standard branches. | 2 | 0 |
 | `dom.algorithms.parsing-boundary` | behavior | unsupported | none | @zavx0z/dom/semantic | The accepted semantic DOM architecture has no implementation for this observable algorithm in the current checkout. | 1 | 0 |
-| `dom.algorithms.pointer-capture` | behavior | unsupported | none | @zavx0z/dom/semantic | The accepted semantic DOM architecture has no implementation for this observable algorithm in the current checkout. | 1 | 0 |
+| `dom.algorithms.pointer-capture` | behavior | partial | adapted | @zavx0z/dom/semantic | Explicit semantic capture, pending overrides and got/lost ordering are implemented; implicit touch capture and the complete native Pointer Events device model remain outside this bounded host. | 3 | 0 |
 | `dom.algorithms.range-boundaries` | behavior | unsupported | none | @zavx0z/dom/semantic | The accepted semantic DOM architecture has no implementation for this observable algorithm in the current checkout. | 1 | 0 |
 | `dom.algorithms.selection` | behavior | unsupported | none | @zavx0z/dom/semantic | The accepted semantic DOM architecture has no implementation for this observable algorithm in the current checkout. | 1 | 2 |
 | `dom.algorithms.selectors` | behavior | partial | adapted | @zavx0z/dom/semantic | The runtime implements a bounded subset and intentionally omits remaining standard branches. | 2 | 0 |
@@ -3357,13 +3357,13 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `dom.events.focus` | event | partial | adapted | @zavx0z/dom/semantic | Only the platform's bounded semantic dispatch and owner default actions are implemented. | 2 | 0 |
 | `dom.events.focusin` | event | partial | adapted | @zavx0z/dom/semantic | Only the platform's bounded semantic dispatch and owner default actions are implemented. | 2 | 0 |
 | `dom.events.focusout` | event | partial | adapted | @zavx0z/dom/semantic | Only the platform's bounded semantic dispatch and owner default actions are implemented. | 2 | 0 |
-| `dom.events.gotpointercapture` | event | unsupported | none | @zavx0z/dom/semantic | No current runtime implementation and behavioral test were found for this pinned DOM member. | 1 | 0 |
+| `dom.events.gotpointercapture` | event | partial | adapted | @zavx0z/dom/semantic | Semantic transition dispatch and ordering are proven; trusted native provenance and implicit touch capture remain outside this bounded host. | 2 | 0 |
 | `dom.events.input` | event | partial | adapted | @zavx0z/dom/semantic | Only the platform's bounded semantic dispatch and owner default actions are implemented. | 2 | 0 |
 | `dom.events.keydown` | event | partial | adapted | @zavx0z/dom/semantic | Only the platform's bounded semantic dispatch and owner default actions are implemented. | 2 | 0 |
 | `dom.events.keypress` | event | unsupported | none | @zavx0z/dom/semantic | No current runtime implementation and behavioral test were found for this pinned DOM member. | 1 | 0 |
 | `dom.events.keyup` | event | partial | adapted | @zavx0z/dom/semantic | Only the platform's bounded semantic dispatch and owner default actions are implemented. | 2 | 0 |
 | `dom.events.load` | event | unsupported | none | @zavx0z/dom/semantic | No current runtime implementation and behavioral test were found for this pinned DOM member. | 1 | 0 |
-| `dom.events.lostpointercapture` | event | unsupported | none | @zavx0z/dom/semantic | No current runtime implementation and behavioral test were found for this pinned DOM member. | 1 | 0 |
+| `dom.events.lostpointercapture` | event | partial | adapted | @zavx0z/dom/semantic | Semantic transition dispatch and ordering are proven; trusted native provenance and implicit touch capture remain outside this bounded host. | 2 | 0 |
 | `dom.events.mousedown` | event | unsupported | none | @zavx0z/dom/semantic | No current runtime implementation and behavioral test were found for this pinned DOM member. | 1 | 0 |
 | `dom.events.mouseenter` | event | unsupported | none | @zavx0z/dom/semantic | No current runtime implementation and behavioral test were found for this pinned DOM member. | 1 | 0 |
 | `dom.events.mouseleave` | event | unsupported | none | @zavx0z/dom/semantic | No current runtime implementation and behavioral test were found for this pinned DOM member. | 1 | 0 |
@@ -3590,9 +3590,9 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `dom.extensions.pointerevents.dictionaries.wheeleventinit.fields.momentum` | field | unsupported | none | @zavx0z/dom/semantic | No current runtime implementation and behavioral test were found for this pinned DOM member. | 1 | 0 |
 | `dom.extensions.pointerevents.dictionaries.wheeleventinit.inheritance` | inheritance | unsupported | none | @zavx0z/dom/semantic | No current runtime implementation and behavioral test were found for this pinned DOM member. | 1 | 0 |
 | `dom.extensions.pointerevents.interfaces.element` | interface | unsupported | none | @zavx0z/dom/semantic | No current runtime implementation and behavioral test were found for this pinned DOM member. | 1 | 0 |
-| `dom.extensions.pointerevents.interfaces.element.methods.haspointercapture` | operation | unsupported | none | @zavx0z/dom/semantic | No current runtime implementation and behavioral test were found for this pinned DOM member. | 1 | 0 |
-| `dom.extensions.pointerevents.interfaces.element.methods.releasepointercapture` | operation | unsupported | none | @zavx0z/dom/semantic | No current runtime implementation and behavioral test were found for this pinned DOM member. | 1 | 0 |
-| `dom.extensions.pointerevents.interfaces.element.methods.setpointercapture` | operation | unsupported | none | @zavx0z/dom/semantic | No current runtime implementation and behavioral test were found for this pinned DOM member. | 1 | 1 |
+| `dom.extensions.pointerevents.interfaces.element.methods.haspointercapture` | operation | partial | adapted | @zavx0z/dom/semantic | The explicit Element method contract is behaviorally proven; implicit touch capture and live native browser provenance remain outside this evidence. | 2 | 0 |
+| `dom.extensions.pointerevents.interfaces.element.methods.releasepointercapture` | operation | partial | adapted | @zavx0z/dom/semantic | The explicit Element method contract is behaviorally proven; implicit touch capture and live native browser provenance remain outside this evidence. | 2 | 0 |
+| `dom.extensions.pointerevents.interfaces.element.methods.setpointercapture` | operation | partial | adapted | @zavx0z/dom/semantic | The explicit Element method contract is behaviorally proven; implicit touch capture and live native browser provenance remain outside this evidence. | 2 | 1 |
 | `dom.extensions.pointerevents.interfaces.mouseevent` | interface | partial | adapted | @zavx0z/dom/semantic | The event object hierarchy is implemented, while browser-owned trusted dispatch and the complete standard member set remain outside this evidence. | 2 | 0 |
 | `dom.extensions.pointerevents.interfaces.mouseevent--aae9b97d` | interface | partial | adapted | @zavx0z/dom/semantic | The event object hierarchy is implemented, while browser-owned trusted dispatch and the complete standard member set remain outside this evidence. | 2 | 0 |
 | `dom.extensions.pointerevents.interfaces.mouseevent--aae9b97d.methods.initmouseevent` | operation | partial | adapted | @zavx0z/dom/semantic | The event object hierarchy is implemented, while browser-owned trusted dispatch and the complete standard member set remain outside this evidence. | 2 | 0 |
@@ -4427,6 +4427,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `platform.at-zavx0z-dom.export-paths.state-change.symbols.optionselectedstatechange` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.state-change.symbols.popoverstatechange` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.state-change.symbols.scrollstatechange` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-zavx0z-dom.export-paths.state-change.symbols.selectpickerstatechange` | type-export | implemented | extension | @zavx0z/dom/semantic | — | 2 | 0 |
 | `platform.at-zavx0z-dom.export-paths.state-change.symbols.statechangebatch` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.state-change.symbols.statechangesubscriber` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.state-change.symbols.textareaselectionstatechange` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
@@ -4663,7 +4664,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `html.attributes.headingoffset` | global-attribute | partial | adapted | @zavx0z/dom/semantic | Stored as a generic content attribute; no attribute-specific algorithm was found. | 2 | 0 |
 | `html.attributes.headingreset` | global-attribute | partial | adapted | @zavx0z/dom/semantic | Stored as a generic content attribute; no attribute-specific algorithm was found. | 2 | 0 |
 | `html.attributes.height` | attribute | partial | adapted | @zavx0z/dom/semantic | The platform implements selected reflection/live-state branches, not the complete attribute contract on every applicable element. | 2 | 0 |
-| `html.attributes.hidden` | global-attribute | partial | adapted | @zavx0z/dom/semantic | The platform implements selected reflection/live-state branches, not the complete attribute contract on every applicable element. | 2 | 0 |
+| `html.attributes.hidden` | global-attribute | partial | adapted | @zavx0z/dom/semantic | Boolean hidden presence and fully-hidden rendering/focus are implemented; until-found, beforematch, find-in-page reveal and accessibility projection remain unsupported. | 3 | 0 |
 | `html.attributes.high` | attribute | partial | adapted | @zavx0z/dom/semantic | Stored as a generic content attribute; no attribute-specific algorithm was found. | 2 | 0 |
 | `html.attributes.href` | attribute | partial | adapted | @zavx0z/dom/semantic | Stored as a generic content attribute; no attribute-specific algorithm was found. | 2 | 0 |
 | `html.attributes.hreflang` | attribute | partial | adapted | @zavx0z/dom/semantic | Stored as a generic content attribute; no attribute-specific algorithm was found. | 2 | 0 |
@@ -4769,7 +4770,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `html.behaviors.form-ownership` | behavior | unsupported | none | @zavx0z/dom/semantic | The current semantic DOM has no implementation of this HTML algorithm. | 1 | 0 |
 | `html.behaviors.form-reset` | behavior | unsupported | none | @zavx0z/dom/semantic | The current semantic DOM has no implementation of this HTML algorithm. | 1 | 0 |
 | `html.behaviors.form-submission` | behavior | unsupported | none | @zavx0z/dom/semantic | The current semantic DOM has no implementation of this HTML algorithm. | 1 | 0 |
-| `html.behaviors.hidden` | behavior | partial | adapted | @zavx0z/dom/semantic | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. | 2 | 0 |
+| `html.behaviors.hidden` | behavior | partial | adapted | @zavx0z/dom/semantic | The fully-hidden state is behaviorally enforced; hidden=until-found, beforematch, find-in-page reveal, containment and accessibility projection remain unsupported. | 4 | 0 |
 | `html.behaviors.images` | behavior | partial | adapted | @zavx0z/dom/semantic | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. | 2 | 0 |
 | `html.behaviors.inert` | behavior | unsupported | none | @zavx0z/dom/semantic | The current semantic DOM has no implementation of this HTML algorithm. | 1 | 0 |
 | `html.behaviors.input-picker` | behavior | unsupported | none | @zavx0z/dom/semantic | The current semantic DOM has no implementation of this HTML algorithm. | 1 | 0 |
@@ -4788,7 +4789,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `html.behaviors.input-type-number` | input-type | partial | adapted | @zavx0z/dom/semantic | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. | 2 | 0 |
 | `html.behaviors.input-type-password` | input-type | partial | adapted | @zavx0z/dom/semantic | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. | 2 | 0 |
 | `html.behaviors.input-type-radio` | input-type | partial | adapted | @zavx0z/dom/semantic | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. | 2 | 0 |
-| `html.behaviors.input-type-range` | input-type | partial | adapted | @zavx0z/dom/semantic | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. | 2 | 1 |
+| `html.behaviors.input-type-range` | input-type | partial | adapted | @zavx0z/dom/semantic | Horizontal pointer drag and bounded keyboard defaults are implemented; vertical orientation, ticks, datalist, validity, public stepUp/stepDown and complete browser range behavior remain unsupported. | 4 | 1 |
 | `html.behaviors.input-type-reset` | input-type | partial | adapted | @zavx0z/dom/semantic | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. | 2 | 0 |
 | `html.behaviors.input-type-search` | input-type | partial | adapted | @zavx0z/dom/semantic | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. | 2 | 0 |
 | `html.behaviors.input-type-submit` | input-type | partial | adapted | @zavx0z/dom/semantic | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. | 2 | 0 |
@@ -4806,7 +4807,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `html.behaviors.popover` | behavior | partial | adapted | @zavx0z/dom/semantic | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. | 2 | 1 |
 | `html.behaviors.progress-meter` | behavior | partial | adapted | @zavx0z/dom/semantic | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. | 2 | 0 |
 | `html.behaviors.resource-loading` | behavior | not-applicable | none | @zavx0z/dom/semantic | The capability belongs to a full browsing user agent rather than the accepted semantic DOM to CPU Renderer to retained WebGPU platform. | 1 | 0 |
-| `html.behaviors.select-option-optgroup` | behavior | partial | adapted | @zavx0z/dom/semantic | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. | 2 | 1 |
+| `html.behaviors.select-option-optgroup` | behavior | partial | adapted | @zavx0z/dom/semantic | Collapsed single-select live state, picker ownership and bounded keyboard/pointer choice are implemented; multiple/listbox, optgroup, type-ahead, forms and accessibility projection remain unsupported. | 2 | 1 |
 | `html.behaviors.sequential-focus-navigation` | behavior | unsupported | none | @zavx0z/dom/semantic | The current semantic DOM has no implementation of this HTML algorithm. | 1 | 0 |
 | `html.behaviors.tables` | behavior | unsupported | none | @zavx0z/dom/semantic | The current semantic DOM has no implementation of this HTML algorithm. | 1 | 0 |
 | `html.behaviors.textarea` | behavior | partial | adapted | @zavx0z/dom/semantic | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. | 2 | 0 |
@@ -8614,10 +8615,10 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `renderer.features.clip-stacks` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.compiled-stylesheet-lifecycle` | renderer-stage | implemented | extension | @zavx0z/renderer/cpu | — | 6 | 1 |
 | `renderer.features.computed-style` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
-| `renderer.features.default-activation` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Implemented for the bounded rendered-control set; complete browser Pointer Events and default actions remain outside Core. | 2 | 0 |
+| `renderer.features.default-activation` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Implemented for the bounded rendered-control set including explicit semantic capture, horizontal Range and collapsed Select; implicit touch capture and complete Pointer Events/HTML default actions remain outside Core. | 3 | 0 |
 | `renderer.features.display-list` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.flex-layout` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The bounded owner supports row/column single-line Flex and nowrap/wrap/wrap-reverse multi-line packing with direction-mapped independent row/column gaps, per-line grow/shrink/justification/align-items, admitted align-content distribution after mandatory cross gaps, intrinsic/auto sizing, and wrap-reverse cross-start semantics; balance, reverse main axes, flex-flow, order, align-self, percentage gaps, gap decorations/rules, writing modes, and complete intrinsic multi-line Flexbox sizing remain unsupported. | 7 | 0 |
-| `renderer.features.form-control-projection` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
+| `renderer.features.form-control-projection` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The bounded form-control set now includes horizontal Range interaction and a collapsed single-Select picker; multiple/listbox, type-ahead, accessibility projection and complete native form chrome remain unsupported. | 3 | 0 |
 | `renderer.features.geometry-readback` | renderer-stage | unsupported | none | @zavx0z/renderer/cpu | The CPU renderer has no implementation of this internal platform capability. | 1 | 0 |
 | `renderer.features.hit-metadata` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.images` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 1 |
@@ -8629,7 +8630,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `renderer.features.line-breaking` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Text measurement is an adapted fixed advance model without shaping, kerning, bidi, fallback, or full inline formatting. | 2 | 0 |
 | `renderer.features.overflow` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.performance-paths` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
-| `renderer.features.pointer` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Implemented for the bounded rendered-control set; complete browser Pointer Events and default actions remain outside Core. | 2 | 0 |
+| `renderer.features.pointer` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Implemented for the bounded rendered-control set including explicit semantic capture, horizontal Range and collapsed Select; implicit touch capture and complete Pointer Events/HTML default actions remain outside Core. | 3 | 0 |
 | `renderer.features.popover-projection` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.positioning` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.progress-meter` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |

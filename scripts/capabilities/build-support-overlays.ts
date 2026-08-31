@@ -39,7 +39,7 @@ interface Classification {
 
 const verificationDate = "2026-08-29"
 const recoveryVerification = {
-  revision: "28a4ce08e94231bf6f2fd144f8e54bd8975946f3+dirty",
+  revision: "4a77909f5de4784751b073840f68b0460ade65f8",
   date: "2026-08-31",
 } as const
 const flexWrapVerification = {

@@ -76,7 +76,7 @@
           "path": "packages/components/inspector.tsx",
           "proves": "Focused numeric field editing inside nested scrollable Inspector groups.",
           "repository": "ui",
-          "revision": "45423d7b36f8796429a9e43c30af9bb89bb8af0e+dirty",
+          "revision": "1c2f83c8fcaca3c78cee09e2fa9e9f1ad295056d+dirty",
           "symbol": "Inspector numeric fields",
           "type": "consumer-usage"
         }
@@ -94,16 +94,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "44",
+          "lines": "56",
           "path": "packages/components/number-input.tsx",
           "proves": "Native typed number editing, focus, input/change, Escape rollback and selection through the exact semantic owner.",
           "repository": "ui",
-          "revision": "45423d7b36f8796429a9e43c30af9bb89bb8af0e+dirty",
+          "revision": "1c2f83c8fcaca3c78cee09e2fa9e9f1ad295056d+dirty",
           "symbol": "NumberInput",
           "type": "consumer-usage"
         }
       ],
-      "line": 44,
+      "line": 56,
       "package": "@ui/components",
       "path": "packages/components/number-input.tsx",
       "repository": "ui",
@@ -296,7 +296,7 @@
           "path": "packages/components/code-editor.tsx",
           "proves": "Two-axis scrolling with clipping and stable retained line/token identity.",
           "repository": "ui",
-          "revision": "45423d7b36f8796429a9e43c30af9bb89bb8af0e+dirty",
+          "revision": "1c2f83c8fcaca3c78cee09e2fa9e9f1ad295056d+dirty",
           "symbol": "CodeEditor",
           "type": "consumer-usage"
         }
@@ -318,7 +318,7 @@
           "path": "packages/ui/dom/node-editor.ts",
           "proves": "Pan/zoom reaches paint, clip and inverse hit consistently for the graph surface.",
           "repository": "node",
-          "revision": "bd5af9a2cf6fca679a69de5245d107ea42318f54",
+          "revision": "bd5af9a2cf6fca679a69de5245d107ea42318f54+dirty",
           "symbol": "NodeEditor",
           "type": "consumer-usage"
         }
@@ -340,7 +340,7 @@
           "path": "packages/components/code-editor.tsx",
           "proves": "Preserve source whitespace and prevent wrapping for read-only code lines.",
           "repository": "ui",
-          "revision": "45423d7b36f8796429a9e43c30af9bb89bb8af0e+dirty",
+          "revision": "1c2f83c8fcaca3c78cee09e2fa9e9f1ad295056d+dirty",
           "symbol": "CodeEditor",
           "type": "consumer-usage"
         }
@@ -424,16 +424,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "59",
+          "lines": "73",
           "path": "packages/components/number-input.tsx",
           "proves": "A scrub gesture continues outside the control until pointerup/cancel without component-owned capture emulation.",
           "repository": "ui",
-          "revision": "45423d7b36f8796429a9e43c30af9bb89bb8af0e+dirty",
+          "revision": "1c2f83c8fcaca3c78cee09e2fa9e9f1ad295056d+dirty",
           "symbol": "NumberInput scrub",
           "type": "consumer-usage"
         }
       ],
-      "line": 59,
+      "line": 73,
       "package": "@ui/components",
       "path": "packages/components/number-input.tsx",
       "repository": "ui",
@@ -490,16 +490,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "81",
+          "lines": "130",
           "path": "packages/components/color-input.tsx",
           "proves": "Stable controlled RGBA channels with range input/change semantics and analytical color paint.",
           "repository": "ui",
-          "revision": "45423d7b36f8796429a9e43c30af9bb89bb8af0e+dirty",
+          "revision": "1c2f83c8fcaca3c78cee09e2fa9e9f1ad295056d+dirty",
           "symbol": "ColorInput",
           "type": "consumer-usage"
         }
       ],
-      "line": 81,
+      "line": 130,
       "package": "@ui/components",
       "path": "packages/components/color-input.tsx",
       "repository": "ui",
@@ -512,16 +512,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "143",
+          "lines": "287",
           "path": "packages/components/color-input.tsx",
           "proves": "An anchored top-layer color picker with clipping, light dismiss, Escape and focus restoration instead of an inline hidden panel.",
           "repository": "ui",
-          "revision": "45423d7b36f8796429a9e43c30af9bb89bb8af0e+dirty",
+          "revision": "1c2f83c8fcaca3c78cee09e2fa9e9f1ad295056d+dirty",
           "symbol": "ColorInput",
           "type": "consumer-usage"
         }
       ],
-      "line": 143,
+      "line": 287,
       "package": "@ui/components",
       "path": "packages/components/color-input.tsx",
       "repository": "ui",
@@ -534,16 +534,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "29",
+          "lines": "134",
           "path": "packages/components/enum-input.tsx",
           "proves": "Open a collapsed select picker, navigate options by keyboard, activate one option and dispatch input/change.",
           "repository": "ui",
-          "revision": "45423d7b36f8796429a9e43c30af9bb89bb8af0e+dirty",
+          "revision": "1c2f83c8fcaca3c78cee09e2fa9e9f1ad295056d+dirty",
           "symbol": "EnumInput",
           "type": "consumer-usage"
         }
       ],
-      "line": 29,
+      "line": 134,
       "package": "@ui/components",
       "path": "packages/components/enum-input.tsx",
       "repository": "ui",
@@ -560,7 +560,7 @@
           "path": "packages/ui/node-system.tsx",
           "proves": "Observe topology/parameter snapshots without duplicating the canonical Node store.",
           "repository": "node",
-          "revision": "bd5af9a2cf6fca679a69de5245d107ea42318f54",
+          "revision": "bd5af9a2cf6fca679a69de5245d107ea42318f54+dirty",
           "symbol": "NodeSystem view store",
           "type": "consumer-usage"
         }
@@ -582,7 +582,7 @@
           "path": "packages/ui/dom/field-mount.ts",
           "proves": "Mount and update a compiled component into a DocumentFragment while retaining the exact owner element and disposing on unmount.",
           "repository": "node",
-          "revision": "bd5af9a2cf6fca679a69de5245d107ea42318f54",
+          "revision": "bd5af9a2cf6fca679a69de5245d107ea42318f54+dirty",
           "symbol": "mountField",
           "type": "consumer-usage"
         }
@@ -604,7 +604,7 @@
           "path": "packages/ui/node-system.tsx",
           "proves": "Retain node, link, parameter and socket identity across high-volume topology and parameter updates.",
           "repository": "node",
-          "revision": "bd5af9a2cf6fca679a69de5245d107ea42318f54",
+          "revision": "bd5af9a2cf6fca679a69de5245d107ea42318f54+dirty",
           "symbol": "NodeSystem",
           "type": "consumer-usage"
         }
@@ -670,7 +670,7 @@
           "path": "packages/components/button.tsx",
           "proves": "Adopt the exact compiled Button stylesheet once per Document and make it visible to every same-Document projection without manual buttonCss or consumer styleSheets wiring.",
           "repository": "ui",
-          "revision": "45423d7b36f8796429a9e43c30af9bb89bb8af0e+dirty",
+          "revision": "1c2f83c8fcaca3c78cee09e2fa9e9f1ad295056d+dirty",
           "symbol": "Button automatic stylesheet adoption",
           "type": "consumer-usage"
         }
@@ -714,7 +714,7 @@
           "path": "packages/ui/dom/node-editor.ts",
           "proves": "Scale grid and routed connection presentation without a local DOM geometry renderer.",
           "repository": "node",
-          "revision": "bd5af9a2cf6fca679a69de5245d107ea42318f54",
+          "revision": "bd5af9a2cf6fca679a69de5245d107ea42318f54+dirty",
           "symbol": "NodeEditor grid and links",
           "type": "consumer-usage"
         }
@@ -736,7 +736,7 @@
           "path": "packages/ui/node-system.tsx",
           "proves": "Present routed links and grid primitives without decomposing them into component-owned rectangles and points.",
           "repository": "node",
-          "revision": "bd5af9a2cf6fca679a69de5245d107ea42318f54",
+          "revision": "bd5af9a2cf6fca679a69de5245d107ea42318f54+dirty",
           "symbol": "NodeConnection",
           "type": "consumer-usage"
         }
@@ -824,7 +824,7 @@
           "path": "packages/components/button.tsx",
           "proves": "Extract Button owner CSS, bounded attribute/native pseudo selectors and caller composition from the global css intrinsic without runtime object authoring or scanning.",
           "repository": "ui",
-          "revision": "45423d7b36f8796429a9e43c30af9bb89bb8af0e+dirty",
+          "revision": "1c2f83c8fcaca3c78cee09e2fa9e9f1ad295056d+dirty",
           "symbol": "Button component-local styles",
           "type": "consumer-usage"
         }
@@ -1292,106 +1292,6 @@
     },
     {
       "actual": {
-        "behavior": "DocumentNativeInputHost mirrors text/search/tel/url/password and textarea, not type=number.",
-        "evidence": [
-          {
-            "doesNotProve": "The future proxy design.",
-            "path": "packages/browser/src/native-input-host.ts",
-            "proves": "Number input is outside the mirrored type subset.",
-            "repository": "renderer",
-            "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-            "symbol": "supported native input types",
-            "type": "implementation"
-          },
-          {
-            "doesNotProve": "Platform support.",
-            "lines": "85-156",
-            "path": "packages/components/number-input.tsx",
-            "proves": "The component requires valueAsNumber and native input/change events.",
-            "repository": "ui",
-            "revision": "2148fa46d41efdc6ece993a6298b4adb2ade0b19+dirty",
-            "symbol": "NumberInput",
-            "type": "consumer-usage"
-          }
-        ]
-      },
-      "capability": "browser.features.number-input-proxy",
-      "dependencies": [],
-      "expected": {
-        "behavior": "Focused semantic type=number mirrors through a native host with valueAsNumber, keyboard, beforeinput/input/change and rollback.",
-        "reference": "HTML number input and browser host contract"
-      },
-      "forbiddenLocalWorkarounds": [
-        "Component-local hidden native input",
-        "Manual keyboard parsing in NumberInput"
-      ],
-      "id": "gap.browser.number-input-proxy",
-      "minimalReproduction": {
-        "source": "Focus a semantic input type=number through RendererBrowserRuntime and type a numeric value.",
-        "test": "Assert native proxy value, semantic valueAsNumber and input/change sequence remain synchronized."
-      },
-      "reportedBy": {
-        "package": "@ui/components",
-        "repository": "ui",
-        "scenario": "typed numeric editing",
-        "subject": "NumberInput"
-      },
-      "schemaVersion": 1,
-      "severity": "P1",
-      "suspectedOwner": {
-        "package": "@zavx0z/renderer-browser",
-        "repository": "renderer",
-        "stage": "native-input-host"
-      }
-    },
-    {
-      "actual": {
-        "behavior": "The DOM has no pointer capture API; NumberInput retains component-local scrub state.",
-        "evidence": [
-          {
-            "doesNotProve": "Browser canvas capture ownership.",
-            "path": "packages/dom/SUPPORT.md",
-            "proves": "Pointer capture is explicitly unsupported in the semantic DOM.",
-            "repository": "renderer",
-            "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-            "symbol": "pointer capture boundary",
-            "type": "negative-test"
-          }
-        ]
-      },
-      "capability": "dom.extensions.pointerevents.interfaces.element.methods.setpointercapture",
-      "dependencies": [
-        "browser.features.pointer-capture"
-      ],
-      "expected": {
-        "behavior": "The semantic owner captures an active pointer and receives move/up/cancel until release.",
-        "reference": "Pointer Events setPointerCapture"
-      },
-      "forbiddenLocalWorkarounds": [
-        "Component-owned global pointer map",
-        "Data attributes that imitate capture state"
-      ],
-      "id": "gap.dom.pointer-capture",
-      "minimalReproduction": {
-        "source": "Pointer down a NumberInput scrub region, leave its bounds, move and release.",
-        "test": "Semantic move/up continues at the captured owner and got/lostpointercapture order is correct."
-      },
-      "reportedBy": {
-        "package": "@ui/components",
-        "repository": "ui",
-        "scenario": "pointer leaves control during drag",
-        "subject": "NumberInput scrub"
-      },
-      "schemaVersion": 1,
-      "severity": "P1",
-      "suspectedOwner": {
-        "package": "@zavx0z/dom",
-        "repository": "renderer",
-        "stage": "semantic-pointer"
-      }
-    },
-    {
-      "actual": {
         "behavior": "Selection offsets exist, but CPU Renderer does not emit caret/selection display items; the transparent textarea cannot supply visible selection.",
         "evidence": [
           {
@@ -1480,52 +1380,6 @@
         "package": "@zavx0z/dom",
         "repository": "renderer",
         "stage": "renderer-backed-read"
-      }
-    },
-    {
-      "actual": {
-        "behavior": "DOM live selectedness and collapsed paint exist; Browser host has no picker/listbox interaction.",
-        "evidence": [
-          {
-            "doesNotProve": "Picker/listbox interaction.",
-            "path": "packages/core/test/select-paint.test.ts",
-            "proves": "Only collapsed presentation is tested.",
-            "repository": "renderer",
-            "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-            "symbol": "collapsed select paint",
-            "type": "negative-test"
-          }
-        ]
-      },
-      "capability": "browser.features.select-picker",
-      "dependencies": [
-        "html.behaviors.select-option-optgroup"
-      ],
-      "expected": {
-        "behavior": "Collapsed select paint opens an owner-controlled picker/listbox, supports keyboard selection and dispatches input/change.",
-        "reference": "HTML select/option interaction"
-      },
-      "forbiddenLocalWorkarounds": [
-        "Component-local option popup dispatcher",
-        "Private canvas picker"
-      ],
-      "id": "gap.html.select-picker",
-      "minimalReproduction": {
-        "source": "Focus a semantic select, activate it and navigate options with ArrowDown/Enter/Escape.",
-        "test": "Assert picker visibility, option selectedness and input/change ordering."
-      },
-      "reportedBy": {
-        "package": "@ui/components",
-        "repository": "ui",
-        "scenario": "open and navigate enum options",
-        "subject": "EnumInput"
-      },
-      "schemaVersion": 1,
-      "severity": "P1",
-      "suspectedOwner": {
-        "package": "@zavx0z/renderer-browser",
-        "repository": "renderer",
-        "stage": "control-host"
       }
     },
     {
@@ -2897,33 +2751,40 @@
     {
       "blockedBy": [],
       "blocks": [],
-      "conformance": "none",
+      "conformance": "extension",
       "consumers": [
         "ui:@ui/components:Inspector numeric fields:packages/components/inspector.tsx:89",
-        "ui:@ui/components:NumberInput:packages/components/number-input.tsx:44"
+        "ui:@ui/components:NumberInput:packages/components/number-input.tsx:56"
       ],
       "description": "Browser composition number input proxy capability.",
       "domain": "browser",
       "evidence": [
         {
-          "doesNotProve": "Runtime implementation or observable conformance.",
-          "path": "packages/browser/requirements.md",
-          "proves": "The pinned project inventory contains browser.features.number-input-proxy.",
+          "doesNotProve": "Live native browser execution, forms and validity UI.",
+          "path": "packages/browser/src/native-input-host.ts",
+          "proves": "One reusable native input mirrors focused semantic number/range value, min, max and step without fabricated selection and routes keyboard/beforeinput/input/change with cancellation rollback.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "number input proxy",
-          "type": "requirement"
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "number and range input proxy",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live native browser behavior and visual chrome.",
+          "path": "packages/browser/test/native-input-host.test.ts",
+          "proves": "Exact target/proxy identity, min/max/step and sanitized value sync, native Arrow default seam, cancellation, keyboard routing and input/change order.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "number and range proxy",
+          "type": "unit-test"
         }
       ],
       "id": "browser.features.number-input-proxy",
       "kind": "browser-host",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
       },
-      "limitations": [
-        "The native host intentionally exposes only the current text input/textarea proxy subset; this control/browser integration is absent."
-      ],
+      "limitations": [],
       "metadata": {
         "consumerDemand": [
           {
@@ -2939,7 +2800,7 @@
           {
             "behavior": "Native typed number editing, focus, input/change, Escape rollback and selection through the exact semantic owner.",
             "capability": "browser.features.number-input-proxy",
-            "line": 44,
+            "line": 56,
             "package": "@ui/components",
             "path": "packages/components/number-input.tsx",
             "repository": "ui",
@@ -2965,7 +2826,7 @@
         "source": "renderer-browser-contract",
         "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
       },
-      "status": "unsupported"
+      "status": "implemented"
     },
     {
       "blockedBy": [],
@@ -3165,32 +3026,41 @@
       "domain": "browser",
       "evidence": [
         {
-          "doesNotProve": "Complete browser-host semantics.",
+          "doesNotProve": "Live native devices and implicit touch capture.",
           "path": "packages/browser/src/runtime.ts",
-          "proves": "The bounded host slice exists.",
+          "proves": "Native canvas capture retains host delivery while Core retargets through the exact semantic Document override.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "pointer-capture",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "canvas and semantic pointer capture",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Live browser/native input/WebGPU acceptance.",
+          "doesNotProve": "Live native browser execution.",
           "path": "packages/browser/test/runtime.test.ts",
-          "proves": "Current adapter behavior.",
+          "proves": "Host capture lifecycle and cleanup.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "pointer-capture",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "canvas pointer capture",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Implicit touch capture and live devices.",
+          "path": "packages/core/test/interaction.test.ts",
+          "proves": "Captured Element receives move/up outside its hit and emits got/lost in order.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "semantic pointer capture",
           "type": "unit-test"
         }
       ],
       "id": "browser.features.pointer-capture",
       "kind": "browser-host",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
       },
       "limitations": [
-        "Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout."
+        "Native canvas delivery and explicit semantic capture are integrated; implicit touch capture and live native browser acceptance remain outside this evidence."
       ],
       "metadata": {},
       "name": "pointer capture",
@@ -3379,29 +3249,56 @@
     {
       "blockedBy": [],
       "blocks": [],
-      "conformance": "none",
+      "conformance": "adapted",
       "consumers": [],
       "description": "Browser composition select picker capability.",
       "domain": "browser",
       "evidence": [
         {
-          "doesNotProve": "Runtime implementation or observable conformance.",
-          "path": "packages/browser/requirements.md",
-          "proves": "The pinned project inventory contains browser.features.select-picker.",
+          "doesNotProve": "Native accessibility projection, multiple/listbox and type-ahead.",
+          "path": "packages/browser/src/native-input-host.ts",
+          "proves": "The reusable native select is a keyboard owner while semantic/Core own selection and in-canvas picker paint.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "select picker",
-          "type": "requirement"
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "select keyboard proxy",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Scrolling, multiple/listbox, type-ahead and native accessibility.",
+          "path": "packages/core/src/renderer.ts",
+          "proves": "One edge-aware top-layer picker projects exact Option identities in the shared frame.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "emitSelectPicker",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live native browser execution and omitted picker modes.",
+          "path": "packages/browser/test/native-input-host.test.ts",
+          "proves": "Arrow selection, Space open, Escape close and input/change ordering.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "select keyboard host",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Multiple/listbox, scrolling and accessibility.",
+          "path": "packages/core/test/interaction.test.ts",
+          "proves": "Pointer open, exact option choice and outside light-dismiss.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "select picker interaction",
+          "type": "unit-test"
         }
       ],
       "id": "browser.features.select-picker",
       "kind": "browser-host",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
       },
       "limitations": [
-        "The native host intentionally exposes only the current text input/textarea proxy subset; this control/browser integration is absent."
+        "Collapsed single-select pointer/keyboard picker behavior is implemented; scrolling beyond eight visible options, multiple/listbox, type-ahead and native accessibility projection remain unsupported."
       ],
       "metadata": {},
       "name": "select picker",
@@ -3421,7 +3318,7 @@
         "source": "renderer-browser-contract",
         "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
       },
-      "status": "unsupported"
+      "status": "partial"
     },
     {
       "blockedBy": [],
@@ -210620,28 +210517,47 @@
     {
       "blockedBy": [],
       "blocks": [],
-      "conformance": "none",
+      "conformance": "adapted",
       "consumers": [],
       "description": "Pointer capture ownership, pending override, got/lost events, and release.",
       "domain": "dom",
       "evidence": [
         {
-          "doesNotProve": "Runtime implementation or observable conformance.",
-          "path": "whatwg-dom#pointer-capture",
-          "proves": "The pinned standard inventory contains dom.algorithms.pointer-capture.",
-          "repository": "external",
-          "revision": "commit a2331a45360129e8645ef7e0a04740241b6e3726",
-          "type": "external-spec"
+          "doesNotProve": "Implicit touch capture, trusted native generation and the complete Pointer Events device model.",
+          "path": "packages/dom/src/pointer-capture.ts",
+          "proves": "Per-Document active/pending/effective capture ownership and got/lost ordering.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "pending pointer capture override",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Implicit touch capture and live native devices.",
+          "path": "packages/dom/test/pointer-capture.test.ts",
+          "proves": "Pending override processing, transfer, explicit/implicit release, inactive-id errors and disconnect cleanup.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "Element pointer capture",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Native browser trusted-event execution.",
+          "path": "packages/core/test/interaction.test.ts",
+          "proves": "Move/up remain targeted at the exact captured Element outside its hit box.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "semantic pointer-capture retargeting",
+          "type": "unit-test"
         }
       ],
       "id": "dom.algorithms.pointer-capture",
       "kind": "behavior",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
       },
       "limitations": [
-        "The accepted semantic DOM architecture has no implementation for this observable algorithm in the current checkout."
+        "Explicit semantic capture, pending overrides and got/lost ordering are implemented; implicit touch capture and the complete native Pointer Events device model remain outside this bounded host."
       ],
       "metadata": {},
       "name": "pointer capture",
@@ -210661,7 +210577,7 @@
         "source": "whatwg-dom",
         "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
       },
-      "status": "unsupported"
+      "status": "partial"
     },
     {
       "blockedBy": [],
@@ -216170,28 +216086,38 @@
     {
       "blockedBy": [],
       "blocks": [],
-      "conformance": "none",
+      "conformance": "adapted",
       "consumers": [],
       "description": "gotpointercapture event using PointerEvent.",
       "domain": "dom",
       "evidence": [
         {
-          "doesNotProve": "Runtime implementation or observable conformance.",
-          "path": "https://w3c.github.io/pointerevents/#dfn-gotpointercapture",
-          "proves": "The pinned standard inventory contains dom.events.gotpointercapture.",
-          "repository": "external",
-          "revision": "snapshot 2026-08-29",
-          "type": "external-spec"
+          "doesNotProve": "Trusted native provenance and implicit touch capture.",
+          "path": "packages/dom/src/pointer-capture.ts",
+          "proves": "Pending override processing dispatches the exact capture transition event in standard lost-before-got order.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "gotpointercapture",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live native devices and implicit capture.",
+          "path": "packages/dom/test/pointer-capture.test.ts",
+          "proves": "Transfer, explicit release and implicit pointer-end ordering are observed.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "gotpointercapture",
+          "type": "unit-test"
         }
       ],
       "id": "dom.events.gotpointercapture",
       "kind": "event",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
       },
       "limitations": [
-        "No current runtime implementation and behavioral test were found for this pinned DOM member."
+        "Semantic transition dispatch and ordering are proven; trusted native provenance and implicit touch capture remain outside this bounded host."
       ],
       "metadata": {
         "cancelable": false,
@@ -216243,7 +216169,7 @@
         "source": "pointer-events",
         "version": "snapshot 2026-08-29"
       },
-      "status": "unsupported"
+      "status": "partial"
     },
     {
       "blockedBy": [],
@@ -216586,28 +216512,38 @@
     {
       "blockedBy": [],
       "blocks": [],
-      "conformance": "none",
+      "conformance": "adapted",
       "consumers": [],
       "description": "lostpointercapture event using PointerEvent.",
       "domain": "dom",
       "evidence": [
         {
-          "doesNotProve": "Runtime implementation or observable conformance.",
-          "path": "https://w3c.github.io/pointerevents/#dfn-lostpointercapture",
-          "proves": "The pinned standard inventory contains dom.events.lostpointercapture.",
-          "repository": "external",
-          "revision": "snapshot 2026-08-29",
-          "type": "external-spec"
+          "doesNotProve": "Trusted native provenance and implicit touch capture.",
+          "path": "packages/dom/src/pointer-capture.ts",
+          "proves": "Pending override processing dispatches the exact capture transition event in standard lost-before-got order.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "lostpointercapture",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live native devices and implicit capture.",
+          "path": "packages/dom/test/pointer-capture.test.ts",
+          "proves": "Transfer, explicit release and implicit pointer-end ordering are observed.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "lostpointercapture",
+          "type": "unit-test"
         }
       ],
       "id": "dom.events.lostpointercapture",
       "kind": "event",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
       },
       "limitations": [
-        "No current runtime implementation and behavioral test were found for this pinned DOM member."
+        "Semantic transition dispatch and ordering are proven; trusted native provenance and implicit touch capture remain outside this bounded host."
       ],
       "metadata": {
         "cancelable": false,
@@ -216659,7 +216595,7 @@
         "source": "pointer-events",
         "version": "snapshot 2026-08-29"
       },
-      "status": "unsupported"
+      "status": "partial"
     },
     {
       "blockedBy": [],
@@ -228775,12 +228711,12 @@
       ],
       "metadata": {
         "childSummary": {
-          "derivedStatus": "unsupported",
+          "derivedStatus": "partial",
           "implemented": 0,
           "not-applicable": 0,
-          "partial": 0,
+          "partial": 3,
           "total": 3,
-          "unsupported": 3,
+          "unsupported": 0,
           "unverified": 0
         },
         "idlSource": "pointerevents.idl"
@@ -228807,28 +228743,38 @@
     {
       "blockedBy": [],
       "blocks": [],
-      "conformance": "none",
+      "conformance": "adapted",
       "consumers": [],
       "description": "Element.hasPointerCapture Web IDL operation.",
       "domain": "dom",
       "evidence": [
         {
-          "doesNotProve": "Runtime implementation or observable conformance.",
-          "path": "https://w3c.github.io/pointerevents/#WebIDL:Element.hasPointerCapture",
-          "proves": "The pinned standard inventory contains dom.extensions.pointerevents.interfaces.element.methods.haspointercapture.",
-          "repository": "external",
-          "revision": "snapshot 2026-08-29",
-          "type": "external-spec"
+          "doesNotProve": "Implicit touch capture and trusted native event provenance.",
+          "path": "packages/dom/src/element.ts",
+          "proves": "The standard Element method delegates to the exact Document pointer-capture owner.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "hasPointerCapture",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Every native device and implicit-capture branch.",
+          "path": "packages/dom/test/pointer-capture.test.ts",
+          "proves": "Method errors, pending ownership, transfer and release are observed through exact Element identity.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "hasPointerCapture",
+          "type": "unit-test"
         }
       ],
       "id": "dom.extensions.pointerevents.interfaces.element.methods.haspointercapture",
       "kind": "operation",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
       },
       "limitations": [
-        "No current runtime implementation and behavioral test were found for this pinned DOM member."
+        "The explicit Element method contract is behaviorally proven; implicit touch capture and live native browser provenance remain outside this evidence."
       ],
       "metadata": {
         "idlSource": "pointerevents.idl",
@@ -228852,33 +228798,43 @@
         "source": "pointer-events",
         "version": "snapshot 2026-08-29"
       },
-      "status": "unsupported"
+      "status": "partial"
     },
     {
       "blockedBy": [],
       "blocks": [],
-      "conformance": "none",
+      "conformance": "adapted",
       "consumers": [],
       "description": "Element.releasePointerCapture Web IDL operation.",
       "domain": "dom",
       "evidence": [
         {
-          "doesNotProve": "Runtime implementation or observable conformance.",
-          "path": "https://w3c.github.io/pointerevents/#WebIDL:Element.releasePointerCapture",
-          "proves": "The pinned standard inventory contains dom.extensions.pointerevents.interfaces.element.methods.releasepointercapture.",
-          "repository": "external",
-          "revision": "snapshot 2026-08-29",
-          "type": "external-spec"
+          "doesNotProve": "Implicit touch capture and trusted native event provenance.",
+          "path": "packages/dom/src/element.ts",
+          "proves": "The standard Element method delegates to the exact Document pointer-capture owner.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "releasePointerCapture",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Every native device and implicit-capture branch.",
+          "path": "packages/dom/test/pointer-capture.test.ts",
+          "proves": "Method errors, pending ownership, transfer and release are observed through exact Element identity.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "releasePointerCapture",
+          "type": "unit-test"
         }
       ],
       "id": "dom.extensions.pointerevents.interfaces.element.methods.releasepointercapture",
       "kind": "operation",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
       },
       "limitations": [
-        "No current runtime implementation and behavioral test were found for this pinned DOM member."
+        "The explicit Element method contract is behaviorally proven; implicit touch capture and live native browser provenance remain outside this evidence."
       ],
       "metadata": {
         "idlSource": "pointerevents.idl",
@@ -228902,42 +228858,52 @@
         "source": "pointer-events",
         "version": "snapshot 2026-08-29"
       },
-      "status": "unsupported"
+      "status": "partial"
     },
     {
       "blockedBy": [],
       "blocks": [],
-      "conformance": "none",
+      "conformance": "adapted",
       "consumers": [
-        "ui:@ui/components:NumberInput scrub:packages/components/number-input.tsx:59"
+        "ui:@ui/components:NumberInput scrub:packages/components/number-input.tsx:73"
       ],
       "description": "Element.setPointerCapture Web IDL operation.",
       "domain": "dom",
       "evidence": [
         {
-          "doesNotProve": "Runtime implementation or observable conformance.",
-          "path": "https://w3c.github.io/pointerevents/#WebIDL:Element.setPointerCapture",
-          "proves": "The pinned standard inventory contains dom.extensions.pointerevents.interfaces.element.methods.setpointercapture.",
-          "repository": "external",
-          "revision": "snapshot 2026-08-29",
-          "type": "external-spec"
+          "doesNotProve": "Implicit touch capture and trusted native event provenance.",
+          "path": "packages/dom/src/element.ts",
+          "proves": "The standard Element method delegates to the exact Document pointer-capture owner.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "setPointerCapture",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Every native device and implicit-capture branch.",
+          "path": "packages/dom/test/pointer-capture.test.ts",
+          "proves": "Method errors, pending ownership, transfer and release are observed through exact Element identity.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "setPointerCapture",
+          "type": "unit-test"
         }
       ],
       "id": "dom.extensions.pointerevents.interfaces.element.methods.setpointercapture",
       "kind": "operation",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
       },
       "limitations": [
-        "No current runtime implementation and behavioral test were found for this pinned DOM member."
+        "The explicit Element method contract is behaviorally proven; implicit touch capture and live native browser provenance remain outside this evidence."
       ],
       "metadata": {
         "consumerDemand": [
           {
             "behavior": "A scrub gesture continues outside the control until pointerup/cancel without component-owned capture emulation.",
             "capability": "dom.extensions.pointerevents.interfaces.element.methods.setpointercapture",
-            "line": 59,
+            "line": 73,
             "package": "@ui/components",
             "path": "packages/components/number-input.tsx",
             "repository": "ui",
@@ -228966,7 +228932,7 @@
         "source": "pointer-events",
         "version": "snapshot 2026-08-29"
       },
-      "status": "unsupported"
+      "status": "partial"
     },
     {
       "blockedBy": [],
@@ -268004,32 +267970,41 @@
       "domain": "html",
       "evidence": [
         {
-          "doesNotProve": "The full attribute-specific HTML algorithm.",
-          "path": "packages/dom/src/element.ts",
-          "proves": "Content-attribute storage and selected reflected state.",
+          "doesNotProve": "Until-found, beforematch, find-in-page and accessibility behavior.",
+          "path": "packages/dom/src/html-element.ts",
+          "proves": "Boolean presence reflection and hidden-ancestor focus suppression use the exact semantic attribute owner.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "hidden",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "HTMLElement.hidden",
           "type": "implementation"
         },
         {
-          "doesNotProve": "All elements and attribute modes.",
-          "path": "packages/dom/test/html-input-element.test.ts",
-          "proves": "Bounded reflected/control behavior.",
+          "doesNotProve": "Until-found, beforematch, find-in-page and accessibility behavior.",
+          "path": "packages/dom/test/tree.test.ts",
+          "proves": "Presence reflection and descendant focus suppression.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "hidden",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "HTMLElement.hidden",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Until-found reveal and accessibility projection.",
+          "path": "packages/core/test/renderer.test.ts",
+          "proves": "A hidden subtree stays absent from boxes, paint and hits despite author and inline display.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "hidden author-display precedence",
           "type": "unit-test"
         }
       ],
       "id": "html.attributes.hidden",
       "kind": "global-attribute",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
       },
       "limitations": [
-        "The platform implements selected reflection/live-state branches, not the complete attribute contract on every applicable element."
+        "Boolean hidden presence and fully-hidden rendering/focus are implemented; until-found, beforematch, find-in-page reveal and accessibility projection remain unsupported."
       ],
       "metadata": {
         "elements": [],
@@ -274417,32 +274392,50 @@
       "domain": "html",
       "evidence": [
         {
-          "doesNotProve": "The complete referenced standard algorithm.",
-          "path": "packages/dom/src/node.ts",
-          "proves": "The bounded semantic DOM implementation exists.",
+          "doesNotProve": "Until-found, beforematch, find-in-page and accessibility behavior.",
+          "path": "packages/core/src/css.ts",
+          "proves": "Any present semantic hidden attribute forces used display:none after author cascade.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "hidden",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "hidden used display",
           "type": "implementation"
         },
         {
-          "doesNotProve": "The complete HTML algorithm, forms, picker, or browser integration.",
-          "path": "packages/dom/test/html-input-element.test.ts",
-          "proves": "The bounded UI/control slice has behavioral tests.",
+          "doesNotProve": "Until-found and accessibility projection.",
+          "path": "packages/dom/src/html-element.ts",
+          "proves": "The semantic boolean reflection and ancestor focus law share the content attribute.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "hidden",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "HTMLElement.hidden",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Until-found reveal and accessibility projection.",
+          "path": "packages/core/test/renderer.test.ts",
+          "proves": "Author/compiled/inline display cannot reveal boxes, paint or hits; removal restores rendering.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "HTML hidden projection",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Sequential navigation and accessibility projection.",
+          "path": "packages/dom/test/tree.test.ts",
+          "proves": "Hidden owners and descendants do not become the active element.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "hidden focusability",
           "type": "unit-test"
         }
       ],
       "id": "html.behaviors.hidden",
       "kind": "behavior",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
       },
       "limitations": [
-        "Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed."
+        "The fully-hidden state is behaviorally enforced; hidden=until-found, beforematch, find-in-page reveal, containment and accessibility projection remain unsupported."
       ],
       "metadata": {},
       "name": "hidden",
@@ -275367,45 +275360,63 @@
       "blocks": [],
       "conformance": "adapted",
       "consumers": [
-        "ui:@ui/components:ColorInput:packages/components/color-input.tsx:81"
+        "ui:@ui/components:ColorInput:packages/components/color-input.tsx:130"
       ],
       "description": "HTMLInputElement range state, sanitization, properties, events, and activation behavior.",
       "domain": "html",
       "evidence": [
         {
-          "doesNotProve": "The complete referenced standard algorithm.",
+          "doesNotProve": "Vertical orientation, ticks, datalist, validity and public stepUp/stepDown.",
           "path": "packages/dom/src/html-input-element.ts",
-          "proves": "The bounded semantic DOM implementation exists.",
+          "proves": "Arrow/Home/End/Page defaults write through the DOM range value owner and emit input/change only on effective changes.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "input type=range",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "applyRangeKeyboardDefault",
           "type": "implementation"
         },
         {
-          "doesNotProve": "The complete HTML algorithm, forms, picker, or browser integration.",
-          "path": "packages/dom/test/html-input-element.test.ts",
-          "proves": "The bounded UI/control slice has behavioral tests.",
+          "doesNotProve": "Vertical orientation, touch-specific implicit capture and every browser range behavior.",
+          "path": "packages/core/src/interaction.ts",
+          "proves": "Pointer drag uses the rendered track geometry and DOM numeric semantics without consumer coordinates.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "input type=range",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "range pointer default action",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Live native browser keys and omitted range modes.",
+          "path": "packages/dom/test/input-numeric-state.test.ts",
+          "proves": "Keyboard stepping, clamping and event order.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "range keyboard defaults",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Vertical/tick/datalist behavior.",
+          "path": "packages/core/test/range-input.test.ts",
+          "proves": "Pointer geometry, min/max/step ownership and input/change order.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "range pointer drag",
           "type": "unit-test"
         }
       ],
       "id": "html.behaviors.input-type-range",
       "kind": "input-type",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
       },
       "limitations": [
-        "Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed."
+        "Horizontal pointer drag and bounded keyboard defaults are implemented; vertical orientation, ticks, datalist, validity, public stepUp/stepDown and complete browser range behavior remain unsupported."
       ],
       "metadata": {
         "consumerDemand": [
           {
             "behavior": "Stable controlled RGBA channels with range input/change semantics and analytical color paint.",
             "capability": "html.behaviors.input-type-range",
-            "line": 81,
+            "line": 130,
             "package": "@ui/components",
             "path": "packages/components/color-input.tsx",
             "repository": "ui",
@@ -276160,7 +276171,7 @@
       "blocks": [],
       "conformance": "adapted",
       "consumers": [
-        "ui:@ui/components:ColorInput:packages/components/color-input.tsx:143"
+        "ui:@ui/components:ColorInput:packages/components/color-input.tsx:287"
       ],
       "description": "Popover state, top layer, invokers, light dismiss, focus, and toggle events.",
       "domain": "html",
@@ -276198,7 +276209,7 @@
           {
             "behavior": "An anchored top-layer color picker with clipping, light dismiss, Escape and focus restoration instead of an inline hidden panel.",
             "capability": "html.behaviors.popover",
-            "line": 143,
+            "line": 287,
             "package": "@ui/components",
             "path": "packages/components/color-input.tsx",
             "repository": "ui",
@@ -276332,45 +276343,45 @@
       "blocks": [],
       "conformance": "adapted",
       "consumers": [
-        "ui:@ui/components:EnumInput:packages/components/enum-input.tsx:29"
+        "ui:@ui/components:EnumInput:packages/components/enum-input.tsx:134"
       ],
       "description": "Select, option, and optgroup ownership, live collections, selectedness, and picker/listbox behavior.",
       "domain": "html",
       "evidence": [
         {
-          "doesNotProve": "The complete referenced standard algorithm.",
-          "path": "packages/dom/src/html-select-element.ts",
-          "proves": "The bounded semantic DOM implementation exists.",
+          "doesNotProve": "Multiple/listbox, optgroup, type-ahead and complete forms/accessibility semantics.",
+          "path": "packages/dom/src/select-picker-state.ts",
+          "proves": "One Document-owned picker, keyboard selection and exact Option choice/event ordering.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "select option optgroup",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "collapsed select picker state",
           "type": "implementation"
         },
         {
-          "doesNotProve": "The complete HTML algorithm, forms, picker, or browser integration.",
-          "path": "packages/dom/test/select-option.test.ts",
-          "proves": "The bounded UI/control slice has behavioral tests.",
+          "doesNotProve": "Multiple/listbox, optgroup and native accessibility projection.",
+          "path": "packages/dom/test/select-picker.test.ts",
+          "proves": "Open/close, keyboard, exact option selection, input/change, blur and removal cleanup.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "select option optgroup",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "collapsed select picker state",
           "type": "unit-test"
         }
       ],
       "id": "html.behaviors.select-option-optgroup",
       "kind": "behavior",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
       },
       "limitations": [
-        "Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed."
+        "Collapsed single-select live state, picker ownership and bounded keyboard/pointer choice are implemented; multiple/listbox, optgroup, type-ahead, forms and accessibility projection remain unsupported."
       ],
       "metadata": {
         "consumerDemand": [
           {
             "behavior": "Open a collapsed select picker, navigate options by keyboard, activate one option and dispatch input/change.",
             "capability": "html.behaviors.select-option-optgroup",
-            "line": 29,
+            "line": 134,
             "package": "@ui/components",
             "path": "packages/components/enum-input.tsx",
             "repository": "ui",
@@ -479190,7 +479201,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "793",
+          "lines": "842",
           "path": "packages/dom/src/document.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -479210,7 +479221,7 @@
       ],
       "metadata": {
         "entrypoint": "./document",
-        "line": 793,
+        "line": 842,
         "path": "renderer:packages/dom/src/document.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -479228,7 +479239,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.document",
       "spec": {
-        "anchor": "renderer:packages/dom/src/document.ts#L793",
+        "anchor": "renderer:packages/dom/src/document.ts#L842",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -479245,7 +479256,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "140",
+          "lines": "151",
           "path": "packages/dom/src/document.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -479265,7 +479276,7 @@
       ],
       "metadata": {
         "entrypoint": "./document",
-        "line": 140,
+        "line": 151,
         "path": "renderer:packages/dom/src/document.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -479283,7 +479294,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.document",
       "spec": {
-        "anchor": "renderer:packages/dom/src/document.ts#L140",
+        "anchor": "renderer:packages/dom/src/document.ts#L151",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -479300,7 +479311,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "108",
+          "lines": "119",
           "path": "packages/dom/src/document.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -479320,7 +479331,7 @@
       ],
       "metadata": {
         "entrypoint": "./document",
-        "line": 108,
+        "line": 119,
         "path": "renderer:packages/dom/src/document.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -479338,7 +479349,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.document",
       "spec": {
-        "anchor": "renderer:packages/dom/src/document.ts#L108",
+        "anchor": "renderer:packages/dom/src/document.ts#L119",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -479415,7 +479426,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "19",
+          "lines": "24",
           "path": "packages/dom/src/element.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -479435,7 +479446,7 @@
       ],
       "metadata": {
         "entrypoint": "./element",
-        "line": 19,
+        "line": 24,
         "path": "renderer:packages/dom/src/element.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -479453,7 +479464,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.element",
       "spec": {
-        "anchor": "renderer:packages/dom/src/element.ts#L19",
+        "anchor": "renderer:packages/dom/src/element.ts#L24",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -482255,7 +482266,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "32",
+          "lines": "40",
           "path": "packages/dom/src/html-select-element.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -482275,7 +482286,7 @@
       ],
       "metadata": {
         "entrypoint": "./html/select-element",
-        "line": 32,
+        "line": 40,
         "path": "renderer:packages/dom/src/html-select-element.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -482293,7 +482304,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.html-select-element",
       "spec": {
-        "anchor": "renderer:packages/dom/src/html-select-element.ts#L32",
+        "anchor": "renderer:packages/dom/src/html-select-element.ts#L40",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -484240,7 +484251,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "19",
+          "lines": "20",
           "path": "packages/dom/src/node.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -484260,7 +484271,7 @@
       ],
       "metadata": {
         "entrypoint": "./node",
-        "line": 19,
+        "line": 20,
         "path": "renderer:packages/dom/src/node.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -484278,7 +484289,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.node",
       "spec": {
-        "anchor": "renderer:packages/dom/src/node.ts#L19",
+        "anchor": "renderer:packages/dom/src/node.ts#L20",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -484295,7 +484306,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "17",
+          "lines": "18",
           "path": "packages/dom/src/node.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -484315,7 +484326,7 @@
       ],
       "metadata": {
         "entrypoint": "./node",
-        "line": 17,
+        "line": 18,
         "path": "renderer:packages/dom/src/node.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -484333,7 +484344,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.node",
       "spec": {
-        "anchor": "renderer:packages/dom/src/node.ts#L17",
+        "anchor": "renderer:packages/dom/src/node.ts#L18",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -491026,11 +491037,11 @@
       ],
       "metadata": {
         "childSummary": {
-          "derivedStatus": "unverified",
-          "implemented": 0,
+          "derivedStatus": "partial",
+          "implemented": 1,
           "not-applicable": 0,
           "partial": 0,
-          "total": 15,
+          "total": 16,
           "unsupported": 0,
           "unverified": 15
         },
@@ -491067,7 +491078,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "99",
+          "lines": "108",
           "path": "packages/dom/src/state-change.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -491087,7 +491098,7 @@
       ],
       "metadata": {
         "entrypoint": "./state-change",
-        "line": 99,
+        "line": 108,
         "path": "renderer:packages/dom/src/state-change.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -491105,7 +491116,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.state-change",
       "spec": {
-        "anchor": "renderer:packages/dom/src/state-change.ts#L99",
+        "anchor": "renderer:packages/dom/src/state-change.ts#L108",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -491122,7 +491133,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "8",
+          "lines": "9",
           "path": "packages/dom/src/state-change.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -491142,7 +491153,7 @@
       ],
       "metadata": {
         "entrypoint": "./state-change",
-        "line": 8,
+        "line": 9,
         "path": "renderer:packages/dom/src/state-change.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -491160,7 +491171,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.state-change",
       "spec": {
-        "anchor": "renderer:packages/dom/src/state-change.ts#L8",
+        "anchor": "renderer:packages/dom/src/state-change.ts#L9",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -491177,7 +491188,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "33",
+          "lines": "34",
           "path": "packages/dom/src/state-change.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -491197,7 +491208,7 @@
       ],
       "metadata": {
         "entrypoint": "./state-change",
-        "line": 33,
+        "line": 34,
         "path": "renderer:packages/dom/src/state-change.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -491215,7 +491226,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.state-change",
       "spec": {
-        "anchor": "renderer:packages/dom/src/state-change.ts#L33",
+        "anchor": "renderer:packages/dom/src/state-change.ts#L34",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -491232,7 +491243,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "41",
+          "lines": "42",
           "path": "packages/dom/src/state-change.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -491252,7 +491263,7 @@
       ],
       "metadata": {
         "entrypoint": "./state-change",
-        "line": 41,
+        "line": 42,
         "path": "renderer:packages/dom/src/state-change.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -491270,7 +491281,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.state-change",
       "spec": {
-        "anchor": "renderer:packages/dom/src/state-change.ts#L41",
+        "anchor": "renderer:packages/dom/src/state-change.ts#L42",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -491287,7 +491298,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "49",
+          "lines": "50",
           "path": "packages/dom/src/state-change.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -491307,7 +491318,7 @@
       ],
       "metadata": {
         "entrypoint": "./state-change",
-        "line": 49,
+        "line": 50,
         "path": "renderer:packages/dom/src/state-change.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -491325,7 +491336,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.state-change",
       "spec": {
-        "anchor": "renderer:packages/dom/src/state-change.ts#L49",
+        "anchor": "renderer:packages/dom/src/state-change.ts#L50",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -491342,7 +491353,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "57",
+          "lines": "58",
           "path": "packages/dom/src/state-change.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -491362,7 +491373,7 @@
       ],
       "metadata": {
         "entrypoint": "./state-change",
-        "line": 57,
+        "line": 58,
         "path": "renderer:packages/dom/src/state-change.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -491380,7 +491391,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.state-change",
       "spec": {
-        "anchor": "renderer:packages/dom/src/state-change.ts#L57",
+        "anchor": "renderer:packages/dom/src/state-change.ts#L58",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -491397,7 +491408,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "25",
+          "lines": "26",
           "path": "packages/dom/src/state-change.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -491417,7 +491428,7 @@
       ],
       "metadata": {
         "entrypoint": "./state-change",
-        "line": 25,
+        "line": 26,
         "path": "renderer:packages/dom/src/state-change.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -491435,7 +491446,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.state-change",
       "spec": {
-        "anchor": "renderer:packages/dom/src/state-change.ts#L25",
+        "anchor": "renderer:packages/dom/src/state-change.ts#L26",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -491452,7 +491463,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "63",
+          "lines": "64",
           "path": "packages/dom/src/state-change.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -491472,7 +491483,7 @@
       ],
       "metadata": {
         "entrypoint": "./state-change",
-        "line": 63,
+        "line": 64,
         "path": "renderer:packages/dom/src/state-change.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -491490,7 +491501,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.state-change",
       "spec": {
-        "anchor": "renderer:packages/dom/src/state-change.ts#L63",
+        "anchor": "renderer:packages/dom/src/state-change.ts#L64",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -491507,7 +491518,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "91",
+          "lines": "92",
           "path": "packages/dom/src/state-change.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -491527,7 +491538,7 @@
       ],
       "metadata": {
         "entrypoint": "./state-change",
-        "line": 91,
+        "line": 92,
         "path": "renderer:packages/dom/src/state-change.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -491545,7 +491556,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.state-change",
       "spec": {
-        "anchor": "renderer:packages/dom/src/state-change.ts#L91",
+        "anchor": "renderer:packages/dom/src/state-change.ts#L92",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -491562,7 +491573,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "16",
+          "lines": "17",
           "path": "packages/dom/src/state-change.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -491582,7 +491593,7 @@
       ],
       "metadata": {
         "entrypoint": "./state-change",
-        "line": 16,
+        "line": 17,
         "path": "renderer:packages/dom/src/state-change.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -491600,12 +491611,73 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.state-change",
       "spec": {
-        "anchor": "renderer:packages/dom/src/state-change.ts#L16",
+        "anchor": "renderer:packages/dom/src/state-change.ts#L17",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
       },
       "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "description": "@zavx0z/dom/state-change public type export SelectPickerStateChange.",
+      "domain": "dom",
+      "evidence": [
+        {
+          "doesNotProve": "Complete select/form/accessibility behavior.",
+          "path": "packages/dom/src/state-change.ts",
+          "proves": "The public discriminated state record carries exact Select identity and open old/new values.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "SelectPickerStateChange",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Multiple/listbox and native accessibility projection.",
+          "path": "packages/dom/test/select-picker.test.ts",
+          "proves": "Open, owner transfer, close, blur and removal publish observable state through the Document channel.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "select picker state records",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom.export-paths.state-change.symbols.selectpickerstatechange",
+      "kind": "type-export",
+      "lastVerified": {
+        "date": "2026-08-31",
+        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
+      },
+      "limitations": [],
+      "metadata": {
+        "entrypoint": "./state-change",
+        "line": 100,
+        "path": "renderer:packages/dom/src/state-change.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "SelectPickerStateChange",
+      "owner": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "platform.at-zavx0z-dom.export-paths.state-change",
+      "spec": {
+        "anchor": "renderer:packages/dom/src/state-change.ts#L100",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-exports",
+        "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "status": "implemented"
     },
     {
       "blockedBy": [],
@@ -491617,7 +491689,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "107",
+          "lines": "117",
           "path": "packages/dom/src/state-change.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -491637,7 +491709,7 @@
       ],
       "metadata": {
         "entrypoint": "./state-change",
-        "line": 107,
+        "line": 117,
         "path": "renderer:packages/dom/src/state-change.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -491655,7 +491727,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.state-change",
       "spec": {
-        "anchor": "renderer:packages/dom/src/state-change.ts#L107",
+        "anchor": "renderer:packages/dom/src/state-change.ts#L117",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -491672,7 +491744,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "113",
+          "lines": "123",
           "path": "packages/dom/src/state-change.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -491692,7 +491764,7 @@
       ],
       "metadata": {
         "entrypoint": "./state-change",
-        "line": 113,
+        "line": 123,
         "path": "renderer:packages/dom/src/state-change.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -491710,7 +491782,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.state-change",
       "spec": {
-        "anchor": "renderer:packages/dom/src/state-change.ts#L113",
+        "anchor": "renderer:packages/dom/src/state-change.ts#L123",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -491727,7 +491799,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "79",
+          "lines": "80",
           "path": "packages/dom/src/state-change.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -491747,7 +491819,7 @@
       ],
       "metadata": {
         "entrypoint": "./state-change",
-        "line": 79,
+        "line": 80,
         "path": "renderer:packages/dom/src/state-change.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -491765,7 +491837,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.state-change",
       "spec": {
-        "anchor": "renderer:packages/dom/src/state-change.ts#L79",
+        "anchor": "renderer:packages/dom/src/state-change.ts#L80",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -491782,7 +491854,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "87",
+          "lines": "88",
           "path": "packages/dom/src/state-change.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -491802,7 +491874,7 @@
       ],
       "metadata": {
         "entrypoint": "./state-change",
-        "line": 87,
+        "line": 88,
         "path": "renderer:packages/dom/src/state-change.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -491820,7 +491892,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.state-change",
       "spec": {
-        "anchor": "renderer:packages/dom/src/state-change.ts#L87",
+        "anchor": "renderer:packages/dom/src/state-change.ts#L88",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -491837,7 +491909,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "71",
+          "lines": "72",
           "path": "packages/dom/src/state-change.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -491857,7 +491929,7 @@
       ],
       "metadata": {
         "entrypoint": "./state-change",
-        "line": 71,
+        "line": 72,
         "path": "renderer:packages/dom/src/state-change.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -491875,7 +491947,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.state-change",
       "spec": {
-        "anchor": "renderer:packages/dom/src/state-change.ts#L71",
+        "anchor": "renderer:packages/dom/src/state-change.ts#L72",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 3c91038c3f14ccc44616209fd82b1e59b7369408"
@@ -501649,7 +501721,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "16",
+          "lines": "21",
           "path": "compiler/bun.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
@@ -501711,7 +501783,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "6",
+          "lines": "11",
           "path": "compiler/bun.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "template",
@@ -514522,32 +514594,41 @@
       "domain": "renderer",
       "evidence": [
         {
-          "doesNotProve": "The complete Pointer Events hit-testing, capture and browser default-action standards.",
+          "doesNotProve": "The complete Pointer Events device model and every HTML default action.",
           "path": "packages/core/src/interaction.ts",
-          "proves": "Deepest pointer targets retain ordinary dispatch while nearest interactive/disabled ancestors own focus, disabled state and cross-descendant activation continuity.",
+          "proves": "Deepest dispatch, nearest control ownership, semantic capture retargeting, range drag and select option activation share one interaction owner.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "resolvePointerOwnerHit",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "pointer capture and control default actions",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Native browser trusted events and every interactive HTML element.",
+          "doesNotProve": "Native trusted-event provenance and every HTML control.",
           "path": "packages/core/test/interaction.test.ts",
-          "proves": "Nested target bubbling, same-descendant click target, cross-descendant owner activation, disabled suppression, ordinary noninteractive click and cancel cleanup.",
+          "proves": "Nested ownership, capture outside hits, select open/choice/light-dismiss and disabled/cancel cleanup.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
           "symbol": "default-activation",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Vertical/tick/datalist behavior.",
+          "path": "packages/core/test/range-input.test.ts",
+          "proves": "Rendered track geometry drives DOM range input/change semantics.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "range pointer default action",
           "type": "unit-test"
         }
       ],
       "id": "renderer.features.default-activation",
       "kind": "renderer-stage",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
       },
       "limitations": [
-        "Implemented for the bounded rendered-control set; complete browser Pointer Events and default actions remain outside Core."
+        "Implemented for the bounded rendered-control set including explicit semantic capture, horizontal Range and collapsed Select; implicit touch capture and complete Pointer Events/HTML default actions remain outside Core."
       ],
       "metadata": {},
       "name": "default activation",
@@ -514735,32 +514816,41 @@
       "domain": "renderer",
       "evidence": [
         {
-          "doesNotProve": "The complete CSS/browser algorithm.",
+          "doesNotProve": "Complete native form chrome, listboxes, accessibility and every input type.",
           "path": "packages/core/src/renderer.ts",
-          "proves": "The bounded CPU frame stage exists.",
+          "proves": "Horizontal range paint and one top-layer collapsed select picker retain exact semantic control/option identities.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "form-control-projection",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "range and select picker projection",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Unsupported values and general incremental coverage.",
-          "path": "packages/core/test/renderer.test.ts",
-          "proves": "Observable behavior for the bounded subset.",
+          "doesNotProve": "Vertical/ticks/datalist and native pixels.",
+          "path": "packages/core/test/range-input.test.ts",
+          "proves": "Stable range track/thumb paint and pointer behavior.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "form-control-projection",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "range input projection",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Scrolling/type-ahead/multiple/listbox/accessibility.",
+          "path": "packages/core/test/select-paint.test.ts",
+          "proves": "Exact option boxes/hits, selected paint and presentation-coordinate viewport placement for translated/scaled Select owners.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "collapsed select picker projection",
           "type": "unit-test"
         }
       ],
       "id": "renderer.features.form-control-projection",
       "kind": "renderer-stage",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
       },
       "limitations": [
-        "The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests."
+        "The bounded form-control set now includes horizontal Range interaction and a collapsed single-Select picker; multiple/listbox, type-ahead, accessibility projection and complete native form chrome remain unsupported."
       ],
       "metadata": {},
       "name": "form control projection",
@@ -515411,32 +515501,41 @@
       "domain": "renderer",
       "evidence": [
         {
-          "doesNotProve": "The complete Pointer Events hit-testing, capture and browser default-action standards.",
+          "doesNotProve": "The complete Pointer Events device model and every HTML default action.",
           "path": "packages/core/src/interaction.ts",
-          "proves": "Deepest pointer targets retain ordinary dispatch while nearest interactive/disabled ancestors own focus, disabled state and cross-descendant activation continuity.",
+          "proves": "Deepest dispatch, nearest control ownership, semantic capture retargeting, range drag and select option activation share one interaction owner.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "resolvePointerOwnerHit",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "pointer capture and control default actions",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Native browser trusted events and every interactive HTML element.",
+          "doesNotProve": "Native trusted-event provenance and every HTML control.",
           "path": "packages/core/test/interaction.test.ts",
-          "proves": "Nested target bubbling, same-descendant click target, cross-descendant owner activation, disabled suppression, ordinary noninteractive click and cancel cleanup.",
+          "proves": "Nested ownership, capture outside hits, select open/choice/light-dismiss and disabled/cancel cleanup.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
           "symbol": "pointer",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Vertical/tick/datalist behavior.",
+          "path": "packages/core/test/range-input.test.ts",
+          "proves": "Rendered track geometry drives DOM range input/change semantics.",
+          "repository": "renderer",
+          "revision": "4a77909f5de4784751b073840f68b0460ade65f8",
+          "symbol": "range pointer default action",
           "type": "unit-test"
         }
       ],
       "id": "renderer.features.pointer",
       "kind": "renderer-stage",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-08-31",
+        "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
       },
       "limitations": [
-        "Implemented for the bounded rendered-control set; complete browser Pointer Events and default actions remain outside Core."
+        "Implemented for the bounded rendered-control set including explicit semantic capture, horizontal Range and collapsed Select; implicit touch capture and complete Pointer Events/HTML default actions remain outside Core."
       ],
       "metadata": {},
       "name": "pointer",
@@ -522808,7 +522907,7 @@
     },
     {
       "branch": "main",
-      "dirty": false,
+      "dirty": true,
       "id": "node",
       "revision": "bd5af9a2cf6fca679a69de5245d107ea42318f54"
     },
@@ -522816,17 +522915,17 @@
       "branch": "main",
       "dirty": true,
       "id": "renderer",
-      "revision": "2afe16c66ec1e2b6e01df87cd94ab60de8d37c85"
+      "revision": "4a77909f5de4784751b073840f68b0460ade65f8"
     },
     {
       "branch": "main",
       "dirty": true,
       "id": "storybook",
-      "revision": "d249503ce60513fd4073b5b35fda10c1d2e751d8"
+      "revision": "35eb3779a8233d23c7426260162b10d1b1d92e16"
     },
     {
       "branch": "main",
-      "dirty": false,
+      "dirty": true,
       "id": "template",
       "revision": "838a214a83950259f3f5d543e881e11402bc230c"
     },
@@ -522834,7 +522933,7 @@
       "branch": "main",
       "dirty": true,
       "id": "ui",
-      "revision": "45423d7b36f8796429a9e43c30af9bb89bb8af0e"
+      "revision": "1c2f83c8fcaca3c78cee09e2fa9e9f1ad295056d"
     }
   ],
   "schemaVersion": 1,
@@ -522845,13 +522944,13 @@
   },
   "statistics": {
     "browser": {
-      "implemented": 15,
+      "implemented": 16,
       "mappedEntries": 70,
       "missing": 0,
       "not-applicable": 0,
-      "partial": 20,
+      "partial": 21,
       "specEntries": 70,
-      "unsupported": 4,
+      "unsupported": 2,
       "unverified": 31
     },
     "css": {
@@ -522875,13 +522974,13 @@
       "unverified": 13
     },
     "dom": {
-      "implemented": 75,
-      "mappedEntries": 1212,
+      "implemented": 76,
+      "mappedEntries": 1213,
       "missing": 0,
       "not-applicable": 0,
-      "partial": 242,
-      "specEntries": 1212,
-      "unsupported": 713,
+      "partial": 248,
+      "specEntries": 1213,
+      "unsupported": 707,
       "unverified": 182
     },
     "engine": {
@@ -522951,12 +523050,12 @@
     "duplicateCapabilityIds": 0,
     "generatorVersion": "1.0.0",
     "inventoryFiles": 214,
-    "mappedEntries": 8735,
+    "mappedEntries": 8736,
     "missing": 0,
     "schemaErrors": 0,
     "schemaVersion": 1,
     "sourceArtifacts": 75,
-    "specEntries": 8735,
+    "specEntries": 8736,
     "unknownSupportIds": 0
   }
 }

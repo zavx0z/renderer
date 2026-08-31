@@ -100,18 +100,6 @@
 - Dependencies: none
 - Forbidden local workarounds: Casting private backend fields; Exporting Engine Object3D to components
 
-### P1 — gap.browser.number-input-proxy
-
-- Capability: `browser.features.number-input-proxy`
-- Reported by: ui/@ui/components/NumberInput — typed numeric editing
-- Expected: Focused semantic type=number mirrors through a native host with valueAsNumber, keyboard, beforeinput/input/change and rollback.
-- Actual: DocumentNativeInputHost mirrors text/search/tel/url/password and textarea, not type=number.
-- Owner: renderer/@zavx0z/renderer-browser/native-input-host
-- Minimal source: Focus a semantic input type=number through RendererBrowserRuntime and type a numeric value.
-- Recommended conformance test: Assert native proxy value, semantic valueAsNumber and input/change sequence remain synchronized.
-- Dependencies: none
-- Forbidden local workarounds: Component-local hidden native input; Manual keyboard parsing in NumberInput
-
 ### P1 — gap.dom.geometry-readback
 
 - Capability: `dom.extensions.cssom-view.interfaces.element.methods.getboundingclientrect`
@@ -124,18 +112,6 @@
 - Dependencies: none
 - Forbidden local workarounds: Hard-coded line height; A component-owned layout tree
 
-### P1 — gap.dom.pointer-capture
-
-- Capability: `dom.extensions.pointerevents.interfaces.element.methods.setpointercapture`
-- Reported by: ui/@ui/components/NumberInput scrub — pointer leaves control during drag
-- Expected: The semantic owner captures an active pointer and receives move/up/cancel until release.
-- Actual: The DOM has no pointer capture API; NumberInput retains component-local scrub state.
-- Owner: renderer/@zavx0z/dom/semantic-pointer
-- Minimal source: Pointer down a NumberInput scrub region, leave its bounds, move and release.
-- Recommended conformance test: Semantic move/up continues at the captured owner and got/lostpointercapture order is correct.
-- Dependencies: `browser.features.pointer-capture`
-- Forbidden local workarounds: Component-owned global pointer map; Data attributes that imitate capture state
-
 ### P1 — gap.html.anchored-popover
 
 - Capability: `html.behaviors.popover`
@@ -147,18 +123,6 @@
 - Recommended conformance test: Assert top-layer placement, clipping, light dismiss, Escape and focus restoration.
 - Dependencies: `renderer.features.popover-projection`
 - Forbidden local workarounds: Inline hidden panel; Component-owned viewport coordinates
-
-### P1 — gap.html.select-picker
-
-- Capability: `browser.features.select-picker`
-- Reported by: ui/@ui/components/EnumInput — open and navigate enum options
-- Expected: Collapsed select paint opens an owner-controlled picker/listbox, supports keyboard selection and dispatches input/change.
-- Actual: DOM live selectedness and collapsed paint exist; Browser host has no picker/listbox interaction.
-- Owner: renderer/@zavx0z/renderer-browser/control-host
-- Minimal source: Focus a semantic select, activate it and navigate options with ArrowDown/Enter/Escape.
-- Recommended conformance test: Assert picker visibility, option selectedness and input/change ordering.
-- Dependencies: `html.behaviors.select-option-optgroup`
-- Forbidden local workarounds: Component-local option popup dispatcher; Private canvas picker
 
 ### P1 — gap.renderer.caret-selection-paint
 
@@ -258,10 +222,9 @@
 | P4 | `browser.features.keyboard` | partial | @zavx0z/renderer-browser/browser-host | 0 | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. |
 | P4 | `browser.features.lifecycle-boundaries` | partial | @zavx0z/renderer-browser/browser-host | 0 | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. |
 | P4 | `browser.features.native-browser-evidence` | unverified | @zavx0z/renderer-browser/browser-host | 0 | All current Browser tests use Bun seams/fakes; no live browser console, pixels, native IME, or real ResizeObserver/rAF evidence was reproduced. |
-| P1 | `browser.features.number-input-proxy` | unsupported | @zavx0z/renderer-browser/browser-host | 2 | The native host intentionally exposes only the current text input/textarea proxy subset; this control/browser integration is absent. |
-| P4 | `browser.features.pointer-capture` | partial | @zavx0z/renderer-browser/browser-host | 0 | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. |
+| P4 | `browser.features.pointer-capture` | partial | @zavx0z/renderer-browser/browser-host | 0 | Native canvas delivery and explicit semantic capture are integrated; implicit touch capture and live native browser acceptance remain outside this evidence. |
 | P4 | `browser.features.resize` | partial | @zavx0z/renderer-browser/browser-host | 0 | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. |
-| P1 | `browser.features.select-picker` | unsupported | @zavx0z/renderer-browser/browser-host | 0 | The native host intentionally exposes only the current text input/textarea proxy subset; this control/browser integration is absent. |
+| P4 | `browser.features.select-picker` | partial | @zavx0z/renderer-browser/browser-host | 0 | Collapsed single-select pointer/keyboard picker behavior is implemented; scrolling beyond eight visible options, multiple/listbox, type-ahead and native accessibility projection remain unsupported. |
 | P4 | `browser.features.semantic-pointer-events` | partial | @zavx0z/renderer-browser/browser-host | 0 | Implemented through the bounded one-Experience host; live native browser acceptance remains separate. |
 | P2 | `browser.features.text-input-proxy` | partial | @zavx0z/renderer-browser/browser-host | 1 | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. |
 | P4 | `browser.features.textarea-proxy` | partial | @zavx0z/renderer-browser/browser-host | 0 | Implemented through a bounded host adapter; actual native browser execution was not reproduced in this checkout. |
@@ -3317,7 +3280,7 @@
 | P3 | `dom.algorithms.node-normalize` | unsupported | @zavx0z/dom/semantic | 0 | The accepted semantic DOM architecture has no implementation for this observable algorithm in the current checkout. |
 | P3 | `dom.algorithms.parent-node-mixins` | partial | @zavx0z/dom/semantic | 0 | The runtime implements a bounded subset and intentionally omits remaining standard branches. |
 | P3 | `dom.algorithms.parsing-boundary` | unsupported | @zavx0z/dom/semantic | 0 | The accepted semantic DOM architecture has no implementation for this observable algorithm in the current checkout. |
-| P3 | `dom.algorithms.pointer-capture` | unsupported | @zavx0z/dom/semantic | 0 | The accepted semantic DOM architecture has no implementation for this observable algorithm in the current checkout. |
+| P3 | `dom.algorithms.pointer-capture` | partial | @zavx0z/dom/semantic | 0 | Explicit semantic capture, pending overrides and got/lost ordering are implemented; implicit touch capture and the complete native Pointer Events device model remain outside this bounded host. |
 | P3 | `dom.algorithms.range-boundaries` | unsupported | @zavx0z/dom/semantic | 0 | The accepted semantic DOM architecture has no implementation for this observable algorithm in the current checkout. |
 | P1 | `dom.algorithms.selection` | unsupported | @zavx0z/dom/semantic | 2 | The accepted semantic DOM architecture has no implementation for this observable algorithm in the current checkout. |
 | P3 | `dom.algorithms.selectors` | partial | @zavx0z/dom/semantic | 0 | The runtime implements a bounded subset and intentionally omits remaining standard branches. |
@@ -3414,13 +3377,13 @@
 | P3 | `dom.events.focus` | partial | @zavx0z/dom/semantic | 0 | Only the platform's bounded semantic dispatch and owner default actions are implemented. |
 | P3 | `dom.events.focusin` | partial | @zavx0z/dom/semantic | 0 | Only the platform's bounded semantic dispatch and owner default actions are implemented. |
 | P3 | `dom.events.focusout` | partial | @zavx0z/dom/semantic | 0 | Only the platform's bounded semantic dispatch and owner default actions are implemented. |
-| P3 | `dom.events.gotpointercapture` | unsupported | @zavx0z/dom/semantic | 0 | No current runtime implementation and behavioral test were found for this pinned DOM member. |
+| P3 | `dom.events.gotpointercapture` | partial | @zavx0z/dom/semantic | 0 | Semantic transition dispatch and ordering are proven; trusted native provenance and implicit touch capture remain outside this bounded host. |
 | P3 | `dom.events.input` | partial | @zavx0z/dom/semantic | 0 | Only the platform's bounded semantic dispatch and owner default actions are implemented. |
 | P3 | `dom.events.keydown` | partial | @zavx0z/dom/semantic | 0 | Only the platform's bounded semantic dispatch and owner default actions are implemented. |
 | P3 | `dom.events.keypress` | unsupported | @zavx0z/dom/semantic | 0 | No current runtime implementation and behavioral test were found for this pinned DOM member. |
 | P3 | `dom.events.keyup` | partial | @zavx0z/dom/semantic | 0 | Only the platform's bounded semantic dispatch and owner default actions are implemented. |
 | P3 | `dom.events.load` | unsupported | @zavx0z/dom/semantic | 0 | No current runtime implementation and behavioral test were found for this pinned DOM member. |
-| P3 | `dom.events.lostpointercapture` | unsupported | @zavx0z/dom/semantic | 0 | No current runtime implementation and behavioral test were found for this pinned DOM member. |
+| P3 | `dom.events.lostpointercapture` | partial | @zavx0z/dom/semantic | 0 | Semantic transition dispatch and ordering are proven; trusted native provenance and implicit touch capture remain outside this bounded host. |
 | P3 | `dom.events.mousedown` | unsupported | @zavx0z/dom/semantic | 0 | No current runtime implementation and behavioral test were found for this pinned DOM member. |
 | P3 | `dom.events.mouseenter` | unsupported | @zavx0z/dom/semantic | 0 | No current runtime implementation and behavioral test were found for this pinned DOM member. |
 | P3 | `dom.events.mouseleave` | unsupported | @zavx0z/dom/semantic | 0 | No current runtime implementation and behavioral test were found for this pinned DOM member. |
@@ -3647,9 +3610,9 @@
 | P3 | `dom.extensions.pointerevents.dictionaries.wheeleventinit.fields.momentum` | unsupported | @zavx0z/dom/semantic | 0 | No current runtime implementation and behavioral test were found for this pinned DOM member. |
 | P3 | `dom.extensions.pointerevents.dictionaries.wheeleventinit.inheritance` | unsupported | @zavx0z/dom/semantic | 0 | No current runtime implementation and behavioral test were found for this pinned DOM member. |
 | P3 | `dom.extensions.pointerevents.interfaces.element` | unsupported | @zavx0z/dom/semantic | 0 | No current runtime implementation and behavioral test were found for this pinned DOM member. |
-| P3 | `dom.extensions.pointerevents.interfaces.element.methods.haspointercapture` | unsupported | @zavx0z/dom/semantic | 0 | No current runtime implementation and behavioral test were found for this pinned DOM member. |
-| P3 | `dom.extensions.pointerevents.interfaces.element.methods.releasepointercapture` | unsupported | @zavx0z/dom/semantic | 0 | No current runtime implementation and behavioral test were found for this pinned DOM member. |
-| P1 | `dom.extensions.pointerevents.interfaces.element.methods.setpointercapture` | unsupported | @zavx0z/dom/semantic | 1 | No current runtime implementation and behavioral test were found for this pinned DOM member. |
+| P3 | `dom.extensions.pointerevents.interfaces.element.methods.haspointercapture` | partial | @zavx0z/dom/semantic | 0 | The explicit Element method contract is behaviorally proven; implicit touch capture and live native browser provenance remain outside this evidence. |
+| P3 | `dom.extensions.pointerevents.interfaces.element.methods.releasepointercapture` | partial | @zavx0z/dom/semantic | 0 | The explicit Element method contract is behaviorally proven; implicit touch capture and live native browser provenance remain outside this evidence. |
+| P2 | `dom.extensions.pointerevents.interfaces.element.methods.setpointercapture` | partial | @zavx0z/dom/semantic | 1 | The explicit Element method contract is behaviorally proven; implicit touch capture and live native browser provenance remain outside this evidence. |
 | P3 | `dom.extensions.pointerevents.interfaces.mouseevent` | partial | @zavx0z/dom/semantic | 0 | The event object hierarchy is implemented, while browser-owned trusted dispatch and the complete standard member set remain outside this evidence. |
 | P3 | `dom.extensions.pointerevents.interfaces.mouseevent--aae9b97d` | partial | @zavx0z/dom/semantic | 0 | The event object hierarchy is implemented, while browser-owned trusted dispatch and the complete standard member set remain outside this evidence. |
 | P3 | `dom.extensions.pointerevents.interfaces.mouseevent--aae9b97d.methods.initmouseevent` | partial | @zavx0z/dom/semantic | 0 | The event object hierarchy is implemented, while browser-owned trusted dispatch and the complete standard member set remain outside this evidence. |
@@ -4288,7 +4251,7 @@
 | P3 | `html.attributes.headingoffset` | partial | @zavx0z/dom/semantic | 0 | Stored as a generic content attribute; no attribute-specific algorithm was found. |
 | P3 | `html.attributes.headingreset` | partial | @zavx0z/dom/semantic | 0 | Stored as a generic content attribute; no attribute-specific algorithm was found. |
 | P3 | `html.attributes.height` | partial | @zavx0z/dom/semantic | 0 | The platform implements selected reflection/live-state branches, not the complete attribute contract on every applicable element. |
-| P3 | `html.attributes.hidden` | partial | @zavx0z/dom/semantic | 0 | The platform implements selected reflection/live-state branches, not the complete attribute contract on every applicable element. |
+| P3 | `html.attributes.hidden` | partial | @zavx0z/dom/semantic | 0 | Boolean hidden presence and fully-hidden rendering/focus are implemented; until-found, beforematch, find-in-page reveal and accessibility projection remain unsupported. |
 | P3 | `html.attributes.high` | partial | @zavx0z/dom/semantic | 0 | Stored as a generic content attribute; no attribute-specific algorithm was found. |
 | P3 | `html.attributes.href` | partial | @zavx0z/dom/semantic | 0 | Stored as a generic content attribute; no attribute-specific algorithm was found. |
 | P3 | `html.attributes.hreflang` | partial | @zavx0z/dom/semantic | 0 | Stored as a generic content attribute; no attribute-specific algorithm was found. |
@@ -4393,7 +4356,7 @@
 | P3 | `html.behaviors.form-ownership` | unsupported | @zavx0z/dom/semantic | 0 | The current semantic DOM has no implementation of this HTML algorithm. |
 | P3 | `html.behaviors.form-reset` | unsupported | @zavx0z/dom/semantic | 0 | The current semantic DOM has no implementation of this HTML algorithm. |
 | P3 | `html.behaviors.form-submission` | unsupported | @zavx0z/dom/semantic | 0 | The current semantic DOM has no implementation of this HTML algorithm. |
-| P3 | `html.behaviors.hidden` | partial | @zavx0z/dom/semantic | 0 | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. |
+| P3 | `html.behaviors.hidden` | partial | @zavx0z/dom/semantic | 0 | The fully-hidden state is behaviorally enforced; hidden=until-found, beforematch, find-in-page reveal, containment and accessibility projection remain unsupported. |
 | P3 | `html.behaviors.images` | partial | @zavx0z/dom/semantic | 0 | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. |
 | P3 | `html.behaviors.inert` | unsupported | @zavx0z/dom/semantic | 0 | The current semantic DOM has no implementation of this HTML algorithm. |
 | P3 | `html.behaviors.input-picker` | unsupported | @zavx0z/dom/semantic | 0 | The current semantic DOM has no implementation of this HTML algorithm. |
@@ -4412,7 +4375,7 @@
 | P3 | `html.behaviors.input-type-number` | partial | @zavx0z/dom/semantic | 0 | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. |
 | P3 | `html.behaviors.input-type-password` | partial | @zavx0z/dom/semantic | 0 | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. |
 | P3 | `html.behaviors.input-type-radio` | partial | @zavx0z/dom/semantic | 0 | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. |
-| P2 | `html.behaviors.input-type-range` | partial | @zavx0z/dom/semantic | 1 | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. |
+| P2 | `html.behaviors.input-type-range` | partial | @zavx0z/dom/semantic | 1 | Horizontal pointer drag and bounded keyboard defaults are implemented; vertical orientation, ticks, datalist, validity, public stepUp/stepDown and complete browser range behavior remain unsupported. |
 | P3 | `html.behaviors.input-type-reset` | partial | @zavx0z/dom/semantic | 0 | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. |
 | P3 | `html.behaviors.input-type-search` | partial | @zavx0z/dom/semantic | 0 | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. |
 | P3 | `html.behaviors.input-type-submit` | partial | @zavx0z/dom/semantic | 0 | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. |
@@ -4427,7 +4390,7 @@
 | P3 | `html.behaviors.load-error-events` | unsupported | @zavx0z/dom/semantic | 0 | The current semantic DOM has no implementation of this HTML algorithm. |
 | P1 | `html.behaviors.popover` | partial | @zavx0z/dom/semantic | 1 | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. |
 | P3 | `html.behaviors.progress-meter` | partial | @zavx0z/dom/semantic | 0 | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. |
-| P2 | `html.behaviors.select-option-optgroup` | partial | @zavx0z/dom/semantic | 1 | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. |
+| P2 | `html.behaviors.select-option-optgroup` | partial | @zavx0z/dom/semantic | 1 | Collapsed single-select live state, picker ownership and bounded keyboard/pointer choice are implemented; multiple/listbox, optgroup, type-ahead, forms and accessibility projection remain unsupported. |
 | P3 | `html.behaviors.sequential-focus-navigation` | unsupported | @zavx0z/dom/semantic | 0 | The current semantic DOM has no implementation of this HTML algorithm. |
 | P3 | `html.behaviors.tables` | unsupported | @zavx0z/dom/semantic | 0 | The current semantic DOM has no implementation of this HTML algorithm. |
 | P3 | `html.behaviors.textarea` | partial | @zavx0z/dom/semantic | 0 | Only the bounded WebGPU UI subset is implemented; unsupported modes remain explicit or fail closed. |
@@ -7834,10 +7797,10 @@
 | P4 | `renderer.features.cascade` | partial | @zavx0z/renderer/cpu | 0 | The CPU style owner implements bounded UA/author/compiled/consumer/inline ordering, selector specificity, repeated declaration sequence, shorthand/longhand expansion, custom-property substitution, and computed-invalid winner handling. User origins, !important, cascade layers/scopes, CSS-wide rollback keywords, animations/transitions, CSSOM, and the complete browser cascade remain unsupported. |
 | P4 | `renderer.features.clip-stacks` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
 | P4 | `renderer.features.computed-style` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
-| P4 | `renderer.features.default-activation` | partial | @zavx0z/renderer/cpu | 0 | Implemented for the bounded rendered-control set; complete browser Pointer Events and default actions remain outside Core. |
+| P4 | `renderer.features.default-activation` | partial | @zavx0z/renderer/cpu | 0 | Implemented for the bounded rendered-control set including explicit semantic capture, horizontal Range and collapsed Select; implicit touch capture and complete Pointer Events/HTML default actions remain outside Core. |
 | P4 | `renderer.features.display-list` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
 | P4 | `renderer.features.flex-layout` | partial | @zavx0z/renderer/cpu | 0 | The bounded owner supports row/column single-line Flex and nowrap/wrap/wrap-reverse multi-line packing with direction-mapped independent row/column gaps, per-line grow/shrink/justification/align-items, admitted align-content distribution after mandatory cross gaps, intrinsic/auto sizing, and wrap-reverse cross-start semantics; balance, reverse main axes, flex-flow, order, align-self, percentage gaps, gap decorations/rules, writing modes, and complete intrinsic multi-line Flexbox sizing remain unsupported. |
-| P4 | `renderer.features.form-control-projection` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
+| P4 | `renderer.features.form-control-projection` | partial | @zavx0z/renderer/cpu | 0 | The bounded form-control set now includes horizontal Range interaction and a collapsed single-Select picker; multiple/listbox, type-ahead, accessibility projection and complete native form chrome remain unsupported. |
 | P4 | `renderer.features.geometry-readback` | unsupported | @zavx0z/renderer/cpu | 0 | The CPU renderer has no implementation of this internal platform capability. |
 | P4 | `renderer.features.hit-metadata` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
 | P2 | `renderer.features.images` | partial | @zavx0z/renderer/cpu | 1 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
@@ -7848,7 +7811,7 @@
 | P4 | `renderer.features.line-breaking` | partial | @zavx0z/renderer/cpu | 0 | Text measurement is an adapted fixed advance model without shaping, kerning, bidi, fallback, or full inline formatting. |
 | P4 | `renderer.features.overflow` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
 | P4 | `renderer.features.performance-paths` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
-| P4 | `renderer.features.pointer` | partial | @zavx0z/renderer/cpu | 0 | Implemented for the bounded rendered-control set; complete browser Pointer Events and default actions remain outside Core. |
+| P4 | `renderer.features.pointer` | partial | @zavx0z/renderer/cpu | 0 | Implemented for the bounded rendered-control set including explicit semantic capture, horizontal Range and collapsed Select; implicit touch capture and complete Pointer Events/HTML default actions remain outside Core. |
 | P4 | `renderer.features.popover-projection` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
 | P4 | `renderer.features.positioning` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
 | P4 | `renderer.features.progress-meter` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |

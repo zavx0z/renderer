@@ -22,17 +22,18 @@ that is not implemented yet from appearing type-safe by accident.
 | Tree | `EventTarget`, `Node`, `Document`, `DocumentFragment` | Stable identity, ordered mutation, adoption, connected state, ParentNode and ChildNode convenience mutation |
 | Data | `CharacterData`, `Text`, `Comment` | Live data, `textContent`, mutation records and invisible comment anchors |
 | Collections | `NodeList`, `DOMTokenList` | Static query snapshots and lazy reflected class tokens; no live collection claim |
-| Elements | `Element`, `HTMLElement` | String attributes, `id`, `className`, `classList`, selector subset, `title`, `tabIndex`, focus, blur, lazy requested scroll offsets and bounded Auto/Manual popover visibility |
-| HTML | `HTMLDivElement`, `HTMLSpanElement`, `HTMLButtonElement`, `HTMLInputElement`, `HTMLImageElement`, `HTMLSelectElement`, `HTMLOptionElement`, `HTMLProgressElement`, `HTMLMeterElement`, `HTMLTextAreaElement`, `HTMLLabelElement`, `HTMLFieldSetElement`, `HTMLLegendElement`, `HTMLUListElement`, `HTMLLIElement`, `HTMLHeadingElement`, `HTMLParagraphElement`, `HTMLTableElement`, `HTMLTableSectionElement`, `HTMLTableRowElement`, `HTMLTableCellElement` | Exact prototypes plus form-control live value/checked/selection state, checkbox/radio click activation, reflected image author attributes, normalized gauges, label resolution, bounded fieldset disabledness and bounded table-cell reflection |
+| Elements | `Element`, `HTMLElement` | String attributes, `id`, `className`, `classList`, selector subset, `title`, `tabIndex`, focus, blur, explicit pointer capture, lazy requested scroll offsets and bounded Auto/Manual popover visibility |
+| HTML | `HTMLDivElement`, `HTMLSpanElement`, `HTMLButtonElement`, `HTMLInputElement`, `HTMLImageElement`, `HTMLSelectElement`, `HTMLOptionElement`, `HTMLProgressElement`, `HTMLMeterElement`, `HTMLTextAreaElement`, `HTMLLabelElement`, `HTMLFieldSetElement`, `HTMLLegendElement`, `HTMLUListElement`, `HTMLLIElement`, `HTMLHeadingElement`, `HTMLParagraphElement`, `HTMLTableElement`, `HTMLTableSectionElement`, `HTMLTableRowElement`, `HTMLTableCellElement` | Exact prototypes plus form-control live state, checkbox/radio click activation, bounded Range keyboard defaults, collapsed Select picker state/choice, reflected image author attributes, normalized gauges, label resolution, bounded fieldset disabledness and bounded table-cell reflection |
 | Events | `Event`, `CustomEvent`, `ToggleEvent`, `UIEvent`, `FocusEvent`, `MouseEvent`, `PointerEvent`, `WheelEvent`, `KeyboardEvent`, `InputEvent`, `CompositionEvent` | Capture/target/bubble, cancellation and practical toggle, pointer, wheel, keyboard, text-input and composition data; host input remains responsible for external native keyboard/IME projection |
-| Renderer adapters | `Document.transaction`, `Document.subscribeMutations`, `Document.subscribeStateChanges`, `getPopoverVisibilityState` | Separate synchronous mutation, scroll-request, input-live-state and popover-visibility channels, deliberately distinct from `MutationObserver` |
+| Renderer adapters | `Document.transaction`, `Document.subscribeMutations`, `Document.subscribeStateChanges`, pointer-capture host bridge, `getPopoverVisibilityState`, select-picker state | Separate synchronous mutation, live-state and host-interaction channels, deliberately distinct from `MutationObserver` |
 
 Every omitted member is unsupported. The package never installs a stub that
 silently returns a fabricated value.
 
-`@zavx0z/renderer-browser` owns the optional native browser text-entry host for
-implemented text-like input/textarea value and selection APIs. The semantic DOM
-itself still creates no browser proxy, editing loop or platform event.
+`@zavx0z/renderer-browser` owns the optional native browser input/control host
+for implemented text/number/range/select/textarea keyboard and value APIs. The
+semantic DOM itself still creates no browser proxy, editing loop or platform
+event.
 
 ## Not implemented yet
 
@@ -55,8 +56,8 @@ itself still creates no browser proxy, editing loop or platform event.
 - table collections, caption/section helpers, row/cell insertion algorithms,
   cell indices, table-model/header assignment, list numbering and legacy
   presentation reflections;
-- numeric `stepUp`/`stepDown`, picker UI, non-text input selection/caret paint, range geometry and the remaining input-type sanitizers;
-- complete native key-layout mapping, DOM `setPointerCapture`, sequential
+- numeric `stepUp`/`stepDown`, specialized color/date/file picker UI, non-text input selection/caret paint, vertical range geometry/ticks and the remaining input-type sanitizers;
+- complete native key-layout mapping, implicit touch pointer capture, sequential
   focus navigation and the remaining editing/IME host behavior; browser wheel,
   pointer and implemented text-input proxy paths already use the same events;
 - the remaining specialized `HTML*Element` interfaces.

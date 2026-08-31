@@ -966,8 +966,8 @@
       "path": "platform/devtools-features.json"
     },
     {
-      "digest": "0134d5c9b07f80da91821018b361345c874025d41421acb6ea4f562e9547903f",
-      "entries": 248,
+      "digest": "ac7fe80ee6913c139ce34dc004c1076a41b6dac58436dcfe890a71bfa37e3a91",
+      "entries": 249,
       "path": "platform/dom-exports.json"
     },
     {
@@ -1073,5 +1073,5 @@
   ],
   "generatorVersion": "1.0.0",
   "schemaVersion": 1,
-  "totalEntries": 8735
+  "totalEntries": 8736
 }

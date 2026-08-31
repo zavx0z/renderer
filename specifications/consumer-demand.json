@@ -77,7 +77,7 @@
           "path": "packages/components/inspector.tsx",
           "proves": "Focused numeric field editing inside nested scrollable Inspector groups.",
           "repository": "ui",
-          "revision": "45423d7b36f8796429a9e43c30af9bb89bb8af0e+dirty",
+          "revision": "1c2f83c8fcaca3c78cee09e2fa9e9f1ad295056d+dirty",
           "symbol": "Inspector numeric fields",
           "type": "consumer-usage"
         }
@@ -95,16 +95,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "44",
+          "lines": "56",
           "path": "packages/components/number-input.tsx",
           "proves": "Native typed number editing, focus, input/change, Escape rollback and selection through the exact semantic owner.",
           "repository": "ui",
-          "revision": "45423d7b36f8796429a9e43c30af9bb89bb8af0e+dirty",
+          "revision": "1c2f83c8fcaca3c78cee09e2fa9e9f1ad295056d+dirty",
           "symbol": "NumberInput",
           "type": "consumer-usage"
         }
       ],
-      "line": 44,
+      "line": 56,
       "package": "@ui/components",
       "path": "packages/components/number-input.tsx",
       "repository": "ui",
@@ -297,7 +297,7 @@
           "path": "packages/components/code-editor.tsx",
           "proves": "Two-axis scrolling with clipping and stable retained line/token identity.",
           "repository": "ui",
-          "revision": "45423d7b36f8796429a9e43c30af9bb89bb8af0e+dirty",
+          "revision": "1c2f83c8fcaca3c78cee09e2fa9e9f1ad295056d+dirty",
           "symbol": "CodeEditor",
           "type": "consumer-usage"
         }
@@ -319,7 +319,7 @@
           "path": "packages/ui/dom/node-editor.ts",
           "proves": "Pan/zoom reaches paint, clip and inverse hit consistently for the graph surface.",
           "repository": "node",
-          "revision": "bd5af9a2cf6fca679a69de5245d107ea42318f54",
+          "revision": "bd5af9a2cf6fca679a69de5245d107ea42318f54+dirty",
           "symbol": "NodeEditor",
           "type": "consumer-usage"
         }
@@ -341,7 +341,7 @@
           "path": "packages/components/code-editor.tsx",
           "proves": "Preserve source whitespace and prevent wrapping for read-only code lines.",
           "repository": "ui",
-          "revision": "45423d7b36f8796429a9e43c30af9bb89bb8af0e+dirty",
+          "revision": "1c2f83c8fcaca3c78cee09e2fa9e9f1ad295056d+dirty",
           "symbol": "CodeEditor",
           "type": "consumer-usage"
         }
@@ -425,16 +425,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "59",
+          "lines": "73",
           "path": "packages/components/number-input.tsx",
           "proves": "A scrub gesture continues outside the control until pointerup/cancel without component-owned capture emulation.",
           "repository": "ui",
-          "revision": "45423d7b36f8796429a9e43c30af9bb89bb8af0e+dirty",
+          "revision": "1c2f83c8fcaca3c78cee09e2fa9e9f1ad295056d+dirty",
           "symbol": "NumberInput scrub",
           "type": "consumer-usage"
         }
       ],
-      "line": 59,
+      "line": 73,
       "package": "@ui/components",
       "path": "packages/components/number-input.tsx",
       "repository": "ui",
@@ -491,16 +491,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "81",
+          "lines": "130",
           "path": "packages/components/color-input.tsx",
           "proves": "Stable controlled RGBA channels with range input/change semantics and analytical color paint.",
           "repository": "ui",
-          "revision": "45423d7b36f8796429a9e43c30af9bb89bb8af0e+dirty",
+          "revision": "1c2f83c8fcaca3c78cee09e2fa9e9f1ad295056d+dirty",
           "symbol": "ColorInput",
           "type": "consumer-usage"
         }
       ],
-      "line": 81,
+      "line": 130,
       "package": "@ui/components",
       "path": "packages/components/color-input.tsx",
       "repository": "ui",
@@ -513,16 +513,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "143",
+          "lines": "287",
           "path": "packages/components/color-input.tsx",
           "proves": "An anchored top-layer color picker with clipping, light dismiss, Escape and focus restoration instead of an inline hidden panel.",
           "repository": "ui",
-          "revision": "45423d7b36f8796429a9e43c30af9bb89bb8af0e+dirty",
+          "revision": "1c2f83c8fcaca3c78cee09e2fa9e9f1ad295056d+dirty",
           "symbol": "ColorInput",
           "type": "consumer-usage"
         }
       ],
-      "line": 143,
+      "line": 287,
       "package": "@ui/components",
       "path": "packages/components/color-input.tsx",
       "repository": "ui",
@@ -535,16 +535,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "29",
+          "lines": "134",
           "path": "packages/components/enum-input.tsx",
           "proves": "Open a collapsed select picker, navigate options by keyboard, activate one option and dispatch input/change.",
           "repository": "ui",
-          "revision": "45423d7b36f8796429a9e43c30af9bb89bb8af0e+dirty",
+          "revision": "1c2f83c8fcaca3c78cee09e2fa9e9f1ad295056d+dirty",
           "symbol": "EnumInput",
           "type": "consumer-usage"
         }
       ],
-      "line": 29,
+      "line": 134,
       "package": "@ui/components",
       "path": "packages/components/enum-input.tsx",
       "repository": "ui",
@@ -561,7 +561,7 @@
           "path": "packages/ui/node-system.tsx",
           "proves": "Observe topology/parameter snapshots without duplicating the canonical Node store.",
           "repository": "node",
-          "revision": "bd5af9a2cf6fca679a69de5245d107ea42318f54",
+          "revision": "bd5af9a2cf6fca679a69de5245d107ea42318f54+dirty",
           "symbol": "NodeSystem view store",
           "type": "consumer-usage"
         }
@@ -583,7 +583,7 @@
           "path": "packages/ui/dom/field-mount.ts",
           "proves": "Mount and update a compiled component into a DocumentFragment while retaining the exact owner element and disposing on unmount.",
           "repository": "node",
-          "revision": "bd5af9a2cf6fca679a69de5245d107ea42318f54",
+          "revision": "bd5af9a2cf6fca679a69de5245d107ea42318f54+dirty",
           "symbol": "mountField",
           "type": "consumer-usage"
         }
@@ -605,7 +605,7 @@
           "path": "packages/ui/node-system.tsx",
           "proves": "Retain node, link, parameter and socket identity across high-volume topology and parameter updates.",
           "repository": "node",
-          "revision": "bd5af9a2cf6fca679a69de5245d107ea42318f54",
+          "revision": "bd5af9a2cf6fca679a69de5245d107ea42318f54+dirty",
           "symbol": "NodeSystem",
           "type": "consumer-usage"
         }
@@ -671,7 +671,7 @@
           "path": "packages/components/button.tsx",
           "proves": "Adopt the exact compiled Button stylesheet once per Document and make it visible to every same-Document projection without manual buttonCss or consumer styleSheets wiring.",
           "repository": "ui",
-          "revision": "45423d7b36f8796429a9e43c30af9bb89bb8af0e+dirty",
+          "revision": "1c2f83c8fcaca3c78cee09e2fa9e9f1ad295056d+dirty",
           "symbol": "Button automatic stylesheet adoption",
           "type": "consumer-usage"
         }
@@ -715,7 +715,7 @@
           "path": "packages/ui/dom/node-editor.ts",
           "proves": "Scale grid and routed connection presentation without a local DOM geometry renderer.",
           "repository": "node",
-          "revision": "bd5af9a2cf6fca679a69de5245d107ea42318f54",
+          "revision": "bd5af9a2cf6fca679a69de5245d107ea42318f54+dirty",
           "symbol": "NodeEditor grid and links",
           "type": "consumer-usage"
         }
@@ -737,7 +737,7 @@
           "path": "packages/ui/node-system.tsx",
           "proves": "Present routed links and grid primitives without decomposing them into component-owned rectangles and points.",
           "repository": "node",
-          "revision": "bd5af9a2cf6fca679a69de5245d107ea42318f54",
+          "revision": "bd5af9a2cf6fca679a69de5245d107ea42318f54+dirty",
           "symbol": "NodeConnection",
           "type": "consumer-usage"
         }
@@ -825,7 +825,7 @@
           "path": "packages/components/button.tsx",
           "proves": "Extract Button owner CSS, bounded attribute/native pseudo selectors and caller composition from the global css intrinsic without runtime object authoring or scanning.",
           "repository": "ui",
-          "revision": "45423d7b36f8796429a9e43c30af9bb89bb8af0e+dirty",
+          "revision": "1c2f83c8fcaca3c78cee09e2fa9e9f1ad295056d+dirty",
           "symbol": "Button component-local styles",
           "type": "consumer-usage"
         }
