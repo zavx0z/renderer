@@ -665,6 +665,24 @@
         "source": "whatwg-dom",
         "version": "commit a2331a45360129e8645ef7e0a04740241b6e3726"
       }
+    },
+    {
+      "description": "One semantic project-extension Element owns reflected vector path author data without owning paint or GPU state.",
+      "domain": "dom",
+      "id": "dom.project.vector-path-element",
+      "kind": "semantic-extension",
+      "name": "vector path element",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "renderer-dom-contract#vector-path-element",
+        "profile": "project-contract",
+        "source": "renderer-dom-contract",
+        "version": "renderer current checkout"
+      }
     }
   ],
   "generatorVersion": "1.0.0",

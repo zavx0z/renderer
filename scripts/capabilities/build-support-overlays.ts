@@ -59,6 +59,26 @@ const engineTextVerification = {
   revision: "0d63eeaf4e2057316212a1a8f5ff31684f22e2b2",
   date: "2026-09-01",
 } as const
+const rendererPathVerification = {
+  revision: "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+  date: "2026-09-01",
+} as const
+const enginePathVerification = {
+  revision: "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
+  date: "2026-09-01",
+} as const
+const domVectorPathLimitations = [
+  "vector-path is a project extension with reflected d and a shared coordinate bound; it is not SVGPathElement, an SVG namespace implementation or Path2D, and DOM owns no parsing, geometry or paint.",
+]
+const rendererVectorPathLimitations = [
+  "Bounded to one absolute open M/L/Q/C subpath, stroke-only paint and six samples per curve; relative/shorthand commands, fill, close, arcs, dashes, adaptive tessellation and complete SVG join/cap policy are unsupported.",
+]
+const webgpuVectorPathLimitations = [
+  "Instanced batching admits exact-opaque Paths only; translucent Paths use the retained scalar correctness fallback. Complete SVG fill/stroking, dashes, arbitrary join/cap policy and adaptive curve quality are unsupported.",
+]
+const engineVectorPathLimitations = [
+  "The instanced Engine contract admits exact-opaque independent sampled capsules only; translucent connected-stroke union/scalar fallback belongs to Renderer, and complete SVG fill/stroking, dashes, adaptive tessellation and analytical join self-union are unsupported. Outer AA fringe overlap at sampled joins remains a bounded limitation.",
+]
 const templateCssVerification = {
   revision: "838a214a83950259f3f5d543e881e11402bc230c",
   date: "2026-08-31",
@@ -183,6 +203,24 @@ function classify(entry: CapabilityInventoryEntry): Classification {
 }
 
 function classifyDomHtml(entry: CapabilityInventoryEntry): Classification {
+  if (entry.id.includes("vector-path-element") || entry.name === "HTMLVectorPathElement") {
+    return rendererPathWorkingTree({
+      ...implemented("extension", [
+      implementation(
+        "renderer",
+        entry.kind === "package-export-path"
+          ? "packages/dom/package.json"
+          : "packages/dom/src/html-vector-path-element.ts",
+        entry.name,
+        undefined,
+        "The exact VectorPath semantic class, coordinate-bound constant or package subpath is publicly owned by @zavx0z/dom.",
+        "Path parsing, paint, hit testing, SVG namespaces or complete SVG behavior.",
+      ),
+      test("renderer", "packages/dom/test/html-vector-path-element.test.ts", entry.name, "Exact class/subpath identity, reflected d mutation and shared coordinate bound.", "Renderer/WebGPU behavior or SVG conformance."),
+      ]),
+      limitations: domVectorPathLimitations,
+    })
+  }
   if (["DocumentTextControlSelection", "TextControlSelectionTarget"].includes(entry.name)) {
     return recovered(implemented("extension", [
       implementation("renderer", "packages/dom/src/document.ts", entry.name, undefined, "The exported type describes the exact active text-control selection adapter without a second range store.", "Standard DOM Selection/Range, contenteditable and ordinary Text-node selection."),
@@ -207,6 +245,15 @@ function classifyDomHtml(entry: CapabilityInventoryEntry): Classification {
 }
 
 function classifyDom(entry: CapabilityInventoryEntry): Classification {
+  if (entry.id === "dom.project.vector-path-element") {
+    return rendererPathWorkingTree({
+      ...implemented("extension", [
+      implementation("renderer", "packages/dom/src/html-vector-path-element.ts", "HTMLVectorPathElement", undefined, "One exact semantic project-extension Element reflects d through the ordinary attribute mutation owner.", "SVGPathElement, SVG namespaces, parsing, paint or GPU behavior."),
+      test("renderer", "packages/dom/test/html-vector-path-element.test.ts", "HTMLVectorPathElement", "Exact constructor/tag/subpath identity and reflected mutation behavior.", "SVG or downstream rendering behavior."),
+      ]),
+      limitations: domVectorPathLimitations,
+    })
+  }
   if (entry.id === "dom.algorithms.selection") {
     return recovered(partial(
       "adapted",
@@ -546,6 +593,16 @@ function classifyHtmlIdl(entry: CapabilityInventoryEntry): Classification {
 }
 
 function classifyCssRenderer(entry: CapabilityInventoryEntry): Classification {
+  if ([
+    "PathDisplayItem",
+    "RenderPathBounds",
+    "RenderPathCubic",
+    "RenderPathGeometry",
+    "RenderPathPoint",
+    "RenderPathSegment",
+  ].includes(entry.name)) {
+    return rendererPathWorkingTree(classifyPublicExport(entry, "implemented"))
+  }
   if (entry.id === "platform.at-zavx0z-renderer.export-paths.root.symbols.rendertextmeasurer") {
     const classification = classifyPublicExport(entry, "partial")
     return {
@@ -566,6 +623,29 @@ function classifyCss(entry: CapabilityInventoryEntry): Classification {
   const defaultStages = cssDefaultStages()
   const external = externalEvidence(entry)
   if (entry.kind === "property") {
+    if (entry.id === "css.properties.stroke" || entry.id === "css.properties.stroke-width") {
+      return rendererPathWorkingTree(partial(
+        "adapted",
+        [
+          external,
+          implementation("renderer", "packages/core/src/css.ts", "ComputedStyle stroke transport", undefined, "The bounded VectorPath owner resolves inherited currentColor/color stroke and finite non-negative px stroke width before display projection.", "The complete SVG paint/length grammar, percentages, URLs, context paint, animation or every SVG shape."),
+          test("renderer", "packages/core/test/vector-path.test.ts", entry.name, "Resolved stroke color/width reach one PathDisplayItem and the exact hit geometry.", "Full SVG/CSS Fill and Stroke conformance."),
+          test("renderer", "packages/webgpu/test/vector-path.test.ts", entry.name, "Resolved stroke values pack into retained Engine style records with one-record updates.", "Every paint server, join/cap, fill, dash or native SVG pixel."),
+        ],
+        "Implemented only for solid resolved color and finite non-negative px values on the project VectorPath extension; complete SVG paint/length grammar, percentages, URLs, context paint, animation, fill, dash and arbitrary joins/caps remain unsupported.",
+        {
+          parse: "partial",
+          cascade: "partial",
+          computed: "partial",
+          layout: "not-applicable",
+          paint: "partial",
+          "hit-test": "partial",
+          webgpu: "partial",
+          browser: "partial",
+          evidence: "implemented",
+        },
+      ))
+    }
     if (computedColorPropertyIds.has(entry.id)) {
       return {
         status: "partial",
@@ -1087,6 +1167,16 @@ function classifyCssFeature(entry: CapabilityInventoryEntry, stages: Record<stri
 function classifyRenderer(entry: CapabilityInventoryEntry): Classification {
   if (!entry.id.startsWith("renderer.features.")) return unsupported(entry, "No current CPU renderer evidence was mapped.")
   const name = entry.id.slice("renderer.features.".length)
+  if (name === "vector-path-display-item") {
+    return rendererPathWorkingTree({
+      ...implemented("extension", [
+      implementation("renderer", "packages/core/src/path.ts", "parseRenderPath", undefined, "Bounded absolute M/L/Q/C parsing normalizes and samples one immutable open stroked path with explicit source/token/cubic limits.", "Complete SVG path grammar, fill, close, arcs or adaptive tessellation."),
+      implementation("renderer", "packages/core/src/renderer.ts", "emitVectorPath/presentationTransforms", undefined, "One semantic VectorPath emits one retained Path item and exact path hit while shared transform owners avoid per-Path transform replacement.", "Complete SVG layout/paint or arbitrary affine transforms."),
+      test("renderer", "packages/core/test/vector-path.test.ts", name, "Grammar limits, normalization, clips, zoom-aware exact path hit, hittable coarse-envelope center, weak predecessor collection, exact identity, 10k shared-transform and mixed-subtree behavior.", "Complete SVG conformance or actual GPU pixels."),
+      ]),
+      limitations: rendererVectorPathLimitations,
+    })
+  }
   if (name === "typography" || name === "line-breaking") {
     return {
       status: "partial",
@@ -1422,7 +1512,16 @@ function classifyWebgpu(entry: CapabilityInventoryEntry): Classification {
       lastVerified: textAdvanceVerification,
     }
   }
-  if (name === "vector-path") return unsupported(entry, "RenderFrame and retained backend admit Rect, Text, and Image only; no generic vector/path display item exists.")
+  if (name === "vector-path") {
+    return rendererPathWorkingTree({
+      ...implemented("extension", [
+      implementation("renderer", "packages/webgpu/src/webgpu-backend.ts", "retained stroked Path planning", undefined, "Exact-opaque Paths use stable semantic style and sampled-segment slots in transform/clip-compatible Engine draw-range runs; non-opaque Paths retain one continuous scalar Mesh fallback.", "Complete SVG stroking, fill, dashes, arbitrary joins/caps or adaptive curve quality."),
+      test("renderer", "packages/webgpu/test/vector-path.test.ts", name, "10k opaque one-run batching, zero-upload pan/zoom, one-record style/route updates, barriers, clips, slot-generation safety, scalar fallback identity/updates/cleanup and atomic validation.", "Every GPU/device, complete SVG stroking or live browser pixels."),
+      test("engine", "packages/core/src/renderer/shaders/stroked-path-instanced.webgpu.test.ts", "InstancedStrokedPath pixels", "Real WebGPU pixels cover exact-opaque sampled segment width, transform and presentation clipping.", "Non-opaque fallback pixels, every adapter/device or complete SVG stroking."),
+      ]),
+      limitations: webgpuVectorPathLimitations,
+    })
+  }
   if (name === "text") {
     return {
       ...partial(
@@ -1546,6 +1645,30 @@ function classifyDevtools(entry: CapabilityInventoryEntry): Classification {
 }
 
 function classifyEngine(entry: CapabilityInventoryEntry): Classification {
+  if (
+    entry.id.startsWith("platform.") && entry.id.includes("instanced-stroked-path")
+    || [
+      "InstancedStrokedPath",
+      "StrokedPathInstanceLayer",
+      "StrokedPathInstanceLayerOptions",
+      "STROKED_PATH_STYLE_RECORD_WORDS",
+      "STROKED_PATH_STYLE_RECORD_BYTE_LENGTH",
+      "STROKED_PATH_SEGMENT_RECORD_WORDS",
+      "STROKED_PATH_SEGMENT_RECORD_BYTE_LENGTH",
+      "STROKED_PATH_STYLE_OFFSETS",
+      "STROKED_PATH_SEGMENT_OFFSETS",
+    ].includes(entry.name)
+  ) return enginePathWorkingTree(implemented("extension", [
+    implementation(
+      "engine",
+      "packages/core/src/core/instanced-stroked-path.ts",
+      entry.name,
+      undefined,
+      "The public symbol belongs to the exact fixed-stride retained stroked-Path Engine ABI.",
+      "DOM/CSS semantics, Renderer batching policy or complete SVG stroking.",
+    ),
+    test("engine", "packages/core/src/core/instanced-stroked-path.test.ts", entry.name, "Exact constants, slots, generation validation, draw ranges and exact-opaque admission.", "Every GPU/device or consumer integration."),
+  ]))
   if (entry.id === "platform.at-engine-core.export-paths.fonts-inter-regular.ttf") {
     return {
       ...implemented("extension", [
@@ -1557,6 +1680,18 @@ function classifyEngine(entry: CapabilityInventoryEntry): Classification {
   }
   if (entry.id.startsWith("platform.")) return classifyPublicExport(entry, engineExportStatus(entry))
   const name = entry.id.slice("engine.features.".length)
+  if (name === "instanced-stroked-paths") {
+    return enginePathWorkingTree({
+      ...implemented("extension", [
+        implementation("engine", "packages/core/src/core/instanced-stroked-path.ts", "StrokedPathInstanceLayer/InstancedStrokedPath", undefined, "Separate fixed-stride style and sampled-segment InstanceLayers share one unit quad and retained draw-range views.", "DOM, CSS, Node routing or complete vector path semantics."),
+        implementation("engine", "packages/core/src/renderer/index.ts", "InstancedStrokedPath pipeline", undefined, "One retained WebGPU pipeline binds shared style/segment/order storage and presentation clips.", "Complete SVG stroking or every GPU adapter."),
+        test("engine", "packages/core/src/core/instanced-stroked-path.test.ts", name, "Record layout, stable storage and draw ranges.", "GPU pixels and consumer integration."),
+        test("engine", "packages/core/src/core/instance-layer.test.ts", "setOrder/moveRange/orderIndexOf", "Atomic bulk order validation, allocation-free contiguous block moves, exact dirty ranges and O(1) canonical order lookup.", "Renderer Path stacking policy or GPU pixels."),
+        test("engine", "packages/core/src/renderer/shaders/stroked-path-instanced.webgpu.test.ts", name, "Actual WebGPU exact-opaque capsule pixels, width, transform and clipping plus fail-closed non-opaque admission.", "Renderer scalar fallback pixels, complete SVG stroking or every device."),
+      ]),
+      limitations: engineVectorPathLimitations,
+    })
+  }
   if (name === "bounded-multi-view-frame") {
     return implemented("extension", [
       implementation("engine", "packages/core/src/renderer/index.ts", "Renderer.renderComposition", undefined, "One Renderer/current texture presents a base Space, ordered bounded descendant Spaces and foreground overlays with independent ViewPoints and pass bounds.", "Unrelated post-processing and multi-canvas composition."),
@@ -1664,6 +1799,7 @@ function domExportStatus(entry: CapabilityInventoryEntry): CapabilityStatus {
     "readDocumentAuthorStyleSheets",
     "subscribeDocumentAuthorStyleSheets",
   ].includes(entry.name)) return "implemented"
+  if (entry.name === "HTMLVectorPathElement") return "implemented"
   return ["Node", "Document", "DocumentFragment", "Text", "Comment", "Element", "Event", "EventTarget"].includes(entry.name) ? "partial" : "unverified"
 }
 
@@ -1705,7 +1841,7 @@ function devtoolsExportStatus(entry: CapabilityInventoryEntry): CapabilityStatus
 
 function engineExportStatus(entry: CapabilityInventoryEntry): CapabilityStatus {
   if (entry.kind === "package-export-path") return "partial"
-  if (["BufferAttribute", "Float32BufferAttribute", "InstanceLayer", "RoundedRectInstanceLayer", "InstancedRoundedRect"].includes(entry.name)) return "implemented"
+  if (["BufferAttribute", "Float32BufferAttribute", "InstanceLayer", "RoundedRectInstanceLayer", "InstancedRoundedRect", "StrokedPathInstanceLayer", "InstancedStrokedPath"].includes(entry.name)) return "implemented"
   if (["Renderer", "Text", "CachedText", "TextureLoader", "ViewPoint", "Raycaster", "GLTFLoader"].includes(entry.name)) return "partial"
   return "unverified"
 }
@@ -1721,6 +1857,32 @@ function recovered(classification: Classification): Classification {
       ? {...record, revision: recoveryVerification.revision}
       : record),
     lastVerified: recoveryVerification,
+  }
+}
+
+function rendererPathWorkingTree(classification: Classification): Classification {
+  return {
+    ...classification,
+    evidence: classification.evidence.map((record) => {
+      if (record.repository === "renderer") {
+        return {...record, revision: rendererPathVerification.revision}
+      }
+      if (record.repository === "engine") {
+        return {...record, revision: enginePathVerification.revision}
+      }
+      return record
+    }),
+    lastVerified: rendererPathVerification,
+  }
+}
+
+function enginePathWorkingTree(classification: Classification): Classification {
+  return {
+    ...classification,
+    evidence: classification.evidence.map((record) => record.repository === "engine"
+      ? {...record, revision: enginePathVerification.revision}
+      : record),
+    lastVerified: enginePathVerification,
   }
 }
 

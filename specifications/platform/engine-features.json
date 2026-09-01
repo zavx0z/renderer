@@ -379,6 +379,24 @@
       }
     },
     {
+      "description": "Engine instanced stroked paths capability.",
+      "domain": "engine",
+      "id": "engine.features.instanced-stroked-paths",
+      "kind": "engine-contract",
+      "name": "instanced stroked paths",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#instanced-stroked-paths",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      }
+    },
+    {
       "description": "Engine legacy ui display flag capability.",
       "domain": "engine",
       "id": "engine.features.legacy-ui-display-flag",

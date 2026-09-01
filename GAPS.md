@@ -100,18 +100,6 @@
 - Dependencies: none
 - Forbidden local workarounds: Hard-coded line height; A component-owned layout tree
 
-### P1 — gap.renderer.vector-path-display-item
-
-- Capability: `renderer.features.vector-path-display-item`
-- Reported by: node/@nodes/ui/NodeConnection/grid — render scalable routed graph links
-- Expected: A generic path/vector display item carries paint order, clipping, transform and retained identity through WebGPU without Node-specific semantics.
-- Actual: RenderFrame admits Rect/Text/Image only; Node code hand-builds orthogonal rectangles/points and local placement/culling formulas.
-- Owner: renderer/@zavx0z/renderer/display-list
-- Minimal source: Render one routed link with pan/zoom/clip and stable node endpoint identities.
-- Recommended conformance test: Assert a generic path display item preserves geometry/order/clip/hit metadata without Node-specific branches.
-- Dependencies: `webgpu.features.vector-path`
-- Forbidden local workarounds: Node-specific Renderer branch; Component-owned private WebGPU drawing; Manual Rect decomposition as a hidden permanent fallback
-
 ### P1 — gap.tsx.consumer-build-migration
 
 - Capability: `tsx.compiler.browser-target-build`
@@ -2330,7 +2318,7 @@
 | P3 | `css.properties.stop-color` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.stop-opacity` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.string-set` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
-| P3 | `css.properties.stroke` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
+| P3 | `css.properties.stroke` | partial | @zavx0z/renderer/cpu | 0 | Implemented only for solid resolved color and finite non-negative px values on the project VectorPath extension; complete SVG paint/length grammar, percentages, URLs, context paint, animation, fill, dash and arbitrary joins/caps remain unsupported. |
 | P3 | `css.properties.stroke-align` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.stroke-alignment` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.stroke-break` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
@@ -2350,7 +2338,7 @@
 | P3 | `css.properties.stroke-position` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.stroke-repeat` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.stroke-size` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
-| P3 | `css.properties.stroke-width` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
+| P3 | `css.properties.stroke-width` | partial | @zavx0z/renderer/cpu | 0 | Implemented only for solid resolved color and finite non-negative px values on the project VectorPath extension; complete SVG paint/length grammar, percentages, URLs, context paint, animation, fill, dash and arbitrary joins/caps remain unsupported. |
 | P3 | `css.properties.tab-size` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.table-layout` | unsupported | @zavx0z/renderer/cpu | 0 | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. |
 | P3 | `css.properties.text-align` | partial | @zavx0z/renderer/cpu | 0 | Only the explicitly admitted property values and bounded CPU/backend algorithms are implemented. |
@@ -7419,6 +7407,7 @@
 | P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.togglepopoveroptions` | unverified | @zavx0z/dom/semantic | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.uievent` | unverified | @zavx0z/dom/semantic | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.uieventinit` | unverified | @zavx0z/dom/semantic | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.vector_path_coordinate_limit` | unverified | @zavx0z/dom/semantic | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.wheelevent` | unverified | @zavx0z/dom/semantic | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-dom.export-paths.root.symbols.wheeleventinit` | unverified | @zavx0z/dom/semantic | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-dom.export-paths.state-change` | partial | @zavx0z/dom/semantic | 0 | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. |
@@ -7532,6 +7521,8 @@
 | P4 | `platform.at-zavx0z-renderer-webgpu.export-paths.root.symbols.rendererwebgpudocumentplaneoptions` | unverified | @zavx0z/renderer-webgpu/webgpu | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-renderer-webgpu.export-paths.root.symbols.rendererwebgpudocumentpoint` | unverified | @zavx0z/renderer-webgpu/webgpu | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-renderer-webgpu.export-paths.root.symbols.rendererwebgpuscreenoverlayoptions` | unverified | @zavx0z/renderer-webgpu/webgpu | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-renderer.export-paths.frame-changes` | partial | @zavx0z/renderer/cpu | 0 | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. |
+| P4 | `platform.at-zavx0z-renderer.export-paths.frame-changes.symbols.readcanonicalrenderframechanges` | unverified | @zavx0z/renderer/cpu | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-renderer.export-paths.root` | partial | @zavx0z/renderer/cpu | 0 | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. |
 | P4 | `platform.at-zavx0z-renderer.export-paths.root.symbols.createdocumentinteractioncontroller` | unverified | @zavx0z/renderer/cpu | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-renderer.export-paths.root.symbols.createdocumentinteractioncontrolleroptions` | unverified | @zavx0z/renderer/cpu | 0 | Export/type presence is not behavioral evidence. |
@@ -7548,6 +7539,7 @@
 | P4 | `platform.at-zavx0z-renderer.export-paths.root.symbols.hittest` | partial | @zavx0z/renderer/cpu | 0 | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. |
 | P4 | `platform.at-zavx0z-renderer.export-paths.root.symbols.imagedisplayitem` | unverified | @zavx0z/renderer/cpu | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-renderer.export-paths.root.symbols.pointerinput` | unverified | @zavx0z/renderer/cpu | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-renderer.export-paths.root.symbols.readcanonicalrenderframechanges` | unverified | @zavx0z/renderer/cpu | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-renderer.export-paths.root.symbols.rectdisplayitem` | unverified | @zavx0z/renderer/cpu | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-renderer.export-paths.root.symbols.renderalignitems` | unverified | @zavx0z/renderer/cpu | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-renderer.export-paths.root.symbols.renderborder` | unverified | @zavx0z/renderer/cpu | 0 | Export/type presence is not behavioral evidence. |
@@ -7581,6 +7573,7 @@
 | P4 | `platform.at-zavx0z-renderer.export-paths.root.symbols.textdisplayitem` | unverified | @zavx0z/renderer/cpu | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-renderer.export-paths.root.symbols.titlecandidate` | unverified | @zavx0z/renderer/cpu | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-renderer.export-paths.root.symbols.titletooltip` | unverified | @zavx0z/renderer/cpu | 0 | Export/type presence is not behavioral evidence. |
+| P4 | `platform.at-zavx0z-renderer.export-paths.root.symbols.vector_path_coordinate_limit` | unverified | @zavx0z/renderer/cpu | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-renderer.export-paths.root.symbols.wheelinput` | unverified | @zavx0z/renderer/cpu | 0 | Export/type presence is not behavioral evidence. |
 | P4 | `platform.at-zavx0z-template.export-paths.bun` | partial | @zavx0z/template/compiler | 0 | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. |
 | P4 | `platform.at-zavx0z-template.export-paths.bun.symbols.createtemplatejsxpluginoptions` | unverified | @zavx0z/template/compiler | 0 | Export/type presence is not behavioral evidence. |
@@ -7780,7 +7773,6 @@
 | P4 | `renderer.features.transform-subtree-fast-path` | partial | @zavx0z/renderer/cpu | 0 | Dirty bookkeeping exists, but general dirty frames still remeasure/place/re-emit; only narrow Text and transform fast paths reuse records. |
 | P4 | `renderer.features.transforms` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
 | P4 | `renderer.features.typography` | partial | @zavx0z/renderer/cpu | 0 | Production Canvas/Plane/Overlay composition now uses one exact font-owned unshaped per-codepoint advance owner for intrinsic width, alignment, controls, selection geometry, incremental text and ellipsis. Headless CPU rendering retains the deterministic 0.6em fallback. Kerning, shaping, ligatures, bidi, fallback, grapheme truncation, proportional textarea soft-wrap and complete inline formatting remain unsupported. |
-| P1 | `renderer.features.vector-path-display-item` | unsupported | @zavx0z/renderer/cpu | 2 | The CPU renderer has no implementation of this internal platform capability. |
 | P4 | `renderer.features.wheel` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
 | P4 | `renderer.features.z-index` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
 | P4 | `tsx.compiler.arrays` | partial | @zavx0z/template/compiler | 0 | Only compiler-owned keyed component maps or partial ABI validation are supported. |
@@ -7835,4 +7827,3 @@
 | P4 | `webgpu.features.text` | partial | @zavx0z/renderer-webgpu/webgpu | 0 | The backend owns one resolved TrueTypeFont, a bounded per-codepoint advance cache and a metric-derived alphabetic baseline proven in real pixels; font-family selection, fallback, shaping, bidi and complete multi-font CSS text remain unsupported. |
 | P4 | `webgpu.features.texture-readiness` | partial | @zavx0z/renderer-webgpu/webgpu | 0 | Image readiness is signaled by the Engine/host and actual fetch/decode remains outside the backend. |
 | P4 | `webgpu.features.transforms` | partial | @zavx0z/renderer-webgpu/webgpu | 0 | Implemented only for display-list values admitted by frame validation and retained materialization. |
-| P4 | `webgpu.features.vector-path` | unsupported | @zavx0z/renderer-webgpu/webgpu | 0 | RenderFrame and retained backend admit Rect, Text, and Image only; no generic vector/path display item exists. |

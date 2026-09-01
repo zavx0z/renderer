@@ -951,6 +951,32 @@
       }
     },
     {
+      "description": "@engine/core public runtime export InstancedStrokedPath.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.instancedstrokedpath",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 254,
+        "path": "engine:packages/core/src/core/instanced-stroked-path.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "InstancedStrokedPath",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instanced-stroked-path.ts#L254",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
+      }
+    },
+    {
       "description": "@engine/core public type export InstanceHandle.",
       "domain": "engine",
       "id": "platform.at-engine-core.export-paths.root.symbols.instancehandle",
@@ -983,7 +1009,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 51,
+        "line": 52,
         "path": "engine:packages/core/src/core/instance-layer.ts",
         "repository": "engine",
         "typeOnly": false
@@ -996,7 +1022,7 @@
       },
       "parent": "platform.at-engine-core.export-paths.root",
       "spec": {
-        "anchor": "engine:packages/core/src/core/instance-layer.ts#L51",
+        "anchor": "engine:packages/core/src/core/instance-layer.ts#L52",
         "profile": "project-contract",
         "source": "@engine/core-exports",
         "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
@@ -1893,7 +1919,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 79,
+        "line": 84,
         "path": "engine:packages/core/src/renderer/index.ts",
         "repository": "engine",
         "typeOnly": true
@@ -1906,7 +1932,7 @@
       },
       "parent": "platform.at-engine-core.export-paths.root",
       "spec": {
-        "anchor": "engine:packages/core/src/renderer/index.ts#L79",
+        "anchor": "engine:packages/core/src/renderer/index.ts#L84",
         "profile": "project-contract",
         "source": "@engine/core-exports",
         "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
@@ -1919,7 +1945,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 79,
+        "line": 84,
         "path": "engine:packages/core/src/renderer/index.ts",
         "repository": "engine",
         "typeOnly": true
@@ -1932,7 +1958,7 @@
       },
       "parent": "platform.at-engine-core.export-paths.root",
       "spec": {
-        "anchor": "engine:packages/core/src/renderer/index.ts#L79",
+        "anchor": "engine:packages/core/src/renderer/index.ts#L84",
         "profile": "project-contract",
         "source": "@engine/core-exports",
         "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
@@ -1945,7 +1971,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 178,
+        "line": 200,
         "path": "engine:packages/core/src/renderer/index.ts",
         "repository": "engine",
         "typeOnly": false
@@ -1958,7 +1984,7 @@
       },
       "parent": "platform.at-engine-core.export-paths.root",
       "spec": {
-        "anchor": "engine:packages/core/src/renderer/index.ts#L178",
+        "anchor": "engine:packages/core/src/renderer/index.ts#L200",
         "profile": "project-contract",
         "source": "@engine/core-exports",
         "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
@@ -1971,7 +1997,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 79,
+        "line": 84,
         "path": "engine:packages/core/src/renderer/index.ts",
         "repository": "engine",
         "typeOnly": true
@@ -1984,7 +2010,7 @@
       },
       "parent": "platform.at-engine-core.export-paths.root",
       "spec": {
-        "anchor": "engine:packages/core/src/renderer/index.ts#L79",
+        "anchor": "engine:packages/core/src/renderer/index.ts#L84",
         "profile": "project-contract",
         "source": "@engine/core-exports",
         "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
@@ -2023,7 +2049,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 79,
+        "line": 84,
         "path": "engine:packages/core/src/renderer/index.ts",
         "repository": "engine",
         "typeOnly": true
@@ -2036,7 +2062,7 @@
       },
       "parent": "platform.at-engine-core.export-paths.root",
       "spec": {
-        "anchor": "engine:packages/core/src/renderer/index.ts#L79",
+        "anchor": "engine:packages/core/src/renderer/index.ts#L84",
         "profile": "project-contract",
         "source": "@engine/core-exports",
         "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
@@ -2401,6 +2427,214 @@
       "parent": "platform.at-engine-core.export-paths.root",
       "spec": {
         "anchor": "engine:packages/core/src/geometries/sphere-geometry.ts#L30",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export STROKED_PATH_SEGMENT_OFFSETS.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.stroked_path_segment_offsets",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 22,
+        "path": "engine:packages/core/src/core/instanced-stroked-path.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "STROKED_PATH_SEGMENT_OFFSETS",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instanced-stroked-path.ts#L22",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export STROKED_PATH_SEGMENT_RECORD_BYTE_LENGTH.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.stroked_path_segment_record_byte_length",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 12,
+        "path": "engine:packages/core/src/core/instanced-stroked-path.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "STROKED_PATH_SEGMENT_RECORD_BYTE_LENGTH",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instanced-stroked-path.ts#L12",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export STROKED_PATH_SEGMENT_RECORD_WORDS.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.stroked_path_segment_record_words",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 11,
+        "path": "engine:packages/core/src/core/instanced-stroked-path.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "STROKED_PATH_SEGMENT_RECORD_WORDS",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instanced-stroked-path.ts#L11",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export STROKED_PATH_STYLE_OFFSETS.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.stroked_path_style_offsets",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 16,
+        "path": "engine:packages/core/src/core/instanced-stroked-path.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "STROKED_PATH_STYLE_OFFSETS",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instanced-stroked-path.ts#L16",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export STROKED_PATH_STYLE_RECORD_BYTE_LENGTH.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.stroked_path_style_record_byte_length",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 7,
+        "path": "engine:packages/core/src/core/instanced-stroked-path.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "STROKED_PATH_STYLE_RECORD_BYTE_LENGTH",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instanced-stroked-path.ts#L7",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export STROKED_PATH_STYLE_RECORD_WORDS.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.stroked_path_style_record_words",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 6,
+        "path": "engine:packages/core/src/core/instanced-stroked-path.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "STROKED_PATH_STYLE_RECORD_WORDS",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instanced-stroked-path.ts#L6",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
+      }
+    },
+    {
+      "description": "@engine/core public runtime export StrokedPathInstanceLayer.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.strokedpathinstancelayer",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 53,
+        "path": "engine:packages/core/src/core/instanced-stroked-path.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "StrokedPathInstanceLayer",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instanced-stroked-path.ts#L53",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
+      }
+    },
+    {
+      "description": "@engine/core public type export StrokedPathInstanceLayerOptions.",
+      "domain": "engine",
+      "id": "platform.at-engine-core.export-paths.root.symbols.strokedpathinstancelayeroptions",
+      "kind": "type-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 29,
+        "path": "engine:packages/core/src/core/instanced-stroked-path.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "StrokedPathInstanceLayerOptions",
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instanced-stroked-path.ts#L29",
         "profile": "project-contract",
         "source": "@engine/core-exports",
         "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"

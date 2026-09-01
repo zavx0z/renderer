@@ -331,8 +331,8 @@
       "path": "css/types.json"
     },
     {
-      "digest": "66578aeea3c978fb73f291bfecc856f39ffc07ba5bca73f97958f2b06f3b44e0",
-      "entries": 37,
+      "digest": "cfdc8d7ae5fcf639e7d3ec049fdd04effa9b6c755cd63ad35dd3b0f903012893",
+      "entries": 38,
       "path": "dom/algorithms.json"
     },
     {
@@ -966,18 +966,18 @@
       "path": "platform/devtools-features.json"
     },
     {
-      "digest": "ac2a5c4ac6900b3e55bb71d7be3da716c61d2e95c2b2a6bc00436c266452d08f",
-      "entries": 254,
+      "digest": "e5f7b0e499e784ff765f1d71918ca86e93820970de53e8b6f43b9b50223789b4",
+      "entries": 259,
       "path": "platform/dom-exports.json"
     },
     {
-      "digest": "7cc0ae49c7bb0781c5c491656f730a0865eb83aa90baacfa0ada5369c22a8937",
-      "entries": 114,
+      "digest": "500b5e33c3095d773bfeb6ddf22c1da07e0febee191b161485d916fc0e2a6946",
+      "entries": 123,
       "path": "platform/engine-exports.json"
     },
     {
-      "digest": "093046ac89478c70c159f904a42d91597a42bde39734af241f0e2c1f2c5be98f",
-      "entries": 38,
+      "digest": "219835a23d2942cbc34c06e10653c467e2636eebc132cf4218fdb92d87b09993",
+      "entries": 39,
       "path": "platform/engine-features.json"
     },
     {
@@ -986,8 +986,8 @@
       "path": "platform/react-exports.json"
     },
     {
-      "digest": "5dce4c69681cdf3a05df08bf6ade35dc6607b1e52a01c99e129a1c864aac4655",
-      "entries": 51,
+      "digest": "c7760c76a6e308e8fe4db992fb4c594a5783e5849ccd50a2abe881558728c5b4",
+      "entries": 61,
       "path": "platform/renderer-exports.json"
     },
     {
@@ -1073,5 +1073,5 @@
   ],
   "generatorVersion": "1.0.0",
   "schemaVersion": 1,
-  "totalEntries": 8743
+  "totalEntries": 8769
 }

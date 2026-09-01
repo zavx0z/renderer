@@ -1373,33 +1373,51 @@
     {
       "blockedBy": [],
       "blocks": [],
-      "conformance": "none",
+      "conformance": "extension",
       "consumers": [],
       "evidence": [
         {
-          "doesNotProve": "Runtime implementation or observable conformance.",
-          "path": "packages/webgpu/requirements.md",
-          "proves": "The pinned project inventory contains webgpu.features.vector-path.",
+          "doesNotProve": "Complete SVG stroking, fill, dashes, arbitrary joins/caps or adaptive curve quality.",
+          "path": "packages/webgpu/src/webgpu-backend.ts",
+          "proves": "Exact-opaque Paths use stable semantic style and sampled-segment slots in transform/clip-compatible Engine draw-range runs; non-opaque Paths retain one continuous scalar Mesh fallback.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "vector path",
-          "type": "requirement"
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "retained stroked Path planning",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Every GPU/device, complete SVG stroking or live browser pixels.",
+          "path": "packages/webgpu/test/vector-path.test.ts",
+          "proves": "10k opaque one-run batching, zero-upload pan/zoom, one-record style/route updates, barriers, clips, slot-generation safety, scalar fallback identity/updates/cleanup and atomic validation.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "vector-path",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Non-opaque fallback pixels, every adapter/device or complete SVG stroking.",
+          "path": "packages/core/src/renderer/shaders/stroked-path-instanced.webgpu.test.ts",
+          "proves": "Real WebGPU pixels cover exact-opaque sampled segment width, transform and presentation clipping.",
+          "repository": "engine",
+          "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
+          "symbol": "InstancedStrokedPath pixels",
+          "type": "unit-test"
         }
       ],
       "id": "webgpu.features.vector-path",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
       },
       "limitations": [
-        "RenderFrame and retained backend admit Rect, Text, and Image only; no generic vector/path display item exists."
+        "Instanced batching admits exact-opaque Paths only; translucent Paths use the retained scalar correctness fallback. Complete SVG fill/stroking, dashes, arbitrary join/cap policy and adaptive curve quality are unsupported."
       ],
       "owner": {
         "package": "@zavx0z/renderer-webgpu",
         "repository": "renderer",
         "stage": "webgpu"
       },
-      "status": "unsupported"
+      "status": "implemented"
     }
   ],
   "repository": "renderer",

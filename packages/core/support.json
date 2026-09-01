@@ -96514,7 +96514,7 @@
     {
       "blockedBy": [],
       "blocks": [],
-      "conformance": "none",
+      "conformance": "adapted",
       "consumers": [],
       "evidence": [
         {
@@ -96526,23 +96526,40 @@
           "type": "external-spec"
         },
         {
-          "doesNotProve": "Computed, layout, paint, hit-test, or backend support for this property.",
-          "lines": "573-738",
+          "doesNotProve": "The complete SVG paint/length grammar, percentages, URLs, context paint, animation or every SVG shape.",
           "path": "packages/core/src/css.ts",
-          "proves": "Unknown declarations can enter the cascade map.",
+          "proves": "The bounded VectorPath owner resolves inherited currentColor/color stroke and finite non-negative px stroke width before display projection.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "parseDeclarations/computeStyle",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "ComputedStyle stroke transport",
           "type": "implementation"
+        },
+        {
+          "doesNotProve": "Full SVG/CSS Fill and Stroke conformance.",
+          "path": "packages/core/test/vector-path.test.ts",
+          "proves": "Resolved stroke color/width reach one PathDisplayItem and the exact hit geometry.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "stroke",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Every paint server, join/cap, fill, dash or native SVG pixel.",
+          "path": "packages/webgpu/test/vector-path.test.ts",
+          "proves": "Resolved stroke values pack into retained Engine style records with one-record updates.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "stroke",
+          "type": "unit-test"
         }
       ],
       "id": "css.properties.stroke",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
       },
       "limitations": [
-        "The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it."
+        "Implemented only for solid resolved color and finite non-negative px values on the project VectorPath extension; complete SVG paint/length grammar, percentages, URLs, context paint, animation, fill, dash and arbitrary joins/caps remain unsupported."
       ],
       "owner": {
         "package": "@zavx0z/renderer",
@@ -96550,17 +96567,17 @@
         "stage": "cpu"
       },
       "stages": {
-        "browser": "unsupported",
+        "browser": "partial",
         "cascade": "partial",
-        "computed": "unsupported",
+        "computed": "partial",
         "evidence": "implemented",
-        "hit-test": "unsupported",
-        "layout": "unsupported",
-        "paint": "unsupported",
+        "hit-test": "partial",
+        "layout": "not-applicable",
+        "paint": "partial",
         "parse": "partial",
-        "webgpu": "unsupported"
+        "webgpu": "partial"
       },
-      "status": "unsupported"
+      "status": "partial"
     },
     {
       "blockedBy": [],
@@ -97534,7 +97551,7 @@
     {
       "blockedBy": [],
       "blocks": [],
-      "conformance": "none",
+      "conformance": "adapted",
       "consumers": [],
       "evidence": [
         {
@@ -97546,23 +97563,40 @@
           "type": "external-spec"
         },
         {
-          "doesNotProve": "Computed, layout, paint, hit-test, or backend support for this property.",
-          "lines": "573-738",
+          "doesNotProve": "The complete SVG paint/length grammar, percentages, URLs, context paint, animation or every SVG shape.",
           "path": "packages/core/src/css.ts",
-          "proves": "Unknown declarations can enter the cascade map.",
+          "proves": "The bounded VectorPath owner resolves inherited currentColor/color stroke and finite non-negative px stroke width before display projection.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "parseDeclarations/computeStyle",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "ComputedStyle stroke transport",
           "type": "implementation"
+        },
+        {
+          "doesNotProve": "Full SVG/CSS Fill and Stroke conformance.",
+          "path": "packages/core/test/vector-path.test.ts",
+          "proves": "Resolved stroke color/width reach one PathDisplayItem and the exact hit geometry.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "stroke-width",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Every paint server, join/cap, fill, dash or native SVG pixel.",
+          "path": "packages/webgpu/test/vector-path.test.ts",
+          "proves": "Resolved stroke values pack into retained Engine style records with one-record updates.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "stroke-width",
+          "type": "unit-test"
         }
       ],
       "id": "css.properties.stroke-width",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
       },
       "limitations": [
-        "The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it."
+        "Implemented only for solid resolved color and finite non-negative px values on the project VectorPath extension; complete SVG paint/length grammar, percentages, URLs, context paint, animation, fill, dash and arbitrary joins/caps remain unsupported."
       ],
       "owner": {
         "package": "@zavx0z/renderer",
@@ -97570,17 +97604,17 @@
         "stage": "cpu"
       },
       "stages": {
-        "browser": "unsupported",
+        "browser": "partial",
         "cascade": "partial",
-        "computed": "unsupported",
+        "computed": "partial",
         "evidence": "implemented",
-        "hit-test": "unsupported",
-        "layout": "unsupported",
-        "paint": "unsupported",
+        "hit-test": "partial",
+        "layout": "not-applicable",
+        "paint": "partial",
         "parse": "partial",
-        "webgpu": "unsupported"
+        "webgpu": "partial"
       },
-      "status": "unsupported"
+      "status": "partial"
     },
     {
       "blockedBy": [],
@@ -135235,6 +135269,69 @@
           "proves": "The package export path exists.",
           "repository": "renderer",
           "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "./frame-changes",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer.export-paths.frame-changes",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "11",
+          "path": "packages/core/src/frame-changes.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "readCanonicalRenderFrameChanges",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer.export-paths.frame-changes.symbols.readcanonicalrenderframechanges",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Every symbol and observable behavior behind the path.",
+          "path": "packages/core/package.json",
+          "proves": "The package export path exists.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
           "symbol": ".",
           "type": "implementation"
         }
@@ -135262,7 +135359,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "3",
+          "lines": "5",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135294,7 +135391,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "46",
+          "lines": "54",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135390,7 +135487,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135422,7 +135519,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135454,7 +135551,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "46",
+          "lines": "54",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135486,7 +135583,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "54",
+          "lines": "62",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135518,7 +135615,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "54",
+          "lines": "62",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135550,7 +135647,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "54",
+          "lines": "62",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135582,7 +135679,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135614,7 +135711,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135646,7 +135743,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "3",
+          "lines": "5",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135678,7 +135775,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135705,12 +135802,51 @@
     {
       "blockedBy": [],
       "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "11",
+          "path": "packages/core/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "PathDisplayItem",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "External-standard compatibility unless separately mapped.",
+          "path": "packages/core/test/renderer.test.ts",
+          "proves": "The bounded project API has behavioral coverage.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "PathDisplayItem",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.pathdisplayitem",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
       "conformance": "unknown",
       "consumers": [],
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "46",
+          "lines": "54",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135742,7 +135878,39 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "3",
+          "path": "packages/core/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "readCanonicalRenderFrameChanges",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.readcanonicalrenderframechanges",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135774,7 +135942,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135806,7 +135974,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135838,7 +136006,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135870,7 +136038,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135902,7 +136070,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135934,7 +136102,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135966,7 +136134,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -135998,7 +136166,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136030,7 +136198,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136062,7 +136230,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136094,7 +136262,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136126,7 +136294,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136158,7 +136326,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136190,7 +136358,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136222,7 +136390,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136254,7 +136422,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136286,7 +136454,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136318,7 +136486,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136350,7 +136518,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136382,7 +136550,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136409,12 +136577,207 @@
     {
       "blockedBy": [],
       "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "11",
+          "path": "packages/core/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "RenderPathBounds",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "External-standard compatibility unless separately mapped.",
+          "path": "packages/core/test/renderer.test.ts",
+          "proves": "The bounded project API has behavioral coverage.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "RenderPathBounds",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderpathbounds",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "11",
+          "path": "packages/core/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "RenderPathCubic",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "External-standard compatibility unless separately mapped.",
+          "path": "packages/core/test/renderer.test.ts",
+          "proves": "The bounded project API has behavioral coverage.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "RenderPathCubic",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderpathcubic",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "11",
+          "path": "packages/core/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "RenderPathGeometry",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "External-standard compatibility unless separately mapped.",
+          "path": "packages/core/test/renderer.test.ts",
+          "proves": "The bounded project API has behavioral coverage.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "RenderPathGeometry",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderpathgeometry",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "11",
+          "path": "packages/core/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "RenderPathPoint",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "External-standard compatibility unless separately mapped.",
+          "path": "packages/core/test/renderer.test.ts",
+          "proves": "The bounded project API has behavioral coverage.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "RenderPathPoint",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderpathpoint",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "11",
+          "path": "packages/core/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "RenderPathSegment",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "External-standard compatibility unless separately mapped.",
+          "path": "packages/core/test/renderer.test.ts",
+          "proves": "The bounded project API has behavioral coverage.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "RenderPathSegment",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderpathsegment",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
       "conformance": "unknown",
       "consumers": [],
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136446,7 +136809,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136478,7 +136841,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136510,7 +136873,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136542,7 +136905,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136574,7 +136937,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136606,7 +136969,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136638,7 +137001,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136670,7 +137033,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "3",
+          "lines": "5",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136709,7 +137072,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "3",
+          "lines": "5",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136741,7 +137104,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136773,7 +137136,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "46",
+          "lines": "54",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136805,7 +137168,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "46",
+          "lines": "54",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -136837,7 +137200,39 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "46",
+          "lines": "4",
+          "path": "packages/core/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "VECTOR_PATH_COORDINATE_LIMIT",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.vector_path_coordinate_limit",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "54",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -138808,33 +139203,51 @@
     {
       "blockedBy": [],
       "blocks": [],
-      "conformance": "none",
+      "conformance": "extension",
       "consumers": [],
       "evidence": [
         {
-          "doesNotProve": "Runtime implementation or observable conformance.",
-          "path": "packages/core/requirements.md",
-          "proves": "The pinned project inventory contains renderer.features.vector-path-display-item.",
+          "doesNotProve": "Complete SVG path grammar, fill, close, arcs or adaptive tessellation.",
+          "path": "packages/core/src/path.ts",
+          "proves": "Bounded absolute M/L/Q/C parsing normalizes and samples one immutable open stroked path with explicit source/token/cubic limits.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "vector path display item",
-          "type": "requirement"
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "parseRenderPath",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Complete SVG layout/paint or arbitrary affine transforms.",
+          "path": "packages/core/src/renderer.ts",
+          "proves": "One semantic VectorPath emits one retained Path item and exact path hit while shared transform owners avoid per-Path transform replacement.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "emitVectorPath/presentationTransforms",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Complete SVG conformance or actual GPU pixels.",
+          "path": "packages/core/test/vector-path.test.ts",
+          "proves": "Grammar limits, normalization, clips, zoom-aware exact path hit, hittable coarse-envelope center, weak predecessor collection, exact identity, 10k shared-transform and mixed-subtree behavior.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "vector-path-display-item",
+          "type": "unit-test"
         }
       ],
       "id": "renderer.features.vector-path-display-item",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
       },
       "limitations": [
-        "The CPU renderer has no implementation of this internal platform capability."
+        "Bounded to one absolute open M/L/Q/C subpath, stroke-only paint and six samples per curve; relative/shorthand commands, fill, close, arcs, dashes, adaptive tessellation and complete SVG join/cap policy are unsupported."
       ],
       "owner": {
         "package": "@zavx0z/renderer",
         "repository": "renderer",
         "stage": "cpu"
       },
-      "status": "unsupported"
+      "status": "implemented"
     },
     {
       "blockedBy": [],

@@ -434,54 +434,6 @@
     },
     {
       "schemaVersion": 1,
-      "id": "gap.renderer.vector-path-display-item",
-      "capability": "renderer.features.vector-path-display-item",
-      "reportedBy": {
-        "repository": "node",
-        "package": "@nodes/ui",
-        "subject": "NodeConnection/grid",
-        "scenario": "render scalable routed graph links"
-      },
-      "expected": {
-        "reference": "Generic CPU display-list capability",
-        "behavior": "A generic path/vector display item carries paint order, clipping, transform and retained identity through WebGPU without Node-specific semantics."
-      },
-      "actual": {
-        "behavior": "RenderFrame admits Rect/Text/Image only; Node code hand-builds orthogonal rectangles/points and local placement/culling formulas."
-      , "evidence": [
-          {
-            "type": "consumer-usage",
-            "repository": "node",
-            "revision": "9f390945f51f88c6374d5fb8f3215cf5d776e571",
-            "path": "packages/ui/node-system.tsx",
-            "symbol": "NodeConnection/nodePlacement",
-            "lines": "667-954",
-            "proves": "Node presentation locally synthesizes placement/endpoints/routes.",
-            "doesNotProve": "That all layout formulas belong in the platform."
-          }
-        ]
-      },
-      "minimalReproduction": {
-        "source": "Render one routed link with pan/zoom/clip and stable node endpoint identities.",
-        "test": "Assert a generic path display item preserves geometry/order/clip/hit metadata without Node-specific branches."
-      },
-      "suspectedOwner": {
-        "repository": "renderer",
-        "package": "@zavx0z/renderer",
-        "stage": "display-list"
-      },
-      "severity": "P1",
-      "dependencies": [
-        "webgpu.features.vector-path"
-      ],
-      "forbiddenLocalWorkarounds": [
-        "Node-specific Renderer branch",
-        "Component-owned private WebGPU drawing",
-        "Manual Rect decomposition as a hidden permanent fallback"
-      ]
-    },
-    {
-      "schemaVersion": 1,
       "id": "gap.css.linked-author-import",
       "capability": "css.at-rules.at-import",
       "reportedBy": {

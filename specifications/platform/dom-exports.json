@@ -252,7 +252,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": "./document",
-        "line": 900,
+        "line": 903,
         "path": "renderer:packages/dom/src/document.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -265,7 +265,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.document",
       "spec": {
-        "anchor": "renderer:packages/dom/src/document.ts#L900",
+        "anchor": "renderer:packages/dom/src/document.ts#L903",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -278,7 +278,7 @@
       "kind": "runtime-export",
       "metadata": {
         "entrypoint": "./document",
-        "line": 166,
+        "line": 168,
         "path": "renderer:packages/dom/src/document.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -291,7 +291,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.document",
       "spec": {
-        "anchor": "renderer:packages/dom/src/document.ts#L166",
+        "anchor": "renderer:packages/dom/src/document.ts#L168",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -304,7 +304,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": "./document",
-        "line": 157,
+        "line": 159,
         "path": "renderer:packages/dom/src/document.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -317,7 +317,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.document",
       "spec": {
-        "anchor": "renderer:packages/dom/src/document.ts#L157",
+        "anchor": "renderer:packages/dom/src/document.ts#L159",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -330,7 +330,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": "./document",
-        "line": 123,
+        "line": 124,
         "path": "renderer:packages/dom/src/document.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -343,7 +343,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.document",
       "spec": {
-        "anchor": "renderer:packages/dom/src/document.ts#L123",
+        "anchor": "renderer:packages/dom/src/document.ts#L124",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -356,7 +356,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": "./document",
-        "line": 155,
+        "line": 157,
         "path": "renderer:packages/dom/src/document.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -369,7 +369,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.document",
       "spec": {
-        "anchor": "renderer:packages/dom/src/document.ts#L155",
+        "anchor": "renderer:packages/dom/src/document.ts#L157",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -2066,6 +2066,81 @@
       }
     },
     {
+      "description": "@zavx0z/dom package export ./html/vector-path-element.",
+      "domain": "dom",
+      "id": "platform.at-zavx0z-dom.export-paths.html-vector-path-element",
+      "kind": "package-export-path",
+      "metadata": {
+        "package": "@zavx0z/dom",
+        "sourceTarget": "src/html-vector-path-element.ts",
+        "target": "./src/html-vector-path-element.ts"
+      },
+      "name": "./html/vector-path-element",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "./src/html-vector-path-element.ts",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      }
+    },
+    {
+      "description": "@zavx0z/dom/html/vector-path-element public runtime export HTMLVectorPathElement.",
+      "domain": "dom",
+      "id": "platform.at-zavx0z-dom.export-paths.html-vector-path-element.symbols.htmlvectorpathelement",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": "./html/vector-path-element",
+        "line": 13,
+        "path": "renderer:packages/dom/src/html-vector-path-element.ts",
+        "repository": "renderer",
+        "typeOnly": false
+      },
+      "name": "HTMLVectorPathElement",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "platform.at-zavx0z-dom.export-paths.html-vector-path-element",
+      "spec": {
+        "anchor": "renderer:packages/dom/src/html-vector-path-element.ts#L13",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      }
+    },
+    {
+      "description": "@zavx0z/dom/html/vector-path-element public runtime export VECTOR_PATH_COORDINATE_LIMIT.",
+      "domain": "dom",
+      "id": "platform.at-zavx0z-dom.export-paths.html-vector-path-element.symbols.vector_path_coordinate_limit",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": "./html/vector-path-element",
+        "line": 5,
+        "path": "renderer:packages/dom/src/html-vector-path-element.ts",
+        "repository": "renderer",
+        "typeOnly": false
+      },
+      "name": "VECTOR_PATH_COORDINATE_LIMIT",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "platform.at-zavx0z-dom.export-paths.html-vector-path-element",
+      "spec": {
+        "anchor": "renderer:packages/dom/src/html-vector-path-element.ts#L5",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      }
+    },
+    {
       "description": "@zavx0z/dom package export ./input-event.",
       "domain": "dom",
       "id": "platform.at-zavx0z-dom.export-paths.input-event",
@@ -2880,7 +2955,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 108,
+        "line": 112,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -2893,7 +2968,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L108",
+        "anchor": "renderer:packages/dom/src/index.ts#L112",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -2932,7 +3007,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 108,
+        "line": 112,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -2945,7 +3020,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L108",
+        "anchor": "renderer:packages/dom/src/index.ts#L112",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -2958,7 +3033,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 108,
+        "line": 112,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -2971,7 +3046,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L108",
+        "anchor": "renderer:packages/dom/src/index.ts#L112",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -3452,7 +3527,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 108,
+        "line": 112,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -3465,7 +3540,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L108",
+        "anchor": "renderer:packages/dom/src/index.ts#L112",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -3478,7 +3553,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -3491,7 +3566,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -3842,7 +3917,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -3855,7 +3930,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -4564,13 +4639,39 @@
       }
     },
     {
+      "description": "@zavx0z/dom public runtime export HTMLVectorPathElement.",
+      "domain": "dom",
+      "id": "platform.at-zavx0z-dom.export-paths.root.symbols.htmlvectorpathelement",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 108,
+        "path": "renderer:packages/dom/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": false
+      },
+      "name": "HTMLVectorPathElement",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "platform.at-zavx0z-dom.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/dom/src/index.ts#L108",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      }
+    },
+    {
       "description": "@zavx0z/dom public type export InputCheckedStateChange.",
       "domain": "dom",
       "id": "platform.at-zavx0z-dom.export-paths.root.symbols.inputcheckedstatechange",
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -4583,7 +4684,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -4648,7 +4749,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -4661,7 +4762,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -4674,7 +4775,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -4687,7 +4788,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -4700,7 +4801,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -4713,7 +4814,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -4726,7 +4827,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -4739,7 +4840,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -4856,7 +4957,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 108,
+        "line": 112,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -4869,7 +4970,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L108",
+        "anchor": "renderer:packages/dom/src/index.ts#L112",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -4882,7 +4983,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 108,
+        "line": 112,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -4895,7 +4996,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L108",
+        "anchor": "renderer:packages/dom/src/index.ts#L112",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -4986,7 +5087,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -4999,7 +5100,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -5064,7 +5165,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -5077,7 +5178,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -5220,7 +5321,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -5233,7 +5334,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -5298,7 +5399,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -5311,7 +5412,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -5324,7 +5425,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -5337,7 +5438,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -5428,7 +5529,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -5441,7 +5542,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -5454,7 +5555,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -5467,7 +5568,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -5480,7 +5581,7 @@
       "kind": "type-export",
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -5493,7 +5594,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -5702,6 +5803,32 @@
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
         "anchor": "renderer:packages/dom/src/index.ts#L6",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      }
+    },
+    {
+      "description": "@zavx0z/dom public runtime export VECTOR_PATH_COORDINATE_LIMIT.",
+      "domain": "dom",
+      "id": "platform.at-zavx0z-dom.export-paths.root.symbols.vector_path_coordinate_limit",
+      "kind": "runtime-export",
+      "metadata": {
+        "entrypoint": ".",
+        "line": 108,
+        "path": "renderer:packages/dom/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": false
+      },
+      "name": "VECTOR_PATH_COORDINATE_LIMIT",
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "platform.at-zavx0z-dom.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/dom/src/index.ts#L108",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"

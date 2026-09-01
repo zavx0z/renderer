@@ -1292,54 +1292,6 @@
     },
     {
       "actual": {
-        "behavior": "RenderFrame admits Rect/Text/Image only; Node code hand-builds orthogonal rectangles/points and local placement/culling formulas.",
-        "evidence": [
-          {
-            "doesNotProve": "That all layout formulas belong in the platform.",
-            "lines": "667-954",
-            "path": "packages/ui/node-system.tsx",
-            "proves": "Node presentation locally synthesizes placement/endpoints/routes.",
-            "repository": "node",
-            "revision": "9f390945f51f88c6374d5fb8f3215cf5d776e571",
-            "symbol": "NodeConnection/nodePlacement",
-            "type": "consumer-usage"
-          }
-        ]
-      },
-      "capability": "renderer.features.vector-path-display-item",
-      "dependencies": [
-        "webgpu.features.vector-path"
-      ],
-      "expected": {
-        "behavior": "A generic path/vector display item carries paint order, clipping, transform and retained identity through WebGPU without Node-specific semantics.",
-        "reference": "Generic CPU display-list capability"
-      },
-      "forbiddenLocalWorkarounds": [
-        "Node-specific Renderer branch",
-        "Component-owned private WebGPU drawing",
-        "Manual Rect decomposition as a hidden permanent fallback"
-      ],
-      "id": "gap.renderer.vector-path-display-item",
-      "minimalReproduction": {
-        "source": "Render one routed link with pan/zoom/clip and stable node endpoint identities.",
-        "test": "Assert a generic path display item preserves geometry/order/clip/hit metadata without Node-specific branches."
-      },
-      "reportedBy": {
-        "package": "@nodes/ui",
-        "repository": "node",
-        "scenario": "render scalable routed graph links",
-        "subject": "NodeConnection/grid"
-      },
-      "schemaVersion": 1,
-      "severity": "P1",
-      "suspectedOwner": {
-        "package": "@zavx0z/renderer",
-        "repository": "renderer",
-        "stage": "display-list"
-      }
-    },
-    {
-      "actual": {
         "behavior": "The bounded host accepts flat CSSStyleRule records only and fails closed for @import, @font-face and other at-rules; it performs no second fetch and owns no Engine font loader.",
         "evidence": [
           {
@@ -151275,7 +151227,7 @@
     {
       "blockedBy": [],
       "blocks": [],
-      "conformance": "none",
+      "conformance": "adapted",
       "consumers": [],
       "domain": "css",
       "evidence": [
@@ -151288,24 +151240,41 @@
           "type": "external-spec"
         },
         {
-          "doesNotProve": "Computed, layout, paint, hit-test, or backend support for this property.",
-          "lines": "573-738",
+          "doesNotProve": "The complete SVG paint/length grammar, percentages, URLs, context paint, animation or every SVG shape.",
           "path": "packages/core/src/css.ts",
-          "proves": "Unknown declarations can enter the cascade map.",
+          "proves": "The bounded VectorPath owner resolves inherited currentColor/color stroke and finite non-negative px stroke width before display projection.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "parseDeclarations/computeStyle",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "ComputedStyle stroke transport",
           "type": "implementation"
+        },
+        {
+          "doesNotProve": "Full SVG/CSS Fill and Stroke conformance.",
+          "path": "packages/core/test/vector-path.test.ts",
+          "proves": "Resolved stroke color/width reach one PathDisplayItem and the exact hit geometry.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "stroke",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Every paint server, join/cap, fill, dash or native SVG pixel.",
+          "path": "packages/webgpu/test/vector-path.test.ts",
+          "proves": "Resolved stroke values pack into retained Engine style records with one-record updates.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "stroke",
+          "type": "unit-test"
         }
       ],
       "id": "css.properties.stroke",
       "kind": "property",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
       },
       "limitations": [
-        "The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it."
+        "Implemented only for solid resolved color and finite non-negative px values on the project VectorPath extension; complete SVG paint/length grammar, percentages, URLs, context paint, animation, fill, dash and arbitrary joins/caps remain unsupported."
       ],
       "metadata": {
         "animationType": "by computed value",
@@ -151339,17 +151308,17 @@
         "version": "8.7.3"
       },
       "stages": {
-        "browser": "unsupported",
+        "browser": "partial",
         "cascade": "partial",
-        "computed": "unsupported",
+        "computed": "partial",
         "evidence": "implemented",
-        "hit-test": "unsupported",
-        "layout": "unsupported",
-        "paint": "unsupported",
+        "hit-test": "partial",
+        "layout": "not-applicable",
+        "paint": "partial",
         "parse": "partial",
-        "webgpu": "unsupported"
+        "webgpu": "partial"
       },
-      "status": "unsupported"
+      "status": "partial"
     },
     {
       "blockedBy": [],
@@ -152890,7 +152859,7 @@
     {
       "blockedBy": [],
       "blocks": [],
-      "conformance": "none",
+      "conformance": "adapted",
       "consumers": [],
       "domain": "css",
       "evidence": [
@@ -152903,24 +152872,41 @@
           "type": "external-spec"
         },
         {
-          "doesNotProve": "Computed, layout, paint, hit-test, or backend support for this property.",
-          "lines": "573-738",
+          "doesNotProve": "The complete SVG paint/length grammar, percentages, URLs, context paint, animation or every SVG shape.",
           "path": "packages/core/src/css.ts",
-          "proves": "Unknown declarations can enter the cascade map.",
+          "proves": "The bounded VectorPath owner resolves inherited currentColor/color stroke and finite non-negative px stroke width before display projection.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "parseDeclarations/computeStyle",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "ComputedStyle stroke transport",
           "type": "implementation"
+        },
+        {
+          "doesNotProve": "Full SVG/CSS Fill and Stroke conformance.",
+          "path": "packages/core/test/vector-path.test.ts",
+          "proves": "Resolved stroke color/width reach one PathDisplayItem and the exact hit geometry.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "stroke-width",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Every paint server, join/cap, fill, dash or native SVG pixel.",
+          "path": "packages/webgpu/test/vector-path.test.ts",
+          "proves": "Resolved stroke values pack into retained Engine style records with one-record updates.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "stroke-width",
+          "type": "unit-test"
         }
       ],
       "id": "css.properties.stroke-width",
       "kind": "property",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
       },
       "limitations": [
-        "The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it."
+        "Implemented only for solid resolved color and finite non-negative px values on the project VectorPath extension; complete SVG paint/length grammar, percentages, URLs, context paint, animation, fill, dash and arbitrary joins/caps remain unsupported."
       ],
       "metadata": {
         "animationType": "by computed value",
@@ -152956,17 +152942,17 @@
         "version": "8.7.3"
       },
       "stages": {
-        "browser": "unsupported",
+        "browser": "partial",
         "cascade": "partial",
-        "computed": "unsupported",
+        "computed": "partial",
         "evidence": "implemented",
-        "hit-test": "unsupported",
-        "layout": "unsupported",
-        "paint": "unsupported",
+        "hit-test": "partial",
+        "layout": "not-applicable",
+        "paint": "partial",
         "parse": "partial",
-        "webgpu": "unsupported"
+        "webgpu": "partial"
       },
-      "status": "unsupported"
+      "status": "partial"
     },
     {
       "blockedBy": [],
@@ -262137,6 +262123,62 @@
       "blocks": [],
       "conformance": "extension",
       "consumers": [],
+      "description": "One semantic project-extension Element owns reflected vector path author data without owning paint or GPU state.",
+      "domain": "dom",
+      "evidence": [
+        {
+          "doesNotProve": "Path parsing, paint, hit testing, SVG namespaces or complete SVG behavior.",
+          "path": "packages/dom/src/html-vector-path-element.ts",
+          "proves": "The exact VectorPath semantic class, coordinate-bound constant or package subpath is publicly owned by @zavx0z/dom.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "vector path element",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Renderer/WebGPU behavior or SVG conformance.",
+          "path": "packages/dom/test/html-vector-path-element.test.ts",
+          "proves": "Exact class/subpath identity, reflected d mutation and shared coordinate bound.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "vector path element",
+          "type": "unit-test"
+        }
+      ],
+      "id": "dom.project.vector-path-element",
+      "kind": "semantic-extension",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
+      },
+      "limitations": [
+        "vector-path is a project extension with reflected d and a shared coordinate bound; it is not SVGPathElement, an SVG namespace implementation or Path2D, and DOM owns no parsing, geometry or paint."
+      ],
+      "metadata": {},
+      "name": "vector path element",
+      "owner": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "renderer-dom-contract#vector-path-element",
+        "profile": "project-contract",
+        "source": "renderer-dom-contract",
+        "version": "renderer current checkout"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
       "description": "Engine analytical ui materials capability.",
       "domain": "engine",
       "evidence": [
@@ -263290,6 +263332,89 @@
       },
       "spec": {
         "anchor": "engine-core-contract#instanced-rounded-rectangles",
+        "profile": "project-contract",
+        "source": "engine-core-contract",
+        "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "description": "Engine instanced stroked paths capability.",
+      "domain": "engine",
+      "evidence": [
+        {
+          "doesNotProve": "DOM, CSS, Node routing or complete vector path semantics.",
+          "path": "packages/core/src/core/instanced-stroked-path.ts",
+          "proves": "Separate fixed-stride style and sampled-segment InstanceLayers share one unit quad and retained draw-range views.",
+          "repository": "engine",
+          "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
+          "symbol": "StrokedPathInstanceLayer/InstancedStrokedPath",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Complete SVG stroking or every GPU adapter.",
+          "path": "packages/core/src/renderer/index.ts",
+          "proves": "One retained WebGPU pipeline binds shared style/segment/order storage and presentation clips.",
+          "repository": "engine",
+          "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
+          "symbol": "InstancedStrokedPath pipeline",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "GPU pixels and consumer integration.",
+          "path": "packages/core/src/core/instanced-stroked-path.test.ts",
+          "proves": "Record layout, stable storage and draw ranges.",
+          "repository": "engine",
+          "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
+          "symbol": "instanced-stroked-paths",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Renderer Path stacking policy or GPU pixels.",
+          "path": "packages/core/src/core/instance-layer.test.ts",
+          "proves": "Atomic bulk order validation, allocation-free contiguous block moves, exact dirty ranges and O(1) canonical order lookup.",
+          "repository": "engine",
+          "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
+          "symbol": "setOrder/moveRange/orderIndexOf",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Renderer scalar fallback pixels, complete SVG stroking or every device.",
+          "path": "packages/core/src/renderer/shaders/stroked-path-instanced.webgpu.test.ts",
+          "proves": "Actual WebGPU exact-opaque capsule pixels, width, transform and clipping plus fail-closed non-opaque admission.",
+          "repository": "engine",
+          "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
+          "symbol": "instanced-stroked-paths",
+          "type": "unit-test"
+        }
+      ],
+      "id": "engine.features.instanced-stroked-paths",
+      "kind": "engine-contract",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1"
+      },
+      "limitations": [
+        "The instanced Engine contract admits exact-opaque independent sampled capsules only; translucent connected-stroke union/scalar fallback belongs to Renderer, and complete SVG fill/stroking, dashes, adaptive tessellation and analytical join self-union are unsupported. Outer AA fringe overlap at sampled joins remains a bounded limitation."
+      ],
+      "metadata": {},
+      "name": "instanced stroked paths",
+      "owner": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "spec": {
+        "anchor": "engine-core-contract#instanced-stroked-paths",
         "profile": "project-contract",
         "source": "engine-core-contract",
         "version": "engine 18c55d6c3dc68d1f2ab257378a505e5bac2eea3e"
@@ -472030,10 +472155,10 @@
       "metadata": {
         "childSummary": {
           "derivedStatus": "partial",
-          "implemented": 5,
+          "implemented": 14,
           "not-applicable": 0,
           "partial": 7,
-          "total": 105,
+          "total": 114,
           "unsupported": 0,
           "unverified": 93
         },
@@ -473624,6 +473749,67 @@
     {
       "blockedBy": [],
       "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "description": "@engine/core public runtime export InstancedStrokedPath.",
+      "domain": "engine",
+      "evidence": [
+        {
+          "doesNotProve": "DOM/CSS semantics, Renderer batching policy or complete SVG stroking.",
+          "path": "packages/core/src/core/instanced-stroked-path.ts",
+          "proves": "The public symbol belongs to the exact fixed-stride retained stroked-Path Engine ABI.",
+          "repository": "engine",
+          "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
+          "symbol": "InstancedStrokedPath",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Every GPU/device or consumer integration.",
+          "path": "packages/core/src/core/instanced-stroked-path.test.ts",
+          "proves": "Exact constants, slots, generation validation, draw ranges and exact-opaque admission.",
+          "repository": "engine",
+          "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
+          "symbol": "InstancedStrokedPath",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-engine-core.export-paths.root.symbols.instancedstrokedpath",
+      "kind": "runtime-export",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1"
+      },
+      "limitations": [],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 254,
+        "path": "engine:packages/core/src/core/instanced-stroked-path.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "InstancedStrokedPath",
+      "owner": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instanced-stroked-path.ts#L254",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
       "conformance": "unknown",
       "consumers": [],
       "description": "@engine/core public type export InstanceHandle.",
@@ -473686,7 +473872,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "51",
+          "lines": "52",
           "path": "packages/core/src/core/instance-layer.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "engine",
@@ -473713,7 +473899,7 @@
       "limitations": [],
       "metadata": {
         "entrypoint": ".",
-        "line": 51,
+        "line": 52,
         "path": "engine:packages/core/src/core/instance-layer.ts",
         "repository": "engine",
         "typeOnly": false
@@ -473731,7 +473917,7 @@
       },
       "parent": "platform.at-engine-core.export-paths.root",
       "spec": {
-        "anchor": "engine:packages/core/src/core/instance-layer.ts#L51",
+        "anchor": "engine:packages/core/src/core/instance-layer.ts#L52",
         "profile": "project-contract",
         "source": "@engine/core-exports",
         "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
@@ -475618,7 +475804,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "79",
+          "lines": "84",
           "path": "packages/core/src/renderer/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "engine",
@@ -475638,7 +475824,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 79,
+        "line": 84,
         "path": "engine:packages/core/src/renderer/index.ts",
         "repository": "engine",
         "typeOnly": true
@@ -475656,7 +475842,7 @@
       },
       "parent": "platform.at-engine-core.export-paths.root",
       "spec": {
-        "anchor": "engine:packages/core/src/renderer/index.ts#L79",
+        "anchor": "engine:packages/core/src/renderer/index.ts#L84",
         "profile": "project-contract",
         "source": "@engine/core-exports",
         "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
@@ -475673,7 +475859,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "79",
+          "lines": "84",
           "path": "packages/core/src/renderer/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "engine",
@@ -475693,7 +475879,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 79,
+        "line": 84,
         "path": "engine:packages/core/src/renderer/index.ts",
         "repository": "engine",
         "typeOnly": true
@@ -475711,7 +475897,7 @@
       },
       "parent": "platform.at-engine-core.export-paths.root",
       "spec": {
-        "anchor": "engine:packages/core/src/renderer/index.ts#L79",
+        "anchor": "engine:packages/core/src/renderer/index.ts#L84",
         "profile": "project-contract",
         "source": "@engine/core-exports",
         "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
@@ -475728,7 +475914,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "178",
+          "lines": "200",
           "path": "packages/core/src/renderer/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "engine",
@@ -475748,7 +475934,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 178,
+        "line": 200,
         "path": "engine:packages/core/src/renderer/index.ts",
         "repository": "engine",
         "typeOnly": false
@@ -475766,7 +475952,7 @@
       },
       "parent": "platform.at-engine-core.export-paths.root",
       "spec": {
-        "anchor": "engine:packages/core/src/renderer/index.ts#L178",
+        "anchor": "engine:packages/core/src/renderer/index.ts#L200",
         "profile": "project-contract",
         "source": "@engine/core-exports",
         "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
@@ -475783,7 +475969,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "79",
+          "lines": "84",
           "path": "packages/core/src/renderer/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "engine",
@@ -475803,7 +475989,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 79,
+        "line": 84,
         "path": "engine:packages/core/src/renderer/index.ts",
         "repository": "engine",
         "typeOnly": true
@@ -475821,7 +476007,7 @@
       },
       "parent": "platform.at-engine-core.export-paths.root",
       "spec": {
-        "anchor": "engine:packages/core/src/renderer/index.ts#L79",
+        "anchor": "engine:packages/core/src/renderer/index.ts#L84",
         "profile": "project-contract",
         "source": "@engine/core-exports",
         "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
@@ -475893,7 +476079,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "79",
+          "lines": "84",
           "path": "packages/core/src/renderer/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "engine",
@@ -475913,7 +476099,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 79,
+        "line": 84,
         "path": "engine:packages/core/src/renderer/index.ts",
         "repository": "engine",
         "typeOnly": true
@@ -475931,7 +476117,7 @@
       },
       "parent": "platform.at-engine-core.export-paths.root",
       "spec": {
-        "anchor": "engine:packages/core/src/renderer/index.ts#L79",
+        "anchor": "engine:packages/core/src/renderer/index.ts#L84",
         "profile": "project-contract",
         "source": "@engine/core-exports",
         "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
@@ -476714,6 +476900,494 @@
         "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
       },
       "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "description": "@engine/core public runtime export STROKED_PATH_SEGMENT_OFFSETS.",
+      "domain": "engine",
+      "evidence": [
+        {
+          "doesNotProve": "DOM/CSS semantics, Renderer batching policy or complete SVG stroking.",
+          "path": "packages/core/src/core/instanced-stroked-path.ts",
+          "proves": "The public symbol belongs to the exact fixed-stride retained stroked-Path Engine ABI.",
+          "repository": "engine",
+          "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
+          "symbol": "STROKED_PATH_SEGMENT_OFFSETS",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Every GPU/device or consumer integration.",
+          "path": "packages/core/src/core/instanced-stroked-path.test.ts",
+          "proves": "Exact constants, slots, generation validation, draw ranges and exact-opaque admission.",
+          "repository": "engine",
+          "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
+          "symbol": "STROKED_PATH_SEGMENT_OFFSETS",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-engine-core.export-paths.root.symbols.stroked_path_segment_offsets",
+      "kind": "runtime-export",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1"
+      },
+      "limitations": [],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 22,
+        "path": "engine:packages/core/src/core/instanced-stroked-path.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "STROKED_PATH_SEGMENT_OFFSETS",
+      "owner": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instanced-stroked-path.ts#L22",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "description": "@engine/core public runtime export STROKED_PATH_SEGMENT_RECORD_BYTE_LENGTH.",
+      "domain": "engine",
+      "evidence": [
+        {
+          "doesNotProve": "DOM/CSS semantics, Renderer batching policy or complete SVG stroking.",
+          "path": "packages/core/src/core/instanced-stroked-path.ts",
+          "proves": "The public symbol belongs to the exact fixed-stride retained stroked-Path Engine ABI.",
+          "repository": "engine",
+          "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
+          "symbol": "STROKED_PATH_SEGMENT_RECORD_BYTE_LENGTH",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Every GPU/device or consumer integration.",
+          "path": "packages/core/src/core/instanced-stroked-path.test.ts",
+          "proves": "Exact constants, slots, generation validation, draw ranges and exact-opaque admission.",
+          "repository": "engine",
+          "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
+          "symbol": "STROKED_PATH_SEGMENT_RECORD_BYTE_LENGTH",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-engine-core.export-paths.root.symbols.stroked_path_segment_record_byte_length",
+      "kind": "runtime-export",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1"
+      },
+      "limitations": [],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 12,
+        "path": "engine:packages/core/src/core/instanced-stroked-path.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "STROKED_PATH_SEGMENT_RECORD_BYTE_LENGTH",
+      "owner": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instanced-stroked-path.ts#L12",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "description": "@engine/core public runtime export STROKED_PATH_SEGMENT_RECORD_WORDS.",
+      "domain": "engine",
+      "evidence": [
+        {
+          "doesNotProve": "DOM/CSS semantics, Renderer batching policy or complete SVG stroking.",
+          "path": "packages/core/src/core/instanced-stroked-path.ts",
+          "proves": "The public symbol belongs to the exact fixed-stride retained stroked-Path Engine ABI.",
+          "repository": "engine",
+          "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
+          "symbol": "STROKED_PATH_SEGMENT_RECORD_WORDS",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Every GPU/device or consumer integration.",
+          "path": "packages/core/src/core/instanced-stroked-path.test.ts",
+          "proves": "Exact constants, slots, generation validation, draw ranges and exact-opaque admission.",
+          "repository": "engine",
+          "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
+          "symbol": "STROKED_PATH_SEGMENT_RECORD_WORDS",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-engine-core.export-paths.root.symbols.stroked_path_segment_record_words",
+      "kind": "runtime-export",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1"
+      },
+      "limitations": [],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 11,
+        "path": "engine:packages/core/src/core/instanced-stroked-path.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "STROKED_PATH_SEGMENT_RECORD_WORDS",
+      "owner": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instanced-stroked-path.ts#L11",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "description": "@engine/core public runtime export STROKED_PATH_STYLE_OFFSETS.",
+      "domain": "engine",
+      "evidence": [
+        {
+          "doesNotProve": "DOM/CSS semantics, Renderer batching policy or complete SVG stroking.",
+          "path": "packages/core/src/core/instanced-stroked-path.ts",
+          "proves": "The public symbol belongs to the exact fixed-stride retained stroked-Path Engine ABI.",
+          "repository": "engine",
+          "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
+          "symbol": "STROKED_PATH_STYLE_OFFSETS",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Every GPU/device or consumer integration.",
+          "path": "packages/core/src/core/instanced-stroked-path.test.ts",
+          "proves": "Exact constants, slots, generation validation, draw ranges and exact-opaque admission.",
+          "repository": "engine",
+          "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
+          "symbol": "STROKED_PATH_STYLE_OFFSETS",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-engine-core.export-paths.root.symbols.stroked_path_style_offsets",
+      "kind": "runtime-export",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1"
+      },
+      "limitations": [],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 16,
+        "path": "engine:packages/core/src/core/instanced-stroked-path.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "STROKED_PATH_STYLE_OFFSETS",
+      "owner": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instanced-stroked-path.ts#L16",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "description": "@engine/core public runtime export STROKED_PATH_STYLE_RECORD_BYTE_LENGTH.",
+      "domain": "engine",
+      "evidence": [
+        {
+          "doesNotProve": "DOM/CSS semantics, Renderer batching policy or complete SVG stroking.",
+          "path": "packages/core/src/core/instanced-stroked-path.ts",
+          "proves": "The public symbol belongs to the exact fixed-stride retained stroked-Path Engine ABI.",
+          "repository": "engine",
+          "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
+          "symbol": "STROKED_PATH_STYLE_RECORD_BYTE_LENGTH",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Every GPU/device or consumer integration.",
+          "path": "packages/core/src/core/instanced-stroked-path.test.ts",
+          "proves": "Exact constants, slots, generation validation, draw ranges and exact-opaque admission.",
+          "repository": "engine",
+          "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
+          "symbol": "STROKED_PATH_STYLE_RECORD_BYTE_LENGTH",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-engine-core.export-paths.root.symbols.stroked_path_style_record_byte_length",
+      "kind": "runtime-export",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1"
+      },
+      "limitations": [],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 7,
+        "path": "engine:packages/core/src/core/instanced-stroked-path.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "STROKED_PATH_STYLE_RECORD_BYTE_LENGTH",
+      "owner": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instanced-stroked-path.ts#L7",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "description": "@engine/core public runtime export STROKED_PATH_STYLE_RECORD_WORDS.",
+      "domain": "engine",
+      "evidence": [
+        {
+          "doesNotProve": "DOM/CSS semantics, Renderer batching policy or complete SVG stroking.",
+          "path": "packages/core/src/core/instanced-stroked-path.ts",
+          "proves": "The public symbol belongs to the exact fixed-stride retained stroked-Path Engine ABI.",
+          "repository": "engine",
+          "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
+          "symbol": "STROKED_PATH_STYLE_RECORD_WORDS",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Every GPU/device or consumer integration.",
+          "path": "packages/core/src/core/instanced-stroked-path.test.ts",
+          "proves": "Exact constants, slots, generation validation, draw ranges and exact-opaque admission.",
+          "repository": "engine",
+          "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
+          "symbol": "STROKED_PATH_STYLE_RECORD_WORDS",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-engine-core.export-paths.root.symbols.stroked_path_style_record_words",
+      "kind": "runtime-export",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1"
+      },
+      "limitations": [],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 6,
+        "path": "engine:packages/core/src/core/instanced-stroked-path.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "STROKED_PATH_STYLE_RECORD_WORDS",
+      "owner": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instanced-stroked-path.ts#L6",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "description": "@engine/core public runtime export StrokedPathInstanceLayer.",
+      "domain": "engine",
+      "evidence": [
+        {
+          "doesNotProve": "DOM/CSS semantics, Renderer batching policy or complete SVG stroking.",
+          "path": "packages/core/src/core/instanced-stroked-path.ts",
+          "proves": "The public symbol belongs to the exact fixed-stride retained stroked-Path Engine ABI.",
+          "repository": "engine",
+          "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
+          "symbol": "StrokedPathInstanceLayer",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Every GPU/device or consumer integration.",
+          "path": "packages/core/src/core/instanced-stroked-path.test.ts",
+          "proves": "Exact constants, slots, generation validation, draw ranges and exact-opaque admission.",
+          "repository": "engine",
+          "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
+          "symbol": "StrokedPathInstanceLayer",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-engine-core.export-paths.root.symbols.strokedpathinstancelayer",
+      "kind": "runtime-export",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1"
+      },
+      "limitations": [],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 53,
+        "path": "engine:packages/core/src/core/instanced-stroked-path.ts",
+        "repository": "engine",
+        "typeOnly": false
+      },
+      "name": "StrokedPathInstanceLayer",
+      "owner": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instanced-stroked-path.ts#L53",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "description": "@engine/core public type export StrokedPathInstanceLayerOptions.",
+      "domain": "engine",
+      "evidence": [
+        {
+          "doesNotProve": "DOM/CSS semantics, Renderer batching policy or complete SVG stroking.",
+          "path": "packages/core/src/core/instanced-stroked-path.ts",
+          "proves": "The public symbol belongs to the exact fixed-stride retained stroked-Path Engine ABI.",
+          "repository": "engine",
+          "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
+          "symbol": "StrokedPathInstanceLayerOptions",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Every GPU/device or consumer integration.",
+          "path": "packages/core/src/core/instanced-stroked-path.test.ts",
+          "proves": "Exact constants, slots, generation validation, draw ranges and exact-opaque admission.",
+          "repository": "engine",
+          "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
+          "symbol": "StrokedPathInstanceLayerOptions",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-engine-core.export-paths.root.symbols.strokedpathinstancelayeroptions",
+      "kind": "type-export",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1"
+      },
+      "limitations": [],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 29,
+        "path": "engine:packages/core/src/core/instanced-stroked-path.ts",
+        "repository": "engine",
+        "typeOnly": true
+      },
+      "name": "StrokedPathInstanceLayerOptions",
+      "owner": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "ownerHint": {
+        "package": "@engine/core",
+        "repository": "engine",
+        "stage": "gpu-scene-resource"
+      },
+      "parent": "platform.at-engine-core.export-paths.root",
+      "spec": {
+        "anchor": "engine:packages/core/src/core/instanced-stroked-path.ts#L29",
+        "profile": "project-contract",
+        "source": "@engine/core-exports",
+        "version": "0.0.1 at 31164f46bb3d5dd9a7df018203f0e13a8a383dc5"
+      },
+      "status": "implemented"
     },
     {
       "blockedBy": [],
@@ -479299,7 +479973,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "900",
+          "lines": "903",
           "path": "packages/dom/src/document.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -479319,7 +479993,7 @@
       ],
       "metadata": {
         "entrypoint": "./document",
-        "line": 900,
+        "line": 903,
         "path": "renderer:packages/dom/src/document.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -479337,7 +480011,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.document",
       "spec": {
-        "anchor": "renderer:packages/dom/src/document.ts#L900",
+        "anchor": "renderer:packages/dom/src/document.ts#L903",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -479354,7 +480028,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "166",
+          "lines": "168",
           "path": "packages/dom/src/document.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -479374,7 +480048,7 @@
       ],
       "metadata": {
         "entrypoint": "./document",
-        "line": 166,
+        "line": 168,
         "path": "renderer:packages/dom/src/document.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -479392,7 +480066,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.document",
       "spec": {
-        "anchor": "renderer:packages/dom/src/document.ts#L166",
+        "anchor": "renderer:packages/dom/src/document.ts#L168",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -479435,7 +480109,7 @@
       "limitations": [],
       "metadata": {
         "entrypoint": "./document",
-        "line": 157,
+        "line": 159,
         "path": "renderer:packages/dom/src/document.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -479453,7 +480127,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.document",
       "spec": {
-        "anchor": "renderer:packages/dom/src/document.ts#L157",
+        "anchor": "renderer:packages/dom/src/document.ts#L159",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -479470,7 +480144,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "123",
+          "lines": "124",
           "path": "packages/dom/src/document.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -479490,7 +480164,7 @@
       ],
       "metadata": {
         "entrypoint": "./document",
-        "line": 123,
+        "line": 124,
         "path": "renderer:packages/dom/src/document.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -479508,7 +480182,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.document",
       "spec": {
-        "anchor": "renderer:packages/dom/src/document.ts#L123",
+        "anchor": "renderer:packages/dom/src/document.ts#L124",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -479551,7 +480225,7 @@
       "limitations": [],
       "metadata": {
         "entrypoint": "./document",
-        "line": 155,
+        "line": 157,
         "path": "renderer:packages/dom/src/document.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -479569,7 +480243,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.document",
       "spec": {
-        "anchor": "renderer:packages/dom/src/document.ts#L155",
+        "anchor": "renderer:packages/dom/src/document.ts#L157",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -483451,6 +484125,201 @@
       "blocks": [],
       "conformance": "extension",
       "consumers": [],
+      "description": "@zavx0z/dom package export ./html/vector-path-element.",
+      "domain": "dom",
+      "evidence": [
+        {
+          "doesNotProve": "Path parsing, paint, hit testing, SVG namespaces or complete SVG behavior.",
+          "path": "packages/dom/package.json",
+          "proves": "The exact VectorPath semantic class, coordinate-bound constant or package subpath is publicly owned by @zavx0z/dom.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "./html/vector-path-element",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Renderer/WebGPU behavior or SVG conformance.",
+          "path": "packages/dom/test/html-vector-path-element.test.ts",
+          "proves": "Exact class/subpath identity, reflected d mutation and shared coordinate bound.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "./html/vector-path-element",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom.export-paths.html-vector-path-element",
+      "kind": "package-export-path",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
+      },
+      "limitations": [
+        "vector-path is a project extension with reflected d and a shared coordinate bound; it is not SVGPathElement, an SVG namespace implementation or Path2D, and DOM owns no parsing, geometry or paint."
+      ],
+      "metadata": {
+        "childSummary": {
+          "derivedStatus": "implemented",
+          "implemented": 2,
+          "not-applicable": 0,
+          "partial": 0,
+          "total": 2,
+          "unsupported": 0,
+          "unverified": 0
+        },
+        "package": "@zavx0z/dom",
+        "sourceTarget": "src/html-vector-path-element.ts",
+        "target": "./src/html-vector-path-element.ts"
+      },
+      "name": "./html/vector-path-element",
+      "owner": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "spec": {
+        "anchor": "./src/html-vector-path-element.ts",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "description": "@zavx0z/dom/html/vector-path-element public runtime export HTMLVectorPathElement.",
+      "domain": "dom",
+      "evidence": [
+        {
+          "doesNotProve": "Path parsing, paint, hit testing, SVG namespaces or complete SVG behavior.",
+          "path": "packages/dom/src/html-vector-path-element.ts",
+          "proves": "The exact VectorPath semantic class, coordinate-bound constant or package subpath is publicly owned by @zavx0z/dom.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "HTMLVectorPathElement",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Renderer/WebGPU behavior or SVG conformance.",
+          "path": "packages/dom/test/html-vector-path-element.test.ts",
+          "proves": "Exact class/subpath identity, reflected d mutation and shared coordinate bound.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "HTMLVectorPathElement",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom.export-paths.html-vector-path-element.symbols.htmlvectorpathelement",
+      "kind": "runtime-export",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
+      },
+      "limitations": [
+        "vector-path is a project extension with reflected d and a shared coordinate bound; it is not SVGPathElement, an SVG namespace implementation or Path2D, and DOM owns no parsing, geometry or paint."
+      ],
+      "metadata": {
+        "entrypoint": "./html/vector-path-element",
+        "line": 13,
+        "path": "renderer:packages/dom/src/html-vector-path-element.ts",
+        "repository": "renderer",
+        "typeOnly": false
+      },
+      "name": "HTMLVectorPathElement",
+      "owner": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "platform.at-zavx0z-dom.export-paths.html-vector-path-element",
+      "spec": {
+        "anchor": "renderer:packages/dom/src/html-vector-path-element.ts#L13",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "description": "@zavx0z/dom/html/vector-path-element public runtime export VECTOR_PATH_COORDINATE_LIMIT.",
+      "domain": "dom",
+      "evidence": [
+        {
+          "doesNotProve": "Path parsing, paint, hit testing, SVG namespaces or complete SVG behavior.",
+          "path": "packages/dom/src/html-vector-path-element.ts",
+          "proves": "The exact VectorPath semantic class, coordinate-bound constant or package subpath is publicly owned by @zavx0z/dom.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "VECTOR_PATH_COORDINATE_LIMIT",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Renderer/WebGPU behavior or SVG conformance.",
+          "path": "packages/dom/test/html-vector-path-element.test.ts",
+          "proves": "Exact class/subpath identity, reflected d mutation and shared coordinate bound.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "VECTOR_PATH_COORDINATE_LIMIT",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom.export-paths.html-vector-path-element.symbols.vector_path_coordinate_limit",
+      "kind": "runtime-export",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
+      },
+      "limitations": [
+        "vector-path is a project extension with reflected d and a shared coordinate bound; it is not SVGPathElement, an SVG namespace implementation or Path2D, and DOM owns no parsing, geometry or paint."
+      ],
+      "metadata": {
+        "entrypoint": "./html/vector-path-element",
+        "line": 5,
+        "path": "renderer:packages/dom/src/html-vector-path-element.ts",
+        "repository": "renderer",
+        "typeOnly": false
+      },
+      "name": "VECTOR_PATH_COORDINATE_LIMIT",
+      "owner": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "platform.at-zavx0z-dom.export-paths.html-vector-path-element",
+      "spec": {
+        "anchor": "renderer:packages/dom/src/html-vector-path-element.ts#L5",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
       "description": "@zavx0z/dom package export ./input-event.",
       "domain": "dom",
       "evidence": [
@@ -485057,12 +485926,12 @@
       "metadata": {
         "childSummary": {
           "derivedStatus": "partial",
-          "implemented": 8,
+          "implemented": 9,
           "not-applicable": 0,
           "partial": 8,
-          "total": 114,
+          "total": 116,
           "unsupported": 0,
-          "unverified": 98
+          "unverified": 99
         },
         "package": "@zavx0z/dom",
         "sourceTarget": "src/index.ts",
@@ -485276,7 +486145,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "108",
+          "lines": "112",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -485296,7 +486165,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 108,
+        "line": 112,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -485314,7 +486183,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L108",
+        "anchor": "renderer:packages/dom/src/index.ts#L112",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -485386,7 +486255,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "108",
+          "lines": "112",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -485406,7 +486275,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 108,
+        "line": 112,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -485424,7 +486293,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L108",
+        "anchor": "renderer:packages/dom/src/index.ts#L112",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -485441,7 +486310,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "108",
+          "lines": "112",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -485461,7 +486330,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 108,
+        "line": 112,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -485479,7 +486348,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L108",
+        "anchor": "renderer:packages/dom/src/index.ts#L112",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -486486,7 +487355,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "108",
+          "lines": "112",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -486506,7 +487375,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 108,
+        "line": 112,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -486524,7 +487393,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L108",
+        "anchor": "renderer:packages/dom/src/index.ts#L112",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -486541,7 +487410,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -486561,7 +487430,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -486579,7 +487448,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -487317,7 +488186,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -487337,7 +488206,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -487355,7 +488224,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -488850,6 +489719,69 @@
     {
       "blockedBy": [],
       "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "description": "@zavx0z/dom public runtime export HTMLVectorPathElement.",
+      "domain": "dom",
+      "evidence": [
+        {
+          "doesNotProve": "Path parsing, paint, hit testing, SVG namespaces or complete SVG behavior.",
+          "path": "packages/dom/src/html-vector-path-element.ts",
+          "proves": "The exact VectorPath semantic class, coordinate-bound constant or package subpath is publicly owned by @zavx0z/dom.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "HTMLVectorPathElement",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Renderer/WebGPU behavior or SVG conformance.",
+          "path": "packages/dom/test/html-vector-path-element.test.ts",
+          "proves": "Exact class/subpath identity, reflected d mutation and shared coordinate bound.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "HTMLVectorPathElement",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom.export-paths.root.symbols.htmlvectorpathelement",
+      "kind": "runtime-export",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
+      },
+      "limitations": [
+        "vector-path is a project extension with reflected d and a shared coordinate bound; it is not SVGPathElement, an SVG namespace implementation or Path2D, and DOM owns no parsing, geometry or paint."
+      ],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 108,
+        "path": "renderer:packages/dom/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": false
+      },
+      "name": "HTMLVectorPathElement",
+      "owner": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "platform.at-zavx0z-dom.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/dom/src/index.ts#L108",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
       "conformance": "unknown",
       "consumers": [],
       "description": "@zavx0z/dom public type export InputCheckedStateChange.",
@@ -488857,7 +489789,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -488877,7 +489809,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -488895,7 +489827,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -489022,7 +489954,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -489042,7 +489974,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -489060,7 +489992,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -489077,7 +490009,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -489097,7 +490029,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -489115,7 +490047,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -489132,7 +490064,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -489152,7 +490084,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -489170,7 +490102,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -489187,7 +490119,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -489207,7 +490139,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -489225,7 +490157,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -489462,7 +490394,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "108",
+          "lines": "112",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -489482,7 +490414,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 108,
+        "line": 112,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -489500,7 +490432,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L108",
+        "anchor": "renderer:packages/dom/src/index.ts#L112",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -489517,7 +490449,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "108",
+          "lines": "112",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -489537,7 +490469,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 108,
+        "line": 112,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -489555,7 +490487,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L108",
+        "anchor": "renderer:packages/dom/src/index.ts#L112",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -489737,7 +490669,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -489757,7 +490689,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -489775,7 +490707,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -489902,7 +490834,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -489922,7 +490854,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -489940,7 +490872,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -490246,7 +491178,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -490266,7 +491198,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -490284,7 +491216,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -490411,7 +491343,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -490431,7 +491363,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -490449,7 +491381,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -490466,7 +491398,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -490486,7 +491418,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -490504,7 +491436,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -490700,7 +491632,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -490720,7 +491652,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -490738,7 +491670,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -490755,7 +491687,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -490775,7 +491707,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -490793,7 +491725,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -490810,7 +491742,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -490830,7 +491762,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 116,
+        "line": 120,
         "path": "renderer:packages/dom/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -490848,7 +491780,7 @@
       },
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/dom/src/index.ts#L116",
+        "anchor": "renderer:packages/dom/src/index.ts#L120",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -491295,6 +492227,61 @@
       "parent": "platform.at-zavx0z-dom.export-paths.root",
       "spec": {
         "anchor": "renderer:packages/dom/src/index.ts#L6",
+        "profile": "project-contract",
+        "source": "@zavx0z/dom-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "description": "@zavx0z/dom public runtime export VECTOR_PATH_COORDINATE_LIMIT.",
+      "domain": "dom",
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "108",
+          "path": "packages/dom/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "VECTOR_PATH_COORDINATE_LIMIT",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom.export-paths.root.symbols.vector_path_coordinate_limit",
+      "kind": "runtime-export",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 108,
+        "path": "renderer:packages/dom/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": false
+      },
+      "name": "VECTOR_PATH_COORDINATE_LIMIT",
+      "owner": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "parent": "platform.at-zavx0z-dom.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/dom/src/index.ts#L108",
         "profile": "project-contract",
         "source": "@zavx0z/dom-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -499297,6 +500284,121 @@
       "blocks": [],
       "conformance": "extension",
       "consumers": [],
+      "description": "@zavx0z/renderer package export ./frame-changes.",
+      "domain": "renderer",
+      "evidence": [
+        {
+          "doesNotProve": "Every symbol and observable behavior behind the path.",
+          "path": "packages/core/package.json",
+          "proves": "The package export path exists.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "./frame-changes",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer.export-paths.frame-changes",
+      "kind": "package-export-path",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered."
+      ],
+      "metadata": {
+        "childSummary": {
+          "derivedStatus": "unverified",
+          "implemented": 0,
+          "not-applicable": 0,
+          "partial": 0,
+          "total": 1,
+          "unsupported": 0,
+          "unverified": 1
+        },
+        "package": "@zavx0z/renderer",
+        "sourceTarget": "src/frame-changes.ts",
+        "target": "./src/frame-changes.ts"
+      },
+      "name": "./frame-changes",
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "./src/frame-changes.ts",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      },
+      "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "description": "@zavx0z/renderer/frame-changes public runtime export readCanonicalRenderFrameChanges.",
+      "domain": "renderer",
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "11",
+          "path": "packages/core/src/frame-changes.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "readCanonicalRenderFrameChanges",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer.export-paths.frame-changes.symbols.readcanonicalrenderframechanges",
+      "kind": "runtime-export",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "metadata": {
+        "entrypoint": "./frame-changes",
+        "line": 11,
+        "path": "renderer:packages/core/src/frame-changes.ts",
+        "repository": "renderer",
+        "typeOnly": false
+      },
+      "name": "readCanonicalRenderFrameChanges",
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.frame-changes",
+      "spec": {
+        "anchor": "renderer:packages/core/src/frame-changes.ts#L11",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
       "description": "@zavx0z/renderer package export ..",
       "domain": "renderer",
       "evidence": [
@@ -499322,12 +500424,12 @@
       "metadata": {
         "childSummary": {
           "derivedStatus": "partial",
-          "implemented": 1,
+          "implemented": 7,
           "not-applicable": 0,
           "partial": 4,
-          "total": 50,
+          "total": 58,
           "unsupported": 0,
-          "unverified": 45
+          "unverified": 47
         },
         "package": "@zavx0z/renderer",
         "sourceTarget": "src/index.ts",
@@ -499362,7 +500464,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "3",
+          "lines": "5",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -499382,7 +500484,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 3,
+        "line": 5,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -499400,7 +500502,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L3",
+        "anchor": "renderer:packages/core/src/index.ts#L5",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -499417,7 +500519,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "46",
+          "lines": "54",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -499437,7 +500539,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 46,
+        "line": 54,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -499455,7 +500557,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L46",
+        "anchor": "renderer:packages/core/src/index.ts#L54",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -499582,7 +500684,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -499602,7 +500704,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -499620,7 +500722,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -499637,7 +500739,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -499657,7 +500759,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -499675,7 +500777,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -499692,7 +500794,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "46",
+          "lines": "54",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -499712,7 +500814,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 46,
+        "line": 54,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -499730,7 +500832,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L46",
+        "anchor": "renderer:packages/core/src/index.ts#L54",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -499747,7 +500849,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "54",
+          "lines": "62",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -499767,7 +500869,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 54,
+        "line": 62,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -499785,7 +500887,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L54",
+        "anchor": "renderer:packages/core/src/index.ts#L62",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -499802,7 +500904,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "54",
+          "lines": "62",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -499822,7 +500924,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 54,
+        "line": 62,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -499840,7 +500942,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L54",
+        "anchor": "renderer:packages/core/src/index.ts#L62",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -499857,7 +500959,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "54",
+          "lines": "62",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -499877,12 +500979,349 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 54,
+        "line": 62,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
       },
       "name": "DocumentInteractionStateSubscriber",
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L62",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "description": "@zavx0z/renderer public type export DocumentRenderer.",
+      "domain": "renderer",
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "11",
+          "path": "packages/core/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "DocumentRenderer",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.documentrenderer",
+      "kind": "type-export",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 11,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "DocumentRenderer",
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L11",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "description": "@zavx0z/renderer public type export HitMetadata.",
+      "domain": "renderer",
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "11",
+          "path": "packages/core/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "HitMetadata",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.hitmetadata",
+      "kind": "type-export",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 11,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "HitMetadata",
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L11",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "description": "@zavx0z/renderer public runtime export hitTest.",
+      "domain": "renderer",
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "5",
+          "path": "packages/core/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "hitTest",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.hittest",
+      "kind": "runtime-export",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered."
+      ],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 5,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": false
+      },
+      "name": "hitTest",
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L5",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      },
+      "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "description": "@zavx0z/renderer public type export ImageDisplayItem.",
+      "domain": "renderer",
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "11",
+          "path": "packages/core/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "ImageDisplayItem",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.imagedisplayitem",
+      "kind": "type-export",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 11,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "ImageDisplayItem",
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L11",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "description": "@zavx0z/renderer public type export PathDisplayItem.",
+      "domain": "renderer",
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "11",
+          "path": "packages/core/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "PathDisplayItem",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "External-standard compatibility unless separately mapped.",
+          "path": "packages/core/test/renderer.test.ts",
+          "proves": "The bounded project API has behavioral coverage.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "PathDisplayItem",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.pathdisplayitem",
+      "kind": "type-export",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
+      },
+      "limitations": [],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 11,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "PathDisplayItem",
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L11",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "description": "@zavx0z/renderer public type export PointerInput.",
+      "domain": "renderer",
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "54",
+          "path": "packages/core/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "PointerInput",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.pointerinput",
+      "kind": "type-export",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 54,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "PointerInput",
       "owner": {
         "package": "@zavx0z/renderer",
         "repository": "renderer",
@@ -499907,117 +501346,7 @@
       "blocks": [],
       "conformance": "unknown",
       "consumers": [],
-      "description": "@zavx0z/renderer public type export DocumentRenderer.",
-      "domain": "renderer",
-      "evidence": [
-        {
-          "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
-          "path": "packages/core/src/index.ts",
-          "proves": "The public export exists at the pinned revision.",
-          "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "DocumentRenderer",
-          "type": "implementation"
-        }
-      ],
-      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.documentrenderer",
-      "kind": "type-export",
-      "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
-      },
-      "limitations": [
-        "Export/type presence is not behavioral evidence."
-      ],
-      "metadata": {
-        "entrypoint": ".",
-        "line": 9,
-        "path": "renderer:packages/core/src/index.ts",
-        "repository": "renderer",
-        "typeOnly": true
-      },
-      "name": "DocumentRenderer",
-      "owner": {
-        "package": "@zavx0z/renderer",
-        "repository": "renderer",
-        "stage": "cpu"
-      },
-      "ownerHint": {
-        "package": "@zavx0z/renderer",
-        "repository": "renderer",
-        "stage": "cpu"
-      },
-      "parent": "platform.at-zavx0z-renderer.export-paths.root",
-      "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
-        "profile": "project-contract",
-        "source": "@zavx0z/renderer-exports",
-        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
-      },
-      "status": "unverified"
-    },
-    {
-      "blockedBy": [],
-      "blocks": [],
-      "conformance": "unknown",
-      "consumers": [],
-      "description": "@zavx0z/renderer public type export HitMetadata.",
-      "domain": "renderer",
-      "evidence": [
-        {
-          "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
-          "path": "packages/core/src/index.ts",
-          "proves": "The public export exists at the pinned revision.",
-          "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "HitMetadata",
-          "type": "implementation"
-        }
-      ],
-      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.hitmetadata",
-      "kind": "type-export",
-      "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
-      },
-      "limitations": [
-        "Export/type presence is not behavioral evidence."
-      ],
-      "metadata": {
-        "entrypoint": ".",
-        "line": 9,
-        "path": "renderer:packages/core/src/index.ts",
-        "repository": "renderer",
-        "typeOnly": true
-      },
-      "name": "HitMetadata",
-      "owner": {
-        "package": "@zavx0z/renderer",
-        "repository": "renderer",
-        "stage": "cpu"
-      },
-      "ownerHint": {
-        "package": "@zavx0z/renderer",
-        "repository": "renderer",
-        "stage": "cpu"
-      },
-      "parent": "platform.at-zavx0z-renderer.export-paths.root",
-      "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
-        "profile": "project-contract",
-        "source": "@zavx0z/renderer-exports",
-        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
-      },
-      "status": "unverified"
-    },
-    {
-      "blockedBy": [],
-      "blocks": [],
-      "conformance": "extension",
-      "consumers": [],
-      "description": "@zavx0z/renderer public runtime export hitTest.",
+      "description": "@zavx0z/renderer public runtime export readCanonicalRenderFrameChanges.",
       "domain": "renderer",
       "evidence": [
         {
@@ -500027,18 +501356,18 @@
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
           "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "hitTest",
+          "symbol": "readCanonicalRenderFrameChanges",
           "type": "implementation"
         }
       ],
-      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.hittest",
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.readcanonicalrenderframechanges",
       "kind": "runtime-export",
       "lastVerified": {
         "date": "2026-08-29",
         "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
       },
       "limitations": [
-        "The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered."
+        "Export/type presence is not behavioral evidence."
       ],
       "metadata": {
         "entrypoint": ".",
@@ -500047,7 +501376,7 @@
         "repository": "renderer",
         "typeOnly": false
       },
-      "name": "hitTest",
+      "name": "readCanonicalRenderFrameChanges",
       "owner": {
         "package": "@zavx0z/renderer",
         "repository": "renderer",
@@ -500065,116 +501394,6 @@
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       },
-      "status": "partial"
-    },
-    {
-      "blockedBy": [],
-      "blocks": [],
-      "conformance": "unknown",
-      "consumers": [],
-      "description": "@zavx0z/renderer public type export ImageDisplayItem.",
-      "domain": "renderer",
-      "evidence": [
-        {
-          "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
-          "path": "packages/core/src/index.ts",
-          "proves": "The public export exists at the pinned revision.",
-          "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "ImageDisplayItem",
-          "type": "implementation"
-        }
-      ],
-      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.imagedisplayitem",
-      "kind": "type-export",
-      "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
-      },
-      "limitations": [
-        "Export/type presence is not behavioral evidence."
-      ],
-      "metadata": {
-        "entrypoint": ".",
-        "line": 9,
-        "path": "renderer:packages/core/src/index.ts",
-        "repository": "renderer",
-        "typeOnly": true
-      },
-      "name": "ImageDisplayItem",
-      "owner": {
-        "package": "@zavx0z/renderer",
-        "repository": "renderer",
-        "stage": "cpu"
-      },
-      "ownerHint": {
-        "package": "@zavx0z/renderer",
-        "repository": "renderer",
-        "stage": "cpu"
-      },
-      "parent": "platform.at-zavx0z-renderer.export-paths.root",
-      "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
-        "profile": "project-contract",
-        "source": "@zavx0z/renderer-exports",
-        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
-      },
-      "status": "unverified"
-    },
-    {
-      "blockedBy": [],
-      "blocks": [],
-      "conformance": "unknown",
-      "consumers": [],
-      "description": "@zavx0z/renderer public type export PointerInput.",
-      "domain": "renderer",
-      "evidence": [
-        {
-          "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "46",
-          "path": "packages/core/src/index.ts",
-          "proves": "The public export exists at the pinned revision.",
-          "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "PointerInput",
-          "type": "implementation"
-        }
-      ],
-      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.pointerinput",
-      "kind": "type-export",
-      "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
-      },
-      "limitations": [
-        "Export/type presence is not behavioral evidence."
-      ],
-      "metadata": {
-        "entrypoint": ".",
-        "line": 46,
-        "path": "renderer:packages/core/src/index.ts",
-        "repository": "renderer",
-        "typeOnly": true
-      },
-      "name": "PointerInput",
-      "owner": {
-        "package": "@zavx0z/renderer",
-        "repository": "renderer",
-        "stage": "cpu"
-      },
-      "ownerHint": {
-        "package": "@zavx0z/renderer",
-        "repository": "renderer",
-        "stage": "cpu"
-      },
-      "parent": "platform.at-zavx0z-renderer.export-paths.root",
-      "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L46",
-        "profile": "project-contract",
-        "source": "@zavx0z/renderer-exports",
-        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
-      },
       "status": "unverified"
     },
     {
@@ -500187,7 +501406,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -500207,7 +501426,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -500225,7 +501444,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -500242,7 +501461,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -500262,7 +501481,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -500280,7 +501499,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -500297,7 +501516,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -500317,7 +501536,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -500335,7 +501554,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -500352,7 +501571,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -500372,7 +501591,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -500390,7 +501609,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -500407,7 +501626,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -500427,7 +501646,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -500445,7 +501664,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -500462,7 +501681,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -500482,7 +501701,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -500500,7 +501719,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -500517,7 +501736,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -500537,7 +501756,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -500555,7 +501774,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -500572,7 +501791,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -500592,7 +501811,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -500610,7 +501829,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -500627,7 +501846,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -500647,7 +501866,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -500665,7 +501884,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -500682,7 +501901,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -500702,7 +501921,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -500720,7 +501939,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -500737,7 +501956,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -500757,7 +501976,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -500775,7 +501994,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -500792,7 +502011,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -500812,7 +502031,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -500830,7 +502049,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -500847,7 +502066,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -500867,7 +502086,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -500885,7 +502104,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -500902,7 +502121,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -500922,7 +502141,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -500940,7 +502159,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -500957,7 +502176,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -500977,7 +502196,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -500995,7 +502214,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -501012,7 +502231,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -501032,7 +502251,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -501050,7 +502269,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -501067,7 +502286,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -501087,7 +502306,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -501105,7 +502324,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -501122,7 +502341,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -501142,7 +502361,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -501160,7 +502379,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -501177,7 +502396,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -501197,7 +502416,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -501215,7 +502434,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -501232,7 +502451,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -501252,7 +502471,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -501270,7 +502489,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -501287,7 +502506,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -501307,7 +502526,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -501325,12 +502544,322 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
       },
       "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "description": "@zavx0z/renderer public type export RenderPathBounds.",
+      "domain": "renderer",
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "11",
+          "path": "packages/core/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "RenderPathBounds",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "External-standard compatibility unless separately mapped.",
+          "path": "packages/core/test/renderer.test.ts",
+          "proves": "The bounded project API has behavioral coverage.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "RenderPathBounds",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderpathbounds",
+      "kind": "type-export",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
+      },
+      "limitations": [],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 11,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderPathBounds",
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L11",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "description": "@zavx0z/renderer public type export RenderPathCubic.",
+      "domain": "renderer",
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "11",
+          "path": "packages/core/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "RenderPathCubic",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "External-standard compatibility unless separately mapped.",
+          "path": "packages/core/test/renderer.test.ts",
+          "proves": "The bounded project API has behavioral coverage.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "RenderPathCubic",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderpathcubic",
+      "kind": "type-export",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
+      },
+      "limitations": [],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 11,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderPathCubic",
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L11",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "description": "@zavx0z/renderer public type export RenderPathGeometry.",
+      "domain": "renderer",
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "11",
+          "path": "packages/core/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "RenderPathGeometry",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "External-standard compatibility unless separately mapped.",
+          "path": "packages/core/test/renderer.test.ts",
+          "proves": "The bounded project API has behavioral coverage.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "RenderPathGeometry",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderpathgeometry",
+      "kind": "type-export",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
+      },
+      "limitations": [],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 11,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderPathGeometry",
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L11",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "description": "@zavx0z/renderer public type export RenderPathPoint.",
+      "domain": "renderer",
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "11",
+          "path": "packages/core/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "RenderPathPoint",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "External-standard compatibility unless separately mapped.",
+          "path": "packages/core/test/renderer.test.ts",
+          "proves": "The bounded project API has behavioral coverage.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "RenderPathPoint",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderpathpoint",
+      "kind": "type-export",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
+      },
+      "limitations": [],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 11,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderPathPoint",
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L11",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "description": "@zavx0z/renderer public type export RenderPathSegment.",
+      "domain": "renderer",
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "11",
+          "path": "packages/core/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "RenderPathSegment",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "External-standard compatibility unless separately mapped.",
+          "path": "packages/core/test/renderer.test.ts",
+          "proves": "The bounded project API has behavioral coverage.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "RenderPathSegment",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.renderpathsegment",
+      "kind": "type-export",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
+      },
+      "limitations": [],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 11,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": true
+      },
+      "name": "RenderPathSegment",
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L11",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      },
+      "status": "implemented"
     },
     {
       "blockedBy": [],
@@ -501342,7 +502871,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -501362,7 +502891,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -501380,7 +502909,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -501397,7 +502926,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -501417,7 +502946,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -501435,7 +502964,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -501452,7 +502981,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -501472,7 +503001,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -501490,7 +503019,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -501507,7 +503036,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -501527,7 +503056,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -501545,7 +503074,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -501562,7 +503091,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -501582,7 +503111,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -501600,7 +503129,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -501617,7 +503146,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -501637,7 +503166,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -501655,7 +503184,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -501672,7 +503201,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -501692,7 +503221,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -501710,7 +503239,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -501727,7 +503256,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -501747,7 +503276,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -501765,7 +503294,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -501782,7 +503311,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "3",
+          "lines": "5",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -501809,7 +503338,7 @@
       "limitations": [],
       "metadata": {
         "entrypoint": ".",
-        "line": 3,
+        "line": 5,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -501827,7 +503356,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L3",
+        "anchor": "renderer:packages/core/src/index.ts#L5",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -501844,7 +503373,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "3",
+          "lines": "5",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -501864,7 +503393,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 3,
+        "line": 5,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": false
@@ -501882,7 +503411,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L3",
+        "anchor": "renderer:packages/core/src/index.ts#L5",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -501899,7 +503428,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "9",
+          "lines": "11",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -501919,7 +503448,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 9,
+        "line": 11,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -501937,7 +503466,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L9",
+        "anchor": "renderer:packages/core/src/index.ts#L11",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -501954,7 +503483,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "46",
+          "lines": "54",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -501974,7 +503503,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 46,
+        "line": 54,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -501992,7 +503521,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L46",
+        "anchor": "renderer:packages/core/src/index.ts#L54",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -502009,7 +503538,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "46",
+          "lines": "54",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -502029,7 +503558,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 46,
+        "line": 54,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -502047,7 +503576,62 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L46",
+        "anchor": "renderer:packages/core/src/index.ts#L54",
+        "profile": "project-contract",
+        "source": "@zavx0z/renderer-exports",
+        "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "description": "@zavx0z/renderer public runtime export VECTOR_PATH_COORDINATE_LIMIT.",
+      "domain": "renderer",
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "4",
+          "path": "packages/core/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "VECTOR_PATH_COORDINATE_LIMIT",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-renderer.export-paths.root.symbols.vector_path_coordinate_limit",
+      "kind": "runtime-export",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "metadata": {
+        "entrypoint": ".",
+        "line": 4,
+        "path": "renderer:packages/core/src/index.ts",
+        "repository": "renderer",
+        "typeOnly": false
+      },
+      "name": "VECTOR_PATH_COORDINATE_LIMIT",
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "parent": "platform.at-zavx0z-renderer.export-paths.root",
+      "spec": {
+        "anchor": "renderer:packages/core/src/index.ts#L4",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -502064,7 +503648,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "46",
+          "lines": "54",
           "path": "packages/core/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -502084,7 +503668,7 @@
       ],
       "metadata": {
         "entrypoint": ".",
-        "line": 46,
+        "line": 54,
         "path": "renderer:packages/core/src/index.ts",
         "repository": "renderer",
         "typeOnly": true
@@ -502102,7 +503686,7 @@
       },
       "parent": "platform.at-zavx0z-renderer.export-paths.root",
       "spec": {
-        "anchor": "renderer:packages/core/src/index.ts#L46",
+        "anchor": "renderer:packages/core/src/index.ts#L54",
         "profile": "project-contract",
         "source": "@zavx0z/renderer-exports",
         "version": "0.1.0 at 258176181fe98b604935c38d71aaca5b93aaf4b3"
@@ -517085,7 +518669,7 @@
     {
       "blockedBy": [],
       "blocks": [],
-      "conformance": "none",
+      "conformance": "extension",
       "consumers": [
         "node:@nodes/ui:NodeConnection:packages/ui/node-system.tsx:673",
         "node:@nodes/ui:NodeEditor grid and links:packages/ui/dom/node-editor.ts:277"
@@ -517094,23 +518678,41 @@
       "domain": "renderer",
       "evidence": [
         {
-          "doesNotProve": "Runtime implementation or observable conformance.",
-          "path": "packages/core/requirements.md",
-          "proves": "The pinned project inventory contains renderer.features.vector-path-display-item.",
+          "doesNotProve": "Complete SVG path grammar, fill, close, arcs or adaptive tessellation.",
+          "path": "packages/core/src/path.ts",
+          "proves": "Bounded absolute M/L/Q/C parsing normalizes and samples one immutable open stroked path with explicit source/token/cubic limits.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "vector path display item",
-          "type": "requirement"
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "parseRenderPath",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Complete SVG layout/paint or arbitrary affine transforms.",
+          "path": "packages/core/src/renderer.ts",
+          "proves": "One semantic VectorPath emits one retained Path item and exact path hit while shared transform owners avoid per-Path transform replacement.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "emitVectorPath/presentationTransforms",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Complete SVG conformance or actual GPU pixels.",
+          "path": "packages/core/test/vector-path.test.ts",
+          "proves": "Grammar limits, normalization, clips, zoom-aware exact path hit, hittable coarse-envelope center, weak predecessor collection, exact identity, 10k shared-transform and mixed-subtree behavior.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "vector-path-display-item",
+          "type": "unit-test"
         }
       ],
       "id": "renderer.features.vector-path-display-item",
       "kind": "renderer-stage",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
       },
       "limitations": [
-        "The CPU renderer has no implementation of this internal platform capability."
+        "Bounded to one absolute open M/L/Q/C subpath, stroke-only paint and six samples per curve; relative/shorthand commands, fill, close, arcs, dashes, adaptive tessellation and complete SVG join/cap policy are unsupported."
       ],
       "metadata": {
         "consumerDemand": [
@@ -517153,7 +518755,7 @@
         "source": "renderer-contract",
         "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
       },
-      "status": "unsupported"
+      "status": "implemented"
     },
     {
       "blockedBy": [],
@@ -523428,29 +525030,47 @@
     {
       "blockedBy": [],
       "blocks": [],
-      "conformance": "none",
+      "conformance": "extension",
       "consumers": [],
       "description": "Retained WebGPU backend vector path capability.",
       "domain": "webgpu",
       "evidence": [
         {
-          "doesNotProve": "Runtime implementation or observable conformance.",
-          "path": "packages/webgpu/requirements.md",
-          "proves": "The pinned project inventory contains webgpu.features.vector-path.",
+          "doesNotProve": "Complete SVG stroking, fill, dashes, arbitrary joins/caps or adaptive curve quality.",
+          "path": "packages/webgpu/src/webgpu-backend.ts",
+          "proves": "Exact-opaque Paths use stable semantic style and sampled-segment slots in transform/clip-compatible Engine draw-range runs; non-opaque Paths retain one continuous scalar Mesh fallback.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "vector path",
-          "type": "requirement"
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "retained stroked Path planning",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Every GPU/device, complete SVG stroking or live browser pixels.",
+          "path": "packages/webgpu/test/vector-path.test.ts",
+          "proves": "10k opaque one-run batching, zero-upload pan/zoom, one-record style/route updates, barriers, clips, slot-generation safety, scalar fallback identity/updates/cleanup and atomic validation.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "vector-path",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Non-opaque fallback pixels, every adapter/device or complete SVG stroking.",
+          "path": "packages/core/src/renderer/shaders/stroked-path-instanced.webgpu.test.ts",
+          "proves": "Real WebGPU pixels cover exact-opaque sampled segment width, transform and presentation clipping.",
+          "repository": "engine",
+          "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
+          "symbol": "InstancedStrokedPath pixels",
+          "type": "unit-test"
         }
       ],
       "id": "webgpu.features.vector-path",
       "kind": "webgpu-backend",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
       },
       "limitations": [
-        "RenderFrame and retained backend admit Rect, Text, and Image only; no generic vector/path display item exists."
+        "Instanced batching admits exact-opaque Paths only; translucent Paths use the retained scalar correctness fallback. Complete SVG fill/stroking, dashes, arbitrary join/cap policy and adaptive curve quality are unsupported."
       ],
       "metadata": {},
       "name": "vector path",
@@ -523470,7 +525090,7 @@
         "source": "renderer-webgpu-contract",
         "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
       },
-      "status": "unsupported"
+      "status": "implemented"
     }
   ],
   "repositories": [
@@ -523484,7 +525104,7 @@
       "branch": "main",
       "dirty": true,
       "id": "engine",
-      "revision": "0d63eeaf4e2057316212a1a8f5ff31684f22e2b2"
+      "revision": "300d00fd5494308382e3efcdf2434cd1ee7cd2d1"
     },
     {
       "branch": "main",
@@ -523502,19 +525122,19 @@
       "branch": "main",
       "dirty": false,
       "id": "node",
-      "revision": "112ea769255b4b93ce8481e6283dda443f60d07a"
+      "revision": "d52e8f5e3ba4b548d38be0257a2b181b476aa425"
     },
     {
       "branch": "main",
       "dirty": true,
       "id": "renderer",
-      "revision": "9af61ff761a249a22d1ce22d61a7f2c3855f0c89"
+      "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
     },
     {
       "branch": "main",
       "dirty": false,
       "id": "storybook",
-      "revision": "a7bcfd022d260392dda0695e095fc8db4896191d"
+      "revision": "c80d35f001513104df80b159c53d2358f8bd8070"
     },
     {
       "branch": "main",
@@ -523526,7 +525146,7 @@
       "branch": "main",
       "dirty": false,
       "id": "ui",
-      "revision": "4ff57bc55c6b4336746e7d120912f85ab6224527"
+      "revision": "d3fb4160ff1f92320c58104e862a71f83959e540"
     }
   ],
   "schemaVersion": 1,
@@ -523551,9 +525171,9 @@
       "mappedEntries": 3032,
       "missing": 0,
       "not-applicable": 0,
-      "partial": 179,
+      "partial": 181,
       "specEntries": 3032,
-      "unsupported": 2853,
+      "unsupported": 2851,
       "unverified": 0
     },
     "devtools": {
@@ -523567,22 +525187,22 @@
       "unverified": 13
     },
     "dom": {
-      "implemented": 81,
-      "mappedEntries": 1218,
+      "implemented": 86,
+      "mappedEntries": 1224,
       "missing": 0,
       "not-applicable": 0,
       "partial": 249,
-      "specEntries": 1218,
+      "specEntries": 1224,
       "unsupported": 706,
-      "unverified": 182
+      "unverified": 183
     },
     "engine": {
-      "implemented": 15,
-      "mappedEntries": 152,
+      "implemented": 25,
+      "mappedEntries": 162,
       "missing": 0,
       "not-applicable": 0,
       "partial": 34,
-      "specEntries": 152,
+      "specEntries": 162,
       "unsupported": 4,
       "unverified": 99
     },
@@ -523607,14 +525227,14 @@
       "unverified": 29
     },
     "renderer": {
-      "implemented": 6,
-      "mappedEntries": 97,
+      "implemented": 13,
+      "mappedEntries": 107,
       "missing": 0,
       "not-applicable": 0,
-      "partial": 43,
-      "specEntries": 97,
-      "unsupported": 3,
-      "unverified": 45
+      "partial": 44,
+      "specEntries": 107,
+      "unsupported": 2,
+      "unverified": 48
     },
     "tsx": {
       "implemented": 72,
@@ -523627,13 +525247,13 @@
       "unverified": 44
     },
     "webgpu": {
-      "implemented": 18,
+      "implemented": 19,
       "mappedEntries": 37,
       "missing": 0,
       "not-applicable": 0,
       "partial": 12,
       "specEntries": 37,
-      "unsupported": 1,
+      "unsupported": 0,
       "unverified": 6
     }
   },
@@ -523643,12 +525263,12 @@
     "duplicateCapabilityIds": 0,
     "generatorVersion": "1.0.0",
     "inventoryFiles": 214,
-    "mappedEntries": 8743,
+    "mappedEntries": 8769,
     "missing": 0,
     "schemaErrors": 0,
     "schemaVersion": 1,
     "sourceArtifacts": 75,
-    "specEntries": 8743,
+    "specEntries": 8769,
     "unknownSupportIds": 0
   }
 }

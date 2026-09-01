@@ -31631,6 +31631,46 @@
     {
       "blockedBy": [],
       "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Path parsing, paint, hit testing, SVG namespaces or complete SVG behavior.",
+          "path": "packages/dom/src/html-vector-path-element.ts",
+          "proves": "The exact VectorPath semantic class, coordinate-bound constant or package subpath is publicly owned by @zavx0z/dom.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "vector path element",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Renderer/WebGPU behavior or SVG conformance.",
+          "path": "packages/dom/test/html-vector-path-element.test.ts",
+          "proves": "Exact class/subpath identity, reflected d mutation and shared coordinate bound.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "vector path element",
+          "type": "unit-test"
+        }
+      ],
+      "id": "dom.project.vector-path-element",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
+      },
+      "limitations": [
+        "vector-path is a project extension with reflected d and a shared coordinate bound; it is not SVGPathElement, an SVG namespace implementation or Path2D, and DOM owns no parsing, geometry or paint."
+      ],
+      "owner": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
       "conformance": "adapted",
       "consumers": [],
       "evidence": [
@@ -153234,7 +153274,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "900",
+          "lines": "903",
           "path": "packages/dom/src/document.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -153266,7 +153306,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "166",
+          "lines": "168",
           "path": "packages/dom/src/document.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -153336,7 +153376,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "123",
+          "lines": "124",
           "path": "packages/dom/src/document.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -155555,6 +155595,126 @@
       "consumers": [],
       "evidence": [
         {
+          "doesNotProve": "Path parsing, paint, hit testing, SVG namespaces or complete SVG behavior.",
+          "path": "packages/dom/package.json",
+          "proves": "The exact VectorPath semantic class, coordinate-bound constant or package subpath is publicly owned by @zavx0z/dom.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "./html/vector-path-element",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Renderer/WebGPU behavior or SVG conformance.",
+          "path": "packages/dom/test/html-vector-path-element.test.ts",
+          "proves": "Exact class/subpath identity, reflected d mutation and shared coordinate bound.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "./html/vector-path-element",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom.export-paths.html-vector-path-element",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
+      },
+      "limitations": [
+        "vector-path is a project extension with reflected d and a shared coordinate bound; it is not SVGPathElement, an SVG namespace implementation or Path2D, and DOM owns no parsing, geometry or paint."
+      ],
+      "owner": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Path parsing, paint, hit testing, SVG namespaces or complete SVG behavior.",
+          "path": "packages/dom/src/html-vector-path-element.ts",
+          "proves": "The exact VectorPath semantic class, coordinate-bound constant or package subpath is publicly owned by @zavx0z/dom.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "HTMLVectorPathElement",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Renderer/WebGPU behavior or SVG conformance.",
+          "path": "packages/dom/test/html-vector-path-element.test.ts",
+          "proves": "Exact class/subpath identity, reflected d mutation and shared coordinate bound.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "HTMLVectorPathElement",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom.export-paths.html-vector-path-element.symbols.htmlvectorpathelement",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
+      },
+      "limitations": [
+        "vector-path is a project extension with reflected d and a shared coordinate bound; it is not SVGPathElement, an SVG namespace implementation or Path2D, and DOM owns no parsing, geometry or paint."
+      ],
+      "owner": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Path parsing, paint, hit testing, SVG namespaces or complete SVG behavior.",
+          "path": "packages/dom/src/html-vector-path-element.ts",
+          "proves": "The exact VectorPath semantic class, coordinate-bound constant or package subpath is publicly owned by @zavx0z/dom.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "VECTOR_PATH_COORDINATE_LIMIT",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Renderer/WebGPU behavior or SVG conformance.",
+          "path": "packages/dom/test/html-vector-path-element.test.ts",
+          "proves": "Exact class/subpath identity, reflected d mutation and shared coordinate bound.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "VECTOR_PATH_COORDINATE_LIMIT",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom.export-paths.html-vector-path-element.symbols.vector_path_coordinate_limit",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
+      },
+      "limitations": [
+        "vector-path is a project extension with reflected d and a shared coordinate bound; it is not SVGPathElement, an SVG namespace implementation or Path2D, and DOM owns no parsing, geometry or paint."
+      ],
+      "owner": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
           "doesNotProve": "Every symbol and observable behavior behind the path.",
           "path": "packages/dom/package.json",
           "proves": "The package export path exists.",
@@ -156592,7 +156752,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "108",
+          "lines": "112",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -156656,7 +156816,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "108",
+          "lines": "112",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -156688,7 +156848,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "108",
+          "lines": "112",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -157296,7 +157456,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "108",
+          "lines": "112",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -157328,7 +157488,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -157782,7 +157942,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -158673,12 +158833,52 @@
     {
       "blockedBy": [],
       "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Path parsing, paint, hit testing, SVG namespaces or complete SVG behavior.",
+          "path": "packages/dom/src/html-vector-path-element.ts",
+          "proves": "The exact VectorPath semantic class, coordinate-bound constant or package subpath is publicly owned by @zavx0z/dom.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "HTMLVectorPathElement",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Renderer/WebGPU behavior or SVG conformance.",
+          "path": "packages/dom/test/html-vector-path-element.test.ts",
+          "proves": "Exact class/subpath identity, reflected d mutation and shared coordinate bound.",
+          "repository": "renderer",
+          "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
+          "symbol": "HTMLVectorPathElement",
+          "type": "unit-test"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom.export-paths.root.symbols.htmlvectorpathelement",
+      "lastVerified": {
+        "date": "2026-09-01",
+        "revision": "3a0801d4d0fa39f385fca7aceca67fbd0736e591"
+      },
+      "limitations": [
+        "vector-path is a project extension with reflected d and a shared coordinate bound; it is not SVGPathElement, an SVG namespace implementation or Path2D, and DOM owns no parsing, geometry or paint."
+      ],
+      "owner": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "status": "implemented"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
       "conformance": "unknown",
       "consumers": [],
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -158774,7 +158974,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -158806,7 +159006,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -158838,7 +159038,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -158870,7 +159070,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159030,7 +159230,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "108",
+          "lines": "112",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159062,7 +159262,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "108",
+          "lines": "112",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159190,7 +159390,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159286,7 +159486,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159492,7 +159692,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159588,7 +159788,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159620,7 +159820,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159762,7 +159962,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159794,7 +159994,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -159826,7 +160026,7 @@
       "evidence": [
         {
           "doesNotProve": "Observable runtime behavior or semantic conformance.",
-          "lines": "116",
+          "lines": "120",
           "path": "packages/dom/src/index.ts",
           "proves": "The public export exists at the pinned revision.",
           "repository": "renderer",
@@ -160098,6 +160298,38 @@
         }
       ],
       "id": "platform.at-zavx0z-dom.export-paths.root.symbols.uieventinit",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [
+        "Export/type presence is not behavioral evidence."
+      ],
+      "owner": {
+        "package": "@zavx0z/dom",
+        "repository": "renderer",
+        "stage": "semantic"
+      },
+      "status": "unverified"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "unknown",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "Observable runtime behavior or semantic conformance.",
+          "lines": "108",
+          "path": "packages/dom/src/index.ts",
+          "proves": "The public export exists at the pinned revision.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "VECTOR_PATH_COORDINATE_LIMIT",
+          "type": "implementation"
+        }
+      ],
+      "id": "platform.at-zavx0z-dom.export-paths.root.symbols.vector_path_coordinate_limit",
       "lastVerified": {
         "date": "2026-08-29",
         "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"

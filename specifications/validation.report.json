@@ -4,12 +4,12 @@
   "duplicateCapabilityIds": 0,
   "generatorVersion": "1.0.0",
   "inventoryFiles": 214,
-  "mappedEntries": 8743,
+  "mappedEntries": 8769,
   "missing": 0,
   "schemaErrors": 0,
   "schemaVersion": 1,
   "sourceArtifacts": 75,
-  "specEntries": 8743,
+  "specEntries": 8769,
   "statistics": {
     "browser": {
       "implemented": 16,
@@ -26,9 +26,9 @@
       "mappedEntries": 3032,
       "missing": 0,
       "not-applicable": 0,
-      "partial": 179,
+      "partial": 181,
       "specEntries": 3032,
-      "unsupported": 2853,
+      "unsupported": 2851,
       "unverified": 0
     },
     "devtools": {
@@ -42,22 +42,22 @@
       "unverified": 13
     },
     "dom": {
-      "implemented": 81,
-      "mappedEntries": 1218,
+      "implemented": 86,
+      "mappedEntries": 1224,
       "missing": 0,
       "not-applicable": 0,
       "partial": 249,
-      "specEntries": 1218,
+      "specEntries": 1224,
       "unsupported": 706,
-      "unverified": 182
+      "unverified": 183
     },
     "engine": {
-      "implemented": 15,
-      "mappedEntries": 152,
+      "implemented": 25,
+      "mappedEntries": 162,
       "missing": 0,
       "not-applicable": 0,
       "partial": 34,
-      "specEntries": 152,
+      "specEntries": 162,
       "unsupported": 4,
       "unverified": 99
     },
@@ -82,14 +82,14 @@
       "unverified": 29
     },
     "renderer": {
-      "implemented": 6,
-      "mappedEntries": 97,
+      "implemented": 13,
+      "mappedEntries": 107,
       "missing": 0,
       "not-applicable": 0,
-      "partial": 43,
-      "specEntries": 97,
-      "unsupported": 3,
-      "unverified": 45
+      "partial": 44,
+      "specEntries": 107,
+      "unsupported": 2,
+      "unverified": 48
     },
     "tsx": {
       "implemented": 72,
@@ -102,13 +102,13 @@
       "unverified": 44
     },
     "webgpu": {
-      "implemented": 18,
+      "implemented": 19,
       "mappedEntries": 37,
       "missing": 0,
       "not-applicable": 0,
       "partial": 12,
       "specEntries": 37,
-      "unsupported": 1,
+      "unsupported": 0,
       "unverified": 6
     }
   },

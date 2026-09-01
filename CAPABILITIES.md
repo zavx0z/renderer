@@ -11,14 +11,14 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | Repository | Branch | Revision | Dirty at generation |
 |---|---|---|---:|
 | demo | main | `470c70a70b436fb3e3ae121b3ab81fa410ef3255` | no |
-| engine | main | `0d63eeaf4e2057316212a1a8f5ff31684f22e2b2` | yes |
+| engine | main | `300d00fd5494308382e3efcdf2434cd1ee7cd2d1` | yes |
 | interpreter | main | `4f02274a6e9f99a8717507fe5885301a33eec4dc` | no |
 | metafor | main | `7611415474fae233cd88abc8b1fc14746316333c` | no |
-| node | main | `112ea769255b4b93ce8481e6283dda443f60d07a` | no |
-| renderer | main | `9af61ff761a249a22d1ce22d61a7f2c3855f0c89` | yes |
-| storybook | main | `a7bcfd022d260392dda0695e095fc8db4896191d` | no |
+| node | main | `d52e8f5e3ba4b548d38be0257a2b181b476aa425` | no |
+| renderer | main | `3a0801d4d0fa39f385fca7aceca67fbd0736e591` | yes |
+| storybook | main | `c80d35f001513104df80b159c53d2358f8bd8070` | no |
 | template | main | `ad9f272844a876e178b6b0041153588111045764` | no |
-| ui | main | `4ff57bc55c6b4336746e7d120912f85ab6224527` | no |
+| ui | main | `d3fb4160ff1f92320c58104e862a71f83959e540` | no |
 
 ## Pinned external sources
 
@@ -54,25 +54,25 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | Domain | Spec entries | Mapped | Implemented | Partial | Unsupported | Not applicable | Unverified | Missing |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
 | browser | 70 | 70 | 16 | 22 | 1 | 0 | 31 | 0 |
-| css | 3032 | 3032 | 0 | 179 | 2853 | 0 | 0 | 0 |
+| css | 3032 | 3032 | 0 | 181 | 2851 | 0 | 0 | 0 |
 | devtools | 31 | 31 | 13 | 0 | 5 | 0 | 13 | 0 |
-| dom | 1218 | 1218 | 81 | 249 | 706 | 0 | 182 | 0 |
-| engine | 152 | 152 | 15 | 34 | 4 | 0 | 99 | 0 |
+| dom | 1224 | 1224 | 86 | 249 | 706 | 0 | 183 | 0 |
+| engine | 162 | 162 | 25 | 34 | 4 | 0 | 99 | 0 |
 | html | 3729 | 3729 | 0 | 996 | 1946 | 787 | 0 | 0 |
 | react | 211 | 211 | 28 | 49 | 70 | 35 | 29 | 0 |
-| renderer | 97 | 97 | 6 | 43 | 3 | 0 | 45 | 0 |
+| renderer | 107 | 107 | 13 | 44 | 2 | 0 | 48 | 0 |
 | tsx | 166 | 166 | 72 | 22 | 28 | 0 | 44 | 0 |
-| webgpu | 37 | 37 | 18 | 12 | 1 | 0 | 6 | 0 |
+| webgpu | 37 | 37 | 19 | 12 | 0 | 0 | 6 | 0 |
 
 ## Owner overlays
 
 | Package | Repository | Revision | Records |
 |---|---|---|---:|
-| @engine/core | engine | `0d63eeaf4e2057316212a1a8f5ff31684f22e2b2` | 152 |
-| @zavx0z/dom | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 4947 |
+| @engine/core | engine | `0d63eeaf4e2057316212a1a8f5ff31684f22e2b2` | 162 |
+| @zavx0z/dom | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 4953 |
 | @zavx0z/dom-devtools | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 31 |
 | @zavx0z/react | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 211 |
-| @zavx0z/renderer | renderer | `9af61ff761a249a22d1ce22d61a7f2c3855f0c89` | 3129 |
+| @zavx0z/renderer | renderer | `9af61ff761a249a22d1ce22d61a7f2c3855f0c89` | 3139 |
 | @zavx0z/renderer-browser | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 70 |
 | @zavx0z/renderer-webgpu | renderer | `9af61ff761a249a22d1ce22d61a7f2c3855f0c89` | 37 |
 | @zavx0z/template | template | `838a214a83950259f3f5d543e881e11402bc230c` | 166 |
@@ -2306,7 +2306,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `css.properties.stop-color` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
 | `css.properties.stop-opacity` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
 | `css.properties.string-set` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
-| `css.properties.stroke` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
+| `css.properties.stroke` | property | partial | adapted | @zavx0z/renderer/cpu | Implemented only for solid resolved color and finite non-negative px values on the project VectorPath extension; complete SVG paint/length grammar, percentages, URLs, context paint, animation, fill, dash and arbitrary joins/caps remain unsupported. | 4 | 0 |
 | `css.properties.stroke-align` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
 | `css.properties.stroke-alignment` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
 | `css.properties.stroke-break` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
@@ -2326,7 +2326,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `css.properties.stroke-position` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
 | `css.properties.stroke-repeat` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
 | `css.properties.stroke-size` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
-| `css.properties.stroke-width` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
+| `css.properties.stroke-width` | property | partial | adapted | @zavx0z/renderer/cpu | Implemented only for solid resolved color and finite non-negative px values on the project VectorPath extension; complete SVG paint/length grammar, percentages, URLs, context paint, animation, fill, dash and arbitrary joins/caps remain unsupported. | 4 | 0 |
 | `css.properties.tab-size` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
 | `css.properties.table-layout` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
 | `css.properties.text-align` | property | partial | adapted | @zavx0z/renderer/cpu | Only the explicitly admitted property values and bounded CPU/backend algorithms are implemented. | 3 | 0 |
@@ -4195,6 +4195,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `dom.mixins.xpathevaluatorbase.methods.createexpression` | operation | unsupported | none | @zavx0z/dom/semantic | No current runtime implementation and behavioral test were found for this pinned DOM member. | 1 | 0 |
 | `dom.mixins.xpathevaluatorbase.methods.creatensresolver` | operation | unsupported | none | @zavx0z/dom/semantic | No current runtime implementation and behavioral test were found for this pinned DOM member. | 1 | 0 |
 | `dom.mixins.xpathevaluatorbase.methods.evaluate` | operation | unsupported | none | @zavx0z/dom/semantic | No current runtime implementation and behavioral test were found for this pinned DOM member. | 1 | 0 |
+| `dom.project.vector-path-element` | semantic-extension | implemented | extension | @zavx0z/dom/semantic | vector-path is a project extension with reflected d and a shared coordinate bound; it is not SVGPathElement, an SVG namespace implementation or Path2D, and DOM owns no parsing, geometry or paint. | 2 | 0 |
 | `platform.at-zavx0z-dom.export-paths.character-data` | package-export-path | partial | extension | @zavx0z/dom/semantic | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.character-data.symbols.characterdata` | runtime-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.comment` | package-export-path | partial | extension | @zavx0z/dom/semantic | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
@@ -4278,6 +4279,9 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `platform.at-zavx0z-dom.export-paths.html-text-area-element.symbols.htmltextareaelement` | runtime-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.html-u-list-element` | package-export-path | partial | extension | @zavx0z/dom/semantic | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.html-u-list-element.symbols.htmlulistelement` | runtime-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-zavx0z-dom.export-paths.html-vector-path-element` | package-export-path | implemented | extension | @zavx0z/dom/semantic | vector-path is a project extension with reflected d and a shared coordinate bound; it is not SVGPathElement, an SVG namespace implementation or Path2D, and DOM owns no parsing, geometry or paint. | 2 | 0 |
+| `platform.at-zavx0z-dom.export-paths.html-vector-path-element.symbols.htmlvectorpathelement` | runtime-export | implemented | extension | @zavx0z/dom/semantic | vector-path is a project extension with reflected d and a shared coordinate bound; it is not SVGPathElement, an SVG namespace implementation or Path2D, and DOM owns no parsing, geometry or paint. | 2 | 0 |
+| `platform.at-zavx0z-dom.export-paths.html-vector-path-element.symbols.vector_path_coordinate_limit` | runtime-export | implemented | extension | @zavx0z/dom/semantic | vector-path is a project extension with reflected d and a shared coordinate bound; it is not SVGPathElement, an SVG namespace implementation or Path2D, and DOM owns no parsing, geometry or paint. | 2 | 0 |
 | `platform.at-zavx0z-dom.export-paths.input-event` | package-export-path | partial | extension | @zavx0z/dom/semantic | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.input-event.symbols.inputevent` | runtime-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.input-event.symbols.inputeventinit` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
@@ -4375,6 +4379,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `platform.at-zavx0z-dom.export-paths.root.symbols.htmltablesectiontagname` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.htmltextareaelement` | runtime-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.htmlulistelement` | runtime-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-zavx0z-dom.export-paths.root.symbols.htmlvectorpathelement` | runtime-export | implemented | extension | @zavx0z/dom/semantic | vector-path is a project extension with reflected d and a shared coordinate bound; it is not SVGPathElement, an SVG namespace implementation or Path2D, and DOM owns no parsing, geometry or paint. | 2 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.inputcheckedstatechange` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.inputevent` | runtime-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.inputeventinit` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
@@ -4419,6 +4424,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `platform.at-zavx0z-dom.export-paths.root.symbols.togglepopoveroptions` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.uievent` | runtime-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.uieventinit` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-zavx0z-dom.export-paths.root.symbols.vector_path_coordinate_limit` | runtime-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.wheelevent` | runtime-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.root.symbols.wheeleventinit` | type-export | unverified | unknown | @zavx0z/dom/semantic | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-dom.export-paths.state-change` | package-export-path | partial | extension | @zavx0z/dom/semantic | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
@@ -4475,6 +4481,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `engine.features.index-buffer-format` | engine-contract | unverified | unknown | @engine/core/gpu-scene-resource | setIndex accepts arbitrary typed arrays while Renderer binds every non-Uint32 index as uint16; invalid inputs are not rejected. | 1 | 0 |
 | `engine.features.instance-layer` | engine-contract | implemented | extension | @engine/core/gpu-scene-resource | — | 2 | 0 |
 | `engine.features.instanced-rounded-rectangles` | engine-contract | implemented | extension | @engine/core/gpu-scene-resource | — | 2 | 0 |
+| `engine.features.instanced-stroked-paths` | engine-contract | implemented | extension | @engine/core/gpu-scene-resource | The instanced Engine contract admits exact-opaque independent sampled capsules only; translucent connected-stroke union/scalar fallback belongs to Renderer, and complete SVG fill/stroking, dashes, adaptive tessellation and analytical join self-union are unsupported. Outer AA fringe overlap at sampled joins remains a bounded limitation. | 5 | 0 |
 | `engine.features.legacy-ui-display-flag` | engine-contract | partial | extension | @engine/core/gpu-scene-resource | Implementation exists, but the public lifecycle/value space or focused behavioral evidence is incomplete. | 2 | 0 |
 | `engine.features.loaders` | engine-contract | partial | extension | @engine/core/gpu-scene-resource | Implementation exists, but the public lifecycle/value space or focused behavioral evidence is incomplete. | 2 | 0 |
 | `engine.features.material-groups` | engine-contract | unsupported | none | @engine/core/gpu-scene-resource | Public Mesh documentation promises material arrays mapped to geometry.groups, but BufferGeometry has no groups and Renderer uses material[0]. | 1 | 0 |
@@ -4529,6 +4536,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `platform.at-engine-core.export-paths.root.symbols.imageviewbox` | type-export | unverified | unknown | @engine/core/gpu-scene-resource | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-engine-core.export-paths.root.symbols.instancedmesh` | runtime-export | unverified | unknown | @engine/core/gpu-scene-resource | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-engine-core.export-paths.root.symbols.instancedroundedrect` | runtime-export | implemented | extension | @engine/core/gpu-scene-resource | — | 2 | 0 |
+| `platform.at-engine-core.export-paths.root.symbols.instancedstrokedpath` | runtime-export | implemented | extension | @engine/core/gpu-scene-resource | — | 2 | 0 |
 | `platform.at-engine-core.export-paths.root.symbols.instancehandle` | type-export | unverified | unknown | @engine/core/gpu-scene-resource | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-engine-core.export-paths.root.symbols.instancelayer` | runtime-export | implemented | extension | @engine/core/gpu-scene-resource | — | 2 | 0 |
 | `platform.at-engine-core.export-paths.root.symbols.instancelayeroptions` | type-export | unverified | unknown | @engine/core/gpu-scene-resource | Export/type presence is not behavioral evidence. | 1 | 0 |
@@ -4585,6 +4593,14 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `platform.at-engine-core.export-paths.root.symbols.space` | runtime-export | unverified | unknown | @engine/core/gpu-scene-resource | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-engine-core.export-paths.root.symbols.spheregeometry` | runtime-export | unverified | unknown | @engine/core/gpu-scene-resource | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-engine-core.export-paths.root.symbols.spheregeometryparameters` | type-export | unverified | unknown | @engine/core/gpu-scene-resource | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-engine-core.export-paths.root.symbols.stroked_path_segment_offsets` | runtime-export | implemented | extension | @engine/core/gpu-scene-resource | — | 2 | 0 |
+| `platform.at-engine-core.export-paths.root.symbols.stroked_path_segment_record_byte_length` | runtime-export | implemented | extension | @engine/core/gpu-scene-resource | — | 2 | 0 |
+| `platform.at-engine-core.export-paths.root.symbols.stroked_path_segment_record_words` | runtime-export | implemented | extension | @engine/core/gpu-scene-resource | — | 2 | 0 |
+| `platform.at-engine-core.export-paths.root.symbols.stroked_path_style_offsets` | runtime-export | implemented | extension | @engine/core/gpu-scene-resource | — | 2 | 0 |
+| `platform.at-engine-core.export-paths.root.symbols.stroked_path_style_record_byte_length` | runtime-export | implemented | extension | @engine/core/gpu-scene-resource | — | 2 | 0 |
+| `platform.at-engine-core.export-paths.root.symbols.stroked_path_style_record_words` | runtime-export | implemented | extension | @engine/core/gpu-scene-resource | — | 2 | 0 |
+| `platform.at-engine-core.export-paths.root.symbols.strokedpathinstancelayer` | runtime-export | implemented | extension | @engine/core/gpu-scene-resource | — | 2 | 0 |
+| `platform.at-engine-core.export-paths.root.symbols.strokedpathinstancelayeroptions` | type-export | implemented | extension | @engine/core/gpu-scene-resource | — | 2 | 0 |
 | `platform.at-engine-core.export-paths.root.symbols.tableinfo` | type-export | unverified | unknown | @engine/core/gpu-scene-resource | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-engine-core.export-paths.root.symbols.text` | runtime-export | partial | extension | @engine/core/gpu-scene-resource | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
 | `platform.at-engine-core.export-paths.root.symbols.textmaterial` | runtime-export | unverified | unknown | @engine/core/gpu-scene-resource | Export/type presence is not behavioral evidence. | 1 | 0 |
@@ -8561,6 +8577,8 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 
 | Capability | Kind | Status | Conformance | Owner/stage | Stages | Limitation/reason | Evidence | Consumers |
 |---|---|---|---|---|---|---|---:|---:|
+| `platform.at-zavx0z-renderer.export-paths.frame-changes` | package-export-path | partial | extension | @zavx0z/renderer/cpu | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
+| `platform.at-zavx0z-renderer.export-paths.frame-changes.symbols.readcanonicalrenderframechanges` | runtime-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-renderer.export-paths.root` | package-export-path | partial | extension | @zavx0z/renderer/cpu | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.createdocumentinteractioncontroller` | runtime-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.createdocumentinteractioncontrolleroptions` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
@@ -8576,7 +8594,9 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.hitmetadata` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.hittest` | runtime-export | partial | extension | @zavx0z/renderer/cpu | The export exists and a bounded implementation is present, but the complete observable contract is not behaviorally covered. | 1 | 0 |
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.imagedisplayitem` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-zavx0z-renderer.export-paths.root.symbols.pathdisplayitem` | type-export | implemented | extension | @zavx0z/renderer/cpu | — | 2 | 0 |
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.pointerinput` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-zavx0z-renderer.export-paths.root.symbols.readcanonicalrenderframechanges` | runtime-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.rectdisplayitem` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.renderalignitems` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.renderborder` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
@@ -8598,6 +8618,11 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.renderobjectfit` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.renderoverflow` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.renderpadding` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-zavx0z-renderer.export-paths.root.symbols.renderpathbounds` | type-export | implemented | extension | @zavx0z/renderer/cpu | — | 2 | 0 |
+| `platform.at-zavx0z-renderer.export-paths.root.symbols.renderpathcubic` | type-export | implemented | extension | @zavx0z/renderer/cpu | — | 2 | 0 |
+| `platform.at-zavx0z-renderer.export-paths.root.symbols.renderpathgeometry` | type-export | implemented | extension | @zavx0z/renderer/cpu | — | 2 | 0 |
+| `platform.at-zavx0z-renderer.export-paths.root.symbols.renderpathpoint` | type-export | implemented | extension | @zavx0z/renderer/cpu | — | 2 | 0 |
+| `platform.at-zavx0z-renderer.export-paths.root.symbols.renderpathsegment` | type-export | implemented | extension | @zavx0z/renderer/cpu | — | 2 | 0 |
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.renderposition` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.renderscrollmetrics` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.rendertextalign` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
@@ -8611,6 +8636,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.textdisplayitem` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.titlecandidate` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.titletooltip` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
+| `platform.at-zavx0z-renderer.export-paths.root.symbols.vector_path_coordinate_limit` | runtime-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `platform.at-zavx0z-renderer.export-paths.root.symbols.wheelinput` | type-export | unverified | unknown | @zavx0z/renderer/cpu | Export/type presence is not behavioral evidence. | 1 | 0 |
 | `renderer.features.author-stylesheet-lifecycle` | renderer-stage | implemented | extension | @zavx0z/renderer/cpu | — | 4 | 0 |
 | `renderer.features.backend-neutral-diagnostics` | renderer-stage | unsupported | none | @zavx0z/renderer/cpu | The CPU renderer has no implementation of this internal platform capability. | 1 | 1 |
@@ -8655,7 +8681,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `renderer.features.transform-subtree-fast-path` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Dirty bookkeeping exists, but general dirty frames still remeasure/place/re-emit; only narrow Text and transform fast paths reuse records. | 2 | 0 |
 | `renderer.features.transforms` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.typography` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Production Canvas/Plane/Overlay composition now uses one exact font-owned unshaped per-codepoint advance owner for intrinsic width, alignment, controls, selection geometry, incremental text and ellipsis. Headless CPU rendering retains the deterministic 0.6em fallback. Kerning, shaping, ligatures, bidi, fallback, grapheme truncation, proportional textarea soft-wrap and complete inline formatting remain unsupported. | 6 | 0 |
-| `renderer.features.vector-path-display-item` | renderer-stage | unsupported | none | @zavx0z/renderer/cpu | The CPU renderer has no implementation of this internal platform capability. | 1 | 2 |
+| `renderer.features.vector-path-display-item` | renderer-stage | implemented | extension | @zavx0z/renderer/cpu | Bounded to one absolute open M/L/Q/C subpath, stroke-only paint and six samples per curve; relative/shorthand commands, fill, close, arcs, dashes, adaptive tessellation and complete SVG join/cap policy are unsupported. | 3 | 2 |
 | `renderer.features.wheel` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.z-index` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 
@@ -8870,4 +8896,4 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `webgpu.features.texture-readiness` | webgpu-backend | partial | adapted | @zavx0z/renderer-webgpu/webgpu | Image readiness is signaled by the Engine/host and actual fetch/decode remains outside the backend. | 2 | 0 |
 | `webgpu.features.transforms` | webgpu-backend | partial | adapted | @zavx0z/renderer-webgpu/webgpu | Implemented only for display-list values admitted by frame validation and retained materialization. | 2 | 0 |
 | `webgpu.features.unsupported-combinations` | webgpu-backend | implemented | extension | @zavx0z/renderer-webgpu/webgpu | — | 2 | 0 |
-| `webgpu.features.vector-path` | webgpu-backend | unsupported | none | @zavx0z/renderer-webgpu/webgpu | RenderFrame and retained backend admit Rect, Text, and Image only; no generic vector/path display item exists. | 1 | 0 |
+| `webgpu.features.vector-path` | webgpu-backend | implemented | extension | @zavx0z/renderer-webgpu/webgpu | Instanced batching admits exact-opaque Paths only; translucent Paths use the retained scalar correctness fallback. Complete SVG fill/stroking, dashes, arbitrary join/cap policy and adaptive curve quality are unsupported. | 3 | 0 |

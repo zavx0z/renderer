@@ -43,6 +43,15 @@ export function buildManualInventories(): CapabilityInventoryEntry[] {
       htmlBehaviors,
     ),
     ...manual(
+      "dom",
+      "dom.project",
+      "renderer-dom-contract",
+      "renderer current checkout",
+      "project-contract",
+      owners.dom,
+      domProjectFeatures,
+    ),
+    ...manual(
       "css",
       "css.features",
       "css-snapshot-2025",
@@ -200,6 +209,14 @@ const domAlgorithms: ManualDefinition[] = [
   { id: "element-internals", description: "ElementInternals form, state, shadow, and accessibility surface." },
   { id: "focus", description: "Focusable area ownership, activeElement, focus/blur, and focus event sequence." },
   { id: "pointer-capture", description: "Pointer capture ownership, pending override, got/lost events, and release." },
+]
+
+const domProjectFeatures: ManualDefinition[] = [
+  {
+    id: "vector-path-element",
+    kind: "semantic-extension",
+    description: "One semantic project-extension Element owns reflected vector path author data without owning paint or GPU state.",
+  },
 ]
 
 const htmlBehaviors: ManualDefinition[] = [
@@ -452,6 +469,6 @@ const engineFeatures: ManualDefinition[] = [
     "view-point", "space", "webgpu-pipelines", "resource-lifetime", "renderer-disposal", "capture-readback", "loaders",
     "gltf", "animation", "public-math", "index-buffer-format", "material-groups", "device-loss", "gpu-device-evidence",
     "dom-css-ownership-boundary", "browser-document-boundary", "legacy-ui-display-flag", "clip-surface-unification",
-    "bounded-multi-view-frame",
+    "bounded-multi-view-frame", "instanced-stroked-paths",
   ].map((id) => ({ id, kind: "engine-contract", description: `Engine ${id.replaceAll("-", " ")} capability.` })),
 ]
