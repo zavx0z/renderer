@@ -105,6 +105,10 @@ export {HTMLTableSectionElement} from "./html-table-section-element.ts"
 export type {HTMLTableSectionTagName} from "./html-table-section-element.ts"
 export {HTMLTextAreaElement} from "./html-text-area-element.ts"
 export {HTMLUListElement} from "./html-u-list-element.ts"
+export {
+  HTMLVectorPathElement,
+  VECTOR_PATH_COORDINATE_LIMIT,
+} from "./html-vector-path-element.ts"
 export type {
   AttributeMutation,
   CharacterDataMutation,

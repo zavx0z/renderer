@@ -15,7 +15,7 @@ accessibility или input semantics.
    идти назад. Повтор той же revision остаётся допустим для exact clean frame
    либо interaction overlay, но не получает incremental batch fast path при
    изменившемся display list.
-2. Поддерживаются только `kind: "rect" | "text" | "image"`. Неизвестный kind,
+2. Поддерживаются только `kind: "rect" | "text" | "image" | "path"`. Неизвестный kind,
    пустой `key`, повторная пара `node` + `key`, отрицательный размер Rect,
    нечисловая geometry, opacity вне finite `0..1` и malformed border завершают
    `applyFrame()` ошибкой до изменения retained tree.
@@ -165,6 +165,63 @@ accessibility или input semantics.
    сохраняет предыдущие records и diagnostics, а неожиданная ошибка нескольких
    record writes откатывает уже применённые records прежде чем выйти fail-closed.
 
+## Retained stroked Path batching
+
+1. Exact-opaque `PathDisplayItem` (`resolved color alpha === 1` и effective
+   opacity `=== 1`) сохраняет composite identity `(node, key)` через один
+   stable Engine style handle и упорядоченный набор stable sampled-segment
+   handles. Этот instanced fast path не парсит `d`, не вычисляет Node routing и
+   не создаёт per-Link Mesh, geometry или material.
+2. Один `StrokedPathInstanceLayer` владеет независимыми 32-byte style и
+   segment records. Style содержит resolved RGBA, logical width и opacity.
+   Segment содержит logical `(fromX, fromY, toX, toY)` и физический stable
+   style slot и generation. Изменение только opaque width пишет ровно его
+   4-byte field, color — contiguous 16-byte field;
+   изменение route загружает только изменившиеся segment records.
+3. Consecutive Paths с одним exact `presentationOwner`, эквивалентной clip
+   chain и без scalar paint barrier образуют один `InstancedStrokedPath`
+   draw-range view. Несколько views разделяют layer/unit quad/storage и остаются
+   на точных местах immutable display list. Rect/Text/Image либо различный
+   owner/clip завершают run.
+4. Run `Object3D` несёт один resolved owner transform и ordinary Engine
+   `presentationClips`. DOM Y-down переводится в Engine Y-up ровно на run
+   transform. Transform-only frame с неизменными Path references сохраняет
+   style/segment handles, order, run и geometry, загружает ноль Path bytes и
+   меняет только run matrix.
+5. Engine аналитически расширяет каждый admitted exact-opaque sampled segment в AA round capsule.
+   Segment order сохраняет path/paint order, а соседние opaque capsules образуют
+   bounded round stroke. Complete SVG stroking, translucent self-union,
+   adaptive curve quality and arbitrary joins/caps остаются за пределами этого
+   extension contract.
+6. Diagnostics публикует total `pathDraws`, separate `pathInstancedDraws` /
+   `pathScalarDraws`, `pathPreparedItems`, active style/segment counts and
+   capacities, exact retained record/order bytes, constant unit-geometry bytes,
+   per-apply style/segment/order write bytes and pending Engine upload bytes.
+   Pending bytes may include unacknowledged earlier capacity uploads; hot-path
+   acceptance uses per-apply write bytes. Focused 10k proof requires one
+   instanced/zero scalar draw, 10k styles, zero per-Link Engine owners and zero
+   Path writes при shared pan/zoom. Removal/dispose releases every style/segment
+   handle and invalidates the shared Engine geometry ровно один раз после её
+   фактического представления.
+7. Non-opaque Path не допускается в capsule batch. Он использует один retained
+   scalar Mesh/BufferGeometry/MeshBasicMaterial с continuous sampled strip,
+   bounded mitered sampled joins, round end caps и ordinary presentation clips.
+   Это не аналитический AA/full-SVG stroke. Transform-only frame сохраняет все три owner и
+   не меняет geometry storage; route/width меняет position/index arrays in
+   place, color/opacity меняет тот же material, removal/dispose invalidates
+   geometry ровно один раз. Этот correctness fallback не заявляется как
+   high-performance batching и не меняет opaque Node-edge budgets.
+8. Backend читает sparse display indexes только из unforgeable Core registry и
+   только когда registry predecessor является exact cached source frame.
+   External clones, parallel renderer revision streams and malformed hints use
+   complete validation. One through eight changed compatible Paths update only
+   their retained style/segment fields. Ordered move/replace operations from
+   one exact predecessor cover an atomic old-selected/new-selected switch;
+   each variable-length segment block uses allocation-free `moveRange`, and
+   only the changed Path records are prepared. One bounded contiguous Path
+   stacking permutation is prevalidated before retained mutation; scalar
+   barriers or run-topology changes fall back to full plan.
+
 ## Presentation clip transport
 
 1. Каждый `DisplayItem.clips` является уже разрешённой Core цепочкой
@@ -217,8 +274,8 @@ accessibility или input semantics.
 
 ## Type boundary
 
-`RenderFrame`, `DisplayItem`, `RectDisplayItem`, `TextDisplayItem` и
-`ImageDisplayItem`
+`RenderFrame`, `DisplayItem`, `RectDisplayItem`, `TextDisplayItem`,
+`ImageDisplayItem` и `PathDisplayItem`
 импортируются type-only из `@zavx0z/renderer`. Backend не объявляет
 параллельный display-list контракт.
 

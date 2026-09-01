@@ -965,3 +965,75 @@ This remains an adapted color subset. The extended named-color table, system
 colors, `hsl()`/`hwb()`/`lab()`/`lch()`/`oklab()`/`oklch()`, `color()`,
 `color-mix()`, relative colors, missing components, interpolation and color
 management are unsupported rather than approximated.
+
+## `RENDERER-CPU-034` — bounded retained stroked vector Path
+
+The project-extension `HTMLVectorPathElement` is a paint-only absolute semantic
+leaf. It owns no RenderBox and has no segment children. A non-empty valid `d`
+uses one bounded absolute, one-open-subpath grammar: one initial `M`, followed
+by explicit `L`, `Q` or `C` commands. Source is limited to 65,536 characters,
+2,048 tokens and 256 non-degenerate cubics; every absolute authored coordinate
+is bounded by DOM-owned `VECTOR_PATH_COORDINATE_LIMIT === 16,777,216`.
+Normalized controls, samples and bounds must remain finite. Relative commands, repeated
+subpaths, close, arc, shorthand and malformed/non-finite values fail closed
+with no Path item or hit.
+
+Core normalizes Line and Quadratic commands to immutable Cubics. A degenerate
+line cubic contributes one sampled segment; every curved cubic contributes six.
+The frozen Cubics, sampled segments and sampled bounds form one cached
+`RenderPathGeometry` shared by paint and hit projection until exact `d`
+changes. One visible path emits `(element, "path")` with resolved `stroke`,
+finite positive `stroke-width`, inherited opacity, ordinary clip chain and one
+stable semantic presentation-transform owner. The first slice is stroke-only
+with analytical round caps/joins downstream; fill, close, arcs, dashes,
+miter/bevel policy and adaptive retessellation are not claimed.
+
+`pointer-hit-width` is a project extension in non-negative logical pixels. Hit
+testing uses the same sampled segments after the exact axis-aligned transform,
+not the path bounds alone. Effective screen width is the maximum of visible
+transformed stroke width, transformed pointer width and the unscaled pointer
+minimum. Thus `16px` grows with graph zoom and never falls below 16 screen
+pixels on zoom-out. The ordinary ordered clip intersection remains mandatory.
+The published rectangular HitMetadata envelope is symmetric around the
+midpoint of the longest sampled segment and expands far enough to contain the
+complete locally padded Path bounds. Its center is therefore on the exact Path
+tube before ordinary clip rejection, so generic inspection/activation clients
+never derive an empty-space target from an orthogonal Path's bounds center.
+
+`RenderFrame.presentationTransforms` maps stable semantic transform owners to
+their current cumulative value. Path items and path hit records name that owner
+instead of copying a changed cumulative value into every record. A transform-
+only group containing only Path leaves replaces no Path item or Path hit; it
+updates one owner transform and the owner box/hit. A mixed subtree likewise
+reuses every Path projection while ordinary boxes/items/hits follow their
+existing exact transform patch. The 10,000-Path focused gate requires exact
+Path record identity, warm p50 below 16.7 ms and bounded p95 below 50 ms in the
+shared test process; the standalone benchmark reports the stricter 16.7 ms p95
+product target without making the full test process scheduler part of the ABI.
+
+Every overflow clip also names its stable nearest presentation owner. Ancestor
+pan/zoom updates the shared owner transform while reusing descendant clip
+records, Path records and local scroll metrics; hit testing and WebGPU resolve
+the current frame table. A transform-owner topology add/remove falls back to a
+full exact frame so no stable item can reference a missing owner.
+
+One transaction containing from one through eight connected VectorPath
+attribute targets recomputes each target's exact cascade and may replace only
+those Path items/hits when all non-Path layout/style fields stay equal.
+Unchanged `d` reuses geometry; changed `d` parses only that owner. A bounded
+z-index change may move each target, in mutation order, inside one contiguous
+Path display/hit block without crossing a non-Path stacking neighbor. This
+includes an atomic old-selected/new-selected switch: both semantic owners and
+all untouched item/geometry identities remain stable, while only the two paint
+records and affected order range change. More than eight targets or unsupported
+stacking/barrier topology falls back to full projection.
+
+Sparse frame changes live in a Core-private WeakMap keyed by the exact next
+frame and carry only a `WeakRef` to the exact previous frame. Ordered
+single-item move/replace operations are relative to that predecessor and
+compose the final frame without publishing intermediate revisions. The public
+backend seam is read-only and dereferences the predecessor only for the current
+read; if GC already collected it, the seam returns no sparse proof and the
+backend uses complete validation. Thus the latest live frame cannot retain an
+unbounded predecessor chain. An external clone, forged revision or delta from
+another DocumentRenderer likewise receives full backend validation.

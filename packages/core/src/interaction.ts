@@ -19,6 +19,7 @@ import type {
   RenderClipRadius,
   RenderFrame,
   RenderScrollMetrics,
+  RenderTransform,
 } from "./types.ts"
 import {appendImmutableArray} from "./immutable-array.ts"
 import type {DocumentInteractionState} from "./pseudo-state.ts"
@@ -550,23 +551,127 @@ export const hitTest = (
   y: number,
 ): HitMetadata | null => {
   if (!Number.isFinite(x) || !Number.isFinite(y)) return null
-  const hits = [...frame.hits.values()]
+  const hits = frame.hitOrder ?? [...frame.hits.values()]
   for (let index = hits.length - 1; index >= 0; index--) {
     const hit = hits[index]
-    const local = hit === undefined ? null : inverseTransformPoint(hit.transform, x, y)
+    const transform = hit === undefined ? null : hitTransform(frame, hit)
+    const local = transform === null ? null : inverseTransformPoint(transform, x, y)
     if (
       hit !== undefined &&
+      transform !== null &&
       local !== null &&
-      local.x >= hit.x &&
-      local.y >= hit.y &&
-      local.x < hit.x + hit.width &&
-      local.y < hit.y + hit.height &&
-      hit.clips.every((clip) => pointInClip(clip, x, y))
+      (hit.path === undefined
+        ? local.x >= hit.x &&
+          local.y >= hit.y &&
+          local.x < hit.x + hit.width &&
+          local.y < hit.y + hit.height
+        : pointInStrokedPath(hit, transform, x, y)) &&
+      hit.clips.every((clip) => pointInClip(frame, clip, x, y))
     ) {
       return hit
     }
   }
   return null
+}
+
+const hitTransform = (frame: RenderFrame, hit: HitMetadata): RenderTransform => {
+  const owner = hit.path?.presentationOwner
+  return owner === null || owner === undefined
+    ? hit.transform
+    : frame.presentationTransforms?.get(owner) ?? hit.transform
+}
+
+const pointInStrokedPath = (
+  hit: HitMetadata,
+  transform: RenderTransform,
+  x: number,
+  y: number,
+): boolean => {
+  const path = hit.path
+  if (path === undefined || transform.scaleX === 0 || transform.scaleY === 0) return false
+  const bounds = path.geometry.bounds
+  const first = transformedPathPoint(
+    transform,
+    path.originX + bounds.x,
+    path.originY + bounds.y,
+  )
+  const second = transformedPathPoint(
+    transform,
+    path.originX + bounds.x + bounds.width,
+    path.originY + bounds.y + bounds.height,
+  )
+  const coarseRadius = Math.max(
+    path.pointerHitWidth,
+    path.pointerHitWidth * Math.max(Math.abs(transform.scaleX), Math.abs(transform.scaleY)),
+    path.strokeWidth * Math.max(Math.abs(transform.scaleX), Math.abs(transform.scaleY)),
+  ) / 2
+  if (
+    x < Math.min(first.x, second.x) - coarseRadius ||
+    y < Math.min(first.y, second.y) - coarseRadius ||
+    x > Math.max(first.x, second.x) + coarseRadius ||
+    y > Math.max(first.y, second.y) + coarseRadius
+  ) return false
+
+  for (const segment of path.geometry.segments) {
+    const from = transformedPathPoint(
+      transform,
+      path.originX + segment.from.x,
+      path.originY + segment.from.y,
+    )
+    const to = transformedPathPoint(
+      transform,
+      path.originX + segment.to.x,
+      path.originY + segment.to.y,
+    )
+    const localX = segment.to.x - segment.from.x
+    const localY = segment.to.y - segment.from.y
+    const localLength = Math.hypot(localX, localY)
+    const normalScale = localLength === 0
+      ? 0
+      : Math.hypot(
+          transform.scaleX * -localY / localLength,
+          transform.scaleY * localX / localLength,
+        )
+    const targetWidth = Math.max(
+      path.pointerHitWidth,
+      path.pointerHitWidth * normalScale,
+      path.strokeWidth * normalScale,
+    )
+    if (pointSegmentDistanceSquared(x, y, from.x, from.y, to.x, to.y) <= (targetWidth / 2) ** 2) {
+      return true
+    }
+  }
+  return false
+}
+
+const transformedPathPoint = (
+  transform: RenderTransform,
+  x: number,
+  y: number,
+): Readonly<{x: number; y: number}> => ({
+  x: transform.scaleX * x + transform.translateX,
+  y: transform.scaleY * y + transform.translateY,
+})
+
+const pointSegmentDistanceSquared = (
+  x: number,
+  y: number,
+  fromX: number,
+  fromY: number,
+  toX: number,
+  toY: number,
+): number => {
+  const segmentX = toX - fromX
+  const segmentY = toY - fromY
+  const lengthSquared = segmentX * segmentX + segmentY * segmentY
+  if (lengthSquared === 0) return (x - fromX) ** 2 + (y - fromY) ** 2
+  const amount = Math.max(
+    0,
+    Math.min(1, ((x - fromX) * segmentX + (y - fromY) * segmentY) / lengthSquared),
+  )
+  const nearestX = fromX + segmentX * amount
+  const nearestY = fromY + segmentY * amount
+  return (x - nearestX) ** 2 + (y - nearestY) ** 2
 }
 
 /** Resolves the nearest interactive or disabled semantic owner of an exact hit. */
@@ -604,8 +709,11 @@ const resolvePointerOwnerHitForTarget = (
   return null
 }
 
-const pointInClip = (clip: RenderClip, x: number, y: number): boolean => {
-  const local = inverseTransformPoint(clip.transform, x, y)
+const pointInClip = (frame: RenderFrame, clip: RenderClip, x: number, y: number): boolean => {
+  const transform = clip.presentationOwner === null || clip.presentationOwner === undefined
+    ? clip.transform
+    : frame.presentationTransforms?.get(clip.presentationOwner) ?? clip.transform
+  const local = inverseTransformPoint(transform, x, y)
   if (local === null) return false
   x = local.x
   y = local.y

@@ -37,6 +37,61 @@ class ChunkedArrayData<Value> {
     return new ChunkedArrayData(nextChunks, this.length)
   }
 
+  withMany(entries: readonly Readonly<{index: number; value: Value}>[]): ChunkedArrayData<Value> {
+    if (entries.length === 0) return this
+    const nextChunks = [...this.#chunks]
+    const mutableChunks = new Map<number, Value[]>()
+    for (const {index, value} of entries) {
+      if (!Number.isSafeInteger(index) || index < 0 || index >= this.length) {
+        throw new RangeError("Immutable array replacement index is out of bounds")
+      }
+      const chunkIndex = Math.floor(index / CHUNK_SIZE)
+      let chunk = mutableChunks.get(chunkIndex)
+      if (chunk === undefined) {
+        chunk = [...this.#chunks[chunkIndex]!]
+        mutableChunks.set(chunkIndex, chunk)
+        nextChunks[chunkIndex] = chunk
+      }
+      chunk[index % CHUNK_SIZE] = value
+    }
+    return new ChunkedArrayData(nextChunks, this.length)
+  }
+
+  move(fromIndex: number, toIndex: number, replacement: Value): ChunkedArrayData<Value> {
+    if (
+      !Number.isSafeInteger(fromIndex) ||
+      !Number.isSafeInteger(toIndex) ||
+      fromIndex < 0 ||
+      toIndex < 0 ||
+      fromIndex >= this.length ||
+      toIndex >= this.length
+    ) throw new RangeError("Immutable array move index is out of bounds")
+    if (fromIndex === toIndex) return this.with(fromIndex, replacement)
+    const nextChunks = [...this.#chunks]
+    const mutableChunks = new Map<number, Value[]>()
+    const write = (index: number, value: Value): void => {
+      const chunkIndex = Math.floor(index / CHUNK_SIZE)
+      let chunk = mutableChunks.get(chunkIndex)
+      if (chunk === undefined) {
+        chunk = [...this.#chunks[chunkIndex]!]
+        mutableChunks.set(chunkIndex, chunk)
+        nextChunks[chunkIndex] = chunk
+      }
+      chunk[index % CHUNK_SIZE] = value
+    }
+    if (fromIndex < toIndex) {
+      for (let index = fromIndex; index < toIndex; index += 1) {
+        write(index, this.get(index + 1)!)
+      }
+    } else {
+      for (let index = fromIndex; index > toIndex; index -= 1) {
+        write(index, this.get(index - 1)!)
+      }
+    }
+    write(toIndex, replacement)
+    return new ChunkedArrayData(nextChunks, this.length)
+  }
+
   append(values: readonly Value[]): ChunkedArrayData<Value> {
     if (values.length === 0) return this
     const nextChunks = [...this.#chunks]
@@ -80,6 +135,20 @@ export const replaceImmutableArray = <Value>(
   index: number,
   value: Value,
 ): readonly Value[] => proxyFor(dataFor(values).with(index, value))
+
+export const replaceImmutableArrayEntries = <Value>(
+  values: readonly Value[],
+  entries: readonly Readonly<{index: number; value: Value}>[],
+): readonly Value[] => entries.length === 0
+  ? values
+  : proxyFor(dataFor(values).withMany(entries))
+
+export const moveImmutableArrayEntry = <Value>(
+  values: readonly Value[],
+  fromIndex: number,
+  toIndex: number,
+  replacement: Value,
+): readonly Value[] => proxyFor(dataFor(values).move(fromIndex, toIndex, replacement))
 
 export const appendImmutableArray = <Value>(
   values: readonly Value[],

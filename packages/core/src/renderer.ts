@@ -6,6 +6,7 @@ import {
   HTMLProgressElement,
   HTMLSelectElement,
   HTMLTextAreaElement,
+  HTMLVectorPathElement,
   getPopoverVisibilityState,
   subscribeDocumentAuthorStyleSheets,
   subscribeDocumentCompiledStyleSheets,
@@ -34,13 +35,16 @@ import {
 } from "./stylesheet-cache.ts"
 import {
   immutableArray,
+  moveImmutableArrayEntry,
   replaceImmutableArray,
+  replaceImmutableArrayEntries,
 } from "./immutable-array.ts"
 import type {
   CreateDocumentRendererOptions,
   DisplayItem,
   DocumentRenderer,
   HitMetadata,
+  PathDisplayItem,
   RenderBorder,
   RenderBorderColors,
   RenderClip,
@@ -50,18 +54,28 @@ import type {
   RenderBox,
   RenderFrame,
   RenderPadding,
+  RenderPathGeometry,
   RenderScrollMetrics,
   RenderTextMeasurer,
   RenderTransform,
   RenderViewport,
 } from "./types.ts"
+import {parseRenderPath} from "./path.ts"
+import {
+  readCanonicalRenderFrameChangeState,
+  recordCanonicalRenderFrameChanges,
+  type CanonicalRenderFrameOperation,
+} from "./frame-change-state.ts"
 
 type LayoutNode = {
   readonly node: Node
   parent: LayoutNode | null
   style: ComputedStyle
-  readonly effectiveOpacity: number
+  effectiveOpacity: number
   children: readonly LayoutNode[]
+  transformChildren: readonly LayoutNode[]
+  ownsOverflowClipInSubtree: boolean
+  vectorPathOnly: boolean
   text: string | null
   readonly tag: string | null
   readonly transparent: boolean
@@ -88,6 +102,7 @@ type PlacementContext = Readonly<{
   absolute: ContainingBlock
   normal: ContainingBlock
   presentation: RenderTransform
+  presentationOwner: Element | null
 }>
 
 type BuildState = {
@@ -98,6 +113,7 @@ type BuildState = {
   readonly hitOrder: Element[]
   readonly scrolls: Map<Element, RenderScrollMetrics>
   readonly transforms: Map<Node, RenderTransform>
+  readonly presentationTransforms: Map<Element, RenderTransform>
   readonly measured: WeakMap<LayoutNode, Map<string, Size>>
   readonly textMeasurer: CreateDocumentRendererOptions["textMeasurer"]
 }
@@ -105,7 +121,21 @@ type BuildState = {
 type FrameCollectionIndexes = Readonly<{
   boxByNode: WeakMap<Node, number>
   displayByNode: WeakMap<Node, ReadonlyMap<string, number>>
+  hitByRecord: WeakMap<HitMetadata, number>
+  pathStackByParent: WeakMap<Element, PathStackBlock>
 }>
+
+type PathStackBlock = {
+  readonly parent: Element
+  readonly nodes: HTMLVectorPathElement[]
+  readonly semanticIndexByNode: WeakMap<HTMLVectorPathElement, number>
+  readonly displayStart: number
+  hitStart: number
+  readonly beforeDisplayNode: Node | null
+  readonly afterDisplayNode: Node | null
+  beforeHitNode: Node | null
+  afterHitNode: Node | null
+}
 
 const collectionIndexesByFrame = new WeakMap<RenderFrame, FrameCollectionIndexes>()
 
@@ -183,6 +213,20 @@ const ZERO_CLIP_RADII: RenderClipCornerRadii = Object.freeze({
   bottomRight: ZERO_CLIP_RADIUS,
   bottomLeft: ZERO_CLIP_RADIUS,
 })
+const vectorPathGeometryCache = new WeakMap<
+  HTMLVectorPathElement,
+  Readonly<{source: string; geometry: RenderPathGeometry | null}>
+>()
+
+const readVectorPathGeometry = (path: HTMLVectorPathElement): RenderPathGeometry | null => {
+  const source = path.d
+  let cached = vectorPathGeometryCache.get(path)
+  if (cached === undefined || cached.source !== source) {
+    cached = Object.freeze({source, geometry: parseRenderPath(source)})
+    vectorPathGeometryCache.set(path, cached)
+  }
+  return cached.geometry
+}
 
 const ROOT_STYLE: ComputedStyle = Object.freeze({
   customProperties: EMPTY_CUSTOM_PROPERTIES,
@@ -227,6 +271,9 @@ const ROOT_STYLE: ComputedStyle = Object.freeze({
   }),
   background: null,
   color: "#000000",
+  stroke: "#000000",
+  strokeWidth: 1,
+  pointerHitWidth: 0,
   fontSize: 16,
   lineHeight: "normal",
   letterSpacing: 0,
@@ -257,6 +304,7 @@ export const createDocumentRenderer = (
   const layoutCache = new WeakMap<Node, LayoutNode>()
   const subtreeDirty = new Set<Node>([options.root])
   const characterDataTargets = new Set<Text>()
+  const vectorPathTargets = new Set<HTMLVectorPathElement>()
   let frame: RenderFrame | null = null
   let revision = 0
   let disposed = false
@@ -368,6 +416,29 @@ export const createDocumentRenderer = (
     if (
       frame !== null &&
       !fastPathBlocked &&
+      vectorPathTargets.size > 0 &&
+      vectorPathTargets.size <= 8
+    ) {
+      const incremental = tryBuildVectorPathFrames(
+            frame,
+            [...vectorPathTargets],
+            layoutCache,
+            rules,
+            options.interactionState,
+            revision + 1,
+          )
+      if (incremental !== null) {
+        revision++
+        frame = incremental
+        dirty.clear()
+        subtreeDirty.clear()
+        resetFastPath()
+        return incremental
+      }
+    }
+    if (
+      frame !== null &&
+      !fastPathBlocked &&
       characterDataTargets.size === 1
     ) {
       const target = characterDataTargets.values().next().value
@@ -417,7 +488,14 @@ export const createDocumentRenderer = (
         record.target === options.root
       ) {
         dirty.invalidate(record.target)
-        if (isTransformOnlyStyleMutation(record)) {
+        if (
+          record.type === "attributes" &&
+          record.target instanceof HTMLVectorPathElement
+        ) {
+          subtreeDirty.add(record.target)
+          vectorPathTargets.add(record.target)
+          characterDataTargets.clear()
+        } else if (isTransformOnlyStyleMutation(record)) {
           subtreeDirty.add(record.target)
           if (transformTarget === null || transformTarget === record.target) {
             transformTarget = record.target
@@ -470,12 +548,14 @@ export const createDocumentRenderer = (
     fastPathBlocked = true
     characterDataTargets.clear()
     transformTarget = null
+    vectorPathTargets.clear()
   }
 
   function resetFastPath(): void {
     fastPathBlocked = false
     characterDataTargets.clear()
     transformTarget = null
+    vectorPathTargets.clear()
   }
 
   function assertActive(): void {
@@ -561,11 +641,304 @@ const tryBuildCharacterDataFrame = (
     boxByNode,
     displayList,
     hits: previous.hits,
+    ...(previous.hitOrder === undefined ? {} : {hitOrder: previous.hitOrder}),
     scrolls: previous.scrolls,
+    ...(previous.presentationTransforms === undefined
+      ? {}
+      : {presentationTransforms: previous.presentationTransforms}),
   })
+  recordCanonicalRenderFrameChanges(next, previous, [displayIndex])
   collectionIndexesByFrame.set(next, indexes)
   layoutNode.text = nextText
   return next
+}
+
+const tryBuildVectorPathFrames = (
+  previous: RenderFrame,
+  targets: readonly HTMLVectorPathElement[],
+  layoutCache: WeakMap<Node, LayoutNode>,
+  rules: StyleRuleIndex,
+  interactionState: CreateDocumentRendererOptions["interactionState"],
+  revision: number,
+): RenderFrame | null => {
+  if (targets.length === 0) return null
+  if (targets.length === 1) {
+    return tryBuildVectorPathFrame(
+      previous,
+      targets[0]!,
+      layoutCache,
+      rules,
+      interactionState,
+      revision,
+    )
+  }
+
+  const layoutStates = targets.map((target) => {
+    const layoutNode = layoutCache.get(target)
+    return Object.freeze({
+      target,
+      layoutNode,
+      style: layoutNode?.style,
+      effectiveOpacity: layoutNode?.effectiveOpacity,
+    })
+  })
+  const intermediateFrames: RenderFrame[] = []
+  const operations: CanonicalRenderFrameOperation[] = []
+  let current = previous
+  const rollback = (): null => {
+    for (const state of layoutStates) {
+      if (
+        state.layoutNode === undefined ||
+        state.style === undefined ||
+        state.effectiveOpacity === undefined
+      ) continue
+      state.layoutNode.style = state.style
+      state.layoutNode.effectiveOpacity = state.effectiveOpacity
+    }
+    collectionIndexesByFrame.delete(previous)
+    for (const intermediate of intermediateFrames) collectionIndexesByFrame.delete(intermediate)
+    return null
+  }
+
+  for (const target of targets) {
+    const next = tryBuildVectorPathFrame(
+      current,
+      target,
+      layoutCache,
+      rules,
+      interactionState,
+      revision,
+    )
+    if (next === null) return rollback()
+    const changes = readCanonicalRenderFrameChangeState(next)
+    if (changes === null || changes.previous !== current) return rollback()
+    if (changes.operations !== undefined) {
+      operations.push(...changes.operations)
+    } else {
+      if (changes.indexes.length !== 1) return rollback()
+      const index = changes.indexes[0]!
+      const replacement = next.displayList[index]
+      if (replacement === undefined) return rollback()
+      operations.push(Object.freeze({
+        fromIndex: index,
+        toIndex: index,
+        count: 1,
+        replacement,
+      }))
+    }
+    intermediateFrames.push(next)
+    current = next
+  }
+
+  const indexes = collectionIndexes(current)
+  const changedIndexes: number[] = []
+  for (const target of targets) {
+    const index = indexedDisplayItem(indexes, target, "path")
+    if (index < 0) return rollback()
+    changedIndexes.push(index)
+  }
+  recordCanonicalRenderFrameChanges(current, previous, changedIndexes, operations)
+  return current
+}
+
+const tryBuildVectorPathFrame = (
+  previous: RenderFrame,
+  target: HTMLVectorPathElement,
+  layoutCache: WeakMap<Node, LayoutNode>,
+  rules: StyleRuleIndex,
+  interactionState: CreateDocumentRendererOptions["interactionState"],
+  revision: number,
+): RenderFrame | null => {
+  const layoutNode = layoutCache.get(target)
+  if (layoutNode === undefined || layoutNode.parent === null) return null
+  const nextStyle = computeStyle(target, layoutNode.parent.style, rules, interactionState)
+  if (!samePathStyleExceptPaint(layoutNode.style, nextStyle)) return null
+  const geometry = readVectorPathGeometry(target)
+  const indexes = collectionIndexes(previous)
+  const displayIndex = indexedDisplayItem(indexes, target, "path")
+  const previousItem = displayIndex < 0 ? undefined : previous.displayList[displayIndex]
+  const previousHit = previous.hits.get(target)
+  const opacity = layoutNode.parent.effectiveOpacity * nextStyle.opacity
+  if (
+    geometry === null ||
+    previousItem?.kind !== "path" ||
+    previousHit?.path === undefined ||
+    nextStyle.strokeWidth <= 0 ||
+    opacity <= 0
+  ) return null
+
+  const nextItem: PathDisplayItem = Object.freeze({
+    ...previousItem,
+    geometry,
+    stroke: nextStyle.stroke,
+    strokeWidth: nextStyle.strokeWidth,
+    opacity,
+  })
+  const targetWidth = Math.max(nextStyle.strokeWidth, nextStyle.pointerHitWidth)
+  if (targetWidth <= 0) return null
+  const envelope = vectorPathHitEnvelope(
+    geometry,
+    previousItem.x,
+    previousItem.y,
+    targetWidth,
+  )
+  const hitBase = createHit(
+    target,
+    "vector-path",
+    envelope.x,
+    envelope.y,
+    envelope.width,
+    envelope.height,
+    previousHit.clips,
+    IDENTITY_TRANSFORM,
+    nextStyle,
+  )
+  const nextHit: HitMetadata = Object.freeze({
+    ...hitBase,
+    path: Object.freeze({
+      ...previousHit.path,
+      geometry,
+      strokeWidth: nextStyle.strokeWidth,
+      pointerHitWidth: nextStyle.pointerHitWidth,
+    }),
+  })
+  const hits = replaceImmutableNodeMap(previous.hits, target, nextHit)
+  const zIndexChanged = layoutNode.style.zIndex !== nextStyle.zIndex
+  let displayList: readonly DisplayItem[] = replaceImmutableArray(
+    previous.displayList,
+    displayIndex,
+    nextItem,
+  )
+  let hitOrder = previous.hitOrder === undefined
+    ? undefined
+    : replaceIndexedHitOrder(previous.hitOrder, indexes, previousHit, nextHit)
+  let displayChanges = [displayIndex]
+  let displayOperation: CanonicalRenderFrameOperation | undefined
+  let reorderedBlock: PathStackBlock | null = null
+  let reorderedTargetIndex = -1
+  if (zIndexChanged) {
+    const parent = layoutNode.parent
+    if (!isElement(parent.node)) return null
+    const block = indexes.pathStackByParent.get(parent.node)
+    if (block === undefined || block.hitStart < 0) return null
+    const targetIndex = block.nodes.indexOf(target)
+    if (targetIndex < 0) return null
+    const stackLevel = (child: LayoutNode, style = child.style): number => {
+      const applies = parent.style.display === "flex" || style.position !== "static"
+      return applies && style.zIndex !== "auto" ? style.zIndex : 0
+    }
+    const targetLevel = stackLevel(layoutNode, nextStyle)
+    const directSiblingLevelForNode = (source: Node | null): number | null => {
+      let node = source ?? null
+      while (node !== null && node.parentNode !== parent.node) node = node.parentNode
+      if (node === null || node === parent.node) return null
+      const sibling = layoutCache.get(node)
+      return sibling === undefined ? null : stackLevel(sibling)
+    }
+    const beforeLevel = directSiblingLevelForNode(block.beforeDisplayNode)
+    const afterLevel = directSiblingLevelForNode(block.afterDisplayNode)
+    const beforeHitLevel = directSiblingLevelForNode(block.beforeHitNode)
+    const afterHitLevel = directSiblingLevelForNode(block.afterHitNode)
+    if (
+      beforeLevel !== null && targetLevel < beforeLevel ||
+      afterLevel !== null && targetLevel > afterLevel ||
+      beforeHitLevel !== null && targetLevel < beforeHitLevel ||
+      afterHitLevel !== null && targetLevel > afterHitLevel
+    ) return null
+    let insertion = block.nodes.length - 1
+    const targetTreeIndex = block.semanticIndexByNode.get(target) ?? -1
+    if (targetTreeIndex < 0) return null
+    let compactIndex = 0
+    for (const node of block.nodes) {
+      if (node === target) continue
+      const child = layoutCache.get(node)
+      if (child === undefined) return null
+      const level = stackLevel(child)
+      const treeIndex = block.semanticIndexByNode.get(node) ?? -1
+      if (treeIndex < 0) return null
+      if (level > targetLevel || level === targetLevel && treeIndex > targetTreeIndex) {
+        insertion = compactIndex
+        break
+      }
+      compactIndex += 1
+    }
+    const nextTargetIndex = insertion
+    const nextDisplayIndex = block.displayStart + nextTargetIndex
+    displayList = moveImmutableArrayEntry(
+      previous.displayList,
+      displayIndex,
+      nextDisplayIndex,
+      nextItem,
+    )
+    displayChanges = [nextDisplayIndex]
+    displayOperation = Object.freeze({
+      fromIndex: displayIndex,
+      toIndex: nextDisplayIndex,
+      count: 1,
+      replacement: nextItem,
+    })
+
+    if (previous.hitOrder !== undefined) {
+      const previousHitIndex = block.hitStart + targetIndex
+      const nextHitIndex = block.hitStart + nextTargetIndex
+      hitOrder = moveImmutableArrayEntry(previous.hitOrder, previousHitIndex, nextHitIndex, nextHit)
+    }
+    reorderedBlock = block
+    reorderedTargetIndex = nextTargetIndex
+  }
+  const next: RenderFrame = Object.freeze({
+    revision,
+    document: previous.document,
+    root: previous.root,
+    viewport: previous.viewport,
+    boxes: previous.boxes,
+    boxByNode: previous.boxByNode,
+    displayList,
+    hits,
+    ...(hitOrder === undefined ? {} : {hitOrder}),
+    scrolls: previous.scrolls,
+    ...(previous.presentationTransforms === undefined
+      ? {}
+      : {presentationTransforms: previous.presentationTransforms}),
+  })
+  recordCanonicalRenderFrameChanges(
+    next,
+    previous,
+    displayChanges,
+    displayOperation === undefined ? undefined : [displayOperation],
+  )
+  if (zIndexChanged) {
+    if (reorderedBlock !== null && reorderedTargetIndex >= 0) {
+      const previousTargetIndex = reorderedBlock.nodes.indexOf(target)
+      if (previousTargetIndex < 0) return null
+      reorderedBlock.nodes.splice(previousTargetIndex, 1)
+      reorderedBlock.nodes.splice(reorderedTargetIndex, 0, target)
+    }
+  }
+  collectionIndexesByFrame.set(next, indexes)
+  layoutNode.style = nextStyle
+  layoutNode.effectiveOpacity = opacity
+  return next
+}
+
+const samePathStyleExceptPaint = (left: ComputedStyle, right: ComputedStyle): boolean => {
+  const {
+    stroke: _leftStroke,
+    strokeWidth: _leftStrokeWidth,
+    pointerHitWidth: _leftPointerHitWidth,
+    opacity: _leftOpacity,
+    zIndex: _leftZIndex,
+    ...leftComparable
+  } = left
+  const {
+    stroke: _rightStroke,
+    strokeWidth: _rightStrokeWidth,
+    pointerHitWidth: _rightPointerHitWidth,
+    opacity: _rightOpacity,
+    zIndex: _rightZIndex,
+    ...rightComparable
+  } = right
+  return JSON.stringify(leftComparable) === JSON.stringify(rightComparable)
 }
 
 const tryBuildTransformFrame = (
@@ -577,12 +950,12 @@ const tryBuildTransformFrame = (
   projectionInheritedStyle: ComputedStyle,
   revision: number,
 ): RenderFrame | null => {
-  if (previous.scrolls.size > 0 || target instanceof HTMLElement && target.popover !== null) {
+  if (target instanceof HTMLElement && target.popover !== null) {
     return null
   }
   const layoutNode = layoutCache.get(target)
   const targetBox = previous.boxByNode.get(target)
-  if (!layoutNode || !targetBox || subtreeOwnsOverflowClip(layoutNode)) return null
+  if (!layoutNode || !targetBox) return null
   const nextStyle = computeStyle(
     target,
     layoutNode.parent?.style ?? projectionInheritedStyle,
@@ -590,50 +963,243 @@ const tryBuildTransformFrame = (
     interactionState,
   )
   if (!sameStyleExceptTransform(layoutNode.style, nextStyle)) return null
+  const targetPreviouslyOwnedPresentation = previous.presentationTransforms?.has(target) === true
+  const targetOwnsNextPresentation = nextStyle.transform.length > 0
+  if (
+    targetPreviouslyOwnedPresentation !== targetOwnsNextPresentation &&
+    previous.displayList.some((item) => item.kind === "path" && target.contains(item.node))
+  ) return null
   layoutNode.style = nextStyle
 
   const nextTransforms = new Map<Node, RenderTransform>()
   const parentTransform = nearestBoxTransform(layoutNode.parent, previous)
+  const targetTransform = composeTransform(
+    parentTransform,
+    resolveElementTransform(
+      nextStyle,
+      targetBox.x,
+      targetBox.y,
+      targetBox.width,
+      targetBox.height,
+    ),
+  )
+  const ownerTransforms = presentationOwnerTransformsAfterDelta(
+    previous,
+    target,
+    targetBox.transform,
+    targetTransform,
+  )
+  if (isVectorPathTransformGroup(layoutNode)) {
+    if (ownerTransforms !== null) {
+      return buildVectorPathTransformFrame(
+        previous,
+        target,
+        targetBox,
+        targetTransform,
+        ownerTransforms,
+        nextStyle.transform.length > 0,
+        revision,
+      )
+    }
+  }
+  if (ownerTransforms === null) return null
+  for (const [owner, transform] of ownerTransforms) nextTransforms.set(owner, transform)
   collectSubtreeTransforms(layoutNode, parentTransform, previous, nextTransforms)
   if (!nextTransforms.has(target)) return null
 
-  const boxes = immutableArray(previous.boxes.map((box) => {
-    const transform = nextTransforms.get(box.node)
-    return transform === undefined || transform === box.transform
-      ? box
-      : Object.freeze({...box, transform})
-  }))
-  const boxByNode = new Map<Node, RenderBox>()
-  for (const box of boxes) boxByNode.set(box.node, box)
-  const displayList = immutableArray(previous.displayList.map((item) => {
-    const transform = nextTransforms.get(item.node)
-    return transform === undefined || transform === item.transform
-      ? item
-      : Object.freeze({...item, transform})
-  }))
-  const mutableHits = new Map<Element, HitMetadata>()
-  for (const [node, hit] of previous.hits) {
-    const transform = nextTransforms.get(node)
-    mutableHits.set(
-      hit.node,
-      transform === undefined || transform === hit.transform
-        ? hit
-        : Object.freeze({...hit, transform}),
-    )
+  const indexes = collectionIndexes(previous)
+  const boxEntries: Array<{index: number; value: RenderBox}> = []
+  const boxMapEntries: Array<{node: Node; value: RenderBox}> = []
+  const displayEntries: Array<{index: number; value: DisplayItem}> = []
+  const hitEntries: Array<{node: Node; value: HitMetadata}> = []
+  const hitOrderEntries: Array<{index: number; value: HitMetadata}> = []
+  for (const [node, transform] of nextTransforms) {
+    const boxIndex = indexes.boxByNode.get(node)
+    const previousBox = boxIndex === undefined ? undefined : previous.boxes[boxIndex]
+    if (boxIndex !== undefined && previousBox !== undefined && previousBox.transform !== transform) {
+      const nextBox = Object.freeze({...previousBox, transform})
+      boxEntries.push({index: boxIndex, value: nextBox})
+      boxMapEntries.push({node, value: nextBox})
+    }
+    const displayIndexes = node instanceof HTMLVectorPathElement
+      ? [indexedDisplayItem(indexes, node, "path")]
+      : indexes.displayByNode.get(node)?.values() ?? []
+    for (const displayIndex of displayIndexes) {
+      if (displayIndex < 0) return null
+      const item = previous.displayList[displayIndex]
+      if (
+        item === undefined
+        || item.kind === "path" && item.presentationOwner !== null
+        || item.transform === transform
+      ) continue
+      displayEntries.push({index: displayIndex, value: Object.freeze({...item, transform})})
+    }
+    if (node.nodeType !== 1) continue
+    const previousHit = previous.hits.get(node)
+    if (
+      previousHit === undefined
+      || previousHit.path?.presentationOwner !== null && previousHit.path !== undefined
+      || previousHit.transform === transform
+    ) continue
+    const nextHit = Object.freeze({...previousHit, transform})
+    hitEntries.push({node, value: nextHit})
+    const hitIndex = indexedHit(indexes, previousHit)
+    if (previous.hitOrder !== undefined && hitIndex !== undefined) {
+      hitOrderEntries.push({index: hitIndex, value: nextHit})
+      indexes.hitByRecord.set(nextHit, hitIndex)
+    }
   }
+  const boxes = replaceImmutableArrayEntries(previous.boxes, boxEntries)
+  const boxByNode = replaceImmutableNodeMapEntries(previous.boxByNode, boxMapEntries)
+  const displayList = replaceImmutableArrayEntries(previous.displayList, displayEntries)
+  const hits = replaceImmutableNodeMapEntries(previous.hits, hitEntries)
+  const hitOrder = previous.hitOrder === undefined
+    ? undefined
+    : replaceImmutableArrayEntries(previous.hitOrder, hitOrderEntries)
   const next: RenderFrame = Object.freeze({
     revision,
     document: previous.document,
     root: previous.root,
     viewport: previous.viewport,
     boxes,
-    boxByNode: immutableNodeMap(boxByNode),
+    boxByNode,
     displayList,
-    hits: immutableNodeMap(mutableHits),
+    hits,
+    ...(hitOrder === undefined ? {} : {hitOrder}),
     scrolls: previous.scrolls,
+    presentationTransforms: updatedPresentationTransforms(
+      previous,
+      nextTransforms,
+      target,
+      nextStyle.transform.length > 0,
+    ),
   })
-  collectionIndexesByFrame.set(next, collectionIndexes(previous))
+  recordCanonicalRenderFrameChanges(next, previous, displayEntries.map(({index}) => index))
+  collectionIndexesByFrame.set(next, indexes)
   return next
+}
+
+const presentationOwnerTransformsAfterDelta = (
+  previous: RenderFrame,
+  target: Element,
+  oldTarget: RenderTransform,
+  newTarget: RenderTransform,
+): ReadonlyMap<Node, RenderTransform> | null => {
+  const output = new Map<Node, RenderTransform>([[target, newTarget]])
+  for (const [owner, oldTransform] of previous.presentationTransforms ?? []) {
+    if (owner === target || !target.contains(owner)) continue
+    if (oldTarget.scaleX === 0 || oldTarget.scaleY === 0) return null
+    const relativeScaleX = oldTransform.scaleX / oldTarget.scaleX
+    const relativeScaleY = oldTransform.scaleY / oldTarget.scaleY
+    const relativeTranslateX = (oldTransform.translateX - oldTarget.translateX) / oldTarget.scaleX
+    const relativeTranslateY = (oldTransform.translateY - oldTarget.translateY) / oldTarget.scaleY
+    output.set(owner, Object.freeze({
+      scaleX: newTarget.scaleX * relativeScaleX,
+      scaleY: newTarget.scaleY * relativeScaleY,
+      translateX: newTarget.scaleX * relativeTranslateX + newTarget.translateX,
+      translateY: newTarget.scaleY * relativeTranslateY + newTarget.translateY,
+    }))
+  }
+  return output
+}
+
+const isVectorPathTransformGroup = (layoutNode: LayoutNode): boolean =>
+  layoutNode.vectorPathOnly
+
+const buildVectorPathTransformFrame = (
+  previous: RenderFrame,
+  target: Element,
+  targetBox: RenderBox,
+  transform: RenderTransform,
+  nextTransforms: ReadonlyMap<Node, RenderTransform>,
+  targetOwnsTransform: boolean,
+  revision: number,
+): RenderFrame | null => {
+  const indexes = collectionIndexes(previous)
+  const boxIndex = indexes.boxByNode.get(target) ?? -1
+  if (boxIndex < 0 || previous.boxes[boxIndex] !== targetBox) return null
+  const nextBox = targetBox.transform === transform
+    ? targetBox
+    : Object.freeze({...targetBox, transform})
+  const boxes = nextBox === targetBox
+    ? previous.boxes
+    : replaceImmutableArray(previous.boxes, boxIndex, nextBox)
+  const boxByNode = nextBox === targetBox
+    ? previous.boxByNode
+    : replaceImmutableNodeMap(previous.boxByNode, target, nextBox)
+
+  let displayList = previous.displayList
+  for (const displayIndex of indexes.displayByNode.get(target)?.values() ?? []) {
+    if (displayIndex < 0) return null
+    const item = displayList[displayIndex]
+    if (item === undefined || item.kind === "path") continue
+    displayList = replaceImmutableArray(
+      displayList,
+      displayIndex,
+      Object.freeze({...item, transform}),
+    )
+  }
+
+  const previousTargetHit = previous.hits.get(target)
+  const nextTargetHit = previousTargetHit === undefined || previousTargetHit.transform === transform
+    ? previousTargetHit
+    : Object.freeze({...previousTargetHit, transform})
+  const hits = previousTargetHit === undefined || nextTargetHit === previousTargetHit
+    ? previous.hits
+    : replaceImmutableNodeMap(previous.hits, target, nextTargetHit!)
+  const hitOrder = previous.hitOrder === undefined || previousTargetHit === undefined
+    ? previous.hitOrder
+    : replaceIndexedHitOrder(previous.hitOrder, indexes, previousTargetHit, nextTargetHit!)
+  const next: RenderFrame = Object.freeze({
+    revision,
+    document: previous.document,
+    root: previous.root,
+    viewport: previous.viewport,
+    boxes,
+    boxByNode,
+    displayList,
+    hits,
+    ...(hitOrder === undefined ? {} : {hitOrder}),
+    scrolls: previous.scrolls,
+    presentationTransforms: updatedPresentationTransforms(
+      previous,
+      nextTransforms,
+      target,
+      targetOwnsTransform,
+    ),
+  })
+  recordCanonicalRenderFrameChanges(next, previous, [])
+  collectionIndexesByFrame.set(next, indexes)
+  return next
+}
+
+const replaceIndexedHitOrder = (
+  values: readonly HitMetadata[],
+  indexes: FrameCollectionIndexes,
+  previous: HitMetadata,
+  next: HitMetadata,
+): readonly HitMetadata[] => {
+  const index = indexedHit(indexes, previous)
+  if (index === undefined) return values
+  if (previous.path === undefined) indexes.hitByRecord.set(next, index)
+  return replaceImmutableArray(values, index, next)
+}
+
+const updatedPresentationTransforms = (
+  previous: RenderFrame,
+  nextTransforms: ReadonlyMap<Node, RenderTransform>,
+  target: Element,
+  targetOwnsTransform: boolean,
+): ReadonlyMap<Element, RenderTransform> => {
+  const values = new Map(previous.presentationTransforms ?? [])
+  for (const owner of values.keys()) {
+    const transform = nextTransforms.get(owner)
+    if (transform !== undefined) values.set(owner, transform)
+  }
+  const targetTransform = nextTransforms.get(target)
+  if (targetOwnsTransform && targetTransform !== undefined) values.set(target, targetTransform)
+  else values.delete(target)
+  return immutableNodeMap(values)
 }
 
 const collectSubtreeTransforms = (
@@ -643,14 +1209,29 @@ const collectSubtreeTransforms = (
   output: Map<Node, RenderTransform>,
 ): void => {
   const box = frame.boxByNode.get(layoutNode.node)
+  const pathItemIndex = layoutNode.node instanceof HTMLVectorPathElement &&
+    layoutNode.style.transform.length > 0
+    ? indexedDisplayItem(collectionIndexes(frame), layoutNode.node, "path")
+    : undefined
+  const pathItem = pathItemIndex === undefined || pathItemIndex < 0
+    ? undefined
+    : frame.displayList[pathItemIndex]
   const transform = box === undefined
-    ? inherited
+    ? pathItem?.kind === "path" && layoutNode.style.transform.length > 0
+      ? composeTransform(
+          inherited,
+          resolveElementTransform(layoutNode.style, pathItem.x, pathItem.y, 0, 0),
+        )
+      : inherited
     : composeTransform(
         inherited,
         resolveElementTransform(layoutNode.style, box.x, box.y, box.width, box.height),
       )
   if (box !== undefined) output.set(layoutNode.node, transform)
-  for (const child of layoutNode.children) {
+  else if (pathItem?.kind === "path" && layoutNode.style.transform.length > 0) {
+    output.set(layoutNode.node, transform)
+  }
+  for (const child of layoutNode.transformChildren) {
     collectSubtreeTransforms(child, transform, frame, output)
   }
 }
@@ -667,10 +1248,7 @@ const nearestBoxTransform = (
 }
 
 const subtreeOwnsOverflowClip = (layoutNode: LayoutNode): boolean => {
-  if (layoutNode.style.overflowX !== "visible" || layoutNode.style.overflowY !== "visible") {
-    return true
-  }
-  return layoutNode.children.some(subtreeOwnsOverflowClip)
+  return layoutNode.ownsOverflowClipInSubtree
 }
 
 const sameStyleExceptTransform = (left: ComputedStyle, right: ComputedStyle): boolean => {
@@ -722,17 +1300,52 @@ const styleMutationSignatures = (
 const collectionIndexes = (frame: RenderFrame): FrameCollectionIndexes => {
   const existing = collectionIndexesByFrame.get(frame)
   if (existing) return existing
-  const indexes = indexCollections(frame.boxes, frame.displayList)
+  const indexes = indexCollections(frame.boxes, frame.displayList, frame.hitOrder)
   collectionIndexesByFrame.set(frame, indexes)
   return indexes
+}
+
+const indexedDisplayItem = (
+  indexes: FrameCollectionIndexes,
+  node: Node,
+  key: string,
+): number => {
+  if (key === "path" && node instanceof HTMLVectorPathElement) {
+    const parent = node.parentElement
+    const block = parent === null ? undefined : indexes.pathStackByParent.get(parent)
+    if (block !== undefined) {
+      const position = block.nodes.indexOf(node)
+      if (position >= 0) return block.displayStart + position
+    }
+  }
+  return indexes.displayByNode.get(node)?.get(key) ?? -1
+}
+
+const indexedHit = (
+  indexes: FrameCollectionIndexes,
+  hit: HitMetadata,
+): number | undefined => {
+  if (hit.path !== undefined && hit.node instanceof HTMLVectorPathElement) {
+    const parent = hit.node.parentElement
+    const block = parent === null ? undefined : indexes.pathStackByParent.get(parent)
+    if (block !== undefined && block.hitStart >= 0) {
+      const position = block.nodes.indexOf(hit.node)
+      if (position >= 0) return block.hitStart + position
+    }
+  }
+  return indexes.hitByRecord.get(hit)
 }
 
 const indexCollections = (
   boxes: readonly RenderBox[],
   displayList: readonly DisplayItem[],
+  hitOrder?: readonly HitMetadata[],
 ): FrameCollectionIndexes => {
   const boxByNode = new WeakMap<Node, number>()
   const mutableDisplay = new WeakMap<Node, Map<string, number>>()
+  const hitByRecord = new WeakMap<HitMetadata, number>()
+  const pathStackByParent = new WeakMap<Element, PathStackBlock>()
+  const invalidPathParents = new WeakSet<Element>()
   for (let index = 0; index < boxes.length; index += 1) {
     const box = boxes[index]
     if (box) boxByNode.set(box.node, index)
@@ -747,9 +1360,85 @@ const indexCollections = (
     }
     keys.set(item.key, keys.has(item.key) ? -1 : index)
   }
+  for (let index = 0; index < displayList.length;) {
+    const item = displayList[index]
+    if (item?.kind !== "path" || item.node.parentElement === null) {
+      index += 1
+      continue
+    }
+    const parent = item.node.parentElement
+    const start = index
+    const nodes: HTMLVectorPathElement[] = []
+    while (index < displayList.length) {
+      const candidate = displayList[index]
+      if (candidate?.kind !== "path" || candidate.node.parentElement !== parent) break
+      nodes.push(candidate.node as HTMLVectorPathElement)
+      index += 1
+    }
+    if (invalidPathParents.has(parent) || pathStackByParent.has(parent)) {
+      invalidPathParents.add(parent)
+      pathStackByParent.delete(parent)
+      continue
+    }
+    const semanticIndexByNode = new WeakMap<HTMLVectorPathElement, number>()
+    const semanticChildren = parent.children
+    for (let semanticIndex = 0; semanticIndex < semanticChildren.length; semanticIndex += 1) {
+      const child = semanticChildren[semanticIndex]
+      if (child instanceof HTMLVectorPathElement) semanticIndexByNode.set(child, semanticIndex)
+    }
+    pathStackByParent.set(parent, {
+      parent,
+      nodes,
+      semanticIndexByNode,
+      displayStart: start,
+      hitStart: -1,
+      beforeDisplayNode: displayList[start - 1]?.node ?? null,
+      afterDisplayNode: displayList[index]?.node ?? null,
+      beforeHitNode: null,
+      afterHitNode: null,
+    })
+  }
+  if (hitOrder !== undefined) {
+    for (let index = 0; index < hitOrder.length; index += 1) {
+      const hit = hitOrder[index]
+      if (hit !== undefined) hitByRecord.set(hit, index)
+    }
+    for (let index = 0; index < hitOrder.length;) {
+      const hit = hitOrder[index]
+      const parent = hit?.path?.presentationOwner === undefined
+        ? hit?.node.parentElement ?? null
+        : hit.node.parentElement
+      if (hit?.path === undefined || parent === null) {
+        index += 1
+        continue
+      }
+      const block = pathStackByParent.get(parent)
+      const start = index
+      const nodes: Element[] = []
+      while (index < hitOrder.length) {
+        const candidate = hitOrder[index]
+        if (candidate?.path === undefined || candidate.node.parentElement !== parent) break
+        nodes.push(candidate.node)
+        index += 1
+      }
+      if (
+        block === undefined ||
+        nodes.length !== block.nodes.length ||
+        nodes.some((node, pathIndex) => node !== block.nodes[pathIndex])
+      ) {
+        pathStackByParent.delete(parent)
+        continue
+      }
+      block.hitStart = start
+      block.beforeHitNode = hitOrder[start - 1]?.node ?? null
+      block.afterHitNode = hitOrder[index]?.node ?? null
+    }
+  }
   return Object.freeze({
     boxByNode,
     displayByNode: mutableDisplay as WeakMap<Node, ReadonlyMap<string, number>>,
+    hitByRecord,
+    pathStackByParent,
   })
 }
 
@@ -822,6 +1511,7 @@ const buildFrame = (
     hitOrder: [],
     scrolls: new Map(),
     transforms: new Map(),
+    presentationTransforms: new Map(),
     measured: new WeakMap(),
     textMeasurer,
   }
@@ -838,6 +1528,7 @@ const buildFrame = (
     absolute: viewportBlock,
     normal: viewportBlock,
     presentation: IDENTITY_TRANSFORM,
+    presentationOwner: null,
   })
 
   measure(tree, availableWidth, availableHeight, state)
@@ -925,6 +1616,7 @@ const buildFrame = (
     if (hit) orderedHits.set(node, hit)
   }
   const hits = immutableNodeMap(orderedHits)
+  const hitOrder = immutableArray([...orderedHits.values()])
   const scrolls = immutableNodeMap(state.scrolls)
 
   const frame: RenderFrame = Object.freeze({
@@ -936,7 +1628,9 @@ const buildFrame = (
     boxByNode,
     displayList,
     hits,
+    hitOrder,
     scrolls,
+    presentationTransforms: immutableNodeMap(state.presentationTransforms),
   })
   return frame
 }
@@ -1048,6 +1742,9 @@ const buildLayoutTree = (
       style,
       effectiveOpacity: inheritedOpacity,
       children: Object.freeze([]),
+      transformChildren: Object.freeze([]),
+      ownsOverflowClipInSubtree: false,
+      vectorPathOnly: false,
       text: readText(node, style),
       tag: null,
       transparent: false,
@@ -1083,6 +1780,9 @@ const buildLayoutTree = (
       style,
       effectiveOpacity,
       children: [],
+      transformChildren: [],
+      ownsOverflowClipInSubtree: false,
+      vectorPathOnly: false,
       text: null,
       tag,
       transparent: false,
@@ -1094,7 +1794,8 @@ const buildLayoutTree = (
         tag === "select" ||
         tag === "progress" ||
         tag === "meter" ||
-        tag === "textarea"
+        tag === "textarea" ||
+        tag === "vector-path"
         ? Object.freeze([])
         : Object.freeze(
             layoutChildNodes(node).map((child) =>
@@ -1115,6 +1816,7 @@ const buildLayoutTree = (
             ),
           )
     layoutNode.children = children
+    finalizeLayoutNodeChildren(layoutNode)
     layoutCache.set(node, layoutNode)
     return layoutNode
   }
@@ -1125,6 +1827,9 @@ const buildLayoutTree = (
     style: inheritedStyle,
     effectiveOpacity: inheritedOpacity,
     children: [],
+    transformChildren: [],
+    ownsOverflowClipInSubtree: false,
+    vectorPathOnly: false,
     text: null,
     tag: null,
     transparent: true,
@@ -1148,8 +1853,21 @@ const buildLayoutTree = (
     ),
   )
   layoutNode.children = children
+  finalizeLayoutNodeChildren(layoutNode)
   layoutCache.set(node, layoutNode)
   return layoutNode
+}
+
+const finalizeLayoutNodeChildren = (layoutNode: LayoutNode): void => {
+  layoutNode.transformChildren = Object.freeze(
+    layoutNode.children.filter((child) => !(child.node instanceof HTMLVectorPathElement)),
+  )
+  layoutNode.vectorPathOnly = layoutNode.children.length > 0 &&
+    layoutNode.transformChildren.length === 0
+  layoutNode.ownsOverflowClipInSubtree =
+    layoutNode.style.overflowX !== "visible" ||
+    layoutNode.style.overflowY !== "visible" ||
+    layoutNode.transformChildren.some((child) => child.ownsOverflowClipInSubtree)
 }
 
 const measure = (
@@ -1162,6 +1880,9 @@ const measure = (
   if (cached) return cached
 
   if (layoutNode.style.display === "none")
+    return rememberSize(layoutNode, availableWidth, availableHeight, 0, 0, state)
+
+  if (layoutNode.node instanceof HTMLVectorPathElement)
     return rememberSize(layoutNode, availableWidth, availableHeight, 0, 0, state)
 
   if (layoutNode.text !== null) {
@@ -1604,13 +2325,19 @@ const childPlacementContext = (
   box: RenderBox,
   parent: PlacementContext,
   presentation: RenderTransform,
+  presentationOwner: Element | null,
 ): PlacementContext => {
   const establishesAbsolute = layoutNode.style.position !== "static" &&
     (layoutNode.style.display === "block" || layoutNode.style.display === "flex")
   const hasRelativeChild = layoutNode.children.some(
     (child) => child.style.position === "relative",
   )
-  if (!establishesAbsolute && !hasRelativeChild && presentation === parent.presentation) {
+  if (
+    !establishesAbsolute &&
+    !hasRelativeChild &&
+    presentation === parent.presentation &&
+    presentationOwner === parent.presentationOwner
+  ) {
     return parent
   }
   const normal: ContainingBlock = Object.freeze({
@@ -1627,7 +2354,7 @@ const childPlacementContext = (
         height: Math.max(0, box.height - vertical(box.border.widths)),
       })
     : parent.absolute
-  return Object.freeze({absolute, normal, presentation})
+  return Object.freeze({absolute, normal, presentation, presentationOwner})
 }
 
 const placeAbsoluteChild = (
@@ -1723,11 +2450,37 @@ const place = (
     x += relativeAxisOffset(layoutNode.style.left, layoutNode.style.right, context.normal.width)
     y += relativeAxisOffset(layoutNode.style.top, layoutNode.style.bottom, context.normal.height)
   }
+  const localPresentation = resolveElementTransform(layoutNode.style, x, y, width, height)
   const presentation = composeTransform(
     context.presentation,
-    resolveElementTransform(layoutNode.style, x, y, width, height),
+    localPresentation,
   )
   state.transforms.set(layoutNode.node, presentation)
+  const presentationOwner = layoutNode.style.transform.length === 0
+    ? context.presentationOwner
+    : isElement(layoutNode.node)
+      ? layoutNode.node
+      : context.presentationOwner
+  if (
+    layoutNode.style.transform.length > 0 &&
+    presentationOwner === layoutNode.node &&
+    isElement(layoutNode.node)
+  ) {
+    state.presentationTransforms.set(layoutNode.node, presentation)
+  }
+
+  if (layoutNode.node instanceof HTMLVectorPathElement) {
+    emitVectorPath(
+      layoutNode.node,
+      layoutNode,
+      x,
+      y,
+      clips,
+      presentationOwner,
+      state,
+    )
+    return Object.freeze({width: 0, height: 0})
+  }
 
   if (layoutNode.text !== null) {
     const box = createBox(
@@ -1871,11 +2624,18 @@ const place = (
     height,
     border,
     presentation,
+    presentationOwner,
   )
   const descendantBoxStart = state.boxes.length
   const descendantDisplayStart = state.displayList.length
   emitReplacedControlPresentation(layoutNode, box, descendantClips, state)
-  const childrenContext = childPlacementContext(layoutNode, box, context, presentation)
+  const childrenContext = childPlacementContext(
+    layoutNode,
+    box,
+    context,
+    presentation,
+    presentationOwner,
+  )
 
   if (layoutNode.style.display === "flex") {
     placeFlexChildren(
@@ -2907,6 +3667,7 @@ const appendOverflowClip = (
   height: number,
   border: RenderBorder,
   transform: RenderTransform,
+  presentationOwner: Element | null,
 ): readonly RenderClip[] => {
   const clipX = style.overflowX !== "visible"
   const clipY = style.overflowY !== "visible"
@@ -2943,6 +3704,7 @@ const appendOverflowClip = (
     clipX,
     clipY,
     transform,
+    ...(presentationOwner === null ? {} : {presentationOwner}),
   })
   return Object.freeze([...inherited, clip])
 }
@@ -3521,6 +4283,98 @@ const emitImagePresentation = (
     clips,
     transform: presentationFor(image, state),
   }))
+}
+
+const emitVectorPath = (
+  path: HTMLVectorPathElement,
+  layoutNode: LayoutNode,
+  x: number,
+  y: number,
+  clips: readonly RenderClip[],
+  presentationOwner: Element | null,
+  state: BuildState,
+): void => {
+  const geometry = readVectorPathGeometry(path)
+  if (geometry === null) return
+
+  if (layoutNode.style.strokeWidth > 0 && layoutNode.effectiveOpacity > 0) {
+    state.displayList.push(Object.freeze({
+      kind: "path",
+      key: "path",
+      node: path,
+      x,
+      y,
+      geometry,
+      stroke: layoutNode.style.stroke,
+      strokeWidth: layoutNode.style.strokeWidth,
+      opacity: layoutNode.effectiveOpacity,
+      clips,
+      presentationOwner,
+      transform: IDENTITY_TRANSFORM,
+    }))
+  }
+
+  const targetWidth = Math.max(layoutNode.style.strokeWidth, layoutNode.style.pointerHitWidth)
+  if (targetWidth <= 0) return
+  const envelope = vectorPathHitEnvelope(geometry, x, y, targetWidth)
+  const base = createHit(
+    path,
+    "vector-path",
+    envelope.x,
+    envelope.y,
+    envelope.width,
+    envelope.height,
+    clips,
+    IDENTITY_TRANSFORM,
+    layoutNode.style,
+  )
+  state.hits.set(path, Object.freeze({
+    ...base,
+    path: Object.freeze({
+      geometry,
+      originX: x,
+      originY: y,
+      strokeWidth: layoutNode.style.strokeWidth,
+      pointerHitWidth: layoutNode.style.pointerHitWidth,
+      presentationOwner,
+    }),
+  }))
+  state.hitOrder.push(path)
+}
+
+const vectorPathHitEnvelope = (
+  geometry: RenderPathGeometry,
+  originX: number,
+  originY: number,
+  targetWidth: number,
+): Readonly<{x: number; y: number; width: number; height: number}> => {
+  let longest = geometry.segments[0]!
+  let longestLengthSquared = -1
+  for (const segment of geometry.segments) {
+    const deltaX = segment.to.x - segment.from.x
+    const deltaY = segment.to.y - segment.from.y
+    const lengthSquared = deltaX * deltaX + deltaY * deltaY
+    if (lengthSquared > longestLengthSquared) {
+      longest = segment
+      longestLengthSquared = lengthSquared
+    }
+  }
+  const centerX = originX + (longest.from.x + longest.to.x) / 2
+  const centerY = originY + (longest.from.y + longest.to.y) / 2
+  const radius = targetWidth / 2
+  const bounds = geometry.bounds
+  const minimumX = originX + bounds.x - radius
+  const minimumY = originY + bounds.y - radius
+  const maximumX = originX + bounds.x + bounds.width + radius
+  const maximumY = originY + bounds.y + bounds.height + radius
+  const halfWidth = Math.max(centerX - minimumX, maximumX - centerX)
+  const halfHeight = Math.max(centerY - minimumY, maximumY - centerY)
+  return Object.freeze({
+    x: centerX - halfWidth,
+    y: centerY - halfHeight,
+    width: halfWidth * 2,
+    height: halfHeight * 2,
+  })
 }
 
 const emitSelectPresentation = (
@@ -4689,6 +5543,9 @@ const textStyle = (inherited: ComputedStyle): ComputedStyle =>
     borderRadii: ROOT_STYLE.borderRadii,
     background: null,
     color: inherited.color,
+    stroke: inherited.stroke,
+    strokeWidth: inherited.strokeWidth,
+    pointerHitWidth: 0,
     fontSize: inherited.fontSize,
     lineHeight: inherited.lineHeight,
     letterSpacing: inherited.letterSpacing,
@@ -4751,6 +5608,18 @@ class ImmutableNodeMap<Key extends Node, Value> implements ReadonlyMap<Key, Valu
     }
     const changes = new Map(this.#changes)
     changes.set(node, value)
+    return new ImmutableNodeMap(this.#base, changes, true)
+  }
+
+  withMany(entries: readonly Readonly<{node: Key; value: Value}>[]): ImmutableNodeMap<Key, Value> {
+    if (entries.length === 0) return this
+    if (this.#changes.size + entries.length >= 128) {
+      const compacted = new Map(this)
+      for (const {node, value} of entries) compacted.set(node, value)
+      return new ImmutableNodeMap(compacted, new Map(), true)
+    }
+    const changes = new Map(this.#changes)
+    for (const {node, value} of entries) changes.set(node, value)
     return new ImmutableNodeMap(this.#base, changes, true)
   }
 
@@ -4822,5 +5691,16 @@ const replaceImmutableNodeMap = <Key extends Node, Value>(
   if (values instanceof ImmutableNodeMap) return values.with(node, value)
   const next = new Map(values)
   next.set(node, value)
+  return new ImmutableNodeMap(next, new Map(), true)
+}
+
+const replaceImmutableNodeMapEntries = <Key extends Node, Value>(
+  values: ReadonlyMap<Key, Value>,
+  entries: readonly Readonly<{node: Key; value: Value}>[],
+): ReadonlyMap<Key, Value> => {
+  if (entries.length === 0) return values
+  if (values instanceof ImmutableNodeMap) return values.withMany(entries)
+  const next = new Map(values)
+  for (const {node, value} of entries) next.set(node, value)
   return new ImmutableNodeMap(next, new Map(), true)
 }

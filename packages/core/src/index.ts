@@ -1,5 +1,7 @@
 export { createDocumentRenderer } from "./renderer.ts"
 export {createDocumentInteractionState} from "./pseudo-state.ts"
+export {readCanonicalRenderFrameChanges} from "./frame-changes.ts"
+export {VECTOR_PATH_COORDINATE_LIMIT} from "@zavx0z/dom"
 export {
   createDocumentInteractionController,
   hitTest,
@@ -12,6 +14,7 @@ export type {
   DocumentRenderer,
   HitMetadata,
   ImageDisplayItem,
+  PathDisplayItem,
   RenderAlignItems,
   RenderBorder,
   RenderBorderColors,
@@ -33,6 +36,11 @@ export type {
   RenderObjectFit,
   RenderOverflow,
   RenderPadding,
+  RenderPathBounds,
+  RenderPathCubic,
+  RenderPathGeometry,
+  RenderPathPoint,
+  RenderPathSegment,
   RenderPosition,
   RenderScrollMetrics,
   RenderTextAlign,

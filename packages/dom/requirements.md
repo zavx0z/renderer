@@ -716,3 +716,21 @@ The Browser owner may dispatch one ordinary bubbling, cancelable semantic
 native selection to perform the platform copy default. Semantic cancellation
 prevents that native default. ClipboardEvent/DataTransfer access, cut, paste,
 async Clipboard API, HTML payloads and permission policy remain unsupported.
+
+## DOM-CORE-032 — project-extension semantic vector path
+
+`Document.createElement("vector-path")` returns the exact
+`HTMLVectorPathElement` project-extension prototype. Its `d` property reflects
+one ordinary string attribute and therefore uses the existing mutation,
+transaction, identity, listener and same-Document ownership laws. The Element
+is the semantic event/focus/role owner of the presented path; a component does
+not create segment child Elements, a Canvas, an SVG shadow tree or Engine
+objects.
+
+The DOM neither parses `d` nor owns bounds, tessellation, paint, hit testing or
+GPU state. This is deliberately not a claim for `SVGPathElement`, SVG
+namespaces, `Path2D`, Canvas drawing or the complete SVG path grammar.
+`VECTOR_PATH_COORDINATE_LIMIT` is the exact shared author-ABI bound `2^24`
+(`16,777,216`) for every absolute Path coordinate. It gives consumers one
+owner-defined preflight without importing Renderer or inventing a narrower
+domain limit; parsing and derived-geometry validation remain downstream.

@@ -26,7 +26,8 @@
     "bench:transform": "bun bench/transform.ts",
     "bench:react": "bun bench/components.ts",
     "bench:react-keyed": "bun bench/keyed-components.ts",
-    "bench:instances": "bun bench/instance-batches.ts"
+    "bench:instances": "bun bench/instance-batches.ts",
+    "bench:path": "bun bench/vector-paths.ts"
   },
   "devDependencies": {
     "@engine/core": "link:@engine/core",

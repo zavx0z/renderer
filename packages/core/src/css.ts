@@ -102,6 +102,9 @@ export type ComputedStyle = Readonly<{
   borderRadii: ComputedCornerRadii
   background: string | null
   color: string
+  stroke: string
+  strokeWidth: number
+  pointerHitWidth: number
   fontSize: number
   lineHeight: ComputedLineHeight
   letterSpacing: number
@@ -207,6 +210,9 @@ const deferredVariablePropertySet: ReadonlySet<string> = new Set([
   "background",
   "background-color",
   "color",
+  "stroke",
+  "stroke-width",
+  "pointer-hit-width",
   "border-top-color",
   "border-right-color",
   "border-bottom-color",
@@ -412,6 +418,10 @@ export const computeStyle = (
   const background = backgroundValue === undefined
     ? null
     : resolvedColor(backgroundValue, color)
+  const strokeValue = readValue(values, "stroke")
+  const stroke = strokeValue === undefined
+    ? parent?.stroke ?? color
+    : resolvedColor(strokeValue, color) ?? parent?.stroke ?? color
   const fontSize = parseFontSize(readValue(values, "font-size"), parent?.fontSize ?? 16)
   const defaultPadding = tag === "button" ? BUTTON_PADDING : ZERO_EDGES
   const overflow = normalizeOverflowAxes(
@@ -456,6 +466,13 @@ export const computeStyle = (
     borderRadii: readBorderRadii(values),
     background,
     color,
+    stroke,
+    strokeWidth: pixelNumber(
+      readValue(values, "stroke-width"),
+      parent?.strokeWidth ?? 1,
+      false,
+    ),
+    pointerHitWidth: pixelNumber(readValue(values, "pointer-hit-width"), 0, false),
     fontSize,
     lineHeight: parseLineHeight(
       readValue(values, "line-height"),
@@ -529,6 +546,14 @@ const uaDeclarations = (tag: string, element: Element): DeclarationMap => {
       return gaugeUaDeclarations()
     case "option":
       return Object.freeze({display: "none"})
+    case "vector-path":
+      return Object.freeze({
+        display: "block",
+        position: "absolute",
+        stroke: "currentcolor",
+        "stroke-width": "1px",
+        "pointer-hit-width": "0px",
+      })
     case "span":
       return Object.freeze({ display: "inline" })
     default:
@@ -1072,6 +1097,7 @@ const expandDeclaration = (
     }
     case "background-color":
     case "color":
+    case "stroke":
     case "border-top-color":
     case "border-right-color":
     case "border-bottom-color":
@@ -1079,6 +1105,11 @@ const expandDeclaration = (
       const color = normalizeSpecifiedColor(value)
       return color === null ? [] : [[property, color]]
     }
+    case "stroke-width":
+    case "pointer-hit-width":
+      return pixelNumber(value, Number.NaN, false) >= 0
+        ? [[property, value.trim().toLowerCase()]]
+        : []
     case "margin":
     case "padding":
     case "border-width":

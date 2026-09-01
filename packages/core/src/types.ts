@@ -103,6 +103,8 @@ export type RenderClip = Readonly<{
   clipX: boolean
   clipY: boolean
   transform: RenderTransform
+  /** Stable nearest semantic transform owner for transform-only projection. */
+  presentationOwner?: Element | null
 }>
 
 export type RenderBox = Readonly<{
@@ -172,7 +174,55 @@ export type ImageDisplayItem = Readonly<{
   transform: RenderTransform
 }>
 
-export type DisplayItem = RectDisplayItem | TextDisplayItem | ImageDisplayItem
+export type RenderPathPoint = Readonly<{
+  x: number
+  y: number
+}>
+
+export type RenderPathCubic = Readonly<{
+  from: RenderPathPoint
+  control1: RenderPathPoint
+  control2: RenderPathPoint
+  to: RenderPathPoint
+}>
+
+export type RenderPathSegment = Readonly<{
+  from: RenderPathPoint
+  to: RenderPathPoint
+}>
+
+export type RenderPathBounds = Readonly<{
+  x: number
+  y: number
+  width: number
+  height: number
+}>
+
+/** Frozen normalized and sampled geometry shared by paint and hit projection. */
+export type RenderPathGeometry = Readonly<{
+  cubics: readonly RenderPathCubic[]
+  segments: readonly RenderPathSegment[]
+  bounds: RenderPathBounds
+}>
+
+export type PathDisplayItem = Readonly<{
+  kind: "path"
+  key: string
+  node: Element
+  x: number
+  y: number
+  geometry: RenderPathGeometry
+  stroke: string
+  strokeWidth: number
+  opacity: number
+  clips: readonly RenderClip[]
+  /** Stable nearest semantic transform owner, resolved through the frame table. */
+  presentationOwner: Element | null
+  /** Identity fallback for consumers that do not yet read presentationOwner. */
+  transform: RenderTransform
+}>
+
+export type DisplayItem = RectDisplayItem | TextDisplayItem | ImageDisplayItem | PathDisplayItem
 
 export type HitMetadata = Readonly<{
   node: Element
@@ -185,6 +235,14 @@ export type HitMetadata = Readonly<{
   role: string | null
   clips: readonly RenderClip[]
   transform: RenderTransform
+  path?: Readonly<{
+    geometry: RenderPathGeometry
+    originX: number
+    originY: number
+    strokeWidth: number
+    pointerHitWidth: number
+    presentationOwner: Element | null
+  }>
   textControl?: Readonly<{
     lineHeight: number
     characterAdvance: number
@@ -215,7 +273,11 @@ export interface RenderFrame {
   readonly boxByNode: ReadonlyMap<Node, RenderBox>
   readonly displayList: readonly DisplayItem[]
   readonly hits: ReadonlyMap<Node, HitMetadata>
+  /** Exact paint-order hit records; adapters may omit it on synthetic frames. */
+  readonly hitOrder?: readonly HitMetadata[]
   readonly scrolls: ReadonlyMap<Element, RenderScrollMetrics>
+  /** Stable semantic transform owners used by retained grouped presentation. */
+  readonly presentationTransforms?: ReadonlyMap<Element, RenderTransform>
 }
 
 export type CreateDocumentRendererOptions = Readonly<{

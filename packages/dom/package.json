@@ -50,7 +50,8 @@
     "./html/table-row-element": "./src/html-table-row-element.ts",
     "./html/table-section-element": "./src/html-table-section-element.ts",
     "./html/text-area-element": "./src/html-text-area-element.ts",
-    "./html/u-list-element": "./src/html-u-list-element.ts"
+    "./html/u-list-element": "./src/html-u-list-element.ts",
+    "./html/vector-path-element": "./src/html-vector-path-element.ts"
   },
   "scripts": {
     "test": "bun test ./test",

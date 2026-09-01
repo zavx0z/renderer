@@ -43,7 +43,7 @@ export type DomInspectorHit = Readonly<{
 
 export type DomInspectorDisplay = Readonly<{
   key: string
-  kind: "rect" | "text" | "image"
+  kind: "rect" | "text" | "image" | "path"
 }>
 
 export type DomInspectorHTMLElementState = Readonly<{

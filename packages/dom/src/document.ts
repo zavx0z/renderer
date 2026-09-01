@@ -46,6 +46,7 @@ import {HTMLTableRowElement} from "./html-table-row-element.ts"
 import {HTMLTableSectionElement} from "./html-table-section-element.ts"
 import {HTMLTextAreaElement} from "./html-text-area-element.ts"
 import {HTMLUListElement} from "./html-u-list-element.ts"
+import {HTMLVectorPathElement} from "./html-vector-path-element.ts"
 import {
   changeFocus,
   clearFocusInSubtree,
@@ -150,6 +151,7 @@ export interface HTMLElementTagNameMap {
   thead: HTMLTableSectionElement
   tr: HTMLTableRowElement
   ul: HTMLUListElement
+  "vector-path": HTMLVectorPathElement
 }
 
 export type TextControlSelectionTarget = HTMLInputElement | HTMLTextAreaElement
@@ -235,6 +237,7 @@ export class Document extends Node {
       case "thead": return new HTMLTableSectionElement(this, "thead")
       case "tr": return new HTMLTableRowElement(this)
       case "ul": return new HTMLUListElement(this)
+      case "vector-path": return new HTMLVectorPathElement(this)
       default: return new HTMLElement(this, localName)
     }
   }
