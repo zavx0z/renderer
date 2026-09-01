@@ -13,6 +13,23 @@ import {
 } from "../src/index.ts"
 
 describe("structural HTML element factories", () => {
+  it("maps standard HTMLElement-only tags to the exact generic prototype", () => {
+    const document = createDocument()
+    for (const tagName of [
+      "aside",
+      "code",
+      "footer",
+      "header",
+      "nav",
+      "section",
+      "strong"
+    ] as const) {
+      const element = document.createElement(tagName)
+      expect(Object.getPrototypeOf(element)).toBe(HTMLElement.prototype)
+      expect(element.localName).toBe(tagName)
+    }
+  })
+
   it("creates exact list, heading and paragraph prototypes", () => {
     const document = createDocument()
     const ul = document.createElement("ul")

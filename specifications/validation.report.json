@@ -4,12 +4,12 @@
   "duplicateCapabilityIds": 0,
   "generatorVersion": "1.0.0",
   "inventoryFiles": 214,
-  "mappedEntries": 8769,
+  "mappedEntries": 8795,
   "missing": 0,
   "schemaErrors": 0,
   "schemaVersion": 1,
   "sourceArtifacts": 75,
-  "specEntries": 8769,
+  "specEntries": 8795,
   "statistics": {
     "browser": {
       "implemented": 16,
@@ -26,9 +26,9 @@
       "mappedEntries": 3032,
       "missing": 0,
       "not-applicable": 0,
-      "partial": 181,
+      "partial": 182,
       "specEntries": 3032,
-      "unsupported": 2851,
+      "unsupported": 2850,
       "unverified": 0
     },
     "devtools": {
@@ -46,9 +46,9 @@
       "mappedEntries": 1224,
       "missing": 0,
       "not-applicable": 0,
-      "partial": 249,
+      "partial": 246,
       "specEntries": 1224,
-      "unsupported": 706,
+      "unsupported": 709,
       "unverified": 183
     },
     "engine": {
@@ -66,9 +66,9 @@
       "mappedEntries": 3729,
       "missing": 0,
       "not-applicable": 787,
-      "partial": 996,
+      "partial": 953,
       "specEntries": 3729,
-      "unsupported": 1946,
+      "unsupported": 1989,
       "unverified": 0
     },
     "react": {
@@ -92,14 +92,14 @@
       "unverified": 48
     },
     "tsx": {
-      "implemented": 72,
-      "mappedEntries": 166,
+      "implemented": 102,
+      "mappedEntries": 192,
       "missing": 0,
       "not-applicable": 0,
-      "partial": 22,
-      "specEntries": 166,
+      "partial": 19,
+      "specEntries": 192,
       "unsupported": 28,
-      "unverified": 44
+      "unverified": 43
     },
     "webgpu": {
       "implemented": 19,

@@ -114726,7 +114726,7 @@
     {
       "blockedBy": [],
       "blocks": [],
-      "conformance": "none",
+      "conformance": "adapted",
       "consumers": [],
       "evidence": [
         {
@@ -114736,15 +114736,33 @@
           "repository": "external",
           "revision": "8.7.3",
           "type": "external-spec"
+        },
+        {
+          "doesNotProve": "Attribute operators beyond =, flags, namespaces, escaped names/values, case modifiers, or the complete Selectors grammar.",
+          "path": "packages/core/src/css.ts",
+          "proves": "The bounded selector owner parses presence and exact-value attribute selectors and matches them against the exact semantic Element attribute owner.",
+          "repository": "renderer",
+          "revision": "949857b7d94d4cf5f477a51d86c6953b4f60a973+dirty",
+          "symbol": "parseCompoundSelector/matchesCompound",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Every attribute selector operator, flag, namespace, escape, or full browser conformance.",
+          "path": "packages/core/test/native-pseudo-style.test.ts",
+          "proves": "An exact-value attribute selector participates in compound native-pseudo matching and changes the observable computed/paint style only for the matching semantic Element.",
+          "repository": "renderer",
+          "revision": "949857b7d94d4cf5f477a51d86c6953b4f60a973+dirty",
+          "symbol": "[data-role=\"action\"]",
+          "type": "unit-test"
         }
       ],
       "id": "css.types.attribute-selector",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-09-01",
+        "revision": "949857b7d94d4cf5f477a51d86c6953b4f60a973+dirty"
       },
       "limitations": [
-        "No implementation of this pinned CSS feature was found."
+        "Bounded to unescaped attribute presence and exact-value matching; ~=, |=, ^=, $=, *=, case-sensitivity flags, namespaces, escapes, and the complete Selectors grammar remain unsupported."
       ],
       "owner": {
         "package": "@zavx0z/renderer",
@@ -114752,17 +114770,17 @@
         "stage": "cpu"
       },
       "stages": {
-        "browser": "unsupported",
+        "browser": "partial",
         "cascade": "partial",
-        "computed": "unsupported",
+        "computed": "not-applicable",
         "evidence": "implemented",
-        "hit-test": "unsupported",
-        "layout": "unsupported",
-        "paint": "unsupported",
+        "hit-test": "not-applicable",
+        "layout": "not-applicable",
+        "paint": "not-applicable",
         "parse": "partial",
-        "webgpu": "unsupported"
+        "webgpu": "not-applicable"
       },
-      "status": "unsupported"
+      "status": "partial"
     },
     {
       "blockedBy": [],

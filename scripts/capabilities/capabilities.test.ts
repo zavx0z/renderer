@@ -1,7 +1,12 @@
 import { describe, expect, it } from "bun:test"
 import { readFile } from "node:fs/promises"
 import { resolve } from "node:path"
-import { rendererRoot, sha256, workspaceRoots } from "./model.ts"
+import {
+  rendererRoot,
+  sha256,
+  workspaceRevision,
+  workspaceRoots,
+} from "./model.ts"
 
 const generatedPatterns = [
   "specifications/**/*.json",
@@ -12,6 +17,10 @@ const generatedPatterns = [
   "packages/react/compatibility.json",
   "packages/react/src/compatibility.ts",
 ]
+
+type VersionInventory = Readonly<{
+  entries: readonly Readonly<{spec: Readonly<{version: string}>}>[]
+}>
 
 describe("platform capability audit", () => {
   it("regenerates inventories, demand, aggregate and reports without changing bytes", async () => {
@@ -35,6 +44,22 @@ describe("platform capability audit", () => {
     expect(report.specEntries).toBeGreaterThan(8_000)
     expect(report.mappedEntries).toBe(report.specEntries)
     for (const statistics of Object.values(report.statistics) as Array<{ missing: number }>) expect(statistics.missing).toBe(0)
+  })
+
+  it("binds live Template contracts and exports to the exact current checkout", async () => {
+    const revision = workspaceRevision("template")
+    const [compilerInventory, exportInventory] = await Promise.all([
+      readJson<VersionInventory>("specifications/tsx/compiler.json"),
+      readJson<VersionInventory>("specifications/platform/template-exports.json"),
+    ])
+    const compilerVersions = new Set(compilerInventory.entries.map(
+      entry => entry.spec.version,
+    ))
+    const exportVersions = new Set(exportInventory.entries.map(
+      entry => entry.spec.version,
+    ))
+    expect(compilerVersions).toEqual(new Set([`@zavx0z/template 2.6.2 at ${revision}`]))
+    expect(exportVersions).toEqual(new Set([`2.6.2 at ${revision}`]))
   })
 
   it("keeps audit tooling out of production package imports and dependencies", async () => {
@@ -75,6 +100,10 @@ async function run(path: string): Promise<void> {
     process.exited,
   ])
   if (exitCode !== 0) throw new Error(`${path} failed (${exitCode})\n${stdout}\n${stderr}`)
+}
+
+async function readJson<Value>(path: string): Promise<Value> {
+  return JSON.parse(await readFile(resolve(rendererRoot, path), "utf8")) as Value
 }
 
 async function generatedDigests(): Promise<Record<string, string>> {

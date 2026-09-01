@@ -41,10 +41,33 @@ If the required platform contract has no capability record, add it through the
 true owner's existing inventory/support source with an honest initial status.
 Do not create a second registry.
 
-If a consumer requires behavior beyond the current record, create or update a
-gap that validates against `specifications/gap.schema.json`. Record at least the
-capability ID, expected behavior, actual behavior, reproduction, affected
-consumer, and suspected owner.
+If a consumer has reproduced behavior beyond the current record, create or
+update a gap that validates against `specifications/gap.schema.json`. Record at
+least the capability ID, expected behavior, actual behavior, reproduction,
+affected consumer, and suspected owner.
+
+Static source usage is not yet a reproduced gap. Template and other analyzers
+emit neutral capability usages; `scripts/capabilities/consumer-check.ts` joins
+them to the exact matrix snapshot and emits records that validate against
+`specifications/capability-request.schema.json`. Every generated request carries
+`runtimeGapProven: false` and consumer-usage evidence whose `doesNotProve`
+explicitly excludes runtime failure, severity, implementation, and conformance.
+
+Request disposition is fail closed:
+
+- `implemented/exact` passes for standard/reference capabilities;
+- `implemented/extension` passes only for an explicit `project-contract`;
+- `partial`, `unsupported`, `unverified`, `not-applicable`, missing, and
+  ambiguous rows produce a request and diagnostic;
+- `report` records diagnostics without failing;
+- `strict` blocks missing, ambiguous, unsupported, unverified, and
+  not-applicable requests while leaving conformance requests visible but
+  nonblocking for staged migration;
+- `exact` returns failure for every request and is the long-term target.
+
+An owner reproduces the submitted behavior before promoting a request to a
+`gap`. A request must never be copied into `audit-findings.json` as an observed
+runtime fact without that reproduction.
 
 ## Implementation law
 

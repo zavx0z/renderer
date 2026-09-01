@@ -48,7 +48,7 @@
       "subject": "NumberField",
       "scope": "production",
       "path": "packages/components/fields/number-field.tsx",
-      "anchor": "const value = (event.target as HTMLInputElement).valueAsNumber",
+      "anchor": "const onInput = (input: HTMLInputElement, event: InputEvent) => {",
       "behavior": "Native typed number editing, focus, input/change, Escape rollback and selection through the exact semantic owner."
     },
     {
@@ -58,7 +58,7 @@
       "subject": "NumberField scrub",
       "scope": "production",
       "path": "packages/components/fields/number-field.tsx",
-      "anchor": "const onPointerDown = (event: PointerEvent)",
+      "anchor": "const onPointerDown = (target: HTMLInputElement, event: PointerEvent)",
       "behavior": "A scrub gesture continues outside the control until pointerup/cancel without component-owned capture emulation."
     },
     {

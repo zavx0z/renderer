@@ -1,5 +1,5 @@
 import type { CapabilityInventoryEntry, CapabilityOwner } from "./model.ts"
-import { normalizeIdSegment } from "./model.ts"
+import { normalizeIdSegment, workspaceRevision } from "./model.ts"
 
 interface ManualDefinition {
   id: string
@@ -23,6 +23,7 @@ const owners = {
 } satisfies Record<string, CapabilityOwner>
 
 export function buildManualInventories(): CapabilityInventoryEntry[] {
+  const templateContractVersion = `@zavx0z/template 2.6.2 at ${workspaceRevision("template")}`
   return [
     ...manual(
       "dom",
@@ -91,7 +92,7 @@ export function buildManualInventories(): CapabilityInventoryEntry[] {
       "tsx",
       "tsx.compiler",
       "template-contract",
-      "@zavx0z/template 2.6.2 at 87d0ec3d2a9f19c3750d567ee20dc4bace995e90",
+      templateContractVersion,
       "project-contract",
       owners.template,
       tsxCompilerFeatures,
@@ -414,6 +415,9 @@ const tsxCompilerFeatures: ManualDefinition[] = [
     "arrow-component-rejection", "early-return-rejection", "component-escape-rejection", "fixed-slot-abi",
     "binding-range-validation", "binding-realm-validation", "same-parent-anchor-validation",
     "static-style-extraction",
+    "standard-dom-jsx-typing", "capability-usage-extraction", "capability-usage-manifest",
+    "capability-usage-build-lifecycle", "configured-project-ownership",
+    "host-attribute-transport", "semantic-dependency-invalidation",
   ].map((id) => ({ id, kind: "tsx-compiler", description: `Template compiler support boundary for ${id.replaceAll("-", " ")}.` })),
 ]
 

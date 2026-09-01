@@ -23,5 +23,14 @@ shape. They may change component TSX/styles/tests/stories, but may not implement
 DOM, Renderer, Browser, WebGPU, React-shaped runtime, Template compiler or
 Engine behavior locally.
 
+Automated builds submit capability requests, not gaps. A request validates
+against `specifications/capability-request.schema.json`, records only the exact
+consumer usage and matrix snapshot, and always has `runtimeGapProven: false`.
+For such an input the owner first resolves any missing/ambiguous leaf and
+reproduces the requested behavior. Only then may the owner create a separate
+`gap.schema.json` record with actual evidence, reproduction, severity, and the
+confirmed owner. `unsupported` may justify an implementation request, but it is
+still not evidence that the submitted consumer scenario was executed.
+
 The handoff result must name the capability ID, owner/stage, semantics, tests,
 matrix transition, unblocked consumers and remaining limitations.

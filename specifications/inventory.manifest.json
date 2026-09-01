@@ -996,8 +996,8 @@
       "path": "platform/renderer-features.json"
     },
     {
-      "digest": "d6477a275ecfc2ed72ed6a013c986df0bb6a068309b21cdfff079ca4185e1c79",
-      "entries": 79,
+      "digest": "2149970a60cc6c6556e0e92967b951cdb7513584a9a5e71e9e220abbe5c16b17",
+      "entries": 98,
       "path": "platform/template-exports.json"
     },
     {
@@ -1056,8 +1056,8 @@
       "path": "react-19.2/semantics.json"
     },
     {
-      "digest": "1d7348bb5c16053bc00fcdc4b2b45ccf21773ef9538926078bc6d8dd9ffc9cd7",
-      "entries": 53,
+      "digest": "7610225c5a0cbbf79caa6e88657b7017101dffa71228379cd99bddedcd6425b4",
+      "entries": 60,
       "path": "tsx/compiler.json"
     },
     {
@@ -1073,5 +1073,5 @@
   ],
   "generatorVersion": "1.0.0",
   "schemaVersion": 1,
-  "totalEntries": 8769
+  "totalEntries": 8795
 }

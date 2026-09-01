@@ -55,7 +55,7 @@
           "path": "packages/interpreter/web/main.ts",
           "proves": "Project every module root from one shared Experience Document into stable world planes with nearest-plane input, resize, capture and cleanup.",
           "repository": "interpreter",
-          "revision": "8b681aeb5aef7fbb7a5641c70f01dd9595a86b76",
+          "revision": "08573a5f52fc04c4d25a87b318cd801c81ae8f20",
           "symbol": "Module displays",
           "type": "consumer-usage"
         }
@@ -73,16 +73,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "61",
+          "lines": "54",
           "path": "packages/components/fields/number-field.tsx",
           "proves": "Native typed number editing, focus, input/change, Escape rollback and selection through the exact semantic owner.",
           "repository": "ui",
-          "revision": "9c7cc40729aa342a90cd7d9a7db59627aaee8166",
+          "revision": "6af702d2e26c47387563f1157a50d9a657bd5934",
           "symbol": "NumberField",
           "type": "consumer-usage"
         }
       ],
-      "line": 61,
+      "line": 54,
       "package": "@ui/components",
       "path": "packages/components/fields/number-field.tsx",
       "repository": "ui",
@@ -95,16 +95,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "184",
+          "lines": "183",
           "path": "packages/components/inspector.tsx",
           "proves": "Focused numeric field editing inside nested scrollable Inspector groups.",
           "repository": "ui",
-          "revision": "9c7cc40729aa342a90cd7d9a7db59627aaee8166",
+          "revision": "6af702d2e26c47387563f1157a50d9a657bd5934",
           "symbol": "Inspector numeric fields",
           "type": "consumer-usage"
         }
       ],
-      "line": 184,
+      "line": 183,
       "package": "@ui/components",
       "path": "packages/components/inspector.tsx",
       "repository": "ui",
@@ -143,7 +143,7 @@
           "path": "packages/interpreter/web/main.ts",
           "proves": "Own one semantic Document, Canvas, Engine Renderer and Space for all module display roots in the Interpreter Experience.",
           "repository": "interpreter",
-          "revision": "8b681aeb5aef7fbb7a5641c70f01dd9595a86b76",
+          "revision": "08573a5f52fc04c4d25a87b318cd801c81ae8f20",
           "symbol": "Interpreter presentation host",
           "type": "consumer-usage"
         }
@@ -227,16 +227,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "186",
+          "lines": "185",
           "path": "packages/interpreter/web/dom/terminal.tsx",
           "proves": "Route focused text entry, keyboard control sequences and composition into the semantic terminal input owner.",
           "repository": "interpreter",
-          "revision": "8b681aeb5aef7fbb7a5641c70f01dd9595a86b76",
+          "revision": "08573a5f52fc04c4d25a87b318cd801c81ae8f20",
           "symbol": "Terminal",
           "type": "consumer-usage"
         }
       ],
-      "line": 186,
+      "line": 185,
       "package": "@metafor/interpreter",
       "path": "packages/interpreter/web/dom/terminal.tsx",
       "repository": "interpreter",
@@ -297,7 +297,7 @@
           "path": "packages/components/code-editor.tsx",
           "proves": "Two-axis scrolling with clipping and stable retained line/token identity.",
           "repository": "ui",
-          "revision": "9c7cc40729aa342a90cd7d9a7db59627aaee8166",
+          "revision": "6af702d2e26c47387563f1157a50d9a657bd5934",
           "symbol": "CodeEditor",
           "type": "consumer-usage"
         }
@@ -341,7 +341,7 @@
           "path": "packages/components/code-editor.tsx",
           "proves": "Preserve source whitespace and prevent wrapping for read-only code lines.",
           "repository": "ui",
-          "revision": "9c7cc40729aa342a90cd7d9a7db59627aaee8166",
+          "revision": "6af702d2e26c47387563f1157a50d9a657bd5934",
           "symbol": "CodeEditor",
           "type": "consumer-usage"
         }
@@ -363,7 +363,7 @@
           "path": "packages/interpreter/web/dom/source-editor.tsx",
           "proves": "Keep semantic textarea selection start/end/direction synchronized with the editable source.",
           "repository": "interpreter",
-          "revision": "8b681aeb5aef7fbb7a5641c70f01dd9595a86b76",
+          "revision": "08573a5f52fc04c4d25a87b318cd801c81ae8f20",
           "symbol": "SourceEditor",
           "type": "consumer-usage"
         }
@@ -381,16 +381,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "481",
+          "lines": "479",
           "path": "packages/interpreter/web/dom/terminal.tsx",
           "proves": "Retain and expose terminal text selection for copy instead of returning a fabricated null snapshot.",
           "repository": "interpreter",
-          "revision": "8b681aeb5aef7fbb7a5641c70f01dd9595a86b76",
+          "revision": "08573a5f52fc04c4d25a87b318cd801c81ae8f20",
           "symbol": "Terminal selection",
           "type": "consumer-usage"
         }
       ],
-      "line": 481,
+      "line": 479,
       "package": "@metafor/interpreter",
       "path": "packages/interpreter/web/dom/terminal.tsx",
       "repository": "interpreter",
@@ -407,7 +407,7 @@
           "path": "packages/interpreter/web/dom/source-editor.tsx",
           "proves": "Use current rendered line geometry instead of a hard-coded line height and viewport.",
           "repository": "interpreter",
-          "revision": "8b681aeb5aef7fbb7a5641c70f01dd9595a86b76",
+          "revision": "08573a5f52fc04c4d25a87b318cd801c81ae8f20",
           "symbol": "SourceEditor scrollToLine",
           "type": "consumer-usage"
         }
@@ -425,16 +425,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "78",
+          "lines": "72",
           "path": "packages/components/fields/number-field.tsx",
           "proves": "A scrub gesture continues outside the control until pointerup/cancel without component-owned capture emulation.",
           "repository": "ui",
-          "revision": "9c7cc40729aa342a90cd7d9a7db59627aaee8166",
+          "revision": "6af702d2e26c47387563f1157a50d9a657bd5934",
           "symbol": "NumberField scrub",
           "type": "consumer-usage"
         }
       ],
-      "line": 78,
+      "line": 72,
       "package": "@ui/components",
       "path": "packages/components/fields/number-field.tsx",
       "repository": "ui",
@@ -451,7 +451,7 @@
           "path": "packages/interpreter/web/dom/file-tree.ts",
           "proves": "Expose tree rows, level, expansion and selection through the semantic accessibility mapping.",
           "repository": "interpreter",
-          "revision": "8b681aeb5aef7fbb7a5641c70f01dd9595a86b76",
+          "revision": "08573a5f52fc04c4d25a87b318cd801c81ae8f20",
           "symbol": "FileTree",
           "type": "consumer-usage"
         }
@@ -473,7 +473,7 @@
           "path": "packages/interpreter/web/dom/source-editor.tsx",
           "proves": "Copy/cut/paste the current source selection through the browser host without a component-local clipboard dispatcher.",
           "repository": "interpreter",
-          "revision": "8b681aeb5aef7fbb7a5641c70f01dd9595a86b76",
+          "revision": "08573a5f52fc04c4d25a87b318cd801c81ae8f20",
           "symbol": "SourceEditor",
           "type": "consumer-usage"
         }
@@ -491,16 +491,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "177",
+          "lines": "176",
           "path": "packages/components/fields/color-picker-field.tsx",
           "proves": "Stable controlled RGBA values with retained HSVA number/range input/change semantics and analytical color paint.",
           "repository": "ui",
-          "revision": "9c7cc40729aa342a90cd7d9a7db59627aaee8166",
+          "revision": "6af702d2e26c47387563f1157a50d9a657bd5934",
           "symbol": "ColorPickerField",
           "type": "consumer-usage"
         }
       ],
-      "line": 177,
+      "line": 176,
       "package": "@ui/components",
       "path": "packages/components/fields/color-picker-field.tsx",
       "repository": "ui",
@@ -513,16 +513,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "35",
+          "lines": "34",
           "path": "packages/components/fields/color-field.tsx",
           "proves": "An anchored top-layer color picker with clipping, light dismiss, Escape and focus restoration instead of an inline hidden panel.",
           "repository": "ui",
-          "revision": "9c7cc40729aa342a90cd7d9a7db59627aaee8166",
+          "revision": "6af702d2e26c47387563f1157a50d9a657bd5934",
           "symbol": "ColorField",
           "type": "consumer-usage"
         }
       ],
-      "line": 35,
+      "line": 34,
       "package": "@ui/components",
       "path": "packages/components/fields/color-field.tsx",
       "repository": "ui",
@@ -535,16 +535,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "45",
+          "lines": "44",
           "path": "packages/components/fields/select-field.tsx",
           "proves": "Open a collapsed select picker, navigate retained options by keyboard, activate one option and dispatch change.",
           "repository": "ui",
-          "revision": "9c7cc40729aa342a90cd7d9a7db59627aaee8166",
+          "revision": "6af702d2e26c47387563f1157a50d9a657bd5934",
           "symbol": "SelectField",
           "type": "consumer-usage"
         }
       ],
-      "line": 45,
+      "line": 44,
       "package": "@ui/components",
       "path": "packages/components/fields/select-field.tsx",
       "repository": "ui",
@@ -649,7 +649,7 @@
           "path": "packages/interpreter/web/dom/source-editor.tsx",
           "proves": "Paint a visible caret and selected range aligned with the separately tokenized presentation.",
           "repository": "interpreter",
-          "revision": "8b681aeb5aef7fbb7a5641c70f01dd9595a86b76",
+          "revision": "08573a5f52fc04c4d25a87b318cd801c81ae8f20",
           "symbol": "SourceEditor",
           "type": "consumer-usage"
         }
@@ -667,16 +667,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "48",
+          "lines": "53",
           "path": "packages/components/button.tsx",
           "proves": "Adopt the exact compiled Button stylesheet once per Document and make it visible to every same-Document projection without manual buttonCss or consumer styleSheets wiring.",
           "repository": "ui",
-          "revision": "9c7cc40729aa342a90cd7d9a7db59627aaee8166",
+          "revision": "6af702d2e26c47387563f1157a50d9a657bd5934",
           "symbol": "Button automatic stylesheet adoption",
           "type": "consumer-usage"
         }
       ],
-      "line": 48,
+      "line": 53,
       "package": "@ui/components",
       "path": "packages/components/button.tsx",
       "repository": "ui",
@@ -781,7 +781,7 @@
           "path": "packages/interpreter/web/dom/source-editor.tsx",
           "proves": "Configure JSX compilation and migrate stale create*Controller imports to compiled component roots.",
           "repository": "interpreter",
-          "revision": "8b681aeb5aef7fbb7a5641c70f01dd9595a86b76",
+          "revision": "08573a5f52fc04c4d25a87b318cd801c81ae8f20",
           "symbol": "Compiled web UI migration",
           "type": "consumer-usage"
         }
@@ -821,16 +821,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "48",
+          "lines": "53",
           "path": "packages/components/button.tsx",
           "proves": "Extract Button owner CSS, bounded attribute/native pseudo selectors and caller composition from the global css intrinsic without runtime object authoring or scanning.",
           "repository": "ui",
-          "revision": "9c7cc40729aa342a90cd7d9a7db59627aaee8166",
+          "revision": "6af702d2e26c47387563f1157a50d9a657bd5934",
           "symbol": "Button component-local styles",
           "type": "consumer-usage"
         }
       ],
-      "line": 48,
+      "line": 53,
       "package": "@ui/components",
       "path": "packages/components/button.tsx",
       "repository": "ui",

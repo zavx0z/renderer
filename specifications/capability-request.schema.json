@@ -1,0 +1,405 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://zavx0z.dev/schemas/platform-capability-request-v1.json",
+  "title": "Platform capability request report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "generatorVersion",
+    "policy",
+    "matrix",
+    "source",
+    "requests",
+    "diagnostics",
+    "summary"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "generatorVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "policy": {
+      "enum": ["report", "strict", "exact"]
+    },
+    "matrix": {
+      "$ref": "#/$defs/artifact"
+    },
+    "source": {
+      "$ref": "#/$defs/artifact"
+    },
+    "requests": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/request"
+      }
+    },
+    "diagnostics": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/diagnostic"
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["usages", "satisfied", "requests", "blocking"],
+      "properties": {
+        "usages": {"type": "integer", "minimum": 0},
+        "satisfied": {"type": "integer", "minimum": 0},
+        "requests": {"type": "integer", "minimum": 0},
+        "blocking": {"type": "integer", "minimum": 0}
+      }
+    }
+  },
+  "$defs": {
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "digest"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "digest": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+      }
+    },
+    "position": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["line", "column"],
+      "properties": {
+        "line": {"type": "integer", "minimum": 1},
+        "column": {"type": "integer", "minimum": 1}
+      }
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "start", "end"],
+      "properties": {
+        "path": {"type": "string", "minLength": 1},
+        "start": {"$ref": "#/$defs/position"},
+        "end": {"$ref": "#/$defs/position"},
+        "symbol": {"type": "string", "minLength": 1}
+      }
+    },
+    "consumer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repository", "package", "subject", "scope", "revision"],
+      "properties": {
+        "repository": {"type": "string", "minLength": 1},
+        "package": {"type": "string", "minLength": 1},
+        "subject": {"type": "string", "minLength": 1},
+        "scope": {"enum": ["production", "storybook", "development"]},
+        "revision": {"type": "string", "minLength": 1}
+      }
+    },
+    "selector": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "id"],
+          "properties": {
+            "kind": {"const": "capability"},
+            "id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$"}
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "tag"],
+          "properties": {
+            "kind": {"const": "html-element"},
+            "tag": {"type": "string", "minLength": 1},
+            "interfaceMapping": {"type": "boolean"}
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "name", "transport"],
+          "properties": {
+            "kind": {"const": "html-attribute"},
+            "tag": {"type": "string", "minLength": 1},
+            "name": {"type": "string", "minLength": 1},
+            "transport": {"enum": ["content-attribute", "property"]},
+            "operation": {"enum": ["binding", "mount", "style"]},
+            "value": {"$ref": "#/$defs/usageValue"}
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "name"],
+          "properties": {
+            "kind": {"const": "event"},
+            "name": {"type": "string", "minLength": 1},
+            "target": {"type": "string", "minLength": 1},
+            "targetTag": {"type": "string", "minLength": 1},
+            "capture": {"type": "boolean"}
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "interface", "member"],
+          "properties": {
+            "kind": {"const": "interface-member"},
+            "interface": {"type": "string", "minLength": 1},
+            "member": {"type": "string", "minLength": 1},
+            "standardLibrary": {"const": "lib.dom"},
+            "memberKind": {"enum": ["attribute", "operation", "constructor", "const", "inheritance"]},
+            "signature": {"type": "string", "minLength": 1}
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "name"],
+          "properties": {
+            "kind": {"const": "css-property"},
+            "name": {"type": "string", "minLength": 1},
+            "value": {"$ref": "#/$defs/usageValue"}
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "name"],
+          "properties": {
+            "kind": {"const": "css-selector"},
+            "name": {"type": "string", "minLength": 1}
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "domain", "capabilityKind", "name"],
+          "properties": {
+            "kind": {"const": "named-capability"},
+            "domain": {"type": "string", "minLength": 1},
+            "capabilityKind": {"type": "string", "minLength": 1},
+            "name": {"type": "string", "minLength": 1}
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "tag"],
+          "properties": {
+            "kind": {"const": "project-element"},
+            "tag": {"type": "string", "minLength": 1}
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "value"],
+          "properties": {
+            "kind": {"const": "html-input-type"},
+            "value": {"type": "string"}
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "name", "value"],
+          "properties": {
+            "kind": {"const": "css-attribute-selector"},
+            "name": {"type": "string", "minLength": 1},
+            "value": {
+              "oneOf": [
+                {"type": "string"},
+                {"type": "null"}
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "usageValue": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind"],
+          "properties": {
+            "kind": {"const": "dynamic"}
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "value"],
+          "properties": {
+            "kind": {"const": "static"},
+            "value": {
+              "oneOf": [
+                {"type": "boolean"},
+                {"type": "number"},
+                {"type": "string"}
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "usage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source", "operation", "selector", "behavior"],
+      "properties": {
+        "source": {"$ref": "#/$defs/source"},
+        "operation": {
+          "enum": ["construct", "create", "read", "write", "call", "listen", "ref", "attribute", "style", "behavior"]
+        },
+        "selector": {"$ref": "#/$defs/selector"},
+        "behavior": {"type": "string", "minLength": 1}
+      }
+    },
+    "matrixSnapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["digest", "status", "conformance", "owner", "stages", "limitations", "reason", "blockedBy", "blocks", "lastVerified"],
+      "properties": {
+        "digest": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "status": {
+          "enum": ["implemented", "partial", "unsupported", "not-applicable", "unverified", "missing", "ambiguous"]
+        },
+        "conformance": {"enum": ["exact", "adapted", "extension", "none", "unknown"]},
+        "owner": {
+          "oneOf": [
+            {"$ref": "https://zavx0z.dev/schemas/platform-capability-v1.json#/$defs/owner"},
+            {"type": "null"}
+          ]
+        },
+        "stages": {
+          "oneOf": [
+            {
+              "type": "object",
+              "minProperties": 1,
+              "additionalProperties": {
+                "enum": ["implemented", "partial", "unsupported", "not-applicable", "unverified"]
+              }
+            },
+            {"type": "null"}
+          ]
+        },
+        "limitations": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "uniqueItems": true
+        },
+        "reason": {
+          "oneOf": [
+            {"type": "string", "minLength": 1},
+            {"type": "null"}
+          ]
+        },
+        "blockedBy": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "uniqueItems": true
+        },
+        "blocks": {
+          "type": "array",
+          "items": {"type": "string", "minLength": 1},
+          "uniqueItems": true
+        },
+        "lastVerified": {
+          "oneOf": [
+            {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["revision", "date"],
+              "properties": {
+                "revision": {"type": "string", "minLength": 1},
+                "date": {"type": "string", "format": "date"}
+              }
+            },
+            {"type": "null"}
+          ]
+        }
+      }
+    },
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schemaVersion",
+        "id",
+        "kind",
+        "capability",
+        "requiredBy",
+        "usage",
+        "expected",
+        "matrix",
+        "disposition",
+        "runtimeGapProven",
+        "evidence"
+      ],
+      "properties": {
+        "schemaVersion": {"const": 1},
+        "id": {"type": "string", "pattern": "^request\\.[a-f0-9]{24}$"},
+        "kind": {"enum": ["implementation", "verification", "conformance", "inventory", "resolution", "misuse"]},
+        "capability": {
+          "oneOf": [
+            {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$"},
+            {"type": "null"}
+          ]
+        },
+        "candidateCapabilities": {
+          "type": "array",
+          "items": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$"},
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "requiredBy": {"$ref": "#/$defs/consumer"},
+        "usage": {"$ref": "#/$defs/usage"},
+        "expected": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["reference", "behavior"],
+          "properties": {
+            "reference": {"type": "string", "minLength": 1},
+            "behavior": {"type": "string", "minLength": 1}
+          }
+        },
+        "matrix": {"$ref": "#/$defs/matrixSnapshot"},
+        "disposition": {
+          "enum": [
+            "needs-implementation",
+            "needs-verification",
+            "needs-conformance",
+            "needs-inventory",
+            "needs-resolution",
+            "consumer-misuse"
+          ]
+        },
+        "runtimeGapProven": {"const": false},
+        "evidence": {
+          "type": "array",
+          "items": {"$ref": "https://zavx0z.dev/schemas/platform-capability-v1.json#/$defs/evidence"},
+          "minItems": 1
+        }
+      }
+    },
+    "diagnostic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code", "severity", "blocking", "message", "requestId", "source"],
+      "properties": {
+        "code": {"type": "string", "pattern": "^CAPABILITY_[A-Z_]+$"},
+        "severity": {"enum": ["info", "warning", "error"]},
+        "blocking": {"type": "boolean"},
+        "message": {"type": "string", "minLength": 1},
+        "requestId": {"type": "string", "pattern": "^request\\.[a-f0-9]{24}$"},
+        "source": {"$ref": "#/$defs/source"}
+      }
+    }
+  }
+}

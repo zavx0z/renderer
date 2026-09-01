@@ -18,6 +18,7 @@
     "capabilities:support": "bun scripts/capabilities/build-support-overlays.ts",
     "capabilities:demand": "bun scripts/capabilities/generate-consumer-demand.ts",
     "capabilities:generate": "bun scripts/capabilities/generate.ts",
+    "capabilities:consumer-check": "bun scripts/capabilities/consumer-check.ts",
     "capabilities:rebuild": "bun run capabilities:inventory && bun run capabilities:demand && bun run capabilities:generate",
     "capabilities:typecheck": "tsc -p tsconfig.capabilities.json",
     "capabilities:check": "bun run capabilities:typecheck && bun test scripts/capabilities",

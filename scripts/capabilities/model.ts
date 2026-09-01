@@ -122,6 +122,181 @@ export interface ConsumerDemand {
   evidence: EvidenceRecord[]
 }
 
+export const CAPABILITY_USAGE_SELECTOR_KINDS = [
+  "capability",
+  "html-element",
+  "html-attribute",
+  "event",
+  "interface-member",
+  "css-property",
+  "css-selector",
+  "named-capability",
+  "project-element",
+  "html-input-type",
+  "css-attribute-selector",
+] as const
+
+export const CAPABILITY_USAGE_OPERATIONS = [
+  "construct",
+  "create",
+  "read",
+  "write",
+  "call",
+  "listen",
+  "ref",
+  "attribute",
+  "style",
+  "behavior",
+] as const
+
+export const CAPABILITY_POLICIES = ["report", "strict", "exact"] as const
+
+export const CAPABILITY_REQUEST_KINDS = [
+  "implementation",
+  "verification",
+  "conformance",
+  "inventory",
+  "resolution",
+  "misuse",
+] as const
+
+export type CapabilityUsageOperation = (typeof CAPABILITY_USAGE_OPERATIONS)[number]
+export type CapabilityPolicy = (typeof CAPABILITY_POLICIES)[number]
+export type CapabilityRequestKind = (typeof CAPABILITY_REQUEST_KINDS)[number]
+
+export interface CapabilityConsumerIdentity {
+  repository: string
+  package: string
+  subject: string
+  scope: ConsumerDemand["scope"]
+  revision: string
+}
+
+export interface CapabilitySourcePosition {
+  line: number
+  column: number
+}
+
+export interface CapabilityUsageSource {
+  path: string
+  start: CapabilitySourcePosition
+  end: CapabilitySourcePosition
+  symbol?: string
+}
+
+export type CapabilityUsageValue =
+  | Readonly<{kind: "dynamic"}>
+  | Readonly<{kind: "static"; value: boolean | number | string}>
+
+export type CapabilityUsageSelector =
+  | Readonly<{ kind: "capability"; id: string }>
+  | Readonly<{ kind: "html-element"; tag: string; interfaceMapping?: boolean }>
+  | Readonly<{
+      kind: "html-attribute"
+      tag?: string
+      name: string
+      transport: "content-attribute" | "property"
+      operation?: "binding" | "mount" | "style"
+      value?: CapabilityUsageValue
+    }>
+  | Readonly<{ kind: "event"; name: string; target?: string; targetTag?: string; capture?: boolean }>
+  | Readonly<{
+      kind: "interface-member"
+      interface: string
+      member: string
+      standardLibrary?: "lib.dom"
+      memberKind?: "attribute" | "operation" | "constructor" | "const" | "inheritance"
+      signature?: string
+    }>
+  | Readonly<{ kind: "css-property"; name: string; value?: CapabilityUsageValue }>
+  | Readonly<{ kind: "css-selector"; name: string }>
+  | Readonly<{ kind: "named-capability"; domain: string; capabilityKind: string; name: string }>
+  | Readonly<{ kind: "project-element"; tag: string }>
+  | Readonly<{ kind: "html-input-type"; value: string }>
+  | Readonly<{ kind: "css-attribute-selector"; name: string; value: string | null }>
+
+export interface CapabilityUsage {
+  requiredBy: CapabilityConsumerIdentity
+  source: CapabilityUsageSource
+  operation: CapabilityUsageOperation
+  selector: CapabilityUsageSelector
+  behavior: string
+}
+
+export interface CapabilityUsageFile {
+  schemaVersion: typeof CAPABILITY_SCHEMA_VERSION
+  generatorVersion: string
+  usages: CapabilityUsage[]
+}
+
+export interface CapabilityRequestMatrixSnapshot {
+  digest: string
+  status: CapabilityStatus | "missing" | "ambiguous"
+  conformance: CapabilityConformance
+  owner: CapabilityOwner | null
+  stages: Record<string, CapabilityStatus> | null
+  limitations: string[]
+  reason: string | null
+  blockedBy: string[]
+  blocks: string[]
+  lastVerified: SupportRecord["lastVerified"] | null
+}
+
+export interface CapabilityRequest {
+  schemaVersion: typeof CAPABILITY_SCHEMA_VERSION
+  id: string
+  kind: CapabilityRequestKind
+  capability: string | null
+  candidateCapabilities?: string[]
+  requiredBy: CapabilityConsumerIdentity
+  usage: Omit<CapabilityUsage, "requiredBy">
+  expected: {
+    reference: string
+    behavior: string
+  }
+  matrix: CapabilityRequestMatrixSnapshot
+  disposition:
+    | "needs-implementation"
+    | "needs-verification"
+    | "needs-conformance"
+    | "needs-inventory"
+    | "needs-resolution"
+    | "consumer-misuse"
+  runtimeGapProven: false
+  evidence: EvidenceRecord[]
+}
+
+export interface CapabilityDiagnostic {
+  code: string
+  severity: "info" | "warning" | "error"
+  blocking: boolean
+  message: string
+  requestId: string
+  source: CapabilityUsageSource
+}
+
+export interface CapabilityRequestReport {
+  schemaVersion: typeof CAPABILITY_SCHEMA_VERSION
+  generatorVersion: string
+  policy: CapabilityPolicy
+  matrix: {
+    path: string
+    digest: string
+  }
+  source: {
+    path: string
+    digest: string
+  }
+  requests: CapabilityRequest[]
+  diagnostics: CapabilityDiagnostic[]
+  summary: {
+    usages: number
+    satisfied: number
+    requests: number
+    blocking: number
+  }
+}
+
 export interface DomainStatistics {
   specEntries: number
   mappedEntries: number
@@ -166,6 +341,28 @@ export const workspaceRoots: WorkspaceRoots = {
   metafor: resolve(repozitariumRoot, "metafor"),
   interpreter: resolve(repozitariumRoot, "interpreter"),
   demo: resolve(repozitariumRoot, "demo"),
+}
+
+/** Returns the exact checked-out revision label for a live workspace source. */
+export function workspaceRevision(repository: keyof WorkspaceRoots): string {
+  const root = workspaceRoots[repository]
+  const head = gitText(root, ["rev-parse", "HEAD"])
+  const status = gitText(root, ["status", "--short", "--untracked-files=all"])
+  return `${head}${status === "" ? "" : "+dirty"}`
+}
+
+function gitText(root: string, arguments_: readonly string[]): string {
+  const result = Bun.spawnSync({
+    cmd: ["git", "-C", root, ...arguments_],
+    stdout: "pipe",
+    stderr: "pipe",
+  })
+  if (result.exitCode !== 0) {
+    throw new Error(
+      `git ${arguments_.join(" ")} failed in ${root}: ${new TextDecoder().decode(result.stderr).trim()}`,
+    )
+  }
+  return new TextDecoder().decode(result.stdout).trim()
 }
 
 export function stableStringify(value: unknown): string {

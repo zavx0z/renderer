@@ -4,6 +4,7 @@ import {
   GENERATOR_VERSION,
   readJson,
   rendererRoot,
+  workspaceRevision,
   workspaceRoots,
   writeJsonIfChanged,
 } from "./model.ts"
@@ -17,6 +18,10 @@ import type {
   SupportOverlay,
   SupportRecord,
 } from "./model.ts"
+import {
+  reviewedEventLeafPresence,
+  reviewedHtmlInputLeafPresence,
+} from "./leaf-support.ts"
 
 interface InventoryManifest {
   files: Array<{ path: string }>
@@ -83,6 +88,14 @@ const templateCssVerification = {
   revision: "c97d7113ad270a26a8ed8ec9ddf30eaf3bacf1a5",
   date: "2026-09-01",
 } as const
+const templateCapabilityVerification = {
+  revision: "4b66cdee58840f3e59701f9a8c52b044512a1acb+dirty",
+  date: "2026-09-01",
+} as const
+const domLeafVerification = {
+  revision: workspaceRevision("renderer"),
+  date: "2026-09-01",
+} as const
 const flexWrapVerification = {
   revision: "74ea59fc8fa7c7156ebaeefceed459097f52b4dd",
   date: "2026-08-30",
@@ -99,7 +112,7 @@ const storybookAggregateRevision = "5c1ed1ec54ba451f95ddfa19a61c8ecd81f3ac66"
 const storybookAlignContentRevision = "d249503ce60513fd4073b5b35fda10c1d2e751d8"
 const revisions: Record<string, string> = {
   renderer: "3c91038c3f14ccc44616209fd82b1e59b7369408",
-  template: templateCssVerification.revision,
+  template: templateCapabilityVerification.revision,
   engine: engineFontVerification.revision,
   ui: "77a075a0069ff43e1551b3cdbfe174fe525177d3",
   node: "9f390945f51f88c6374d5fb8f3215cf5d776e571",
@@ -120,6 +133,7 @@ const overlayPaths: Record<string, string> = {
 }
 
 async function main(): Promise<void> {
+  const selection = supportBuildSelection(process.argv.slice(2))
   const manifest = await readJson<InventoryManifest>(resolve(rendererRoot, "specifications/inventory.manifest.json"))
   const entries = (
     await Promise.all(manifest.files.map(async (file) => (
@@ -135,37 +149,110 @@ async function main(): Promise<void> {
   }
 
   for (const [packageName, packageEntries] of grouped) {
+    if (selection.package !== null && packageName !== selection.package) continue
     const output = overlayPaths[packageName]
     if (!output) throw new Error(`No support overlay path for ${packageName}`)
     const repository = packageEntries[0]?.ownerHint.repository
     if (!repository) throw new Error(`No repository for ${packageName}`)
     const revision = packageName === "@engine/core"
       ? engineTextVerification.revision
+      : packageName === "@zavx0z/dom"
+        ? domLeafVerification.revision
       : packageName === "@zavx0z/renderer" || packageName === "@zavx0z/renderer-webgpu"
       ? textBaselineVerification.revision
       : revisions[repository]
     if (!revision) throw new Error(`No revision for ${repository}`)
-    const records = packageEntries
+    const ownerVerificationDate = packageName === "@engine/core"
+      ? engineTextVerification.date
+      : packageName === "@zavx0z/renderer" || packageName === "@zavx0z/renderer-webgpu"
+      ? textBaselineVerification.date
+      : packageName === "@zavx0z/template"
+        ? templateCapabilityVerification.date
+        : packageName === "@zavx0z/dom"
+          ? domLeafVerification.date
+        : verificationDate
+    const selectedEntries = selection.roots.length === 0
+      ? packageEntries
+      : packageEntries.filter(entry => selection.roots.some(root =>
+        entry.id === root || entry.id.startsWith(`${root}.`)))
+    const generatedRecords = selectedEntries
       .map((entry) => supportRecord(entry, classify(entry)))
       .sort((left, right) => left.id.localeCompare(right.id))
-    const overlay: SupportOverlay = {
-      schemaVersion: CAPABILITY_SCHEMA_VERSION,
-      generatorVersion: GENERATOR_VERSION,
-      repository,
-      package: packageName,
-      revision,
-      verificationDate: packageName === "@engine/core"
-        ? engineTextVerification.date
-        : packageName === "@zavx0z/renderer" || packageName === "@zavx0z/renderer-webgpu"
-        ? textBaselineVerification.date
-        : packageName === "@zavx0z/template"
-          ? templateCssVerification.date
-        : packageName === "@engine/core"
-          ? engineFontVerification.date
-          : verificationDate,
-      records,
-    }
+    const overlay: SupportOverlay = selection.roots.length === 0
+      ? {
+          schemaVersion: CAPABILITY_SCHEMA_VERSION,
+          generatorVersion: GENERATOR_VERSION,
+          repository,
+          package: packageName,
+          revision,
+          verificationDate: ownerVerificationDate,
+          records: generatedRecords,
+        }
+      : mergeSelectedSupportRecords(
+          await readJson<SupportOverlay>(output),
+          generatedRecords,
+          selection.roots,
+          revision,
+          ownerVerificationDate,
+        )
     await writeJsonIfChanged(output, overlay)
+  }
+  if (selection.package !== null && !grouped.has(selection.package)) {
+    throw new Error(`Unknown support package: ${selection.package}`)
+  }
+}
+
+function supportBuildSelection(argv: readonly string[]): Readonly<{
+  package: string | null
+  roots: readonly string[]
+}> {
+  let packageName: string | null = null
+  const roots: string[] = []
+  for (let index = 0; index < argv.length; index += 2) {
+    const option = argv[index]
+    const value = argv[index + 1]
+    if (!option || !value) throw new TypeError(supportBuildUsage())
+    if (option === "--package") {
+      if (packageName !== null) throw new TypeError("Duplicate --package")
+      packageName = value
+      continue
+    }
+    if (option === "--root") {
+      roots.push(value)
+      continue
+    }
+    throw new TypeError(`Unknown support build option: ${option}\n${supportBuildUsage()}`)
+  }
+  if (roots.length > 0 && packageName === null) throw new TypeError(`--root requires --package\n${supportBuildUsage()}`)
+  return {package: packageName, roots: [...new Set(roots)].sort()}
+}
+
+function supportBuildUsage(): string {
+  return "Usage: bun scripts/capabilities/build-support-overlays.ts [--package <package-name> [--root <capability-root>]...]"
+}
+
+function mergeSelectedSupportRecords(
+  current: SupportOverlay,
+  generated: readonly SupportRecord[],
+  roots: readonly string[],
+  revision: string,
+  verificationDate: string,
+): SupportOverlay {
+  const replacements = new Map(generated.map(record => [record.id, record]))
+  const records = current.records.map(record => replacements.get(record.id) ?? record)
+  const existing = new Set(records.map(record => record.id))
+  records.push(...generated.filter(record => !existing.has(record.id)))
+  const stale = records.filter(record =>
+    roots.some(root => record.id === root || record.id.startsWith(`${root}.`)) &&
+    !replacements.has(record.id))
+  if (stale.length > 0) {
+    throw new Error(`Selected support merge found stale rows: ${stale.slice(0, 20).map(record => record.id).join(", ")}`)
+  }
+  return {
+    ...current,
+    revision,
+    verificationDate,
+    records,
   }
 }
 
@@ -333,8 +420,29 @@ function classifyDom(entry: CapabilityInventoryEntry): Classification {
   if (id.startsWith("dom.interfaces.eventtarget")) {
     return implemented("exact", [implementation("renderer", "packages/dom/src/event-target.ts", "EventTarget", "33-143", "Listener identity/options and synchronous dispatch.", "Trusted native event generation."), test("renderer", "packages/dom/test/event.test.ts", "EventTarget behavioral tests", "Capture, target, bubble, once, passive, cancellation, and propagation.", "Browser default actions outside the DOM owner.")])
   }
-  if (id.startsWith("dom.interfaces.event")) {
-    return partial("adapted", [implementation("renderer", "packages/dom/src/event.ts", "Event", "9-80", "Event state, cancellation, phases, and propagation controls.", "High-resolution timestamp and every legacy field."), test("renderer", "packages/dom/test/event.test.ts", "Event behavioral tests", "Core observable dispatch state and cancellation.", "All legacy and browser-trusted semantics.")], "Event.timeStamp uses Date.now and the complete legacy/composed surface is not behaviorally proven.")
+  if (
+    id === "dom.mixins.parentnode.methods.queryselector" ||
+    id === "dom.mixins.parentnode.methods.queryselectorall"
+  ) {
+    return reviewedCurrent(partial(
+      "adapted",
+      [
+        externalEvidence(entry),
+        implementation("renderer", "packages/dom/src/selectors.ts", "queryFirst/queryAll", undefined, "Document, DocumentFragment and Element expose the standard ParentNode query methods through one bounded selector matcher and exact semantic descendants.", "The complete Selectors grammar, namespaces, Shadow DOM, live collections or native browser equivalence."),
+        test("renderer", "packages/dom/test/selectors.test.ts", entry.name, "Document, Element and DocumentFragment queries prove scope, descendant/child compounds, static ordered NodeList results, mutation refresh and exact error rejection for unsupported grammar.", "The complete Selectors grammar, namespaces, Shadow DOM or native browser behavior."),
+      ],
+      "The ParentNode query methods are implemented over the bounded tag/id/class/attribute/descendant/child selector subset; namespaces, Shadow DOM and the complete Selectors grammar remain unsupported.",
+    ))
+  }
+  const eventLeafPresence = reviewedEventLeafPresence(entry)
+  if (eventLeafPresence === "absent") {
+    return reviewedLeafAbsent(entry, "The current Event implementation does not expose this standard member; an interface-level implementation cannot prove a missing leaf.")
+  }
+  if (eventLeafPresence === "present" || id.startsWith("dom.interfaces.event")) {
+    return {
+      ...partial("adapted", [implementation("renderer", "packages/dom/src/event.ts", "Event", "9-80", "Event state, cancellation, phases, and propagation controls.", "High-resolution timestamp and every legacy field."), test("renderer", "packages/dom/test/event.test.ts", "Event behavioral tests", "Core observable dispatch state and cancellation.", "All legacy and browser-trusted semantics.")], "Event.timeStamp uses Date.now and the complete legacy/composed surface is not behaviorally proven."),
+      lastVerified: domLeafVerification,
+    }
   }
   if (id.startsWith("dom.interfaces.node")) return classifyNodeMember(entry)
   if (id.startsWith("dom.interfaces.documentfragment")) return partialDomClass(entry, "packages/dom/src/document-fragment.ts", "DocumentFragment", "packages/dom/test/tree.test.ts")
@@ -421,6 +529,55 @@ function partialDomClass(
 function classifyHtml(entry: CapabilityInventoryEntry): Classification {
   if (isHtmlNotApplicable(entry)) return notApplicable(entry, htmlNotApplicableReason(entry))
 
+  if (
+    entry.id === "html.mixins.htmlorsvgormathmlelement.attributes.tabindex" ||
+    entry.id === "html.reflections.htmlorsvgormathmlelement.tabindex"
+  ) {
+    return reviewedCurrent(partial(
+      "adapted",
+      [
+        externalEvidence(entry),
+        implementation("renderer", "packages/dom/src/html-element.ts", "HTMLElement.tabIndex", undefined, "The semantic HTMLElement reflects tabindex through HTML integer parsing and Web IDL long coercion while preserving per-control default tab indices.", "Complete sequential focus navigation, SVG/MathML hosts, autofocus, and every browser reflection edge."),
+        test("renderer", "packages/dom/test/input.test.ts", "tabIndex reflection and focusability", "Content/property reflection, default indices, explicit -1 focusability, removal fallback, hidden suppression and connected focus behavior are observable.", "Complete sequential keyboard navigation, SVG/MathML or native browser equivalence."),
+      ],
+      "Bounded HTML tabIndex reflection and practical programmatic focusability are implemented; complete sequential navigation, autofocus, SVG/MathML hosts, and every browser coercion/default remain unsupported.",
+    ))
+  }
+  if (entry.id === "html.mixins.htmlorsvgormathmlelement.methods.focus") {
+    return reviewedCurrent(partial(
+      "adapted",
+      [
+        externalEvidence(entry),
+        implementation("renderer", "packages/dom/src/html-element.ts", "HTMLElement.focus/blur", undefined, "Programmatic focus/blur updates the exact same-Document active owner and preserves node/listener identity.", "preventScroll/focusVisible option behavior, complete sequential navigation, SVG/MathML hosts or trusted native focus provenance."),
+        test("renderer", "packages/dom/test/input.test.ts", "programmatic focusability", "Connected focusable controls, explicit tabindex, hidden suppression and blur behavior are observable through exact activeElement identity and focus events.", "Native browser focus rings, sequential navigation, SVG/MathML or every FocusOptions branch."),
+        test("renderer", "packages/dom/test/focus-state-change.test.ts", "focus state changes", "Focus and focus-within state transitions publish in exact Document transactions.", "Browser paint, accessibility or native focus provenance."),
+      ],
+      "Bounded same-Document programmatic focus/blur is implemented; FocusOptions behavior, sequential navigation, SVG/MathML, accessibility and native browser provenance remain unsupported.",
+    ))
+  }
+  if (entry.id === "html.events.focus") {
+    return reviewedCurrent(partial(
+      "adapted",
+      [
+        externalEvidence(entry),
+        implementation("renderer", "packages/dom/src/document.ts", "changeFocus focus dispatch", undefined, "Changing the exact active semantic owner dispatches non-bubbling focus with the reviewed same-Document ordering.", "Trusted native provenance, complete sequential navigation, accessibility or every browser focus default."),
+        test("renderer", "packages/dom/test/input.test.ts", "focus event ordering", "Programmatic focus produces the exact blur/focusout/focus/focusin ordering, capture behavior and activeElement identity for connected focusable controls.", "Native trusted focus, accessibility, sequential navigation or browser pixels."),
+      ],
+      "Bounded same-Document focus dispatch and ordering are implemented; trusted native provenance, complete navigation/accessibility and browser integration remain unsupported.",
+    ))
+  }
+  if (entry.id === "html.interfaces.toggleevent.attributes.newstate") {
+    return reviewedCurrent(partial(
+      "adapted",
+      [
+        externalEvidence(entry),
+        implementation("renderer", "packages/dom/src/toggle-event.ts", "ToggleEvent.newState", undefined, "The standard readonly newState value is normalized at construction and retained on semantic beforetoggle/toggle events.", "Every future ToggleEvent extension or native trusted event provenance."),
+        test("renderer", "packages/dom/test/popover.test.ts", "ToggleEvent newState", "Constructor defaults/explicit values plus popover open/close/coalesced toggle sequences expose the exact newState values.", "Native browser provenance or unrelated ToggleEvent extensions."),
+      ],
+      "The standard newState value is implemented for semantic ToggleEvent and popover sequencing; native trusted provenance and complete browser integration remain unsupported.",
+    ))
+  }
+
   if (entry.id.startsWith("html.elements.")) return classifyHtmlElement(entry)
   if (entry.id.startsWith("html.attributes.")) return classifyHtmlAttribute(entry)
   if (entry.id.startsWith("html.behaviors.")) return classifyHtmlBehavior(entry)
@@ -443,6 +600,17 @@ function classifyHtmlElement(entry: CapabilityInventoryEntry): Classification {
   if (entry.kind === "accessibility-semantics") return unsupported(entry, "The semantic DOM does not expose an accessibility tree or HTML-AAM mapping owner.")
   if (entry.kind === "content-model" || entry.kind === "content-categories") return unsupported(entry, "DOM mutation does not enforce HTML parser content models or category constraints.")
   if (entry.kind === "interface-mapping") {
+    if (entry.metadata?.interface === "HTMLElement") {
+      return reviewedCurrent(partial(
+        "adapted",
+        [
+          externalEvidence(entry),
+          implementation("renderer", "packages/dom/src/document.ts", "createElement generic HTMLElement fallback", undefined, "Tags whose standard interface is exactly HTMLElement retain their lower-case tag identity on the exact generic HTMLElement prototype.", "Tags requiring a specialized interface, parser insertion modes, default actions or accessibility semantics."),
+          test("renderer", "packages/dom/test/structural-elements.test.ts", `${tag} HTMLElement mapping`, "The exact UI-used HTMLElement-only tag set is constructed on HTMLElement.prototype with preserved localName identity.", "Specialized interfaces, parser behavior, default actions or accessibility projection."),
+        ],
+        "The standard HTMLElement prototype mapping is implemented; tag-specific parser behavior, default actions, content models and accessibility semantics remain outside this row.",
+      ))
+    }
     return specialized.has(tag)
       ? partial("adapted", [implementation("renderer", "packages/dom/src/document.ts", "HTML_ELEMENT_FACTORIES", "66-96", "Exact specialized constructor mapping for the supported tag subset.", "The complete per-element interface surface."), test("renderer", "packages/dom/test/structural-elements.test.ts", tag, "Current prototype mapping.", "Complete element algorithms.")], "The constructor mapping exists while the full interface behavior does not.")
       : unsupported(entry, "The tag is created as a generic HTMLElement or is outside the bounded platform, not as its specified specialized interface.")
@@ -579,8 +747,18 @@ function classifyHtmlBehavior(entry: CapabilityInventoryEntry): Classification {
 }
 
 function classifyHtmlIdl(entry: CapabilityInventoryEntry): Classification {
+  const inputLeafPresence = reviewedHtmlInputLeafPresence(entry)
+  if (inputLeafPresence === "absent") {
+    return reviewedLeafAbsent(entry, "The current HTMLInputElement implementation does not expose this standard member; an interface-level implementation cannot prove a missing leaf.")
+  }
+  if (inputLeafPresence === "present") {
+    return {
+      ...partial("adapted", [domImplementation(entry), htmlInputLeafTest(entry)], "The interface/member is present only where the bounded control implementation supplies behavior; complete forms, validation, picker, resource, and collection semantics are absent."),
+      lastVerified: domLeafVerification,
+    }
+  }
   const supportedInterfaces = [
-    "htmlelement", "htmlbuttonelement", "htmlinputelement", "htmlimageelement", "htmllabelelement", "htmlfieldsetelement",
+    "htmlelement", "htmlbuttonelement", "htmlimageelement", "htmllabelelement", "htmlfieldsetelement",
     "htmllegendelement", "htmlmeterelement", "htmloptionelement", "htmlprogresselement", "htmlselectelement", "htmltextareaelement",
     "htmltableelement", "htmltablerowelement", "htmltablecellelement", "htmltablesectionelement", "htmldivelement", "htmlspanelement",
     "htmlheadingelement", "htmlparagraphelement", "htmllielement", "htmlulistelement",
@@ -945,6 +1123,29 @@ function classifyCss(entry: CapabilityInventoryEntry): Classification {
   }
   if (entry.kind === "function" && supportedCssFunctions.has(entry.name)) {
     return partial("adapted", [external, implementation("renderer", "packages/core/src/css.ts", entry.name, undefined, "Bounded value parsing.", "All function syntax and contexts."), test("renderer", "packages/core/test/transform.test.ts", entry.name, "Current bounded parsing.", "Full CSS Values conformance.")], "Only the values admitted by current color/transform parsing are implemented.", defaultStages)
+  }
+  if (entry.id === "css.types.attribute-selector") {
+    return reviewedCurrent(partial(
+      "adapted",
+      [
+        external,
+        implementation("renderer", "packages/core/src/css.ts", "parseCompoundSelector/matchesCompound", undefined, "The bounded selector owner parses presence and exact-value attribute selectors and matches them against the exact semantic Element attribute owner.", "Attribute operators beyond =, flags, namespaces, escaped names/values, case modifiers, or the complete Selectors grammar."),
+        test("renderer", "packages/core/test/native-pseudo-style.test.ts", "[data-role=\"action\"]", "An exact-value attribute selector participates in compound native-pseudo matching and changes the observable computed/paint style only for the matching semantic Element.", "Every attribute selector operator, flag, namespace, escape, or full browser conformance."),
+      ],
+      "Bounded to unescaped attribute presence and exact-value matching; ~=, |=, ^=, $=, *=, case-sensitivity flags, namespaces, escapes, and the complete Selectors grammar remain unsupported.",
+      {
+        ...defaultStages,
+        parse: "partial",
+        cascade: "partial",
+        computed: "not-applicable",
+        layout: "not-applicable",
+        paint: "not-applicable",
+        "hit-test": "not-applicable",
+        webgpu: "not-applicable",
+        browser: "partial",
+        evidence: "implemented",
+      },
+    ))
   }
   if (entry.kind === "data-type" && supportedCssTypes.has(entry.name)) {
     return partial("adapted", [external, implementation("renderer", "packages/core/src/css.ts", entry.name, undefined, "Bounded value parsing.", "The full data type grammar."), test("renderer", "packages/core/test/renderer.test.ts", entry.name, "Current bounded values.", "Full value space and interpolation semantics.")], "Only px/unitless/percentage and bounded color/number branches used by current properties are accepted.", defaultStages)
@@ -1588,16 +1789,85 @@ function classifyReact(entry: CapabilityInventoryEntry): Classification {
 }
 
 function classifyTemplate(entry: CapabilityInventoryEntry): Classification {
-  if (entry.id.startsWith("platform.")) return classifyPublicExport(entry, templateExportStatus(entry))
+  if (entry.id.startsWith("platform.")) return classifyTemplatePublicExport(entry)
   if (entry.id.startsWith("tsx.typescript.")) return classifyTypescriptJsx(entry)
   if (entry.id.startsWith("tsx.tagged-html.")) return classifyTaggedHtml(entry)
   if (entry.id.startsWith("tsx.compiler.")) return classifyTsxCompiler(entry)
   return unsupported(entry, "No Template support classification was found.")
 }
 
+const templateCapabilityRuntimeExports = new Set([
+  "CAPABILITY_USAGE_GENERATOR_VERSION",
+  "CAPABILITY_USAGE_SCHEMA_VERSION",
+  "createCapabilityUsageManifest",
+  "serializeCapabilityUsageManifest",
+])
+
+const templateCapabilityTypeExports = new Set([
+  "CapabilityUsage",
+  "CapabilityUsageFile",
+  "CapabilityUsageManifest",
+  "CapabilityUsagePosition",
+  "CapabilityUsageSource",
+  "CapabilityUsageValue",
+  "CssAttributeSelectorCapabilityUsage",
+  "CssPropertyCapabilityUsage",
+  "CssPseudoCapabilityUsage",
+  "DomMemberCapabilityUsage",
+  "EventCapabilityUsage",
+  "IntrinsicAttributeCapabilityUsage",
+  "IntrinsicElementCapabilityUsage",
+  "JsxCompileResult",
+  "RefCapabilityUsage",
+])
+
+function classifyTemplatePublicExport(entry: CapabilityInventoryEntry): Classification {
+  if (templateCapabilityRuntimeExports.has(entry.name)) {
+    return {
+      ...implemented("extension", [
+        ...classifyPublicExport(entry, "partial").evidence,
+        test("template", "compiler/capability-usage.test.ts", entry.name, "The public manifest value participates in exact extraction, versioning and deterministic serialization behavior.", "Renderer matrix resolution or runtime conformance."),
+        test("template", "script/package-proof.ts", entry.name, "The packed package exposes the public manifest value to an external consumer.", "Every consumer build integration."),
+      ]),
+      lastVerified: templateCapabilityVerification,
+    }
+  }
+  if (templateCapabilityTypeExports.has(entry.name)) {
+    return {
+      ...implemented("extension", [
+        ...classifyPublicExport(entry, "partial").evidence,
+        test("template", "script/package-proof.ts", entry.name, "A packed-package consumer imports and uses the public neutral usage/result type contract.", "Runtime matrix resolution or standard DOM implementation."),
+      ]),
+      lastVerified: templateCapabilityVerification,
+    }
+  }
+  if (entry.name === "CreateTemplateJsxPluginOptions") {
+    return {
+      ...implemented("extension", [
+        ...classifyPublicExport(entry, "partial").evidence,
+        test("template", "compiler/compiler.test.ts", "capabilityManifestPath", "A real Bun build exercises the typed explicit manifest output option.", "Consumer identity or Renderer matrix policy."),
+        test("template", "script/package-proof.ts", "capabilityManifestPath", "The packed plugin option remains consumable from the public package.", "Every bundler or build lifecycle."),
+      ]),
+      lastVerified: templateCapabilityVerification,
+    }
+  }
+  return classifyPublicExport(entry, templateExportStatus(entry))
+}
+
 function classifyTypescriptJsx(entry: CapabilityInventoryEntry): Classification {
   const supported = new Set(["tsx-file-syntax", "intrinsic-elements", "value-elements", "jsx-namespace", "attribute-type-checking", "children-type-checking", "expression-children", "automatic-runtime", "development-runtime", "angle-bracket-assertion-rejection"])
   const suffix = entry.id.slice("tsx.typescript.".length)
+  if (["intrinsic-elements", "attribute-type-checking", "jsx-namespace"].includes(suffix)) {
+    return {
+      ...implemented("adapted", [
+        externalEvidence(entry),
+        implementation("template", "jsx-runtime.ts", entry.name, undefined, "The governed JSX namespace maps the supported standard HTML tags, properties, event types, exact currentTarget and callback refs to global lib.dom interfaces.", "Complete browser DOM behavior or TypeScript JSX profiles outside the governed compiler."),
+        test("template", "compiler/jsx-types.test.ts", entry.name, "A strict real tsc project proves standard tag/property rejection, exact event/currentTarget inference, callback ref targets and object-ref rejection.", "Runtime DOM behavior or every standard HTML interface."),
+      ]),
+      limitations: ["Implemented for the governed standard HTML JSX profile; TypeScript JSX modes outside that profile and complete browser runtime behavior remain outside this row."],
+      lastVerified: templateCapabilityVerification,
+    }
+  }
   if (supported.has(suffix)) return partial("adapted", [externalEvidence(entry), implementation("template", "jsx-runtime.ts", entry.name, undefined, "Type namespace/runtime boundary used by the project compiler.", "TypeScript-wide JSX runtime semantics or compiler acceptance."), test("template", "compiler/compiler.test.ts", entry.name, "Current compiler typing/transform profile.", "Every TypeScript-accepted JSX program.")], "TypeScript typing is intentionally broader than the project compiler's accepted source profile.")
   return unsupported(entry, "The syntax exists in TypeScript JSX but is rejected or not emitted by the project compiler profile.")
 }
@@ -1612,6 +1882,88 @@ function classifyTaggedHtml(entry: CapabilityInventoryEntry): Classification {
 
 function classifyTsxCompiler(entry: CapabilityInventoryEntry): Classification {
   const suffix = entry.id.slice("tsx.compiler.".length)
+  if (suffix === "standard-dom-jsx-typing") {
+    return {
+      ...implemented("extension", [
+        implementation("template", "jsx-runtime.ts", "governed standard DOM JSX namespace", undefined, "Authored intrinsic TSX uses global lib.dom element/event interfaces with exact tag properties, handler currentTarget and callback ref targets, without @zavx0z/dom type imports.", "Runtime implementation or complete browser conformance."),
+        test("template", "compiler/jsx-types.test.ts", suffix, "A strict tsc project proves valid standard DOM inference and rejects unknown tags/properties, wrong event types, wrong callback ref targets and object refs.", "Runtime DOM behavior."),
+        test("template", "script/package-proof.ts", suffix, "The packed public package preserves standard DOM JSX typing for a real consumer.", "Platform implementation of every typed member."),
+      ]),
+      lastVerified: templateCapabilityVerification,
+    }
+  }
+  if (suffix === "configured-project-ownership") {
+    return {
+      ...implemented("extension", [
+        implementation("template", "compiler/session.ts", "configured TypeScript project ownership", undefined, "Governed TSX must resolve through an explicit configured TypeScript project before semantic checking or transformation; inferred JSX outside TSX remains admitted for explicitly governed physical dependency roots.", "Every TypeScript project topology or consumer build configuration."),
+        test("template", "compiler/compiler.test.ts", "inferred TypeScript project rejection", "A governed TSX source owned only by /dev/null/inferred fails with the precise tsconfig ownership diagnostic, while the explicit inferred JSX dependency contract remains covered separately.", "Runtime DOM behavior or matrix resolution."),
+      ]),
+      lastVerified: templateCapabilityVerification,
+    }
+  }
+  if (suffix === "host-attribute-transport") {
+    return {
+      ...implemented("extension", [
+        implementation("template", "compiler/host-profile.ts", "hostAttributeTransport/hostAttributeValue", undefined, "One shared compiler profile assigns exact content-attribute, live-property, style, event and callback-ref transport and preserves static/dynamic authored values for both lowering and capability evidence.", "Runtime behavior outside the admitted host property set or complete HTML reflection semantics."),
+        implementation("template", "compiler/transform.ts", "compileIntrinsic host transport", undefined, "Intrinsic lowering consumes the same reviewed transport decision and never substitutes a content attribute for admitted indeterminate/tabIndex live properties.", "Renderer implementation of every standard property."),
+        test("template", "compiler/host-transport-runtime.test.ts", "compiled host property transport", "Dynamic and literal indeterminate/tabIndex values reach exact retained DOM properties, preserve identity across rerender, and do not create a false indeterminate content attribute.", "Every HTML property/reflection/default-action behavior."),
+        test("template", "compiler/compiler.test.ts", "host transport ABI", "Generated code routes reviewed live properties through BindProperty and rejects stale attribute lowering.", "Downstream browser pixels."),
+      ]),
+      lastVerified: templateCapabilityVerification,
+    }
+  }
+  if (suffix === "semantic-dependency-invalidation") {
+    return {
+      ...implemented("extension", [
+        implementation("template", "compiler/symbols.ts", "semantic dependency closure", undefined, "Checker-resolved governed dependencies include transitive type-only ownership used by neutral lib.dom member classification.", "Arbitrary dependencies outside governed roots."),
+        implementation("template", "compiler/session.ts", "fresh semantic snapshot restart", undefined, "A changed transitive semantic dependency invalidates cached code/usages and restarts the TypeScript API snapshot before reclassification.", "Every editor/build-server topology or external filesystem race."),
+        test("template", "compiler/capability-usage.test.ts", "transitive governed type-only dependency", "Changing a transitive type alias from lib.dom HTMLInputElement to a consumer interface removes the stale showPicker standard usage and records a cache miss plus fresh snapshot.", "Runtime platform implementation of showPicker."),
+      ]),
+      lastVerified: templateCapabilityVerification,
+    }
+  }
+  if (suffix === "semantic-diagnostics") {
+    return {
+      ...implemented("extension", [
+        implementation("template", "compiler/session.ts", "JsxCompilerSession.compileFile semantic diagnostics", undefined, "The governed TypeScript project runs semantic diagnostics with exact authored line/column before code or usage artifacts become observable.", "Runtime DOM behavior and matrix resolution outside Template."),
+        test("template", "compiler/compiler.test.ts", "standard JSX semantic diagnostics", "Compiler builds reject unknown standard tags/properties/events and incompatible standard event handler types with source diagnostics.", "Every lib.dom API or downstream runtime behavior."),
+        test("template", "compiler/jsx-types.test.ts", "strict standard DOM JSX typing", "A strict tsc project proves valid event/currentTarget/ref inference and expected invalid forms.", "Runtime platform conformance."),
+      ]),
+      lastVerified: templateCapabilityVerification,
+    }
+  }
+  if (suffix === "capability-usage-extraction") {
+    return {
+      ...implemented("extension", [
+        implementation("template", "compiler/capability-usage.ts", "collectCapabilityUsages", undefined, "The compiler emits neutral intrinsic transport/operation/static-or-dynamic value facts, events, refs, CSS property values, CSS attribute/pseudo selectors and checker-resolved lib.dom members with exact source ranges.", "Whether the requested platform behavior is implemented or conformant."),
+        test("template", "compiler/capability-usage.test.ts", suffix, "Exact neutral usage kinds, literal checkbox/number/range values, dynamic values, attribute selectors, lib.dom symbol resolution, source ranges, immutable cache identity and extension separation are behaviorally proven.", "Renderer matrix resolution or runtime conformance."),
+        test("template", "css.test.ts", "CSS shape attribute selectors and values", "The shared CSS shape retains declaration values plus presence/exact-value attribute selectors consumed by capability extraction.", "Complete CSS parsing or Renderer matching."),
+      ]),
+      lastVerified: templateCapabilityVerification,
+    }
+  }
+  if (suffix === "capability-usage-manifest") {
+    return {
+      ...implemented("extension", [
+        implementation("template", "compiler/capability-manifest.ts", "createCapabilityUsageManifest/serializeCapabilityUsageManifest", undefined, "Neutral usages become one stable, deterministic schema-version-2 interchange manifest without consumer or matrix knowledge.", "Matrix resolution, gap reproduction or runtime conformance."),
+        test("template", "compiler/capability-usage.test.ts", suffix, "Manifest sorting, schema version 2, generator version v2 and byte-stable serialization are proven.", "Consumer matrix resolution."),
+      ]),
+      lastVerified: templateCapabilityVerification,
+    }
+  }
+  if (suffix === "capability-usage-build-lifecycle") {
+    return {
+      ...implemented("extension", [
+        implementation("template", "compiler/bun.ts", "capabilityManifestPath", undefined, "An explicit Bun build option collects successful governed loads and writes one deterministic manifest at build end without inventing an implicit path.", "Consumer identity, matrix policy or runtime conformance."),
+        test("template", "compiler/compiler.test.ts", "capabilityManifestPath", "A real Bun build writes one versioned manifest only after the governed build succeeds.", "Renderer matrix resolution or runtime DOM behavior."),
+        test("template", "script/package-proof.ts", "capabilityManifestPath", "The packed public Bun plugin exposes and executes the explicit manifest output option.", "Consumer-specific build orchestration."),
+      ]),
+      lastVerified: templateCapabilityVerification,
+    }
+  }
+  if (suffix === "object-refs") {
+    return unsupported(entry, "The governed JSX type profile and compiler admit callback refs only; object refs are rejected before runtime.")
+  }
   if (suffix === "static-style-extraction") {
     return implemented("extension", [
       implementation("template", "compiler/style.ts", "component-local css extraction", undefined, "Canonical direct base declarations, non-escaping private same-module reusable CSS constants, bounded & attribute/pseudo selectors and ordered fragments become one compiled sheet plus addressed inline bindings; zero/one-site, exported, multi-declarator and escaping CSS constants fail closed.", "Dynamic non-base selector values, cross-module CSS constants, general selectors, at-rules and complete CSS nesting."),
@@ -1629,7 +1981,7 @@ function classifyTsxCompiler(entry: CapabilityInventoryEntry): Classification {
   }
   const implementedNames = new Set([
     "intrinsic-elements", "function-components", "nested-components", "props", "children", "primitive-children", "component-children",
-    "conditional-branches", "refs", "callback-refs", "object-refs", "event-bindings", "event-capture-bindings", "property-bindings",
+    "conditional-branches", "refs", "callback-refs", "event-bindings", "event-capture-bindings", "property-bindings",
     "style-bindings", "source-roots", "dependency-invalidation", "symbol-resolution", "compiler-diagnostics", "browser-target-build",
     "runtime-jsx-fail-closed", "root-render", "memo-components", "keyed-component-map", "multiple-keyed-children", "custom-hooks",
     "hook-order-validation", "react-import-rejection", "dynamic-import-rejection", "dangerously-set-inner-html-rejection",
@@ -1915,6 +2267,38 @@ function unsupported(entry: CapabilityInventoryEntry, limitation: string, stages
   return { status: "unsupported", conformance: "none", limitations: [limitation], evidence: [externalEvidence(entry)], ...(stages ? { stages } : {}) }
 }
 
+function reviewedLeafAbsent(
+  entry: CapabilityInventoryEntry,
+  limitation: string,
+): Classification {
+  return {
+    ...unsupported(entry, limitation),
+    evidence: [
+      externalEvidence(entry),
+      {
+        type: "negative-test",
+        repository: "renderer",
+        revision: domLeafVerification.revision,
+        path: "scripts/capabilities/leaf-support.test.ts",
+        symbol: entry.id,
+        proves: `The focused runtime-surface audit verifies that ${entry.name} is absent from the current implemented interface object.`,
+        doesNotProve: "Future implementation, the complete interface algorithm, or downstream browser behavior.",
+      },
+    ],
+    lastVerified: domLeafVerification,
+  }
+}
+
+function reviewedCurrent(classification: Classification): Classification {
+  return {
+    ...classification,
+    evidence: classification.evidence.map(record => record.repository === "renderer"
+      ? {...record, revision: domLeafVerification.revision}
+      : record),
+    lastVerified: domLeafVerification,
+  }
+}
+
 function notApplicable(entry: CapabilityInventoryEntry, reason: string): Classification {
   return { status: "not-applicable", conformance: "none", limitations: [], reason, evidence: [externalEvidence(entry)] }
 }
@@ -2022,6 +2406,36 @@ function controlTestPath(id: string): string {
   if (id.includes("select") || id.includes("option")) return "packages/dom/test/select-option.test.ts"
   if (id.includes("popover")) return "packages/dom/test/popover.test.ts"
   return "packages/dom/test/html-input-element.test.ts"
+}
+
+function htmlInputLeafTest(entry: CapabilityInventoryEntry): EvidenceRecord {
+  const reflectedMember = /^HTMLInputElement\.(.+) reflection$/.exec(entry.name)?.[1]
+  const member = reflectedMember ?? entry.name
+  if (["indeterminate", "max", "min", "step", "valueAsNumber"].includes(member)) {
+    return test(
+      "renderer",
+      "packages/dom/test/input-numeric-state.test.ts",
+      member,
+      `The focused numeric/control-state suite exercises the implemented ${member} member.`,
+      "Forms, validation, picker behavior, and other input states.",
+    )
+  }
+  if (["select", "selectionDirection", "selectionEnd", "selectionStart", "setSelectionRange"].includes(member)) {
+    return test(
+      "renderer",
+      "packages/dom/test/text-selection.test.ts",
+      member,
+      `The focused text-selection suite exercises the implemented ${member} member and its applicability boundary.`,
+      "Standard Selection/Range, proportional geometry, and every input state.",
+    )
+  }
+  return test(
+    "renderer",
+    "packages/dom/test/html-input-element.test.ts",
+    member,
+    `The focused HTMLInputElement suite exercises the implemented ${member} reflection or live-state member.`,
+    "Every input state, form algorithm, validation, and browser-owned interaction.",
+  )
 }
 
 function cssDefaultStages(): Record<string, CapabilityStatus> {
