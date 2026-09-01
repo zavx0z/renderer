@@ -25,29 +25,29 @@
       "capability": "html.behaviors.input-type-range",
       "repository": "ui",
       "package": "@ui/components",
-      "subject": "ColorInput",
+      "subject": "ColorPickerField",
       "scope": "production",
-      "path": "packages/components/color-input.tsx",
-      "anchor": "export function ColorInput(props: ColorInputProps)",
-      "behavior": "Stable controlled RGBA channels with range input/change semantics and analytical color paint."
+      "path": "packages/components/fields/color-picker-field.tsx",
+      "anchor": "export function ColorPickerField(props: ColorPickerFieldProps)",
+      "behavior": "Stable controlled RGBA values with retained HSVA number/range input/change semantics and analytical color paint."
     },
     {
       "capability": "html.behaviors.popover",
       "repository": "ui",
       "package": "@ui/components",
-      "subject": "ColorInput",
+      "subject": "ColorField",
       "scope": "production",
-      "path": "packages/components/color-input.tsx",
-      "anchor": "presentation: ColorInputPresentation",
+      "path": "packages/components/fields/color-field.tsx",
+      "anchor": "if (open) element.showPopover({source: trigger})",
       "behavior": "An anchored top-layer color picker with clipping, light dismiss, Escape and focus restoration instead of an inline hidden panel."
     },
     {
       "capability": "browser.features.number-input-proxy",
       "repository": "ui",
       "package": "@ui/components",
-      "subject": "NumberInput",
+      "subject": "NumberField",
       "scope": "production",
-      "path": "packages/components/number-input.tsx",
+      "path": "packages/components/fields/number-field.tsx",
       "anchor": "const value = (event.target as HTMLInputElement).valueAsNumber",
       "behavior": "Native typed number editing, focus, input/change, Escape rollback and selection through the exact semantic owner."
     },
@@ -55,9 +55,9 @@
       "capability": "dom.extensions.pointerevents.interfaces.element.methods.setpointercapture",
       "repository": "ui",
       "package": "@ui/components",
-      "subject": "NumberInput scrub",
+      "subject": "NumberField scrub",
       "scope": "production",
-      "path": "packages/components/number-input.tsx",
+      "path": "packages/components/fields/number-field.tsx",
       "anchor": "const onPointerDown = (event: PointerEvent)",
       "behavior": "A scrub gesture continues outside the control until pointerup/cancel without component-owned capture emulation."
     },
@@ -157,21 +157,21 @@
       "capability": "html.behaviors.select-option-optgroup",
       "repository": "ui",
       "package": "@ui/components",
-      "subject": "EnumInput",
+      "subject": "SelectField",
       "scope": "production",
-      "path": "packages/components/enum-input.tsx",
-      "anchor": "export function EnumInput",
-      "behavior": "Open a collapsed select picker, navigate options by keyboard, activate one option and dispatch input/change."
+      "path": "packages/components/fields/select-field.tsx",
+      "anchor": "export function SelectField(props: SelectFieldProps)",
+      "behavior": "Open a collapsed select picker, navigate retained options by keyboard, activate one option and dispatch change."
     },
     {
       "capability": "react.semantics.create-root",
       "repository": "node",
       "package": "@nodes/ui",
-      "subject": "mountField",
+      "subject": "mountParameterField",
       "scope": "production",
-      "path": "packages/ui/dom/field-mount.ts",
+      "path": "packages/ui/dom/parameter-field-mount.ts",
       "anchor": "const root = createRoot(staging)",
-      "behavior": "Mount and update a compiled component into a DocumentFragment while retaining the exact owner element and disposing on unmount."
+      "behavior": "Mount and update a concrete compiled Field into a DocumentFragment while retaining the exact owner element and disposing on unmount."
     },
     {
       "capability": "react.semantics.keys",

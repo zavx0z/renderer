@@ -11,14 +11,14 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | Repository | Branch | Revision | Dirty at generation |
 |---|---|---|---:|
 | demo | main | `470c70a70b436fb3e3ae121b3ab81fa410ef3255` | no |
-| engine | main | `300d00fd5494308382e3efcdf2434cd1ee7cd2d1` | yes |
-| interpreter | main | `4f02274a6e9f99a8717507fe5885301a33eec4dc` | no |
-| metafor | main | `7611415474fae233cd88abc8b1fc14746316333c` | no |
-| node | main | `d52e8f5e3ba4b548d38be0257a2b181b476aa425` | no |
-| renderer | main | `3a0801d4d0fa39f385fca7aceca67fbd0736e591` | yes |
-| storybook | main | `c80d35f001513104df80b159c53d2358f8bd8070` | no |
-| template | main | `ad9f272844a876e178b6b0041153588111045764` | no |
-| ui | main | `d3fb4160ff1f92320c58104e862a71f83959e540` | no |
+| engine | main | `a3032d960fc592296e8c5d1408a02551635d1fb3` | no |
+| interpreter | main | `8b681aeb5aef7fbb7a5641c70f01dd9595a86b76` | no |
+| metafor | main | `c5ba83e1ab3461e8255b002fe7fa84ff18007c20` | no |
+| node | main | `209ba2a5e905edeeb6293bdedf47ea483d011c94` | no |
+| renderer | main | `e46d3411c325090569ebb3e9f1c66ba276cc3dcf` | yes |
+| storybook | main | `b95fd5435c9efe404481c033c1ed26438f03e2cd` | no |
+| template | main | `4b66cdee58840f3e59701f9a8c52b044512a1acb` | no |
+| ui | main | `9c7cc40729aa342a90cd7d9a7db59627aaee8166` | no |
 
 ## Pinned external sources
 
@@ -75,7 +75,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | @zavx0z/renderer | renderer | `9af61ff761a249a22d1ce22d61a7f2c3855f0c89` | 3139 |
 | @zavx0z/renderer-browser | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 70 |
 | @zavx0z/renderer-webgpu | renderer | `9af61ff761a249a22d1ce22d61a7f2c3855f0c89` | 37 |
-| @zavx0z/template | template | `838a214a83950259f3f5d543e881e11402bc230c` | 166 |
+| @zavx0z/template | template | `c97d7113ad270a26a8ed8ec9ddf30eaf3bacf1a5` | 166 |
 
 ## Complete matrix
 
@@ -8778,7 +8778,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `tsx.compiler.children` | tsx-compiler | implemented | extension | @zavx0z/template/compiler | — | 2 | 0 |
 | `tsx.compiler.class` | tsx-compiler | unsupported | none | @zavx0z/template/compiler | The governed TSX compiler rejects this syntax or does not provide the requested diagnostic/source-map contract. | 1 | 0 |
 | `tsx.compiler.class-name` | tsx-compiler | unsupported | none | @zavx0z/template/compiler | The governed TSX compiler rejects this syntax or does not provide the requested diagnostic/source-map contract. | 1 | 0 |
-| `tsx.compiler.compiler-diagnostics` | tsx-compiler | implemented | extension | @zavx0z/template/compiler | — | 2 | 0 |
+| `tsx.compiler.compiler-diagnostics` | tsx-compiler | implemented | extension | @zavx0z/template/compiler | — | 3 | 0 |
 | `tsx.compiler.component-children` | tsx-compiler | implemented | extension | @zavx0z/template/compiler | — | 2 | 0 |
 | `tsx.compiler.component-escape-rejection` | tsx-compiler | implemented | extension | @zavx0z/template/compiler | — | 2 | 0 |
 | `tsx.compiler.conditional-branches` | tsx-compiler | implemented | extension | @zavx0z/template/compiler | — | 2 | 0 |
