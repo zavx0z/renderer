@@ -22,50 +22,47 @@ export type ElementDomStoryViewProps = Readonly<{route: ElementDomStoryRoute}>
 export type ImageDomStoryViewProps = Readonly<{route: ImageDomStoryRoute; src: string}>
 export type PopoverDomStoryViewProps = Readonly<{route: PopoverDomStoryRoute}>
 
-const storyRootStyle: CssStyle = css`
-  & {
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 620px;
-    min-height: 300px;
-    gap: 14px;
-    padding: 18px;
-    border: 1px solid rgb(22 22 22);
-    border-radius: 6px;
-    background: rgb(48 48 48);
-    color: rgb(224 224 224);
-  }
-`
-
 const sampleStyle: CssStyle = css`
-  & {
-    box-sizing: border-box;
-    display: block;
-    width: 240px;
-    min-height: 30px;
-    padding: 5px 10px;
-    border: 1px solid rgb(72 72 72);
-    border-radius: 4px;
-    background: rgb(36 36 36);
-    color: rgb(224 224 224);
-    font-size: 12px;
-  }
+  box-sizing: border-box;
+  display: block;
+  width: 240px;
+  min-height: 30px;
+  padding: 5px 10px;
+  border: 1px solid rgb(72 72 72);
+  border-radius: 4px;
+  background: rgb(36 36 36);
+  color: rgb(224 224 224);
+  font-size: 12px;
 `
 
 function HierarchyToken(props: Readonly<{name: string; first: boolean}>) {
-  return <span style={css`& { display: flex; flex-direction: row; align-items: center; gap: 6px; }`}>
+  return <span style={css`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 6px;
+  `}>
     {!props.first ? <HierarchyArrow /> : null}
     <code style={css`
-      & { display: flex; align-items: center; height: 28px; padding: 4px 8px; border: 1px solid rgb(72 72 72); border-radius: 3px; background: rgb(36 36 36); color: rgb(224 224 224); font-size: 11px; }
+      display: flex;
+      align-items: center;
+      height: 28px;
+      padding: 4px 8px;
+      border: 1px solid rgb(72 72 72);
+      border-radius: 3px;
+      background: rgb(36 36 36);
+      color: rgb(224 224 224);
+      font-size: 11px;
     `}>{props.name}</code>
   </span>
 }
 
 function HierarchyArrow() {
-  return <span aria-hidden="true" style={css`& { display: inline; width: 12px; color: rgb(126 220 236); }`}>→</span>
+  return <span aria-hidden="true" style={css`
+    display: inline;
+    width: 12px;
+    color: rgb(126 220 236);
+  `}>→</span>
 }
 
 function InterfaceElementSample(props: Readonly<{htmlElement: boolean}>) {
@@ -95,7 +92,12 @@ function InterfaceParagraphSample() {
 }
 
 function InterfaceButtonSample() {
-  return <button type="button" data-interface-sample="true" title="title inherited from HTMLElement" style={sampleStyle}>Output</button>
+  return <button
+    type="button"
+    data-interface-sample="true"
+    title="title inherited from HTMLElement"
+    style={sampleStyle}
+  >Output</button>
 }
 
 function InterfaceInputSample() {
@@ -122,7 +124,13 @@ function InterfaceSelectSample(props: Readonly<{optionInterface: boolean}>) {
 }
 
 function InterfaceTextareaSample() {
-  return <textarea rows="3" value={"Node\n  Element\n    HTMLElement"} readOnly={true} data-interface-sample="true" style={sampleStyle}></textarea>
+  return <textarea
+    rows="3"
+    value={"Node\n  Element\n    HTMLElement"}
+    readOnly={true}
+    data-interface-sample="true"
+    style={sampleStyle}
+  ></textarea>
 }
 
 function InterfaceProgressSample() {
@@ -130,7 +138,16 @@ function InterfaceProgressSample() {
 }
 
 function InterfaceMeterSample() {
-  return <meter min="0" max="100" low="25" high="75" optimum="50" value="64" data-interface-sample="true" style={sampleStyle}></meter>
+  return <meter
+    min="0"
+    max="100"
+    low="25"
+    high="75"
+    optimum="50"
+    value="64"
+    data-interface-sample="true"
+    style={sampleStyle}
+  ></meter>
 }
 
 function InterfaceLabelSample() {
@@ -164,7 +181,11 @@ function InterfaceTableSample(props: Readonly<{apiName: string}>) {
   return <table data-interface-sample={props.apiName === "HTMLTableElement" ? "true" : undefined} style={sampleStyle}>
     <tbody data-interface-sample={props.apiName === "HTMLTableSectionElement" ? "true" : undefined}>
       <tr data-interface-sample={props.apiName === "HTMLTableRowElement" ? "true" : undefined}>
-        <th scope="row" colSpan="1" data-interface-sample={props.apiName === "HTMLTableCellElement" ? "true" : undefined}>State</th>
+        <th
+          scope="row"
+          colSpan="1"
+          data-interface-sample={props.apiName === "HTMLTableCellElement" ? "true" : undefined}
+        >State</th>
         <td>Ready</td>
       </tr>
     </tbody>
@@ -188,7 +209,16 @@ function InterfaceSample(props: Readonly<{apiName: string}>) {
     "HTMLTableRowElement", "HTMLTableCellElement",
   ].includes(apiName)
   return <div data-interface-sample-host="" style={css`
-    & { display: flex; flex-direction: column; align-items: center; justify-content: center; width: 584px; min-height: 130px; padding: 16px; border: 1px solid rgb(22 22 22); border-radius: 4px; background: rgb(28 28 28); }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 584px;
+    min-height: 130px;
+    padding: 16px;
+    border: 1px solid rgb(22 22 22);
+    border-radius: 4px;
+    background: rgb(28 28 28);
   `}>
     {apiName === "Element" ? <InterfaceElementSample htmlElement={false} /> : null}
     {apiName === "HTMLElement" ? <InterfaceElementSample htmlElement={true} /> : null}
@@ -219,11 +249,43 @@ export function DomInterfaceStoryView(props: DomInterfaceStoryViewProps) {
     data-dom-interface-story=""
     data-interface={props.apiName}
     data-route={props.route}
-    style={storyRootStyle}
+    style={css`
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 620px;
+      min-height: 300px;
+      gap: 14px;
+      padding: 18px;
+      border: 1px solid rgb(22 22 22);
+      border-radius: 6px;
+      background: rgb(48 48 48);
+      color: rgb(224 224 224);
+    `}
   >
-    <h2 style={css`& { display: block; height: 24px; margin: 0; color: rgb(126 220 236); font-size: 16px; }`}>{props.title}</h2>
-    <p style={css`& { display: block; min-height: 20px; margin: 0; color: rgb(176 176 176); font-size: 12px; }`}>{props.summary}</p>
-    <div data-interface-hierarchy="" style={css`& { display: flex; flex-direction: row; align-items: center; min-height: 34px; gap: 6px; }`}>
+    <h2 style={css`
+      display: block;
+      height: 24px;
+      margin: 0;
+      color: rgb(126 220 236);
+      font-size: 16px;
+    `}>{props.title}</h2>
+    <p style={css`
+      display: block;
+      min-height: 20px;
+      margin: 0;
+      color: rgb(176 176 176);
+      font-size: 12px;
+    `}>{props.summary}</p>
+    <div data-interface-hierarchy="" style={css`
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      min-height: 34px;
+      gap: 6px;
+    `}>
       {props.hierarchy.map((name, index) => <HierarchyToken key={name} name={name} first={index === 0} />)}
     </div>
     <InterfaceSample apiName={props.apiName} />
@@ -231,7 +293,11 @@ export function DomInterfaceStoryView(props: DomInterfaceStoryViewProps) {
 }
 
 function ElementDivNested() {
-  return <div style={css`& { width: 340px; height: 150px; background: rgb(45 104 128); }`}>Overflow is clipped by the parent div</div>
+  return <div style={css`
+    width: 340px;
+    height: 150px;
+    background: rgb(45 104 128);
+  `}>Overflow is clipped by the parent div</div>
 }
 
 function ElementDivSample(props: Readonly<{route: ElementDomStoryRoute}>) {
@@ -247,13 +313,47 @@ function ElementDivSample(props: Readonly<{route: ElementDomStoryRoute}>) {
     data-variant={variant}
     data-scroll-axis={scroll ? axis : undefined}
     style={css`
-      & { box-sizing: border-box; display: block; width: 260px; height: 120px; padding: 16px; overflow: hidden; border: 1px solid rgb(72 72 72); border-radius: 5px; background: rgb(48 48 48); color: rgb(224 224 224); font-size: 12px; }
-      &[data-variant="background"] { background: rgb(45 104 128); }
-      &[data-variant="border"] { border: 4px solid rgb(126 220 236); }
-      &[data-variant="padding"] { padding: 30px; }
-      &[data-scroll-axis="vertical"] { width: 220px; height: 110px; overflow-y: auto; }
-      &[data-scroll-axis="horizontal"] { width: 220px; height: 86px; overflow-x: auto; }
-      &[data-scroll-axis="both"] { width: 220px; height: 100px; overflow: auto; }
+      box-sizing: border-box;
+      display: block;
+      width: 260px;
+      height: 120px;
+      padding: 16px;
+      overflow: hidden;
+      border: 1px solid rgb(72 72 72);
+      border-radius: 5px;
+      background: rgb(48 48 48);
+      color: rgb(224 224 224);
+      font-size: 12px;
+
+      &[data-variant="background"] {
+        background: rgb(45 104 128);
+      }
+
+      &[data-variant="border"] {
+        border: 4px solid rgb(126 220 236);
+      }
+
+      &[data-variant="padding"] {
+        padding: 30px;
+      }
+
+      &[data-scroll-axis="vertical"] {
+        width: 220px;
+        height: 110px;
+        overflow-y: auto;
+      }
+
+      &[data-scroll-axis="horizontal"] {
+        width: 220px;
+        height: 86px;
+        overflow-x: auto;
+      }
+
+      &[data-scroll-axis="both"] {
+        width: 220px;
+        height: 100px;
+        overflow: auto;
+      }
     `}
   >
     {scroll ? <ElementDivNested /> : null}
@@ -267,18 +367,50 @@ function ElementText(props: Readonly<{value: string}>) {
 }
 
 function ElementZStack() {
-  return <div data-element-sample="z-stack" style={css`& { position: relative; display: block; width: 260px; height: 120px; }`}>
-    <div style={css`& { position: absolute; left: 12px; top: 20px; width: 140px; height: 72px; z-index: -1; background: rgb(45 104 128); }`}>z-index -1</div>
-    <div style={css`& { position: absolute; left: 88px; top: 36px; width: 140px; height: 72px; z-index: 2; background: rgb(48 112 76); }`}>z-index 2</div>
+  return <div data-element-sample="z-stack" style={css`
+    position: relative;
+    display: block;
+    width: 260px;
+    height: 120px;
+  `}>
+    <div style={css`
+      position: absolute;
+      left: 12px;
+      top: 20px;
+      width: 140px;
+      height: 72px;
+      z-index: -1;
+      background: rgb(45 104 128);
+    `}>z-index -1</div>
+    <div style={css`
+      position: absolute;
+      left: 88px;
+      top: 36px;
+      width: 140px;
+      height: 72px;
+      z-index: 2;
+      background: rgb(48 112 76);
+    `}>z-index 2</div>
   </div>
 }
 
 function ElementSpanSample(props: Readonly<{route: ElementDomStoryRoute}>) {
   const align = props.route.endsWith("/center") ? "center" : props.route.endsWith("/right") ? "right" : "left"
   return <span data-element-sample="span" data-align={align} style={css`
-    & { display: block; width: 320px; min-height: 42px; color: rgb(224 224 224); font-size: 13px; text-align: left; }
-    &[data-align="center"] { text-align: center; }
-    &[data-align="right"] { text-align: right; }
+    display: block;
+    width: 320px;
+    min-height: 42px;
+    color: rgb(224 224 224);
+    font-size: 13px;
+    text-align: left;
+
+    &[data-align="center"] {
+      text-align: center;
+    }
+
+    &[data-align="right"] {
+      text-align: right;
+    }
   `}>Inline text from a standard span</span>
 }
 
@@ -291,9 +423,24 @@ function ElementButtonSample(props: Readonly<{route: ElementDomStoryRoute}>) {
     disabled={props.route.endsWith("/disabled")}
     title={clickable ? "Standard click target" : "Button"}
     style={css`
-      & { box-sizing: border-box; display: block; width: 180px; height: 34px; padding: 6px 12px; border: 1px solid rgb(72 72 72); border-radius: 4px; background: rgb(48 48 48); color: rgb(224 224 224); font-size: 12px; }
-      &:focus { border-color: rgb(126 220 236); }
-      &:disabled { opacity: 0.5; }
+      box-sizing: border-box;
+      display: block;
+      width: 180px;
+      height: 34px;
+      padding: 6px 12px;
+      border: 1px solid rgb(72 72 72);
+      border-radius: 4px;
+      background: rgb(48 48 48);
+      color: rgb(224 224 224);
+      font-size: 12px;
+
+      &:focus {
+        border-color: rgb(126 220 236);
+      }
+
+      &:disabled {
+        opacity: 0.5;
+      }
     `}
   >{label}</button>
 }
@@ -306,9 +453,24 @@ function ElementInputSample(props: Readonly<{route: ElementDomStoryRoute}>) {
     data-active={props.route.endsWith("/active") ? "true" : undefined}
     disabled={props.route.endsWith("/disabled")}
     style={css`
-      & { box-sizing: border-box; display: block; width: 240px; height: 32px; padding: 5px 9px; border: 1px solid rgb(72 72 72); border-radius: 4px; background: rgb(36 36 36); color: rgb(224 224 224); font-size: 12px; }
-      &[data-active="true"] { border-color: rgb(126 220 236); }
-      &:disabled { opacity: 0.5; }
+      box-sizing: border-box;
+      display: block;
+      width: 240px;
+      height: 32px;
+      padding: 5px 9px;
+      border: 1px solid rgb(72 72 72);
+      border-radius: 4px;
+      background: rgb(36 36 36);
+      color: rgb(224 224 224);
+      font-size: 12px;
+
+      &[data-active="true"] {
+        border-color: rgb(126 220 236);
+      }
+
+      &:disabled {
+        opacity: 0.5;
+      }
     `}
   />
 }
@@ -325,9 +487,24 @@ function ElementSelectSample(props: Readonly<{route: ElementDomStoryRoute}>) {
     data-active={props.route.endsWith("/active") ? "true" : undefined}
     disabled={props.route.endsWith("/disabled")}
     style={css`
-      & { box-sizing: border-box; display: block; width: 240px; height: 32px; padding: 5px 9px; border: 1px solid rgb(72 72 72); border-radius: 4px; background: rgb(36 36 36); color: rgb(224 224 224); font-size: 12px; }
-      &[data-active="true"] { border-color: rgb(126 220 236); }
-      &:disabled { opacity: 0.5; }
+      box-sizing: border-box;
+      display: block;
+      width: 240px;
+      height: 32px;
+      padding: 5px 9px;
+      border: 1px solid rgb(72 72 72);
+      border-radius: 4px;
+      background: rgb(36 36 36);
+      color: rgb(224 224 224);
+      font-size: 12px;
+
+      &[data-active="true"] {
+        border-color: rgb(126 220 236);
+      }
+
+      &:disabled {
+        opacity: 0.5;
+      }
     `}
   >{options.map(label => <ElementSelectOption key={label} label={label} />)}</select>
 }
@@ -338,9 +515,26 @@ function ElementListItem(props: Readonly<{index: number; selected: boolean; dens
     aria-selected={String(props.selected)}
     data-dense={props.dense ? "true" : undefined}
     style={css`
-      & { box-sizing: border-box; display: block; width: 100%; height: 30px; padding: 6px 9px; border: 1px solid transparent; border-radius: 3px; background: rgb(48 48 48); color: rgb(224 224 224); font-size: 12px; }
-      &[data-dense="true"] { height: 24px; padding: 3px 7px; font-size: 11px; }
-      &[aria-selected="true"] { background: rgb(45 104 128); }
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      height: 30px;
+      padding: 6px 9px;
+      border: 1px solid transparent;
+      border-radius: 3px;
+      background: rgb(48 48 48);
+      color: rgb(224 224 224);
+      font-size: 12px;
+
+      &[data-dense="true"] {
+        height: 24px;
+        padding: 3px 7px;
+        font-size: 11px;
+      }
+
+      &[aria-selected="true"] {
+        background: rgb(45 104 128);
+      }
     `}
   >{`Item ${props.index + 1}`}</li>
 }
@@ -351,8 +545,24 @@ function ElementListSample(props: Readonly<{route: ElementDomStoryRoute}>) {
   const count = props.route.endsWith("/scroll") ? 8 : 3
   const items = Array.from({length: count}, (_, index) => index)
   return <ul role="listbox" data-element-sample="list" style={css`
-    & { box-sizing: border-box; display: flex; flex-direction: column; width: 300px; max-height: 150px; padding: 4px; gap: 3px; border: 1px solid rgb(72 72 72); border-radius: 4px; overflow-y: auto; scrollbar-width: thin; background: rgb(36 36 36); }
-  `}>{items.map(index => <ElementListItem key={index} index={index} selected={interactive && index === 1} dense={dense} />)}</ul>
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    max-height: 150px;
+    padding: 4px;
+    gap: 3px;
+    border: 1px solid rgb(72 72 72);
+    border-radius: 4px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    background: rgb(36 36 36);
+  `}>{items.map(index => <ElementListItem
+    key={index}
+    index={index}
+    selected={interactive && index === 1}
+    dense={dense}
+  />)}</ul>
 }
 
 function ElementStatusItem(props: Readonly<{value: string}>) {
@@ -362,7 +572,18 @@ function ElementStatusItem(props: Readonly<{value: string}>) {
 function ElementStatusSample() {
   const values = ["Objects 42", "Draws 18", "GPU 1.11 ms"]
   return <div role="status" data-element-sample="status" style={css`
-    & { box-sizing: border-box; display: flex; flex-direction: row; align-items: center; width: 420px; height: 28px; gap: 20px; padding: 4px 10px; border: 1px solid rgb(22 22 22); background: rgb(36 36 36); color: rgb(176 176 176); font-size: 11px; }
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 420px;
+    height: 28px;
+    gap: 20px;
+    padding: 4px 10px;
+    border: 1px solid rgb(22 22 22);
+    background: rgb(36 36 36);
+    color: rgb(176 176 176);
+    font-size: 11px;
   `}>{values.map(value => <ElementStatusItem key={value} value={value} />)}</div>
 }
 
@@ -375,17 +596,63 @@ function ElementStyleSample(props: Readonly<{route: ElementDomStoryRoute}>) {
   const variant = parts.at(-2) === "tone" ? parts.at(-1)! : parts.at(-2)!
   const tokens = variant === "flex" ? ["A", "B", "C"] : []
   return <div data-element-sample="style" data-variant={variant} style={css`
-    & { box-sizing: border-box; display: flex; align-items: center; justify-content: center; width: 260px; height: 100px; padding: 16px; border: 1px solid rgb(72 72 72); border-radius: 4px; background: rgb(48 48 48); color: rgb(224 224 224); font-size: 13px; }
-    &[data-variant="padding"] { padding: 32px; }
-    &[data-variant="flex"] { flex-direction: row; gap: 10px; }
-    &[data-variant="rounded"] { border-radius: 14px; }
-    &[data-variant="capsule"] { width: 220px; height: 48px; border-radius: 24px; }
-    &[data-variant="color"] { background: rgb(45 104 128); color: rgb(240 240 240); }
-    &[data-variant="typography"] { font-size: 18px; color: rgb(126 220 236); }
-    &[data-variant="cyan"] { background: rgb(45 104 128); }
-    &[data-variant="green"] { background: rgb(48 112 76); }
-    &[data-variant="orange"] { background: rgb(132 91 42); }
-    &[data-variant="red"] { background: rgb(132 56 56); }
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 260px;
+    height: 100px;
+    padding: 16px;
+    border: 1px solid rgb(72 72 72);
+    border-radius: 4px;
+    background: rgb(48 48 48);
+    color: rgb(224 224 224);
+    font-size: 13px;
+
+    &[data-variant="padding"] {
+      padding: 32px;
+    }
+
+    &[data-variant="flex"] {
+      flex-direction: row;
+      gap: 10px;
+    }
+
+    &[data-variant="rounded"] {
+      border-radius: 14px;
+    }
+
+    &[data-variant="capsule"] {
+      width: 220px;
+      height: 48px;
+      border-radius: 24px;
+    }
+
+    &[data-variant="color"] {
+      background: rgb(45 104 128);
+      color: rgb(240 240 240);
+    }
+
+    &[data-variant="typography"] {
+      font-size: 18px;
+      color: rgb(126 220 236);
+    }
+
+    &[data-variant="cyan"] {
+      background: rgb(45 104 128);
+    }
+
+    &[data-variant="green"] {
+      background: rgb(48 112 76);
+    }
+
+    &[data-variant="orange"] {
+      background: rgb(132 91 42);
+    }
+
+    &[data-variant="red"] {
+      background: rgb(132 56 56);
+    }
   `}>
     {tokens.map(value => <ElementStyleToken key={value} value={value} />)}
     {tokens.length === 0 ? <ElementText value={`CSS ${variant}`} /> : null}
@@ -401,12 +668,38 @@ function ElementPointerSample(props: Readonly<{route: ElementDomStoryRoute}>) {
     disabled={state === "disabled"}
     title={`Pointer state: ${state}`}
     style={css`
-      & { box-sizing: border-box; display: flex; align-items: center; justify-content: center; width: 180px; height: 44px; padding: 6px 12px; border: 2px solid rgb(72 72 72); border-radius: 5px; background: rgb(48 48 48); color: rgb(224 224 224); font-size: 12px; }
-      &[data-state="hover"] { border-color: rgb(126 220 236); }
-      &[data-state="press"] { background: rgb(45 104 128); }
-      &[data-state="release"] { border-color: rgb(48 112 76); }
-      &[data-state="click"] { background: rgb(48 112 76); }
-      &:disabled { opacity: 0.5; }
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 180px;
+      height: 44px;
+      padding: 6px 12px;
+      border: 2px solid rgb(72 72 72);
+      border-radius: 5px;
+      background: rgb(48 48 48);
+      color: rgb(224 224 224);
+      font-size: 12px;
+
+      &[data-state="hover"] {
+        border-color: rgb(126 220 236);
+      }
+
+      &[data-state="press"] {
+        background: rgb(45 104 128);
+      }
+
+      &[data-state="release"] {
+        border-color: rgb(48 112 76);
+      }
+
+      &[data-state="click"] {
+        background: rgb(48 112 76);
+      }
+
+      &:disabled {
+        opacity: 0.5;
+      }
     `}
   >{`Pointer · ${state}`}</button>
 }
@@ -414,7 +707,15 @@ function ElementPointerSample(props: Readonly<{route: ElementDomStoryRoute}>) {
 export function ElementDomStoryView(props: ElementDomStoryViewProps) {
   const route = props.route
   return <section data-element-dom-story="" data-route={route} style={css`
-    & { box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 520px; min-height: 260px; padding: 24px; background: rgb(28 28 28); }
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 520px;
+    min-height: 260px;
+    padding: 24px;
+    background: rgb(28 28 28);
   `}>
     {route.endsWith("/z-index") ? <ElementZStack /> : null}
     {route.includes("/div/") && !route.endsWith("/z-index") ? <ElementDivSample route={route} /> : null}
@@ -435,9 +736,29 @@ export function ImageDomStoryView(props: ImageDomStoryViewProps) {
     data-image-dom-story=""
     data-route={props.route}
     aria-label="Вписывание изображения"
-    style={css`& { box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 520px; min-height: 300px; padding: 24px; background: rgb(28 28 28); color: rgb(224 224 224); }`}
+    style={css`
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 520px;
+      min-height: 300px;
+      padding: 24px;
+      background: rgb(28 28 28);
+      color: rgb(224 224 224);
+    `}
   >
-    <div style={css`& { box-sizing: border-box; display: block; width: 320px; height: 180px; overflow: hidden; border: 1px solid rgb(72 72 72); border-radius: 4px; background: rgb(7 16 28); }`}>
+    <div style={css`
+      box-sizing: border-box;
+      display: block;
+      width: 320px;
+      height: 180px;
+      overflow: hidden;
+      border: 1px solid rgb(72 72 72);
+      border-radius: 4px;
+      background: rgb(7 16 28);
+    `}>
       <img
         src={props.src}
         alt="Абстрактная сцена"
@@ -446,8 +767,16 @@ export function ImageDomStoryView(props: ImageDomStoryViewProps) {
         title={fit === "cover" ? "Заполнение области" : "Изображение целиком"}
         data-image-fit={fit}
         style={css`
-          & { box-sizing: border-box; display: block; width: 320px; height: 180px; background: rgb(7 16 28); object-fit: contain; }
-          &[data-image-fit="cover"] { object-fit: cover; }
+          box-sizing: border-box;
+          display: block;
+          width: 320px;
+          height: 180px;
+          background: rgb(7 16 28);
+          object-fit: contain;
+
+          &[data-image-fit="cover"] {
+            object-fit: cover;
+          }
         `}
       />
     </div>
@@ -478,16 +807,38 @@ function PopoverOption(props: Readonly<{
     aria-disabled={props.entry.disabled ? "true" : undefined}
     onClick={onClick}
     style={css`
-      & { box-sizing: border-box; display: block; width: 100%; height: 26px; padding: 5px 8px; border: 1px solid transparent; border-radius: 3px; background: rgb(48 48 48); color: rgb(224 224 224); font-size: 11px; }
-      &[aria-selected="true"] { background: rgb(45 104 128); color: rgb(240 240 240); }
-      &[aria-disabled="true"] { opacity: 0.5; }
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      height: 26px;
+      padding: 5px 8px;
+      border: 1px solid transparent;
+      border-radius: 3px;
+      background: rgb(48 48 48);
+      color: rgb(224 224 224);
+      font-size: 11px;
+
+      &[aria-selected="true"] {
+        background: rgb(45 104 128);
+        color: rgb(240 240 240);
+      }
+
+      &[aria-disabled="true"] {
+        opacity: 0.5;
+      }
     `}
   >{props.entry.label}</li>
 }
 
 function PopoverList(props: Readonly<{selected: string; onSelect(value: string): void}>) {
   return <ul role="listbox" aria-label="Операция" data-popover-listbox="" style={css`
-    & { box-sizing: border-box; display: flex; flex-direction: column; width: 100%; gap: 2px; padding: 2px 0 0; background: rgb(36 36 36); }
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 2px;
+    padding: 2px 0 0;
+    background: rgb(36 36 36);
   `}>{POPOVER_OPTIONS.map(entry => <PopoverOption
     key={entry.value}
     entry={entry}
@@ -497,11 +848,27 @@ function PopoverList(props: Readonly<{selected: string; onSelect(value: string):
 }
 
 function PopoverHeader() {
-  return <header style={css`& { box-sizing: border-box; display: block; width: 100%; height: 26px; padding: 5px 8px; border-bottom: 1px solid rgb(72 72 72); color: rgb(176 176 176); font-size: 11px; }`}>Операция</header>
+  return <header style={css`
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    height: 26px;
+    padding: 5px 8px;
+    border-bottom: 1px solid rgb(72 72 72);
+    color: rgb(176 176 176);
+    font-size: 11px;
+  `}>Операция</header>
 }
 
 function PopoverDialog() {
-  return <div role="dialog" aria-label="Popover" style={css`& { display: block; min-height: 48px; padding: 14px 10px; color: rgb(224 224 224); font-size: 12px; text-align: center; }`}>Содержимое всплывающего слоя</div>
+  return <div role="dialog" aria-label="Popover" style={css`
+    display: block;
+    min-height: 48px;
+    padding: 14px 10px;
+    color: rgb(224 224 224);
+    font-size: 12px;
+    text-align: center;
+  `}>Содержимое всплывающего слоя</div>
 }
 
 export function PopoverDomStoryView(props: PopoverDomStoryViewProps) {
@@ -537,9 +904,27 @@ export function PopoverDomStoryView(props: PopoverDomStoryViewProps) {
     data-popover-dom-story=""
     data-route={props.route}
     aria-label={selectRoute ? "Составной выбор значения" : "Всплывающий слой"}
-    style={css`& { box-sizing: border-box; display: flex; flex-direction: column; align-items: center; justify-content: center; width: 520px; min-height: 300px; gap: 7px; padding: 24px; background: rgb(28 28 28); color: rgb(224 224 224); }`}
+    style={css`
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 520px;
+      min-height: 300px;
+      gap: 7px;
+      padding: 24px;
+      background: rgb(28 28 28);
+      color: rgb(224 224 224);
+    `}
   >
-    <span style={css`& { display: block; width: 260px; min-height: 20px; color: rgb(176 176 176); font-size: 11px; }`}>{caption}</span>
+    <span style={css`
+      display: block;
+      width: 260px;
+      min-height: 20px;
+      color: rgb(176 176 176);
+      font-size: 11px;
+    `}>{caption}</span>
     <button
       type="button"
       data-popover-trigger=""
@@ -550,8 +935,24 @@ export function PopoverDomStoryView(props: PopoverDomStoryViewProps) {
       title={selectRoute ? "Выбрать операцию" : open ? "Закрыть" : "Открыть"}
       onClick={onTrigger}
       style={css`
-        & { box-sizing: border-box; display: flex; flex-direction: row; align-items: center; justify-content: space-between; width: 260px; height: 32px; gap: 8px; padding: 5px 10px; border: 1px solid rgb(72 72 72); border-radius: 4px; background: rgb(48 48 48); color: rgb(224 224 224); font-size: 12px; }
-        &[aria-expanded="true"] { border-color: rgb(126 220 236); }
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 260px;
+        height: 32px;
+        gap: 8px;
+        padding: 5px 10px;
+        border: 1px solid rgb(72 72 72);
+        border-radius: 4px;
+        background: rgb(48 48 48);
+        color: rgb(224 224 224);
+        font-size: 12px;
+
+        &[aria-expanded="true"] {
+          border-color: rgb(126 220 236);
+        }
       `}
     ><span>{triggerLabel}</span><span aria-hidden="true">{indicator}</span></button>
     <div
@@ -561,9 +962,24 @@ export function PopoverDomStoryView(props: PopoverDomStoryViewProps) {
       data-popover-owner=""
       data-placement={flipped ? "above" : "below"}
       style={css`
-        & { box-sizing: border-box; display: flex; flex-direction: column; width: 260px; min-height: 66px; padding: 6px; border: 1px solid rgb(72 72 72); border-radius: 4px; background: rgb(36 36 36); color: rgb(224 224 224); }
-        &[data-placement="below"] { margin-top: 6px; }
-        &[data-placement="above"] { margin-bottom: 6px; }
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        width: 260px;
+        min-height: 66px;
+        padding: 6px;
+        border: 1px solid rgb(72 72 72);
+        border-radius: 4px;
+        background: rgb(36 36 36);
+        color: rgb(224 224 224);
+
+        &[data-placement="below"] {
+          margin-top: 6px;
+        }
+
+        &[data-placement="above"] {
+          margin-bottom: 6px;
+        }
       `}
     >
       {header ? <PopoverHeader /> : null}

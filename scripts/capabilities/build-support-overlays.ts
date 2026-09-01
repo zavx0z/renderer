@@ -80,8 +80,8 @@ const engineVectorPathLimitations = [
   "The instanced Engine contract admits exact-opaque independent sampled capsules only; translucent connected-stroke union/scalar fallback belongs to Renderer, and complete SVG fill/stroking, dashes, adaptive tessellation and analytical join self-union are unsupported. Outer AA fringe overlap at sampled joins remains a bounded limitation.",
 ]
 const templateCssVerification = {
-  revision: "838a214a83950259f3f5d543e881e11402bc230c",
-  date: "2026-08-31",
+  revision: "c97d7113ad270a26a8ed8ec9ddf30eaf3bacf1a5",
+  date: "2026-09-01",
 } as const
 const flexWrapVerification = {
   revision: "74ea59fc8fa7c7156ebaeefceed459097f52b4dd",
@@ -1614,10 +1614,17 @@ function classifyTsxCompiler(entry: CapabilityInventoryEntry): Classification {
   const suffix = entry.id.slice("tsx.compiler.".length)
   if (suffix === "static-style-extraction") {
     return implemented("extension", [
-      implementation("template", "compiler/style.ts", "component-local css extraction", undefined, "Global css intrinsic rules, bounded attribute/pseudo selectors and nested fragments become one ordered compiled sheet with addressed markers.", "Dynamic non-base selector values, general selectors and CSS nesting."),
+      implementation("template", "compiler/style.ts", "component-local css extraction", undefined, "Canonical direct base declarations, non-escaping private same-module reusable CSS constants, bounded & attribute/pseudo selectors and ordered fragments become one compiled sheet plus addressed inline bindings; zero/one-site, exported, multi-declarator and escaping CSS constants fail closed.", "Dynamic non-base selector values, cross-module CSS constants, general selectors, at-rules and complete CSS nesting."),
       implementation("template", "compiled.ts", "CompiledTemplate.styleSheets", undefined, "Immutable stylesheet metadata crosses the compiled-template ABI with exact duplicate collapse and collision rejection.", "Document registration and rendered pixels outside Template."),
-      test("template", "compiler/style-compiler.test.ts", suffix, "Global intrinsic identity, css-only lowering, authored precedence, component base styles, residual caller style and exact fail-closed diagnostics.", "Downstream Document/Renderer lifecycle."),
+      test("template", "compiler/css-style-compiler.test.ts", suffix, "Direct base syntax plus redundant wrapper, zero/one-site, export, multi-declarator and out-of-style CSS constant rejection, scoped selectors, precedence and exact diagnostics.", "Downstream Document/Renderer lifecycle."),
       test("template", "compiled-style-sheet.test.ts", suffix, "Compiled metadata reaches the runtime package without runtime JSX or defineStyles authoring.", "Native browser presentation."),
+    ])
+  }
+  if (suffix === "compiler-diagnostics") {
+    return implemented("extension", [
+      implementation("template", "compiler/transform.ts", entry.name, undefined, "Governed TSX-to-fixed-slot ABI transform and exact syntax rejection boundary.", "Syntax outside the project profile."),
+      test("template", "compiler/compiler.test.ts", entry.name, "General accepted/rejected JSX syntax, symbol resolution, cache invalidation and emitted ABI.", "CSS authoring diagnostics and downstream host behavior."),
+      test("template", "compiler/css-style-compiler.test.ts", "canonical CSS diagnostics", "Redundant base wrappers, non-reusable/exported/escaping CSS constants, invalid selectors and dynamic pseudo values fail with exact diagnostics.", "Downstream Document/Renderer lifecycle."),
     ])
   }
   const implementedNames = new Set([

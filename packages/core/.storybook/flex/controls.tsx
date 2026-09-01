@@ -89,20 +89,29 @@ function ChoiceButton(props: ChoiceButtonProps) {
     disabled={props.disabled || choice.disabled === true}
     onClick={() => props.onChange(choice.value)}
     style={css`
-      & {
-        box-sizing: border-box;
-        display: block;
-        min-width: 0;
-        height: 24px;
-        padding: 2px 6px;
-        border: 1px solid rgb(75 85 99);
-        border-radius: 3px;
-        background: rgb(31 35 43);
-        color: rgb(236 239 244);
+      box-sizing: border-box;
+      display: block;
+      min-width: 0;
+      height: 24px;
+      padding: 2px 6px;
+      border: 1px solid rgb(75 85 99);
+      border-radius: 3px;
+      background: rgb(31 35 43);
+      color: rgb(236 239 244);
+
+      &[aria-pressed="true"] {
+        border-color: rgb(96 165 250);
+        background: rgb(42 67 101);
       }
-      &[aria-pressed="true"] { border-color: rgb(96 165 250); background: rgb(42 67 101); }
-      &:focus { border-color: rgb(147 197 253); background: rgb(48 74 110); }
-      &:disabled { opacity: 0.55; }
+
+      &:focus {
+        border-color: rgb(147 197 253);
+        background: rgb(48 74 110);
+      }
+
+      &:disabled {
+        opacity: 0.55;
+      }
     `}
   >{choice.label}</button>
 }
@@ -117,21 +126,18 @@ function ChoiceControl(props: ChoiceControlProps) {
     aria-label={props.label}
     data-flex-choice-control=""
     style={css`
-    & {
       display: flex;
       flex-direction: column;
       min-width: 0;
       gap: 4px;
-    }
-  `}>
+    `}
+  >
     <code>{props.label}</code>
     <section style={css`
-      & {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 3px;
-      }
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 3px;
     `}>
       {props.options.map(choice => <ChoiceButton
         key={choice.value}
@@ -152,34 +158,41 @@ function NumberControl(props: NumberControlProps) {
     aria-label={`${props.label}: управление`}
     data-flex-number-control=""
     style={css`
-    & {
       display: flex;
       flex-direction: row;
       align-items: center;
       min-width: 0;
       gap: 6px;
-    }
-  `}>
-    <code style={css`& { min-width: 104px; flex-shrink: 0; }`}>{props.label}</code>
+    `}
+  >
+    <code style={css`
+      min-width: 104px;
+      flex-shrink: 0;
+    `}>{props.label}</code>
     <button
       type="button"
       aria-label={`Уменьшить: ${props.label}`}
       disabled={props.disabled === true || props.value <= props.min}
       onClick={() => props.onInput(props.value - step)}
       style={css`
-        & {
-          box-sizing: border-box;
-          display: block;
-          width: 24px;
-          height: 24px;
-          padding: 0;
-          border: 1px solid rgb(75 85 99);
-          border-radius: 3px;
-          background: rgb(31 35 43);
-          color: rgb(236 239 244);
+        box-sizing: border-box;
+        display: block;
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        border: 1px solid rgb(75 85 99);
+        border-radius: 3px;
+        background: rgb(31 35 43);
+        color: rgb(236 239 244);
+
+        &:focus {
+          border-color: rgb(147 197 253);
+          background: rgb(48 74 110);
         }
-        &:focus { border-color: rgb(147 197 253); background: rgb(48 74 110); }
-        &:disabled { opacity: 0.55; }
+
+        &:disabled {
+          opacity: 0.55;
+        }
       `}
     >−</button>
     <output
@@ -188,18 +201,16 @@ function NumberControl(props: NumberControlProps) {
       data-max={props.max}
       data-step={step}
       style={css`
-        & {
-          box-sizing: border-box;
-          display: block;
-          min-width: 0;
-          width: 64px;
-          height: 24px;
-          padding: 2px 5px;
-          border: 1px solid rgb(75 85 99);
-          border-radius: 3px;
-          background: rgb(31 35 43);
-          color: rgb(236 239 244);
-        }
+        box-sizing: border-box;
+        display: block;
+        min-width: 0;
+        width: 64px;
+        height: 24px;
+        padding: 2px 5px;
+        border: 1px solid rgb(75 85 99);
+        border-radius: 3px;
+        background: rgb(31 35 43);
+        color: rgb(236 239 244);
       `}
     >{props.value}</output>
     <button
@@ -208,19 +219,24 @@ function NumberControl(props: NumberControlProps) {
       disabled={props.disabled === true || props.value >= props.max}
       onClick={() => props.onInput(props.value + step)}
       style={css`
-        & {
-          box-sizing: border-box;
-          display: block;
-          width: 24px;
-          height: 24px;
-          padding: 0;
-          border: 1px solid rgb(75 85 99);
-          border-radius: 3px;
-          background: rgb(31 35 43);
-          color: rgb(236 239 244);
+        box-sizing: border-box;
+        display: block;
+        width: 24px;
+        height: 24px;
+        padding: 0;
+        border: 1px solid rgb(75 85 99);
+        border-radius: 3px;
+        background: rgb(31 35 43);
+        color: rgb(236 239 244);
+
+        &:focus {
+          border-color: rgb(147 197 253);
+          background: rgb(48 74 110);
         }
-        &:focus { border-color: rgb(147 197 253); background: rgb(48 74 110); }
-        &:disabled { opacity: 0.55; }
+
+        &:disabled {
+          opacity: 0.55;
+        }
       `}
     >+</button>
   </section>
@@ -237,13 +253,14 @@ function GapControl(props: Readonly<{
     axis: props.axis,
     value,
   })
-  return <section data-flex-gap-control={props.axis} style={css`
-    & {
+  return <section
+    data-flex-gap-control={props.axis}
+    style={css`
       display: flex;
       flex-direction: column;
       gap: 4px;
-    }
-  `}>
+    `}
+  >
     <ChoiceControl
       label={`Режим ${label}`}
       value={props.value.kind}
@@ -275,13 +292,14 @@ function BasisControl(props: Readonly<{
     itemId: props.item.id,
     value,
   })
-  return <section data-flex-basis-control="" style={css`
-    & {
+  return <section
+    data-flex-basis-control=""
+    style={css`
       display: flex;
       flex-direction: column;
       gap: 4px;
-    }
-  `}>
+    `}
+  >
     <ChoiceControl
       label="Режим flex-basis"
       value={props.item.basis.kind}
@@ -339,16 +357,18 @@ function SelectedItemControls(props: Readonly<{
     data-flex-controls-group="selected-item"
     hidden={props.hidden}
     style={css`
-    & {
       display: flex;
       flex-direction: column;
       gap: 5px;
       padding: 7px;
       border: 1px solid rgb(55 65 81);
       border-radius: 4px;
-    }
-    &[hidden] { display: none; }
-  `}>
+
+      &[hidden] {
+        display: none;
+      }
+    `}
+  >
     <legend>Выбранный элемент</legend>
     <ChoiceControl
       label="Выбранный элемент"
@@ -425,17 +445,15 @@ function LiveFlexControls(props: Readonly<{channel: FlexStoryChannel}>) {
     data-flex-controls-content="live"
     aria-label="Параметры Flex"
     style={css`
-      & {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        min-width: 0;
-        gap: 7px;
-        padding: 7px;
-        overflow: auto;
-        color: rgb(236 239 244);
-      }
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      min-width: 0;
+      gap: 7px;
+      padding: 7px;
+      overflow: auto;
+      color: rgb(236 239 244);
     `}
   >
     <ChoiceControl
@@ -449,9 +467,18 @@ function LiveFlexControls(props: Readonly<{channel: FlexStoryChannel}>) {
       data-flex-controls-group="container"
       hidden={activePanel !== "setup"}
       style={css`
-      & { display: flex; flex-direction: column; gap: 5px; padding: 7px; border: 1px solid rgb(55 65 81); border-radius: 4px; }
-      &[hidden] { display: none; }
-    `}>
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 7px;
+        border: 1px solid rgb(55 65 81);
+        border-radius: 4px;
+
+        &[hidden] {
+          display: none;
+        }
+      `}
+    >
       <legend>Контейнер</legend>
       <NumberControl
         label="Ширина контейнера"
@@ -487,28 +514,46 @@ function LiveFlexControls(props: Readonly<{channel: FlexStoryChannel}>) {
       data-flex-controls-group="alignment"
       hidden={activePanel !== "alignment"}
       style={css`
-      & { display: flex; flex-direction: column; gap: 5px; padding: 7px; border: 1px solid rgb(55 65 81); border-radius: 4px; }
-      &[hidden] { display: none; }
-    `}>
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 7px;
+        border: 1px solid rgb(55 65 81);
+        border-radius: 4px;
+
+        &[hidden] {
+          display: none;
+        }
+      `}
+    >
       <legend>Выравнивание</legend>
       <ChoiceControl
         label="Главная ось (justify-content)"
         value={container.justifyContent}
         options={FLEX_STORY_JUSTIFY_CONTENTS.map(value => ({value, label: value}))}
-        onChange={value => props.channel.dispatch({type: "set-justify-content", value: value as typeof container.justifyContent})}
+        onChange={value => props.channel.dispatch({
+          type: "set-justify-content",
+          value: value as typeof container.justifyContent,
+        })}
       />
       <ChoiceControl
         label="Элементы (align-items)"
         value={container.alignItems}
         options={FLEX_STORY_ALIGN_ITEMS.map(value => ({value, label: value}))}
-        onChange={value => props.channel.dispatch({type: "set-align-items", value: value as typeof container.alignItems})}
+        onChange={value => props.channel.dispatch({
+          type: "set-align-items",
+          value: value as typeof container.alignItems,
+        })}
       />
       <ChoiceControl
         label="Строки (align-content)"
         value={container.alignContent}
         disabled={container.wrap === "nowrap"}
         options={FLEX_STORY_ALIGN_CONTENTS.map(value => ({value, label: value}))}
-        onChange={value => props.channel.dispatch({type: "set-align-content", value: value as typeof container.alignContent})}
+        onChange={value => props.channel.dispatch({
+          type: "set-align-content",
+          value: value as typeof container.alignContent,
+        })}
       />
     </fieldset>
 
@@ -516,9 +561,18 @@ function LiveFlexControls(props: Readonly<{channel: FlexStoryChannel}>) {
       data-flex-controls-group="gaps"
       hidden={activePanel !== "gaps"}
       style={css`
-      & { display: flex; flex-direction: column; gap: 6px; padding: 7px; border: 1px solid rgb(55 65 81); border-radius: 4px; }
-      &[hidden] { display: none; }
-    `}>
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding: 7px;
+        border: 1px solid rgb(55 65 81);
+        border-radius: 4px;
+
+        &[hidden] {
+          display: none;
+        }
+      `}
+    >
       <legend>Промежутки</legend>
       <GapControl axis="row" value={container.rowGap} channel={props.channel} />
       <GapControl axis="column" value={container.columnGap} channel={props.channel} />
@@ -528,9 +582,18 @@ function LiveFlexControls(props: Readonly<{channel: FlexStoryChannel}>) {
       data-flex-controls-group="items"
       hidden={activePanel !== "setup"}
       style={css`
-      & { display: flex; flex-direction: column; gap: 5px; padding: 7px; border: 1px solid rgb(55 65 81); border-radius: 4px; }
-      &[hidden] { display: none; }
-    `}>
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 7px;
+        border: 1px solid rgb(55 65 81);
+        border-radius: 4px;
+
+        &[hidden] {
+          display: none;
+        }
+      `}
+    >
       <legend>Элементы</legend>
       <NumberControl
         label="Количество элементов"
@@ -552,26 +615,40 @@ function LiveFlexControls(props: Readonly<{channel: FlexStoryChannel}>) {
       data-flex-controls-group="reset"
       hidden={activePanel !== "setup"}
       style={css`
-      & { display: flex; flex-direction: column; gap: 5px; padding: 7px; border: 1px solid rgb(55 65 81); border-radius: 4px; }
-      &[hidden] { display: none; }
-    `}>
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 7px;
+        border: 1px solid rgb(55 65 81);
+        border-radius: 4px;
+
+        &[hidden] {
+          display: none;
+        }
+      `}
+    >
       <legend>Сброс</legend>
       <button
         type="button"
         aria-label="Сбросить параметры Flex"
         onClick={() => props.channel.reset()}
         style={css`
-          & {
-            box-sizing: border-box;
-            display: block;
-            height: 26px;
-            border: 1px solid rgb(75 85 99);
-            border-radius: 3px;
-            background: rgb(48 54 65);
-            color: rgb(236 239 244);
+          box-sizing: border-box;
+          display: block;
+          height: 26px;
+          border: 1px solid rgb(75 85 99);
+          border-radius: 3px;
+          background: rgb(48 54 65);
+          color: rgb(236 239 244);
+
+          &:focus {
+            border-color: rgb(147 197 253);
+            background: rgb(58 66 80);
           }
-          &:focus { border-color: rgb(147 197 253); background: rgb(58 66 80); }
-          &:hover { background: rgb(58 66 80); }
+
+          &:hover {
+            background: rgb(58 66 80);
+          }
         `}
       >Сбросить</button>
     </fieldset>
@@ -581,12 +658,25 @@ function LiveFlexControls(props: Readonly<{channel: FlexStoryChannel}>) {
       aria-readonly="true"
       hidden={activePanel !== "limits"}
       style={css`
-      & { display: flex; flex-direction: column; gap: 5px; padding: 7px; border: 1px solid rgb(55 65 81); border-radius: 4px; }
-      &[hidden] { display: none; }
-    `}>
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 7px;
+        border: 1px solid rgb(55 65 81);
+        border-radius: 4px;
+
+        &[hidden] {
+          display: none;
+        }
+      `}
+    >
       <legend>Ограничения</legend>
       <ul aria-label="Неподдерживаемые возможности Flex" style={css`
-        & { display: flex; flex-direction: column; gap: 2px; margin: 0; padding-left: 18px; }
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        margin: 0;
+        padding-left: 18px;
       `}>
         {UNSUPPORTED_FLEX_FEATURES.map(feature => <UnsupportedFeature key={feature} feature={feature} />)}
       </ul>
@@ -599,13 +689,11 @@ function PassiveFlexControls() {
     data-flex-controls-content="passive"
     aria-label="Параметры Flex недоступны"
     style={css`
-      & {
-        box-sizing: border-box;
-        display: block;
-        width: 100%;
-        padding: 8px;
-        color: rgb(156 163 175);
-      }
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      padding: 8px;
+      color: rgb(156 163 175);
     `}
   >Выберите вариант CSS / Flex</section>
 }
@@ -616,13 +704,11 @@ export function FlexControlsWidget(props: FlexControlsWidgetProps) {
   return <section
     data-flex-controls-widget={channel === null ? "passive" : "live"}
     style={css`
-      & {
-        box-sizing: border-box;
-        display: block;
-        width: 100%;
-        min-width: 0;
-        min-height: 0;
-      }
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+      min-width: 0;
+      min-height: 0;
     `}
   >
     {channel === null ? <PassiveFlexControls /> : null}

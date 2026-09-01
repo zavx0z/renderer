@@ -69,13 +69,19 @@ the compiler emits static sheets/markers plus ordered inline CSS strings.
 ```tsx
 function Button({style, label}: Readonly<{style?: CssStyle; label: string}>) {
   return <button style={css`
-    & { display: flex; height: 22px; }
+    display: flex;
+    height: 22px;
     &:hover { background: rgb(101 101 101); }
     &:active { background: rgb(71 114 179); }
     ${style}
   `}>{label}</button>
 }
 ```
+
+Base declarations are always direct. `&` is reserved for actual scoped
+selectors, and a private module CSS const is valid only when reused by at least
+two distinct compiled style sites. It must be the statement's only declaration,
+must not escape those sites, and cannot be exported; shared themes use `.css`.
 
 At runtime React receives only compiler-produced CSS strings and nested arrays;
 objects, CSSProperties, style tokens and `defineStyles` do not exist. Native

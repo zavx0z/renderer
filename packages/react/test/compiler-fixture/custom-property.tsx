@@ -11,19 +11,24 @@ import {createRoot} from "@zavx0z/react"
 
 function HoverButton(props: Readonly<{label: string; hoverColor: string}>) {
   return <button style={css`
-    & {
-      --hover-color: ${props.hoverColor};
-      display: block;
-      width: 40px;
-      height: 20px;
-      background: #000000;
+    --hover-color: ${props.hoverColor};
+    display: block;
+    width: 40px;
+    height: 20px;
+    background: #000000;
+
+    &:hover {
+      background: var(--hover-color);
     }
-    &:hover { background: var(--hover-color); }
   `}>{props.label}</button>
 }
 
 function App(props: Readonly<{first: string; second: string}>) {
-  return <main style={css`& { display: flex; width: 80px; height: 20px; }`}>
+  return <main style={css`
+    display: flex;
+    width: 80px;
+    height: 20px;
+  `}>
     <HoverButton label="First" hoverColor={props.first} />
     <HoverButton label="Second" hoverColor={props.second} />
   </main>
