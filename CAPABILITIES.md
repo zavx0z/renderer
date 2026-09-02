@@ -14,10 +14,10 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | engine | main | `a3032d960fc592296e8c5d1408a02551635d1fb3` | no |
 | interpreter | main | `08573a5f52fc04c4d25a87b318cd801c81ae8f20` | no |
 | metafor | main | `c5ba83e1ab3461e8255b002fe7fa84ff18007c20` | no |
-| node | main | `1e2450aaceb5d5dbf34239eb7e1252595e053efd` | no |
-| renderer | main | `5e21783b688339fb892cb288a4bd030605191c68` | yes |
+| node | main | `68e2425e62b956e3fc187ca7abd811a468db8bad` | no |
+| renderer | main | `c87e95bcda354a019bd8e8b165cdf4a532d915ce` | yes |
 | storybook | main | `83ea3f66a6a1b93030906cd97871068a286db80b` | no |
-| template | main | `ef543f55aea710d91ec473fe52f32900fbbb655b` | yes |
+| template | main | `671d19f652b2899b77bd30e50e9fd254080ef93f` | no |
 | ui | main | `90c77080c27d92fea5ee803e8ff1e49d65885ae1` | no |
 
 ## Pinned external sources
@@ -75,7 +75,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | @zavx0z/renderer | renderer | `9af61ff761a249a22d1ce22d61a7f2c3855f0c89` | 3140 |
 | @zavx0z/renderer-browser | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 70 |
 | @zavx0z/renderer-webgpu | renderer | `9af61ff761a249a22d1ce22d61a7f2c3855f0c89` | 37 |
-| @zavx0z/template | template | `4b66cdee58840f3e59701f9a8c52b044512a1acb+dirty` | 192 |
+| @zavx0z/template | template | `6db9e772e37cdc47e6dba58d153016057cc93558` | 192 |
 
 ## Complete matrix
 
@@ -8801,7 +8801,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `tsx.compiler.children` | tsx-compiler | implemented | extension | @zavx0z/template/compiler | — | 2 | 0 |
 | `tsx.compiler.class` | tsx-compiler | unsupported | none | @zavx0z/template/compiler | The governed TSX compiler rejects this syntax or does not provide the requested diagnostic/source-map contract. | 1 | 0 |
 | `tsx.compiler.class-name` | tsx-compiler | unsupported | none | @zavx0z/template/compiler | The governed TSX compiler rejects this syntax or does not provide the requested diagnostic/source-map contract. | 1 | 0 |
-| `tsx.compiler.compiler-diagnostics` | tsx-compiler | implemented | extension | @zavx0z/template/compiler | — | 3 | 0 |
+| `tsx.compiler.compiler-diagnostics` | tsx-compiler | implemented | extension | @zavx0z/template/compiler | — | 4 | 0 |
 | `tsx.compiler.component-children` | tsx-compiler | implemented | extension | @zavx0z/template/compiler | — | 2 | 0 |
 | `tsx.compiler.component-escape-rejection` | tsx-compiler | implemented | extension | @zavx0z/template/compiler | — | 2 | 0 |
 | `tsx.compiler.conditional-branches` | tsx-compiler | implemented | extension | @zavx0z/template/compiler | — | 2 | 0 |
@@ -8845,7 +8845,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `tsx.compiler.source-roots` | tsx-compiler | implemented | extension | @zavx0z/template/compiler | — | 2 | 0 |
 | `tsx.compiler.spreads` | tsx-compiler | unsupported | none | @zavx0z/template/compiler | The governed TSX compiler rejects this syntax or does not provide the requested diagnostic/source-map contract. | 1 | 0 |
 | `tsx.compiler.standard-dom-jsx-typing` | tsx-compiler | implemented | extension | @zavx0z/template/compiler | — | 3 | 0 |
-| `tsx.compiler.static-style-extraction` | tsx-compiler | implemented | extension | @zavx0z/template/compiler | — | 4 | 1 |
+| `tsx.compiler.static-style-extraction` | tsx-compiler | implemented | extension | @zavx0z/template/compiler | — | 7 | 1 |
 | `tsx.compiler.style-bindings` | tsx-compiler | implemented | extension | @zavx0z/template/compiler | — | 2 | 0 |
 | `tsx.compiler.symbol-resolution` | tsx-compiler | implemented | extension | @zavx0z/template/compiler | — | 2 | 0 |
 | `tsx.tagged-html.arrays` | tagged-html | implemented | extension | @zavx0z/template/compiler | — | 2 | 0 |
