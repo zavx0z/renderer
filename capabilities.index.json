@@ -525702,29 +525702,29 @@
       "domain": "webgpu",
       "evidence": [
         {
-          "doesNotProve": "Actual device pixels and unsupported combinations.",
+          "doesNotProve": "Whole application shutdown, texture-cache ownership or device-loss recovery.",
           "path": "packages/webgpu/src/webgpu-backend.ts",
-          "proves": "The bounded retained backend contract.",
+          "proves": "Dispose bulk-detaches the root scene once before clearing retained entries, clips, instances, callbacks and owned geometries.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "cleanup",
+          "revision": "a5c9f3e7e9767ff1b6f292ded67697692c8c6d65",
+          "symbol": "bulk retained backend cleanup",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Actual GPU submission/readback.",
+          "doesNotProve": "Every application lifecycle, device or external Engine owner.",
           "path": "packages/webgpu/test/webgpu-backend.test.ts",
-          "proves": "Retained identity, planning, updates, fail-closed validation, and cleanup.",
+          "proves": "Dense scalar owners detach without quadratic Object3D.remove sibling scans; cleanup remains idempotent and invalidates owned geometry.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "cleanup",
+          "revision": "a5c9f3e7e9767ff1b6f292ded67697692c8c6d65",
+          "symbol": "bulk-detaches dense retained children without per-entry root removal",
           "type": "unit-test"
         }
       ],
       "id": "webgpu.features.cleanup",
       "kind": "webgpu-backend",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-09-02",
+        "revision": "a5c9f3e7e9767ff1b6f292ded67697692c8c6d65"
       },
       "limitations": [],
       "metadata": {},
@@ -526470,32 +526470,32 @@
       "domain": "webgpu",
       "evidence": [
         {
-          "doesNotProve": "Complete CSS paint semantics and actual GPU pixels.",
+          "doesNotProve": "Complete CSS paint resources, texture-cache teardown, device loss or every Engine resource.",
           "path": "packages/webgpu/src/webgpu-backend.ts",
-          "proves": "The bounded materialization path.",
+          "proves": "Retained display entries, instance storage, callbacks and owned geometry have deterministic update/removal/disposal ownership with bulk root detachment.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "revision": "a5c9f3e7e9767ff1b6f292ded67697692c8c6d65",
           "symbol": "resource-lifetime",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Every CSS combination and device output.",
+          "doesNotProve": "Whole application shutdown or actual GPU/device teardown.",
           "path": "packages/webgpu/test/webgpu-backend.test.ts",
-          "proves": "Current retained Engine-object behavior.",
+          "proves": "Idempotent dense cleanup clears parent links and resources without per-entry root removal.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "resource-lifetime",
+          "revision": "a5c9f3e7e9767ff1b6f292ded67697692c8c6d65",
+          "symbol": "bulk-detaches dense retained children without per-entry root removal",
           "type": "unit-test"
         }
       ],
       "id": "webgpu.features.resource-lifetime",
       "kind": "webgpu-backend",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-09-02",
+        "revision": "a5c9f3e7e9767ff1b6f292ded67697692c8c6d65"
       },
       "limitations": [
-        "Implemented only for display-list values admitted by frame validation and retained materialization."
+        "Implemented for frame-admitted retained display resources; texture cache, complete GPU device loss and external Engine resource ownership remain separate."
       ],
       "metadata": {},
       "name": "resource lifetime",
@@ -527113,15 +527113,15 @@
     },
     {
       "branch": "main",
-      "dirty": false,
+      "dirty": true,
       "id": "node",
-      "revision": "9d7aa6cd35e76cb8eba1b7721c17033edb8610c8"
+      "revision": "f4519ea1f2271634ce8cd8afa57d1ac5a62a86d1"
     },
     {
       "branch": "main",
       "dirty": true,
       "id": "renderer",
-      "revision": "0cb7256277d5ff9c013766c371a109ab43a7c100"
+      "revision": "a5c9f3e7e9767ff1b6f292ded67697692c8c6d65"
     },
     {
       "branch": "main",

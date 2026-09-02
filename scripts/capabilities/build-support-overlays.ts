@@ -76,6 +76,10 @@ const hiddenTransformVerification = {
   revision: "0cb7256277d5ff9c013766c371a109ab43a7c100",
   date: "2026-09-02",
 } as const
+const backendDisposalVerification = {
+  revision: "a5c9f3e7e9767ff1b6f292ded67697692c8c6d65",
+  date: "2026-09-02",
+} as const
 const enginePathVerification = {
   revision: "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
   date: "2026-09-01",
@@ -1810,6 +1814,22 @@ function classifyWebgpu(entry: CapabilityInventoryEntry): Classification {
       ),
       lastVerified: textAdvanceVerification,
     }
+  }
+  if (name === "cleanup") {
+    return rendererVerifiedAt(implemented("extension", [
+      implementation("renderer", "packages/webgpu/src/webgpu-backend.ts", "bulk retained backend cleanup", undefined, "Dispose bulk-detaches the root scene once before clearing retained entries, clips, instances, callbacks and owned geometries.", "Whole application shutdown, texture-cache ownership or device-loss recovery."),
+      test("renderer", "packages/webgpu/test/webgpu-backend.test.ts", "bulk-detaches dense retained children without per-entry root removal", "Dense scalar owners detach without quadratic Object3D.remove sibling scans; cleanup remains idempotent and invalidates owned geometry.", "Every application lifecycle, device or external Engine owner."),
+    ]), backendDisposalVerification)
+  }
+  if (name === "resource-lifetime") {
+    return rendererVerifiedAt(partial(
+      "adapted",
+      [
+        implementation("renderer", "packages/webgpu/src/webgpu-backend.ts", "resource-lifetime", undefined, "Retained display entries, instance storage, callbacks and owned geometry have deterministic update/removal/disposal ownership with bulk root detachment.", "Complete CSS paint resources, texture-cache teardown, device loss or every Engine resource."),
+        test("renderer", "packages/webgpu/test/webgpu-backend.test.ts", "bulk-detaches dense retained children without per-entry root removal", "Idempotent dense cleanup clears parent links and resources without per-entry root removal.", "Whole application shutdown or actual GPU/device teardown."),
+      ],
+      "Implemented for frame-admitted retained display resources; texture cache, complete GPU device loss and external Engine resource ownership remain separate.",
+    ), backendDisposalVerification)
   }
   const implementedNames = new Set(["frame-validation", "scalar-retained-path", "automatic-rect-instancing", "run-barriers", "overlap-law", "stable-slots", "partial-record-uploads", "paint-order", "cleanup", "geometry-invalidation", "diagnostics", "unsupported-combinations", "screen-overlay", "document-plane"])
   if (implementedNames.has(name)) {

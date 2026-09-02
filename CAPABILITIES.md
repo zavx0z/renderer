@@ -14,8 +14,8 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | engine | main | `a3032d960fc592296e8c5d1408a02551635d1fb3` | no |
 | interpreter | main | `08573a5f52fc04c4d25a87b318cd801c81ae8f20` | no |
 | metafor | main | `c5ba83e1ab3461e8255b002fe7fa84ff18007c20` | no |
-| node | main | `9d7aa6cd35e76cb8eba1b7721c17033edb8610c8` | no |
-| renderer | main | `0cb7256277d5ff9c013766c371a109ab43a7c100` | yes |
+| node | main | `f4519ea1f2271634ce8cd8afa57d1ac5a62a86d1` | yes |
+| renderer | main | `a5c9f3e7e9767ff1b6f292ded67697692c8c6d65` | yes |
 | storybook | main | `83ea3f66a6a1b93030906cd97871068a286db80b` | no |
 | template | main | `ef543f55aea710d91ec473fe52f32900fbbb655b` | yes |
 | ui | main | `6af702d2e26c47387563f1157a50d9a657bd5934` | no |
@@ -8913,7 +8913,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `webgpu.features.partial-record-uploads` | webgpu-backend | implemented | extension | @zavx0z/renderer-webgpu/webgpu | — | 2 | 0 |
 | `webgpu.features.radii` | webgpu-backend | partial | adapted | @zavx0z/renderer-webgpu/webgpu | Different visible border colors, nonuniform rounded borders, and elliptical clips can fail closed. | 2 | 0 |
 | `webgpu.features.rect` | webgpu-backend | partial | adapted | @zavx0z/renderer-webgpu/webgpu | Implemented only for display-list values admitted by frame validation and retained materialization. | 2 | 0 |
-| `webgpu.features.resource-lifetime` | webgpu-backend | partial | adapted | @zavx0z/renderer-webgpu/webgpu | Implemented only for display-list values admitted by frame validation and retained materialization. | 2 | 0 |
+| `webgpu.features.resource-lifetime` | webgpu-backend | partial | adapted | @zavx0z/renderer-webgpu/webgpu | Implemented for frame-admitted retained display resources; texture cache, complete GPU device loss and external Engine resource ownership remain separate. | 2 | 0 |
 | `webgpu.features.run-barriers` | webgpu-backend | implemented | extension | @zavx0z/renderer-webgpu/webgpu | — | 2 | 0 |
 | `webgpu.features.scalar-retained-path` | webgpu-backend | implemented | extension | @zavx0z/renderer-webgpu/webgpu | — | 2 | 0 |
 | `webgpu.features.screen-overlay` | webgpu-backend | implemented | extension | @zavx0z/renderer-webgpu/webgpu | — | 2 | 0 |

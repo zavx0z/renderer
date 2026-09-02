@@ -7818,7 +7818,7 @@
 | P4 | `webgpu.features.image` | partial | @zavx0z/renderer-webgpu/webgpu | 0 | Image readiness is signaled by the Engine/host and actual fetch/decode remains outside the backend. |
 | P4 | `webgpu.features.radii` | partial | @zavx0z/renderer-webgpu/webgpu | 0 | Different visible border colors, nonuniform rounded borders, and elliptical clips can fail closed. |
 | P4 | `webgpu.features.rect` | partial | @zavx0z/renderer-webgpu/webgpu | 0 | Implemented only for display-list values admitted by frame validation and retained materialization. |
-| P4 | `webgpu.features.resource-lifetime` | partial | @zavx0z/renderer-webgpu/webgpu | 0 | Implemented only for display-list values admitted by frame validation and retained materialization. |
+| P4 | `webgpu.features.resource-lifetime` | partial | @zavx0z/renderer-webgpu/webgpu | 0 | Implemented for frame-admitted retained display resources; texture cache, complete GPU device loss and external Engine resource ownership remain separate. |
 | P4 | `webgpu.features.shadows` | partial | @zavx0z/renderer-webgpu/webgpu | 0 | Implemented only for display-list values admitted by frame validation and retained materialization. |
 | P4 | `webgpu.features.text` | partial | @zavx0z/renderer-webgpu/webgpu | 0 | The backend owns one resolved TrueTypeFont, a bounded per-codepoint advance cache and a metric-derived alphabetic baseline proven in real pixels; font-family selection, fallback, shaping, bidi and complete multi-font CSS text remain unsupported. |
 | P4 | `webgpu.features.texture-readiness` | partial | @zavx0z/renderer-webgpu/webgpu | 0 | Image readiness is signaled by the Engine/host and actual fetch/decode remains outside the backend. |
