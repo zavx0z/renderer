@@ -219,6 +219,12 @@ const vectorPathGeometryCache = new WeakMap<
   Readonly<{source: string; geometry: RenderPathGeometry | null}>
 >()
 
+const checkboxIndicatorGeometry = (() => {
+  const geometry = parseRenderPath("M 3 6.5 L 5.5 9 L 10 3.5")
+  if (geometry === null) throw new Error("Checkbox indicator geometry is invalid")
+  return geometry
+})()
+
 const readVectorPathGeometry = (path: HTMLVectorPathElement): RenderPathGeometry | null => {
   const source = path.d
   let cached = vectorPathGeometryCache.get(path)
@@ -5242,20 +5248,21 @@ const emitInputIndicator = (
   const size = Math.max(0, Math.min(box.contentWidth, box.contentHeight) - 4)
   if (size <= 0) return
   if (input.type === "checkbox") {
-    emitControlGlyph(
-      input,
-      "indicator",
-      "✓",
-      box.contentX,
-      box.contentY,
-      box.contentWidth,
-      box.contentHeight,
-      layoutNode.style.color,
-      layoutNode.effectiveOpacity,
+    const glyphSize = Math.min(12, box.contentWidth, box.contentHeight)
+    state.displayList.push(Object.freeze({
+      kind: "path",
+      key: "indicator",
+      node: input,
+      x: box.contentX + (box.contentWidth - glyphSize) / 2,
+      y: box.contentY + (box.contentHeight - glyphSize) / 2,
+      geometry: checkboxIndicatorGeometry,
+      stroke: layoutNode.style.color,
+      strokeWidth: 2,
+      opacity: layoutNode.effectiveOpacity,
       clips,
-      presentationFor(input, state),
-      state,
-    )
+      presentationOwner: null,
+      transform: presentationFor(input, state),
+    }))
     return
   }
   const radius = size / 2

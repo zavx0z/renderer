@@ -209,18 +209,19 @@ describe("checkbox and radio projection", () => {
     const checked = renderer.flush()
     const checkedIndicator = display(checked, checkbox, "indicator")
     expect(checkedIndicator).toMatchObject({
-      kind: "text",
+      kind: "path",
       key: "indicator",
       node: checkbox,
-      text: "✓",
-      color: "#008000",
+      stroke: "#008000",
+      strokeWidth: 2,
       opacity: 1,
-      letterSpacing: 0,
     })
-    if (checkedIndicator.kind !== "text") throw new Error("Expected Checkbox check Text")
+    if (checkedIndicator.kind !== "path") throw new Error("Expected Checkbox check Path")
+    expect(checkedIndicator.geometry.bounds).toEqual({x: 3, y: 3.5, width: 7, height: 5.5})
+    expect(checkedIndicator.geometry.segments).toHaveLength(2)
     expect(checkedIndicator.clips).toHaveLength(1)
     expect(checked.displayList.some(
-      (item) => item.node === checkbox && item.kind === "rect" && item.key === "indicator",
+      (item) => item.node === checkbox && item.kind === "text" && item.key === "indicator",
     )).toBe(false)
 
     checkbox.disabled = true
@@ -229,10 +230,11 @@ describe("checkbox and radio projection", () => {
       kind: checkedIndicator.kind,
       key: checkedIndicator.key,
       node: checkedIndicator.node,
-      text: "✓",
+      stroke: checkedIndicator.stroke,
       x: checkedIndicator.x,
       y: checkedIndicator.y,
-      fontSize: checkedIndicator.fontSize,
+      geometry: checkedIndicator.geometry,
+      strokeWidth: checkedIndicator.strokeWidth,
       clips: checkedIndicator.clips,
       transform: checkedIndicator.transform,
       opacity: 0.5,

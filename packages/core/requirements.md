@@ -360,14 +360,16 @@ UA opacity multiplier. CR/LF is flattened because these controls are
 single-line.
 
 Checked checkbox and radio controls emit no value text. A checked Checkbox emits
-one anonymous Text check glyph `✓` with composite identity `(input,
-"indicator")`; a checked Radio retains one circular Rect with the same key.
-Unchecked controls emit no indicator. The glyph is centered inside the resolved
-content box, bounded to 12 logical pixels, uses resolved current color, effective
-opacity, owner clips and the owner's final presentation transform. Checked and
-disabled state changes therefore preserve exact node/key/geometry while only
-changing admitted state and opacity. Indeterminate Checkbox chrome remains a
-separate unsupported state rather than being represented as a dot or check.
+one anonymous two-segment Path check with composite identity `(input,
+"indicator")`; it never delegates control chrome to a font glyph. A checked
+Radio retains one circular Rect with the same key. Unchecked controls emit no
+indicator. The check Path is centered inside the resolved content box, bounded
+to 12 logical pixels, uses a stable `2px` stroke, resolved current color,
+effective opacity, owner clips and the owner's final presentation transform.
+Checked and disabled state changes therefore preserve exact node/key/geometry
+while only changing admitted state and opacity. Indeterminate Checkbox chrome
+remains a separate unsupported state rather than being represented as a dot or
+check.
 Specialized color, file and date picker chrome, selection, caret, composition
 and text editing remain separate form-control phases.
 
