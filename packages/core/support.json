@@ -138270,7 +138270,7 @@
           "path": "packages/core/src/renderer.ts",
           "proves": "Every admitted mutation still marks its exact target/ancestry before conservative selector-independent data and hidden-insertion work may reuse the retained projection.",
           "repository": "renderer",
-          "revision": "80ee4f56c45ce1e260e8f61e564c73bf26edaaa9",
+          "revision": "0cb7256277d5ff9c013766c371a109ab43a7c100",
           "symbol": "projection-neutral invalidation",
           "type": "implementation"
         },
@@ -138279,18 +138279,27 @@
           "path": "packages/core/test/incremental.test.ts",
           "proves": "Selector dependencies from ancestor compounds and visible or mixed work force complete projection while neutral data-plus-hidden insertion reuses exact records.",
           "repository": "renderer",
-          "revision": "80ee4f56c45ce1e260e8f61e564c73bf26edaaa9",
+          "revision": "0cb7256277d5ff9c013766c371a109ab43a7c100",
           "symbol": "projection-neutral mutation incremental frame",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "General dirty-subtree layout or browser scheduling.",
+          "path": "packages/core/test/transform.test.ts",
+          "proves": "A hidden branch contributes no transform work, while reveal returns through ordinary full invalidation and exact composed projection.",
+          "repository": "renderer",
+          "revision": "0cb7256277d5ff9c013766c371a109ab43a7c100",
+          "symbol": "excludes hidden branches from retained transform traversal until reveal",
           "type": "unit-test"
         }
       ],
       "id": "renderer.features.invalidation",
       "lastVerified": {
         "date": "2026-09-02",
-        "revision": "80ee4f56c45ce1e260e8f61e564c73bf26edaaa9"
+        "revision": "0cb7256277d5ff9c013766c371a109ab43a7c100"
       },
       "limitations": [
-        "Dirty ancestry remains exact and bounded fast paths now include selector-independent data-plus-hidden insertion; general dirty frames still remeasure/place/re-emit."
+        "Dirty ancestry remains exact and bounded fast paths exclude non-projected hidden branches and include selector-independent data-plus-hidden insertion; general dirty frames still remeasure/place/re-emit."
       ],
       "owner": {
         "package": "@zavx0z/renderer",
@@ -138422,31 +138431,40 @@
       "consumers": [],
       "evidence": [
         {
-          "doesNotProve": "The complete CSS/browser algorithm.",
+          "doesNotProve": "A universal incremental layout engine or every consumer scheduling tail.",
           "path": "packages/core/src/renderer.ts",
-          "proves": "The bounded CPU frame stage exists.",
+          "proves": "Clean, Text, input-value, VectorPath, projection-neutral and projected-transform paths conservatively reuse retained frame records.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "revision": "0cb7256277d5ff9c013766c371a109ab43a7c100",
           "symbol": "performance-paths",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Unsupported values and general incremental coverage.",
-          "path": "packages/core/test/renderer.test.ts",
-          "proves": "Observable behavior for the bounded subset.",
+          "doesNotProve": "Other DOM mutations or backend work.",
+          "path": "bench/projection-neutral-patch.ts",
+          "proves": "100 retained data-plus-hidden patches preserve exact projection with sub-frame p99.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "performance-paths",
+          "revision": "0cb7256277d5ff9c013766c371a109ab43a7c100",
+          "symbol": "10k projection-neutral patch",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Dense-visible transforms or complete application performance.",
+          "path": "bench/hidden-transform-patch.ts",
+          "proves": "100 transform patches skip 10,000 non-projected hidden branches while preserving visible correctness.",
+          "repository": "renderer",
+          "revision": "0cb7256277d5ff9c013766c371a109ab43a7c100",
+          "symbol": "10k hidden transform patch",
           "type": "unit-test"
         }
       ],
       "id": "renderer.features.performance-paths",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-09-02",
+        "revision": "0cb7256277d5ff9c013766c371a109ab43a7c100"
       },
       "limitations": [
-        "The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests."
+        "Performance paths are bounded by explicit semantic and projection invariants; general dirty layout, dense disposal and all scheduler/GC tails remain separate gates."
       ],
       "owner": {
         "package": "@zavx0z/renderer",
@@ -139078,31 +139096,40 @@
       "consumers": [],
       "evidence": [
         {
-          "doesNotProve": "The complete CSS/browser algorithm.",
+          "doesNotProve": "Clipped/scrolling subtrees, arbitrary style changes, rotation, 3D transforms or complete CSS transform conformance.",
           "path": "packages/core/src/renderer.ts",
-          "proves": "The bounded CPU frame stage exists.",
+          "proves": "One transform-only target updates retained projected descendants while display:none branches stay outside transform traversal until reveal.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "revision": "0cb7256277d5ff9c013766c371a109ab43a7c100",
           "symbol": "transform-subtree-fast-path",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Unsupported values and general incremental coverage.",
+          "doesNotProve": "Full consumer scheduling or WebGPU presentation.",
           "path": "packages/core/test/transform.test.ts",
-          "proves": "Observable behavior for the bounded subset.",
+          "proves": "Hidden owners remain absent, visible transforms match a forced rebuild and reveal restores exact composed projection.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "transform-subtree-fast-path",
+          "revision": "0cb7256277d5ff9c013766c371a109ab43a7c100",
+          "symbol": "excludes hidden branches from retained transform traversal until reveal",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Dense-visible transforms, browser scheduling or backend presentation.",
+          "path": "bench/hidden-transform-patch.ts",
+          "proves": "Fresh-process p50/p95/p99/max timing and correctness for 10,000 hidden branches, 12 visible owners and 100 root transforms.",
+          "repository": "renderer",
+          "revision": "0cb7256277d5ff9c013766c371a109ab43a7c100",
+          "symbol": "10k hidden transform patch",
           "type": "unit-test"
         }
       ],
       "id": "renderer.features.transform-subtree-fast-path",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-09-02",
+        "revision": "0cb7256277d5ff9c013766c371a109ab43a7c100"
       },
       "limitations": [
-        "Dirty bookkeeping exists, but general dirty frames still remeasure/place/re-emit; only narrow Text and transform fast paths reuse records."
+        "The bounded fast path covers axis-aligned transform-only projected subtrees without clipping/scroll topology; unsupported transform grammar and general dirty layout remain outside it."
       ],
       "owner": {
         "package": "@zavx0z/renderer",

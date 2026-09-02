@@ -14,8 +14,8 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | engine | main | `a3032d960fc592296e8c5d1408a02551635d1fb3` | no |
 | interpreter | main | `08573a5f52fc04c4d25a87b318cd801c81ae8f20` | no |
 | metafor | main | `c5ba83e1ab3461e8255b002fe7fa84ff18007c20` | no |
-| node | main | `1f4393e077748ed75a278ec327aa352399f1f65f` | no |
-| renderer | main | `80ee4f56c45ce1e260e8f61e564c73bf26edaaa9` | yes |
+| node | main | `9d7aa6cd35e76cb8eba1b7721c17033edb8610c8` | no |
+| renderer | main | `0cb7256277d5ff9c013766c371a109ab43a7c100` | yes |
 | storybook | main | `83ea3f66a6a1b93030906cd97871068a286db80b` | no |
 | template | main | `ef543f55aea710d91ec473fe52f32900fbbb655b` | yes |
 | ui | main | `6af702d2e26c47387563f1157a50d9a657bd5934` | no |
@@ -8660,10 +8660,10 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `renderer.features.inheritance` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.inline-layout` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.input-value-fast-path` | renderer-stage | implemented | extension | @zavx0z/renderer/cpu | — | 3 | 1 |
-| `renderer.features.invalidation` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Dirty ancestry remains exact and bounded fast paths now include selector-independent data-plus-hidden insertion; general dirty frames still remeasure/place/re-emit. | 2 | 0 |
+| `renderer.features.invalidation` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Dirty ancestry remains exact and bounded fast paths exclude non-projected hidden branches and include selector-independent data-plus-hidden insertion; general dirty frames still remeasure/place/re-emit. | 3 | 0 |
 | `renderer.features.line-breaking` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Production Canvas/Plane/Overlay composition now uses one exact font-owned unshaped per-codepoint advance owner for intrinsic width, alignment, controls, selection geometry, incremental text and ellipsis. Headless CPU rendering retains the deterministic 0.6em fallback. Kerning, shaping, ligatures, bidi, fallback, grapheme truncation, proportional textarea soft-wrap and complete inline formatting remain unsupported. | 6 | 0 |
 | `renderer.features.overflow` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
-| `renderer.features.performance-paths` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
+| `renderer.features.performance-paths` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Performance paths are bounded by explicit semantic and projection invariants; general dirty layout, dense disposal and all scheduler/GC tails remain separate gates. | 3 | 0 |
 | `renderer.features.pointer` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Implemented for the bounded rendered-control set including explicit semantic capture, horizontal Range and collapsed Select; implicit touch capture and complete Pointer Events/HTML default actions remain outside Core. | 3 | 0 |
 | `renderer.features.popover-projection` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Explicit source anchoring, viewport clipping and pointer light dismiss are implemented; arbitrary CSS Anchor Positioning, root transforms, backdrop, Hint and live native pixels remain unsupported. | 3 | 0 |
 | `renderer.features.positioning` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
@@ -8679,7 +8679,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `renderer.features.text-leaf-fast-path` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Dirty bookkeeping exists, but general dirty frames still remeasure/place/re-emit; only narrow Text and transform fast paths reuse records. | 2 | 0 |
 | `renderer.features.textarea-select-range` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.tooltip-title` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
-| `renderer.features.transform-subtree-fast-path` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Dirty bookkeeping exists, but general dirty frames still remeasure/place/re-emit; only narrow Text and transform fast paths reuse records. | 2 | 0 |
+| `renderer.features.transform-subtree-fast-path` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The bounded fast path covers axis-aligned transform-only projected subtrees without clipping/scroll topology; unsupported transform grammar and general dirty layout remain outside it. | 3 | 0 |
 | `renderer.features.transforms` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.typography` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Production Canvas/Plane/Overlay composition now uses one exact font-owned unshaped per-codepoint advance owner for intrinsic width, alignment, controls, selection geometry, incremental text and ellipsis. Headless CPU rendering retains the deterministic 0.6em fallback. Kerning, shaping, ligatures, bidi, fallback, grapheme truncation, proportional textarea soft-wrap and complete inline formatting remain unsupported. | 6 | 0 |
 | `renderer.features.vector-path-display-item` | renderer-stage | implemented | extension | @zavx0z/renderer/cpu | Bounded to one absolute open M/L/Q/C subpath, stroke-only paint and six samples per curve; relative/shorthand commands, fill, close, arcs, dashes, adaptive tessellation and complete SVG join/cap policy are unsupported. | 3 | 2 |

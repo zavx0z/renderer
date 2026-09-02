@@ -72,6 +72,10 @@ const projectionNeutralVerification = {
   revision: "80ee4f56c45ce1e260e8f61e564c73bf26edaaa9",
   date: "2026-09-02",
 } as const
+const hiddenTransformVerification = {
+  revision: "0cb7256277d5ff9c013766c371a109ab43a7c100",
+  date: "2026-09-02",
+} as const
 const enginePathVerification = {
   revision: "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
   date: "2026-09-01",
@@ -1572,9 +1576,10 @@ function classifyRenderer(entry: CapabilityInventoryEntry): Classification {
       [
         implementation("renderer", "packages/core/src/renderer.ts", "projection-neutral invalidation", undefined, "Every admitted mutation still marks its exact target/ancestry before conservative selector-independent data and hidden-insertion work may reuse the retained projection.", "General dirty-subtree layout, arbitrary structural changes and complete browser invalidation."),
         test("renderer", "packages/core/test/incremental.test.ts", "projection-neutral mutation incremental frame", "Selector dependencies from ancestor compounds and visible or mixed work force complete projection while neutral data-plus-hidden insertion reuses exact records.", "Unsupported selectors, browser style invalidation or arbitrary DOM mutations."),
+        test("renderer", "packages/core/test/transform.test.ts", "excludes hidden branches from retained transform traversal until reveal", "A hidden branch contributes no transform work, while reveal returns through ordinary full invalidation and exact composed projection.", "General dirty-subtree layout or browser scheduling."),
       ],
-      "Dirty ancestry remains exact and bounded fast paths now include selector-independent data-plus-hidden insertion; general dirty frames still remeasure/place/re-emit.",
-    ), projectionNeutralVerification)
+      "Dirty ancestry remains exact and bounded fast paths exclude non-projected hidden branches and include selector-independent data-plus-hidden insertion; general dirty frames still remeasure/place/re-emit.",
+    ), hiddenTransformVerification)
   }
   if (name === "incremental-patches") {
     const classification = partial(
@@ -1587,6 +1592,28 @@ function classifyRenderer(entry: CapabilityInventoryEntry): Classification {
       "Dirty bookkeeping and bounded fast paths reuse exact retained records for narrow Text, input-value, transform, VectorPath and selector-independent data-plus-hidden insertion work; general dirty frames still remeasure/place/re-emit.",
     )
     return rendererVerifiedAt(classification, projectionNeutralVerification)
+  }
+  if (name === "transform-subtree-fast-path") {
+    return rendererVerifiedAt(partial(
+      "adapted",
+      [
+        implementation("renderer", "packages/core/src/renderer.ts", "transform-subtree-fast-path", undefined, "One transform-only target updates retained projected descendants while display:none branches stay outside transform traversal until reveal.", "Clipped/scrolling subtrees, arbitrary style changes, rotation, 3D transforms or complete CSS transform conformance."),
+        test("renderer", "packages/core/test/transform.test.ts", "excludes hidden branches from retained transform traversal until reveal", "Hidden owners remain absent, visible transforms match a forced rebuild and reveal restores exact composed projection.", "Full consumer scheduling or WebGPU presentation."),
+        test("renderer", "bench/hidden-transform-patch.ts", "10k hidden transform patch", "Fresh-process p50/p95/p99/max timing and correctness for 10,000 hidden branches, 12 visible owners and 100 root transforms.", "Dense-visible transforms, browser scheduling or backend presentation."),
+      ],
+      "The bounded fast path covers axis-aligned transform-only projected subtrees without clipping/scroll topology; unsupported transform grammar and general dirty layout remain outside it.",
+    ), hiddenTransformVerification)
+  }
+  if (name === "performance-paths") {
+    return rendererVerifiedAt(partial(
+      "adapted",
+      [
+        implementation("renderer", "packages/core/src/renderer.ts", "performance-paths", undefined, "Clean, Text, input-value, VectorPath, projection-neutral and projected-transform paths conservatively reuse retained frame records.", "A universal incremental layout engine or every consumer scheduling tail."),
+        test("renderer", "bench/projection-neutral-patch.ts", "10k projection-neutral patch", "100 retained data-plus-hidden patches preserve exact projection with sub-frame p99.", "Other DOM mutations or backend work."),
+        test("renderer", "bench/hidden-transform-patch.ts", "10k hidden transform patch", "100 transform patches skip 10,000 non-projected hidden branches while preserving visible correctness.", "Dense-visible transforms or complete application performance."),
+      ],
+      "Performance paths are bounded by explicit semantic and projection invariants; general dirty layout, dense disposal and all scheduler/GC tails remain separate gates.",
+    ), hiddenTransformVerification)
   }
   if (name === "input-value-fast-path") {
     return implemented("extension", [
