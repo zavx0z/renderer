@@ -264,13 +264,23 @@ accessibility или input semantics.
 4. `dispose()` идемпотентен, удаляет все owned children и invalidates все
    owned non-shared geometries. Если instanced layer хотя бы раз был
    представлен, его shared unit-quad/storage geometry invalidates ровно один
-   раз. `applyFrame()` после disposal запрещён.
+   раз. Root children отсоединяются одной bulk-операцией до per-entry resource
+   cleanup; disposal не вызывает `Object3D.remove()` для каждого sibling и не
+   создаёт квадратичный scan scene children. `applyFrame()` после disposal
+   запрещён.
 5. Каждый retained Image получает source-specific `ImageMaterial.onTextureChange`.
    Callback запрашивает host presentation только пока exact entry активен и
    source остаётся текущим. Callback старого source, удалённого item или
    disposed backend становится наблюдаемо inert; backend не мутирует DOM и не
    фабрикует новый semantic frame. Engine `TextureLoader` остаётся владельцем
    texture cache/fetch/decode lifecycle.
+
+Focused owner test запрещает per-entry root removal для 512 overlapping scalar
+entries. Dense consumer evidence после bulk detach: backend disposal `11.594ms`
+для 1k Node scene и `328.632ms` для 10k scene; полный 10k lifecycle завершается
+за `7209.438ms`, из которых component teardown занимает `6790.071ms`. Это
+доказывает bounded backend cleanup, но не устанавливает frame-time budget для
+application shutdown и не закрывает retained-memory gate.
 
 ## Type boundary
 

@@ -553,6 +553,11 @@ export class RendererWebGpuBackend {
     if (this.#disposed) return
     this.#disposed = true
 
+    const rootChildren = this.root.children
+    this.root.children = []
+    for (const child of rootChildren) {
+      if (child.parent === this.root) child.parent = null
+    }
     const geometries = new Set<BufferGeometry>()
     for (const entry of this.#entries.values()) this.#detachEntry(entry, geometries)
     this.#entries.clear()
@@ -578,8 +583,6 @@ export class RendererWebGpuBackend {
       entry.node.presentationClips = NO_PRESENTATION_CLIPS
       entry.clipSpaces.length = 0
     }
-    this.root.children = []
-
     for (const geometry of geometries) this.#invalidateGeometry(geometry)
     if (this.#rectLayerWasPresented) this.#invalidateGeometry(this.#rectLayer.geometry)
     if (this.#pathLayerWasPresented) this.#invalidateGeometry(this.#pathLayer.geometry)

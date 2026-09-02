@@ -1234,6 +1234,30 @@ describe("RendererWebGpuBackend", () => {
     expect(() => backend.applyFrame(frame(fixture.document, fixture.root, [])))
       .toThrow("RendererWebGpuBackend is disposed")
   })
+
+  test("bulk-detaches dense retained children without per-entry root removal", () => {
+    const fixture = renderFixture()
+    const backend = new RendererWebGpuBackend({invalidateGeometry() {}})
+    const items = Array.from({length: 512}, (_, index) => {
+      const node = fixture.document.createElement("div")
+      return rect(node, {x: index % 2, y: index % 2, width: 20, height: 20})
+    })
+    backend.applyFrame(frame(fixture.document, fixture.root, items))
+    const retained = [...backend.root.children]
+    expect(retained).toHaveLength(512)
+    let removeCalls = 0
+    const remove = backend.root.remove.bind(backend.root)
+    backend.root.remove = (child) => {
+      removeCalls += 1
+      remove(child)
+    }
+
+    backend.dispose()
+
+    expect(removeCalls).toBe(0)
+    expect(backend.root.children).toEqual([])
+    expect(retained.every(child => child.parent === null)).toBeTrue()
+  })
 })
 
 const IDENTITY_TRANSFORM = Object.freeze({
