@@ -184,6 +184,16 @@
       "behavior": "Observe topology/parameter snapshots without duplicating the canonical Node store."
     },
     {
+      "capability": "renderer.features.input-value-fast-path",
+      "repository": "node",
+      "package": "@nodes/ui",
+      "subject": "Parameter value projection",
+      "scope": "production",
+      "path": "packages/ui/parameter.tsx",
+      "anchor": "export function Parameter(props: ParameterProps)",
+      "behavior": "Replace one retained text-like Field value without remeasuring or re-emitting the complete Node graph."
+    },
+    {
       "capability": "renderer.features.vector-path-display-item",
       "repository": "node",
       "package": "@nodes/ui",

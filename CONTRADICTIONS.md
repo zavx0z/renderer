@@ -98,14 +98,6 @@
 - Impact: Two owners can diverge on exact Document/input/presentation lifecycle.
 - Evidence: `metafor:quantum/bulk/dom/overlay-runtime.ts`
 
-## contradiction.consumer.node-local-layout — Node presentation invents fallback placement and route geometry
-
-- Claim: Components consume owner layout and do not compensate for missing platform behavior with manual geometry.
-- Current fact: The component NodeTree still accepts an absent LayoutResult and packages/ui/geometry.ts then invents index-based Frame/Node placement, socket centers and orthogonal routes locally.
-- Owner: @nodes/ui
-- Impact: Domain layout law and missing generic vector presentation are hidden inside a component.
-- Evidence: `node:packages/ui/geometry.ts`, `node:packages/ui/node-tree.tsx`
-
 ## contradiction.consumer.demo-backend-read — Demo reads private retained backend owner objects
 
 - Claim: Consumers receive DOM/CSS/TSX and neutral diagnostics, not Surface/Engine/private materializers.

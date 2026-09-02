@@ -319,7 +319,7 @@
           "path": "packages/ui/node-editor.tsx",
           "proves": "Pan/zoom reaches paint, clip and inverse hit consistently for the graph surface.",
           "repository": "node",
-          "revision": "becff8f34a7152791df8e833a918dfe0142681bb",
+          "revision": "9cccb58ef91cf3ed386377093dbc8e45e061bfb9",
           "symbol": "NodeEditor",
           "type": "consumer-usage"
         }
@@ -557,16 +557,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "127",
+          "lines": "128",
           "path": "packages/ui/parameter.tsx",
           "proves": "Observe topology/parameter snapshots without duplicating the canonical Node store.",
           "repository": "node",
-          "revision": "becff8f34a7152791df8e833a918dfe0142681bb",
+          "revision": "9cccb58ef91cf3ed386377093dbc8e45e061bfb9",
           "symbol": "Parameter external store",
           "type": "consumer-usage"
         }
       ],
-      "line": 127,
+      "line": 128,
       "package": "@nodes/ui",
       "path": "packages/ui/parameter.tsx",
       "repository": "node",
@@ -579,16 +579,16 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "84",
+          "lines": "85",
           "path": "packages/ui/node-tree.tsx",
           "proves": "Retain node, link, parameter and socket identity across high-volume topology and parameter updates.",
           "repository": "node",
-          "revision": "becff8f34a7152791df8e833a918dfe0142681bb",
+          "revision": "9cccb58ef91cf3ed386377093dbc8e45e061bfb9",
           "symbol": "NodeTree",
           "type": "consumer-usage"
         }
       ],
-      "line": 84,
+      "line": 85,
       "package": "@nodes/ui",
       "path": "packages/ui/node-tree.tsx",
       "repository": "node",
@@ -684,6 +684,28 @@
       "subject": "Journal document"
     },
     {
+      "behavior": "Replace one retained text-like Field value without remeasuring or re-emitting the complete Node graph.",
+      "capability": "renderer.features.input-value-fast-path",
+      "evidence": [
+        {
+          "doesNotProve": "Platform implementation or conformance.",
+          "lines": "128",
+          "path": "packages/ui/parameter.tsx",
+          "proves": "Replace one retained text-like Field value without remeasuring or re-emitting the complete Node graph.",
+          "repository": "node",
+          "revision": "9cccb58ef91cf3ed386377093dbc8e45e061bfb9",
+          "symbol": "Parameter value projection",
+          "type": "consumer-usage"
+        }
+      ],
+      "line": 128,
+      "package": "@nodes/ui",
+      "path": "packages/ui/parameter.tsx",
+      "repository": "node",
+      "scope": "production",
+      "subject": "Parameter value projection"
+    },
+    {
       "behavior": "Present routed links and grid primitives without decomposing them into component-owned rectangles and points.",
       "capability": "renderer.features.vector-path-display-item",
       "evidence": [
@@ -693,7 +715,7 @@
           "path": "packages/ui/link.tsx",
           "proves": "Present routed links and grid primitives without decomposing them into component-owned rectangles and points.",
           "repository": "node",
-          "revision": "becff8f34a7152791df8e833a918dfe0142681bb",
+          "revision": "9cccb58ef91cf3ed386377093dbc8e45e061bfb9",
           "symbol": "Link",
           "type": "consumer-usage"
         }
@@ -715,7 +737,7 @@
           "path": "packages/ui/node-editor.tsx",
           "proves": "Scale grid and routed connection presentation without a local DOM geometry renderer.",
           "repository": "node",
-          "revision": "becff8f34a7152791df8e833a918dfe0142681bb",
+          "revision": "9cccb58ef91cf3ed386377093dbc8e45e061bfb9",
           "symbol": "NodeEditor grid and links",
           "type": "consumer-usage"
         }
