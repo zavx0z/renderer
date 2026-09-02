@@ -1059,3 +1059,36 @@ one input target, any mixed DOM/style mutation, any other state kind or an
 unsupported input type falls back to the complete renderer. The optimization
 does not claim general dirty-subtree layout, input selection paint, checkbox/
 radio/range state projection or arbitrary form-control incremental rendering.
+
+## `RENDERER-CPU-036` — projection-neutral DOM mutation patch
+
+After an initial frame, one committed mutation batch may advance the frame
+revision while reusing its exact projection collections when every record is
+provably presentation-neutral in the supported Renderer profile. The admitted
+records are selector-independent custom `data-*` attribute changes and
+child-list insertions containing only Comment anchors or Element roots with a
+present semantic `hidden` attribute. No inserted hidden subtree receives a box,
+paint item, hit record or scroll owner.
+
+The parsed rule index records attribute dependencies from every selector
+compound, including ancestor compounds of child and descendant selectors. A
+`data-*` mutation is neutral only when no active author, compiled, theme or
+explicit stylesheet selector references that exact attribute name. The patch
+reuses the exact boxes, box map, display list, hit map/order, scroll metrics and
+presentation transforms, records an empty canonical frame change and preserves
+all collection/record identities.
+
+Any referenced attribute, `id`/`class`/`style`/`hidden` or other semantic
+attribute, visible insertion, removal, character/state/style-sheet/interaction
+change, explicit invalidation or other mixed work falls back to complete exact
+projection. Revealing a previously inserted hidden owner therefore takes the
+ordinary full path. This extension does not claim general structural
+incremental layout, sibling selectors, structural pseudo-classes or a public
+MutationObserver implementation.
+
+The generic 10,000-row benchmark runs 100 selector-independent data-plus-hidden
+append patches and requires retained projection identity with p99 below one
+frame. Recorded fresh-process p99 is `0.079–0.125ms`. The affected 10,000-Node
+consumer retains its exact two-record DOM ledger and measures Renderer flush at
+`0.114ms`; total append input-to-present is `76.176ms` while all old Node/Link
+identities remain stable.

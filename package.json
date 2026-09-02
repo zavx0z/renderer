@@ -30,6 +30,7 @@
     "bench:react-keyed": "bun bench/keyed-components.ts",
     "bench:instances": "bun bench/instance-batches.ts",
     "bench:input-value": "bun bench/input-value-patch.ts",
+    "bench:projection-neutral": "bun bench/projection-neutral-patch.ts",
     "bench:path": "bun bench/vector-paths.ts"
   },
   "devDependencies": {

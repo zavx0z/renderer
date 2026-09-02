@@ -24,6 +24,7 @@ import {
   elementTag,
   resolveLength,
   resolveLineHeight,
+  styleRulesDependOnAttribute,
   type ComputedStyle,
   type CSSLength,
   type StyleRuleIndex,
@@ -306,6 +307,7 @@ export const createDocumentRenderer = (
   const characterDataTargets = new Set<Text>()
   const inputValueTargets = new Set<HTMLInputElement>()
   const vectorPathTargets = new Set<HTMLVectorPathElement>()
+  let projectionNeutralMutations = 0
   let frame: RenderFrame | null = null
   let revision = 0
   let disposed = false
@@ -395,6 +397,18 @@ export const createDocumentRenderer = (
       blockFastPath()
     }
     if (frame && !dirty.dirty) return frame
+    if (
+      frame !== null &&
+      !fastPathBlocked &&
+      projectionNeutralMutations > 0
+    ) {
+      revision++
+      frame = retainProjectionFrame(frame, revision)
+      dirty.clear()
+      subtreeDirty.clear()
+      resetFastPath()
+      return frame
+    }
     if (frame !== null && transformTarget !== null) {
       const incremental = tryBuildTransformFrame(
         frame,
@@ -513,7 +527,20 @@ export const createDocumentRenderer = (
         record.target === options.root
       ) {
         dirty.invalidate(record.target)
-        if (
+        if (isProjectionNeutralMutation(record, rules)) {
+          subtreeDirty.add(record.target)
+          if (
+            fastPathBlocked ||
+            characterDataTargets.size > 0 ||
+            inputValueTargets.size > 0 ||
+            vectorPathTargets.size > 0 ||
+            transformTarget !== null
+          ) blockFastPath()
+          else projectionNeutralMutations += 1
+        } else if (projectionNeutralMutations > 0) {
+          subtreeDirty.add(record.target)
+          blockFastPath()
+        } else if (
           record.type === "attributes" &&
           record.target instanceof HTMLVectorPathElement
         ) {
@@ -562,6 +589,7 @@ export const createDocumentRenderer = (
         subtreeDirty.add(record.target)
         if (
           !fastPathBlocked &&
+          projectionNeutralMutations === 0 &&
           record.type === "input" &&
           (record.property === "value" || record.property === "selection") &&
           INPUT_VALUE_TYPES.has(record.target.type)
@@ -583,6 +611,7 @@ export const createDocumentRenderer = (
     fastPathBlocked = true
     characterDataTargets.clear()
     inputValueTargets.clear()
+    projectionNeutralMutations = 0
     transformTarget = null
     vectorPathTargets.clear()
   }
@@ -591,6 +620,7 @@ export const createDocumentRenderer = (
     fastPathBlocked = false
     characterDataTargets.clear()
     inputValueTargets.clear()
+    projectionNeutralMutations = 0
     transformTarget = null
     vectorPathTargets.clear()
   }
@@ -599,6 +629,45 @@ export const createDocumentRenderer = (
     if (disposed) throw new Error("Cannot use a disposed document renderer")
   }
 }
+
+const retainProjectionFrame = (previous: RenderFrame, revision: number): RenderFrame => {
+  const next: RenderFrame = Object.freeze({
+    revision,
+    document: previous.document,
+    root: previous.root,
+    viewport: previous.viewport,
+    boxes: previous.boxes,
+    boxByNode: previous.boxByNode,
+    displayList: previous.displayList,
+    hits: previous.hits,
+    ...(previous.hitOrder === undefined ? {} : {hitOrder: previous.hitOrder}),
+    scrolls: previous.scrolls,
+    ...(previous.presentationTransforms === undefined
+      ? {}
+      : {presentationTransforms: previous.presentationTransforms}),
+  })
+  recordCanonicalRenderFrameChanges(next, previous, [])
+  collectionIndexesByFrame.set(next, collectionIndexes(previous))
+  return next
+}
+
+const isProjectionNeutralMutation = (
+  record: MutationBatch["records"][number],
+  rules: StyleRuleIndex,
+): boolean => isSelectorIndependentDataMutation(record, rules) ||
+  isInvisibleChildListInsertion(record)
+
+const isSelectorIndependentDataMutation = (
+  record: MutationBatch["records"][number],
+  rules: StyleRuleIndex,
+): boolean => record.type === "attributes" && record.attributeName.startsWith("data-") &&
+  !styleRulesDependOnAttribute(rules, record.attributeName)
+
+const isInvisibleChildListInsertion = (
+  record: MutationBatch["records"][number],
+): boolean => record.type === "childList" && record.removedNodes.length === 0 &&
+  record.addedNodes.length > 0 && record.addedNodes.every((node) =>
+    node.nodeType === 8 || isElement(node) && node.hasAttribute("hidden"))
 
 const tryBuildInputValueFrame = (
   previous: RenderFrame,

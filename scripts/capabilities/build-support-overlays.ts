@@ -1562,6 +1562,17 @@ function classifyRenderer(entry: CapabilityInventoryEntry): Classification {
       "The bounded form-control set includes checked Checkbox/Radio indicators, collapsed Select disclosure/picker and horizontal Range interaction; indeterminate Checkbox, multiple/listbox, type-ahead, accessibility projection and complete native form chrome remain unsupported.",
     ))
   }
+  if (name === "incremental-patches") {
+    return recovered(partial(
+      "adapted",
+      [
+        implementation("renderer", "packages/core/src/renderer.ts", "incremental-patches", undefined, "Bounded Text, input-value, transform, VectorPath and projection-neutral DOM batches reuse exact retained frame records through conservative guards.", "General dirty-subtree layout, arbitrary structural changes and mixed mutation/state work."),
+        test("renderer", "packages/core/test/incremental.test.ts", "projection-neutral mutation incremental frame", "Selector-independent data attributes plus Comment/hidden-root insertion reuse the exact projection; selector-dependent data and visible insertion fall back.", "General structural incremental layout or unsupported selector syntax."),
+        test("renderer", "bench/projection-neutral-patch.ts", "10k projection-neutral patch", "Fresh-process p50/p95/p99 timing and exact projection identity across 10,000 visible semantic rows and 100 data-plus-hidden append batches.", "Browser scheduling, arbitrary DOM mutations or unrelated incremental paths."),
+      ],
+      "Dirty bookkeeping and bounded fast paths reuse exact retained records for narrow Text, input-value, transform, VectorPath and selector-independent data-plus-hidden insertion work; general dirty frames still remeasure/place/re-emit.",
+    ))
+  }
   if (name === "input-value-fast-path") {
     return implemented("extension", [
       implementation("renderer", "packages/core/src/renderer.ts", "input-value-fast-path", undefined, "One text-like input value state change replaces only its existing immutable value display item while reusing all layout and hit records.", "General dirty-subtree layout, multiple controls, structural display-item insertion/removal, selection paint and other state kinds."),

@@ -265,6 +265,107 @@ describe("input value incremental frame", () => {
   })
 })
 
+describe("projection-neutral mutation incremental frame", () => {
+  it("reuses the exact projection for selector-independent data and invisible insertion", () => {
+    const fixture = fixedRows(3)
+    const initial = fixture.renderer.flush()
+    const hidden = fixture.document.createElement("article")
+    hidden.hidden = true
+    hidden.textContent = "Deferred owner"
+
+    fixture.document.transaction(() => {
+      fixture.root.setAttribute("data-item-count", "4")
+      fixture.root.append(
+        fixture.document.createComment("component:start"),
+        hidden,
+        fixture.document.createComment("component:end"),
+      )
+    })
+    const incremental = fixture.renderer.flush()
+
+    expect(incremental.revision).toBe(initial.revision + 1)
+    expect(incremental.boxes).toBe(initial.boxes)
+    expect(incremental.boxByNode).toBe(initial.boxByNode)
+    expect(incremental.displayList).toBe(initial.displayList)
+    expect(incremental.hits).toBe(initial.hits)
+    expect(incremental.scrolls).toBe(initial.scrolls)
+    expect(incremental.boxByNode.has(hidden)).toBeFalse()
+
+    const forcedRenderer = createDocumentRenderer({
+      document: fixture.document,
+      root: fixture.root,
+      viewport: fixture.viewport,
+    })
+    const forced = forcedRenderer.flush()
+    expect(incremental.boxes).toEqual(forced.boxes)
+    expect(incremental.displayList).toEqual(forced.displayList)
+    expect([...incremental.boxByNode]).toEqual([...forced.boxByNode])
+    expect([...incremental.hits]).toEqual([...forced.hits])
+    forcedRenderer.dispose()
+
+    hidden.hidden = false
+    const revealed = fixture.renderer.flush()
+    expect(revealed.boxes).not.toBe(initial.boxes)
+    expect(revealed.boxByNode.has(hidden)).toBeTrue()
+    fixture.renderer.dispose()
+  })
+
+  it("falls back when the changed data attribute participates in a descendant selector", () => {
+    const document = createDocument()
+    const root = document.createElement("div")
+    const child = document.createElement("span")
+    child.textContent = "Child"
+    root.appendChild(child)
+    document.appendChild(root)
+    const renderer = createDocumentRenderer({
+      document,
+      root,
+      viewport: {width: 300, height: 100},
+      styleSheets: [
+        "div { display:block; width:300px }",
+        "span { display:block; width:80px; height:20px; background:#111111 }",
+        "[data-state=active] > span { background:#ff0000 }",
+      ],
+    })
+    const initial = renderer.flush()
+    const initialChildBox = requireBox(initial, child)
+
+    const hidden = document.createElement("article")
+    hidden.hidden = true
+    document.transaction(() => {
+      root.setAttribute("data-state", "active")
+      root.appendChild(hidden)
+    })
+    const changed = renderer.flush()
+
+    expect(changed.boxes).not.toBe(initial.boxes)
+    expect(requireBox(changed, child)).not.toBe(initialChildBox)
+    expect(changed.displayList.find(item => item.node === child && item.kind === "rect"))
+      .toMatchObject({color: "#ff0000"})
+    expect(changed.boxByNode.has(hidden)).toBeFalse()
+    renderer.dispose()
+  })
+
+  it("falls back for a selector-independent data change mixed with visible insertion", () => {
+    const fixture = fixedRows(3)
+    const initial = fixture.renderer.flush()
+    const visible = fixture.document.createElement("article")
+    visible.setAttribute("style", "display:block; width:80px; height:20px")
+    visible.textContent = "Visible owner"
+
+    fixture.document.transaction(() => {
+      fixture.root.setAttribute("data-item-count", "4")
+      fixture.root.appendChild(visible)
+    })
+    const changed = fixture.renderer.flush()
+
+    expect(changed.boxes).not.toBe(initial.boxes)
+    expect(changed.boxByNode.has(visible)).toBeTrue()
+    expect(changed.displayList.some(item => item.node === visible.firstChild)).toBeTrue()
+    fixture.renderer.dispose()
+  })
+})
+
 const fixedRows = (count: number) => {
   const document = createDocument()
   const root = document.createElement("div")

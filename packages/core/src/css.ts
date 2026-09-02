@@ -169,6 +169,8 @@ export type StyleRuleIndex = Readonly<{
   byTag: ReadonlyMap<string, readonly StyleRule[]>
 }>
 
+const selectorAttributeDependencies = new WeakMap<StyleRuleIndex, ReadonlySet<string>>()
+
 type CascadedValue = Readonly<{
   specificity: readonly [number, number, number]
   order: number
@@ -304,8 +306,12 @@ const indexStyleRules = (rules: readonly StyleRule[]): StyleRuleIndex => {
   const byClass = new Map<string, StyleRule[]>()
   const byId = new Map<string, StyleRule[]>()
   const byTag = new Map<string, StyleRule[]>()
+  const attributeDependencies = new Set<string>()
 
   for (const rule of rules) {
+    for (const compound of rule.selector.compounds) {
+      for (const attribute of compound.attributes) attributeDependencies.add(attribute.name)
+    }
     const compound = rule.selector.compounds.at(-1)!
     if (compound.id !== null) appendIndexedRule(byId, compound.id, rule)
     else if (compound.classes[0] !== undefined) {
@@ -317,14 +323,21 @@ const indexStyleRules = (rules: readonly StyleRule[]): StyleRuleIndex => {
     } else universal.push(rule)
   }
 
-  return Object.freeze({
+  const result = Object.freeze({
     universal: Object.freeze(universal),
     byAttribute: freezeRuleIndex(byAttribute),
     byClass: freezeRuleIndex(byClass),
     byId: freezeRuleIndex(byId),
     byTag: freezeRuleIndex(byTag),
   })
+  selectorAttributeDependencies.set(result, attributeDependencies)
+  return result
 }
+
+export const styleRulesDependOnAttribute = (
+  index: StyleRuleIndex,
+  attributeName: string,
+): boolean => selectorAttributeDependencies.get(index)?.has(attributeName) ?? true
 
 const appendIndexedRule = (
   index: Map<string, StyleRule[]>,
