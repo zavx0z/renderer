@@ -68,6 +68,10 @@ const rendererPathVerification = {
   revision: "3a0801d4d0fa39f385fca7aceca67fbd0736e591",
   date: "2026-09-01",
 } as const
+const projectionNeutralVerification = {
+  revision: "80ee4f56c45ce1e260e8f61e564c73bf26edaaa9",
+  date: "2026-09-02",
+} as const
 const enginePathVerification = {
   revision: "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
   date: "2026-09-01",
@@ -1562,8 +1566,18 @@ function classifyRenderer(entry: CapabilityInventoryEntry): Classification {
       "The bounded form-control set includes checked Checkbox/Radio indicators, collapsed Select disclosure/picker and horizontal Range interaction; indeterminate Checkbox, multiple/listbox, type-ahead, accessibility projection and complete native form chrome remain unsupported.",
     ))
   }
+  if (name === "invalidation") {
+    return rendererVerifiedAt(partial(
+      "adapted",
+      [
+        implementation("renderer", "packages/core/src/renderer.ts", "projection-neutral invalidation", undefined, "Every admitted mutation still marks its exact target/ancestry before conservative selector-independent data and hidden-insertion work may reuse the retained projection.", "General dirty-subtree layout, arbitrary structural changes and complete browser invalidation."),
+        test("renderer", "packages/core/test/incremental.test.ts", "projection-neutral mutation incremental frame", "Selector dependencies from ancestor compounds and visible or mixed work force complete projection while neutral data-plus-hidden insertion reuses exact records.", "Unsupported selectors, browser style invalidation or arbitrary DOM mutations."),
+      ],
+      "Dirty ancestry remains exact and bounded fast paths now include selector-independent data-plus-hidden insertion; general dirty frames still remeasure/place/re-emit.",
+    ), projectionNeutralVerification)
+  }
   if (name === "incremental-patches") {
-    return recovered(partial(
+    const classification = partial(
       "adapted",
       [
         implementation("renderer", "packages/core/src/renderer.ts", "incremental-patches", undefined, "Bounded Text, input-value, transform, VectorPath and projection-neutral DOM batches reuse exact retained frame records through conservative guards.", "General dirty-subtree layout, arbitrary structural changes and mixed mutation/state work."),
@@ -1571,7 +1585,8 @@ function classifyRenderer(entry: CapabilityInventoryEntry): Classification {
         test("renderer", "bench/projection-neutral-patch.ts", "10k projection-neutral patch", "Fresh-process p50/p95/p99 timing and exact projection identity across 10,000 visible semantic rows and 100 data-plus-hidden append batches.", "Browser scheduling, arbitrary DOM mutations or unrelated incremental paths."),
       ],
       "Dirty bookkeeping and bounded fast paths reuse exact retained records for narrow Text, input-value, transform, VectorPath and selector-independent data-plus-hidden insertion work; general dirty frames still remeasure/place/re-emit.",
-    ))
+    )
+    return rendererVerifiedAt(classification, projectionNeutralVerification)
   }
   if (name === "input-value-fast-path") {
     return implemented("extension", [
@@ -2250,6 +2265,19 @@ function rendererPathWorkingTree(classification: Classification): Classification
       return record
     }),
     lastVerified: rendererPathVerification,
+  }
+}
+
+function rendererVerifiedAt(
+  classification: Classification,
+  verification: Readonly<{revision: string; date: string}>,
+): Classification {
+  return {
+    ...classification,
+    evidence: classification.evidence.map(record => record.repository === "renderer"
+      ? {...record, revision: verification.revision}
+      : record),
+    lastVerified: verification,
   }
 }
 

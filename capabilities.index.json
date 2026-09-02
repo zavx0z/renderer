@@ -518616,32 +518616,41 @@
       "domain": "renderer",
       "evidence": [
         {
-          "doesNotProve": "The complete CSS/browser algorithm.",
+          "doesNotProve": "General dirty-subtree layout, arbitrary structural changes and mixed mutation/state work.",
           "path": "packages/core/src/renderer.ts",
-          "proves": "The bounded CPU frame stage exists.",
+          "proves": "Bounded Text, input-value, transform, VectorPath and projection-neutral DOM batches reuse exact retained frame records through conservative guards.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "revision": "80ee4f56c45ce1e260e8f61e564c73bf26edaaa9",
           "symbol": "incremental-patches",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Unsupported values and general incremental coverage.",
+          "doesNotProve": "General structural incremental layout or unsupported selector syntax.",
           "path": "packages/core/test/incremental.test.ts",
-          "proves": "Observable behavior for the bounded subset.",
+          "proves": "Selector-independent data attributes plus Comment/hidden-root insertion reuse the exact projection; selector-dependent data and visible insertion fall back.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "incremental-patches",
+          "revision": "80ee4f56c45ce1e260e8f61e564c73bf26edaaa9",
+          "symbol": "projection-neutral mutation incremental frame",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Browser scheduling, arbitrary DOM mutations or unrelated incremental paths.",
+          "path": "bench/projection-neutral-patch.ts",
+          "proves": "Fresh-process p50/p95/p99 timing and exact projection identity across 10,000 visible semantic rows and 100 data-plus-hidden append batches.",
+          "repository": "renderer",
+          "revision": "80ee4f56c45ce1e260e8f61e564c73bf26edaaa9",
+          "symbol": "10k projection-neutral patch",
           "type": "unit-test"
         }
       ],
       "id": "renderer.features.incremental-patches",
       "kind": "renderer-stage",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-09-02",
+        "revision": "80ee4f56c45ce1e260e8f61e564c73bf26edaaa9"
       },
       "limitations": [
-        "Dirty bookkeeping exists, but general dirty frames still remeasure/place/re-emit; only narrow Text, input-value and transform fast paths reuse records."
+        "Dirty bookkeeping and bounded fast paths reuse exact retained records for narrow Text, input-value, transform, VectorPath and selector-independent data-plus-hidden insertion work; general dirty frames still remeasure/place/re-emit."
       ],
       "metadata": {},
       "name": "incremental patches",
@@ -518862,32 +518871,32 @@
       "domain": "renderer",
       "evidence": [
         {
-          "doesNotProve": "The complete CSS/browser algorithm.",
+          "doesNotProve": "General dirty-subtree layout, arbitrary structural changes and complete browser invalidation.",
           "path": "packages/core/src/renderer.ts",
-          "proves": "The bounded CPU frame stage exists.",
+          "proves": "Every admitted mutation still marks its exact target/ancestry before conservative selector-independent data and hidden-insertion work may reuse the retained projection.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "invalidation",
+          "revision": "80ee4f56c45ce1e260e8f61e564c73bf26edaaa9",
+          "symbol": "projection-neutral invalidation",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Unsupported values and general incremental coverage.",
+          "doesNotProve": "Unsupported selectors, browser style invalidation or arbitrary DOM mutations.",
           "path": "packages/core/test/incremental.test.ts",
-          "proves": "Observable behavior for the bounded subset.",
+          "proves": "Selector dependencies from ancestor compounds and visible or mixed work force complete projection while neutral data-plus-hidden insertion reuses exact records.",
           "repository": "renderer",
-          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
-          "symbol": "invalidation",
+          "revision": "80ee4f56c45ce1e260e8f61e564c73bf26edaaa9",
+          "symbol": "projection-neutral mutation incremental frame",
           "type": "unit-test"
         }
       ],
       "id": "renderer.features.invalidation",
       "kind": "renderer-stage",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-09-02",
+        "revision": "80ee4f56c45ce1e260e8f61e564c73bf26edaaa9"
       },
       "limitations": [
-        "Dirty bookkeeping exists, but general dirty frames still remeasure/place/re-emit; only narrow Text, input-value and transform fast paths reuse records."
+        "Dirty ancestry remains exact and bounded fast paths now include selector-independent data-plus-hidden insertion; general dirty frames still remeasure/place/re-emit."
       ],
       "metadata": {},
       "name": "invalidation",
@@ -527079,13 +527088,13 @@
       "branch": "main",
       "dirty": false,
       "id": "node",
-      "revision": "9cccb58ef91cf3ed386377093dbc8e45e061bfb9"
+      "revision": "1f4393e077748ed75a278ec327aa352399f1f65f"
     },
     {
       "branch": "main",
       "dirty": true,
       "id": "renderer",
-      "revision": "5d5a06c14c2f8216cce6f5930695154f57524ea4"
+      "revision": "80ee4f56c45ce1e260e8f61e564c73bf26edaaa9"
     },
     {
       "branch": "main",

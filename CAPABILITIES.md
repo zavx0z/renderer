@@ -14,8 +14,8 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | engine | main | `a3032d960fc592296e8c5d1408a02551635d1fb3` | no |
 | interpreter | main | `08573a5f52fc04c4d25a87b318cd801c81ae8f20` | no |
 | metafor | main | `c5ba83e1ab3461e8255b002fe7fa84ff18007c20` | no |
-| node | main | `9cccb58ef91cf3ed386377093dbc8e45e061bfb9` | no |
-| renderer | main | `5d5a06c14c2f8216cce6f5930695154f57524ea4` | yes |
+| node | main | `1f4393e077748ed75a278ec327aa352399f1f65f` | no |
+| renderer | main | `80ee4f56c45ce1e260e8f61e564c73bf26edaaa9` | yes |
 | storybook | main | `83ea3f66a6a1b93030906cd97871068a286db80b` | no |
 | template | main | `ef543f55aea710d91ec473fe52f32900fbbb655b` | yes |
 | ui | main | `6af702d2e26c47387563f1157a50d9a657bd5934` | no |
@@ -8656,11 +8656,11 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `renderer.features.hit-metadata` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.images` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 1 |
 | `renderer.features.immutable-frame` | renderer-stage | implemented | extension | @zavx0z/renderer/cpu | — | 2 | 0 |
-| `renderer.features.incremental-patches` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Dirty bookkeeping exists, but general dirty frames still remeasure/place/re-emit; only narrow Text, input-value and transform fast paths reuse records. | 2 | 0 |
+| `renderer.features.incremental-patches` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Dirty bookkeeping and bounded fast paths reuse exact retained records for narrow Text, input-value, transform, VectorPath and selector-independent data-plus-hidden insertion work; general dirty frames still remeasure/place/re-emit. | 3 | 0 |
 | `renderer.features.inheritance` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.inline-layout` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.input-value-fast-path` | renderer-stage | implemented | extension | @zavx0z/renderer/cpu | — | 3 | 1 |
-| `renderer.features.invalidation` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Dirty bookkeeping exists, but general dirty frames still remeasure/place/re-emit; only narrow Text, input-value and transform fast paths reuse records. | 2 | 0 |
+| `renderer.features.invalidation` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Dirty ancestry remains exact and bounded fast paths now include selector-independent data-plus-hidden insertion; general dirty frames still remeasure/place/re-emit. | 2 | 0 |
 | `renderer.features.line-breaking` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Production Canvas/Plane/Overlay composition now uses one exact font-owned unshaped per-codepoint advance owner for intrinsic width, alignment, controls, selection geometry, incremental text and ellipsis. Headless CPU rendering retains the deterministic 0.6em fallback. Kerning, shaping, ligatures, bidi, fallback, grapheme truncation, proportional textarea soft-wrap and complete inline formatting remain unsupported. | 6 | 0 |
 | `renderer.features.overflow` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.performance-paths` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
