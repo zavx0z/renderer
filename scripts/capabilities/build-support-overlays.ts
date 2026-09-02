@@ -105,8 +105,8 @@ const templateCssVerification = {
   date: "2026-09-01",
 } as const
 const templateCapabilityVerification = {
-  revision: "4b66cdee58840f3e59701f9a8c52b044512a1acb+dirty",
-  date: "2026-09-01",
+  revision: "6db9e772e37cdc47e6dba58d153016057cc93558",
+  date: "2026-09-02",
 } as const
 const domLeafVerification = {
   revision: workspaceRevision("renderer"),
@@ -2049,19 +2049,74 @@ function classifyTsxCompiler(entry: CapabilityInventoryEntry): Classification {
     return unsupported(entry, "The governed JSX type profile and compiler admit callback refs only; object refs are rejected before runtime.")
   }
   if (suffix === "static-style-extraction") {
-    return implemented("extension", [
-      implementation("template", "compiler/style.ts", "component-local css extraction", undefined, "Canonical direct base declarations, non-escaping private same-module reusable CSS constants, bounded & attribute/pseudo selectors and ordered fragments become one compiled sheet plus addressed inline bindings; zero/one-site, exported, multi-declarator and escaping CSS constants fail closed.", "Dynamic non-base selector values, cross-module CSS constants, general selectors, at-rules and complete CSS nesting."),
-      implementation("template", "compiled.ts", "CompiledTemplate.styleSheets", undefined, "Immutable stylesheet metadata crosses the compiled-template ABI with exact duplicate collapse and collision rejection.", "Document registration and rendered pixels outside Template."),
-      test("template", "compiler/css-style-compiler.test.ts", suffix, "Direct base syntax plus redundant wrapper, zero/one-site, export, multi-declarator and out-of-style CSS constant rejection, scoped selectors, precedence and exact diagnostics.", "Downstream Document/Renderer lifecycle."),
-      test("template", "compiled-style-sheet.test.ts", suffix, "Compiled metadata reaches the runtime package without runtime JSX or defineStyles authoring.", "Native browser presentation."),
-    ])
+    return {
+      ...implemented("extension", [
+        implementation(
+          "template",
+          "css-shape.ts",
+          "bounded scoped selector parser",
+          undefined,
+          "Direct base declarations, root attribute/native pseudo compounds and one optional descendant static attribute compound are parsed into the bounded compiled selector shape.",
+          "Element, class, id, sibling, child, additional descendant, interpolated and general selector grammar.",
+        ),
+        implementation(
+          "template",
+          "compiler/style.ts",
+          "component-local css extraction",
+          undefined,
+          "Canonical direct declarations, non-escaping private same-module reusable CSS constants, bounded scoped selectors and ordered fragments become one compiled sheet plus addressed inline bindings.",
+          "Dynamic non-base selector values, cross-module CSS constants, general selectors, at-rules and complete CSS nesting.",
+        ),
+        implementation(
+          "template",
+          "compiled.ts",
+          "CompiledTemplate.styleSheets",
+          undefined,
+          "Immutable stylesheet metadata crosses the compiled-template ABI with exact duplicate collapse and collision rejection.",
+          "Document registration and rendered pixels outside Template.",
+        ),
+        test(
+          "template",
+          "css.test.ts",
+          "one descendant static attribute compound",
+          "The accepted descendant target and rejected element, combinator and second-level descendant forms are parser-covered.",
+          "Compiler lowering, Document adoption and Renderer matching.",
+        ),
+        test(
+          "template",
+          "compiler/css-style-compiler.test.ts",
+          suffix,
+          "The bounded descendant selector lowers into scoped compiled CSS while the existing reuse, precedence and exact diagnostics remain enforced.",
+          "Downstream Renderer interaction and pixels.",
+        ),
+        test(
+          "template",
+          "compiler/css-style-runtime.test.ts",
+          "descendant static attribute target",
+          "A compiled component adopts the exact descendant selector text into its Document stylesheet.",
+          "Renderer pseudo-state matching and final device pixels.",
+        ),
+        test(
+          "template",
+          "compiled-style-sheet.test.ts",
+          suffix,
+          "Compiled metadata reaches the runtime package without runtime JSX or defineStyles authoring.",
+          "Native browser presentation.",
+        ),
+      ]),
+      lastVerified: templateCapabilityVerification,
+    }
   }
   if (suffix === "compiler-diagnostics") {
-    return implemented("extension", [
-      implementation("template", "compiler/transform.ts", entry.name, undefined, "Governed TSX-to-fixed-slot ABI transform and exact syntax rejection boundary.", "Syntax outside the project profile."),
-      test("template", "compiler/compiler.test.ts", entry.name, "General accepted/rejected JSX syntax, symbol resolution, cache invalidation and emitted ABI.", "CSS authoring diagnostics and downstream host behavior."),
-      test("template", "compiler/css-style-compiler.test.ts", "canonical CSS diagnostics", "Redundant base wrappers, non-reusable/exported/escaping CSS constants, invalid selectors and dynamic pseudo values fail with exact diagnostics.", "Downstream Document/Renderer lifecycle."),
-    ])
+    return {
+      ...implemented("extension", [
+        implementation("template", "compiler/transform.ts", entry.name, undefined, "Governed TSX-to-fixed-slot ABI transform and exact syntax rejection boundary.", "Syntax outside the project profile."),
+        test("template", "compiler/compiler.test.ts", entry.name, "General accepted/rejected JSX syntax, symbol resolution, cache invalidation and emitted ABI.", "CSS authoring diagnostics and downstream host behavior."),
+        test("template", "css.test.ts", "bounded scoped selector rejection", "Element targets, combinators and an additional descendant level remain rejected while the one static attribute target is admitted.", "Downstream Document/Renderer lifecycle."),
+        test("template", "compiler/css-style-compiler.test.ts", "canonical CSS diagnostics", "Redundant base wrappers, non-reusable/exported/escaping CSS constants, selectors outside the bounded profile and dynamic pseudo values fail with exact diagnostics.", "Downstream Document/Renderer lifecycle."),
+      ]),
+      lastVerified: templateCapabilityVerification,
+    }
   }
   const implementedNames = new Set([
     "intrinsic-elements", "function-components", "nested-components", "props", "children", "primitive-children", "component-children",
