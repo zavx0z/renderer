@@ -7692,7 +7692,7 @@
 | P3 | `react.semantics.context` | partial | @zavx0z/react/authoring-runtime | 0 | The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM. |
 | P3 | `react.semantics.context-consumer` | unsupported | @zavx0z/react/authoring-runtime | 0 | This React 19.2 reference behavior is not part of the current compiled runtime. |
 | P3 | `react.semantics.create-element` | unsupported | @zavx0z/react/authoring-runtime | 0 | This React 19.2 reference behavior is not part of the current compiled runtime. |
-| P2 | `react.semantics.create-root` | partial | @zavx0z/react/authoring-runtime | 1 | The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM. |
+| P3 | `react.semantics.create-root` | partial | @zavx0z/react/authoring-runtime | 0 | The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM. |
 | P3 | `react.semantics.custom-hooks` | partial | @zavx0z/react/authoring-runtime | 0 | The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM. |
 | P3 | `react.semantics.debug-value-inspection` | unsupported | @zavx0z/react/authoring-runtime | 0 | This React 19.2 reference behavior is not part of the current compiled runtime. |
 | P3 | `react.semantics.default-props` | unsupported | @zavx0z/react/authoring-runtime | 0 | This React 19.2 reference behavior is not part of the current compiled runtime. |
@@ -7748,10 +7748,10 @@
 | P4 | `renderer.features.geometry-readback` | unsupported | @zavx0z/renderer/cpu | 0 | The CPU renderer has no implementation of this internal platform capability. |
 | P4 | `renderer.features.hit-metadata` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
 | P2 | `renderer.features.images` | partial | @zavx0z/renderer/cpu | 1 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
-| P4 | `renderer.features.incremental-patches` | partial | @zavx0z/renderer/cpu | 0 | Dirty bookkeeping exists, but general dirty frames still remeasure/place/re-emit; only narrow Text and transform fast paths reuse records. |
+| P4 | `renderer.features.incremental-patches` | partial | @zavx0z/renderer/cpu | 0 | Dirty bookkeeping exists, but general dirty frames still remeasure/place/re-emit; only narrow Text, input-value and transform fast paths reuse records. |
 | P4 | `renderer.features.inheritance` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
 | P4 | `renderer.features.inline-layout` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
-| P4 | `renderer.features.invalidation` | partial | @zavx0z/renderer/cpu | 0 | Dirty bookkeeping exists, but general dirty frames still remeasure/place/re-emit; only narrow Text and transform fast paths reuse records. |
+| P4 | `renderer.features.invalidation` | partial | @zavx0z/renderer/cpu | 0 | Dirty bookkeeping exists, but general dirty frames still remeasure/place/re-emit; only narrow Text, input-value and transform fast paths reuse records. |
 | P4 | `renderer.features.line-breaking` | partial | @zavx0z/renderer/cpu | 0 | Production Canvas/Plane/Overlay composition now uses one exact font-owned unshaped per-codepoint advance owner for intrinsic width, alignment, controls, selection geometry, incremental text and ellipsis. Headless CPU rendering retains the deterministic 0.6em fallback. Kerning, shaping, ligatures, bidi, fallback, grapheme truncation, proportional textarea soft-wrap and complete inline formatting remain unsupported. |
 | P4 | `renderer.features.overflow` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |
 | P4 | `renderer.features.performance-paths` | partial | @zavx0z/renderer/cpu | 0 | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. |

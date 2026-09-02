@@ -428,7 +428,7 @@ const rendererFeatures: ManualDefinition[] = [
     "scrollbar-paint", "typography", "line-breaking", "images", "form-control-projection", "progress-meter",
     "textarea-select-range", "z-index", "transforms", "shadows", "display-list", "hit-metadata", "invalidation",
     "incremental-patches", "tooltip-title", "pointer", "wheel", "default-activation", "popover-projection",
-    "immutable-frame", "clean-frame-fast-path", "text-leaf-fast-path", "transform-subtree-fast-path", "performance-paths",
+    "immutable-frame", "clean-frame-fast-path", "text-leaf-fast-path", "input-value-fast-path", "transform-subtree-fast-path", "performance-paths",
     "projection-root-inheritance", "author-stylesheet-lifecycle",
     "compiled-stylesheet-lifecycle",
     "caret-selection-paint", "vector-path-display-item", "geometry-readback", "backend-neutral-diagnostics",

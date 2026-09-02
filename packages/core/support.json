@@ -138161,7 +138161,7 @@
         "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
       },
       "limitations": [
-        "Dirty bookkeeping exists, but general dirty frames still remeasure/place/re-emit; only narrow Text and transform fast paths reuse records."
+        "Dirty bookkeeping exists, but general dirty frames still remeasure/place/re-emit; only narrow Text, input-value and transform fast paths reuse records."
       ],
       "owner": {
         "package": "@zavx0z/renderer",
@@ -138281,7 +138281,7 @@
         "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
       },
       "limitations": [
-        "Dirty bookkeeping exists, but general dirty frames still remeasure/place/re-emit; only narrow Text and transform fast paths reuse records."
+        "Dirty bookkeeping exists, but general dirty frames still remeasure/place/re-emit; only narrow Text, input-value and transform fast paths reuse records."
       ],
       "owner": {
         "package": "@zavx0z/renderer",
@@ -139346,6 +139346,53 @@
         "stage": "cpu"
       },
       "status": "partial"
+    },
+    {
+      "blockedBy": [],
+      "blocks": [],
+      "conformance": "extension",
+      "consumers": [],
+      "evidence": [
+        {
+          "doesNotProve": "General dirty-subtree layout, multiple controls, structural display-item insertion/removal, selection paint and other state kinds.",
+          "path": "packages/core/src/renderer.ts",
+          "proves": "One text-like input value state change replaces only its existing immutable value display item while reusing all layout and hit records.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "input-value-fast-path",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Every form-control state or general incremental layout.",
+          "path": "packages/core/test/incremental.test.ts",
+          "proves": "Exact frame equality against a forced rebuild, record identity reuse and fail-closed mixed/multiple/structural fallbacks.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "input value incremental frame",
+          "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Browser scheduling, GPU presentation or unrelated state kinds.",
+          "path": "bench/input-value-patch.ts",
+          "proves": "Fresh-process p50/p95/p99 timing and exact layout/hit identity reuse across 10,000 semantic inputs.",
+          "repository": "renderer",
+          "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
+          "symbol": "10k input value patch",
+          "type": "unit-test"
+        }
+      ],
+      "id": "renderer.features.input-value-fast-path",
+      "lastVerified": {
+        "date": "2026-08-29",
+        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+      },
+      "limitations": [],
+      "owner": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "status": "implemented"
     }
   ],
   "repository": "renderer",

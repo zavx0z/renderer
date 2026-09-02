@@ -18,6 +18,7 @@ type OpenPopoverState = Readonly<{
 type DocumentPopoverState = {
   autoStack: HTMLElement[]
   hidingCount: number
+  openCount: number
   showing: boolean
 }
 
@@ -136,6 +137,10 @@ export function dismissTopmostAutoPopover(document: Document): boolean {
 }
 
 export function closePopoversInSubtree(root: Node): void {
+  const document = root.nodeType === 9
+    ? root as unknown as Document
+    : root.ownerDocument
+  if (document === null || (documentStates.get(document)?.openCount ?? 0) === 0) return
   const visit = (node: Node): void => {
     if (node.nodeType === 1) {
       const element = node as HTMLElement
@@ -181,6 +186,7 @@ function showPopoverSteps(element: HTMLElement, source: HTMLElement | null): voi
       source,
       focusReturn,
     }))
+    documentState.openCount += 1
     if (mode === "auto") documentState.autoStack.push(element)
     publishOpenState(element, false, true)
     queueToggleEvent(element, "closed", "open", source)
@@ -241,14 +247,15 @@ function closePopoverState(element: HTMLElement, restoreFocus: boolean): void {
   const openState = openPopovers.get(element)
   if (!openState) return
   openPopovers.delete(element)
+  const document = element.ownerDocument!
+  const documentState = documentStates.get(document)
+  if (documentState) documentState.openCount = Math.max(0, documentState.openCount - 1)
   if (openState.mode === "auto") {
-    const document = element.ownerDocument!
-    const documentState = documentStates.get(document)
     if (documentState) {
       documentState.autoStack = documentState.autoStack.filter(candidate => candidate !== element)
-      releaseDocumentState(document, documentState)
     }
   }
+  if (documentState) releaseDocumentState(document, documentState)
   publishOpenState(element, true, false)
   if (restoreFocus) openState.focusReturn?.focus({preventScroll: true})
 }
@@ -283,6 +290,7 @@ function ensureDocumentState(document: Document): DocumentPopoverState {
   const state: DocumentPopoverState = {
     autoStack: [],
     hidingCount: 0,
+    openCount: 0,
     showing: false
   }
   documentStates.set(document, state)
@@ -290,7 +298,7 @@ function ensureDocumentState(document: Document): DocumentPopoverState {
 }
 
 function releaseDocumentState(document: Document, state: DocumentPopoverState): void {
-  if (state.autoStack.length === 0 && state.hidingCount === 0 && !state.showing) {
+  if (state.openCount === 0 && state.autoStack.length === 0 && state.hidingCount === 0 && !state.showing) {
     documentStates.delete(document)
   }
 }

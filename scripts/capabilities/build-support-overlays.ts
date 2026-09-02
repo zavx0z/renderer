@@ -1562,6 +1562,13 @@ function classifyRenderer(entry: CapabilityInventoryEntry): Classification {
       "The bounded form-control set includes checked Checkbox/Radio indicators, collapsed Select disclosure/picker and horizontal Range interaction; indeterminate Checkbox, multiple/listbox, type-ahead, accessibility projection and complete native form chrome remain unsupported.",
     ))
   }
+  if (name === "input-value-fast-path") {
+    return implemented("extension", [
+      implementation("renderer", "packages/core/src/renderer.ts", "input-value-fast-path", undefined, "One text-like input value state change replaces only its existing immutable value display item while reusing all layout and hit records.", "General dirty-subtree layout, multiple controls, structural display-item insertion/removal, selection paint and other state kinds."),
+      test("renderer", "packages/core/test/incremental.test.ts", "input value incremental frame", "Exact frame equality against a forced rebuild, record identity reuse and fail-closed mixed/multiple/structural fallbacks.", "Every form-control state or general incremental layout."),
+      test("renderer", "bench/input-value-patch.ts", "10k input value patch", "Fresh-process p50/p95/p99 timing and exact layout/hit identity reuse across 10,000 semantic inputs.", "Browser scheduling, GPU presentation or unrelated state kinds."),
+    ])
+  }
   const implementedNames = new Set(["immutable-frame", "clean-frame-fast-path"])
   if (implementedNames.has(name)) {
     return implemented("extension", [implementation("renderer", "packages/core/src/renderer.ts", name, undefined, "Bounded immutable frame/clean reuse contract.", "General incremental rendering."), test("renderer", "packages/core/test/renderer.test.ts", name, "Exact frame identity and mutation protection.", "All dirty update paths.")])
@@ -2515,7 +2522,7 @@ function rendererTestPath(name: string): string {
 }
 
 function rendererLimitation(name: string): string {
-  if (name === "invalidation" || name === "incremental-patches" || name.includes("fast-path")) return "Dirty bookkeeping exists, but general dirty frames still remeasure/place/re-emit; only narrow Text and transform fast paths reuse records."
+  if (name === "invalidation" || name === "incremental-patches" || name.includes("fast-path")) return "Dirty bookkeeping exists, but general dirty frames still remeasure/place/re-emit; only narrow Text, input-value and transform fast paths reuse records."
   if (name.includes("typography") || name.includes("line-breaking")) return "Text measurement is an adapted fixed advance model without shaping, kerning, bidi, fallback, or full inline formatting."
   return "The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests."
 }

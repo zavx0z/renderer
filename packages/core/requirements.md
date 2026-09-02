@@ -1037,3 +1037,25 @@ read; if GC already collected it, the seam returns no sparse proof and the
 backend uses complete validation. Thus the latest live frame cannot retain an
 unbounded predecessor chain. An external clone, forged revision or delta from
 another DocumentRenderer likewise receives full backend validation.
+
+## `RENDERER-CPU-035` — conservative input-value state patch
+
+After an initial frame, one committed `HTMLInputElement.value` state target may
+replace only its existing `(input, "value")` Text display item. The bounded
+profile admits the renderer's text-like input types when the target retains a
+positive fixed replaced-control content box and both the previous and next
+states have a paintable value or placeholder. A coalesced selection-state
+record from the same input is presentation-neutral and may share that patch.
+
+The patch reuses the exact boxes, box map, hit map, hit order, scroll metrics,
+clips, transforms and every unrelated display item. It recomputes password
+masking, single-line normalization, ellipsis, alignment and placeholder
+opacity from the same cached style and text-measurer used by full projection.
+The immutable frame revision advances once and publishes one canonical display
+replacement.
+
+An absent prior value item, an empty next value without placeholder, more than
+one input target, any mixed DOM/style mutation, any other state kind or an
+unsupported input type falls back to the complete renderer. The optimization
+does not claim general dirty-subtree layout, input selection paint, checkbox/
+radio/range state projection or arbitrary form-control incremental rendering.

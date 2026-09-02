@@ -304,6 +304,7 @@ export const createDocumentRenderer = (
   const layoutCache = new WeakMap<Node, LayoutNode>()
   const subtreeDirty = new Set<Node>([options.root])
   const characterDataTargets = new Set<Text>()
+  const inputValueTargets = new Set<HTMLInputElement>()
   const vectorPathTargets = new Set<HTMLVectorPathElement>()
   let frame: RenderFrame | null = null
   let revision = 0
@@ -460,6 +461,30 @@ export const createDocumentRenderer = (
         return incremental
       }
     }
+    if (
+      frame !== null &&
+      !fastPathBlocked &&
+      inputValueTargets.size === 1
+    ) {
+      const target = inputValueTargets.values().next().value
+      const incremental = target === undefined
+        ? null
+        : tryBuildInputValueFrame(
+            frame,
+            target,
+            layoutCache,
+            options.textMeasurer,
+            revision + 1,
+          )
+      if (incremental !== null) {
+        revision++
+        frame = incremental
+        dirty.clear()
+        subtreeDirty.clear()
+        resetFastPath()
+        return incremental
+      }
+    }
     const next = buildFrame(
       options.document,
       options.root,
@@ -535,7 +560,17 @@ export const createDocumentRenderer = (
       ) {
         dirty.invalidate(record.target)
         subtreeDirty.add(record.target)
-        blockFastPath()
+        if (
+          !fastPathBlocked &&
+          record.type === "input" &&
+          (record.property === "value" || record.property === "selection") &&
+          INPUT_VALUE_TYPES.has(record.target.type)
+        ) {
+          inputValueTargets.add(record.target)
+          if (inputValueTargets.size > 1) blockFastPath()
+        } else {
+          blockFastPath()
+        }
       } else if (record.target.contains(options.root)) {
         dirty.invalidate(options.root)
         subtreeDirty.add(options.root)
@@ -547,6 +582,7 @@ export const createDocumentRenderer = (
   function blockFastPath(): void {
     fastPathBlocked = true
     characterDataTargets.clear()
+    inputValueTargets.clear()
     transformTarget = null
     vectorPathTargets.clear()
   }
@@ -554,6 +590,7 @@ export const createDocumentRenderer = (
   function resetFastPath(): void {
     fastPathBlocked = false
     characterDataTargets.clear()
+    inputValueTargets.clear()
     transformTarget = null
     vectorPathTargets.clear()
   }
@@ -561,6 +598,70 @@ export const createDocumentRenderer = (
   function assertActive(): void {
     if (disposed) throw new Error("Cannot use a disposed document renderer")
   }
+}
+
+const tryBuildInputValueFrame = (
+  previous: RenderFrame,
+  target: HTMLInputElement,
+  layoutCache: WeakMap<Node, LayoutNode>,
+  textMeasurer: CreateDocumentRendererOptions["textMeasurer"],
+  revision: number,
+): RenderFrame | null => {
+  if (!INPUT_VALUE_TYPES.has(target.type)) return null
+  const layoutNode = layoutCache.get(target)
+  const box = previous.boxByNode.get(target)
+  if (!layoutNode || layoutNode.transparent || !box) return null
+  const indexes = collectionIndexes(previous)
+  const displayIndex = indexedDisplayItem(indexes, target, "value")
+  const previousItem = displayIndex < 0 ? undefined : previous.displayList[displayIndex]
+  if (previousItem?.kind !== "text") return null
+
+  const liveValue = target.value
+  const placeholder = liveValue === "" ? target.placeholder : ""
+  const source = liveValue || placeholder
+  if (source === "" || box.contentWidth <= 0 || box.contentHeight <= 0) return null
+  const rawText = target.type === "password" && liveValue !== ""
+    ? "•".repeat(graphemeCount(liveValue))
+    : source.replace(/[\r\n]+/g, " ")
+  const text = ellipsizeSingleLine(
+    rawText,
+    layoutNode.style,
+    box.contentWidth,
+    true,
+    textMeasurer,
+  )
+  if (text === "" || !hasPaintableText(text)) return null
+
+  const nextItem: DisplayItem = Object.freeze({
+    ...previousItem,
+    text,
+    x: alignedTextX(
+      layoutNode.style,
+      box.contentX,
+      box.contentWidth,
+      textAdvance(text, layoutNode.style, textMeasurer),
+    ),
+    opacity: layoutNode.effectiveOpacity * (placeholder ? 0.55 : 1),
+  })
+  const displayList = replaceImmutableArray(previous.displayList, displayIndex, nextItem)
+  const next: RenderFrame = Object.freeze({
+    revision,
+    document: previous.document,
+    root: previous.root,
+    viewport: previous.viewport,
+    boxes: previous.boxes,
+    boxByNode: previous.boxByNode,
+    displayList,
+    hits: previous.hits,
+    ...(previous.hitOrder === undefined ? {} : {hitOrder: previous.hitOrder}),
+    scrolls: previous.scrolls,
+    ...(previous.presentationTransforms === undefined
+      ? {}
+      : {presentationTransforms: previous.presentationTransforms}),
+  })
+  recordCanonicalRenderFrameChanges(next, previous, [displayIndex])
+  collectionIndexesByFrame.set(next, indexes)
+  return next
 }
 
 const tryBuildCharacterDataFrame = (

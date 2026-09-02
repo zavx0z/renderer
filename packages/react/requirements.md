@@ -69,6 +69,10 @@ single insertion/deletion and deterministic arbitrary reorder with
 mount/dispose/move, retained-heap and identity counters. Sampled modes run one
 operation family per fresh process and publish p50/p95 rather than presenting a
 single noisy timing as an acceptance result.
+`bench/component-disposal.ts` separately measures child-first effect cleanup,
+DOM detachment and post-GC release for a nested 10,000-owner/four-child tree;
+it must retain exact cleanup counts and an empty root rather than treating a
+terminated process as successful disposal.
 
 ## DOM-COMPONENTS-009 — anchored composition identity
 

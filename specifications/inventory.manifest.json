@@ -991,8 +991,8 @@
       "path": "platform/renderer-exports.json"
     },
     {
-      "digest": "5b0b2486e946f60b1d090c99422fbf14680e925d73d4f02b985e2a1973a512f6",
-      "entries": 46,
+      "digest": "8927efc01715abe2259178933e35d5b3d32b79225b7997637e49fa73efd9939d",
+      "entries": 47,
       "path": "platform/renderer-features.json"
     },
     {
@@ -1073,5 +1073,5 @@
   ],
   "generatorVersion": "1.0.0",
   "schemaVersion": 1,
-  "totalEntries": 8795
+  "totalEntries": 8796
 }

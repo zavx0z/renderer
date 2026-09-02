@@ -155,6 +155,116 @@ describe("characterData incremental frame", () => {
   })
 })
 
+describe("input value incremental frame", () => {
+  it("patches one existing value item and reuses all layout and hit records", () => {
+    const fixture = fixedInputs(3)
+    const initial = fixture.renderer.flush()
+    const target = fixture.inputs[1]!
+    const unchanged = fixture.inputs[0]!
+    const targetBox = requireBox(initial, target)
+    const targetHit = initial.hits.get(target)
+    const targetItem = requireTextItem(initial, target)
+    const unchangedBox = requireBox(initial, unchanged)
+    const unchangedItem = requireTextItem(initial, unchanged)
+
+    target.value = "Changed value"
+    const incremental = fixture.renderer.flush()
+
+    expect(incremental.revision).toBe(initial.revision + 1)
+    expect(incremental.boxes).toBe(initial.boxes)
+    expect(incremental.boxByNode).toBe(initial.boxByNode)
+    expect(incremental.hits).toBe(initial.hits)
+    expect(incremental.displayList).not.toBe(initial.displayList)
+    expect(requireBox(incremental, target)).toBe(targetBox)
+    expect(incremental.hits.get(target)).toBe(targetHit)
+    expect(requireTextItem(incremental, target)).not.toBe(targetItem)
+    expect(requireTextItem(incremental, target).text).toBe("Changed value")
+    expect(requireBox(incremental, unchanged)).toBe(unchangedBox)
+    expect(requireTextItem(incremental, unchanged)).toBe(unchangedItem)
+
+    const forcedRenderer = createDocumentRenderer({
+      document: fixture.document,
+      root: fixture.root,
+      viewport: fixture.viewport,
+    })
+    const forced = forcedRenderer.flush()
+    expect(incremental.boxes).toEqual(forced.boxes)
+    expect(incremental.displayList).toEqual(forced.displayList)
+    expect([...incremental.boxByNode]).toEqual([...forced.boxByNode])
+    expect([...incremental.hits]).toEqual([...forced.hits])
+    forcedRenderer.dispose()
+    fixture.renderer.dispose()
+  })
+
+  it("falls back for a missing value item, multiple inputs and mixed style work", () => {
+    const empty = fixedInputs(3, "")
+    const emptyInitial = empty.renderer.flush()
+    const emptySiblingBox = requireBox(emptyInitial, empty.inputs[0]!)
+    empty.inputs[1]!.value = "Now visible"
+    const inserted = empty.renderer.flush()
+    expect(requireBox(inserted, empty.inputs[0]!)).not.toBe(emptySiblingBox)
+    expect(requireTextItem(inserted, empty.inputs[1]!).text).toBe("Now visible")
+    empty.renderer.dispose()
+
+    const multiple = fixedInputs(3)
+    const multipleInitial = multiple.renderer.flush()
+    const multipleSiblingBox = requireBox(multipleInitial, multiple.inputs[2]!)
+    multiple.document.transaction(() => {
+      multiple.inputs[0]!.value = "First"
+      multiple.inputs[1]!.value = "Second"
+    })
+    const multipleFrame = multiple.renderer.flush()
+    expect(requireBox(multipleFrame, multiple.inputs[2]!)).not.toBe(multipleSiblingBox)
+    multiple.renderer.dispose()
+
+    const styled = fixedInputs(3)
+    const styledInitial = styled.renderer.flush()
+    const styledSiblingBox = requireBox(styledInitial, styled.inputs[0]!)
+    styled.document.transaction(() => {
+      styled.inputs[1]!.value = "Changed"
+      styled.inputs[1]!.setAttribute("style", "color:red")
+    })
+    const styledFrame = styled.renderer.flush()
+    expect(requireBox(styledFrame, styled.inputs[0]!)).not.toBe(styledSiblingBox)
+    expect(requireTextItem(styledFrame, styled.inputs[1]!)).toMatchObject({
+      color: "#ff0000",
+      text: "Changed",
+    })
+    styled.renderer.dispose()
+  })
+
+  it("recomputes placeholder opacity and password masking without layout work", () => {
+    const document = createDocument()
+    const root = document.createElement("div")
+    const input = document.createElement("input")
+    input.type = "password"
+    input.placeholder = "Secret"
+    root.appendChild(input)
+    document.appendChild(root)
+    const renderer = createDocumentRenderer({
+      document,
+      root,
+      viewport: {width: 300, height: 100},
+    })
+    const initial = renderer.flush()
+    const box = requireBox(initial, input)
+    expect(requireTextItem(initial, input)).toMatchObject({text: "Secret", opacity: 0.55})
+
+    input.value = "abc"
+    const value = renderer.flush()
+    expect(value.boxes).toBe(initial.boxes)
+    expect(requireBox(value, input)).toBe(box)
+    expect(requireTextItem(value, input)).toMatchObject({text: "•••", opacity: 1})
+
+    input.value = ""
+    const placeholder = renderer.flush()
+    expect(placeholder.boxes).toBe(initial.boxes)
+    expect(requireBox(placeholder, input)).toBe(box)
+    expect(requireTextItem(placeholder, input)).toMatchObject({text: "Secret", opacity: 0.55})
+    renderer.dispose()
+  })
+})
+
 const fixedRows = (count: number) => {
   const document = createDocument()
   const root = document.createElement("div")
@@ -173,6 +283,23 @@ const fixedRows = (count: number) => {
   const viewport = Object.freeze({width: 800, height: Math.max(600, count * 16)})
   const renderer = createDocumentRenderer({document, root, viewport})
   return {document, root, rows, viewport, renderer}
+}
+
+const fixedInputs = (count: number, value = "Initial") => {
+  const document = createDocument()
+  const root = document.createElement("div")
+  document.appendChild(root)
+  root.setAttribute("style", "display:flex; flex-direction:column; width:300px")
+  const inputs = Array.from({length: count}, (_, index) => {
+    const input = document.createElement("input")
+    input.type = "text"
+    input.value = value === "" ? "" : `${value} ${index}`
+    root.appendChild(input)
+    return input
+  })
+  const viewport = Object.freeze({width: 300, height: Math.max(600, count * 24)})
+  const renderer = createDocumentRenderer({document, root, viewport})
+  return {document, root, inputs, viewport, renderer}
 }
 
 const assertFullFallback = (

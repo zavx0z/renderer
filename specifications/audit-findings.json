@@ -723,11 +723,11 @@
       "id": "contradiction.consumer.node-local-layout",
       "title": "Node presentation invents fallback placement and route geometry",
       "claim": "Components consume owner layout and do not compensate for missing platform behavior with manual geometry.",
-      "fact": "NodeSystem/node-editor contain fallback placement, socket endpoint formulas, culling and rectangle/point link decomposition.",
+      "fact": "The component NodeTree still accepts an absent LayoutResult and packages/ui/geometry.ts then invents index-based Frame/Node placement, socket centers and orthogonal routes locally.",
       "owner": "@nodes/ui",
       "evidence": [
-        "node:packages/ui/node-system.tsx",
-        "node:packages/ui/dom/node-editor.ts"
+        "node:packages/ui/geometry.ts",
+        "node:packages/ui/node-tree.tsx"
       ],
       "impact": "Domain layout law and missing generic vector presentation are hidden inside a component."
     },

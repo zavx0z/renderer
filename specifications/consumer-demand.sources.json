@@ -164,43 +164,33 @@
       "behavior": "Open a collapsed select picker, navigate retained options by keyboard, activate one option and dispatch change."
     },
     {
-      "capability": "react.semantics.create-root",
-      "repository": "node",
-      "package": "@nodes/ui",
-      "subject": "mountParameterField",
-      "scope": "production",
-      "path": "packages/ui/dom/parameter-field-mount.ts",
-      "anchor": "const root = createRoot(staging)",
-      "behavior": "Mount and update a concrete compiled Field into a DocumentFragment while retaining the exact owner element and disposing on unmount."
-    },
-    {
       "capability": "react.semantics.keys",
       "repository": "node",
       "package": "@nodes/ui",
-      "subject": "NodeSystem",
+      "subject": "NodeTree",
       "scope": "production",
-      "path": "packages/ui/node-system.tsx",
-      "anchor": "export function NodeSystem(props: NodeSystemProps)",
+      "path": "packages/ui/node-tree.tsx",
+      "anchor": "export function NodeTree(props: NodeTreeProps)",
       "behavior": "Retain node, link, parameter and socket identity across high-volume topology and parameter updates."
     },
     {
       "capability": "react.hooks.react.usesyncexternalstore",
       "repository": "node",
       "package": "@nodes/ui",
-      "subject": "NodeSystem view store",
+      "subject": "Parameter external store",
       "scope": "production",
-      "path": "packages/ui/node-system.tsx",
-      "anchor": "function createNodeSystemViewStore(",
+      "path": "packages/ui/parameter.tsx",
+      "anchor": "export function Parameter(props: ParameterProps)",
       "behavior": "Observe topology/parameter snapshots without duplicating the canonical Node store."
     },
     {
       "capability": "renderer.features.vector-path-display-item",
       "repository": "node",
       "package": "@nodes/ui",
-      "subject": "NodeConnection",
+      "subject": "Link",
       "scope": "production",
-      "path": "packages/ui/node-system.tsx",
-      "anchor": "export function NodeConnection(props: NodeConnectionProps)",
+      "path": "packages/ui/link.tsx",
+      "anchor": "export function Link(props: LinkProps)",
       "behavior": "Present routed links and grid primitives without decomposing them into component-owned rectangles and points."
     },
     {
@@ -209,8 +199,8 @@
       "package": "@nodes/ui",
       "subject": "NodeEditor",
       "scope": "production",
-      "path": "packages/ui/dom/node-editor.ts",
-      "anchor": "export function createNodeEditor",
+      "path": "packages/ui/node-editor.tsx",
+      "anchor": "export function NodeEditor(props: NodeEditorProps)",
       "behavior": "Pan/zoom reaches paint, clip and inverse hit consistently for the graph surface."
     },
     {
@@ -219,8 +209,8 @@
       "package": "@nodes/ui",
       "subject": "NodeEditor grid and links",
       "scope": "production",
-      "path": "packages/ui/dom/node-editor.ts",
-      "anchor": "function createGrid(document: Document, size: number)",
+      "path": "packages/ui/node-editor.tsx",
+      "anchor": "export function NodeEditor(props: NodeEditorProps)",
       "behavior": "Scale grid and routed connection presentation without a local DOM geometry renderer."
     },
     {

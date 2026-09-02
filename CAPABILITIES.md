@@ -14,10 +14,10 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | engine | main | `a3032d960fc592296e8c5d1408a02551635d1fb3` | no |
 | interpreter | main | `08573a5f52fc04c4d25a87b318cd801c81ae8f20` | no |
 | metafor | main | `c5ba83e1ab3461e8255b002fe7fa84ff18007c20` | no |
-| node | main | `209ba2a5e905edeeb6293bdedf47ea483d011c94` | no |
-| renderer | main | `949857b7d94d4cf5f477a51d86c6953b4f60a973` | yes |
-| storybook | main | `882311ecaade9058277b30737d9b5a657be59ce9` | no |
-| template | main | `ef543f55aea710d91ec473fe52f32900fbbb655b` | no |
+| node | main | `becff8f34a7152791df8e833a918dfe0142681bb` | no |
+| renderer | main | `46aa364d2713fd1bdc18fc84836948d6463f817a` | yes |
+| storybook | main | `83ea3f66a6a1b93030906cd97871068a286db80b` | no |
+| template | main | `ef543f55aea710d91ec473fe52f32900fbbb655b` | yes |
 | ui | main | `6af702d2e26c47387563f1157a50d9a657bd5934` | no |
 
 ## Pinned external sources
@@ -60,7 +60,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | engine | 162 | 162 | 25 | 34 | 4 | 0 | 99 | 0 |
 | html | 3729 | 3729 | 0 | 953 | 1989 | 787 | 0 | 0 |
 | react | 211 | 211 | 28 | 49 | 70 | 35 | 29 | 0 |
-| renderer | 107 | 107 | 13 | 44 | 2 | 0 | 48 | 0 |
+| renderer | 108 | 108 | 14 | 44 | 2 | 0 | 48 | 0 |
 | tsx | 192 | 192 | 102 | 19 | 28 | 0 | 43 | 0 |
 | webgpu | 37 | 37 | 19 | 12 | 0 | 0 | 6 | 0 |
 
@@ -72,7 +72,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | @zavx0z/dom | renderer | `949857b7d94d4cf5f477a51d86c6953b4f60a973+dirty` | 4953 |
 | @zavx0z/dom-devtools | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 31 |
 | @zavx0z/react | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 211 |
-| @zavx0z/renderer | renderer | `9af61ff761a249a22d1ce22d61a7f2c3855f0c89` | 3139 |
+| @zavx0z/renderer | renderer | `9af61ff761a249a22d1ce22d61a7f2c3855f0c89` | 3140 |
 | @zavx0z/renderer-browser | renderer | `3c91038c3f14ccc44616209fd82b1e59b7369408` | 70 |
 | @zavx0z/renderer-webgpu | renderer | `9af61ff761a249a22d1ce22d61a7f2c3855f0c89` | 37 |
 | @zavx0z/template | template | `4b66cdee58840f3e59701f9a8c52b044512a1acb+dirty` | 192 |
@@ -8529,7 +8529,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `react.semantics.context` | reference-semantics | partial | adapted | @zavx0z/react/authoring-runtime | The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM. | 3 | 0 |
 | `react.semantics.context-consumer` | reference-semantics | unsupported | none | @zavx0z/react/authoring-runtime | This React 19.2 reference behavior is not part of the current compiled runtime. | 1 | 0 |
 | `react.semantics.create-element` | reference-semantics | unsupported | none | @zavx0z/react/authoring-runtime | This React 19.2 reference behavior is not part of the current compiled runtime. | 1 | 0 |
-| `react.semantics.create-root` | reference-semantics | partial | adapted | @zavx0z/react/authoring-runtime | The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM. | 3 | 1 |
+| `react.semantics.create-root` | reference-semantics | partial | adapted | @zavx0z/react/authoring-runtime | The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM. | 3 | 0 |
 | `react.semantics.custom-hooks` | reference-semantics | partial | adapted | @zavx0z/react/authoring-runtime | The public authoring shape is familiar, but execution is synchronous, fixed-slot, non-Fiber, and compiled without React elements/VDOM. | 3 | 0 |
 | `react.semantics.debug-value-inspection` | reference-semantics | unsupported | none | @zavx0z/react/authoring-runtime | This React 19.2 reference behavior is not part of the current compiled runtime. | 1 | 0 |
 | `react.semantics.default-props` | reference-semantics | unsupported | none | @zavx0z/react/authoring-runtime | This React 19.2 reference behavior is not part of the current compiled runtime. | 1 | 0 |
@@ -8656,10 +8656,11 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `renderer.features.hit-metadata` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.images` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 1 |
 | `renderer.features.immutable-frame` | renderer-stage | implemented | extension | @zavx0z/renderer/cpu | — | 2 | 0 |
-| `renderer.features.incremental-patches` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Dirty bookkeeping exists, but general dirty frames still remeasure/place/re-emit; only narrow Text and transform fast paths reuse records. | 2 | 0 |
+| `renderer.features.incremental-patches` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Dirty bookkeeping exists, but general dirty frames still remeasure/place/re-emit; only narrow Text, input-value and transform fast paths reuse records. | 2 | 0 |
 | `renderer.features.inheritance` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.inline-layout` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
-| `renderer.features.invalidation` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Dirty bookkeeping exists, but general dirty frames still remeasure/place/re-emit; only narrow Text and transform fast paths reuse records. | 2 | 0 |
+| `renderer.features.input-value-fast-path` | renderer-stage | implemented | extension | @zavx0z/renderer/cpu | — | 3 | 0 |
+| `renderer.features.invalidation` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Dirty bookkeeping exists, but general dirty frames still remeasure/place/re-emit; only narrow Text, input-value and transform fast paths reuse records. | 2 | 0 |
 | `renderer.features.line-breaking` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Production Canvas/Plane/Overlay composition now uses one exact font-owned unshaped per-codepoint advance owner for intrinsic width, alignment, controls, selection geometry, incremental text and ellipsis. Headless CPU rendering retains the deterministic 0.6em fallback. Kerning, shaping, ligatures, bidi, fallback, grapheme truncation, proportional textarea soft-wrap and complete inline formatting remain unsupported. | 6 | 0 |
 | `renderer.features.overflow` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.performance-paths` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |

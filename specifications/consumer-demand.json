@@ -315,18 +315,18 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "85",
-          "path": "packages/ui/dom/node-editor.ts",
+          "lines": "55",
+          "path": "packages/ui/node-editor.tsx",
           "proves": "Pan/zoom reaches paint, clip and inverse hit consistently for the graph surface.",
           "repository": "node",
-          "revision": "209ba2a5e905edeeb6293bdedf47ea483d011c94",
+          "revision": "becff8f34a7152791df8e833a918dfe0142681bb",
           "symbol": "NodeEditor",
           "type": "consumer-usage"
         }
       ],
-      "line": 85,
+      "line": 55,
       "package": "@nodes/ui",
-      "path": "packages/ui/dom/node-editor.ts",
+      "path": "packages/ui/node-editor.tsx",
       "repository": "node",
       "scope": "production",
       "subject": "NodeEditor"
@@ -557,43 +557,21 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "681",
-          "path": "packages/ui/node-system.tsx",
+          "lines": "127",
+          "path": "packages/ui/parameter.tsx",
           "proves": "Observe topology/parameter snapshots without duplicating the canonical Node store.",
           "repository": "node",
-          "revision": "209ba2a5e905edeeb6293bdedf47ea483d011c94",
-          "symbol": "NodeSystem view store",
+          "revision": "becff8f34a7152791df8e833a918dfe0142681bb",
+          "symbol": "Parameter external store",
           "type": "consumer-usage"
         }
       ],
-      "line": 681,
+      "line": 127,
       "package": "@nodes/ui",
-      "path": "packages/ui/node-system.tsx",
+      "path": "packages/ui/parameter.tsx",
       "repository": "node",
       "scope": "production",
-      "subject": "NodeSystem view store"
-    },
-    {
-      "behavior": "Mount and update a concrete compiled Field into a DocumentFragment while retaining the exact owner element and disposing on unmount.",
-      "capability": "react.semantics.create-root",
-      "evidence": [
-        {
-          "doesNotProve": "Platform implementation or conformance.",
-          "lines": "38",
-          "path": "packages/ui/dom/parameter-field-mount.ts",
-          "proves": "Mount and update a concrete compiled Field into a DocumentFragment while retaining the exact owner element and disposing on unmount.",
-          "repository": "node",
-          "revision": "209ba2a5e905edeeb6293bdedf47ea483d011c94",
-          "symbol": "mountParameterField",
-          "type": "consumer-usage"
-        }
-      ],
-      "line": 38,
-      "package": "@nodes/ui",
-      "path": "packages/ui/dom/parameter-field-mount.ts",
-      "repository": "node",
-      "scope": "production",
-      "subject": "mountParameterField"
+      "subject": "Parameter external store"
     },
     {
       "behavior": "Retain node, link, parameter and socket identity across high-volume topology and parameter updates.",
@@ -601,21 +579,21 @@
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "156",
-          "path": "packages/ui/node-system.tsx",
+          "lines": "84",
+          "path": "packages/ui/node-tree.tsx",
           "proves": "Retain node, link, parameter and socket identity across high-volume topology and parameter updates.",
           "repository": "node",
-          "revision": "209ba2a5e905edeeb6293bdedf47ea483d011c94",
-          "symbol": "NodeSystem",
+          "revision": "becff8f34a7152791df8e833a918dfe0142681bb",
+          "symbol": "NodeTree",
           "type": "consumer-usage"
         }
       ],
-      "line": 156,
+      "line": 84,
       "package": "@nodes/ui",
-      "path": "packages/ui/node-system.tsx",
+      "path": "packages/ui/node-tree.tsx",
       "repository": "node",
       "scope": "production",
-      "subject": "NodeSystem"
+      "subject": "NodeTree"
     },
     {
       "behavior": "Observe neutral plane/frame diagnostics without reaching into retained Engine/WebGPU owner objects.",
@@ -706,48 +684,48 @@
       "subject": "Journal document"
     },
     {
-      "behavior": "Scale grid and routed connection presentation without a local DOM geometry renderer.",
-      "capability": "renderer.features.vector-path-display-item",
-      "evidence": [
-        {
-          "doesNotProve": "Platform implementation or conformance.",
-          "lines": "277",
-          "path": "packages/ui/dom/node-editor.ts",
-          "proves": "Scale grid and routed connection presentation without a local DOM geometry renderer.",
-          "repository": "node",
-          "revision": "209ba2a5e905edeeb6293bdedf47ea483d011c94",
-          "symbol": "NodeEditor grid and links",
-          "type": "consumer-usage"
-        }
-      ],
-      "line": 277,
-      "package": "@nodes/ui",
-      "path": "packages/ui/dom/node-editor.ts",
-      "repository": "node",
-      "scope": "production",
-      "subject": "NodeEditor grid and links"
-    },
-    {
       "behavior": "Present routed links and grid primitives without decomposing them into component-owned rectangles and points.",
       "capability": "renderer.features.vector-path-display-item",
       "evidence": [
         {
           "doesNotProve": "Platform implementation or conformance.",
-          "lines": "602",
-          "path": "packages/ui/node-system.tsx",
+          "lines": "54",
+          "path": "packages/ui/link.tsx",
           "proves": "Present routed links and grid primitives without decomposing them into component-owned rectangles and points.",
           "repository": "node",
-          "revision": "209ba2a5e905edeeb6293bdedf47ea483d011c94",
-          "symbol": "NodeConnection",
+          "revision": "becff8f34a7152791df8e833a918dfe0142681bb",
+          "symbol": "Link",
           "type": "consumer-usage"
         }
       ],
-      "line": 602,
+      "line": 54,
       "package": "@nodes/ui",
-      "path": "packages/ui/node-system.tsx",
+      "path": "packages/ui/link.tsx",
       "repository": "node",
       "scope": "production",
-      "subject": "NodeConnection"
+      "subject": "Link"
+    },
+    {
+      "behavior": "Scale grid and routed connection presentation without a local DOM geometry renderer.",
+      "capability": "renderer.features.vector-path-display-item",
+      "evidence": [
+        {
+          "doesNotProve": "Platform implementation or conformance.",
+          "lines": "55",
+          "path": "packages/ui/node-editor.tsx",
+          "proves": "Scale grid and routed connection presentation without a local DOM geometry renderer.",
+          "repository": "node",
+          "revision": "becff8f34a7152791df8e833a918dfe0142681bb",
+          "symbol": "NodeEditor grid and links",
+          "type": "consumer-usage"
+        }
+      ],
+      "line": 55,
+      "package": "@nodes/ui",
+      "path": "packages/ui/node-editor.tsx",
+      "repository": "node",
+      "scope": "production",
+      "subject": "NodeEditor grid and links"
     },
     {
       "behavior": "Compile linked .tsx component exports through the Template JSX profile instead of importing removed imperative controllers.",

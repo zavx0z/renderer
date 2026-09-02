@@ -379,6 +379,24 @@
       }
     },
     {
+      "description": "CPU Renderer input value fast path capability.",
+      "domain": "renderer",
+      "id": "renderer.features.input-value-fast-path",
+      "kind": "renderer-stage",
+      "name": "input value fast path",
+      "ownerHint": {
+        "package": "@zavx0z/renderer",
+        "repository": "renderer",
+        "stage": "cpu"
+      },
+      "spec": {
+        "anchor": "renderer-contract#input-value-fast-path",
+        "profile": "project-contract",
+        "source": "renderer-contract",
+        "version": "renderer 3c91038c3f14ccc44616209fd82b1e59b7369408"
+      }
+    },
+    {
       "description": "CPU Renderer invalidation capability.",
       "domain": "renderer",
       "id": "renderer.features.invalidation",
