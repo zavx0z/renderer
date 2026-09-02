@@ -14,11 +14,11 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | engine | main | `a3032d960fc592296e8c5d1408a02551635d1fb3` | no |
 | interpreter | main | `08573a5f52fc04c4d25a87b318cd801c81ae8f20` | no |
 | metafor | main | `c5ba83e1ab3461e8255b002fe7fa84ff18007c20` | no |
-| node | main | `9ddded88425f69e6052687e7dccb4a02fb3016a5` | yes |
-| renderer | main | `8d14e99949ba38196c073bc24bbe83eab6272996` | yes |
+| node | main | `1e2450aaceb5d5dbf34239eb7e1252595e053efd` | no |
+| renderer | main | `5e21783b688339fb892cb288a4bd030605191c68` | yes |
 | storybook | main | `83ea3f66a6a1b93030906cd97871068a286db80b` | no |
 | template | main | `ef543f55aea710d91ec473fe52f32900fbbb655b` | yes |
-| ui | main | `1ddae57f1f525ecd2363bec1a5bb79db71591cfd` | yes |
+| ui | main | `90c77080c27d92fea5ee803e8ff1e49d65885ae1` | no |
 
 ## Pinned external sources
 
@@ -8651,7 +8651,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `renderer.features.default-activation` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | Implemented for the bounded rendered-control set including explicit semantic capture, horizontal Range and collapsed Select; implicit touch capture and complete Pointer Events/HTML default actions remain outside Core. | 3 | 0 |
 | `renderer.features.display-list` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.flex-layout` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The bounded owner supports row/column single-line Flex and nowrap/wrap/wrap-reverse multi-line packing with direction-mapped independent row/column gaps, per-line grow/shrink/justification/align-items, admitted align-content distribution after mandatory cross gaps, intrinsic/auto sizing, and wrap-reverse cross-start semantics; balance, reverse main axes, flex-flow, order, align-self, percentage gaps, gap decorations/rules, writing modes, and complete intrinsic multi-line Flexbox sizing remain unsupported. | 7 | 0 |
-| `renderer.features.form-control-projection` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The bounded form-control set includes checked Checkbox/Radio indicators, collapsed Select disclosure/picker and horizontal Range interaction; indeterminate Checkbox, multiple/listbox, type-ahead, accessibility projection and complete native form chrome remain unsupported. | 4 | 0 |
+| `renderer.features.form-control-projection` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The bounded form-control set includes a font-independent checked Checkbox Path, Radio indicator, collapsed Select disclosure/picker and horizontal Range interaction; indeterminate Checkbox, multiple/listbox, type-ahead, accessibility projection and complete native form chrome remain unsupported. | 4 | 0 |
 | `renderer.features.geometry-readback` | renderer-stage | unsupported | none | @zavx0z/renderer/cpu | The CPU renderer has no implementation of this internal platform capability. | 1 | 0 |
 | `renderer.features.hit-metadata` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 0 |
 | `renderer.features.images` | renderer-stage | partial | adapted | @zavx0z/renderer/cpu | The CPU owner implements only the bounded DOM/CSS/WebGPU UI subset documented by focused tests. | 2 | 1 |

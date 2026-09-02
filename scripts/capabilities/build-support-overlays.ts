@@ -80,6 +80,10 @@ const backendDisposalVerification = {
   revision: "a5c9f3e7e9767ff1b6f292ded67697692c8c6d65",
   date: "2026-09-02",
 } as const
+const checkboxPathVerification = {
+  revision: "5e21783b688339fb892cb288a4bd030605191c68",
+  date: "2026-09-02",
+} as const
 const enginePathVerification = {
   revision: "300d00fd5494308382e3efcdf2434cd1ee7cd2d1",
   date: "2026-09-01",
@@ -1563,16 +1567,16 @@ function classifyRenderer(entry: CapabilityInventoryEntry): Classification {
     ))
   }
   if (name === "form-control-projection") {
-    return recovered(partial(
+    return rendererVerifiedAt(partial(
       "adapted",
       [
-        implementation("renderer", "packages/core/src/renderer.ts", "bounded native control projection", undefined, "Checkbox check glyph, Radio dot, Select disclosure/picker and horizontal Range paint retain exact semantic control/option identities.", "Complete native form chrome, indeterminate Checkbox, listboxes, accessibility and every input type."),
-        test("renderer", "packages/core/test/input-paint.test.ts", "checkbox and radio UA indicators", "Stable checked glyph/dot distinction, current color and disabled opacity/hit behavior.", "Indeterminate chrome and live native font pixels."),
+        implementation("renderer", "packages/core/src/renderer.ts", "bounded native control projection", undefined, "Checkbox two-segment Path, Radio dot, Select disclosure/picker and horizontal Range paint retain exact semantic control/option identities.", "Complete native form chrome, indeterminate Checkbox, listboxes, accessibility and every input type."),
+        test("renderer", "packages/core/test/input-paint.test.ts", "checkbox and radio UA indicators", "Stable font-independent check Path/dot distinction, current color and disabled opacity/hit behavior.", "Indeterminate chrome and downstream raster acceptance."),
         test("renderer", "packages/core/test/range-input.test.ts", "range input projection", "Stable range track/thumb paint and pointer behavior.", "Vertical/ticks/datalist and native pixels."),
         test("renderer", "packages/core/test/select-paint.test.ts", "collapsed select and picker projection", "Stable disclosure identity, label-safe geometry, exact option boxes/hits and presentation-coordinate viewport placement.", "Scrolling/type-ahead/multiple/listbox/accessibility and native font pixels."),
       ],
-      "The bounded form-control set includes checked Checkbox/Radio indicators, collapsed Select disclosure/picker and horizontal Range interaction; indeterminate Checkbox, multiple/listbox, type-ahead, accessibility projection and complete native form chrome remain unsupported.",
-    ))
+      "The bounded form-control set includes a font-independent checked Checkbox Path, Radio indicator, collapsed Select disclosure/picker and horizontal Range interaction; indeterminate Checkbox, multiple/listbox, type-ahead, accessibility projection and complete native form chrome remain unsupported.",
+    ), checkboxPathVerification)
   }
   if (name === "invalidation") {
     return rendererVerifiedAt(partial(

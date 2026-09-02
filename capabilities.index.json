@@ -518353,18 +518353,18 @@
         {
           "doesNotProve": "Complete native form chrome, indeterminate Checkbox, listboxes, accessibility and every input type.",
           "path": "packages/core/src/renderer.ts",
-          "proves": "Checkbox check glyph, Radio dot, Select disclosure/picker and horizontal Range paint retain exact semantic control/option identities.",
+          "proves": "Checkbox two-segment Path, Radio dot, Select disclosure/picker and horizontal Range paint retain exact semantic control/option identities.",
           "repository": "renderer",
-          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "revision": "5e21783b688339fb892cb288a4bd030605191c68",
           "symbol": "bounded native control projection",
           "type": "implementation"
         },
         {
-          "doesNotProve": "Indeterminate chrome and live native font pixels.",
+          "doesNotProve": "Indeterminate chrome and downstream raster acceptance.",
           "path": "packages/core/test/input-paint.test.ts",
-          "proves": "Stable checked glyph/dot distinction, current color and disabled opacity/hit behavior.",
+          "proves": "Stable font-independent check Path/dot distinction, current color and disabled opacity/hit behavior.",
           "repository": "renderer",
-          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "revision": "5e21783b688339fb892cb288a4bd030605191c68",
           "symbol": "checkbox and radio UA indicators",
           "type": "unit-test"
         },
@@ -518373,7 +518373,7 @@
           "path": "packages/core/test/range-input.test.ts",
           "proves": "Stable range track/thumb paint and pointer behavior.",
           "repository": "renderer",
-          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "revision": "5e21783b688339fb892cb288a4bd030605191c68",
           "symbol": "range input projection",
           "type": "unit-test"
         },
@@ -518382,7 +518382,7 @@
           "path": "packages/core/test/select-paint.test.ts",
           "proves": "Stable disclosure identity, label-safe geometry, exact option boxes/hits and presentation-coordinate viewport placement.",
           "repository": "renderer",
-          "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3",
+          "revision": "5e21783b688339fb892cb288a4bd030605191c68",
           "symbol": "collapsed select and picker projection",
           "type": "unit-test"
         }
@@ -518390,11 +518390,11 @@
       "id": "renderer.features.form-control-projection",
       "kind": "renderer-stage",
       "lastVerified": {
-        "date": "2026-08-31",
-        "revision": "258176181fe98b604935c38d71aaca5b93aaf4b3"
+        "date": "2026-09-02",
+        "revision": "5e21783b688339fb892cb288a4bd030605191c68"
       },
       "limitations": [
-        "The bounded form-control set includes checked Checkbox/Radio indicators, collapsed Select disclosure/picker and horizontal Range interaction; indeterminate Checkbox, multiple/listbox, type-ahead, accessibility projection and complete native form chrome remain unsupported."
+        "The bounded form-control set includes a font-independent checked Checkbox Path, Radio indicator, collapsed Select disclosure/picker and horizontal Range interaction; indeterminate Checkbox, multiple/listbox, type-ahead, accessibility projection and complete native form chrome remain unsupported."
       ],
       "metadata": {},
       "name": "form control projection",
@@ -527150,15 +527150,15 @@
     },
     {
       "branch": "main",
-      "dirty": true,
+      "dirty": false,
       "id": "node",
-      "revision": "9ddded88425f69e6052687e7dccb4a02fb3016a5"
+      "revision": "1e2450aaceb5d5dbf34239eb7e1252595e053efd"
     },
     {
       "branch": "main",
       "dirty": true,
       "id": "renderer",
-      "revision": "8d14e99949ba38196c073bc24bbe83eab6272996"
+      "revision": "5e21783b688339fb892cb288a4bd030605191c68"
     },
     {
       "branch": "main",
@@ -527174,9 +527174,9 @@
     },
     {
       "branch": "main",
-      "dirty": true,
+      "dirty": false,
       "id": "ui",
-      "revision": "1ddae57f1f525ecd2363bec1a5bb79db71591cfd"
+      "revision": "90c77080c27d92fea5ee803e8ff1e49d65885ae1"
     }
   ],
   "schemaVersion": 1,
