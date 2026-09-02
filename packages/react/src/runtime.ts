@@ -1107,6 +1107,7 @@ class ComponentInstance<Props> {
   }
 
   private hasContextChanges(nextContextFrame: ContextFrame | null): boolean {
+    if (nextContextFrame === this.contextFrame) return false
     if (!this.hasContextHooks && !this.hasCompositionBindings) return false
     for (const slot of this.hookSlots) {
       if (

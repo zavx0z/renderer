@@ -150,7 +150,9 @@ arrays fail at the Template compiler boundary.
 one compiled child value. `useContext` reads the closest frame or the static
 fallback. An `Object.is` context change reaches consumers through explicit
 `memo` ancestors, while a shadowing inner provider prevents unrelated work.
-Failed preparation does not publish a new frame or consumer value.
+Failed preparation does not publish a new frame or consumer value. An exact
+unchanged immutable context-frame identity is a complete no-change proof and
+does not recursively scan a retained component subtree.
 
 ## DOM-COMPONENTS-016 — transactional effect phases
 
