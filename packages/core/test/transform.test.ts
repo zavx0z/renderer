@@ -210,6 +210,59 @@ describe("bounded transform projection", () => {
     forced.dispose()
     renderer.dispose()
   })
+
+  test("excludes hidden branches from retained transform traversal until reveal", () => {
+    const document = createDocument()
+    const root = document.createElement("div")
+    const visible = document.createElement("button")
+    const hidden = document.createElement("section")
+    const hiddenChild = document.createElement("button")
+    document.appendChild(root)
+    root.append(visible, hidden)
+    hidden.appendChild(hiddenChild)
+    root.setAttribute("style", boxStyle(200, 80, "#111111"))
+    visible.setAttribute("style", boxStyle(40, 20, "#ff0000"))
+    hidden.hidden = true
+    hiddenChild.setAttribute(
+      "style",
+      `${boxStyle(40, 20, "#0000ff")}; transform:translateX(10px)`,
+    )
+    const renderer = createDocumentRenderer({
+      document,
+      root,
+      viewport: {width: 240, height: 120},
+    })
+    const initial = renderer.flush()
+    expect(initial.boxByNode.has(hidden)).toBeFalse()
+    expect(initial.boxByNode.has(hiddenChild)).toBeFalse()
+
+    root.setAttribute(
+      "style",
+      `${boxStyle(200, 80, "#111111")}; transform:translateX(12px); transform-origin:0 0`,
+    )
+    const patched = renderer.flush()
+    expect(patched.boxByNode.has(hidden)).toBeFalse()
+    expect(patched.boxByNode.has(hiddenChild)).toBeFalse()
+    expect(background(patched, visible).transform.translateX).toBe(12)
+
+    const forced = createDocumentRenderer({
+      document,
+      root,
+      viewport: {width: 240, height: 120},
+    })
+    const rebuilt = forced.flush()
+    expect(patched.boxes).toEqual(rebuilt.boxes)
+    expect(patched.displayList).toEqual(rebuilt.displayList)
+    expect([...patched.hits]).toEqual([...rebuilt.hits])
+    forced.dispose()
+
+    hidden.hidden = false
+    const revealed = renderer.flush()
+    expect(revealed.boxByNode.has(hidden)).toBeTrue()
+    expect(revealed.boxByNode.has(hiddenChild)).toBeTrue()
+    expect(background(revealed, hiddenChild).transform.translateX).toBe(22)
+    renderer.dispose()
+  })
 })
 
 function background(frame: RenderFrame, node: Element): Extract<DisplayItem, {kind: "rect"}> {

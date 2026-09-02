@@ -2030,7 +2030,8 @@ const buildLayoutTree = (
 
 const finalizeLayoutNodeChildren = (layoutNode: LayoutNode): void => {
   layoutNode.transformChildren = Object.freeze(
-    layoutNode.children.filter((child) => !(child.node instanceof HTMLVectorPathElement)),
+    layoutNode.children.filter((child) =>
+      child.style.display !== "none" && !(child.node instanceof HTMLVectorPathElement)),
   )
   layoutNode.vectorPathOnly = layoutNode.children.length > 0 &&
     layoutNode.transformChildren.length === 0

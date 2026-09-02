@@ -742,11 +742,21 @@ overflow and interaction consistently.
 A single connected inline-style mutation whose non-transform computed style is
 unchanged uses a transform-only frame patch when the affected subtree owns no
 overflow clip and the frame has no scroll container. It recomputes cumulative
-chains, shares untouched box/display/hit records, preserves layout geometry and
-is equivalent to a forced full frame. More complex mutation batches, scroll or
+chains only through projected branches: semantic `display:none` owners have no
+box, paint, hit, scroll or transform contribution and remain outside the
+retained transform traversal until an ordinary mutation reveals them. The patch
+shares untouched box/display/hit records, preserves layout geometry and is
+equivalent to a forced full frame. More complex mutation batches, scroll or
 owned clipping fall back to the complete exact renderer path. Transform does
 not yet establish an absolute containing block, create a general CSS stacking
 context or introduce rotation; those gaps are explicit rather than guessed.
+
+The focused CPU benchmark materializes 10,000 hidden semantic branches plus 12
+visible transformed owners and applies 100 root transform patches. Fresh-process
+p99 is `0.731–1.134ms`, every hidden owner remains absent from projection and
+every visible owner remains projected. This proves the bounded traversal law;
+it does not make full consumer scheduling or WebGPU presentation part of the
+Core ABI.
 
 ## `RENDERER-CPU-026` — one analytical box shadow
 
