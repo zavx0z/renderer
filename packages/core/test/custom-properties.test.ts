@@ -225,6 +225,53 @@ describe("bounded CSS custom properties and var()", () => {
     })
   })
 
+  test("substitutes theme radii before expanding the bounded border-radius shorthand", () => {
+    const document = createDocument()
+    const root = document.createElement("main")
+    const uniform = document.createElement("div")
+    const corners = document.createElement("div")
+    const invalid = document.createElement("div")
+    document.appendChild(root)
+    root.append(uniform, corners, invalid)
+    root.setAttribute("style", "--radius-medium:4px;--corner-radii:6px 4px 2px 1px")
+    uniform.setAttribute("data-uniform-radius", "")
+    corners.setAttribute("data-corner-radii", "")
+    invalid.setAttribute("data-invalid-radius", "")
+    const renderer = createDocumentRenderer({
+      document,
+      root,
+      viewport: {width: 60, height: 20},
+      styleSheets: [String.raw`
+        main { display:flex; width:60px; height:20px; }
+        main > div { display:block; box-sizing:border-box; width:20px; height:20px; background:#ffffff; }
+        [data-uniform-radius] { border-radius:var(--radius-medium); }
+        [data-corner-radii] { border-radius:var(--corner-radii); }
+        [data-invalid-radius] { border-radius:3px; border-radius:var(--missing-radius); }
+      `]
+    })
+
+    const frame = renderer.flush()
+    expect(frame.boxByNode.get(uniform)?.border.radii).toEqual({
+      topLeft: 4,
+      topRight: 4,
+      bottomRight: 4,
+      bottomLeft: 4,
+    })
+    expect(frame.boxByNode.get(corners)?.border.radii).toEqual({
+      topLeft: 6,
+      topRight: 4,
+      bottomRight: 2,
+      bottomLeft: 1,
+    })
+    expect(frame.boxByNode.get(invalid)?.border.radii).toEqual({
+      topLeft: 0,
+      topRight: 0,
+      bottomRight: 0,
+      bottomLeft: 0,
+    })
+    renderer.dispose()
+  })
+
   test("does not reveal a lower border when the winning variable shorthand is invalid", () => {
     const document = createDocument()
     const element = document.createElement("div")

@@ -888,12 +888,14 @@ listeners. One compiler-extracted static pseudo sheet can therefore use
 addressed inline `--hover-color` values.
 
 The admitted composite variable paths include one solid `border` shorthand,
-`border-color`, one analytical `box-shadow`, modern `rgb()` triplet/alpha
-transport and bounded dimensional `calc()`. This is an adapted CSS Variables
-subset, not a full conformance claim. Escaped
+`border-color`, the bounded one-to-four-value `border-radius` shorthand, one
+analytical `box-shadow`, modern `rgb()` triplet/alpha transport and bounded
+dimensional `calc()`. An invalid winning variable-bearing radius resets all
+four corner longhands instead of revealing a lower-priority declaration. This
+is an adapted CSS Variables subset, not a full conformance claim. Escaped
 custom-property names, CSS-wide custom-property semantics, `!important`, typed
 `@property`, animation and `var()` inside multi-value `margin`/`padding`/
-`flex`/`overflow`, border-side/style/radius shorthands and multiple shadow
+`flex`/`overflow`, border-side/style/width shorthands and multiple shadow
 layers remain unsupported. Such var-bearing shorthands are ignored before
 cascade. Per-instance stylesheet rules,
 DOM/style scanning, hidden compiler variables, JS hover/focus listeners and

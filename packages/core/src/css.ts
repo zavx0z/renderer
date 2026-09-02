@@ -243,6 +243,7 @@ const deferredVariablePropertySet: ReadonlySet<string> = new Set([
 const deferredVariableShorthandSet: ReadonlySet<string> = new Set([
   "border",
   "border-color",
+  "border-radius",
   "gap",
 ])
 const unsupportedVariableShorthandSet: ReadonlySet<string> = new Set([
@@ -260,7 +261,6 @@ const unsupportedVariableShorthandSet: ReadonlySet<string> = new Set([
   "border-left",
   "border-width",
   "border-style",
-  "border-radius",
 ])
 
 type VariableResolution =
@@ -789,6 +789,13 @@ const invalidateDeferredShorthand = (
       ]
     : property === "border-color"
       ? ["border-top-color", "border-right-color", "border-bottom-color", "border-left-color"]
+      : property === "border-radius"
+        ? [
+            "border-top-left-radius",
+            "border-top-right-radius",
+            "border-bottom-right-radius",
+            "border-bottom-left-radius",
+          ]
       : property === "gap"
         ? ["row-gap", "column-gap"]
         : property === "background"
