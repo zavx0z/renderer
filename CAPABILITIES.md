@@ -14,11 +14,11 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | engine | main | `a3032d960fc592296e8c5d1408a02551635d1fb3` | no |
 | interpreter | main | `08573a5f52fc04c4d25a87b318cd801c81ae8f20` | no |
 | metafor | main | `c5ba83e1ab3461e8255b002fe7fa84ff18007c20` | no |
-| node | main | `f4519ea1f2271634ce8cd8afa57d1ac5a62a86d1` | yes |
-| renderer | main | `a5c9f3e7e9767ff1b6f292ded67697692c8c6d65` | yes |
+| node | main | `9ddded88425f69e6052687e7dccb4a02fb3016a5` | yes |
+| renderer | main | `8d14e99949ba38196c073bc24bbe83eab6272996` | yes |
 | storybook | main | `83ea3f66a6a1b93030906cd97871068a286db80b` | no |
 | template | main | `ef543f55aea710d91ec473fe52f32900fbbb655b` | yes |
-| ui | main | `6af702d2e26c47387563f1157a50d9a657bd5934` | no |
+| ui | main | `1ddae57f1f525ecd2363bec1a5bb79db71591cfd` | yes |
 
 ## Pinned external sources
 
@@ -1465,7 +1465,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `css.features.containment` | css-algorithm | unsupported | none | @zavx0z/renderer/cpu | The current stylesheet/cascade/layout pipeline does not implement this CSS module capability. | 1 | 0 |
 | `css.features.counters` | css-algorithm | unsupported | none | @zavx0z/renderer/cpu | The current stylesheet/cascade/layout pipeline does not implement this CSS module capability. | 1 | 0 |
 | `css.features.cssom` | css-algorithm | unsupported | none | @zavx0z/renderer/cpu | The current stylesheet/cascade/layout pipeline does not implement this CSS module capability. | 1 | 0 |
-| `css.features.custom-properties` | css-algorithm | partial | adapted | @zavx0z/renderer/cpu | Bounded to unescaped custom names and var() in admitted longhands, one border/border-color, one shadow, the one/two-value gap shorthand, and background/color/sizing/transform/calc paths; CSS-wide semantics, !important, @property, animation and other multi-value shorthands remain unsupported. | 6 | 0 |
+| `css.features.custom-properties` | css-algorithm | partial | adapted | @zavx0z/renderer/cpu | Bounded to unescaped custom names and var() in admitted longhands, one border/border-color, one-to-four-value border-radius, one shadow, the one/two-value gap shorthand, and background/color/sizing/transform/calc paths; CSS-wide semantics, !important, @property, animation and other multi-value shorthands remain unsupported. | 8 | 0 |
 | `css.features.data-types` | css-algorithm | partial | adapted | @zavx0z/renderer/cpu | Only the explicitly admitted values/algorithms are implemented. | 3 | 0 |
 | `css.features.declarations` | css-algorithm | partial | adapted | @zavx0z/renderer/cpu | The bounded flat declaration parser preserves every repeated declaration in authored source order, normalizes admitted property names, and fails invalid admitted values closed before or at the documented computed-value boundary. !important, declaration comments/escapes, CSS-wide keywords, full token-stream preservation, and arbitrary delimiter-bearing value grammar remain unsupported. | 3 | 0 |
 | `css.features.descriptors` | css-algorithm | unsupported | none | @zavx0z/renderer/cpu | The current stylesheet/cascade/layout pipeline does not implement this CSS module capability. | 1 | 0 |
@@ -1812,7 +1812,7 @@ The React 19.2 inventory is a reference profile, not a claim that `@zavx0z/react
 | `css.properties.border-left-style` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
 | `css.properties.border-left-width` | property | partial | adapted | @zavx0z/renderer/cpu | Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed. | 3 | 0 |
 | `css.properties.border-limit` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
-| `css.properties.border-radius` | property | partial | adapted | @zavx0z/renderer/cpu | Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed. | 3 | 0 |
+| `css.properties.border-radius` | property | partial | adapted | @zavx0z/renderer/cpu | Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed.; Elliptical slash radii and variable-bearing corner longhands remain unsupported; var() is admitted only through the bounded physical border-radius shorthand. | 5 | 0 |
 | `css.properties.border-right` | property | partial | adapted | @zavx0z/renderer/cpu | Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed. | 3 | 0 |
 | `css.properties.border-right-clip` | property | unsupported | none | @zavx0z/renderer/cpu | The declaration tokenizer can retain this unknown property/value, but computed style and every observable downstream stage ignore it. | 2 | 0 |
 | `css.properties.border-right-color` | property | partial | adapted | @zavx0z/renderer/cpu | The computed/display transport is bounded to currentColor, transparent, hex, legacy comma and modern space/slash rgb()/rgba(), plus the sixteen basic named colors normalized to hex. Direct malformed colors are discarded before cascade priority and malformed variable substitutions use invalid-at-computed-value-time inherited/initial behavior. Extended named colors, system colors, other color functions/spaces, relative colors, interpolation and color management remain unsupported. | 4 | 0 |

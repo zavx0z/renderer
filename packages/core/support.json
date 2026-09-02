@@ -53854,15 +53854,33 @@
           "revision": "72fa158b043408817725856ce2b8e26d6a0e4d18",
           "symbol": "custom-property gap shorthand",
           "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Elliptical slash radii, variable-bearing corner longhands, other multi-value shorthands or full CSS Variables conformance.",
+          "path": "packages/core/src/css.ts",
+          "proves": "Variable substitution now admits the bounded one-to-four-value border-radius shorthand and invalidates all four expanded corners when a winning variable is invalid.",
+          "repository": "renderer",
+          "revision": "8d14e99949ba38196c073bc24bbe83eab6272996",
+          "symbol": "resolveCascadedVariables/expandRadius",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Elliptical slash radii, variable-bearing corner longhands or complete browser conformance.",
+          "path": "packages/core/test/custom-properties.test.ts",
+          "proves": "Observable uniform and four-corner theme radii plus invalid-at-computed-value reset through inherited custom properties.",
+          "repository": "renderer",
+          "revision": "8d14e99949ba38196c073bc24bbe83eab6272996",
+          "symbol": "theme border-radius custom property",
+          "type": "unit-test"
         }
       ],
       "id": "css.features.custom-properties",
       "lastVerified": {
-        "date": "2026-08-30",
-        "revision": "72fa158b043408817725856ce2b8e26d6a0e4d18"
+        "date": "2026-09-02",
+        "revision": "8d14e99949ba38196c073bc24bbe83eab6272996"
       },
       "limitations": [
-        "Bounded to unescaped custom names and var() in admitted longhands, one border/border-color, one shadow, the one/two-value gap shorthand, and background/color/sizing/transform/calc paths; CSS-wide semantics, !important, @property, animation and other multi-value shorthands remain unsupported."
+        "Bounded to unescaped custom names and var() in admitted longhands, one border/border-color, one-to-four-value border-radius, one shadow, the one/two-value gap shorthand, and background/color/sizing/transform/calc paths; CSS-wide semantics, !important, @property, animation and other multi-value shorthands remain unsupported."
       ],
       "owner": {
         "package": "@zavx0z/renderer",
@@ -70610,15 +70628,34 @@
           "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408",
           "symbol": "border-radius",
           "type": "unit-test"
+        },
+        {
+          "doesNotProve": "Elliptical slash radii or variable-bearing corner longhands.",
+          "path": "packages/core/src/css.ts",
+          "proves": "The bounded border-radius shorthand is deferred through custom-property substitution before expanding one-to-four corner values.",
+          "repository": "renderer",
+          "revision": "8d14e99949ba38196c073bc24bbe83eab6272996",
+          "symbol": "deferredVariableShorthandSet/expandRadius",
+          "type": "implementation"
+        },
+        {
+          "doesNotProve": "Elliptical slash radii, corner-longhand variables or every standard radius unit.",
+          "path": "packages/core/test/custom-properties.test.ts",
+          "proves": "Observable theme-driven uniform and four-corner radii, including invalid winning variable reset to zero corners.",
+          "repository": "renderer",
+          "revision": "8d14e99949ba38196c073bc24bbe83eab6272996",
+          "symbol": "theme border-radius custom property",
+          "type": "unit-test"
         }
       ],
       "id": "css.properties.border-radius",
       "lastVerified": {
-        "date": "2026-08-29",
-        "revision": "3c91038c3f14ccc44616209fd82b1e59b7369408"
+        "date": "2026-09-02",
+        "revision": "8d14e99949ba38196c073bc24bbe83eab6272996"
       },
       "limitations": [
-        "Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed."
+        "Rounded/nonuniform/multicolor combinations exceed the bounded backend contract and fail closed.",
+        "Elliptical slash radii and variable-bearing corner longhands remain unsupported; var() is admitted only through the bounded physical border-radius shorthand."
       ],
       "owner": {
         "package": "@zavx0z/renderer",
