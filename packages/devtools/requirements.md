@@ -7,10 +7,12 @@ browser's native DOM.
 
 ## `DOM-DEVTOOLS-001` — exact realm and ownership
 
-`createDomInspector({document, renderer?})` receives one exact
+`createDomInspector({document, renderer?, readFrame?})` receives one exact
 `@zavx0z/dom` `Document`. Every inspected Node must be that Document or have it
 as `ownerDocument`; foreign DOM realms and Documents fail closed. The optional
-`@zavx0z/renderer` peer must project the same Document. The package has no
+`@zavx0z/renderer` peer must project the same Document. A caller that keeps its
+Renderer private may instead provide one `readFrame(node)` function owned by the
+same Experience; `renderer` and `readFrame` are mutually exclusive. The package has no
 Engine, UI, browser DOM, CDP or GPU dependency.
 
 ## `DOM-DEVTOOLS-002` — stable local identity
@@ -35,8 +37,8 @@ ID and flat Node records with standard `nodeType`, `nodeName`, `localName`,
 IDs. The selected root has `parent: null`, so a subtree snapshot is
 self-contained.
 
-When no renderer is configured, render projection keys are omitted. With the
-optional renderer, each record additionally contains its current serializable
+When neither renderer nor frame reader is configured, render projection keys
+are omitted. With either exact source, each record additionally contains its current serializable
 RenderBox or `null`, HitMetadata or `null`, and ordered display identity pairs
 `{key, kind}` for Rect, Text and Image items. Image source/texture state is not
 duplicated into this identity index. Node references, Maps and Engine objects

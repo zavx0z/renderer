@@ -31,9 +31,13 @@ import type {
 export const createDomInspector = (
   options: CreateDomInspectorOptions,
 ): DomInspector => {
-  const {document, renderer} = options
+  const {document, renderer, readFrame} = options
   if (renderer && renderer.document !== document)
     throw new TypeError("DOM inspector renderer belongs to another Document")
+  if (renderer !== undefined && readFrame !== undefined)
+    throw new TypeError("DOM inspector accepts renderer or readFrame, not both")
+  if (readFrame !== undefined && typeof readFrame !== "function")
+    throw new TypeError("DOM inspector readFrame must be a function")
 
   const idsByNode = new WeakMap<Node, number>()
   const nodesById = new Map<number, Node>()
@@ -76,8 +80,8 @@ export const createDomInspector = (
   function snapshot(root: Node = document): DomInspectorSnapshot {
     assertActive()
     validateNode(document, root)
-    const frame = renderer?.flush() ?? null
-    const displayByNode = frame ? indexDisplay(frame.displayList) : null
+    const rendererFrame = renderer?.flush() ?? null
+    const displayIndexes = new Map<object, ReadonlyMap<Node, readonly DomInspectorDisplay[]>>()
     const nodes: DomInspectorNode[] = []
     const rootId = idForNode(root)
 
@@ -90,6 +94,12 @@ export const createDomInspector = (
     })
 
     function visit(node: Node, parent: number | null): void {
+      const frame = readFrame?.(node) ?? rendererFrame
+      let displayByNode: ReadonlyMap<Node, readonly DomInspectorDisplay[]> | null = null
+      if (frame !== null) {
+        displayByNode = displayIndexes.get(frame) ?? indexDisplay(frame.displayList)
+        displayIndexes.set(frame, displayByNode)
+      }
       const id = idForNode(node)
       const children = Object.freeze(
         node.childNodes.map((child) => idForNode(child)),

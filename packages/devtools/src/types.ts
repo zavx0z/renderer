@@ -1,6 +1,7 @@
 import type {Document, Node} from "@zavx0z/dom"
 import type {
   DocumentRenderer,
+  RenderFrame,
   RenderBorder,
   RenderClip,
   RenderEdges,
@@ -112,6 +113,7 @@ export type DomInspectorSubscriber = (change: DomInspectorChange) => void
 export type CreateDomInspectorOptions = Readonly<{
   document: Document
   renderer?: DocumentRenderer
+  readFrame?: (node: Node) => RenderFrame | null
 }>
 
 export interface DomInspector {

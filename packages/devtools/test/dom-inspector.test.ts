@@ -234,6 +234,49 @@ describe("DOM inspector renderer projection", () => {
     renderer.dispose()
   })
 
+  it("accepts an Experience-owned frame reader without exposing Renderer", () => {
+    const document = createDocument()
+    const root = document.createElement("button")
+    root.textContent = "Output"
+    root.setAttribute("style", "width:80px; height:24px; background:#333333")
+    document.appendChild(root)
+    const renderer = createDocumentRenderer({
+      document,
+      root,
+      viewport: {width: 160, height: 90},
+    })
+    let reads = 0
+    const inspector = createDomInspector({
+      document,
+      readFrame(node) {
+        reads += 1
+        expect(node.ownerDocument).toBe(document)
+        return renderer.flush()
+      },
+    })
+
+    const snapshot = inspector.snapshot(root)
+    const projected = record(snapshot, inspector.idForNode(root))
+    expect(reads).toBe(2)
+    expect(projected.box).toMatchObject({
+      width: 92,
+      height: 28,
+      contentWidth: 80,
+      contentHeight: 24,
+    })
+    expect(projected.hit).toMatchObject({interactive: true, role: "button"})
+    expect(projected.display).toEqual([{key: "background", kind: "rect"}])
+
+    expect(() => createDomInspector({
+      document,
+      renderer,
+      readFrame: () => renderer.flush(),
+    })).toThrow("renderer or readFrame, not both")
+
+    inspector.dispose()
+    renderer.dispose()
+  })
+
   it("rejects a renderer from another DOM realm", () => {
     const document = createDocument()
     const root = document.createElement("div")

@@ -17,17 +17,18 @@
     "check": "bun run typecheck && bun run test"
   },
   "peerDependencies": {
-    "@zavx0z/dom": "^0.1.0",
-    "@zavx0z/renderer": "^0.1.0"
+    "@zavx0z/dom": "*",
+    "@zavx0z/renderer": "*"
   },
   "peerDependenciesMeta": {
+    "@zavx0z/dom": {
+      "optional": true
+    },
     "@zavx0z/renderer": {
       "optional": true
     }
   },
   "devDependencies": {
-    "@zavx0z/dom": "workspace:*",
-    "@zavx0z/renderer": "workspace:*",
     "@types/bun": "^1.4.0",
     "typescript": "^7.0.2"
   },
