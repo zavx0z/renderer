@@ -93,17 +93,26 @@ describe("@zavx0z/renderer external catalog", () => {
     }
   })
 
-  test("links the Renderer package from the project declaration", () => {
+  test("discovers the Renderer package through the root workspace pattern", async () => {
     const project = json(join(projectRoot, ".storybook/manifest.json")) as ProjectManifest
     expect(project).toMatchObject({
       schemaVersion: 1,
       kind: "project",
       id: "renderer",
-      label: "Рендерер",
     })
-    expect(project.packages).toContainEqual({
-      declaration: "../packages/core/.storybook/manifest.json",
-    })
+    expect(Object.hasOwn(project, "packages")).toBeFalse()
+    expect(Object.hasOwn(project, "label")).toBeFalse()
+    const workspace = json(join(projectRoot, "package.json")) as {
+      label: string
+      workspaces: readonly string[]
+    }
+    expect(workspace.label).toBe("Рендерер")
+    expect(workspace.workspaces).toEqual(["packages/*"])
+    const members = await Array.fromAsync(new Bun.Glob(`${workspace.workspaces[0]}/package.json`).scan({
+      cwd: projectRoot,
+      onlyFiles: true,
+    }))
+    expect(members).toContain("packages/core/package.json")
   })
 
   test("presents arbitrary owner values exactly once per generic runtime operation", async () => {
@@ -296,7 +305,7 @@ type ProjectManifest = Readonly<{
   schemaVersion: 1
   kind: "project"
   id: string
-  packages: readonly Readonly<{declaration: string}>[]
+  packages?: unknown
 }>
 
 type Catalog = Readonly<{

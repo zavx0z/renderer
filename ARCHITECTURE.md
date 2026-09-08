@@ -138,7 +138,9 @@ Node owner's numeric layout and routing boundary.
 ## External Storybook ownership
 
 Renderer publishes no Storybook package or dependency. The root
-`.storybook/manifest.json` declares a project and `@zavx0z/dom` owns pure JSON
+`.storybook/manifest.json` declares project metadata; package membership comes
+from `package.json#workspaces` (`packages/*`) without a manifest `packages` list.
+The project label belongs to `package.json`. `@zavx0z/dom` owns pure JSON
 catalog data, static owner stories and a structural `storybook-runtime/1`
 adapter under `packages/dom/.storybook`. The external Storybook tool owns the
 single server, Workbench, routing, package revisions and browser tabs.

@@ -1,5 +1,6 @@
 {
   "name": "@zavx0z/renderer-workspace",
+  "label": "Рендерер",
   "version": "0.1.0",
   "private": true,
   "description": "Lean HTML DOM, document rendering, and WebGPU presentation engine.",
