@@ -135,16 +135,8 @@ reached zero imports. They have no compatibility aliases or alternate runtime
 path in the new graph. The unrelated `@nodes/layout` domain package remains the
 Node owner's numeric layout and routing boundary.
 
-## External Storybook ownership
+## Структура пакетов и документация
 
-Renderer publishes no Storybook package or dependency. The root
-`.storybook/manifest.json` declares project metadata; package membership comes
-from `package.json#workspaces` (`packages/*`) without a manifest `packages` list.
-The project label belongs to `package.json`. `@zavx0z/dom` owns pure JSON
-catalog data, static owner stories and a structural `storybook-runtime/1`
-adapter under `packages/dom/.storybook`. The external Storybook tool owns the
-single server, Workbench, routing, package revisions and browser tabs.
-
-The 91 migrated DOM/Elements leaves retain their exact former paths. Interface
-and standard-element stories import only the exact production DOM owner; UI
-components, navigation and package lifecycle do not enter Renderer.
+Состав Renderer определяется `package.json#workspaces` (`packages/*`). Каждый
+пакет владеет своим `package.json`, публичными экспортами, README и TSDoc.
+Наблюдаемое поведение проверяют принадлежащие пакету тесты.

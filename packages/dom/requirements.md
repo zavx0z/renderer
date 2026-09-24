@@ -622,18 +622,10 @@ Selectors, Shadow DOM, custom elements, CSSOM beyond the declared requested
 scroll subset, forms, accessibility projection, tooltip timing, geometry, hit
 testing and rendering.
 
-## DOM-CORE-026 — external owner catalog
+## DOM-CORE-026 — документация владельца
 
-`packages/dom/.storybook` is development-only owner data, not a production
-export or npm package. Its manifest and catalog contain no executable loader,
-Storybook import or lifecycle wrapper. Every executable variant names one
-static module/export and preserves an exact `dom/...` or `elements/...` leaf.
-
-Category and subject route overrides preserve former category/interface
-overviews. Former section overviews are documented as variant grouping
-metadata and never select a representative leaf. Unknown routes remain
-fail-closed. The runtime adapter receives the exact package-tab Document and
-mounts only Nodes owned by that realm.
+Публичный контракт DOM описывается в README и TSDoc пакета. Исполняемые
+сценарии поведения принадлежат его обычным тестам.
 
 ## DOM-CORE-027 — opaque compiled stylesheet ownership
 

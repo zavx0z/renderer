@@ -11,8 +11,8 @@
     "packages/*"
   ],
   "scripts": {
-    "typecheck": "bun run --workspaces typecheck && bun run --cwd packages/core storybook:typecheck",
-    "test": "bun test packages && bun run --cwd packages/core storybook:test",
+    "typecheck": "bun run --workspaces typecheck",
+    "test": "bun test packages",
     "check": "bun run typecheck && bun run test && bun run capabilities:check",
     "capabilities:refresh": "bun scripts/capabilities/refresh-sources.ts",
     "capabilities:inventory": "bun scripts/capabilities/build-inventories.ts",
